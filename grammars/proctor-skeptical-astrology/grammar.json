@@ -1,0 +1,1266 @@
+{
+  "name": "Proctor's Skeptical Astrology",
+  "description": "A critical examination of astrology based on Richard A. Proctor's 'Myths and Marvels of Astronomy' (first published 1877; this text is the 1896 'New Edition'). Presents traditional astrological concepts with sardonic Victorian commentary, exposing logical fallacies while documenting the historical claims. — Source: Richard A. Proctor, *Myths and Marvels of Astronomy* (first published 1877; this text is the posthumous 1896 'New Edition', Longmans, Green), public domain (Project Gutenberg #26556). Imported verbatim from the recursive.eco-schemas commons; presented here as a Victorian document of the Skeptical School — the critique speaking in its own sardonic idiom, part of the record, not this library's verdict.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Richard_Anthony_Proctor2.jpg?width=800",
+  "grammar_type": "astrology",
+  "provenance": "record",
+  "dating": {
+    "year": 1877,
+    "label": "1877 — R. A. Proctor, Myths and Marvels of Astronomy (text used: the 1896 'New Edition', Longmans, Green)",
+    "confidence": "high",
+    "basis": "Anchored to first publication, verified this session: the Online Books Page catalogue lists G. P. Putnam's Sons, 1877 as the earliest edition (later Chatto & Windus 1880; Longmans, Green 1886, 1889, 1896). Proctor died in 1888, so the 1896 printing digitized as Project Gutenberg #26556 — whose title page reads 'Longmans, Green, and Co., London, New York, and Bombay, 1896 (New Edition)', verified this session — is a posthumous reprint, not the work's date. The grammar previously carried 1896 as if it were the work's date."
+  },
+  "attribution": {
+    "source_name": "Myths and Marvels of Astronomy",
+    "source_author": "Richard A. Proctor",
+    "source_year": "1877 (first published, G. P. Putnam's Sons); this text = the 1896 'New Edition' (Longmans, Green), digitized as Project Gutenberg #26556",
+    "license": "Public Domain",
+    "source_url": "https://www.gutenberg.org/ebooks/26556",
+    "edition_note": "Proctor died in 1888, so the 1896 printing is a posthumous reprint. The earliest edition on record is G. P. Putnam's Sons, 1877 (Online Books Page catalogue, checked Jul 2026); the Gutenberg title page reads 'Longmans, Green, and Co., London, New York, and Bombay, 1896 (New Edition)'."
+  },
+  "items": [
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Saturn is the Greater Infortune, 'by universal experience acknowledged to be the most potent, evil, and malignant of all the planets.' Those born under him have 'small, black, leering eyes, thick lips and nostrils, large ears, thin face, lowering looks, cloudy aspect.' The most certain characteristic: 'he will never look thee in the face.' Chaucer summarizes: 'My loking is the fader of pestilence.'",
+        "Light": "Constant in friendship, laborious, patient, enduring—if you can endure him",
+        "Shadow": "Drowning, prison, strangling, rebellion, poisoning, ruin, cold diseases, dark treasons—'the fader of pestilence'"
+      },
+      "keywords": [
+        "malefic",
+        "cold",
+        "melancholy",
+        "leering eyes",
+        "gravediggers",
+        "lead",
+        "black"
+      ],
+      "quotes": [
+        "Saturn is the Greater Infortune of the old system of astrology, and is by universal experience acknowledged to be the most potent, evil, and malignant of all the planets.",
+        "Those born under him are of dark and pale complexion, with small, black, leering eyes, thick lips and nostrils, large ears, thin face, lowering looks, cloudy aspect, and seemingly melancholy and unhappy.",
+        "The most remarkable and certain characteristic of the Saturnine man is that, as an old author observes 'he will never look thee in the face.'",
+        "'If they have to love any one, these Saturnines,' says another old author, 'they love most constantly; and if they hate, they hate to the death.'",
+        "The persons signified symbolically by Saturn are grandparents, and other old persons, day labourers, paupers, beggars, clowns, husbandmen of the meaner sort, and especially undertakers, sextons, and gravediggers.",
+        "Min is the drenching in the sea so wan, Min is the prison in the derke cote, Min is the strangel and hanging by the throte... My loking is the fader of pestilence."
+      ],
+      "sort_order": 0,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trouvelot_-_The_Planet_Saturn.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "The planet Saturn — telescopic drawing",
+          "creator": "Étienne Léopold Trouvelot",
+          "date": "1881-1882",
+          "source": "*The Trouvelot Astronomical Drawings* (New York, 1882)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Trouvelot_-_The_Planet_Saturn.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Jupiter is 'the most propitious of all the planets, and the native born under his influence has every reason to be jovial in fact as he is by nature.' Such natives will be 'tall and fair, handsome and erect, robust, ruddy, and altogether a good-looking person.' Unless Jupiter is afflicted—then he denotes 'quacks and mountebanks, knaves, cheats, and drunkards.'",
+        "Light": "Judges, counsellors, church dignitaries, scholars, woollendrapers (possibly explaining the woolsack)",
+        "Shadow": "When afflicted: quacks, mountebanks, knaves, cheats, and drunkards—quite a fall from cardinals to drunkards"
+      },
+      "keywords": [
+        "benefic",
+        "jovial",
+        "ruddy",
+        "fortunate",
+        "tin",
+        "red-green"
+      ],
+      "quotes": [
+        "Jupiter, on the contrary, though Saturn's next neighbour in the solar system, produces effects of an entirely contrary kind.",
+        "He is, in fact, the most propitious of all the planets, and the native born under his influence has every reason to be jovial in fact as he is by nature.",
+        "Such a native will be tall and fair, handsome and erect, robust, ruddy, and altogether a good-looking person, whether male or female.",
+        "The native will also be religious, or at least a good moral honest man, unless Jupiter be afflicted by the aspects of Saturn, Mars, or Uranus; in which case he may still be a jolly fellow, no man's enemy but his own.",
+        "The persons represented by Jupiter are judges, counsellors, church dignitaries, from cardinals to curates, scholars, chancellors, barristers, and the highest orders of lawyers, woollendrapers (possibly there may be some astral significance in the woolsack), and clothiers.",
+        "When Jupiter is afflicted, however, he denotes quacks and mountebanks, knaves, cheats, and drunkards."
+      ],
+      "sort_order": 1,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trouvelot_-_The_Planet_Jupiter.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "The planet Jupiter — telescopic drawing",
+          "creator": "Étienne Léopold Trouvelot",
+          "date": "1881-1882",
+          "source": "*The Trouvelot Astronomical Drawings* (New York, 1882)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Trouvelot_-_The_Planet_Jupiter.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Mars, the Lesser Infortune, makes natives 'of fierce countenance, his eyes sparkling, or sharp and darting, his complexion fiery or yellowish, and his countenance scarred or furrowed.' Hair color depends on sign: watery sign gives flaxen hair, earthy gives chestnut. 'The influence of Saturn may be compared to a lingering but fatal consumption; that of Mars to a burning fever.'",
+        "Light": "Generals, surgeons, barbers, smiths, sculptors, cooks—'all cut throat people'",
+        "Shadow": "When afflicted with Mercury or Moon: thieves, hangmen, and 'all cut throat people' (literally this time)"
+      },
+      "keywords": [
+        "malefic",
+        "fiery",
+        "martial",
+        "scarred",
+        "iron",
+        "red"
+      ],
+      "quotes": [
+        "Next in order comes Mars, inferior only in malefic influence to Saturn, and called by the old astrologers the Lesser Infortune.",
+        "The native born under the influence of Mars is usually of fierce countenance, his eyes sparkling, or sharp and darting, his complexion fiery or yellowish, and his countenance scarred or furrowed.",
+        "His hair is reddish or sandy, unless Mars chances to be in a watery sign, in which case the hair will be flaxen; or in an earthly sign, in which case the hair will be chestnut.",
+        "In character the Martialist is fiery and choleric, naturally delighting in war and contention, but generous and magnanimous.",
+        "The persons signified by Mars are generals, soldiers, sailors (if he is in a watery sign), surgeons, chemists, doctors, armourers, barbers, curriers, smiths, carpenters, bricklayers, sculptors, cooks, and tailors.",
+        "'The influence of Saturn,' says an astrologer, 'may be compared to a lingering but fatal consumption; that of Mars to a burning fever.'"
+      ],
+      "sort_order": 2,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trouvelot-_The_Planet_Mars.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "The planet Mars — telescopic drawing",
+          "creator": "Étienne Léopold Trouvelot",
+          "date": "1881-1882",
+          "source": "*The Trouvelot Astronomical Drawings* (New York, 1882)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Trouvelot-_The_Planet_Mars.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "sun",
+      "name": "Sun",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "The solar native has 'a round face (like pictures of the sun in old books of astronomy), with a short chin.' The Sun is 'the natural significator of respectability; for which I can discover no reason, unless it be that the sun travelling always in the ecliptic has no latitude, and so solar folk are allowed none.' When ill aspected: 'proud and mean, tyrannical and sycophantic.'",
+        "Light": "Emperors, kings, titled folk, goldsmiths, jewellers, coiners—the respectable (or those pretending to be)",
+        "Shadow": "When afflicted: 'pretenders either to power or knowledge'—arrogance and ignorant pomposity"
+      },
+      "keywords": [
+        "benefic",
+        "respectability",
+        "royalty",
+        "gold",
+        "yellow-purple"
+      ],
+      "quotes": [
+        "The solar native has generally a round face (like pictures of the sun in old books of astronomy), with a short chin; his complexion somewhat sanguine; curling sandy hair, and a white tender skin.",
+        "As to character, he is bold and resolute, desirous of praise, of slow speech and composed judgment; outwardly decorous, but privately not altogether virtuous.",
+        "The sun, in fact, according to astrologers, is the natural significator of respectability; for which I can discover no reason, unless it be that the sun travelling always in the ecliptic has no latitude, and so solar folk are allowed none.",
+        "When the sun is ill aspected, the native is both proud and mean, tyrannical and sycophantic, exceedingly unamiable, and generally disliked because of his arrogance and ignorant pomposity.",
+        "The persons signified by the sun are emperors, kings, and titled folk generally, goldsmiths, jewellers, and coiners.",
+        "When 'afflicted,' the sun signifies pretenders either to power or knowledge."
+      ],
+      "sort_order": 3,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trouvelot_-_Group_of_Sun_Spots_and_Veiled_Spots.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "Group of sun spots and veiled spots — telescopic drawing",
+          "creator": "Étienne Léopold Trouvelot",
+          "date": "1881-1882",
+          "source": "*The Trouvelot Astronomical Drawings* (New York, 1882)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Trouvelot_-_Group_of_Sun_Spots_and_Veiled_Spots.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "'The native of Venus hath a love-dimple in the chin, a lovely mouth, cherry lips, and a right merry countenance.' Venus's benevolence was proven, according to Raphael (1828), by 'our present beloved monarch' George IV—'a most illustrious proof of the celestial science.' (George IV was notorious for dissipation, which Proctor notes with evident irony.)",
+        "Light": "Musicians, embroiderers, perfumers, classic modellers—those who administer to luxuries of the great",
+        "Shadow": "When afflicted: 'the lower orders of the votaries of voluptuousness'"
+      },
+      "keywords": [
+        "benefic",
+        "dimples",
+        "cherry lips",
+        "copper",
+        "white-purple"
+      ],
+      "quotes": [
+        "Venus, the next in order, bore the same relation to the Greater Fortune Jupiter which Mars bore to Saturn the Greater Ill-fortune. She was the Lesser Fortune, and her influence was in nearly all respects benevolent.",
+        "'The native of Venus hath,' quoth he, 'a love-dimple in the chin, a lovely mouth, cherry lips, and a right merry countenance.'",
+        "In character the native of Venus is merry 'to a fault,' but of temper engaging, sweet and cheerful, unless she be ill aspected, when her native is apt to be too fond of pleasure and amusement.",
+        "That her influence is good is shown (in the opinion of Raphael, writing in 1828) by the character of George IV., 'our present beloved monarch and most gracious majesty.'",
+        "Venus is the protectrice of musicians, embroiderers, perfumers, classic modellers, and all who work in elegant attire or administer to the luxuries of the great.",
+        "When she is afflicted, she represents 'the lower orders of the votaries of voluptuousness.'"
+      ],
+      "sort_order": 4
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "Mercury is 'a cold, dry, melancholy star.' The Mercurial has 'high forehead and thin sharp nose, thin beard (many times none at all), slender of body, and with small weak eyes.' When well affected: 'a strong, vigorous, active mind.' Long slender hands and fingers are 'especial marks of Mercury.'",
+        "Light": "Astrologers, philosophers, mathematicians, politicians, merchants, poets—all ingenious, clever men",
+        "Shadow": "When ill affected: pettifoggers, cunning vile persons, thieves, messengers, footmen, and servants"
+      },
+      "keywords": [
+        "neutral",
+        "melancholy",
+        "thin",
+        "clever",
+        "quicksilver",
+        "azure"
+      ],
+      "quotes": [
+        "Mercury is considered by astrologers 'a cold, dry, melancholy star.'",
+        "The Mercurial is neither dark nor fair, but between both, long-faced, with high forehead and thin sharp nose, 'thin beard (many times none at all), slender of body, and with small weak eyes.'",
+        "Long slender hands and fingers are 'especial marks of Mercury,' says Raphael.",
+        "In character the Mercurial is busy and prattling. But when well affected, Mercury gives his subjects a strong, vigorous, active mind, searching and exhaustive, a retentive memory, a natural thirst for knowledge.",
+        "The persons signified by Mercury are astrologers, philosophers, mathematicians, politicians, merchants, travellers, teachers, poets, artificers, men of science, and all ingenious, clever men.",
+        "When he is ill affected, however, he represents pettifoggers, cunning vile persons, thieves, messengers, footmen, and servants."
+      ],
+      "sort_order": 5
+    },
+    {
+      "id": "moon",
+      "name": "Moon",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "The Moon's natives are 'of good stature, fair, and pale, moon-faced, with grey eyes, short arms, thick hands and feet, smooth, corpulent and phlegmatic body.' When in watery signs: 'he or she is blub-cheeked, not a handsome body, but a muddling creature.' 'Unless the moon is very well aspected, she ever signifies an ordinary vulgar person.'",
+        "Light": "Sailors, all persons connected with water or any kind of fluid, those in inferior and common offices",
+        "Shadow": "The muddling creature: blub-cheeked, ordinary, vulgar—unless very well aspected"
+      },
+      "keywords": [
+        "neutral",
+        "moon-faced",
+        "blub-cheeked",
+        "phlegmatic",
+        "silver",
+        "spotted"
+      ],
+      "quotes": [
+        "The moon comes last in planetary sequence, as nearest to the earth. She is regarded by astrologers as a cold, moist, watery, phlegmatic planet, variable to an extreme.",
+        "Her natives are of good stature, fair, and pale, moon-faced, with grey eyes, short arms, thick hands and feet, smooth, corpulent and phlegmatic body.",
+        "When she is in watery signs, the native has freckles on the face, or, says Lilly, 'he or she is blub-cheeked, not a handsome body, but a muddling creature.'",
+        "Unless the moon is very well aspected, she ever signifies an ordinary vulgar person.",
+        "She signifies sailors (not as Mars does, the fighting-men of war-ships, but nautical folk generally) and all persons connected with water or any kind of fluid.",
+        "Also all who are engaged in inferior and common offices."
+      ],
+      "sort_order": 6,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trouvelot_-_Mare_Humorum_-_1875.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "Mare Humorum — the lunar surface — telescopic drawing",
+          "creator": "Étienne Léopold Trouvelot",
+          "date": "1881-1882",
+          "source": "*The Trouvelot Astronomical Drawings* (New York, 1882)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Trouvelot_-_Mare_Humorum_-_1875.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "'It is unfortunate for astrology that nothing was ever observed which seemed to suggest the possibility of an unknown planet. Astrologers tell us now that Uranus is a very potent planet; yet the old astrologers seem to have got on very well without him.' Raphael falsely claimed Halley and Bradley discovered Uranus through perturbation analysis—'Of course there is not a word of truth in this.'",
+        "Light": "If well aspected: profound in secret sciences, magnanimous, lofty of mind",
+        "Shadow": "Uranus is 'peculiarly hostile to' women, 'and very evil in love.' Beware marriage when Uranus afflicts!"
+      },
+      "keywords": [
+        "post-hoc addition",
+        "eccentric",
+        "romantic",
+        "unsettled",
+        "hostile to women"
+      ],
+      "quotes": [
+        "It is unfortunate for astrology that, despite the asserted careful comparison of events with the planetary positions preceding and indicating them, nothing was ever observed which seemed to suggest the possibility that there may be an unknown planet ruling very strongly the affairs of men.",
+        "Astrologers tell us now that Uranus is a very potent planet; yet the old astrologers seem to have got on very well without him.",
+        "Of course there is not a word of truth in this; Uranus having been discovered by accident long after Halley and Bradley were in the grave.",
+        "Astrologers agree in attributing evil effects to Uranus. But the evil he does is always peculiarly strange, unaccountable, and totally unexpected.",
+        "He causes the native born under his influence to be of a very eccentric and original disposition, romantic, unsettled, addicted to change, a seeker after novelty.",
+        "And in general, let the fair sex remember that Uranus is peculiarly hostile to them, and very evil in love."
+      ],
+      "sort_order": 7
+    },
+    {
+      "id": "aries",
+      "name": "Aries",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Aries is 'vernal, dry, fiery, masculine, cardinal, equinoctial, diurnal, movable, commanding, eastern, choleric, violent, and quadrupedalian.' It 'signifies a dry constitution, long face and neck, thick shoulders, swarthy complexion, and a hasty, passionate temper.' Governs head and face. Reigns over England, France, Germany, Syria, Naples, Verona.",
+        "Light": "Fortunate, commanding, initiating—the house of Mars at its most martial",
+        "Shadow": "Hasty, passionate, violent, choleric—'destruction by burning, and murder'"
+      },
+      "keywords": [
+        "fire",
+        "cardinal",
+        "masculine",
+        "Mars",
+        "head",
+        "fortunate",
+        "violent"
+      ],
+      "quotes": [
+        "Astrologers say that Aries is a vernal, dry, fiery, masculine, cardinal, equinoctial, diurnal, movable, commanding, eastern, choleric, violent, and quadrupedalian sign.",
+        "Aries is the house and joy of Mars, signifies a dry constitution, long face and neck, thick shoulders, swarthy complexion, and a hasty, passionate temper.",
+        "It governs the head and face, and all diseases relating thereto.",
+        "It reigns over England, France, Switzerland, Germany, Denmark, Lesser Poland, Syria, Naples, Capua, Verona, etc.",
+        "It is a masculine sign, and is regarded as fortunate.",
+        "We may, however, infer generally from their accounts the influences which they assigned to the zodiacal signs."
+      ],
+      "sort_order": 10,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Aries_and_Musca_Borealis.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Aries and Musca Borealis' — celestial card, plate 16",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Aries_and_Musca_Borealis.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "taurus",
+      "name": "Taurus",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Taurus 'gives to the native a stout athletic frame, broad bull-like forehead, dark curly hair, short neck, and so forth, and a dull apathetic temper, exceedingly cruel and malicious if once aroused.' Governs neck and throat. Reigns over Ireland, Holland, Persia, Leipzig. Feminine and unfortunate.",
+        "Light": "Stout, athletic, strong—physical power if nothing else",
+        "Shadow": "Dull, apathetic, but 'exceedingly cruel and malicious if once aroused'—the sleeping bull"
+      },
+      "keywords": [
+        "earth",
+        "fixed",
+        "feminine",
+        "Venus",
+        "neck",
+        "unfortunate",
+        "bull-like"
+      ],
+      "quotes": [
+        "Taurus gives to the native born under his auspices a stout athletic frame, broad bull-like forehead, dark curly hair, short neck, and so forth.",
+        "And a dull apathetic temper, exceedingly cruel and malicious if once aroused.",
+        "It governs the neck and throat.",
+        "And reigns over Ireland, Great Poland, part of Russia, Holland, Persia, Asia Minor, the Archipelago, Mantua, Leipsic, etc.",
+        "It is a feminine sign, and unfortunate.",
+        "The signs of the zodiac in the various houses were in the first place to be noted, because not only had these signs special powers in special houses, but the effects of the planets in particular houses varied according to the signs in which the planets were situated."
+      ],
+      "sort_order": 11,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Taurus.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Taurus' — celestial card, plate 17",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Taurus.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "The native of Gemini will have 'sanguine complexion and tall, straight figure, dark eyes quick and piercing, brown hair, active ways, and will be of exceedingly ingenious intellect.' Governs arms and shoulders. Rules London (the great fire, plague, and London Bridge all occurred when Gemini was prominent—or so astrologers claim after the fact).",
+        "Light": "Ingenious intellect, quick eyes, active ways—Mercury's house at its best",
+        "Shadow": "Post-hoc reasoning: any major London event gets attributed to Gemini after it happens"
+      },
+      "keywords": [
+        "air",
+        "mutable",
+        "masculine",
+        "Mercury",
+        "arms",
+        "fortunate",
+        "London"
+      ],
+      "quotes": [
+        "Gemini is the house of Mercury. The native of Gemini will have a sanguine complexion and tall, straight figure, dark eyes quick and piercing, brown hair, active ways, and will be of exceedingly ingenious intellect.",
+        "It governs the arms and shoulders.",
+        "And rules over the south-west parts of England, America, Flanders, Lombardy, Sardinia, Armenia, Lower Egypt, London, Versailles, Brabant, etc.",
+        "It is a masculine sign, and fortunate.",
+        "The sign Gemini was regarded by astrologers as especially associated with the fortunes of London.",
+        "And accordingly they tell us that the great fire of London, the plague, the building of London Bridge, and other events interesting to London, all occurred when this sign was in the ascendant, or when special planets were in this sign."
+      ],
+      "sort_order": 12,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Gemini.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Gemini' — celestial card, plate 18",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Gemini.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "cancer",
+      "name": "Cancer",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Cancer natives are 'of fair but pale complexion, round face, grey or mild blue eyes, weak voice, the upper part of the body large, slender arms, small feet, and an effeminate constitution.' Governs breast and stomach. Reigns over Scotland, Holland, Africa, Constantinople, New York. Feminine and unfortunate.",
+        "Light": "Fair complexion, grey eyes—the Moon's own sign",
+        "Shadow": "Effeminate constitution, weak voice—'indicative of all changeable and mutable circumstances'"
+      },
+      "keywords": [
+        "water",
+        "cardinal",
+        "feminine",
+        "Moon",
+        "breast",
+        "unfortunate",
+        "changeable"
+      ],
+      "quotes": [
+        "Cancer is the house of the Moon and exaltation of Jupiter.",
+        "And its native will be of fair but pale complexion, round face, grey or mild blue eyes, weak voice, the upper part of the body large, slender arms, small feet, and an effeminate constitution.",
+        "It governs the breast and the stomach.",
+        "And reigns over Scotland, Holland, Zealand, Burgundy, Africa, Algiers, Tunis, Tripoli, Constantinople, New York, etc.",
+        "It is a feminine sign, and unfortunate.",
+        "The moon, as she circles around the earth, exerts a manifest influence upon terrestrial matter—the tidal wave rising and sinking synchronously with the movements of the moon."
+      ],
+      "sort_order": 13,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Cancer.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Cancer' — celestial card, plate 19",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Cancer.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Leo natives are 'of large body, broad shoulders, austere countenance, with dark eyes and tawny hair, strong voice, and leonine character, resolute and ambitious, but generous, free, and courteous.' Governs heart and back. Reigns over Italy, France, Rome, Philadelphia. Masculine and fortunate.",
+        "Light": "Leonine character: resolute, ambitious, generous, free, courteous—the Sun's royal house",
+        "Shadow": "Austere countenance—royalty demands its distance"
+      },
+      "keywords": [
+        "fire",
+        "fixed",
+        "masculine",
+        "Sun",
+        "heart",
+        "fortunate",
+        "leonine"
+      ],
+      "quotes": [
+        "The native born under Leo will be of large body, broad shoulders, austere countenance, with dark eyes and tawny hair, strong voice, and leonine character, resolute and ambitious, but generous, free, and courteous.",
+        "Leo governs the heart and back.",
+        "And reigns over Italy, Bohemia, France, Sicily, Rome, Bristol, Bath, Taunton, Philadelphia, etc.",
+        "It is a masculine sign, and fortunate.",
+        "I do vengaunce and pleine correction, While I dwell in the signe of the leon.",
+        "The influence of a celestial body was supposed to depend on the magnitude of its sphere, in the sense of the old astronomy."
+      ],
+      "sort_order": 14,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Leo_Major_and_Leo_Minor.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Leo Major and Leo Minor' — celestial card, plate 20",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Leo_Major_and_Leo_Minor.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "virgo",
+      "name": "Virgo",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Virgo natives 'are of moderate stature, seldom handsome, slender but compact, thrifty and ingenious.' Governs abdomen. Reigns over Turkey, Greece, Crete, Jerusalem, Paris, Lyons. Feminine and 'generally unfortunate.'",
+        "Light": "Thrifty, ingenious, compact—Mercury's practical house",
+        "Shadow": "Seldom handsome, generally unfortunate—the maid's modest lot"
+      },
+      "keywords": [
+        "earth",
+        "mutable",
+        "feminine",
+        "Mercury",
+        "abdomen",
+        "unfortunate",
+        "thrifty"
+      ],
+      "quotes": [
+        "Virgo is the joy of Mercury.",
+        "Its natives are of moderate stature, seldom handsome, slender but compact, thrifty and ingenious.",
+        "It governs the abdomen.",
+        "And reigns over Turkey both in Europe and Asia, Greece, and Mesopotamia, Crete, Jerusalem, Paris, Lyons, etc.",
+        "It is a feminine sign, and generally unfortunate.",
+        "The Mercurial is busy and prattling. But when well affected, Mercury gives his subjects a strong, vigorous, active mind."
+      ],
+      "sort_order": 15,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Virgo.png?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Virgo' — celestial card, plate 21",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Virgo.png",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "libra",
+      "name": "Libra",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Libra natives are 'tall and well made, elegant in person, round-faced and ruddy, but plain-featured and inclined to eruptions that disfigure the face when old; they are of sweet disposition, just and upright in dealing.' Governs lumbar regions. Reigns over Austria, Portugal, India, Vienna, Charleston. Masculine and fortunate.",
+        "Light": "Elegant, sweet disposition, just and upright—Venus brings beauty and balance",
+        "Shadow": "Plain-featured and 'inclined to eruptions that disfigure the face when old'—time comes for all"
+      },
+      "keywords": [
+        "air",
+        "cardinal",
+        "masculine",
+        "Venus",
+        "lumbar",
+        "fortunate",
+        "eruptions when old"
+      ],
+      "quotes": [
+        "Libra is the house of Venus.",
+        "The natives of Libra are tall and well made, elegant in person, round-faced and ruddy, but plain-featured and 'inclined to eruptions that disfigure the face when old.'",
+        "They are of sweet disposition, just and upright in dealing.",
+        "It governs the lumbar regions.",
+        "And reigns over Austria, Alsace, Savoy, Portugal, Livonia, India, Ethiopia, Lisbon, Vienna, Frankfort, Antwerp, Charleston, etc.",
+        "It is a masculine sign, and fortunate."
+      ],
+      "sort_order": 16,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Libra.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Libra' — celestial card, plate 22",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Libra.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "scorpio",
+      "name": "Scorpio",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Scorpio natives are 'strong, corpulent, and robust, with large bones, dark curly hair and eyes (presumably the eyes dark only, not curly), middle stature, dusky complexion, active bodies; they are usually reserved in speech.' Governs the groin. Feminine and unfortunate. '(It would appear likely, by the way, that astrology was a purely masculine science.)'",
+        "Light": "Strong, robust, active, reserved—Mars's nocturnal power",
+        "Shadow": "Proctor's aside: astrology consistently marks feminine signs as unfortunate—suspicious pattern"
+      },
+      "keywords": [
+        "water",
+        "fixed",
+        "feminine",
+        "Mars",
+        "groin",
+        "unfortunate",
+        "masculine science"
+      ],
+      "quotes": [
+        "Scorpio is, like Aries, the house of Mars, 'and also his joy.'",
+        "Its natives are strong, corpulent, and robust, with large bones, 'dark curly hair and eyes' (presumably the eyes dark only, not curly), middle stature, dusky complexion, active bodies.",
+        "They are usually reserved in speech.",
+        "It governs the region of the groin.",
+        "It is feminine, and unfortunate.",
+        "(It would appear likely, by the way, that astrology was a purely masculine science.)"
+      ],
+      "sort_order": 17,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Scorpio.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Scorpio' — celestial card, plate 23",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Scorpio.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "sagittarius",
+      "name": "Sagittarius",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Sagittarius natives are 'well formed and tall, ruddy, handsome, and jovial, with fine clear eyes, chestnut hair, and oval fleshy face. They are generally jolly fellows at either bin or board, active, intrepid, generous, and obliging.' Governs thighs. Masculine and 'of course fortunate.'",
+        "Light": "Jolly fellows at either bin or board—Jupiter's merry house",
+        "Shadow": "Of course fortunate—because masculine (Proctor notes the pattern)"
+      },
+      "keywords": [
+        "fire",
+        "mutable",
+        "masculine",
+        "Jupiter",
+        "thighs",
+        "fortunate",
+        "jolly"
+      ],
+      "quotes": [
+        "Sagittarius is the house and joy of Jupiter.",
+        "Its natives are well formed and tall, ruddy, handsome, and jovial, with fine clear eyes, chestnut hair, and oval fleshy face.",
+        "They are 'generally jolly fellows at either bin or board,' active, intrepid, generous, and obliging.",
+        "It governs the legs and thighs.",
+        "And reigns over Arabia Felix, Spain, Hungary, Moravia, Liguria, Narbonne, Cologne, Avignon, etc.",
+        "It is masculine, and of course fortunate."
+      ],
+      "sort_order": 18,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Sagittarius_and_Corona_Australis,_Microscopium,_and_Telescopium.png?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Sagittarius, with Corona Australis, Microscopium and Telescopium' — celestial card, plate 24",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Sagittarius_and_Corona_Australis,_Microscopium,_and_Telescopium.png",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "capricorn",
+      "name": "Capricorn",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Capricorn gives 'a dry constitution and slender make, with a long thin visage, thin beard (a generally goaty aspect, in fact), dark hair, long neck, narrow chin, and weak knees. It governs, nevertheless, the knees and hams.' Reigns over India, Greece, Mexico, Oxford. Feminine and unfortunate.",
+        "Light": "Saturn's house of discipline and toil—there must be some virtue in that",
+        "Shadow": "A generally goaty aspect, weak knees—unfortunate being feminine, as usual"
+      },
+      "keywords": [
+        "earth",
+        "cardinal",
+        "feminine",
+        "Saturn",
+        "knees",
+        "unfortunate",
+        "goaty"
+      ],
+      "quotes": [
+        "Capricorn is the house of Saturn and exaltation of Mars.",
+        "This sign gives to its natives a dry constitution and slender make, with a long thin visage, thin beard (a generally goaty aspect, in fact), dark hair, long neck, narrow chin, and weak knees.",
+        "It governs, nevertheless, the knees and hams.",
+        "And reigns over India, Macedonia, Thrace and Greece, Mexico, Saxony, Wilna, Mecklenburgh, Brandenburg, and Oxford.",
+        "It is feminine, and unfortunate.",
+        "The persons signified symbolically by Saturn are grandparents, and other old persons, day labourers, paupers, beggars."
+      ],
+      "sort_order": 19,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Capricornus.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Capricornus' — celestial card, plate 25",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Capricornus.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "aquarius",
+      "name": "Aquarius",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Aquarius natives are 'robust, steady, strong, healthy, and of middle stature; delicate complexion, clear but not pale, sandy hair, hazel eyes, and generally an honest disposition.' Governs legs and ankles. Reigns over Russia, Denmark, Hamburg, Bremen. Masculine and fortunate.",
+        "Light": "Robust, honest, healthy—Saturn's better side in a masculine sign",
+        "Shadow": "Even Saturn produces fortunate results when the sign is masculine"
+      },
+      "keywords": [
+        "air",
+        "fixed",
+        "masculine",
+        "Saturn",
+        "ankles",
+        "fortunate",
+        "honest"
+      ],
+      "quotes": [
+        "Aquarius also is the house of Saturn.",
+        "Its natives are robust, steady, strong, healthy, and of middle stature; delicate complexion, clear but not pale, sandy hair, hazel eyes, and generally an honest disposition.",
+        "It governs the legs and ankles.",
+        "And reigns over Arabia, Petraea, Tartary, Russia, Denmark, Lower Sweden, Westphalia, Hamburg, and Bremen.",
+        "It is masculine, and fortunate.",
+        "Saturn produces cold and dryness, for he is most remote both from the Sun's heat and from the earth's vapours."
+      ],
+      "sort_order": 20,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Aquarius,_Piscis_Australis_&_Ballon_Aerostatique.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Aquarius, with Piscis Australis and Ballon Aerostatique' — celestial card, plate 26",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Aquarius,_Piscis_Australis_&_Ballon_Aerostatique.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "pisces",
+      "name": "Pisces",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Pisces natives are 'short, pale, thick-set, and round-shouldered (like fish), its character phlegmatic and effeminate.' Governs feet and toes. Reigns over Portugal, Spain, Egypt, Normandy. 'It is feminine, and therefore, naturally, unfortunate.'",
+        "Light": "Jupiter's nocturnal house—some capacity for reverence and philosophy",
+        "Shadow": "Round-shouldered like fish, phlegmatic, effeminate—'feminine, and therefore, naturally, unfortunate'"
+      },
+      "keywords": [
+        "water",
+        "mutable",
+        "feminine",
+        "Jupiter",
+        "feet",
+        "unfortunate",
+        "fish-like"
+      ],
+      "quotes": [
+        "Pisces is the house of Jupiter and exaltation of Venus.",
+        "Its natives are short, pale, thick-set, and round-shouldered (like fish), its character phlegmatic and effeminate.",
+        "It governs the feet and toes.",
+        "And reigns over Portugal, Spain, Egypt, Normandy, Galicia, Ratisbon, Calabria, etc.",
+        "It is feminine, and therefore, naturally, unfortunate.",
+        "The moon comes last in planetary sequence, as nearest to the earth. She is regarded by astrologers as a cold, moist, watery, phlegmatic planet."
+      ],
+      "sort_order": 21,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sidney_Hall_-_Urania's_Mirror_-_Pisces.jpg?width=800",
+      "metadata": {
+        "image_credit": {
+          "title": "'Pisces' — celestial card, plate 27",
+          "creator": "Sidney Hall (engraver)",
+          "date": "1824-1825",
+          "source": "*Urania's Mirror; or, A View of the Heavens*, London — a set of celestial cards issued with Jehoshaphat Aspin's *A Familiar Treatise on Astronomy*",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Sidney_Hall_-_Urania's_Mirror_-_Pisces.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      }
+    },
+    {
+      "id": "house-1",
+      "name": "First House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Ascendant House, rising above the horizon at the east, 'was regarded as the House of Life, the planets located therein at the moment of birth having most potent influence on the life and destiny of the native.' From this comes our expression that something is 'in the ascendant.' Angular and powerful.",
+        "Light": "Life, destiny, beginnings—the most important house for the native",
+        "Shadow": "If malefics occupy, the native's life and health suffer from the start"
+      },
+      "keywords": [
+        "angular",
+        "life",
+        "ascendant",
+        "destiny",
+        "east",
+        "rising"
+      ],
+      "quotes": [
+        "The first, called the Ascendant House, was the portion rising above the horizon at the east.",
+        "It was regarded as the House of Life, the planets located therein at the moment of birth having most potent influence on the life and destiny of the native.",
+        "Such planets were said to rule the ascendant, being in the ascending house.",
+        "And it is from this usage that our familiar expression that such and such an influence is 'in the ascendant' is derived.",
+        "The houses were not all of equal potency. The angular houses, which are the first, the fourth, the seventh, and the tenth—lying east, north, west, and south—were first in power, whether for good or evil.",
+        "Thus planets of good influence in the native's ascendant, or first house, signified generally a prosperous life."
+      ],
+      "sort_order": 30
+    },
+    {
+      "id": "house-2",
+      "name": "Second House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Riches, 'one-third of the way from the east below the horizon towards the place of the sun at midnight.' Succedent, supporting the angular first house. Material sustenance follows life itself.",
+        "Light": "Riches, possessions, material security",
+        "Shadow": "Or poverty, if malefics are found here"
+      },
+      "keywords": [
+        "succedent",
+        "riches",
+        "possessions",
+        "material"
+      ],
+      "quotes": [
+        "The next house was the House of Riches, and was one-third of the way from the east below the horizon towards the place of the sun at midnight.",
+        "The second, fifth, eighth, and eleventh houses were called succedents, as following the angular houses, and next to them in power.",
+        "The houses were regarded as alternately masculine and feminine: the first, third, fifth, etc., being masculine; while the second, fourth, sixth, etc., were feminine.",
+        "Material sustenance follows life itself in the natural order of the houses.",
+        "The position of the planets in the various houses at some epoch guided the astrologer's opinion as to the fortune of that hour.",
+        "It will be easily understood how these houses were dealt with in erecting a scheme of nativity."
+      ],
+      "sort_order": 31
+    },
+    {
+      "id": "house-3",
+      "name": "Third House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Kindred, short journeys, letters, messages. Two-thirds of the way toward midnight. Cadent and weak in power, preparing for the fourth house angle.",
+        "Light": "Brothers, sisters, neighbors, communication, short travels",
+        "Shadow": "Cadent houses are weakest—kindred may offer little support"
+      },
+      "keywords": [
+        "cadent",
+        "kindred",
+        "journeys",
+        "letters",
+        "messages"
+      ],
+      "quotes": [
+        "The third was the House of Kindred, short journeys, letters, messages, etc.",
+        "It was two-thirds of the way towards the place of the midnight sun.",
+        "The remaining four houses—viz. the third, sixth, ninth, and twelfth houses—were called cadents, and were regarded as weakest in influence.",
+        "Brethren of friends, fathers of kings, sickness of public enemies, wives of enemies.",
+        "Thoughts of the asker—the third house reveals the nature of inquiry.",
+        "The celestial sphere placed as at the moment of the native's birth was divided into twelve parts by great circles supposed to pass through the point overhead."
+      ],
+      "sort_order": 32
+    },
+    {
+      "id": "house-4",
+      "name": "Fourth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Parents, at the midnight position of the sun. Angular and powerful. 'The place of the sun at midnight'—foundations, ancestry, endings.",
+        "Light": "Parents, ancestry, lands, inheritance, the foundation of life",
+        "Shadow": "Also 'the end of matters'—where things conclude"
+      },
+      "keywords": [
+        "angular",
+        "parents",
+        "inheritance",
+        "midnight",
+        "endings"
+      ],
+      "quotes": [
+        "The fourth was the House of Parents, and was the house which the sun reached at midnight.",
+        "The angular houses, which are the first, the fourth, the seventh, and the tenth—lying east, north, west, and south—were first in power, whether for good or evil.",
+        "The end of youth, brethren of private enemies, fathers and grandsires of friends.",
+        "Dead men's goods, castles, treasure hid, the fate of the corpse in the grave.",
+        "Money of brethren, children of private enemies, sickness of friends.",
+        "The place of the sun at midnight marks the foundation and ending of all things."
+      ],
+      "sort_order": 33
+    },
+    {
+      "id": "house-5",
+      "name": "Fifth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Children and Women, 'also of all sorts of amusements, theatres, banquets, and merry-making.' Succedent, supporting the fourth house. The pleasures that spring from secure foundations.",
+        "Light": "Children, pleasure, creativity, amusement, theatres, banquets",
+        "Shadow": "Excessive merry-making can squander what foundations provide"
+      },
+      "keywords": [
+        "succedent",
+        "children",
+        "pleasure",
+        "amusement",
+        "theatres"
+      ],
+      "quotes": [
+        "The fifth was the House of Children and Women, also of all sorts of amusements, theatres, banquets, and merry-making.",
+        "Cards, dice, brethren's brethren, father's money, sickness of private enemies.",
+        "The second, fifth, eighth, and eleventh houses were called succedents, as following the angular houses.",
+        "Enemies of friends, death of kings, friends of enemies.",
+        "These three houses (the fifth, sixth, and seventh) followed in order from the fourth.",
+        "All sorts of amusements, theatres, banquets, and merry-making belong to the fifth house."
+      ],
+      "sort_order": 34
+    },
+    {
+      "id": "house-6",
+      "name": "Sixth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Sickness. Cadent and weak. Service, labor, and the ailments that come with them. The house before the Descendant, preparing for partnership through service.",
+        "Light": "Service, daily work, health practices when well managed",
+        "Shadow": "Sickness, servitude—the trials before relationship"
+      },
+      "keywords": [
+        "cadent",
+        "sickness",
+        "service",
+        "labor",
+        "weak"
+      ],
+      "quotes": [
+        "The sixth was the House of Sickness.",
+        "Vassals, children's money, brethren's fathers, father's brethren, enemies' enemies.",
+        "Death of friends, journeys and religion of kings, lay dignities, enemies of wives.",
+        "The remaining four houses—viz. the third, sixth, ninth, and twelfth houses—were called cadents, and were regarded as weakest in influence.",
+        "The sixth house corresponds to the part of the sun's path below the horizon.",
+        "Service, labor, and the ailments that come with them fill the sixth house."
+      ],
+      "sort_order": 35
+    },
+    {
+      "id": "house-7",
+      "name": "Seventh House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Love and Marriage, at the western horizon where the sun sets. Angular and powerful. 'Opposite to the first'—what completes us lies across from our self.",
+        "Light": "Marriage, partnership, love, contracts, committed relationships",
+        "Shadow": "Also 'death (if afflicted)'—marriage unto death, one way or another"
+      },
+      "keywords": [
+        "angular",
+        "marriage",
+        "love",
+        "descendant",
+        "west",
+        "setting"
+      ],
+      "quotes": [
+        "The seventh was the House of Love and Marriage.",
+        "The seventh, opposite to the first, was the Descendant.",
+        "Fines, pleas, laws, nuptials, death of enemies, friends of brethren.",
+        "Sons of friends, sisters of brethren, death of enemies and of great beasts, religion of friends.",
+        "But if at the same epoch a planet of malefic influence was in the seventh house, then the native, though on the whole prosperous, would be unfortunate in marriage.",
+        "The angular houses were first in power, whether for good or evil."
+      ],
+      "sort_order": 36
+    },
+    {
+      "id": "house-8",
+      "name": "Eighth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Death, 'the first house above the horizon, lying to the west.' Succedent, following the seventh. What marriage shares: resources, intimacy, and ultimately mortality.",
+        "Light": "Inheritance, shared resources, transformation",
+        "Shadow": "Death, fear, anxiety, the goods of the dead"
+      },
+      "keywords": [
+        "succedent",
+        "death",
+        "inheritance",
+        "transformation"
+      ],
+      "quotes": [
+        "The eighth house was the first house above the horizon, lying to the west, and was the House of Death.",
+        "Labour, sorrow, inheritance of the dead, money of enemies, brethren of servants.",
+        "Sickness of brethren, dignity of friends, king's friends, enemies of religious persons.",
+        "The second, fifth, eighth, and eleventh houses were called succedents.",
+        "Dead men's goods, castles, treasure hid, the fate of the corpse in the grave.",
+        "The eighth house follows the seventh—what marriage shares includes mortality."
+      ],
+      "sort_order": 37
+    },
+    {
+      "id": "house-9",
+      "name": "Ninth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Religion, science, learning, books, and long voyages. 'Next to the mid-heaven on the west.' Cadent, preparing for the culminating tenth house. The wisdom sought before worldly achievement.",
+        "Light": "Religion, philosophy, higher learning, long journeys, divination",
+        "Shadow": "Cadent weakness—knowledge without power to apply it"
+      },
+      "keywords": [
+        "cadent",
+        "religion",
+        "science",
+        "learning",
+        "voyages"
+      ],
+      "quotes": [
+        "The ninth house, next to the mid-heaven on the west, was the House of Religion, science, learning, books, and long voyages.",
+        "Prophets, prayers, visions, omens, divine worship, wife's brethren, fathers of servants.",
+        "Children's children, sickness of fathers, enemies of brethren, friends of friends, enemies of kings.",
+        "Evil planets in the ninth house would suggest to the native caution in undertaking long voyages, or entering upon religious or scientific controversies.",
+        "The remaining four houses were called cadents, and were regarded as weakest in influence.",
+        "The wisdom sought before worldly achievement resides in the ninth house."
+      ],
+      "sort_order": 38
+    },
+    {
+      "id": "house-10",
+      "name": "Tenth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Mid-heaven, 'the region occupied by the sun at midday.' Angular and most visible. 'The House of Honour, denoting credit, renown, profession or calling, trade, preferment.' The peak of worldly achievement.",
+        "Light": "Honor, profession, reputation, authority, achievement, visibility",
+        "Shadow": "Empty honor, reputation without substance, the loneliness of the peak"
+      },
+      "keywords": [
+        "angular",
+        "honor",
+        "profession",
+        "midheaven",
+        "noon",
+        "visible"
+      ],
+      "quotes": [
+        "The tenth, which was in the mid-heaven, or region occupied by the sun at midday, was the House of Honour, denoting credit, renown, profession or calling, trade, preferment, etc.",
+        "Judges, brethren of enemies, servants, fathers of enemies, children of servants.",
+        "Sickness of sons, death of brethren, friends of enemies, enemies of friends.",
+        "A good planet in the tenth house signified good fortune and honour in office or business, and generally a prosperous career.",
+        "The angular houses, which are the first, the fourth, the seventh, and the tenth—lying east, north, west, and south—were first in power.",
+        "The peak of worldly achievement lies at the midheaven."
+      ],
+      "sort_order": 39
+    },
+    {
+      "id": "house-11",
+      "name": "Eleventh House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Friends, 'next to the mid-heaven on the east.' Succedent, supporting the tenth. The allies who gather around our public position.",
+        "Light": "Friends, hopes, benefactors, good fortune, future vision",
+        "Shadow": "False friends, hopes disappointed—those who attach to success"
+      },
+      "keywords": [
+        "succedent",
+        "friends",
+        "hopes",
+        "benefactors"
+      ],
+      "quotes": [
+        "The eleventh house, next to the mid-heaven on the east, was the House of Friends.",
+        "Knights, esquires, children of enemies, sickness of servants.",
+        "Enemies and wives of offspring, death of fathers, journeys of brethren, enemies of enemies.",
+        "The second, fifth, eighth, and eleventh houses were called succedents, as following the angular houses, and next to them in power.",
+        "The allies who gather around our public position fill the eleventh house.",
+        "Friends, hopes, and benefactors are signified by planets in the eleventh."
+      ],
+      "sort_order": 40
+    },
+    {
+      "id": "house-12",
+      "name": "Twelfth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The House of Enemies. Cadent and weak. 'Even Lilly himself was indicted in 1655 because he had given judgment respecting stolen goods—apparently the twelfth house, House of Enemies, had caught up with him.'",
+        "Light": "Solitude, retreat, hidden strengths, spiritual work",
+        "Shadow": "Hidden enemies, imprisonment, self-undoing—the house that catches up with astrologers"
+      },
+      "keywords": [
+        "cadent",
+        "enemies",
+        "imprisonment",
+        "hidden",
+        "self-undoing"
+      ],
+      "quotes": [
+        "Lastly, the twelfth house was the House of Enemies.",
+        "Envy, sorrow, guile, long hidden wrath, money of friends, brethren of kings.",
+        "Sickness of wives, servants' enemies, death of children, trade of brethren, a prison.",
+        "Even Lilly himself was indicted in 1655 by a half-witted young woman, because he had given judgment respecting stolen goods.",
+        "Receiving two shillings and sixpence, contrary to an Act made under and provided by the wise and virtuous King James.",
+        "The twelfth house, House of Enemies, had caught up with him."
+      ],
+      "sort_order": 41
+    },
+    {
+      "id": "conjunction",
+      "name": "Conjunction",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "When planets occupy the same degree, their powers unite—'whether for good or ill, according to the nature of the stars involved.' The most powerful configuration, for better or worse.",
+        "Light": "Fusion of powers, intensification, new beginnings",
+        "Shadow": "Malefics in conjunction magnify each other's harm"
+      },
+      "keywords": [
+        "0 degrees",
+        "union",
+        "powerful",
+        "variable"
+      ],
+      "quotes": [
+        "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
+        "Houses of heaven, with their cusps, hours, and minutes; Almuten, Almochoden, Anahibazon, Catahibazon; a thousand terms of equal sound and significance.",
+        "The belief must have been all but universal that at the birth of any person who was to hold an important place in the world's history the stars would either be ominously conjoined.",
+        "Or else some blazing comet or new star would make its appearance.",
+        "When planets occupy the same degree, their powers unite.",
+        "Whether for good or ill, according to the nature of the stars involved."
+      ],
+      "sort_order": 50
+    },
+    {
+      "id": "sextile",
+      "name": "Sextile",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "Sixty degrees apart, 'comprehending two signs.' Considered friendly because signs in sextile 'share the same gender but differ in element, producing harmony through difference.'",
+        "Light": "Harmony through difference, friendly cooperation",
+        "Shadow": "Mild benefit only—not powerful enough to overcome serious affliction"
+      },
+      "keywords": [
+        "60 degrees",
+        "benefic",
+        "friendly",
+        "harmony"
+      ],
+      "quotes": [
+        "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
+        "The sextile comprehends two signs, sixty degrees apart.",
+        "Signs in sextile share the same gender but differ in element.",
+        "Producing harmony through difference, the sextile is considered friendly.",
+        "Mild benefit flows from the sextile, though not enough to overcome serious affliction.",
+        "It was natural that the astrologers of old should regard the planetary influences as depending in the main on the position of the celestial bodies."
+      ],
+      "sort_order": 51
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "Ninety degrees apart, 'comprehending three signs.' Considered inharmonious because signs in square 'share the same modality but are of contrary elements.'",
+        "Light": "Tension that motivates action, crisis that builds strength",
+        "Shadow": "Conflict, obstacles, frustration—the difficult aspect"
+      },
+      "keywords": [
+        "90 degrees",
+        "malefic",
+        "tension",
+        "conflict"
+      ],
+      "quotes": [
+        "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
+        "The quartile or square comprehends three signs, ninety degrees apart.",
+        "Signs in square share the same modality but are of contrary elements.",
+        "The square is considered inharmonious, productive of conflict.",
+        "Tension that motivates action may arise from the square.",
+        "An enemy: a fiend lurks close behind the radiance of thy planet—oh! be warned!"
+      ],
+      "sort_order": 52
+    },
+    {
+      "id": "trine",
+      "name": "Trine",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "One hundred twenty degrees apart, 'comprehending four signs.' Considered 'most harmonious and beneficial, as signs in trine share the same element and thus the same essential nature.'",
+        "Light": "Natural harmony, ease, blessing, grace",
+        "Shadow": "Gifts taken for granted, complacency, unrealized potential"
+      },
+      "keywords": [
+        "120 degrees",
+        "benefic",
+        "harmonious",
+        "blessing"
+      ],
+      "quotes": [
+        "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
+        "The trine comprehends four signs, one hundred twenty degrees apart.",
+        "Signs in trine share the same element and thus the same essential nature.",
+        "Most harmonious and beneficial, the trine brings ease and blessing.",
+        "Natural harmony flows when planets stand in trine.",
+        "Thus each of these planets, being moderated by this combination, produces a favourable temperament."
+      ],
+      "sort_order": 53
+    },
+    {
+      "id": "opposition",
+      "name": "Opposition",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "One hundred eighty degrees apart, 'comprehending six signs.' Produces 'disharmony through complete separation, as opposing signs are furthest apart and thus contrary in influence.'",
+        "Light": "Awareness through polarity, the tension that creates relationship",
+        "Shadow": "Separation, contrary influences, the pull of opposites"
+      },
+      "keywords": [
+        "180 degrees",
+        "malefic",
+        "polarity",
+        "separation"
+      ],
+      "quotes": [
+        "Signs and planets, in aspects sextile, quartile, trine, conjoined, or opposite.",
+        "The opposition comprehends six signs, one hundred eighty degrees apart.",
+        "Opposing signs are furthest apart and thus contrary in influence.",
+        "Disharmony through complete separation characterizes the opposition.",
+        "A fearful sign stands in the house of life, an enemy: a fiend lurks close behind.",
+        "The radiance of thy planet—oh! be warned!"
+      ],
+      "sort_order": 54
+    }
+  ],
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "recursive.eco-schemas",
+        "role": "original compilation of the public-domain source into grammar form",
+        "link": "https://github.com/PlayfulProcess/recursive.eco-schemas"
+      },
+      {
+        "name": "Myths and Marvels of Astronomy (first published 1877; this text the 1896 'New Edition')",
+        "role": "source text (public domain)",
+        "link": "https://www.gutenberg.org/ebooks/26556"
+      },
+      {
+        "name": "PlayfulProcess",
+        "role": "adopted into The Recursive Astrology as a voice's source library",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Richard_Anthony_Proctor2.jpg?width=800",
+  "_recursive_eco_url": "https://flow.recursive.eco/g/7e0a9452-7d34-4ada-a311-229ba13ecbe7?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=7e0a9452-7d34-4ada-a311-229ba13ecbe7",
+  "cover_image_credit": {
+    "title": "Richard A. Proctor (1837-1888), carte de visite",
+    "creator": "William Shaw Warren",
+    "date": "c. 1870",
+    "source": "Carte-de-visite photograph",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Richard_Anthony_Proctor2.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Nineteenth-century photograph; Commons file page states public domain",
+    "verified": "2026-07-26"
+  }
+}

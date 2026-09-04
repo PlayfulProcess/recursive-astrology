@@ -1,0 +1,521 @@
+{
+  "name": "Historiographies of Astrology",
+  "description": "A library of the major historiographical VIEWS of astrology — the eras and stances through which humans have read meaning into the sky, each presented faithfully in its own terms and held honestly to the record. Not a manual for casting charts and not a verdict on whether the sky speaks; a record of a five-thousand-year practice of meaning-making, autonomy-preserving throughout: a chart is a mirror and a calendar here, never a prediction and never a command. The astrology counterpart of The Recursive Tarot — same creed, different domain. No images yet: honest sourcing of public-domain plates is a later, separate job, and an honest gap beats a wrong picture.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flammarion.jpg?width=800",
+  "grammar_type": "custom",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — contemporary historiographical survey (this repo's meta-grammar). Each view item carries its own era range in metadata.era; the survey itself is present-day."
+  },
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "is_published": false,
+  "tags": [
+    "astrology",
+    "history",
+    "historiography",
+    "history-of-science",
+    "recursive-eco"
+  ],
+  "default_preview": "thumbnails",
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "role": "compiled as a recursive.eco grammar",
+        "link": "https://recursive.eco",
+        "note": "Original synthesis of the historiography of astrology into the recursive.eco grammar schema. Reading pointers name standard scholarly works only; no page-level citations, no reproduced copyrighted text, no images."
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "view-mesopotamian-omens",
+      "name": "Mesopotamian Omen-Craft",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Enuma Anu Enlil",
+        "omen",
+        "Babylon",
+        "celestial divination"
+      ],
+      "sections": {
+        "What this view holds": "The oldest layer: the sky as a system of omens read on behalf of the king and the land, not the individual. Celestial events — an eclipse, a planet's heliacal rising, a halo round the Moon — are signs the gods write in the heavens for those trained to read them. The sign announces a tendency in the affairs of the state; it is answered by ritual (the namburbi) that can avert the ill it warns of. There is as yet no birth chart and no personal horoscope: the reading is collective, and its purpose is care of the realm.",
+        "In its own words": "The great omen series is known by its opening words, *Enūma Anu Enlil* — 'When (the gods) Anu (and) Enlil…' — and its entries take the conditional form 'if X in the sky, then Y on earth' (paraphrase of the series' standard omen structure, not a verbatim tablet quotation).",
+        "The record": "Celestial omen collections were compiled on cuneiform tablets across the second and first millennia BCE; the canonical 70-tablet series *Enūma Anu Enlil* took shape by c. the late second millennium BCE and was copied for centuries. The earliest known personal horoscopes appear late in this world, c. 410 BCE. Dates and the series' redaction history are reconstructed from fragmentary tablets and remain debated in detail.",
+        "Reading": "What a modern reader honestly gets here is not comfort but scale: the oldest surviving version of the sky-as-message, addressed to a king and a land rather than to any one person. Read for the shape of the very first omen logic — conditional, collective, answerable by ritual — not for a technique anyone practices today. Francesca Rochberg, *The Heavenly Writing: Divination, Horoscopy, and Astronomy in Mesopotamian Culture* (Cambridge University Press), is the standard modern account; Nicholas Campion, *A History of Western Astrology, Vol. I: The Ancient and Classical Worlds* (Continuum), and Jim Tester, *A History of Western Astrology* (Boydell), opening chapters, place it in the longer story this whole library tells.",
+        "Research note": "An evidence dossier backs this view: *research/views/mesopotamian-omens.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "c. 2nd–1st millennium BCE",
+        "region": "Mesopotamia",
+        "stance": "omen-craft",
+        "confidence": "medium",
+        "_research": "research/views/mesopotamian-omens.md",
+        "image_credit": {
+          "title": "Cuneiform tablet of lunar omens — the commentary series *Sîn ina tāmartīšu* (Böhl Collection LB 1321)",
+          "creator": "Unknown Assyrian scribe",
+          "date": "669-627 BCE",
+          "source": "De Liagre Böhl Collection, Nederlands Instituut voor het Nabije Oosten, Leiden",
+          "file_page": "https://commons.wikimedia.org/wiki/File:NINODeLiagreBohlLB1321.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Ancient work; Commons file page states public domain",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/NINODeLiagreBohlLB1321.jpg?width=800"
+    },
+    {
+      "id": "view-hellenistic-synthesis",
+      "name": "The Hellenistic Synthesis",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Alexandria",
+        "horoscope",
+        "Ptolemy",
+        "Vettius Valens",
+        "Tetrabiblos"
+      ],
+      "sections": {
+        "What this view holds": "In Greco-Roman Egypt the Babylonian omen tradition, Egyptian decans, and Greek natural philosophy fuse into something new: the natal horoscope — a chart of the whole sky for the moment of a birth, with the twelve places (houses), aspects, and rulerships that later astrology inherits. Two temperaments coexist. Ptolemy's *Tetrabiblos* frames it as natural philosophy: the heavens act on the sublunary world physically, as the Sun makes the seasons, so the art is a fallible science of influence. Vettius Valens' *Anthologies* is the working practitioner's book — worked example charts, fate, and the consolations of the craft.",
+        "In its own words": "Ptolemy opens the *Tetrabiblos* by defending prediction as a natural but fallible art — paraphrasing Book I: the science should not be dismissed because it sometimes errs, any more than navigation or medicine is; and its forecasts describe general inclinations, not fixed decrees. (Paraphrase of *Tetrabiblos* I, not a verbatim quotation.) The maxim often hung on him — 'the stars incline, they do not compel' — is a later Latin tag (*astra inclinant, non necessitant*), not a verbatim line of the *Tetrabiblos*; it captures his hedged spirit but should not be quoted as his own words.",
+        "The record": "The natal horoscope emerges c. the 2nd–1st centuries BCE; Ptolemy writes c. 2nd century CE in Alexandria; Vettius Valens compiles the *Anthologies* c. mid-2nd century CE. Public-domain translations of the *Tetrabiblos* (e.g. the 1822 Ashmand translation) circulate on archive.org; a scholarly Greek-English edition exists in the Loeb Classical Library (trans. F. E. Robbins).",
+        "Reading": "This is the era to read if you want the actual ancestor of the chart anyone might get cast today — houses, aspects, rulerships, all already present, argued over by two very different temperaments: the philosopher who hedges and the working diviner who doesn't. A modern reader's honest gain is origin, plus the useful reminder that even Ptolemy called the art fallible. Ptolemy, *Tetrabiblos* (Loeb Classical Library, trans. F. E. Robbins; or the public-domain Ashmand translation on archive.org / Project Gutenberg #70850), is the philosopher's book; Vettius Valens, *Anthologies* (translated by Mark Riley, circulated freely online), is the practitioner's. Chris Brennan, *Hellenistic Astrology: The Study of Fate and Fortune*, and Tamsyn Barton, *Ancient Astrology* (Routledge), are the accessible modern guides.",
+        "Research note": "An evidence dossier backs this view: *research/views/hellenistic-synthesis.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display. Correction applied from the dossier: Campion's Volume I is subtitled *The Ancient and Classical Worlds* (the seed had *The Ancient World*).",
+        "The record — Manilius, tr. Creech (1697)": "A third Roman voice belongs beside Ptolemy and Valens, earlier and harder-edged: Marcus Manilius, whose poem the *Astronomica* (c. 10–20 CE) casts astrology as Stoic cosmic law, not Ptolemy's hedged art. Only Thomas Creech's 1697 verse translation is public domain; the Loeb/Goold prose translation is copyrighted and not used here.\n\n*Book II, on Fate and the four 'Hinges' (angles) of the nativity — from an archive.org scan of Creech's translation (the anonymous 1700 reprint of the same 1697 text); … marks elisions; long-s and broken ligatures silently corrected, no word guessed:*\n\n> Sure Fate stands fixt, nor can its Laws decay, / 'Tis Heaven's to rule, and Matter's Essence to obey. … Few study Heaven, unmindful of their Fate, / Vain, stupid Man! but this it self is Fate.\n\n> Be careful then, and with a curious Eye, / Observe the four fixt Hinges of the Sky … One fixt i'th' East, where with a gentle Ray / The Sun views half the Earth on either way, / And here brings on, and there bears off the Day. / One in the West, from whose declining steep / The Sun falls head-long, and enjoys the Deep … Oppos'd to this, the Fourth securely lies, / The immoveable Foundation of the Skies; / The lowest point, to which with steddy Rein / The Stars descend, and whence they mount again … These Points in Fate the greatest Interest claim, / Because they settle, and support the Frame … The chiefest that which on the Top doth lie … There Glory sits in all her Pomp and state, / The highest place requires the highest Fate; / Thence Places, Dignities, Preferments flow … As great in Power is that where Beams display / Their rising luster, and renew the Day … This governs Life, and this marks out our Parts, / For Humours, Manners, Qualities, and Arts … The next, (tho' lowest and contemn'd it lies) / The fixt, and sure Foundation of the Skies … It governs Wealth, and Wealth's the stay of all.\n\nManilius's four angles are the direct ancestor of the angular houses this view already credits to the Hellenistic chart — but his mapping differs honestly: the Ascendant ('Horoscope') governs life and temperament, the Midheaven governs rank and glory, and the fourth angle he gives to wealth, not the later home and root. One more honest disagreement inside the record."
+      },
+      "metadata": {
+        "era": "c. 2nd century BCE – 2nd century CE",
+        "region": "Greco-Roman Egypt & Mediterranean",
+        "stance": "natural-philosophy",
+        "confidence": "medium",
+        "_research": "research/views/hellenistic-synthesis.md",
+        "source": {
+          "author": "Marcus Manilius",
+          "translator": "Thomas Creech",
+          "year_original": "c. 10–20 CE",
+          "year_translation": 1697,
+          "title": "The Five Books of M. Manilius, Containing a System of the Ancient Astronomy and Astrology: Together with the Philosophy of the Stoicks",
+          "license": "Public Domain",
+          "edition_note": "This session fetched the archive.org scan identified 'TheFiveBooksOfM.ManiliusAncientAstronomy', whose title page carries a 1700 imprint ('Printed and Sold by the Booksellers of London and Westminster') — an anonymous second impression of Creech's 1697 translation (first published by Jacob Tonson), not the 1697 Tonson edition itself. Same translator, same text, per the standard bibliographic record for this title; flagged honestly since the exact scanned leaf is the 1700 reprint. The Goold/Loeb Classical Library prose translation of Manilius is separately in copyright and was not consulted.",
+          "source_url": "https://archive.org/details/TheFiveBooksOfM.ManiliusAncientAstronomy",
+          "source_txt_url": "https://archive.org/download/TheFiveBooksOfM.ManiliusAncientAstronomy/TheFiveBooksOfM.Manilius-AncientAstronomy_djvu.txt"
+        },
+        "image_credit": {
+          "title": "The Zodiac of Denderah — the Greco-Roman zodiac ceiling from the temple of Hathor",
+          "creator": "Photograph by Mansell",
+          "date": "before 1911",
+          "source": "Reproduced in W. T. Olcott, *Star Lore of All Ages* (New York, 1911)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Star_Lore_Of_All_Ages_(1911),_0393,_The_Zodiac_of_Denderah.png",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1911; Commons states public domain (PD-old / PD-US)",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Star_Lore_Of_All_Ages_(1911),_0393,_The_Zodiac_of_Denderah.png?width=800"
+    },
+    {
+      "id": "view-jyotisha",
+      "name": "Jyotiṣa — The Indian Tradition",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Jyotisha",
+        "India",
+        "Vedanga",
+        "nakshatra",
+        "transmission"
+      ],
+      "sections": {
+        "What this view holds": "Jyotiṣa — 'the science of light' — is astronomy-and-astrology as one of the Vedāṅgas, the auxiliary disciplines of the Veda, and it is a living, continuous tradition to this day. It keeps a sidereal zodiac (measured against the fixed stars) where Western astrology drifted to a tropical one, and its own scheme of the twenty-seven nakṣatras (lunar mansions), the daśā period systems, and the lunar nodes Rāhu and Ketu. In its own terms it is a limb of sacred knowledge, woven into ritual timing (muhūrta), medicine, and life-passage — not an import.",
+        "In its own words": "Jyotiṣa's own tradition assigns itself the rank of *cakṣus* — 'the eye' — among the six Vedāṅgas that make up the body of the Veda: mere touch cannot tell one color from another, the image runs, and just so the Veda's ritual body needs Jyotiṣa's eye to see the time in which right action is to be done. This is a received traditional description repeated across Indian sources, including India's own government heritage portal, rather than a single author's sourced verbatim sentence — offered here as the tradition's self-image, not a citation to one text.",
+        "The record": "A pre-horoscopic Jyotiṣa (calendrical, nakṣatra-based) is old within the Indian tradition. Historians of science argue that horoscopic natal astrology — houses, aspects, the seven-planet chart — entered India from the Hellenistic world c. the early centuries CE, a key text being the *Yavanajātaka* ('Sayings of the Greeks'); the tradition then developed independently and richly. Both the fact and the dating of that transmission are contested: David Pingree's influential reconstruction and early dating have been revised by later scholarship (e.g. on the *Yavanajātaka*), and some scholars weight indigenous development more heavily. Held at medium-to-low confidence and flagged as such.",
+        "Reading": "A Western reader's honest gain here is humility, not authority: a living, technically rich tradition that owes the West nothing and was never waiting to be discovered. Read David Pingree, *From Astral Omens to Astrology: From Babylon to Bīkāner*, alongside Bill Mak's 2013 revision of Pingree's own *Yavanajātaka* dating (*History of Science in South Asia*, open access) — deliberately together, because the disagreement between them is more honest than either account alone. Nicholas Campion, *A History of Western Astrology, Vol. I* (chapters on transmission), gives the Western-historiography frame this view is written from; that frame is itself a stance, which is exactly why §7 of the underlying dossier flags it as owed a practitioner-informed review. Treat any single transmission account, including Pingree's, as one argued position.",
+        "Research note": "An evidence dossier backs this view: *research/views/jyotisha.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display. The dossier's key finding: Pingree's influential dating of the *Yavanajātaka* rests on emended readings revised by Mak (2013) — the transmission story is looser than the textbook account, which is why this view stays at low confidence."
+      },
+      "metadata": {
+        "era": "Vedic roots; horoscopic layer c. early centuries CE; living tradition",
+        "region": "Indian subcontinent",
+        "stance": "natural-philosophy",
+        "confidence": "low",
+        "_research": "research/views/jyotisha.md",
+        "image_credit": {
+          "title": "Relief fragment from a navagraha (nine-planet) panel, the figure identified as Ketu",
+          "creator": "Unknown sculptor, India",
+          "date": "10th century",
+          "source": "Walters Art Museum, Baltimore (25.39)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Indian_-_Diety_with_Two_Attendants_and_an_Animal_Frieze_Below_-_Walters_2539.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Medieval sculpture; Commons file page states public domain",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_-_Diety_with_Two_Attendants_and_an_Animal_Frieze_Below_-_Walters_2539.jpg?width=800"
+    },
+    {
+      "id": "view-islamic-golden-age",
+      "name": "The Islamic Golden Age",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Abu Ma'shar",
+        "Abbasid",
+        "translation movement",
+        "court science",
+        "Albumasar"
+      ],
+      "sections": {
+        "What this view holds": "In the Abbasid world astrology is preserved, systematized, and advanced as a court science and a branch of natural philosophy. The great translation movement renders Greek, Persian, and Sanskrit astral learning into Arabic; astrologers like Abū Maʿshar (Latin: Albumasar) build grand syntheses joining astrology to Aristotelian physics and to history itself (the theory of great conjunctions marking the rise and fall of dynasties and religions). Astrology sits beside astronomy, mathematics, and medicine as a learned art in the service of rulers.",
+        "In its own words": "Abū Maʿshar's *Great Introduction* mounts its defense of astrology on the same ground it would defend medicine: a physician reads the changing 'natures' of a body to anticipate and manage illness, and no one renounces medicine when a diagnosis misses; Abū Maʿshar asks astrology the identical courtesy, as a natural art reasoning from visible celestial causes to their earthly effects, fallible the way any natural art is fallible. This is a paraphrase of the *Great Introduction*'s opening line of argument, following the standard scholarly description of it — not a verbatim translation quoted here; consult the Yamamoto & Burnett edition for Abū Maʿshar's actual words.",
+        "The record": "The translation movement flourishes in Baghdad c. the 8th–10th centuries CE; Abū Maʿshar works c. the 9th century CE. His *Great Introduction to the Science of Astrology* (Kitāb al-madḫal al-kabīr) becomes, in Latin translation from the 12th century, one of the principal channels by which systematic astrology re-enters Latin Europe. A critical Arabic-Latin-English edition of the *Great Introduction* has been edited by Charles Burnett and Keiji Yamamoto.",
+        "Reading": "What this era offers honestly is the missing link most modern astrology readers never learn: not a footnote between Ptolemy and the Renaissance but the actual corridor the Hellenistic chart traveled through to reach the Latin West at all. Read Abū Maʿshar, *The Great Introduction to the Science of Astrology* (ed./trans. Keiji Yamamoto & Charles Burnett, Brill, 2019 — not public domain), for the ambition, and al-Bīrūnī's *Elements of the Art of Astrology* (trans. R. Ramsay Wright, 1934) for the era's own working caution, since al-Bīrūnī insists the astrologer must first be a competent astronomer and mathematician. Nicholas Campion, *A History of Western Astrology, Vol. II: The Medieval and Modern Worlds*, and Jim Tester, *A History of Western Astrology* (chapters on the Arabic transmission), carry the connecting narrative; Dimitri Gutas, *Greek Thought, Arabic Culture*, is the standard account of the translation movement itself.",
+        "Research note": "An evidence dossier backs this view: *research/views/islamic-golden-age.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "c. 8th–11th century CE",
+        "region": "Abbasid Caliphate & the wider Islamic world",
+        "stance": "court-science",
+        "confidence": "medium",
+        "_research": "research/views/islamic-golden-age.md",
+        "image_credit": {
+          "title": "Page from a fifteenth-century Egyptian manuscript of Abū Maʿshar’s *Kitāb al-Mawālīd* (Book of Nativities)",
+          "creator": "Qanbar ʿAlī Naqqāsh Shīrāzī",
+          "date": "15th century",
+          "source": "Manuscript copy of Abū Maʿshar (Albumasar, d. 886)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Abu_Ma'shar(Ibn_Balkhi)-850AD.png",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Fifteenth-century manuscript; Commons states public domain (PD-old)",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abu_Ma'shar(Ibn_Balkhi)-850AD.png?width=800"
+    },
+    {
+      "id": "view-medieval-renaissance-court",
+      "name": "Medieval & Renaissance Court Astrology",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "court astrologer",
+        "university medicine",
+        "Pico della Mirandola",
+        "Disputationes"
+      ],
+      "sections": {
+        "What this view holds": "In Latin Christendom astrology becomes a university subject and a courtly instrument. It is taught alongside astronomy in the quadrivium; physicians read charts to time treatments (iatromathematics); princes keep astrologers to elect auspicious moments and read the heavens over politics. It is, for centuries, respectable learned knowledge — while theologians debate how far the stars may incline the will without overriding it, and where astral influence shades into forbidden determinism.",
+        "In its own words": "The tradition's sharpest internal critic is Giovanni Pico della Mirandola, whose *Disputationes adversus astrologiam divinatricem* ('Disputations against divinatory astrology') argues that astrologers claim from the stars what is better explained by proximate earthly causes — a critique launched from inside Renaissance humanism, not from outside it.",
+        "The record": "Astrology is embedded in European university and court life c. the 12th–16th centuries. Pico wrote the *Disputationes* shortly before his death in 1494; it was published posthumously c. 1496. Its influence on the later demarcation of astrology from astronomy is argued by historians but should not be overstated as a single turning point.",
+        "Reading": "The honest offer of this era is astrology at its most respectable and its most argued-over at once — a university subject with its own in-house critics. Read Pico first, precisely because the sharpest takedown of astrology's overreach came from inside the same humanist culture that also practiced it, not from an outside enemy. Nicholas Campion, *A History of Western Astrology, Vol. II: The Medieval and Modern Worlds*, and Jim Tester, *A History of Western Astrology*, carry the general narrative; Patrick Curry, *Prophecy and Power: Astrology in Early Modern England* (Princeton), grounds the English court context specifically.",
+        "Research note": "An evidence dossier backs this view: *research/views/medieval-renaissance-court.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "c. 12th–16th century",
+        "region": "Latin Europe",
+        "stance": "court-science",
+        "confidence": "medium",
+        "_research": "research/views/medieval-renaissance-court.md",
+        "image_credit": {
+          "title": "The Anatomical Man (homo signorum) — the zodiac mapped on the body, fol. 14v",
+          "creator": "Limbourg brothers",
+          "date": "c. 1411-1416",
+          "source": "*Les Tres Riches Heures du Duc de Berry*, Musee Conde, Chantilly",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Anatomical_Man.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Painters died 1416; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anatomical_Man.jpg?width=800"
+    },
+    {
+      "id": "view-decline-demarcation",
+      "name": "The Great Decline & the Demarcation",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Copernicus",
+        "Newton",
+        "Scientific Revolution",
+        "demarcation",
+        "decline"
+      ],
+      "sections": {
+        "What this view holds": "Between the sixteenth and eighteenth centuries astrology loses its place in learned culture. The story usually told is that the Scientific Revolution — Copernicus to Newton — dissolved the physics of celestial influence astrology depended on, and that the drawing of a line between 'science' and 'astrology' was part of how the new natural philosophy defined itself. Astrology exits the universities and the almanacs of the elite, surviving in popular practice. Historians caution that the decline was gradual, uneven, and social as much as intellectual — not a single refutation on a single day.",
+        "In its own words": "The demarcation had its own popular theater, and its funniest document is a hoax. In 1708 Jonathan Swift, writing as the invented astrologer 'Isaac Bickerstaff,' published an almanac aimed at a real rival, John Partridge: 'I have consulted the Star of his Nativity by my own Rules, and find he will infallibly dye upon the 29th of March next, about Eleven at Night, of a raging fever.' When the 29th passed with Partridge alive, Bickerstaff simply insisted he was dead anyway and unfit to have written such nonsense while living. (Verbatim from Swift's *Predictions for the Year 1708*, corroborated across academic and popular accounts of the hoax; the original Gutenberg text was not independently refetched this session — see the research note.) The joke, endlessly reprinted, did more to make judicial astrology look absurd to literate England than any physics ever managed.",
+        "The record": "Copernicus publishes c. 1543, Newton's *Principia* c. 1687; astrology's institutional standing erodes across roughly the 17th–18th centuries. Patrick Curry argues the 'death' of English astrology was a long social process of losing elite patronage rather than a clean empirical defeat. The framing of 'science versus astrology' is itself a historical artifact worth examining, not a neutral fact.",
+        "Reading": "What a modern reader gets here, honestly, is the origin of the very question this whole library declines to answer on astrology's behalf — 'is this a science?' — asked first by people with real stakes in the answer, decades before Swift's satire made it a punchline. Read Patrick Curry, *Prophecy and Power: Astrology in Early Modern England*, for the decline itself and his *A Confusion of Prophets: Victorian and Edwardian Astrology* (Collins & Brown) for the long aftermath; Keith Thomas, *Religion and the Decline of Magic* (1971), for how a whole world of plausibility — not astrology alone — came apart at the same time. Nicholas Campion, *A History of Western Astrology, Vol. II*, and Jim Tester, *A History of Western Astrology* (closing chapters), carry the connecting narrative. Read all of them against the tidy myth of a single refutation; none of these historians tell that story.",
+        "Research note": "An evidence dossier backs this view: *research/views/decline-demarcation.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "c. 16th–18th century",
+        "region": "Europe",
+        "stance": "critical",
+        "confidence": "medium",
+        "_research": "research/views/decline-demarcation.md",
+        "image_credit": {
+          "title": "Credulity, Superstition, and Fanaticism — a medley",
+          "creator": "William Hogarth",
+          "date": "1762",
+          "source": "Engraving, London, 1762",
+          "file_page": "https://commons.wikimedia.org/wiki/File:William_Hogarth_-_Credulity,_Superstition,_and_Fanaticism.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Hogarth died 1764; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Hogarth_-_Credulity,_Superstition,_and_Fanaticism.jpg?width=800"
+    },
+    {
+      "id": "view-theosophical-revival",
+      "name": "The Theosophical Revival",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Alan Leo",
+        "Theosophy",
+        "character is destiny",
+        "fortune-telling trials"
+      ],
+      "sections": {
+        "What this view holds": "Around 1900, astrology is reborn through the Theosophical movement, above all in the work of Alan Leo, who reframes it away from event-prediction and toward character and spiritual evolution — famously compressing the shift into the slogan that 'character is destiny.' Karma and reincarnation supply the metaphysics; the chart becomes a map of the soul's tendencies and lessons rather than a forecast of outward events. This moralizing, psychologizing turn is the hinge on which the whole modern 'inner' astrology swings.",
+        "In its own words": "Alan Leo's watchword is commonly given as 'character is destiny' — a formula he used to move astrology from predicting events to reading temperament (widely attributed to Leo in the historiography; treat as a slogan of the movement rather than a sourced verbatim sentence here).",
+        "The record": "Leo works in Britain c. the 1890s–1910s. He was prosecuted under fortune-telling law — a case c. 1914 and a further prosecution c. 1917 — and the historiography reads his retreat from concrete prediction toward 'character' partly as a response to that legal pressure as well as to Theosophical conviction. Exact case details are best taken from the specialist accounts below.",
+        "Reading": "The honest gift of this era is the hinge itself: the moment 'know yourself' quietly replaces 'know your fate' as astrology's stated purpose — partly a spiritual conviction, partly a response to the law coming after fortune-tellers. Read Leo's own books (public domain; on archive.org) to watch the pivot happen in real time, and Patrick Curry, *A Confusion of Prophets: Victorian and Edwardian Astrology*, for the legal pressure that helped force it. Nicholas Campion, *A History of Western Astrology, Vol. II: The Medieval and Modern Worlds*, places Leo in the wider revival.",
+        "Research note": "An evidence dossier backs this view: *research/views/theosophical-revival.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "c. 1890–1930",
+        "region": "Britain",
+        "stance": "psychological",
+        "confidence": "medium",
+        "_research": "research/views/theosophical-revival.md",
+        "image_credit": {
+          "title": "'The Music of Gounod' — a thought-form plate",
+          "creator": "Annie Besant and C. W. Leadbeater (plates drawn under their direction)",
+          "date": "1901",
+          "source": "*Thought-Forms* (London: Theosophical Publishing Society, 1901); scan from Project Gutenberg eText 16269",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Music_of_Gounod_-_Annie_Besant_Thought_Form_-_Project_Gutenberg_eText_16269.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1901; Commons file page states public domain",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Music_of_Gounod_-_Annie_Besant_Thought_Form_-_Project_Gutenberg_eText_16269.jpg?width=800"
+    },
+    {
+      "id": "view-sun-sign-press",
+      "name": "The Sun-Sign Press",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "R.H. Naylor",
+        "Sunday Express",
+        "sun sign",
+        "Your Stars",
+        "horoscope column",
+        "tabloid astrology"
+      ],
+      "sections": {
+        "What this view holds": "A view this library would be dishonest to leave out, because it is the astrology most living people have actually met — not a doctrine, not a metaphysics, but a newspaper format. On 24 August 1930 the *Sunday Express* ran 'What the Stars Foretell for the New Princess,' commissioning the young astrologer R. H. Naylor — standing in for the paper's first choice, the celebrity astrologer Cheiro, who was unavailable — to cast baby Princess Margaret's chart. The column that followed compressed the whole inherited apparatus of Hellenistic and medieval technique — houses, aspects, decans, rulerships — down to the one fact a reader could supply from memory: a birth month. By 1937 that compression had a name, 'Your Stars,' and a shape every reader today would recognize instantly: twelve boxes, one per sun sign, printed weekly beside the crossword. Nothing here claims spiritual evolution or archetypal depth, and it does not pretend to. The stance is commercial, and it is honest about it: a repeatable feature a newsroom could run forever, sized to fit a column inch.",
+        "In its own words": "Naylor's own words survive best in the predictions that made his name. Of the newborn Princess Margaret he wrote that her life would be 'eventful,' adding that 'events of tremendous importance to the Royal Family and the nation will come about near her seventh year' — a line later read as fulfilled by the December 1936 abdication crisis, though the fit is far easier to see in hindsight than it would have been to call in advance. A month later, forecasting for October 1930, he wrote that 'a British aircraft will be in danger'; five days into the month the airship R101 crashed and burned near Beauvais. (Both lines are quoted consistently across multiple independent secondary retrospectives — Mental Floss, Literary Hub, and the Wikipedia article on Naylor among them — but this dossier has not independently inspected the original 1930 clipping: held as ○ reported, not ✔︎ primary-verified. See the research note.)",
+        "The record": "The *Sunday Express* piece ran 24 August 1930, three days after Princess Margaret's birth, under editor John Gordon. The R101 disaster followed on 5 October 1930, and Naylor was credited with having called it; the *Sunday Express* gave him a permanent weekly column, and other British papers soon commissioned their own astrologers. Naylor (1889–1952) refined the format into the twelve-sign 'Your Stars' column by 1937 — the direct ancestor of every sun-sign horoscope printed or scrolled past since. Decades later the historian Nicholas Campion, cited throughout this library, took over the *Daily Mail*'s astrology column from John Naylor, R. H. Naylor's son — as good a sign as any that the trade and the historiography of this era are unusually entangled with each other.",
+        "Reading": "Nicholas Campion, *Astrology and Popular Religion in the Modern West: Prophecy, Cosmology and the New Age Movement* (Ashgate, 2012), is the scholarly frame, written by someone who later held the very column Naylor's lineage started — the academic and the trade history sit unusually close together here. No monograph is dedicated to Naylor alone, which is itself worth noticing about how thin the historiography of astrology's single most-read format actually is; the biographical specifics here are drawn from the Wikipedia article on R. H. Naylor and the journalistic retrospectives cited in the research note, cross-checked against each other rather than against a primary clipping.",
+        "Research note": "An evidence dossier backs this view: *research/views/sun-sign-press.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. WebFetch returned HTTP 403 on Wikipedia and several journalism sites this session, so verification here rests on convergent WebSearch synthesis across multiple independent secondary sources rather than a direct refetch of primary text — flagged honestly rather than hidden. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "1930–present (column format); R. H. Naylor 1889–1952",
+        "region": "Britain, then the Anglophone press worldwide",
+        "stance": "commercial-popular",
+        "confidence": "medium",
+        "_research": "research/views/sun-sign-press.md",
+        "image_credit": {
+          "title": "The wreckage of the airship R101 at Allonne, France",
+          "creator": "Unknown photographer",
+          "date": "October 1930",
+          "source": "Press photograph of the R101 crash of 4-5 October 1930",
+          "file_page": "https://commons.wikimedia.org/wiki/File:R101_wreckage.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Anonymous photograph published 1930; Commons file page states public domain",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/R101_wreckage.jpg?width=800"
+    },
+    {
+      "id": "view-humanistic-psychological",
+      "name": "Humanistic & Psychological Astrology",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Dane Rudhyar",
+        "Jung",
+        "synchronicity",
+        "archetype",
+        "person-centered"
+      ],
+      "sections": {
+        "What this view holds": "The twentieth century completes astrology's turn inward. Dane Rudhyar's *The Astrology of Personality* (1936) recasts the chart as a mandala of the self and founds 'person-centered' or humanistic astrology — the horoscope as a tool for growth, not a prophecy. The Jungian reading supplies the deep grammar: the planets as archetypes of the collective unconscious, and the chart's uncanny fit explained by synchronicity — an acausal connecting principle in which inner state and outer symbol coincide meaningfully without one causing the other. Fate gives way to individuation.",
+        "In its own words": "In the psychological register the chart is read as a mirror of what is pressing toward consciousness — the correspondence is meaningful, not causal (a paraphrase of the synchronicity framing; Jung's own experiment and definition are in his 1952 essay *Synchronicity: An Acausal Connecting Principle*).",
+        "The record": "Rudhyar publishes *The Astrology of Personality* in 1936; Jung's *Synchronicity* appears in 1952 and includes his famous, and famously contested, statistical 'astrological experiment.' This lineage feeds directly into the later twentieth-century boom in psychological and archetypal astrology.",
+        "Reading": "What this branch offers a modern reader most honestly is the version of astrology closest to how this whole library already reads the practice: chart as mirror, not decree. Read Rudhyar, *The Astrology of Personality* (1936; not public domain), for the founding move, and Jung, *Synchronicity: An Acausal Connecting Principle* (Collected Works vol. 8, 1952; not public domain), for the vocabulary — synchronicity — that let a scientific century keep the symbol without the causal claim. Nicholas Campion, *A History of Western Astrology, Vol. II*, places both in the twentieth-century psychological turn.",
+        "Research note": "An evidence dossier backs this view: *research/views/humanistic-psychological.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "c. 1936–present",
+        "region": "United States & Europe",
+        "stance": "psychological",
+        "confidence": "medium",
+        "_research": "research/views/humanistic-psychological.md",
+        "image_credit": {
+          "title": "Clark University group photograph: Sigmund Freud, G. Stanley Hall and C. G. Jung (front row); Abraham Brill, Ernest Jones and Sándor Ferenczi (back row)",
+          "creator": "Unknown photographer",
+          "date": "September 1909",
+          "source": "Taken for Clark University, Worcester, Massachusetts",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Hall_Freud_Jung_in_front_of_Clark_1909.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Published 1909; Commons file page states public domain",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hall_Freud_Jung_in_front_of_Clark_1909.jpg?width=800"
+    },
+    {
+      "id": "view-empirical-test-tradition",
+      "name": "The Empirical Test Tradition",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "Carlson",
+        "Gauquelin",
+        "Mars effect",
+        "Forer effect",
+        "Barnum effect",
+        "double-blind"
+      ],
+      "sections": {
+        "What this view holds": "A distinct historiographical stance in its own right: astrology examined by the controlled test, and its felt accuracy explained by the reader rather than the sky. Its recurring findings are two. First, the Barnum-or-Forer effect: people accept a vague, flattering, universally applicable description as a uniquely personal portrait. Second, that when charts are tested blind — reader and subject unable to cue each other — the astrological signal tends to vanish. On this view the meaning is real but supplied by the person and the culture, not by the planets.",
+        "In its own words": "The tradition returns to a handful of touchstones: Bertram Forer's 1949 demonstration ('The fallacy of personal validation') that a single generic personality sketch is accepted as individually accurate; and Shawn Carlson's 1985 double-blind study 'A double-blind test of astrology' in *Nature*. (Named as real, well-known studies; no results are reproduced here beyond the summary above, and readers should consult the sources.)",
+        "The record": "Forer publishes in 1949; Michel Gauquelin's contested 'Mars effect' correlations run from the 1950s onward and are argued over for decades; Carlson's study appears in *Nature* in 1985. The tradition itself has a history and its own internal disputes (the Mars-effect controversy especially) — it is presented here as a view with a lineage, not as this library's verdict on the others.",
+        "Reading": "This is the era to read against your own hopes, not for them: the honest record of what happens when astrology is asked to perform under conditions it cannot arrange in its own favor. Read Forer (1949) and Carlson (1985) for the method itself, and Ertel's 2009 reply for proof that even a 'settled' null result has its own internal argument, not a closed case. Shawn Carlson, 'A double-blind test of astrology,' *Nature* 318 (1985), 419–425. Bertram R. Forer, 'The fallacy of personal validation,' *Journal of Abnormal and Social Psychology* (1949). Suitbert Ertel, 'Appraisal of Shawn Carlson's renowned astrology tests,' *Journal of Scientific Exploration* 23.2 (2009), for the dispute. For context, Nicholas Campion, *A History of Western Astrology, Vol. II*.",
+        "Research note": "An evidence dossier backs this view: *research/views/empirical-test-tradition.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display. The Forer (1949) and Carlson (1985, *Nature* 318, 419–425) citations were web-verified; the dossier also records the published dispute over Carlson's analysis (Ertel 2009) as part of the tradition's own history."
+      },
+      "metadata": {
+        "era": "c. 1949–present",
+        "region": "Europe & North America",
+        "stance": "critical",
+        "confidence": "medium",
+        "_research": "research/views/empirical-test-tradition.md"
+      }
+    },
+    {
+      "id": "view-contemporary-resurgence",
+      "name": "The Contemporary Resurgence",
+      "level": 1,
+      "category": "view",
+      "keywords": [
+        "apps",
+        "memes",
+        "Hellenistic revival",
+        "Project Hindsight",
+        "translation"
+      ],
+      "sections": {
+        "What this view holds": "In the last few decades astrology surges again in popular culture — daily-horoscope and birth-chart apps, 'what's your big three' as small talk, a dense meme-culture of the signs. Running underneath the pop layer is a serious revival of technique: translation projects have put Hellenistic and medieval sources into modern languages, and practitioners have revived older methods (whole-sign houses, time-lord systems) that the psychological century had set aside. It is a return of both the fun and the craft — and, being current, it is history still being written.",
+        "In its own words": "Chris Brennan frames his own revival project with a scholar's caution rather than a movement's confidence: 'the size and scope of this book may convey the pretense that it is a fully comprehensive work on the subject,' he writes of *Hellenistic Astrology*, '[when] in reality it is only an introduction to a vast field.' (Quoted via a published review of the book rather than checked against the print edition this session — held as ○ reported, not ✔︎ primary-verified; see the research note.) That hedge is on-brand for the whole era: even the revival's flagship book declines to claim final authority over a tradition still being recovered.",
+        "The record": "Technical-revival efforts such as Project Hindsight gather pace from c. the 1990s; the app-and-meme boom belongs to the 2010s onward. Because these developments are recent and ongoing, all characterizations here are provisional and lightly held — this is contemporary history, not settled history.",
+        "Reading": "A modern reader's honest gain here is watching a whole tradition go back to school at the same moment it becomes small talk: practitioners relearning techniques their own twentieth century had set aside, while 'what's your big three' turns into an icebreaker. Read Chris Brennan, *Hellenistic Astrology: The Study of Fate and Fortune*, for the technical recovery — and read it as both a history and an artifact of the thing it describes. Nicholas Campion, *Astrology and Popular Religion in the Modern West* (Ashgate, 2012), gives the scholarly frame for why the popular layer surged when it did; no source here claims to know the answer for certain.",
+        "Research note": "An evidence dossier backs this view: *research/views/contemporary-resurgence.md* — every load-bearing claim there is cited `[@key]` into *research/bibliography.bib* and confidence-flagged. The dossier is the source of truth; this item is the display."
+      },
+      "metadata": {
+        "era": "c. 1990–present",
+        "region": "Global / Anglophone",
+        "stance": "contemporary",
+        "confidence": "low",
+        "_research": "research/views/contemporary-resurgence.md"
+      }
+    },
+    {
+      "id": "pattern-science-of-its-age",
+      "name": "Astrology as the Science of Its Age",
+      "level": 2,
+      "category": "pattern",
+      "composite_of": [
+        "view-mesopotamian-omens",
+        "view-hellenistic-synthesis",
+        "view-islamic-golden-age",
+        "view-medieval-renaissance-court"
+      ],
+      "sections": {
+        "About this pattern": "For most of its life astrology was not a fringe — it was the learned world's account of how the heavens and the earth are connected, expressed in whichever natural philosophy was current: omen-craft for the Mesopotamian state, Aristotelian physics of influence for Ptolemy and Abū Maʿshar, university medicine and court election for Latin Europe. Grouping these four makes the historiographical pattern visible: 'astrology' names not one belief but the sky read through the best available knowledge of each age.",
+        "Why it matters": "Seen this way, the later 'science versus astrology' framing is itself historical, not eternal — for millennia astrology WAS the science of the sky's meaning. The autonomy floor still holds across all four: even at its most authoritative, the reading is examined here as a human meaning-making, never endorsed as prediction."
+      },
+      "metadata": {
+        "stance": "cross-cutting",
+        "image_credit": {
+          "title": "Kepler's model of the solar system built from the five Platonic solids",
+          "creator": "Johannes Kepler",
+          "date": "1596",
+          "source": "*Mysterium Cosmographicum* (Tübingen, 1596)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Mysterium_Cosmographicum_solar_system_model.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Kepler died 1630; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mysterium_Cosmographicum_solar_system_model.jpg?width=800"
+    },
+    {
+      "id": "pattern-psychologized",
+      "name": "Astrology Psychologized",
+      "level": 2,
+      "category": "pattern",
+      "composite_of": [
+        "view-theosophical-revival",
+        "view-humanistic-psychological"
+      ],
+      "sections": {
+        "About this pattern": "The modern move that made astrology speak the language of the self. From Alan Leo's 'character is destiny' through Rudhyar's person-centered chart and the Jungian archetypes, the sky stops forecasting events and starts mirroring the psyche. Grouping the Theosophical revival with humanistic-psychological astrology shows a single arc: prediction becoming reflection, fate becoming individuation.",
+        "Why it matters": "This is the branch that most naturally lives inside the creed — a chart as mirror, meaning authored by the reader. It is also where 'know yourself, don't be told your fate' becomes astrology's own stated aim, not a constraint imposed from outside."
+      },
+      "metadata": {
+        "stance": "cross-cutting"
+      }
+    },
+    {
+      "id": "pattern-critique",
+      "name": "The Critique From Within and Without",
+      "level": 2,
+      "category": "pattern",
+      "composite_of": [
+        "view-medieval-renaissance-court",
+        "view-decline-demarcation",
+        "view-empirical-test-tradition"
+      ],
+      "sections": {
+        "About this pattern": "Astrology has always carried its own critics. Grouping Pico's Renaissance *Disputationes* (from inside humanist learning), the Scientific-Revolution demarcation (from the new natural philosophy), and the modern controlled test (from experimental psychology) shows the critique as a continuous tradition with its own history — not a single modern verdict but a five-century conversation, each era doubting astrology in its own idiom.",
+        "Why it matters": "Held honestly, the critique is part of the record, not the end of it. Presenting it as its own view — with Pico, the demarcation, and the Forer/Carlson tradition side by side — keeps the library from either dismissing astrology or defending it, and keeps the choice, as ever, with the reader."
+      },
+      "metadata": {
+        "stance": "cross-cutting"
+      }
+    }
+  ],
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flammarion.jpg?width=800",
+  "_recursive_eco_url": "https://flow.recursive.eco/g/ddffc0fa-7f05-49d1-82db-f2d636cf178e?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=ddffc0fa-7f05-49d1-82db-f2d636cf178e",
+  "cover_image_credit": {
+    "title": "The Flammarion engraving — a traveller puts his head through the edge of the sky",
+    "creator": "Anonymous wood engraver",
+    "date": "1888",
+    "source": "Camille Flammarion, *L'atmosphère: météorologie populaire* (Paris, 1888)",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Flammarion.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Anonymous engraving published 1888; Commons file page states public domain (PD-old)",
+    "verified": "2026-07-26"
+  }
+}

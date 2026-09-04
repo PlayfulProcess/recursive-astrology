@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../theme.css?v=3">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Astros — one symbol, every voice · The Recursive Astrology</title>
+<!--
+  viewers/all-astros.html — "seeing a planet throughout all grammars, in good UI."
+
+  Reads the ONE generated meta-grammar (grammars/astro-of-all-astros/grammar.json,
+  scripts/build_meta_astro.py) directly — no live cross-grammar computation, no
+  external library. One item per planet / sign / house; each item's `sections` map
+  already holds every voice's own reading of that placement, keyed by source label.
+  This page's whole job is presentation: a symbol picker (grid, not a dropdown), the
+  creed as the standing container above every reading, and each voice attributed and
+  collapsible side by side.
+
+  Companion to viewers/lenses.html (the power-user pivot/ribbon/matrix explorer,
+  computed live across every voice grammar) — this page is the plain-reading front
+  door: pick a symbol, read the record. Light-only, theme.css tokens only, no new
+  dependency. Mirrors recursive-tarot's "tarot-of-tarots" meta-grammar pattern,
+  adapted to this repo's own entities (planets/signs/houses, not cards).
+-->
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+  main.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 90px}
+
+  header.hero{padding:6px 0 4px}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(24px,4vw,32px);margin:6px 0 8px;color:var(--ink)}
+  .lede{color:var(--muted);font-size:15px;max-width:74ch;margin:0}
+
+  /* ── the creed — the standing container, per the house rule ── */
+  .creed{background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--gold);
+    border-radius:10px;padding:14px 18px;margin:18px 0 22px;font-family:"Fraunces",Georgia,serif;
+    font-size:14.5px;line-height:1.6;color:var(--ink-soft)}
+  .creed b{color:var(--ink)}
+  .creed .src{display:block;margin-top:6px;font-family:Inter,sans-serif;font-size:10.5px;
+    text-transform:uppercase;letter-spacing:.08em;color:var(--faint)}
+
+  /* ── category tabs ── */
+  .cattabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+  .cattab{font-family:inherit;font-size:13px;font-weight:600;padding:7px 16px;border-radius:999px;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink-soft);cursor:pointer;
+    transition:border-color .15s,color .15s,background .15s}
+  .cattab:hover{border-color:var(--accent);color:var(--accent)}
+  .cattab.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  /* ── symbol grid ── */
+  #status{color:var(--muted);font-size:12.5px;margin:0 0 10px}
+  .symgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;margin-bottom:26px}
+  .symtile{all:unset;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:5px;
+    padding:14px 6px 11px;border-radius:12px;border:1px solid var(--line);background:var(--panel);
+    cursor:pointer;text-align:center;transition:transform .12s,border-color .12s,box-shadow .12s}
+  .symtile:hover,.symtile:focus-visible{transform:translateY(-2px);border-color:var(--accent);
+    box-shadow:0 10px 22px -14px rgba(60,45,20,.5)}
+  .symtile.on{background:var(--chip);border-color:var(--gold)}
+  /* The twelve zodiac codepoints (U+2648–2653) default to EMOJI presentation, so
+     Chrome drew the signs as saturated purple app-icons while the planets
+     (U+2609, U+263D, …) stayed typographic — twelve of thirty-one symbols in a
+     palette this site does not own. Ask for the text presentation explicitly.
+     (builder-visible, Jul 26 2026 — the Signs tab was the giveaway.) */
+  .symtile .gl,.rhead .rgl{font-variant-emoji:text}
+  .symtile .gl{font-size:26px;line-height:1;color:var(--gold)}
+  .symtile .nm{font-size:12px;font-weight:600;color:var(--ink)}
+  .symtile .sub{font-size:10px;color:var(--muted)}
+
+  /* ── reading pane ── */
+  #reading{margin-top:8px}
+  .rhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:16px 0 6px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .rhead .rgl{font-size:40px;line-height:1;color:var(--gold)}
+  .rhead h2{font-family:"Fraunces",Georgia,serif;font-size:26px;margin:0;color:var(--ink)}
+  .rhead .rmeta{font-size:12.5px;color:var(--muted)}
+  .rhead .rnav{margin-left:auto;display:flex;gap:8px}
+  .rhead .rnav button{font-family:inherit;font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink-soft);cursor:pointer}
+  .rhead .rnav button:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* ── the voices ─────────────────────────────────────────────────────────────
+     Masonry, not a grid (builder-visible fix, Jul 26 2026). This was a CSS grid,
+     and in a grid a row is as tall as its tallest cell: the first voice opens by
+     default and runs several hundred pixels, so the two collapsed voices beside
+     it each sat on top of ~400px of blank page, and the next three voices started
+     below that void. Seven voices then read as three cards and a hole. A
+     multi-column flow lets each collapsed voice sit directly under the one above,
+     so opening or closing any voice re-packs the column instead of punching a gap.
+     `columns` also means the count follows the width — no media queries needed. */
+  .voices{columns:300px;column-gap:14px}
+  .voice{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+    break-inside:avoid;margin:0 0 14px;width:100%}
+  .voice summary{list-style:none;cursor:pointer;padding:11px 14px;display:flex;align-items:baseline;
+    gap:8px;background:var(--panel2);border-bottom:1px solid var(--line);user-select:none}
+  .voice summary::-webkit-details-marker{display:none}
+  .voice summary::before{content:"▸";color:var(--muted);font-size:11px;transition:transform .12s;flex-shrink:0}
+  .voice[open] summary::before{transform:rotate(90deg)}
+  .voice .vtitle{font-size:13.5px;font-weight:700;color:var(--ink)}
+  .voice .vlen{font-size:10px;color:var(--faint);font-weight:600;white-space:nowrap}
+  .voice .vfrom{font-size:10.5px;color:var(--faint);margin-left:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:34%}
+  .voice .vbody{padding:12px 14px;font-size:13px;color:var(--ink-soft);line-height:1.65}
+  .voice .vbody p{margin:0 0 10px}
+  .voice .vbody p:last-child{margin-bottom:0}
+  .voice .vbody b,.voice .vbody strong{color:var(--ink)}
+  /* the public-domain "The record — …" excerpts are italic caption + blockquote;
+     give them room to read as quotations rather than as one undifferentiated slab */
+  .voice .vbody blockquote{border-left:3px solid var(--line)!important;color:var(--ink);opacity:1!important;
+    margin:.7em 0!important;padding:.15em 0 .15em .9em!important;font-size:12.5px}
+  .voice .vbody em{color:var(--mut)}
+  /* a section that opens with a bracketed [Author, Work, Year] carries its own inner
+     attribution — surface it as a line, not as literal brackets mid-sentence */
+  .voice .vattr{display:block;font-size:10.5px;font-style:italic;color:var(--mut);margin:0 0 8px}
+  .voice .vopen{display:block;font-size:11px;color:var(--accent);text-decoration:none;margin-top:8px}
+  .voice .vopen:hover{text-decoration:underline}
+
+  #hint,#empty{color:var(--muted);font-size:13.5px;padding:36px 8px;text-align:center;line-height:1.7}
+  @media (max-width:640px){ .rhead{gap:8px} .rhead .rnav{margin-left:0;width:100%;justify-content:flex-end} }
+</style>
+</head>
+<body>
+<script src="../site-header.js?v=47"></script>
+<script src="md.js?v=2"></script>
+<site-header active="all-astros"></site-header>
+
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker">Every voice, one placement</div>
+    <h1>All Astros</h1>
+    <p class="lede">Pick a planet, sign, or house — read how every voice library in this
+      collection treats it, side by side. One entry per symbol, generated straight from
+      <code>astro-of-all-astros</code>, the meta-grammar that indexes all the others.</p>
+  </header>
+
+  <div class="creed">
+    <b>Read the sky to know yourself, not to be told your fate.</b> A chart is a mirror
+    and a calendar, not a command. Relate to the symbol; never obey it — whichever voice
+    below is speaking.
+    <span class="src">The one intention · voices.json → shared_intention</span>
+  </div>
+
+  <div class="cattabs" id="cattabs"></div>
+  <div id="status">Loading the meta-grammar…</div>
+  <div class="symgrid" id="symgrid"></div>
+
+  <div id="reading"><div id="hint">Choose a symbol above to read its record across every voice.</div></div>
+</main>
+
+<script>
+(() => {
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// The ONE shared renderer (viewers/md.js). The old local two-liner only knew **bold**,
+// so the six public-domain "The record — <author> (<year>)" sections — italic caption
+// plus a `> ` blockquote — rendered their markers as literal asterisks and angle
+// brackets inside one unbroken slab of prose.
+const md = s => MD.toHtml(s);
+// A section body may open with its own [Author, Work, Year] attribution. Split it off
+// so it reads as an attribution line above the text; the data keeps the prefix as authored.
+function splitAttr(text){
+  const m = String(text || '').trim().match(/^\[([^\]]{3,200})\]\s*([\s\S]*)$/);
+  return m ? { attr: m[1].trim(), body: m[2] } : { attr: null, body: text };
+}
+const wordCount = s => (MD.strip(s).match(/\S+/g) || []).length;
+
+const CATS = [
+  ['planet', 'Planets'],
+  ['sign',   'Signs'],
+  ['house',  'Houses'],
+];
+// Roman-numeral houses already carry their own symbol from the meta-grammar (western-
+// astrology-canonical's own `symbol` field); this is just a defensive fallback.
+const ROMAN = ['','I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII'];
+
+let ITEMS = [];
+let SOURCES = [];     // [{slug,name,label}] — from the meta-grammar's own _sources
+let cat = 'planet';
+let currentId = null;
+
+function itemsOf(c){ return ITEMS.filter(it => it.category === c); }
+
+function renderTabs(){
+  $('#cattabs').innerHTML = CATS.map(([c,label]) =>
+    `<button class="cattab ${c===cat?'on':''}" data-cat="${c}">${label} <span style="opacity:.7">(${itemsOf(c).length})</span></button>`
+  ).join('');
+  $('#cattabs').querySelectorAll('.cattab').forEach(b => b.onclick = () => {
+    cat = b.dataset.cat; renderTabs(); renderGrid();
+  });
+}
+
+function renderGrid(){
+  const list = itemsOf(cat);
+  $('#symgrid').innerHTML = list.map(it => {
+    const sub = it.metadata?.element || (it.category==='house' ? 'house' : '');
+    return `<button class="symtile ${it.id===currentId?'on':''}" data-id="${esc(it.id)}" title="${esc(it.name)}">
+      <span class="gl">${esc(it.symbol || ROMAN[it.metadata?.house] || '—')}</span>
+      <span class="nm">${esc(it.name)}</span>
+      ${sub ? `<span class="sub">${esc(sub)}</span>` : ''}
+    </button>`;
+  }).join('');
+  $('#symgrid').querySelectorAll('.symtile').forEach(b => b.onclick = () => openItem(b.dataset.id));
+}
+
+function voiceBlock(label, text, wasOpen){
+  const src = SOURCES.find(s => s.label === label);
+  const { attr, body } = splitAttr(text);
+  const words = wordCount(text);
+  return `<details class="voice" ${wasOpen ? 'open' : ''}>
+    <summary><span class="vtitle">${esc(label)}</span><span class="vlen">${words} words</span>${src ? `<span class="vfrom" title="${esc(src.name)}">${esc(src.name.split(' — ')[0])}</span>` : ''}</summary>
+    <div class="vbody">${attr ? `<span class="vattr">${esc(attr)}</span>` : ''}${md(body)}
+      ${src ? `<a class="vopen" href="cards.html?src=../grammars/${encodeURIComponent(src.slug)}/grammar.json" target="_blank" rel="noopener">Open ${esc(src.name.split(' — ')[0])} in Cards ↗</a>` : ''}
+    </div>
+  </details>`;
+}
+
+// Which voices open on arrival. The six public-domain books folded in as
+// "The record — <author> (<year>)" run 900–2 800 characters each, and opening the
+// first three unconditionally turned every planet into a wall of text you had to
+// scroll past to see there were seven voices at all. Rule: always open the first,
+// then any further SHORT voice — everything long stays one click away, with its
+// word count on the summary so the cost of opening it is visible.
+const SHORT_VOICE = 900;   // characters
+const openByDefault = (text, i) => i === 0 || (i < 3 && String(text || '').length < SHORT_VOICE);
+
+function openItem(id){
+  const it = ITEMS.find(x => x.id === id); if (!it) return;
+  currentId = id;
+  renderGrid();
+  const labels = Object.keys(it.sections || {});
+  const metaBits = [];
+  if (it.metadata?.element) metaBits.push(it.metadata.element);
+  // guard the house number: `house undefined` was one bad metadata field away
+  if (it.category === 'house' && it.metadata?.house != null) metaBits.push('house ' + it.metadata.house);
+  metaBits.push(labels.length + ' voice' + (labels.length === 1 ? '' : 's'));
+  $('#reading').innerHTML = `
+    <div class="rhead">
+      <span class="rgl">${esc(it.symbol || ROMAN[it.metadata?.house] || '')}</span>
+      <h2>${esc(it.name)}</h2>
+      <span class="rmeta">${esc(metaBits.join(' · '))}</span>
+      <span class="rnav"><button id="rd-prev" title="Previous in this category">← Prev</button><button id="rd-next" title="Next in this category">Next →</button></span>
+    </div>
+    <div class="voices">${labels.map((l, i) => voiceBlock(l, it.sections[l], openByDefault(it.sections[l], i))).join('')}</div>`;
+  const list = itemsOf(cat);
+  const idx = list.findIndex(x => x.id === id);
+  $('#rd-prev').onclick = () => openItem(list[(idx - 1 + list.length) % list.length].id);
+  $('#rd-next').onclick = () => openItem(list[(idx + 1) % list.length].id);
+  try { history.replaceState(null, '', '?item=' + encodeURIComponent(id)); } catch(e){}
+  document.getElementById('reading').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+async function boot(){
+  try {
+    const g = await (await fetch('../grammars/astro-of-all-astros/grammar.json')).json();
+    ITEMS = g.items || [];
+    SOURCES = g._sources || [];
+    $('#status').textContent = `${ITEMS.length} symbols · ${SOURCES.length} voices, generated from grammars/astro-of-all-astros`;
+  } catch (e) {
+    $('#status').textContent = '';
+    $('#symgrid').innerHTML = '';
+    $('#reading').innerHTML = '<div id="empty">Could not load the meta-grammar (grammars/astro-of-all-astros/grammar.json).</div>';
+    return;
+  }
+  renderTabs();
+  const deep = new URLSearchParams(location.search).get('item');
+  const found = deep && ITEMS.find(x => x.id === deep);
+  if (found) cat = found.category;
+  renderGrid();
+  if (found) openItem(found.id);
+}
+boot();
+})();
+</script>
+
+<script src="../site-footer.js"></script>
+<site-footer base="../"></site-footer>
+</body>
+</html>

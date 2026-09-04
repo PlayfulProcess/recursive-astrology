@@ -1,0 +1,873 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0 (original synthesis) — not Tarnas's copyrighted text, an interpretation of his framework",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Richard Tarnas",
+        "role": "the archetypal astrology framework this grammar interprets (Cosmos and Psyche, 2006)",
+        "link": "https://cosmosandpsyche.com/"
+      },
+      {
+        "name": "PlayfulProcess",
+        "role": "author of this interpretation, written with an AI",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "name": "Archetypal Astrology — planetary pairs, after Tarnas",
+  "description": "Archetypal Astrology — the planets in relationship, not sign by sign but pair by pair. Richard Tarnas's whole method began from a plain observation: every tradition that ever read the sky agreed on the SAME planetary relationships mattering, even when they disagreed about almost everything else — what a planet was, who ruled it, what it meant. Aspects between planets, not the planets alone, were the one thing Ptolemy, Lilly, Jyotiṣa, and the Mesopotamian omen-readers all independently reached for. That convergence was Tarnas's own impetus for archetypal cosmology: find what is common across all traditions by looking at what the traditions themselves kept agreeing to look at.\n\nInspired by Richard Tarnas's archetypal astrology (*Cosmos and Psyche*, 2006; *The Passion of the Western Mind*). These readings are PlayfulProcess's interpretation, written with an AI from its knowledge of his work — NOT Tarnas's words, not his endorsement. Go to the source: https://cosmosandpsyche.com/\n\nThe meta-layer this grammar's design implies is not a second generator script — it is the UI itself. Open any pair on archetypal.html and the parents' own entries from every voice grammar in this repo (Planetary Myths, Ptolemy's Tetrabiblos, Lilly's Christian Astrology, the Jyotiṣa Bṛhat Jātaka, Alan Leo, the Canonical synthesis) stack live beneath the pair's synthesis — Tarnas's real project, restaged: the planets, over time, across every tradition that has ever answered for them. See docs/DESIGN-archetypal.md.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_Copernicani.jpg?width=800",
+  "grammar_type": "astrology",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — contemporary synthesis, written 2026 after Richard Tarnas's archetypal astrology (Cosmos and Psyche, 2006). Not Tarnas's text; see _synthesis_note."
+  },
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "default_view": "cards",
+  "default_preview": "cards",
+  "is_published": true,
+  "tags": [
+    "astrology",
+    "archetypal",
+    "tarnas",
+    "planets",
+    "synthesis"
+  ],
+  "_synthesis_note": "Inspired by Richard Tarnas's archetypal astrology (*Cosmos and Psyche*, 2006; *The Passion of the Western Mind*). These readings are PlayfulProcess's interpretation, written with an AI from its knowledge of his work — NOT Tarnas's words, not his endorsement. Go to the source: https://cosmosandpsyche.com/ Tarnas's own case studies in Cosmos and Psyche track outer-planet-to-outer-planet alignments correlated with collective historical periods; the ten outer/social-planet pairs in this grammar draw on that real material, cited honestly as \"Tarnas correlates...\" and never invented. The five personal-planet pairs (Sun-Saturn, Sun-Pluto, Venus-Mars, Moon-Saturn, Mercury-Uranus) fall outside the book's own historical dataset — their cycles are too fast to mark collective epochs the way the book's central alignments do — so their 'In history' sections say so plainly and offer this grammar's own extension of Tarnas's archetypal vocabulary to the personal register instead of manufacturing a false historical citation. Where a specific date or event is less certain than the book's most famous examples (1960s Uranus-Pluto, WWI/9-11 Saturn-Pluto), the text says so rather than smoothing it over — the same confidence-marking honesty this whole repo practices elsewhere.",
+  "_honesty_frame": "Inspired by Richard Tarnas's archetypal astrology (*Cosmos and Psyche*, 2006; *The Passion of the Western Mind*). These readings are PlayfulProcess's interpretation, written with an AI from its knowledge of his work — NOT Tarnas's words, not his endorsement. Go to the source: https://cosmosandpsyche.com/",
+  "items": [
+    {
+      "id": "planet-uranus",
+      "name": "Uranus",
+      "symbol": "♅",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "uranus",
+        "promethean",
+        "awakening",
+        "rebellion",
+        "breakthrough",
+        "archetypal-astrology"
+      ],
+      "metadata": {
+        "planet": "Uranus"
+      },
+      "sections": {
+        "Archetype": "In Tarnas's archetypal astrology, Uranus is the Promethean principle — the impulse that breaks a pattern before it hardens into a cage. Where Saturn conserves what already exists, Uranus is the sudden opening: the idea that arrives all at once, the revolution that will not wait for permission, the moment a settled order is startled into something it did not choose. Tarnas reads Uranus transits as correlating with awakening, individuation, and rupture — genius, invention, and liberation on one face; disruption, upheaval, and the vertigo of sudden change on the other. It is lightning, not sunlight: illumination that arrives as a shock. This is one reading of a much larger archetype, offered as interpretation, drawn from Tarnas's work — not his own words, and not his endorsement."
+      }
+    },
+    {
+      "id": "planet-neptune",
+      "name": "Neptune",
+      "symbol": "♆",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "neptune",
+        "dissolution",
+        "oceanic",
+        "imagination",
+        "illusion",
+        "numinous",
+        "archetypal-astrology"
+      ],
+      "metadata": {
+        "planet": "Neptune"
+      },
+      "sections": {
+        "Archetype": "Neptune, for Tarnas, is dissolution itself — the archetypal current that erodes the boundary between self and world, waking and dream, the literal and the symbolic. It is the oceanic: mysticism, music, compassion, and imagination at its most numinous, and, on its shadow side, illusion, addiction, deception, and the fog in which nothing quite holds its shape. Tarnas treats Neptune transits as correlating with periods when the given world softens — utopian longing, spiritual opening, collective idealism — and with the disillusionment that follows when what dissolved was never as solid as it looked. To read Neptune honestly is to hold both faces at once: the numinous and the illusory rarely arrive separately. Offered here as interpretation, drawn from Tarnas's work — not his own words, and not his endorsement."
+      }
+    },
+    {
+      "id": "planet-pluto",
+      "name": "Pluto",
+      "symbol": "♇",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "pluto",
+        "underworld",
+        "power",
+        "destruction",
+        "regeneration",
+        "id",
+        "archetypal-astrology"
+      ],
+      "metadata": {
+        "planet": "Pluto"
+      },
+      "sections": {
+        "Archetype": "Pluto, in Tarnas's account, is the underworld drive — elemental, compulsive, and largely unconscious until it isn't. It is the id in the oldest sense: instinct, sexuality, mortality, and the will to power, all the material a settled ego would rather not look at directly. Tarnas reads Pluto transits as correlating with death-and-rebirth intensities — destruction that clears ground, and the regeneration that can only happen once something has actually ended. Its gift is depth; its danger is that depth, unintegrated, becomes compulsion or catastrophe. Where Uranus breaks a pattern from outside, Pluto dissolves it from underneath. Offered here as interpretation, drawn from Tarnas's work — not his own words, and not his endorsement."
+      }
+    },
+    {
+      "id": "planet-sun",
+      "name": "Sun",
+      "symbol": "☉",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "sun",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Sun",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-sun"
+          }
+        ]
+      },
+      "sections": {
+        "Archetype": "The Sun, in the broader archetypal-astrology tradition Tarnas works within, is the will-to-be-oneself — the organizing center around which a life composes itself, the light a person recognizes as unmistakably theirs. Its gift is vitality: purpose, self-expression, the courage to occupy the center of one's own story. Its shadow is the same gesture turned rigid — an ego that mistakes shining for being seen, or burns itself and everyone nearby chasing significance. Tarnas's own signature method reads planetary pairs in collective history rather than solo personal-planet portraits; this entry draws instead on the wider tradition his framework grows out of (Rudhyar's humanistic astrology chief among it), held as PlayfulProcess's synthesis, not a claim from Tarnas's own writing.",
+        "See also": "In the canonical Western reading, the Sun is core identity — conscious will, creative force, the organizing principle a life composes itself around. Its light is vitality, self-expression, and generous leadership; its shadow, an ego that inflates or burns itself out chasing achievement. The Sun's fuller multi-voice reading — Ptolemy, Lilly, Jyotiṣa, Alan Leo, the planetary myths — lives in this library's other voice grammars, where every tradition answers for the same planet in its own terms."
+      }
+    },
+    {
+      "id": "planet-moon",
+      "name": "Moon",
+      "symbol": "☽",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "moon",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Moon",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-moon"
+          }
+        ]
+      },
+      "sections": {
+        "Archetype": "The Moon is the soul's own weather — memory, feeling, the wordless knowing that shapes a person before language does. It governs receptivity: the capacity to be moved, held, and to hold in turn, the tidal rhythm underneath a life's more visible ambitions. Its gift is attunement, an instinct for what a moment or a person actually needs. Its shadow is the tide with no shore: moods that flood a room, a need for safety so large it swallows the person feeling it. Tarnas's own signature method reads planetary pairs across collective history rather than solo personal-planet portraits; this entry draws on the wider humanistic-astrology tradition his framework grows out of (Rudhyar foremost), offered as PlayfulProcess's synthesis, not Tarnas's own claim.",
+        "See also": "In the canonical Western reading, the Moon is the emotional body — how you feel, what you need, where you seek comfort — governing instinct, memory, home, and nurture. Its light is receptivity, intuition, and emotional intelligence; its shadow, moodiness, dependency, and a clinging to the past. The Moon's fuller multi-voice reading — Ptolemy, Lilly, Jyotiṣa, Alan Leo, the planetary myths — lives in this library's other voice grammars, where every tradition answers for the same planet in its own terms."
+      }
+    },
+    {
+      "id": "planet-mercury",
+      "name": "Mercury",
+      "symbol": "☿",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "mercury",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Mercury",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-mercury"
+          }
+        ]
+      },
+      "sections": {
+        "Archetype": "Mercury is the connective principle — the quick, curious intelligence that moves between things and makes them speak to each other: thought, language, the nervous system's own restlessness. Its gift is the exact word, the useful question, a mind agile enough to translate one world into another. Its shadow is that same quickness turned glib — cleverness without depth, information without understanding, a trickster's charm used to dodge rather than connect. Tarnas's outer-planet correlations are his signature contribution; a solo Mercury portrait like this one leans instead on the broader archetypal-astrology tradition he draws from, offered as PlayfulProcess's synthesis rather than something found in his own texts.",
+        "See also": "In the canonical Western reading, Mercury is the mind in motion — thought, language, learning, and the bridges between things. Its light is curiosity, adaptability, and the exact word; its shadow, overthinking, scattered attention, and the trickster's glibness. Mercury's fuller multi-voice reading — Ptolemy, Lilly, Jyotiṣa, Alan Leo, the planetary myths — lives in this library's other voice grammars, where every tradition answers for the same planet in its own terms."
+      }
+    },
+    {
+      "id": "planet-venus",
+      "name": "Venus",
+      "symbol": "♀",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "venus",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Venus",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-venus"
+          }
+        ]
+      },
+      "sections": {
+        "Archetype": "Venus is the drive toward relatedness — the pull to find what is beautiful, to be drawn toward another, to want harmony enough to build it. It governs eros in its gentler register: attraction, aesthetic pleasure, the values a person will actually organize a life around. Its gift is the capacity to love well and to make things worth loving. Its shadow is relatedness curdled into vanity, or a peace purchased by avoiding every real conflict. Tarnas's own signature work is the collective, historical reading of planetary pairs; a solo Venus portrait draws instead on the wider humanistic-astrology tradition around him, held here as PlayfulProcess's synthesis, not his own claim.",
+        "See also": "In the canonical Western reading, Venus is what you love, what you value, and how you attract — beauty, pleasure, relationship, and the principle of harmony. Her light is grace, magnetism, and devotion; her shadow, vanity, possessiveness, and a peace kept by pleasing everyone. Venus's fuller multi-voice reading — Ptolemy, Lilly, Jyotiṣa, Alan Leo, the planetary myths — lives in this library's other voice grammars, where every tradition answers for the same planet in its own terms."
+      }
+    },
+    {
+      "id": "planet-mars",
+      "name": "Mars",
+      "symbol": "♂",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "mars",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Mars",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-mars"
+          }
+        ]
+      },
+      "sections": {
+        "Archetype": "Mars is assertive desire — the will that acts, the edge between wanting something and going to get it. It is eros's more combative twin: courage, initiative, the readiness to fight for what matters, including oneself. Its gift is aliveness with teeth, the energy that actually moves a life forward instead of merely wishing it would. Its shadow is that same force turned careless or cruel: aggression without aim, a temper that mistakes domination for strength. Tarnas reads Mars mostly inside larger complexes — paired with Venus's eros, or swept into the Uranus–Pluto correlations he traces through revolutionary history; a solo portrait like this one leans on the wider tradition his framework grows from, offered as PlayfulProcess's synthesis, not Tarnas's own words.",
+        "See also": "In the canonical Western reading, Mars is drive, desire, and fighting spirit — how you assert yourself, pursue what you want, and meet conflict. Its light is courage, initiative, and decisiveness; its shadow, aggression, impatience, and recklessness. Mars's fuller multi-voice reading — Ptolemy, Lilly, Jyotiṣa, Alan Leo, the planetary myths — lives in this library's other voice grammars, where every tradition answers for the same planet in its own terms."
+      }
+    },
+    {
+      "id": "planet-jupiter",
+      "name": "Jupiter",
+      "symbol": "♃",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "jupiter",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Jupiter",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-jupiter"
+          }
+        ]
+      },
+      "sections": {
+        "Archetype": "Jupiter is the expansive principle — the impulse toward more: more meaning, more possibility, more room to grow into. It governs faith in the largest sense, the appetite that reaches past a life's current borders toward what could still be true. Its gift is genuine largeness of spirit — optimism that is earned, generosity that costs something. Its shadow is expansion without limit: overreach, excess, a confidence so total it stops checking itself against the world. Tarnas's own historical correlations pair Jupiter with Saturn as the classical dance of growth against limit; a solo Jupiter portrait draws on the broader tradition his method grows from, held here as PlayfulProcess's synthesis, not a claim from his own writing.",
+        "See also": "In the canonical Western reading, Jupiter is expansion, meaning, and faith — the search for truth and the capacity for growth, wisdom, and joy. Its light is generosity, optimism, and philosophical depth; its shadow, excess, overconfidence, and dogmatism. Jupiter's fuller multi-voice reading — Ptolemy, Lilly, Jyotiṣa, Alan Leo, the planetary myths — lives in this library's other voice grammars, where every tradition answers for the same planet in its own terms."
+      }
+    },
+    {
+      "id": "planet-saturn",
+      "name": "Saturn",
+      "symbol": "♄",
+      "category": "planet",
+      "level": 1,
+      "keywords": [
+        "saturn",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Saturn",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-saturn"
+          }
+        ]
+      },
+      "sections": {
+        "Archetype": "Saturn is necessity itself — structure, time, the limit that will not be argued with. It governs the reality principle: the discipline that turns a wish into a finished thing, the patience to stay with a difficulty long enough to actually learn from it. Its gift is mastery earned the slow way — competence, integrity, the kind of strength that only comes from having met a real limit and stayed. Its shadow is that same limit turned punitive: rigidity, fear, a harshness toward oneself or others mistaken for standards. Saturn anchors several of Tarnas's own signature correlations — Saturn–Pluto, Saturn–Uranus, Saturn–Neptune — where it plays the conserving, testing counterweight; this solo portrait, though, draws on the broader tradition around him rather than his own direct words, held as PlayfulProcess's synthesis.",
+        "See also": "In the canonical Western reading, Saturn is structure, time, and responsibility — the relationship to limits, mastery, and the hard-won wisdom of endurance. Its light is discipline, integrity, and perseverance; its shadow, rigidity, fear, and control mistaken for standards. Saturn's fuller multi-voice reading — Ptolemy, Lilly, Jyotiṣa, Alan Leo, the planetary myths — lives in this library's other voice grammars, where every tradition answers for the same planet in its own terms."
+      }
+    },
+    {
+      "id": "pair-saturn-pluto",
+      "name": "Saturn–Pluto",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-saturn",
+        "planet-pluto"
+      ],
+      "keywords": [
+        "saturn",
+        "pluto",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Saturn",
+          "Pluto"
+        ],
+        "archetype": "Contraction, gravitas, the weight of history",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-saturn"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-pluto"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "When Saturn and Pluto meet, structure meets the underworld: the archetypal field Tarnas calls one of the most sobering in the astrological alphabet. Saturn is limit, consequence, the long discipline of what must be endured; Pluto is the elemental force beneath the floorboards — power, mortality, compulsion. Together they describe contraction: history's grimmest hours, when necessity closes in and nothing can be argued or wished away. This is not a punishing coincidence but a pattern, Tarnas argues, that recurs with the two planets' slow, rare alignments — periods when whole societies are forced to confront what they had avoided, under conditions offering no easy exit. The complex has no lightness in it. What it offers, when survived, is gravitas: a hard-won seriousness that cannot be faked.",
+        "In history": "Tarnas correlates Saturn-Pluto alignments with three of the twentieth century's grimmest passages: the outbreak of the First World War (1914), the consolidation of totalitarian power leading into the Second World War (1939-41), and the September 11 attacks and the war on terror that followed (2001). In each, he reads the same signature — historical necessity closing down options, under conditions that felt, to those living through them, inescapable.",
+        "A question": "What in your life right now feels like necessity rather than choice — and what would it mean to meet it without either collapsing under it or pretending it isn't there?"
+      }
+    },
+    {
+      "id": "pair-uranus-pluto",
+      "name": "Uranus–Pluto",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-uranus",
+        "planet-pluto"
+      ],
+      "keywords": [
+        "uranus",
+        "pluto",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Uranus",
+          "Pluto"
+        ],
+        "archetype": "Revolutionary epochs, eros unbound",
+        "source_grammars": [
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-uranus"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-pluto"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Uranus-Pluto is Tarnas's signature alignment — the pairing he treats as the deepest marker of epochal upheaval. Uranus supplies the sudden break, the individuating impulse that will not be governed; Pluto supplies the elemental force that makes the break irreversible. Together they read as revolution in the fullest sense: not reform but rupture, an eros unbound from whatever contained it — sexual, political, generational. Tarnas notes that this cycle moves slowly enough (Uranus and Pluto realign roughly once a century or more) that each alignment marks a whole era rather than a season, and that the periods it touches tend to be remembered afterward as hinges history turned on.",
+        "In history": "Tarnas correlates the Uranus-Pluto conjunction of the 1960s (roughly 1960-1972) with the era's convergent upheavals — the civil rights movement, second-wave feminism, the sexual revolution, and the global wave of decolonization. He traces the prior conjunction to the revolutions of 1848 across Europe, and reads the Uranus-Pluto square of the 2010s (Occupy, the Arab Spring, and the decade's broader wave of populist and social-justice mobilization) as the same archetypal signature recurring in a different aspect.",
+        "A question": "Where in your own life is something asking to be broken open rather than managed — and can you tell the difference between destruction and a birth that requires it?"
+      }
+    },
+    {
+      "id": "pair-jupiter-uranus",
+      "name": "Jupiter–Uranus",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-jupiter",
+        "planet-uranus"
+      ],
+      "keywords": [
+        "jupiter",
+        "uranus",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Jupiter",
+          "Uranus"
+        ],
+        "archetype": "Creative breakthrough, quantum leaps",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-jupiter"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-uranus"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Jupiter is expansion and faith in possibility; Uranus is the sudden opening. Where they meet, Tarnas reads what he calls quantum leaps — moments when a door that seemed permanently shut simply isn't there anymore, and something that could not be reasoned into being arrives instead in a rush. This is the lighter cousin of Uranus-Pluto: less an epochal rupture than a burst, a widening, an invention or a liberation that expands what was previously thought possible. Its gift is exhilaration, discovery, the surprising generosity of a universe suddenly larger than expected; its risk is the overreach and inflated optimism that can follow, when the leap outruns the ground beneath it.",
+        "In history": "Tarnas reads Jupiter-Uranus alignments as correlating with sudden expansions of freedom, knowledge, or opportunity — moments a society's sense of the possible widens quickly rather than gradually. He treats this cycle as recurring roughly every fourteen years, more frequent and more locally felt than the slower outer-planet alignments, which is why this grammar reads it with lower confidence than the Saturn-Pluto and Uranus-Pluto entries above — the book's own argument leans on the slower cycles for its central historical case studies far more than on this faster one.",
+        "A question": "What became suddenly possible for you that you weren't expecting — and did you let yourself believe it, or wait for the catch?"
+      }
+    },
+    {
+      "id": "pair-uranus-neptune",
+      "name": "Uranus–Neptune",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-uranus",
+        "planet-neptune"
+      ],
+      "keywords": [
+        "uranus",
+        "neptune",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Uranus",
+          "Neptune"
+        ],
+        "archetype": "Spiritual awakenings, cultural dreamings",
+        "source_grammars": [
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-uranus"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-neptune"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Uranus's sudden opening meets Neptune's dissolving of boundaries, and the result, Tarnas argues, is a distinctive cultural weather: visionary, idealistic, prone to utopian dreaming and genuine spiritual awakening at once. This is the complex behind a culture's romantic and mystical turns — moments when the given, literal world seems suddenly permeable, and both religious revival and psychedelic experiment become newly thinkable. Its light is real: awakening, inspiration, a collective loosening of what counted as real. Its shadow is the same loosening running without a keel — collective delusion, spiritual bypass, a dreaminess that mistakes itself for revelation.",
+        "In history": "Tarnas correlates the Uranus-Neptune conjunction of the early 1820s with the flowering of the Romantic movement in Europe — its visionary poetry, its reenchantment of nature, its revolt against Enlightenment rationalism. He reads the most recent conjunction, in the early 1990s, alongside the New Age movement's spread into the cultural mainstream and the sudden, hopeful, and often over-idealistic mood that followed the end of the Cold War.",
+        "A question": "Where has your imagination opened a door recently — and how would you know if what came through it was insight or wishful dreaming?"
+      }
+    },
+    {
+      "id": "pair-saturn-neptune",
+      "name": "Saturn–Neptune",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-saturn",
+        "planet-neptune"
+      ],
+      "keywords": [
+        "saturn",
+        "neptune",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Saturn",
+          "Neptune"
+        ],
+        "archetype": "Disillusionment, the grief of the real, spiritual discipline",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-saturn"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-neptune"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Saturn's hard edge meets Neptune's dissolving tide, and something has to give. Tarnas reads this alignment as the archetypal signature of disillusionment — the moment a beautiful, inflated, or simply unexamined belief meets the ground and does not survive contact. This is the grief of the real: painful, but not without its own gift, because what Saturn-Neptune clears away was never as solid as it looked, and what remains afterward, though smaller, is at least true. At its best the complex is spiritual discipline rather than despair — Saturn giving Neptune's formlessness an actual practice to stand on; at its worst it is depression, disillusion with no ground offered in its place.",
+        "In history": "Tarnas correlates the Saturn-Neptune conjunction of 1989 with the sudden, structural collapse of Soviet-bloc communism — an entire ideological edifice (Saturn) dissolving (Neptune) within months. He also reads the Saturn-Neptune opposition of 2006-07 alongside the unraveling of the speculative financial fantasies that produced the 2008 crash — a bubble (Neptune) meeting its reckoning (Saturn).",
+        "A question": "What belief of yours has quietly stopped being true — and can you let it go without deciding that nothing is left standing?"
+      }
+    },
+    {
+      "id": "pair-saturn-uranus",
+      "name": "Saturn–Uranus",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-saturn",
+        "planet-uranus"
+      ],
+      "keywords": [
+        "saturn",
+        "uranus",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Saturn",
+          "Uranus"
+        ],
+        "archetype": "Order vs rupture",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-saturn"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-uranus"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Saturn conserves; Uranus breaks. Put in direct relationship, Tarnas reads this pairing as the archetypal tension of order against rupture — the argument, playing out in a single life or an entire society, between what has been built and earned versus what wants, urgently, to change. Neither side is simply right in this complex; Saturn without Uranus calcifies into rigidity, Uranus without Saturn dissipates into chaos that changes nothing durable. The complex's real question is whether the tension resolves into a structure flexible enough to hold real change, or into a standoff where both sides dig in and nothing moves.",
+        "In history": "Tarnas reads Saturn-Uranus oppositions and squares as correlating with periods of open ideological conflict between conserving and disrupting forces — he cites the tense years leading into the Second World War, when authoritarian order and revolutionary upheaval were in direct, unresolved contest across Europe, as one clear instance of the pattern. He treats the alignment as recurring roughly every twenty years, each time restaging the same argument in new material.",
+        "A question": "Where in your life are you defending a structure out of habit rather than conviction — or breaking one before you've actually tested whether it still serves you?"
+      }
+    },
+    {
+      "id": "pair-jupiter-saturn",
+      "name": "Jupiter–Saturn",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-jupiter",
+        "planet-saturn"
+      ],
+      "keywords": [
+        "jupiter",
+        "saturn",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Jupiter",
+          "Saturn"
+        ],
+        "archetype": "The great chronocrator cycle",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-jupiter"
+          },
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-saturn"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Jupiter and Saturn meet roughly every twenty years, in a cycle medieval and Renaissance astrologers called the Great Conjunction and treated as history's own metronome — the chronocrator, the timekeeper of ages. Tarnas revives this older tradition rather than inventing it: expansion (Jupiter) and structure (Saturn) in dialogue mark the intervals at which a society's operating assumptions get renegotiated, not always dramatically, but reliably. Every generation gets roughly one Jupiter-Saturn conjunction to define itself against — a fresh social contract, or at least a fresh attempt at one.",
+        "In history": "Tarnas draws directly on the older astrological tradition here: Kepler famously proposed the Star of Bethlehem was a Jupiter-Saturn conjunction (7 BCE), and medieval astrologers such as Māshā'allāh and Abū Ma'shar built entire theories of dynastic and religious change on the roughly 200-year shift of Great Conjunctions through the zodiac's elemental triplicities. Tarnas treats this historical astrological practice itself — not only the conjunctions — as evidence of how consistently different eras reached for the same planetary pairing to talk about large-scale change.",
+        "A question": "What social contract — a relationship, a job, a community's unwritten rules — are you due to renegotiate, whether or not anyone's called the moment yet?"
+      }
+    },
+    {
+      "id": "pair-jupiter-neptune",
+      "name": "Jupiter–Neptune",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-jupiter",
+        "planet-neptune"
+      ],
+      "keywords": [
+        "jupiter",
+        "neptune",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Jupiter",
+          "Neptune"
+        ],
+        "archetype": "Idealism, inflation",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-jupiter"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-neptune"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Jupiter's expansiveness meets Neptune's dissolving of boundaries, and Tarnas reads the result as a complex of idealism running without a governor: faith, generosity, and genuine spiritual aspiration on one hand, inflation, credulity, and bubble-thinking on the other. This is the astrological signature of enthusiasm untethered from ground — a mood, individual or collective, in which belief outruns evidence and everyone involved feels, for a while, wonderful about it. The complex is not automatically negative; Jupiter-Neptune also describes the best of religious and artistic vision. But it rarely announces which face it's wearing until afterward.",
+        "In history": "Tarnas reads Jupiter-Neptune alignments as correlating with waves of religious revivalism and utopian social movements, and — in its more worldly register — with speculative financial exuberance: collective enthusiasm inflating an asset or an ideology well past what it can bear, before Saturn (in a later alignment) brings the accounting due. This grammar reads this cycle with lower confidence than the Saturn-Pluto and Uranus-Pluto entries above — Tarnas treats it as a secondary, faster-moving pattern rather than one of the book's central case studies.",
+        "A question": "What are you currently more excited about than the evidence really supports — and is that a problem, or is the excitement itself doing something useful?"
+      }
+    },
+    {
+      "id": "pair-jupiter-pluto",
+      "name": "Jupiter–Pluto",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-jupiter",
+        "planet-pluto"
+      ],
+      "keywords": [
+        "jupiter",
+        "pluto",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Jupiter",
+          "Pluto"
+        ],
+        "archetype": "Magnified will",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-jupiter"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-pluto"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Jupiter's expansive reach meets Pluto's elemental force, and Tarnas reads the combination as magnified will — ambition given both scope and depth at once. This is the complex behind empire, in the literal and the personal sense: the drive not merely to grow but to consolidate power over what has grown. Its gift is the capacity to enact a vision at real scale; its danger is that the same scale makes the abuse of power correspondingly larger. Jupiter-Pluto rarely produces small gestures — whatever it touches, it tends to magnify.",
+        "In history": "Tarnas correlates Jupiter-Pluto alignments with periods of dramatic expansion of political or economic power — he reads the mid-1930s conjunction alongside the rapid, expansionist consolidation of Nazi Germany's ambitions in that period as one instance of the pattern: expansive will (Jupiter) fused with an unignorable underworld force (Pluto).",
+        "A question": "Where in your life has your ambition grown bigger than your willingness to be honest about its cost?"
+      }
+    },
+    {
+      "id": "pair-neptune-pluto",
+      "name": "Neptune–Pluto",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-neptune",
+        "planet-pluto"
+      ],
+      "keywords": [
+        "neptune",
+        "pluto",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Neptune",
+          "Pluto"
+        ],
+        "archetype": "Deep-background epochal myth",
+        "source_grammars": [
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-neptune"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-pluto"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Neptune and Pluto move so slowly relative to each other — a single alignment lasts centuries — that Tarnas treats their cycle not as a marker of events but as the deep background hum beneath an entire age: the shared, largely unconscious myth a civilization is living inside without quite noticing it has one. Neptune dissolves and re-enchants; Pluto works underground, in slow transformation rather than sudden event. Together, across a span longer than any single life, they describe the kind of change a culture only recognizes centuries later, in hindsight, as having been a hinge all along.",
+        "In history": "Tarnas treats the Renaissance-through-Enlightenment transition — the multi-century shift from the medieval to the modern Western worldview he chronicled in his earlier book The Passion of the Western Mind — as unfolding under the most recent long Neptune-Pluto alignment. Because Pluto was not discovered until 1930 and Neptune until 1846, no observer at the time could have named the correlation; Tarnas's reading here is necessarily retrospective and long-range, and this grammar holds it that way — as the least falsifiable of the alignments here, by the nature of the timescale itself.",
+        "A question": "What quiet assumption is your whole generation living inside, that a much later century might name as clearly as we now name the Middle Ages?"
+      }
+    },
+    {
+      "id": "pair-sun-saturn",
+      "name": "Sun–Saturn",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-sun",
+        "planet-saturn"
+      ],
+      "keywords": [
+        "sun",
+        "saturn",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Sun",
+          "Saturn"
+        ],
+        "archetype": "Identity meeting limit",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-sun"
+          },
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-saturn"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "The Sun is the will to be someone in particular; Saturn is the limit that will inevitably meets — time, mortality, the slow discipline of building something durable. Read together, Tarnas's archetypal framework treats Sun-Saturn as the complex of earned identity: selfhood that has been tested against real constraint rather than simply asserted. Its gift, when the tension is worked rather than avoided, is authority that has actually been paid for — competence, mastery, a self that can bear weight. Its shadow is an identity so armored against limitation that it forgets how to be young, playful, or wrong.",
+        "In history": "Sun-Saturn falls outside Cosmos and Psyche's own historical case studies, which track slower outer-planet-to-outer-planet alignments across collective history — this pairing's cycle (roughly annual) is far too fast to mark an epoch the way the book's central alignments do. This reading instead extends Tarnas's archetypal vocabulary — the Sun as core identity, Saturn as structure and limit — to the personal register, offered honestly as this grammar's own interpretation, not as a claim from the book's own data.",
+        "A question": "What have you built that actually cost you something — and does it feel more like a cage or a foundation?"
+      }
+    },
+    {
+      "id": "pair-sun-pluto",
+      "name": "Sun–Pluto",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-sun",
+        "planet-pluto"
+      ],
+      "keywords": [
+        "sun",
+        "pluto",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Sun",
+          "Pluto"
+        ],
+        "archetype": "Identity meeting the underworld",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-sun"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-pluto"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "The Sun's will to shine meets Pluto's elemental undertow, and the complex that results is intensity: identity forged not gently but through confrontation with what is compulsive, mortal, or hidden in oneself. This is the astrological signature of the phoenix rather than the steady climb — a self that has gone down into something and come back changed, sometimes unrecognizably. Its gift is depth and a kind of hard-won authenticity that cannot be faked; its risk is a will to power that mistakes domination for selfhood, or a self so identified with intensity that ordinary life feels unbearably thin by comparison.",
+        "In history": "Sun-Pluto falls outside Cosmos and Psyche's own historical case studies, which track slower outer-planet-to-outer-planet alignments across collective history — this pairing's cycle (roughly annual) is far too fast to mark an epoch the way the book's central alignments do. This reading instead extends Tarnas's archetypal vocabulary — the Sun as core identity, Pluto as the underworld drive — to the personal register, offered honestly as this grammar's own interpretation, not as a claim from the book's own data.",
+        "A question": "What part of yourself did you have to go into the dark to actually find?"
+      }
+    },
+    {
+      "id": "pair-venus-mars",
+      "name": "Venus–Mars",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-venus",
+        "planet-mars"
+      ],
+      "keywords": [
+        "venus",
+        "mars",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Venus",
+          "Mars"
+        ],
+        "archetype": "Eros and desire, in dialogue",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-venus"
+          },
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-mars"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Venus and Mars are the oldest planetary pair astrology has read as a couple — attraction and drive, the desire to harmonize and the desire to act. Where they meet, the complex Tarnas's framework describes is eros in the fullest sense: not romance alone but the whole current that makes a person move toward what they want, tempered or untempered by the wish to also be in right relationship with it. At its best this pairing is passionate cooperation — desire that knows how to ask, not only take. At its worst it is desire split against itself: appetite without relatedness, or relatedness so accommodating it loses its own wanting.",
+        "In history": "Venus-Mars falls outside Cosmos and Psyche's own historical case studies, which track slower outer-planet-to-outer-planet alignments across collective history — this pairing's cycle (roughly two years) is far too fast to mark an epoch the way the book's central alignments do. This reading instead extends Tarnas's archetypal vocabulary — Venus as the value-and-harmony principle, Mars as the drive-and-assertion principle — to the personal register, offered honestly as this grammar's own interpretation, not as a claim from the book's own data.",
+        "A question": "In your closest relationship right now, which is more often missing — the wanting, or the willingness to ask for it directly?"
+      }
+    },
+    {
+      "id": "pair-moon-saturn",
+      "name": "Moon–Saturn",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-moon",
+        "planet-saturn"
+      ],
+      "keywords": [
+        "moon",
+        "saturn",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Moon",
+          "Saturn"
+        ],
+        "archetype": "Feeling meeting structure",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-moon"
+          },
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-saturn"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "The Moon is the tide of feeling — need, memory, the instinctive reach for comfort; Saturn is the boundary that says not yet, or not like that. Together they describe the complex of emotional discipline: a nervous system that has learned, sometimes the hard way, to hold feeling inside a structure rather than be swept by it. Done well this produces real emotional maturity — steadiness that is not the same as numbness. Done poorly it produces a wall where warmth should be: feeling so thoroughly governed that it stops being felt at all.",
+        "In history": "Moon-Saturn falls outside Cosmos and Psyche's own historical case studies, which track slower outer-planet-to-outer-planet alignments across collective history — this pairing's cycle (a matter of months) is far too fast to mark an epoch the way the book's central alignments do. This reading instead extends Tarnas's archetypal vocabulary — the Moon as feeling and instinct, Saturn as structure and limit — to the personal register, offered honestly as this grammar's own interpretation, not as a claim from the book's own data.",
+        "A question": "Where did you learn that a feeling needed to be managed before it could be safely felt — and is that still true?"
+      }
+    },
+    {
+      "id": "pair-mercury-uranus",
+      "name": "Mercury–Uranus",
+      "category": "archetypal-pair",
+      "level": 2,
+      "composite_of": [
+        "planet-mercury",
+        "planet-uranus"
+      ],
+      "keywords": [
+        "mercury",
+        "uranus",
+        "archetypal-astrology",
+        "tarnas",
+        "cosmos-and-psyche"
+      ],
+      "metadata": {
+        "planets": [
+          "Mercury",
+          "Uranus"
+        ],
+        "archetype": "The sudden thought",
+        "source_grammars": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-mercury"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-uranus"
+          }
+        ]
+      },
+      "sections": {
+        "The complex": "Mercury is the mind in its ordinary motion — noticing, naming, connecting; Uranus is the mind interrupted by something it did not see coming. Together this complex describes the sudden thought: insight that arrives whole, unannounced, sometimes disruptive to whatever the mind had settled into believing five minutes earlier. Its gift is genuine originality — the kind of idea that could not have been reasoned into existence step by step. Its shadow is a mind so addicted to the jolt of the new that it can't stay with anything long enough to finish it.",
+        "In history": "Mercury-Uranus falls outside Cosmos and Psyche's own historical case studies, which track slower outer-planet-to-outer-planet alignments across collective history — this pairing's cycle (about eighteen months) is far too fast to mark an epoch the way the book's central alignments do. This reading instead extends Tarnas's archetypal vocabulary — Mercury as mind and communication, Uranus as sudden awakening — to the personal register, offered honestly as this grammar's own interpretation, not as a claim from the book's own data.",
+        "A question": "What idea arrived for you complete, out of nowhere — and did you trust it, or wait for permission to take it seriously?"
+      }
+    }
+  ],
+  "_recursive_eco_url": "https://flow.recursive.eco/g/a1b2c3d4-5555-4a05-9e05-aa0000000005?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=a1b2c3d4-5555-4a05-9e05-aa0000000005",
+  "cover_image_credit": {
+    "title": "Scenographia systematis Copernicani — the Sun-centred cosmos, plate 5",
+    "creator": "Andreas Cellarius",
+    "date": "1661",
+    "source": "*Harmonia Macrocosmica* (Amsterdam, 1660/1661)",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_Copernicani.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Cellarius died 1665; Commons states public domain (PD-old-100)",
+    "verified": "2026-07-26"
+  }
+}

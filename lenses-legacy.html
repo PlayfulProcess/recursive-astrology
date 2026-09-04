@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lenses — one planet, sign, or house, every tradition — The Recursive Astrology</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* Layout only — every colour comes from theme.css (the one source). Do not add colour tokens here. */
+  html,body{margin:0;background:var(--bg);color:var(--ink);color-scheme:light;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 18px 80px}
+  header.hero{padding:14px 0 8px}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  h1{font-family:"Fraunces",Georgia,serif;font-size:28px;margin:6px 0 8px;color:var(--ink)}
+  .lede{color:var(--muted);font-size:15px;max-width:72ch}
+
+  .picker{margin-top:22px}
+  .kindrow{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .kindbtn{font:inherit;font-size:13px;font-weight:600;padding:8px 16px;border-radius:999px;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink-soft);cursor:pointer}
+  .kindbtn.active{background:var(--gold);color:#fff;border-color:var(--gold)}
+
+  .keyrow{display:flex;flex-wrap:wrap;gap:8px}
+  .keybtn{font:inherit;font-size:13px;padding:7px 13px;border-radius:9px;border:1px solid var(--line);
+    background:var(--panel);color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+  .keybtn:hover{border-color:var(--accent)}
+  .keybtn.active{background:var(--chip,#faf3e6);border-color:var(--accent);color:var(--ink)}
+
+  .tradpicker{margin-top:22px}
+  .tradlabel{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 8px}
+  .tradrow{display:flex;flex-wrap:wrap;gap:7px}
+  .tradbtn{font:inherit;font-size:12.5px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);
+    background:var(--panel);color:var(--ink-soft);cursor:pointer;display:inline-flex;align-items:baseline;gap:6px}
+  .tradbtn .tyr{font-size:10.5px;color:var(--muted)}
+  .tradbtn.active{background:var(--chip,#faf3e6);border-color:var(--accent);color:var(--ink)}
+  .tradbtn.active .tyr{color:var(--accent)}
+  .tradbtn.util{font-weight:600;color:var(--ink)}
+
+  .results{margin-top:28px}
+  .results h2{font-family:"Fraunces",Georgia,serif;font-size:21px;margin:0 0 4px}
+  .results .rsub{font-size:13px;color:var(--muted);margin:0 0 16px}
+  .lensgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .lenscard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 16px;min-height:120px}
+  .lenscard .trad{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+  .lenscard .era{font-size:11px;color:var(--muted);margin:1px 0 8px}
+  .lenscard img.thumb{display:block;width:100%;max-height:120px;object-fit:contain;background:var(--panel2);
+    border-radius:8px;margin:0 0 8px}
+  .lenscard b{display:block;font-family:"Fraunces",Georgia,serif;font-size:16px;margin:0 0 8px}
+  .lenscard .sec{margin-top:9px}
+  .lenscard .sec h4{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 3px}
+  .lenscard .sec p{margin:0;font-size:13.5px;color:var(--ink)}
+  .lenscard .empty{font-size:13px;color:var(--muted);font-style:italic}
+
+  .note{margin-top:34px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;
+    background:var(--chip,#f7f3ea);font-size:13.5px;color:var(--muted)}
+  .note b{color:var(--ink)}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<script src="site-header.js?v=47"></script>
+<site-header active="lenses"></site-header>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">The Recursive Astrology · lenses (superseded page)</div>
+    <h1>One planet, sign, or house — every tradition</h1>
+    <p class="lede"><b>This is the older Lenses page</b>, kept for reference and no longer linked from
+      the site. The current one is <a href="viewers/lenses.html">Lenses</a>, which reads the whole
+      collection index rather than only the grammars marked public in <code>ids.json</code> — so it
+      shows more traditions than this page does.</p>
+    <p class="lede" id="lede-p">Pick a planet, a sign, or a house and read how every tradition in this
+      library treats the same chart feature, side by side, in chronological order — oldest voice
+      first, contemporary last. Evolution across traditions is the point: where a tradition has no
+      entry (Uranus didn't exist for Ptolemy), the gap is shown honestly, not papered over.
+      Back to <a href="index.html">the library</a>.</p>
+  </header>
+
+  <div class="picker">
+    <div class="kindrow" role="tablist" aria-label="Look up by">
+      <button class="kindbtn active" id="kind-planet" data-kind="planet">By Planet</button>
+      <button class="kindbtn" id="kind-sign" data-kind="sign">By Sign</button>
+      <button class="kindbtn" id="kind-house" data-kind="house">By House</button>
+    </div>
+    <div class="keyrow" id="keyrow" aria-live="polite"></div>
+  </div>
+
+  <div class="tradpicker">
+    <p class="tradlabel">Traditions shown</p>
+    <div class="tradrow" id="tradrow" aria-live="polite"></div>
+  </div>
+
+  <section class="results">
+    <h2 id="results-h">Loading…</h2>
+    <p class="rsub" id="results-sub"></p>
+    <div class="lensgrid" id="lensgrid" aria-live="polite"></div>
+  </section>
+
+  <p class="note" id="fallback" hidden></p>
+
+  <div class="note" id="how-note">
+    <b>How this works.</b> Loading…
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+// ── structural domain constants (display order only — NOT a tradition list) ──
+const PLANET_ORDER = ['Sun','Moon','Mercury','Venus','Mars','Jupiter','Saturn','Uranus','Neptune','Pluto','North Node','South Node','Chiron','Lilith','Ceres'];
+const SIGN_ORDER = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+const ORDWORDS = ['first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth','eleventh','twelfth'];
+
+const KIND_LABEL = { planet: 'planet', sign: 'sign', house: 'house' };
+const DEFAULT_ENTITY = { planet: 'mars', sign: 'aries', house: '1' };
+
+let TRADITIONS = [];   // every public grammar that has planet/sign/house items, oldest first
+let SELECTED = new Set(); // slugs currently shown
+let kind = 'planet';
+let currentKey = null;
+
+function normalizeName(s){ return String(s || '').toLowerCase().trim(); }
+
+function houseNumberFromName(name){
+  const n = normalizeName(name);
+  const digit = n.match(/^(\d+)(st|nd|rd|th)\b/);
+  if (digit) return parseInt(digit[1], 10);
+  for (let i = 0; i < ORDWORDS.length; i++){
+    if (n.startsWith(ORDWORDS[i])) return i + 1;
+  }
+  return null;
+}
+
+// Read planet/sign/house items *defensively* — infer from whatever fields exist,
+// never assume every grammar stamps the same metadata shape.
+function houseNumberOf(item){
+  const meta = item.metadata || {};
+  if (meta.number != null && Number.isFinite(+meta.number)) return +meta.number;
+  if (meta.house != null && Number.isFinite(+meta.house)) return +meta.house;
+  return houseNumberFromName(item.name);
+}
+
+function findItem(grammar, kind, key){
+  const items = grammar.items || [];
+  if (kind === 'house') {
+    const num = parseInt(key, 10);
+    return items.find(it => it.category === 'house' && houseNumberOf(it) === num) || null;
+  }
+  const target = normalizeName(key);
+  return items.find(it => it.category === kind && normalizeName(it.name) === target) || null;
+}
+
+// ── era / voice extraction — driven entirely by each grammar's OWN data.
+// No slug is ever named here; a new tradition just needs the same
+// attribution.source_year / author convention (or falls back to "contemporary"). ──
+const OWNER = 'PlayfulProcess';                              // repo owner, never a voice
+const isOwner = s => String(s || '').trim() === OWNER;
+const shortName = g => (g.name || '').split('—')[0].trim() || g.slug || '';  // em-dash only
+
+function extractEra(g){
+  const attr = g.attribution || {};
+  const rawYearStr = attr.source_year || null;
+  let year = null, eraLabel = null, isBCE = false;
+  let voiceLabel = isOwner(attr.source_author) ? null : (attr.source_author || null);
+
+  if (rawYearStr) {
+    // "c. 8th–7th century BCE reports (Thompson ed. 1900); Jastrow 1898" — the digit
+    // grab below used to return 1900, so the oldest voice in the library was labelled
+    // "1900" on its chip and sorted after Proctor, on a page that promises oldest-first.
+    if (/\bBCE?\b/.test(rawYearStr)) { isBCE = true; year = -1e6; }
+    else {
+      const ce = rawYearStr.match(/c\.\s*(\d{1,4})\s*CE/i);
+      if (ce) year = parseInt(ce[1], 10);
+      else {
+        const y = rawYearStr.match(/(\d{3,4})/);
+        if (y) year = parseInt(y[1], 10);
+      }
+    }
+    eraLabel = rawYearStr;
+  }
+  if (year == null && g.author && !isOwner(g.author)) {
+    const range = g.author.match(/(\d{4})\s*-\s*(\d{4})/);
+    if (range) {
+      year = parseInt(range[2], 10); // death/career-end year as the sort anchor
+      eraLabel = `${range[1]}–${range[2]}`;
+    }
+    if (!voiceLabel) voiceLabel = g.author.replace(/\s*\([^)]*\)\s*/g, '').trim();
+  }
+  if (!voiceLabel) {
+    voiceLabel = (g.creator_name && !isOwner(g.creator_name)) ? g.creator_name : shortName(g);
+  }
+  if (year == null) { year = Infinity; eraLabel = eraLabel || 'contemporary'; }
+  const eraShort = isBCE ? 'BCE'
+    : year === Infinity ? 'now'
+    : (year < 500 ? `c. ${year}` : eraLabel.length > 14 ? String(year) : eraLabel);
+  return { year, eraLabel, eraShort, voiceLabel };
+}
+
+function mdLite(s){
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*(.+?)\*/g,'<em>$1</em>')
+    .replace(/`(.+?)`/g,'<code>$1</code>');
+}
+
+// ── entity registry: union of every planet/sign/house found across the
+// SELECTED traditions, ordered by the structural table above (extras appended). ──
+function collectEntities(kindName){
+  const found = new Map(); // key -> label
+  TRADITIONS.forEach(t => {
+    if (!SELECTED.has(t.slug)) return;
+    (t.grammar.items || []).forEach(it => {
+      if (it.category !== kindName) return;
+      if (kindName === 'house') {
+        const n = houseNumberOf(it);
+        if (n) found.set(String(n), `House ${n}`);
+      } else {
+        const key = normalizeName(it.name);
+        if (key) found.set(key, it.name);
+      }
+    });
+  });
+  let keys = [...found.keys()];
+  if (kindName === 'house') {
+    keys.sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
+  } else {
+    const canon = (kindName === 'planet' ? PLANET_ORDER : SIGN_ORDER).map(normalizeName);
+    keys.sort((a, b) => {
+      const ia = canon.indexOf(a), ib = canon.indexOf(b);
+      if (ia === -1 && ib === -1) return found.get(a).localeCompare(found.get(b));
+      if (ia === -1) return 1;
+      if (ib === -1) return -1;
+      return ia - ib;
+    });
+  }
+  return keys.map(k => ({ key: k, label: found.get(k) }));
+}
+
+function renderTraditionRow(){
+  const row = $('#tradrow');
+  const chip = (label, cls, onclick) => {
+    const b = document.createElement('button');
+    b.className = cls;
+    b.textContent = label;
+    b.onclick = onclick;
+    return b;
+  };
+  row.innerHTML = '';
+  row.appendChild(chip('All', 'tradbtn util', () => { SELECTED = new Set(TRADITIONS.map(t => t.slug)); afterTraditionChange(); }));
+  row.appendChild(chip('None', 'tradbtn util', () => { SELECTED = new Set(); afterTraditionChange(); }));
+  TRADITIONS.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'tradbtn' + (SELECTED.has(t.slug) ? ' active' : '');
+    btn.innerHTML = `${esc(t.voiceLabel)} <span class="tyr">${esc(t.eraShort)}</span>`;
+    btn.onclick = () => {
+      if (SELECTED.has(t.slug)) SELECTED.delete(t.slug); else SELECTED.add(t.slug);
+      afterTraditionChange();
+    };
+    row.appendChild(btn);
+  });
+}
+
+function afterTraditionChange(){
+  renderTraditionRow();
+  renderKeyRow(true);
+}
+
+function renderKeyRow(keepKey){
+  const row = $('#keyrow');
+  row.innerHTML = '';
+  const entities = collectEntities(kind);
+  if (!keepKey || !entities.some(e => e.key === currentKey)) {
+    const dflt = DEFAULT_ENTITY[kind];
+    currentKey = entities.some(e => e.key === dflt) ? dflt : (entities[0] ? entities[0].key : null);
+  }
+  entities.forEach(e => {
+    const btn = document.createElement('button');
+    btn.className = 'keybtn' + (e.key === currentKey ? ' active' : '');
+    btn.textContent = e.label;
+    btn.onclick = () => {
+      currentKey = e.key;
+      row.querySelectorAll('.keybtn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render();
+      updateHash();
+    };
+    row.appendChild(btn);
+  });
+  if (!entities.length) {
+    row.innerHTML = `<span style="color:var(--muted);font-size:13px">No ${KIND_LABEL[kind]} entries in the selected traditions.</span>`;
+  }
+  render();
+}
+
+function render(){
+  const grid = $('#lensgrid');
+  grid.innerHTML = '';
+  const entities = collectEntities(kind);
+  const label = (entities.find(e => e.key === currentKey) || {}).label || '';
+  const shown = TRADITIONS.filter(t => SELECTED.has(t.slug));
+
+  $('#results-h').textContent = label || `Pick a ${KIND_LABEL[kind]}`;
+  $('#results-sub').textContent = label
+    ? `The same ${KIND_LABEL[kind]}, read across ${shown.length} tradition${shown.length === 1 ? '' : 's'}, oldest first.`
+    : '';
+
+  if (!currentKey || !shown.length) {
+    if (!shown.length) grid.innerHTML = '<p class="empty" style="color:var(--muted)">No traditions selected — use the row above to bring some back.</p>';
+    return;
+  }
+
+  shown.forEach(t => {
+    const item = findItem(t.grammar, kind, currentKey);
+    const card = document.createElement('div');
+    card.className = 'lenscard';
+    if (!item) {
+      card.innerHTML = `<div class="trad">${esc(t.voiceLabel)}</div><div class="era">${esc(t.eraLabel)}</div>
+        <p class="empty">No entry in this tradition${kind === 'planet' ? ' — likely beyond what was known to it, or simply not covered' : ''}.</p>`;
+      grid.appendChild(card);
+      return;
+    }
+    const imgUrl = item.image_url || (item.metadata && item.metadata.image_url) || '';
+    const img = imgUrl ? `<img class="thumb" src="${esc(imgUrl)}" alt="" loading="lazy">` : '';
+    const secs = Object.entries(item.sections || {}).map(([label, text]) =>
+      `<div class="sec"><h4>${esc(label)}</h4><p>${mdLite(text)}</p></div>`).join('');
+    card.innerHTML = `<div class="trad">${esc(t.voiceLabel)}</div><div class="era">${esc(t.eraLabel)}</div>
+      ${img}<b>${esc(item.name)}</b>${secs}`;
+    grid.appendChild(card);
+  });
+}
+
+function setKind(newKind){
+  kind = newKind;
+  ['planet','sign','house'].forEach(k => $('#kind-' + k).classList.toggle('active', k === kind));
+  currentKey = null;
+  renderKeyRow(false);
+  updateHash();
+}
+
+$('#kind-planet').onclick = () => setKind('planet');
+$('#kind-sign').onclick = () => setKind('sign');
+$('#kind-house').onclick = () => setKind('house');
+
+function updateHash(){
+  try {
+    const params = new URLSearchParams();
+    params.set('kind', kind);
+    if (currentKey) params.set('entity', currentKey);
+    history.replaceState(null, '', '#' + params.toString());
+  } catch (e) { /* ignore */ }
+}
+
+function applyDeepLinkFromHash(){
+  try {
+    const params = new URLSearchParams(location.hash.replace(/^#/, ''));
+    const k = params.get('kind');
+    const e = params.get('entity');
+    if (k && KIND_LABEL[k]) kind = k;
+    if (e) currentKey = e;
+  } catch (err) { /* ignore */ }
+}
+
+async function loadIds(){
+  const r = await fetch('ids.json', { cache: 'no-cache' });
+  if (!r.ok) throw new Error(String(r.status));
+  return r.json();
+}
+
+async function loadGrammar(slug){
+  try {
+    const r = await fetch(`grammars/${slug}/grammar.json`, { cache: 'no-cache' });
+    if (!r.ok) throw new Error(String(r.status));
+    return await r.json();
+  } catch (e) { return null; }
+}
+
+(async function init(){
+  let idsDoc;
+  try {
+    idsDoc = await loadIds();
+  } catch (e) {
+    const fb = $('#fallback');
+    fb.hidden = false;
+    fb.innerHTML = '<b>Could not load the grammar list.</b> Browsers block <code>file://</code> fetches, '
+      + 'so open this over a tiny local server instead: run <code>python -m http.server 8000</code> '
+      + 'in this folder, then visit <code>http://localhost:8000/lenses-legacy.html</code>. '
+      + '(On GitHub Pages / the live site it just works.)';
+    return;
+  }
+
+  // Every grammar the library considers public — never a hardcoded tradition array.
+  const slugs = Array.isArray(idsDoc._public_now) && idsDoc._public_now.length
+    ? idsDoc._public_now
+    : Object.keys(idsDoc.ids || {});
+
+  const loaded = await Promise.all(slugs.map(async slug => {
+    const g = await loadGrammar(slug);
+    return { slug, g };
+  }));
+
+  // A "tradition" for Lenses = any public grammar that actually has planet/sign/house
+  // items. Castings (positions) and view-libraries like the historiographies grammar
+  // don't, and are correctly excluded here — they still show up in the library index.
+  TRADITIONS = loaded
+    .filter(({ g }) => g && Array.isArray(g.items) && g.items.some(it => it.category === 'planet' || it.category === 'sign' || it.category === 'house'))
+    .map(({ slug, g }) => ({ slug, grammar: g, ...extractEra(g) }))
+    .sort((a, b) => a.year - b.year || a.voiceLabel.localeCompare(b.voiceLabel));
+
+  SELECTED = new Set(TRADITIONS.map(t => t.slug));
+
+  $('#how-note').innerHTML = `<b>How this works.</b> ${TRADITIONS.length} tradition${TRADITIONS.length === 1 ? '' : 's'}
+    are fetched client-side — the slug list comes from <code>ids.json</code>, and each one's own
+    <code>grammars/&lt;slug&gt;/grammar.json</code> is loaded and scanned for planet, sign, and house
+    items. Order is read from each grammar's own attribution (<code>attribution.source_year</code> or
+    <code>author</code>) — oldest first — and a tradition with no year on record sorts as contemporary.
+    Add a new public grammar to <code>ids.json</code> and it appears here automatically, no code change
+    needed. See <a href="index.html">the library</a> for every grammar in this repo, or
+    <a href="viewer/astrology-viewer.html">the chart viewer</a> to cast your own chart.`;
+
+  if (!TRADITIONS.length) {
+    $('#results-h').textContent = 'No traditions found';
+    $('#results-sub').textContent = 'None of the public grammars in ids.json have planet, sign, or house items yet.';
+    renderTraditionRow();
+    return;
+  }
+
+  applyDeepLinkFromHash();
+  renderTraditionRow();
+  renderKeyRow(!!currentKey);
+  ['planet','sign','house'].forEach(k => $('#kind-' + k).classList.toggle('active', k === kind));
+})();
+</script>
+
+<script src="site-footer.js?v=1"></script>
+<script src="assistant.js" defer></script>
+<site-footer></site-footer>
+</body>
+</html>

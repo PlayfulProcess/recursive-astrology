@@ -1,0 +1,192 @@
+{
+  "name": "The Aspects, Commented — Ptolemy · Lilly · Canonical",
+  "description": "The five classical (Ptolemaic) aspects — conjunction, sextile, square, trine, opposition — each as an item carrying tradition-sourced commentary from two public-domain voices plus a contemporary synthesis. Each item has three sections: 'Ptolemy (Tetrabiblos)' (c. 150 CE, in J. M. Ashmand's 1822 public-domain translation, Project Gutenberg #70850 — quotes reused verbatim from this repo's grammars/tetrabiblos-ashmand, where they were source-verified when that grammar was compiled); 'Lilly (1647)' (William Lilly, Christian Astrology, public domain — wording corroborated this session only via secondary reproductions, so confidence is marked per item: ○ where an exact phrase rests on a single reproduction, and plain paraphrase where wording could not be verified at all); and 'Canonical', a contemporary synthesis in the same psychological register as grammars/western-astrology-canonical. MATCHER KEYS, documented here because they are the contract other viewers and oracles federate on (the way metadata.planet already works): every item carries category:'aspect' and metadata.aspect (the capitalized aspect name, e.g. 'Square' — the same convention grammars/western-astrology-canonical uses), metadata.angle (degrees: 0 / 60 / 90 / 120 / 180), and metadata.nature ('soft' for sextile and trine, 'hard' for square and opposition, 'neutral' for the conjunction, whose tone depends wholly on the planets joined). metadata.orb carries the common contemporary orb, matching western-astrology-canonical's values — an interoperability convenience, NOT a traditional claim: Ptolemy's aspect doctrine is sign-based (whole-sign configurations of 'parts of the zodiac'), and Lilly attaches orbs to PLANETS, not aspects (each planet has its own orb; an aspect is taken to operate within the moiety — the half-sum — of the two planets' orbs). REALITY NOTE: orbs and the minor aspects (quincunx/inconjunct, semi-sextile, semi-square, sesquiquadrate, quintile…) vary by tradition and era — Ptolemy himself excludes even the conjunction from the aspects proper, since 'a part of the zodiac cannot be configurated with itself.' This grammar starts with the five classical configurations; contributors welcome to add the minor aspects as clearly-marked later layers.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aspects-ptolemy-tetrabiblos-1533_Hervagius.png?width=800",
+  "grammar_type": "astrology",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — contemporary compilation. Its quoted layers are dated per item and per section (Ptolemy c. 150 CE in Ashmand's 1822 translation; Lilly 1647); the Canonical layer is present-day synthesis."
+  },
+  "creator_name": "PlayfulProcess",
+  "tags": [
+    "astrology",
+    "aspects",
+    "ptolemy",
+    "lilly",
+    "commented",
+    "recursive-eco"
+  ],
+  "items": [
+    {
+      "id": "aspect-conjunction",
+      "name": "Conjunction",
+      "symbol": "☌",
+      "category": "aspect",
+      "sort_order": 0,
+      "sections": {
+        "Ptolemy (Tetrabiblos)": "[Ptolemy, Tetrabiblos, c. 150 CE · Ashmand tr. 1822] Ptolemy does NOT list the conjunction among the aspects proper: his chapter treats \"only of parts of the zodiac configurated with each other,\" and \"it was not possible for Ptolemy to conceive how any part could be configurated with itself\" (Ashmand's editorial note, answering Whalley's surprise at the omission). Yet its efficacy is \"frequently adverted to in subsequent chapters\": planets in conjunction unite their powers, whether for good or ill — malefics conjoined magnify each other's harm. (Quotes verbatim from the Ashmand 1822 text and apparatus as verified in grammars/tetrabiblos-ashmand; confidence: high.)",
+        "Lilly (1647)": "[William Lilly, Christian Astrology, 1647] Lilly counts the bodily (corporal) conjunction — two planets in the same degree of the same sign, 'partill' when exact — as the most immediate of unions, though like Ptolemy he treats it as a distinct thing from the aspects by which signs behold one another. Its promise is neither good nor ill in itself: it takes its whole character from the planets conjoined — benefics united signify concord and assistance, malefics united signify mischief doubled. (Paraphrase — this session could not verify Lilly's exact wording on the conjunction from a primary or secondary reproduction; confidence: low.)",
+        "Canonical": "Fusion. Two principles occupy one point and act as a single, intensified force — the strongest of all configurations, neutral in itself: it amplifies whatever it joins. Light: concentrated power, unified purpose. Shadow: the blind spot of energies you can no longer see apart."
+      },
+      "keywords": [
+        "conjunction",
+        "0 degrees",
+        "union",
+        "fusion",
+        "intensity",
+        "partill"
+      ],
+      "metadata": {
+        "aspect": "Conjunction",
+        "angle": 0,
+        "nature": "neutral",
+        "orb": 8,
+        "confidence": "high",
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD, Gutenberg #70850), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), paraphrased"
+      }
+    },
+    {
+      "id": "aspect-sextile",
+      "name": "Sextile",
+      "symbol": "⚹",
+      "category": "aspect",
+      "sort_order": 1,
+      "sections": {
+        "Ptolemy (Tetrabiblos)": "[Ptolemy, Tetrabiblos I, c. 150 CE · Ashmand tr. 1822] \"In all parts at the hexagonal distance from each other, containing between them two-thirds of a right angle, or two signs, or sixty degrees.\" \"The sextile is called harmonious, because it is constituted between signs of the same kind\" — \"being formed between either all feminine or all masculine signs.\" Harmony, for Ptolemy, is a fact of geometry and gender-of-sign, not of feeling. (Verbatim Ashmand, verified in grammars/tetrabiblos-ashmand; confidence: high.)",
+        "Lilly (1647)": "[William Lilly, Christian Astrology, 1647] The sextile and trine \"are arguments of Love, Unity and Friendship\" — the sextile the milder of the two, the trine \"more forcible.\" In Lilly's horary practice significators in sextile promise the matter may be brought to pass, though with some endeavour — a friendship that must still be acted on. (The quoted phrases are corroborated this session via a single secondary reproduction of the tradition's aspect doctrine, renaissanceastrology.com's Ptolemaic-aspects page; confidence: ○. The horary gloss is paraphrase.)",
+        "Canonical": "Opportunity. Sixty degrees apart, in compatible elements — a door held open that still asks you to walk through it. Light: cooperation, communication between energies, easy exchange. Shadow: talents left idle because nothing forces them; the missed opening."
+      },
+      "keywords": [
+        "sextile",
+        "60 degrees",
+        "hexagonal",
+        "opportunity",
+        "friendship",
+        "harmonious"
+      ],
+      "metadata": {
+        "aspect": "Sextile",
+        "angle": 60,
+        "nature": "soft",
+        "orb": 6,
+        "confidence": "medium",
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrases via secondary reproduction"
+      }
+    },
+    {
+      "id": "aspect-square",
+      "name": "Square",
+      "symbol": "□",
+      "category": "aspect",
+      "sort_order": 2,
+      "sections": {
+        "Ptolemy (Tetrabiblos)": "[Ptolemy, Tetrabiblos I, c. 150 CE · Ashmand tr. 1822] \"In all parts at the quadrate distance from each other, containing between them exactly one right angle, or three signs, or ninety degrees.\" \"The opposition and quartile are considered to be discordant\" — \"because they are configurations made between signs not of the same kind, but of different natures and sexes.\" Discord, again, is structural: signs a square apart never share element or gender. (Verbatim Ashmand, verified in grammars/tetrabiblos-ashmand; confidence: high.)",
+        "Lilly (1647)": "[William Lilly, Christian Astrology, 1647] The quartile is \"an aspect of imperfect enmity\" — enmity, but not past mending: Lilly's horary tradition reads significators in square as a matter that may yet be effected, but only with labour, difficulty, and interruption, where the trine would have carried it easily. (The quoted phrase is corroborated this session via a single secondary reproduction, renaissanceastrology.com's Ptolemaic-aspects page; confidence: ○. The horary gloss is paraphrase.)",
+        "Canonical": "Friction that builds. Ninety degrees — two drives at cross purposes, neither able to ignore the other. The square is where the work of a life tends to concentrate. Light: motivation, breakthrough, strength earned through challenge. Shadow: chronic conflict re-enacted instead of worked."
+      },
+      "keywords": [
+        "square",
+        "quartile",
+        "90 degrees",
+        "challenge",
+        "friction",
+        "imperfect enmity"
+      ],
+      "metadata": {
+        "aspect": "Square",
+        "angle": 90,
+        "nature": "hard",
+        "orb": 7,
+        "confidence": "medium",
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrase via secondary reproduction"
+      }
+    },
+    {
+      "id": "aspect-trine",
+      "name": "Trine",
+      "symbol": "△",
+      "category": "aspect",
+      "sort_order": 3,
+      "sections": {
+        "Ptolemy (Tetrabiblos)": "[Ptolemy, Tetrabiblos I, c. 150 CE · Ashmand tr. 1822] \"At the triangular distance from each other, containing between them one right angle and a third, or four signs, or a hundred and twenty degrees.\" \"The trine is called harmonious, because it is constituted between signs of the same kind\" — signs a trine apart share their element, the deepest sameness Ptolemy's scheme recognizes. (Verbatim Ashmand, verified in grammars/tetrabiblos-ashmand; confidence: high.)",
+        "Lilly (1647)": "[William Lilly, Christian Astrology, 1647] The sextile and trine \"are arguments of Love, Unity and Friendship,\" and the trine is the \"more forcible\" of the two — the aspect under which Lilly's horary tradition expects a matter to be brought to perfection easily, without the labour a square exacts. (The quoted phrases are corroborated this session via a single secondary reproduction, renaissanceastrology.com's Ptolemaic-aspects page; confidence: ○. The horary gloss is paraphrase.)",
+        "Canonical": "Flow. One hundred and twenty degrees, same element — gifts that arrive without being asked for. Light: natural talent, grace, creative ease. Shadow: ease that becomes inertia; the gift taken for granted because it never had to be earned."
+      },
+      "keywords": [
+        "trine",
+        "120 degrees",
+        "triangular",
+        "harmony",
+        "flow",
+        "same element"
+      ],
+      "metadata": {
+        "aspect": "Trine",
+        "angle": 120,
+        "nature": "soft",
+        "orb": 8,
+        "confidence": "medium",
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrases via secondary reproduction"
+      }
+    },
+    {
+      "id": "aspect-opposition",
+      "name": "Opposition",
+      "symbol": "☍",
+      "category": "aspect",
+      "sort_order": 4,
+      "sections": {
+        "Ptolemy (Tetrabiblos)": "[Ptolemy, Tetrabiblos I, c. 150 CE · Ashmand tr. 1822] \"This mutual configuration attaches to all parts diametrically distant from each other, containing between them two right angles, or six signs, or a hundred and eighty degrees\" — the one distance so self-evident that it \"requires no further explanation.\" With the square, \"the opposition and quartile are considered to be discordant,\" being made between signs of different natures and sexes. (Verbatim Ashmand, verified in grammars/tetrabiblos-ashmand; confidence: high.)",
+        "Lilly (1647)": "[William Lilly, Christian Astrology, 1647] The opposition is \"an aspect or argument of perfect hatred\" — the tradition's strongest word for a configuration. In Lilly's horary practice a matter perfected under an opposition is expected to end in strife, repentance, or a bargain both parties regret: completion without concord. (The quoted phrase is corroborated this session via a single secondary reproduction, renaissanceastrology.com's Ptolemaic-aspects page; confidence: ○. The horary gloss is paraphrase.)",
+        "Canonical": "Polarity. One hundred and eighty degrees — the axis of self and other, where what you disown looks back at you. Light: awareness through contrast, balance, the mirror of partnership. Shadow: projection; the seesaw between extremes that never integrates."
+      },
+      "keywords": [
+        "opposition",
+        "180 degrees",
+        "polarity",
+        "diametrical",
+        "perfect hatred",
+        "awareness"
+      ],
+      "metadata": {
+        "aspect": "Opposition",
+        "angle": 180,
+        "nature": "hard",
+        "orb": 8,
+        "confidence": "medium",
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrase via secondary reproduction"
+      }
+    }
+  ],
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Claudius Ptolemy, Tetrabiblos, trans. J. M. Ashmand (1822)",
+        "role": "source text (public domain) — quotes reused verbatim from grammars/tetrabiblos-ashmand in this repo, where they were verified against the Gutenberg #70850 text",
+        "link": "https://www.gutenberg.org/ebooks/70850"
+      },
+      {
+        "name": "William Lilly, Christian Astrology (1647)",
+        "role": "source text (public domain) — aspect phrases corroborated this session only via secondary reproductions (network access to primary scans was blocked); each quote's confidence is marked in its item",
+        "link": "https://archive.org/details/christian-astrology-1647"
+      },
+      {
+        "name": "PlayfulProcess",
+        "role": "compiled as a recursive.eco grammar for The Recursive Astrology, Jul 2026; Canonical sections are original synthesis in the register of grammars/western-astrology-canonical (CC-BY-SA)"
+      }
+    ]
+  },
+  "cover_image_credit": {
+    "title": "Figure showing how the cusps of the several signs regard each other by aspect",
+    "creator": "Engraver unknown; Johann Herwagen (Hervagius), printer",
+    "date": "1533",
+    "source": "The 1533 Hervagius edition of Ptolemy's *Tetrabiblos*, Basel (Latin of Plato of Tivoli)",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Aspects-ptolemy-tetrabiblos-1533_Hervagius.png",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Printed 1533; Commons states public domain (PD-old)",
+    "verified": "2026-07-26"
+  }
+}

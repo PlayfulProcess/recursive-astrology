@@ -1,0 +1,904 @@
+{
+  "name": "William Lilly's Christian Astrology",
+  "description": "The seven classical planets and the twelve zodiac signs as William Lilly (1602–1681) describes them in Christian Astrology (1647), the most influential English-language astrology text of the Renaissance/early-modern court-and-university tradition, and the single book most responsible for the survival of horary and natal technique into the modern revival. Each item carries a short excerpt or, where only a paraphrase could be safely corroborated (marked ○), a summary drawn from Lilly's original 1647 text where the archaic spelling could be confirmed via a source reproducing it verbatim, and from Zadkiel's 1852 abridgment (An Introduction to Astrology, itself public domain, hosted at sacred-texts.com) where that is what this session's search could confirm — each quote is labeled with which. Under this library's creed: a historical voice speaking in its own vivid, moralizing, occasionally superstitious terms, presented faithfully — never as prediction or command, and never smoothed into modern psychological language it doesn't use. See grammars/historiographies-of-astrology (item view-medieval-renaissance-court) and research/views/medieval-renaissance-court.md for the fuller historiographical dossier; this grammar is the primary-source voice library that dossier points toward, in the spirit of grammars/tetrabiblos-ashmand and grammars/alan-leo.",
+  "grammar_type": "astrology",
+  "provenance": "record",
+  "dating": {
+    "year": 1647,
+    "label": "1647 — William Lilly, Christian Astrology (first edition)",
+    "confidence": "high",
+    "basis": "Anchored to the title-page date of the first edition, carried per item as metadata.source.year; the per-item source blocks name two independently scanned 1647-edition copies on archive.org that were cross-checked when this grammar was compiled. Where a quotation rests instead on Zadkiel's 1852 abridgment, the item says so and its confidence is lowered."
+  },
+  "attribution": {
+    "source_name": "Christian Astrology",
+    "source_author": "William Lilly",
+    "source_year": "1647",
+    "license": "Public Domain",
+    "source_url": "https://archive.org/details/b30338724",
+    "edition_note": "1647 first edition. The Wellcome Library scan linked above was cross-checked against a second independently scanned 1647-edition copy (https://archive.org/details/ChristianAstrologyByWilliamLilly); the modern re-typed Houlding/Ascella edition was NOT quoted from. Where a passage rests instead on Zadkiel's 1852 abridgment, the item says so and its confidence is lowered — see each item's metadata.source."
+  },
+  "author": "William Lilly (1602-1681)",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wenceslas_Hollar_-_William_Lilly.jpg?width=800",
+  "tags": [
+    "astrology",
+    "renaissance",
+    "horary",
+    "william-lilly",
+    "history",
+    "recursive-eco"
+  ],
+  "items": [
+    {
+      "id": "lilly-saturn",
+      "name": "Saturn",
+      "category": "planet",
+      "sections": {
+        "What Lilly reads": "Saturn as slow, pale, and socially low — the planet of age, poverty, and solitary labour rather than the 'great teacher' softening later 20th-century astrology gives him (see grammars/western-astrology-canonical). Lilly's Saturn is unambiguously the era's grimmest planet, not yet rehabilitated.",
+        "Lilly's own words": "\"Saturn is the supreamest or highest of all the Planets... he is not very bright or glorious, but is of a Pale, Wan, or Leaden, Ashy colour, and slow in motion.\" On who he signifies: \"In general Saturn signifies Husbandmen, Clowns, Beggars, Day-labourers, Old men, Fathers, Grand-fathers, Monks, Jesuits, Sectarists...\" among many other lowly and solitary trades. (Quoted from Christian Astrology, 1647, Book I, retaining Lilly's own spelling; confidence: ○ — corroborated across multiple secondary reproductions of the 1647 text this session, not independently re-fetched from a primary scan.)",
+        "The record — William Lilly (1647)": "The same 1647 chapter continues past the passage already quoted above, into Lilly's fuller character portrait — his historical reading of the planet, not a verdict on anyone born under it:\n\n“He is called usually Saturn, but in some Authors Chronos, …, Falcifer” (the middle epithet is illegible — rendered differently and unreliably in both scans consulted this session, so left as an ellipsis rather than guessed). “He is a Diurnal Planet, Cold and Dry (being far removed from the heat of the Sun) and moist Vapours, Melancholic, Earthly, Masculine, the greater Infortune, author of Solitariness, Malevolent, &c. Then he is profound in Imagination, in his Acts severe, in words reserved, in speaking and giving very spare, in labour… studious and solicitous, in all manner of actions austere.” Of Saturn ill-dignified: “Then he is envious, covetous, jealous and mistrustful, timorous, sordid, outwardly dissembling, sluggish, suspicious, stubborn, a contemner of women, a close liar, malicious, murmuring, never contented, ever repining.” And of his supposed corporature: “…his Complexion pale, swarthish or muddy, his Eyes little and black, looking downward, a broad Forehead, black or sad Hair, and it hard or rugged, great Ears, hanging lowering Eyebrows, thick Lips and Nose, a rare or thin Beard, a lumpish, unpleasant Countenance.” (Christian Astrology, 1647, Book I, 'Of the Planet Saturn, and his Signification.')"
+      },
+      "keywords": [
+        "saturn",
+        "lilly",
+        "pale",
+        "leaden",
+        "husbandmen",
+        "old-age"
+      ],
+      "metadata": {
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, 'Of Saturn'",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Both are page-scan OCR of the 1647 first edition, not the modern re-typed Houlding/Ascella edition hosted at skyscript.co.uk (which is explicitly marked not public domain and was not quoted from). Long-s (ſ→s) and period ligatures silently modernized by this session's editor; any word illegible or inconsistent across both scans is marked … rather than guessed — see the Saturn item for the one example (a Saturn epithet between 'Chronos' and 'Falcifer') and the Jupiter item for a partially-legible epithet ('Zeus') reconstructed only because both independent OCR runs converged on it.",
+          "chapter": "Book I, 'Of the Planet Saturn, and his Signification.'"
+        }
+      },
+      "section_labels": [
+        "What Lilly reads",
+        "Lilly's own words"
+      ],
+      "number": 1
+    },
+    {
+      "id": "lilly-jupiter",
+      "name": "Jupiter",
+      "category": "planet",
+      "sections": {
+        "What Lilly reads": "This is the era's most unreserved character portrait — Jupiter as moral excellence itself, virtue catalogued almost as a checklist. Compare Ptolemy's cooler, physics-of-temperature Jupiter (grammars/tetrabiblos-ashmand) and Alan Leo's spiritualized Jupiter (grammars/alan-leo): three centuries apart, three quite different registers for 'the benefic.'",
+        "Lilly's own words": "Of the well-placed Jupiterian person: \"Magnanimous, Faithfull, Bashfull, Aspiring in an honourable way at high matters, in all his actions a Lover of fair Dealing, desiring to benefit all men, doing Glorious things, Honourable and Religious, of sweet and affable Conversation, wonderfully indulgent to his Wife and Children, reverencing Aged men, a great Reliever of the Poor, full of Charity and Godlinesse, Liberal, hating all Sordid actions, Just, Wise, Prudent, Thankfull, Vertuous.\" (Quoted from Christian Astrology, 1647, Book I, retaining Lilly's own spelling; confidence: medium — reproduced consistently across multiple secondary sources this session as verbatim 1647 text.)",
+        "The record — William Lilly (1647)": "Lilly opens the Jupiter chapter with the planet's classical names, then reaches, later in the same chapter, for the mirror-image of the virtuous Jupiterian already quoted above — his own historical judgment of the planet gone wrong, offered here as his voice, not a reading of the reader:\n\n“He is placed next to Saturn (amongst the Ancients) you shall sometimes find him called Zeus, or Phaeton: he is the greatest in appearance to our eyes of all the Planets (the Sun and Moon excepted); in his Colour he is bright, clear, and of an Azure colour.” ('Zeus' reconstructed cautiously: both scans garble the word differently but converge on the same opening letters; 'Phaeton' is clearly legible in both.) Of Jupiter unfortunate: “Then he wastes his Patrimony, suffers every one to cozen him, is Hypocritically Religious, Tenacious, and stiff in maintaining false Tenets in Religion; he is Ignorant, Careless, nothing Delightful in the love of his Friends; of a gross, dull Capacity, Schismatical, abasing himself in all Companies, crouching and stooping where no necessity is.” And on his supposed corporature: “He signifies an upright, straight and tall Stature; brown, ruddy and lovely Complexion; of an oval or long Visage, and it full or fleshy; high Forehead; large gray Eyes; his Hair soft and a kind of auburn brown; much Beard; a large, deep Belly.” (Christian Astrology, 1647, Book I, 'Of the Planet Jupiter, and his Signification.')"
+      },
+      "keywords": [
+        "jupiter",
+        "lilly",
+        "magnanimous",
+        "charity",
+        "virtuous",
+        "benefic"
+      ],
+      "metadata": {
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, 'Of Jupiter and his significations'",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Book I, 'Of the Planet Jupiter, and his Signification.'"
+        }
+      },
+      "section_labels": [
+        "What Lilly reads",
+        "Lilly's own words"
+      ],
+      "number": 2
+    },
+    {
+      "id": "lilly-mars",
+      "name": "Mars",
+      "category": "planet",
+      "sections": {
+        "What Lilly reads": "Mars-as-choler is the era's own humoral medicine speaking through the planet: hot, dry, red, quick to anger, prone to iron-wounds and inflammation. This is a physiological Mars as much as a psychological one, in a way pre-modern medicine and astrology genuinely shared one vocabulary for.",
+        "Lilly's own words": "\"Mars is a masculine, nocturnal planet, in nature hot and dry, choleric and fiery; the lesser infortune, author of quarrels, strifes, and contentions.\" Physically: \"martialists generally are of middle stature, their bodies strong, their bones large, rather lean than fat; their complexion of a brown, ruddy colour, their visage round, their hair red or sandy... sharp, hazel, piercing eyes; a bold confident countenance.\" On sickness: \"Mars causes all hurts by iron, the shingles, and such other diseases as arise by too much choler, anger, or passion.\" (Quoted from Christian Astrology, 1647, Book I; confidence: medium — corroborated across multiple secondary reproductions this session.)",
+        "The record — William Lilly (1647)": "Past the temperament and physiology already quoted above, Lilly's chapter turns to Mars in two further registers — the martial virtue and the martial vice, both his own era's reading of the same hot, dry nature:\n\n“In feats of War and Courage invincible, scorning any should exceed him, subject to no Reason, Bold, Confident, Immovable, Contentious, challenging all Honour to themselves. Valiant, lovers of War and things pertaining thereunto, hazarding himself to all Perils, willingly will obey no body, or submit to any.” Then, of Mars ill-dignified: “Then he is a Prattler without modesty or honesty, a lover of Slaughter and Quarrels, Murder, Thievery, a promoter of Sedition, Frays and Commotions, an Highway-Thief, as wavering as the Wind, a Traitor, of turbulent Spirit, Perjured, Obscene, Rash, Inhumane, neither fearing God or caring for man, Unthankful, Treacherous, Oppressors, Ravenous, Cheaters, Furious, Violent.” (Christian Astrology, 1647, Book I, 'Of the Planet Mars, and his Several Significations.')"
+      },
+      "keywords": [
+        "mars",
+        "lilly",
+        "choleric",
+        "ruddy",
+        "infortune",
+        "humoral"
+      ],
+      "metadata": {
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, 'Of the Planet Mars, and his Several Significations'",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Book I, 'Of the Planet Mars, and his Several Significations.'"
+        }
+      },
+      "section_labels": [
+        "What Lilly reads",
+        "Lilly's own words"
+      ],
+      "number": 3
+    },
+    {
+      "id": "lilly-sun",
+      "name": "The Sun",
+      "category": "planet",
+      "sections": {
+        "What Lilly reads": "The Sun's significations here are an unbroken ladder of rank — king down through every grade of gentleman and courtier — with no separate psychological or emotional register at all. In this text the Sun IS social position; nothing about 'identity' or 'ego' in the modern sense the tropical-canonical library uses (compare grammars/western-astrology-canonical).",
+        "Lilly's own words": "\"He signifies kings, princes, emperors, &c.; dukes, marquisses, earls, barons, lieutenants, deputy lieutenants of counties, magistrates, gentlemen in general, courtiers, desirers of honour and preferment.\" (From Zadkiel's 1852 abridgment, An Introduction to Astrology, Chapter VIII, 'Of the Sun, His General and Particular Significations' — a public-domain modernized-spelling reprint tradition of Lilly's material, not a claim that these are Lilly's exact 1647 words; confidence: ○.)",
+        "The record — William Lilly (1647)": "The chapter already quoted above for the Sun's ranks-and-titles significations continues into character — Lilly's own two faces of the 'Solar man,' offered as a historical reading, not a claim on anyone born under the Sun:\n\n“Then the Solar man is Arrogant and Proud, disdaining all men, cracking of his Pedigree, he is Pur-blind in Sight and Judgment, restless, troublesome, domineering, a mere vapour, expensive, foolish, endued with no gravity in words, or soberness in Actions, a Spend-thrift, wasting his Patrimony, and hanging on other men's charity, yet thinks all men are bound to him, because a Gentleman born.” Of his supposed corporature and well-dignified manners: “Usually the Sun presents a man of a good, large and strong Corporature, a yellow, saffron Complexion, a round, large Forehead; goggle Eyes or large, sharp and piercing; a Body strong and well composed, not so beautiful as lovely, full of heat, their hair yellowish, and therefore quickly bald… in conditions they are very bountiful, honest, sincere, well-minded, of great and large Heart, High-minded, of healthful Constitution, very humane, yet sufficiently Spirited, not Loquacious.” (Christian Astrology, 1647, Book I, 'Of the Sun, His General and Particular Significations.')"
+      },
+      "keywords": [
+        "sun",
+        "lilly",
+        "kings",
+        "rank",
+        "honour",
+        "courtiers"
+      ],
+      "metadata": {
+        "school": "renaissance-court-astrology",
+        "_source": "Two sources, one per quoted section: 'Lilly's own words' = Zadkiel (ed.), An Introduction to Astrology (1852 abridgment of Lilly), Ch. VIII, via sacred-texts.com/astro/aia/aia11.htm — modernized-spelling reprint tradition, not Lilly's exact 1647 wording; 'The record' = Christian Astrology (1647), Book I, 'Of the Sun, His General and Particular Significations', from the 1647-edition archive.org scans named in metadata.source.",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "low",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Book I, 'Of the Sun, His General and Particular Significations.'"
+        }
+      },
+      "section_labels": [
+        "What Lilly reads",
+        "Lilly's own words"
+      ],
+      "number": 4
+    },
+    {
+      "id": "lilly-venus",
+      "name": "Venus",
+      "category": "planet",
+      "sections": {
+        "What Lilly reads": "Venus's trade-list — musicians, silk-men, painters, jewellers, wives, choristers — reads almost as an occupational census of beauty-and-pleasure work in 17th-century London, a very concrete, tradesman's-eye-view Venus quite unlike the abstract 'love and harmony' of later psychological astrology (compare grammars/western-astrology-canonical).",
+        "Lilly's own words": "A well-placed Venerian person is \"a pretty, compleat, handsome Man or Woman\" (if Oriental) or, if Occidental, of shorter stature yet \"very decent and comely in Shape and Form, wel liked of all\" — with \"a stedfast eye, and full of amorous enticements.\" Venus governs \"Musitions, Gamesters, Silk-men, Mercers, Linnen-Drapers, Painters, Jewellers, Players, Lapidaries, Embroiderers, Women-tailors, Wives, Mothers, Virgins, Choristers, Fidlers, Pipers.\" Her diseases are \"principally in the Matrix and members of Generation... venereal diseases... Priapisme, impotency in generation, Hernias and the Diabetes.\" (Quoted from Christian Astrology, 1647, Book I, retaining Lilly's own spelling, with the 'amorous enticements' phrase corroborated via the 1852 Zadkiel abridgment; confidence: ○.)",
+        "The record — William Lilly (1647)": "Lilly's Venus chapter, not yet drawn on elsewhere in this item, gives its own two-sided moral portrait — pleasant sociability against its ill-dignified excess, presented here as the era's reading, not a script:\n\n“She is a Feminine Planet, temperately Cold and Moist, Nocturnal, the lesser Fortune, author of Mirth and Jollity… She signifies a quiet man, not given to Law, Quarrel or Wrangling; not Vicious, Pleasant, Neat and Spruce, loving Mirth in his words and actions, cleanly in Apparel… prone to Venery, often entangled in Love-matters, Zealous in their affections, Musical, delighting in Baths, and all honest merry Meetings, or Masks and Stage-plays… a right virtuous Man or Woman, oft had in some Jealousy, yet no cause for it.” Then, ill-dignified: “Then he is Riotous, Expensive, wholly given to Looseness and Lewd companies of Women, nothing regarding his Reputation, coveting unlawful Beds, Incestuous, an Adulterer… a mere Skip-jack, of no Faith, no Repute, no Credit; spending his Means in Ale-houses, Taverns, and amongst Scandalous, Loose people; a mere Lazy companion, nothing careful of the things of this Life, or any thing Religious; a mere Atheist and Natural man.” (Christian Astrology, 1647, Book I, 'Of the Planet Venus, and her Several Significations.')"
+      },
+      "keywords": [
+        "venus",
+        "lilly",
+        "amorous",
+        "musicians",
+        "beauty",
+        "generation"
+      ],
+      "metadata": {
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, 'Of the Planet Venus: Her Severall Significations and Nature'",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Book I, 'Of the Planet Venus, and her Several Significations.'"
+        }
+      },
+      "section_labels": [
+        "What Lilly reads",
+        "Lilly's own words"
+      ],
+      "number": 5
+    },
+    {
+      "id": "lilly-mercury",
+      "name": "Mercury",
+      "category": "planet",
+      "sections": {
+        "What Lilly reads": "'Author of subtilty, tricks, devices, perjury' is a considerably darker Mercury than the Hellenistic 'common, convertible' planet (grammars/tetrabiblos-ashmand) or the Vedic Budha's speech-and-cleverness portfolio (grammars/jyotisa-brhat-jataka) — Lilly's 17th-century English Mercury leans hard toward the trickster and the liar, a moralizing gloss the other two traditions' texts don't emphasize as strongly.",
+        "Lilly's own words": "Mercury \"rules the animal spirit: he is author of subtilty, tricks, devices, perjury, &c.\" — his nature convertible, taking on the quality of whatever planet he associates with, fittingly for a planet Lilly elsewhere treats as neither wholly masculine nor feminine, neither fully fortunate nor unfortunate. (Quoted from Christian Astrology, 1647, Book I; confidence: ○.)",
+        "The record — William Lilly (1647)": "Lilly's Mercury opens with the planet's classical names and its odd genderlessness, then gives its own well- and ill-dignified pair, in his own moralizing register:\n\n“It is called Hermes, Stilbon, Cyllenius, Archas. Mercury is the least of all the Planets… We may not call him either Masculine or Feminine, for he is either the one or other as joined to any Planet: if in conjunction with a Masculine Planet, he becomes Masculine; if with a Feminine then Feminine; but of his own nature he is cold and dry, and therefore Melancholy; with the good he is good, with the ill Planets ill.” Being well dignified: “he represents a man of a subtle and politic brain, intellect, and cogitation; an excellent disputant or Logician, arguing with learning and discretion, and using much eloquence in his speech, a searcher into all kinds of Mysteries, Learning, sharp and witty, learning almost any thing without a Teacher.” Ill-dignified: “A troublesome wit… his tongue and Pen against every man… a great liar, boaster, prattler, busybody, false, a tale-carrier, given to wicked Arts, as Necromancy, and such like ungodly knowledges.” (Christian Astrology, 1647, Book I, 'Of Mercury, His Signification, Nature and Property.')"
+      },
+      "keywords": [
+        "mercury",
+        "lilly",
+        "subtlety",
+        "trickery",
+        "convertible",
+        "animal-spirit"
+      ],
+      "metadata": {
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, 'Of Mercury: His Signification, Nature and Property'",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "low",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Book I, 'Of Mercury, His Signification, Nature and Property.'"
+        }
+      },
+      "section_labels": [
+        "What Lilly reads",
+        "Lilly's own words"
+      ],
+      "number": 6
+    },
+    {
+      "id": "lilly-moon",
+      "name": "The Moon",
+      "category": "planet",
+      "sections": {
+        "What Lilly reads": "This is a startlingly unflattering physical portrait next to the gentler, nurturing Moon of later astrology (compare grammars/western-astrology-canonical) — swelling, watery-eyed, boar-toothed. Lilly's Moon-native description reads more like a period medical case-note on phlegmatic humoral excess than a psychological temperament sketch; the vividness is the point of reading him at all.",
+        "Lilly's own words": "A Moon-dominant person appears \"in a great and full body, soft and phlegmatic, of colour like a black obscure cloud, having a swelling countenance, with eyes red and full of water, a bald head, and teeth like a wilde boar.\" (Quoted from Christian Astrology, 1647, Book I; confidence: ○ — corroborated across secondary reproductions this session.)",
+        "The record — William Lilly (1647)": "The Moon chapter opens with her ancient names before turning to manners — Lilly's own reading of the Moon's changeable temper, well- and ill-placed:\n\n“The Moon we find called by the Ancients, Lucina, Cynthia, Diana, Phoebe, Latona, Noctiluca, Proserpina; she is the nearest to the Earth of all the Planets… She is a Feminine, Nocturnal Planet, Cold, Moist and Phlegmatic.” Well placed: “She signifieth one of composed Manners, a soft, tender creature, a Lover of all honest and ingenious Sciences, a Searcher of and Delighter in Novelties, naturally prone to flit and shift her Habitation, unsteadfast, wholly caring for the present Times, Timorous, Prodigal, and easily Frighted, however loving Peace, and to live free from the cares of this Life.” Ill placed: “A mere Vagabond, idle Person, hating Labour, a Drunkard, a Sot, one of no Spirit or Forecast, delighting to live beggarly and carelessly, one content in no condition of Life, either good or ill.” (Christian Astrology, 1647, Book I, 'Of the Moon, Her Properties and Significations.')"
+      },
+      "keywords": [
+        "moon",
+        "lilly",
+        "phlegmatic",
+        "swelling",
+        "watery-eyes",
+        "humoral"
+      ],
+      "metadata": {
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, 'Of the Moon: Her Nature and Signification'",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Book I, 'Of the Moon, Her Properties and Significations.'"
+        }
+      },
+      "section_labels": [
+        "What Lilly reads",
+        "Lilly's own words"
+      ],
+      "number": 7
+    },
+    {
+      "id": "sign-aries",
+      "name": "Aries",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Aries is a Masculine, Diurnall Sign, moveable, Cardinall, Equinoctiall; in nature fiery, hot and dry, cholerick, bestial, luxurious, intemperate and violent: the diurnall house of Mars of the Fiery Triplicity, and of the East.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Aries; confidence: medium — identical wording corroborated across two independent secondary reproductions this session, chronosspeaks.com's Lilly sign digest and renaissanceastrology.com's Aries page.)",
+        "What this lens reads": "Lilly's Aries is a humoral-physical formula — masculine, hot, dry, choleric, prone to violence and excess — not yet the modern 'Pioneer' light/shadow archetype (compare grammars/western-astrology-canonical); virtue and vice both sit inside the same hot, dry temperament rather than a separate moral register.",
+        "The record — William Lilly (1647)": "The same chapter that gives Aries's opening formula (quoted above) continues into the concrete grid horary astrology reads a chart through — disease, place, and body, offered here as Lilly's period taxonomy, not a diagnosis:\n\n“All Pushes, Wheals, Pimples in the Face, small Pocks, sore Lips, Polypus… Ringworms, Falling-sickness, Apoplexies, Megrims, Tooth-ache, Head-ache and Baldness.” Of places: “Where Sheep and small Cattle do feed or use to be, sandy and hilly Grounds, a place of refuge for Thieves… a Stable for small Beasts, Lands newly taken in, or newly plowed.” Of the body it signifies: “A dry Body, not exceeding in height, lean or spare, but of many Bones, and the party in his Limbs strong; the Visage long… black Eyebrows, a long Neck, thick Shoulders, the Complexion dusky brown or swarthish.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "aries",
+        "lilly",
+        "cardinal",
+        "fiery",
+        "choleric",
+        "bestial",
+        "mars",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Aries",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Aries (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Aries, heading the treatment of April",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_III_Aries.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 8,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_III_Aries.jpg?width=800"
+    },
+    {
+      "id": "sign-taurus",
+      "name": "Taurus",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Taurus is an Earthly, Cold, Dry, Melancholy, Feminine, Nocturnal, Fixed, Domestical or Beastial Sign, of the Earthly Triplicity, and South, the Night-house of Venus.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Taurus; confidence: medium — corroborated across chronosspeaks.com's Lilly sign digest and a second independent secondary reproduction this session.)",
+        "What this lens reads": "Lilly's Taurus is 'melancholy' and 'domestical/beastial' — a fixed-earth, cold-and-dry temperament rooted in the home and the beast-yard, not the sensuous 'Builder' of pleasure and stability that the modern light/shadow grammar gives it (compare grammars/western-astrology-canonical); this supersedes the app's earlier generic AI-drafted 'Taurus' item, which had no primary-source grounding.",
+        "The record — William Lilly (1647)": "Past the elemental formula already quoted for Taurus, the same chapter gives its diseases, places and bodily description:\n\n“The King's Evil, sore Throats, Wens, Fluxes of Rheums falling into the Throat, Quinsies, Imposthumes in those parts.” Of places: “Stables where Horses are, low Houses, Houses where the implements of Cattle are laid up, Pasture or Feeding grounds where no Houses are near.” Of the body: “It presents one of a short, but of a full, strong and well-set stature, a broad Forehead, great Eyes, big Face; large, strong Shoulders; great mouth and thick Lips; gross Hands; black rugged Hair.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "taurus",
+        "lilly",
+        "earthly",
+        "melancholy",
+        "fixed",
+        "venus",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Taurus",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Taurus (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Taurus, heading the treatment of May",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_IV_Taurus.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 9,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_IV_Taurus.jpg?width=800"
+    },
+    {
+      "id": "sign-gemini",
+      "name": "Gemini",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Gemini is an aerial, hot, moyst, sanguine, Diurnal, common or double-bodied human Sign; the diurnall house of Mercury of the aery triplicity, Western, Masculine.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Gemini, with two OCR-mangled words in the secondary mirrors — 'dounle' and 'Mascu1ine' — silently corrected to 'double' and 'Masculine' for legibility; confidence: medium — the same wording surfaced across two independent reproductions this session.)",
+        "What this lens reads": "Lilly's Gemini is a 'common or double-bodied human Sign' under Mercury — the mutable, airy, sanguine formula that later psychological astrology keeps almost unchanged as 'the Messenger' (compare grammars/western-astrology-canonical), one of the closer continuities across this library rather than a sharp break.",
+        "The record — William Lilly (1647)": "Continuing past Gemini's opening formula already quoted above, into diseases, places and body:\n\n“He signifies all Diseases or infirmities in the Arms, Shoulders, Hands, corrupted Blood, Windiness in the Veins, distempered Fancies.” Of places: “Wainscot Rooms, Plastering and Walls of Houses, the Halls, or where Play is used, Hills and Mountains, Barns, Storehouses for Corn, Coffers, Chests, High Places.” Of the body: “An upright, tall, straight Body either in Man or Woman, the Complexion sanguine, not clear, but obscure and dark… long Arms, but many times the Hands and Feet short and very fleshy; a dark Hair, almost black; a strong, active Body, a wood-piercing hazel Eye.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "gemini",
+        "lilly",
+        "aerial",
+        "sanguine",
+        "common",
+        "mercury",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Gemini",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Gemini (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Gemini, heading the treatment of June",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_IV_Gemini.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 10,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_IV_Gemini.jpg?width=800"
+    },
+    {
+      "id": "sign-cancer",
+      "name": "Cancer",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Cancer is the onely house of the Moon, and is the first Sign of the Watry or Northern Triplicity, is Watry, Cold, Moyst, Flegmatick, Feminine, Nocturnal, Moveable, a Solstice Sign mute and slow of Voyce, Fruitful, Northern.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Cancer; confidence: medium — identical wording corroborated across two independent secondary reproductions this session.)",
+        "What this lens reads": "'Mute and slow of Voyce' and 'Flegmatick' is Lilly's Cancer speaking the era's humoral medicine as much as its astrology, a fruitful but wordless watery sign quite unlike the nurturing, emotionally expressive Cancer of later astrology (compare grammars/western-astrology-canonical) and Jyotiṣa's own watery, Moon-ruled Karkaṭa (grammars/jyotisa-brhat-jataka).",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Cancer, the chapter turns to disease, place and body:\n\n“It signifies Imperfections all over, or in the Breast, Stomach and Paps, weak Digestion, cold Stomach, Ptisick, salt Phlegms, rotten Coughs, dropsical Humours, Imposthumations in the Stomach, Cancers which ever are in the Breast.” Of places: “The Sea, great Rivers, Navigable Waters; but in the Inland Countries it notes places near Rivers, Brooks, Springs, Wells, Cellars in Houses, Wash-houses, Marsh grounds, Ditches with Rushes, Sedges, Sea banks, Trenches, Cisterns.” Of the body: “Generally a low and small stature, the upper parts of more bigness than the lower, a round Visage; sickly, pale, a whitely Complexion, the Hair a sad brown, little Eyes.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "cancer",
+        "lilly",
+        "watery",
+        "phlegmatic",
+        "moon",
+        "solstice",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Cancer",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Cancer (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Cancer, heading the treatment of July",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_V_Cancer.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 11,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_V_Cancer.jpg?width=800"
+    },
+    {
+      "id": "sign-leo",
+      "name": "Leo",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Leo is the onely house of the Sun, by nature, Fiery, Hot, Dry, Cholerick, Diurnal, Commanding, Bestial, Barren, of the East and Fiery Triplicity, Masculine.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Leo; confidence: medium — identical wording corroborated across two independent secondary reproductions this session.)",
+        "What this lens reads": "'Commanding, Bestial, Barren' packs Leo's whole 17th-century meaning into one adjective string — rulership and animality in the same breath, and barren rather than fertile — a much harsher formula than the warm, generous 'Sovereign' Leo of the modern light/shadow grammar (compare grammars/western-astrology-canonical).",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Leo, the chapter gives its diseases, places and bodily description — the King of Beasts read through fevers and fortresses:\n\n“All sicknesses in the ribs and sides, as Pleurisies, Convulsions, pains in the back, trembling or passion of the heart, violent burning Fevers, all weakness or diseases in the heart, sore eyes… the Plague, the Pestilence, the yellow Jaundice.” Of places: “A place where wild Beasts frequent, Woods, Forests, Desert places, steep rocky places, unaccessible places, King's Palaces, Castles, Forts, Parks, in houses where fire is kept, near a Chimney.” Of the body: “Great round Head, big Eyes staring or flaring out, or goggle eyes, quick-sighted, a tall and large body… broad Shoulders, narrow Sides, yellowish dark flaxen hair and it much curling or turning up, a fierce countenance, but ruddy, high sanguine complexion, strong, valiant and active.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "leo",
+        "lilly",
+        "fiery",
+        "commanding",
+        "bestial",
+        "barren",
+        "sun",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Leo",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Leo (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Leo, heading the treatment of August",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_V_Leo.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 12,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_V_Leo.jpg?width=800"
+    },
+    {
+      "id": "sign-virgo",
+      "name": "Virgo",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Virgo is an earthly, cold, melancholly, barren, feminine, nocturnal, Southern Sign; the house and exaltation of Mercury, of the earthly triplicity.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Virgo; confidence: medium — identical wording corroborated across two independent secondary reproductions this session.)",
+        "What this lens reads": "Lilly's Virgo is again marked 'barren' (as Leo is) — fertility/barrenness is a load-bearing category for him that modern astrology has almost entirely dropped in favour of psychological traits like discernment and service (compare grammars/western-astrology-canonical).",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Virgo, the chapter turns to place, disease and body — the sign read through the granary and the study rather than the harvest field:\n\n“It signifies a Study where Books are, a Closet, a Dairy-house, Corn-fields, Granaries, Malt-houses, Hay-ricks, or of Barley, Wheat or Pease, or a place where Cheese and Butter is preserved and stored up.” Of diseases: “The Worms, Wind, Colic, all Obstructions in the bowels… croaking of the Guts, infirmness in the Stones, any disease in the belly.” Of the body: “A slender body of mean height, but decently composed; a ruddy brown complexion, black hair, well-favoured or lovely, but no beautiful creature, a small shrill voice, all members inclining to brevity; a witty discreet soul, judicious and excellently well spoken, studious and given to History, whether Man or Woman.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "virgo",
+        "lilly",
+        "earthly",
+        "melancholy",
+        "barren",
+        "mercury",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Virgo",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Virgo (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Virgo, heading the treatment of September",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_VI_Virgo.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 13,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_VI_Virgo.jpg?width=800"
+    },
+    {
+      "id": "sign-libra",
+      "name": "Libra",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Libra is a Sign aeriall, hot and moyst, Sanguine, Masculine, Moveable, Equinoctiall, Cardinall, Humane, Diurnall, of the Aeriall Triplicity, and Western, the chief House of Venus.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Libra, with two OCR-mangled words in the secondary mirrors — 'Aerinall' and 'Diumnall' — silently corrected to 'Aeriall' and 'Diurnall' for legibility; confidence: medium — the same wording surfaced across two independent reproductions this session.)",
+        "What this lens reads": "Lilly's Libra is 'Humane' — one of only a few signs he calls out as specifically human-bodied and civilized — sitting under Venus as a cardinal air sign, a formula close enough to the modern 'Diplomat' (compare grammars/western-astrology-canonical) that Libra is one of the more stable signs across four centuries of this tradition.",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Libra, the chapter's disease, place and bodily description follow:\n\n“All Diseases, or the Stone or Gravel in the reins of the Back, Kidneys, heats and diseases in the Loins or Haunches, Imposthumes or Ulcers in the Reins, Kidneys or Bladder, weakness in the Back, corruption of Blood.” Of places: “In the Fields it represents ground near Wind-mills, or some straggling Barn or out-house, or Saw-pits, or where Coopers work or Wood is cut, sides of Hills, tops of Mountains… the upper rooms in Houses, Chambers, Garrets, one Chamber within another.” Of the body: “It personates a well-framed body, straight, tall and more subtle or slender than gross; a round, lovely and beautiful Visage, a pure sanguine colour… the Hair yellowish, smooth and long.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "libra",
+        "lilly",
+        "aerial",
+        "sanguine",
+        "cardinal",
+        "venus",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Libra",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Libra (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Libra, heading the treatment of October",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_VI_Libra.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 14,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_VI_Libra.jpg?width=800"
+    },
+    {
+      "id": "sign-scorpio",
+      "name": "Scorpio",
+      "category": "sign",
+      "sections": {
+        "In the text": "Summarized from Christian Astrology, 1647, Book I, the chapter on Scorpio: a cold, watery, nocturnal, phlegmatic, northern, feminine sign of the watery triplicity, called the house and joy of Mars. (Confidence: ○ — this phrase surfaced identically across two independent secondary sources this session, but it is noticeably shorter than the full elemental/quality/triplicity formula Lilly gives the other eleven signs, so it reads as a condensed paraphrase of the 1647 chapter opening rather than a full verbatim sentence; treated as summary, not direct quotation.)",
+        "What this lens reads": "Even in paraphrase, 'the house and joy of Mars' plus 'cold, watery... phlegmatic' gives a Scorpio defined by Mars's rulership and a wet, withdrawn humoral temperament — not yet the psychological 'intensity and transformation' register of later astrology (compare grammars/western-astrology-canonical).",
+        "The record — William Lilly (1647)": "The existing 'In the text' section above notes that Scorpio's opening line only surfaced this library as a paraphrase, not a verbatim quote. This session's own read of the primary 1647 page-scan finds the actual sentence, so it is recorded here in full, alongside the chapter's disease and bodily description that follow it:\n\n“It's a cold, watery, nocturnal, phlegmatic, feminine Sign, of the watery Triplicity, fixed and North, the house and joy of Mars; usually it doth represent subtle, deceitful men.” Of diseases: “Gravel, the Stone in the Secret parts, Bladder, Ruptures, Fistulas, or the Piles… Gonorrhoeas, Priapisms, all afflicting the Privy parts either in man or woman; defects in the Matrix.” Of the body: “A corpulent, strong, able Body, somewhat a broad or square Face, a dusky muddy Complexion, and sad, dark Hair, much and crisping; an hairy Body, somewhat bow-legged, short-necked, a squat, well-trussed Fellow.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "scorpio",
+        "lilly",
+        "watery",
+        "phlegmatic",
+        "mars",
+        "nocturnal",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Scorpio",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Scorpio (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "low",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Scorpio, heading the treatment of November",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_VII_Scorpio.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 15,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_VII_Scorpio.jpg?width=800"
+    },
+    {
+      "id": "sign-sagittarius",
+      "name": "Sagittarius",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Sagittarius is of the fiery triplicity, East, in nature fiery, hot, dry, Masculine, Cholericke, Diurnall, Common, by-corporall or double-bodied, the House and Joy of Jupiter.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Sagittarius; confidence: medium — the full formula surfaced via chronosspeaks.com's Lilly sign digest, and a second, separately worded search this session independently corroborated the constituent facts — fiery triplicity, masculine, diurnal, double-bodied, Jupiter's house — without reproducing the exact sentence.)",
+        "What this lens reads": "'By-corporall or double-bodied' places Sagittarius among Lilly's three mutable signs sharing that label with Gemini and Pisces — a structural, not psychological, classification — while 'the House and Joy of Jupiter' does the work later astrology assigns to 'the Philosopher/Explorer' archetype (compare grammars/western-astrology-canonical).",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Sagittarius, the chapter's disease, place and bodily description follow — the Archer read through horsemanship and fevers:\n\n“It rules the Thighs and Buttocks in the parts of man's body, and all Fistulas or Hurts falling in those members, and generally denotes Blood heated, Fevers Pestilential, falls from Horses, or hurts from them or four-footed Beasts; also prejudice by Fire, Heat and intemperateness in Sports.” Of places: “A Stable of great Horses, or Horses for the Wars, or a House where usually great four-footed Beasts are kept… in houses upper rooms, near the fire.” Of the body: “It represents a well-favoured Countenance, somewhat long Visage, but full and ruddy, or almost like Sun-burnt; the Hair light Chestnut colour, the Stature somewhat above the middle size; a conformity in the Members, and a strong able body.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "sagittarius",
+        "lilly",
+        "fiery",
+        "masculine",
+        "double-bodied",
+        "jupiter",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Sagittarius",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Sagittarius (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Sagittarius, heading the treatment of December",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_VII_Sagittarius.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 16,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_VII_Sagittarius.jpg?width=800"
+    },
+    {
+      "id": "sign-capricorn",
+      "name": "Capricorn",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Capricorn is the House of Saturn, and is Nocturnal, Cold, Dry, Melancholly, Earthly, Feminine, Solsticall, Cardinall, Moveable, Domesticall, Four-footed, Southern; the exaltation of Mars.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Capricorn; confidence: ○ — this full sentence was located via only one secondary reproduction this session; a second, differently worded search independently corroborated the two load-bearing facts inside it — Capricorn as Saturn's nocturnal house, and Mars's exaltation there — but did not reproduce the whole sentence, so the exact phrasing rests on a single source.)",
+        "What this lens reads": "'Four-footed' and 'Domesticall' are the kind of concrete, animal-taxonomy descriptor modern astrology drops entirely in favour of 'the Achiever' or 'the Sea-Goat' as pure symbol (compare grammars/western-astrology-canonical); Lilly's Capricorn is still half zoological classification.",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Capricorn (itself sourced this session from only one secondary mirror, per the existing item note — this passage is confirmed directly against the primary 1647 page-scan), the chapter's disease, place and bodily description follow:\n\n“It hath government of the Knees, and all Diseases incident to those places, either by Strains or Fractures; it notes Leprosy, the Itch, the Scab.” Of places: “It shows an Ox-house, or Cow-house, or where Calves are kept, or Tools for Husbandry, or old Wood is laid up… also Sheep-pens, and grounds where Sheep feed, Fallow-grounds, barren Fields, Bushy and Thorny… in houses low, dark places, near the ground or threshold.” Of the body: “Usually dry Bodies, not high of Stature, long, lean and slender Visage, thin Beard, black Hair, a narrow Chin, long small Neck and narrow Breast.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "capricorn",
+        "lilly",
+        "earthly",
+        "melancholy",
+        "saturn",
+        "cardinal",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Capricorn",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Capricorn (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "low",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Capricorn, heading the treatment of January",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_II_Capricorn.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 17,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_II_Capricorn.jpg?width=800"
+    },
+    {
+      "id": "sign-aquarius",
+      "name": "Aquarius",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Aquarius is an aieriall, hot and moyst Sign, of the aiery Triplicity, diurnal, Sanguine, fixed, rationall, humane, masculine, the principall house of Saturn, and house wherein he most rejoyceth.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Aquarius; confidence: ○ — this full sentence was located via only one secondary reproduction this session; a second, differently worded search independently corroborated that Aquarius is Saturn's day-house and the sign in which Saturn 'rejoyceth,' but did not reproduce the whole sentence, so the exact phrasing rests on a single source.)",
+        "What this lens reads": "'Rationall, humane' plus Saturn's special 'joy' there gives Lilly's Aquarius an intellectual, humane cast that survives remarkably intact into the modern 'Visionary'/humanitarian Aquarius (compare grammars/western-astrology-canonical) — one of the signs where the 1647 formula and the 21st-century archetype rhyme rather than clash.",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Aquarius (also confirmed directly against the primary 1647 page-scan this session), the chapter's disease, place and bodily description follow:\n\n“It governs the Legs, Ankles, and all manner of infirmities incident to those members, all melancholy Winds coagulated in the Veins, or disturbing the Blood, Cramps, &c.” Of places: “Hilly and uneven places, places newly digged, or where quarries of Stone are, or any Minerals have been digged up; in Houses, the roofs, eaves or upper parts; Vineyards, or near some little Spring or Conduit-head.” Of the body: “It represents a squat, thick Corporature, or one of a strong, well composed Body, not tall; a long Visage, sanguine Complexion… otherwise I have observed the party is of clear, white or fair Complexion, and of sandy coloured Hair, or very flaxen, and a very pure Skin.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "aquarius",
+        "lilly",
+        "aerial",
+        "sanguine",
+        "fixed",
+        "saturn",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Aquarius",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Aquarius (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "low",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Aquarius, heading the treatment of February",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_II_Aquarius.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 18,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_II_Aquarius.jpg?width=800"
+    },
+    {
+      "id": "sign-pisces",
+      "name": "Pisces",
+      "category": "sign",
+      "sections": {
+        "In the text": "“Pisces is of the Watry Triplicity, Northern, cold Sign, moyst, Flegmatick, feminine, nocturnal, the house of Jupiter, and exaltation of Venus, a Bycorporeal, common or double-bodied Sign, an idle, effeminate, sickly Sign, representing a party of no action.” (Quoted from Christian Astrology, 1647, Book I, the chapter on Pisces; confidence: medium — identical wording corroborated across two independent secondary reproductions this session.)",
+        "What this lens reads": "'Idle, effeminate, sickly... a party of no action' is about as unflattering as this library's Lilly voice gets — a moralized reading of passivity that the modern 'Mystic/Dreamer' Pisces (compare grammars/western-astrology-canonical) reframes as spiritual receptivity rather than a character flaw.",
+        "The record — William Lilly (1647)": "Past the formula already quoted for Pisces, the chapter's disease, place and bodily description close the chapter:\n\n“All Diseases in the Feet, as the Gout, and all Lameness and Aches incident to those members, and so generally salt Phlegms, Scabs, Itch, Botches, Breakings out, Boils and Ulcers proceeding from Blood putrefied, Colds and moist diseases.” Of places: “Grounds full of water, or where many Springs and much Fowl are, also Fish-ponds or Rivers full of Fish, places where Hermitages have been, Moats about Houses, Water-Mills; in houses near the water, as to some Well or Pump, or where water stands.” Of the body: “A short Stature, ill composed, not very decent, a good large Face, palish Complexion, the Body fleshy or swelling, not very straight, but incurvating somewhat with the Head.” (Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs').)"
+      },
+      "keywords": [
+        "pisces",
+        "lilly",
+        "watery",
+        "phlegmatic",
+        "jupiter",
+        "double-bodied",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Pisces",
+        "school": "renaissance-court-astrology",
+        "_source": "William Lilly, Christian Astrology (1647), Book I, the chapter on Pisces (exact chapter title not independently confirmed this session)",
+        "era_view": "view-medieval-renaissance-court",
+        "confidence": "medium",
+        "source": {
+          "author": "William Lilly",
+          "year": 1647,
+          "title": "Christian Astrology",
+          "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
+          "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
+          "chapter": "Christian Astrology, 1647, Book I, Chapter XVI ('The Nature, Place, Countries, general Description, and Diseases signified by the twelve Signs')"
+        },
+        "image_credit": {
+          "title": "The woodcut of Pisces, heading the treatment of March",
+          "creator": "Georg Fabricius (Georgius Fabricius)",
+          "date": "1560 reprint of a 1549 work",
+          "source": "Georg Fabricius, *Calendarium Romanum Vetus* — his description of the Roman menologia rustica",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Calendarium_Romanum_Vetus_III_Pisces.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "section_labels": [
+        "In the text",
+        "What this lens reads"
+      ],
+      "number": 19,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calendarium_Romanum_Vetus_III_Pisces.jpg?width=800"
+    }
+  ],
+  "_exported_from_app": "a1b2c3d4-3333-4a03-9e03-aa0000000003 on 2026-07-16",
+  "cover_image_credit": {
+    "title": "Portrait of William Lilly",
+    "creator": "Wenceslaus Hollar",
+    "date": "17th century (Hollar 1607-1677)",
+    "source": "Etched portrait",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_William_Lilly.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Hollar died 1677; Commons states public domain (PD-old-100)",
+    "verified": "2026-07-26"
+  }
+}

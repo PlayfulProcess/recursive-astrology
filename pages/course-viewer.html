@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>History of Astrology — The Recursive Astrology</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+  /* Layout only — every colour comes from theme.css (the one source). Do not add colour tokens here. */
+  html,body{margin:0;background:var(--bg);color:var(--ink);color-scheme:light;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding:24px 18px 90px;display:grid;
+    grid-template-columns:250px minmax(0,1fr);gap:28px}
+  @media (max-width:820px){ .wrap{grid-template-columns:1fr} }
+
+  /* —— sidebar TOC —— */
+  aside{position:sticky;top:14px;align-self:start;max-height:calc(100vh - 28px);overflow-y:auto}
+  @media (max-width:820px){ aside{position:static;max-height:none} }
+  .toc-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:4px 0 10px}
+  .toc-back{display:inline-block;font-size:12.5px;color:var(--accent);text-decoration:none;margin-bottom:14px}
+  .toc-back:hover{text-decoration:underline}
+  .toc{display:flex;flex-direction:column;gap:2px}
+  .toc a{display:block;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--ink-soft);
+    font-size:13px;border-left:2px solid transparent}
+  .toc a:hover{background:var(--chip,#faf3e6);color:var(--ink)}
+  .toc a.active{background:var(--chip,#faf3e6);border-left-color:var(--accent);color:var(--ink);font-weight:600}
+  .toc .toc-num{display:inline-block;width:1.4em;color:var(--faint);font-variant-numeric:tabular-nums}
+  .toc-sep{border:0;border-top:1px solid var(--line);margin:12px 0}
+  .toc-append{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:2px 0 6px}
+
+  /* —— content —— */
+  main{min-width:0}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  h1{font-family:"Fraunces",Georgia,serif;font-size:28px;margin:6px 0 6px;color:var(--ink)}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .pill{font-size:11.5px;padding:4px 11px;border-radius:999px;background:var(--chip,#faf3e6);
+    color:var(--ink-soft);border:1px solid var(--line-soft)}
+  .pill.confidence-low{color:#8a5a1f}
+
+  .content .sec{margin:0 0 22px}
+  .content .sec h2{font-size:13px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);
+    margin:0 0 6px;font-family:Inter,system-ui,sans-serif;font-weight:700}
+  .content .sec p{margin:0;font-size:15.5px;color:var(--ink)}
+
+  .companions{margin:26px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+  .companions h3{margin:0 0 10px;font-size:14px;color:var(--ink)}
+  .clinks{display:flex;flex-wrap:wrap;gap:8px}
+
+  .navrow{display:flex;justify-content:space-between;gap:12px;margin-top:34px;padding-top:18px;border-top:1px solid var(--line)}
+  .navbtn{flex:1;max-width:46%;padding:12px 14px;border:1px solid var(--line);border-radius:11px;
+    text-decoration:none;color:inherit;background:var(--panel);transition:border-color .15s}
+  .navbtn:hover{border-color:var(--accent)}
+  .navbtn.next{text-align:right;margin-left:auto}
+  .navbtn .dir{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);display:block;margin-bottom:3px}
+  .navbtn .ttl{font-family:"Fraunces",Georgia,serif;font-size:14.5px}
+
+  .note{margin-top:34px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;
+    background:var(--chip,#f7f3ea);font-size:13.5px;color:var(--muted)}
+  .note b{color:var(--ink)}
+  a{color:var(--accent)}
+  #loading, #err{color:var(--muted);font-size:14px}
+  #err{color:#a3402d}
+</style>
+</head>
+<body>
+<script src="../site-header.js?v=47"></script>
+<site-header active="course"></site-header>
+<div class="wrap">
+  <aside>
+    <a class="toc-back" id="toc-back" href="course.html">← All chapters</a>
+    <div class="toc-kicker" id="toc-kicker">History of Astrology</div>
+    <nav class="toc" id="toc" aria-label="Course chapters"></nav>
+  </aside>
+
+  <main>
+    <p id="loading">Loading…</p>
+    <p id="err" hidden></p>
+    <article id="article" hidden>
+      <div class="kicker" id="cintro">History of Astrology · one chapter</div>
+      <h1 id="ctitle"></h1>
+      <div class="meta-row" id="meta-row"></div>
+      <div class="content" id="content"></div>
+      <div class="companions" id="companions" hidden>
+        <h3>Read the primary source</h3>
+        <div class="clinks" id="clinks"></div>
+      </div>
+      <nav class="navrow" id="navrow"></nav>
+    </article>
+
+    <div class="note">
+      <b>How this works.</b> This chapter is read live from
+      <code>grammars/historiographies-of-astrology/grammar.json</code> — the same grammar behind
+      <a href="../index.html">the library</a> and <a href="../viewers/lenses.html">Lenses</a>. Nothing here is
+      duplicated content: edit that grammar and this course updates with it. See
+      <code>course/manifest.json</code> for the chapter ordering and companion-grammar links.
+    </div>
+  </main>
+</div>
+
+<!-- Jul 7 2026: the hand-rolled course chat widget (course/course-assistant.js, a
+     pattern-copy of recursive-tarot's) is replaced by the ONE shared recursive.eco
+     assistant sidebar — ../assistant.js at the bottom of this page — matching how
+     recursive.eco's own course viewer mounts it (same star FAB, same tabs, same
+     credits). The old widget file stays in the repo one round for easy rollback. -->
+<script>
+const $ = s => document.querySelector(s);
+const params = new URLSearchParams(location.search);
+
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mdLite = s => esc(s).replace(/\*(.+?)\*/g, '<em>$1</em>').replace(/`(.+?)`/g, '<code>$1</code>');
+
+// Multi-course (Jul 2026): ?course=<slug> picks the manifest + source grammar.
+// Default (no param) stays the original History of Astrology course, so every
+// existing link keeps working. A course's manifest names its own sourceGrammar,
+// so adding a course = one manifest + one grammar, no viewer edit.
+const COURSES = {
+  'history-of-astrology': { manifest: '../course/manifest.json' },
+  'the-right-size':       { manifest: '../course/the-right-size.manifest.json' },
+  'three-doors':          { manifest: '../course/three-doors.manifest.json' },
+};
+// Every link this page generates must carry the active ?course= slug. Without it a
+// reader inside "The Right Size" or "Three Doors" clicked Next and landed silently
+// on chapter 1 of History of Astrology, because ?chapter=chapter-2 means nothing to
+// the default course and `current` fell back to its first chapter (fixed Jul 2026).
+let COURSE_SLUG = 'history-of-astrology';
+const chapterHref = id =>
+  'course-viewer.html?' + (COURSE_SLUG === 'history-of-astrology' ? '' : 'course=' + encodeURIComponent(COURSE_SLUG) + '&')
+  + 'chapter=' + encodeURIComponent(id);
+
+async function main(){
+  let manifest, grammar, ids;
+  const courseSlug = new URLSearchParams(location.search).get('course') || 'history-of-astrology';
+  const course = COURSES[courseSlug] || COURSES['history-of-astrology'];
+  COURSE_SLUG = COURSES[courseSlug] ? courseSlug : 'history-of-astrology';
+  try {
+    manifest = await fetch(course.manifest).then(r => { if(!r.ok) throw new Error('manifest '+r.status); return r.json(); });
+    // The manifest names its source grammar; fall back to the history grammar for the default course.
+    const grammarSlug = manifest.sourceGrammar || 'historiographies-of-astrology';
+    [grammar, ids] = await Promise.all([
+      fetch('../grammars/'+grammarSlug+'/grammar.json').then(r => { if(!r.ok) throw new Error('grammar '+r.status); return r.json(); }),
+      fetch('../ids.json').then(r => r.ok ? r.json() : null).catch(() => null),
+    ]);
+  } catch (err) {
+    $('#loading').hidden = true;
+    const e = $('#err'); e.hidden = false;
+    e.innerHTML = '<b>Could not load the course.</b> If you opened this file directly, browsers block '
+      + '<code>file://</code> fetches — run <code>python -m http.server 8000</code> in the repo root and '
+      + 'visit <code>http://localhost:8000/pages/course-viewer.html</code> instead. (On GitHub Pages it just '
+      + 'works.) Details: ' + (err && err.message || err);
+    return;
+  }
+
+  document.title = manifest.title + ' — The Recursive Astrology';
+
+  const chapterItems = grammar.items.filter(it => it.id.startsWith(manifest.chapterIdPrefix));
+  const appendixItems = grammar.items.filter(it => it.id.startsWith(manifest.appendixIdPrefix));
+  const allItems = chapterItems.concat(appendixItems);
+  const byId = Object.fromEntries(allItems.map(it => [it.id, it]));
+
+  const requested = params.get('chapter');
+  const missing = requested && !byId[requested];   // a stale link into another course
+  const current = byId[requested] || chapterItems[0];
+  if (!current) {
+    $('#loading').hidden = true;
+    $('#err').hidden = false;
+    $('#err').textContent = 'This course has no chapters yet.';
+    return;
+  }
+  const isAppendix = current.id.startsWith(manifest.appendixIdPrefix);
+
+  // —— sidebar TOC ——
+  $('#toc-kicker').textContent = manifest.title;
+  // Only the default course has a chapter-list page; the readings don't, so their
+  // "All chapters" would silently hand the reader a different course's index.
+  if (COURSE_SLUG !== 'history-of-astrology') {
+    const back = $('#toc-back');
+    back.href = '../index.html#explore';
+    back.textContent = '← The library';
+  }
+  const toc = $('#toc');
+  chapterItems.forEach((it, i) => {
+    const a = document.createElement('a');
+    a.href = chapterHref(it.id);
+    a.className = it.id === current.id ? 'active' : '';
+    a.innerHTML = `<span class="toc-num">${i + 1}.</span> ${it.name}`;
+    toc.appendChild(a);
+  });
+  if (appendixItems.length) {
+    const hr = document.createElement('hr'); hr.className = 'toc-sep'; toc.appendChild(hr);
+    const label = document.createElement('div'); label.className = 'toc-append';
+    label.textContent = manifest.appendixTitle || 'Patterns across eras'; toc.appendChild(label);
+    appendixItems.forEach(it => {
+      const a = document.createElement('a');
+      a.href = chapterHref(it.id);
+      a.className = it.id === current.id ? 'active' : '';
+      a.textContent = it.name;
+      toc.appendChild(a);
+    });
+  }
+
+  // —— content ——
+  const meta = current.metadata || {};
+  $('#cintro').textContent = isAppendix
+    ? (manifest.appendixTitle || 'Patterns across eras') + ' · a cross-cutting thread, not a single era'
+    : `${manifest.title} · chapter ${chapterItems.findIndex(it => it.id === current.id) + 1} of ${chapterItems.length}`;
+  $('#ctitle').textContent = current.name;
+
+  const metaRow = $('#meta-row');
+  metaRow.innerHTML = '';
+  if (meta.era) metaRow.innerHTML += `<span class="pill">${esc(meta.era)}</span>`;
+  if (meta.region) metaRow.innerHTML += `<span class="pill">${esc(meta.region)}</span>`;
+  if (meta.stance) metaRow.innerHTML += `<span class="pill">${esc(meta.stance.replace(/-/g,' '))}</span>`;
+  if (meta.confidence) metaRow.innerHTML += `<span class="pill confidence-${esc(meta.confidence)}">confidence: ${esc(meta.confidence)}</span>`;
+
+  const order = isAppendix ? (manifest.appendixSectionOrder || []) : (manifest.sectionOrder || []);
+  const sections = current.sections || {};
+  const orderedKeys = order.filter(k => sections[k]).concat(Object.keys(sections).filter(k => !order.includes(k)));
+  const content = $('#content');
+  content.innerHTML = orderedKeys.map(k => `<div class="sec"><h2>${esc(k)}</h2><p>${mdLite(sections[k])}</p></div>`).join('');
+
+  // —— companion links (primary-source grammars, from ids.json) ——
+  const companionSlugs = (manifest.companions || {})[current.id] || [];
+  if (companionSlugs.length && ids && ids.ids) {
+    const clinks = $('#clinks');
+    clinks.innerHTML = '';
+    companionSlugs.forEach(slug => {
+      const uuid = ids.ids[slug];
+      const label = slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      const raw = document.createElement('a');
+      raw.className = 'eco-chip'; raw.href = '../grammars/' + slug + '/grammar.json';
+      raw.textContent = label + ' — raw JSON';
+      clinks.appendChild(raw);
+      if (uuid) {
+        [['Cards', 'grammar-viewer'], ['Study', 'study-viewer'], ['Tree', 'tree-viewer']].forEach(([lbl, page]) => {
+          const a = document.createElement('a');
+          a.className = 'eco-chip'; a.target = '_blank'; a.rel = 'noopener';
+          a.href = `https://recursive.eco/pages/${page}.html?type=astrology&id=${uuid}`;
+          a.textContent = label + ' — ' + lbl;
+          clinks.appendChild(a);
+        });
+        const play = document.createElement('a');
+        play.className = 'eco-chip'; play.target = '_blank'; play.rel = 'noopener';
+        play.href = `https://flow.recursive.eco/g/${uuid}?view=reading`;
+        play.textContent = label + ' — Play';
+        clinks.appendChild(play);
+      }
+    });
+    $('#companions').hidden = false;
+  }
+
+  // —— prev / next ——
+  const navrow = $('#navrow');
+  const idx = allItems.findIndex(it => it.id === current.id);
+  const prev = allItems[idx - 1], next = allItems[idx + 1];
+  navrow.innerHTML = '';
+  if (prev) {
+    const a = document.createElement('a');
+    a.className = 'navbtn prev'; a.href = chapterHref(prev.id);
+    a.innerHTML = `<span class="dir">← Previous</span><span class="ttl">${esc(prev.name)}</span>`;
+    navrow.appendChild(a);
+  }
+  if (next) {
+    const a = document.createElement('a');
+    a.className = 'navbtn next'; a.href = chapterHref(next.id);
+    a.innerHTML = `<span class="dir">Next →</span><span class="ttl">${esc(next.name)}</span>`;
+    navrow.appendChild(a);
+  }
+
+  // A link asking for a chapter this course doesn't have used to drop the reader on
+  // chapter 1 with no explanation. Say so instead of pretending it was the request.
+  if (missing) {
+    const warn = $('#err');
+    warn.hidden = false;
+    warn.innerHTML = `<b>No chapter “${esc(requested)}” in ${esc(manifest.title)}.</b> `
+      + `Showing the first chapter instead — the link you followed may belong to another course. `
+      + `<a href="../index.html#explore">See every course →</a>`;
+  }
+
+  $('#loading').hidden = true;
+  $('#article').hidden = false;
+}
+main();
+</script>
+
+<script src="../site-footer.js?v=1"></script>
+<script src="../assistant.js" defer></script>
+<site-footer base="../"></site-footer>
+</body>
+</html>

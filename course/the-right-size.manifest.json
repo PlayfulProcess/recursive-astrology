@@ -1,0 +1,18 @@
+{
+  "_note": "Manifest for the thematic reading 'The Right Size' — a second astro course alongside History of Astrology. Read by pages/course-viewer.html via ?course=the-right-size. Chapters come from grammars/the-right-size/grammar.json (generated from course/the-right-size.mdx).",
+  "title": "The Right Size",
+  "kicker": "The Recursive Astrology · a reading, in the spirit of How the Cards Can Work",
+  "description": "The human imperative to negotiate our scale — and how the sky might be an adaptive path.",
+  "sourceGrammar": "the-right-size",
+  "chapterIdPrefix": "chapter-",
+  "appendixIdPrefix": "note-",
+  "appendixTitle": "A closing note",
+  "appendixIntro": "",
+  "sectionOrder": [
+    "Reading"
+  ],
+  "appendixSectionOrder": [
+    "About this note"
+  ],
+  "companions": {}
+}

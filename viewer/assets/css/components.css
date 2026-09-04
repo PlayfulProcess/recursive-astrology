@@ -1,0 +1,187 @@
+/* Web Component Styling */
+/* Default styling for site-header, site-footer, spiral-header components */
+
+/* Loading states */
+site-header:not(:defined),
+site-footer:not(:defined),
+spiral-header:not(:defined) {
+  display: block;
+  min-height: 60px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+site-header:not(:defined)::before,
+site-footer:not(:defined)::before,
+spiral-header:not(:defined)::before {
+  content: "Loading...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Error states */
+.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Active navigation states */
+[aria-current="page"],
+.is-active {
+  font-weight: 600;
+  color: #9333ea !important;
+}
+
+/* Dropdown functionality */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger:hover + .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu {
+  transform: translateY(-10px);
+}
+
+/* Smooth transitions for component loading */
+site-header,
+site-footer,
+spiral-header {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  site-header:not(:defined),
+  spiral-header:not(:defined) {
+    min-height: 120px;
+  }
+}
+
+/* ── View Mode Dropdown (shared across all viewers) ── */
+.vmd-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.vmd-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 0.375rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.vmd-trigger:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.5);
+}
+.vmd-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  min-width: 120px;
+  max-width: calc(100vw - 16px);
+  background: #1a1a24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+.vmd-hidden {
+  display: none;
+}
+.vmd-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: all 0.15s;
+}
+.vmd-option:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.vmd-active {
+  color: #fff;
+  background: rgba(139, 92, 246, 0.3);
+}
+/* Child entries — Thumbnails under Cards, Performance under Sequence.
+   Indented + tree corner glyph signals the parent/child relationship.
+   May 24 2026. */
+.vmd-option.vmd-child {
+  padding-left: 1.5rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.vmd-tree-corner {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.35);
+  margin-right: 0.25rem;
+  user-select: none;
+}
+.vmd-tag {
+  display: inline-block;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.1rem 0.35rem;
+  margin-left: 0.35rem;
+  border-radius: 0.25rem;
+  background: rgba(190, 24, 93, 0.4);
+  color: rgba(251, 207, 232, 1);
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+/* ── Node Context Menu (right-click on items) ── */
+.ncm-menu {
+  position: fixed;
+  min-width: 160px;
+  background: #1a1a24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  z-index: 2000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+.ncm-hidden {
+  display: none;
+}
+.ncm-option {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: all 0.15s;
+}
+.ncm-option:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}

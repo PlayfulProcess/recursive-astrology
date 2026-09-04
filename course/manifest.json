@@ -1,0 +1,25 @@
+{
+  "_note": "Course manifest for 'History of Astrology' (pages/course.html + pages/course-viewer.html). Pattern mirrored from recursive-tarot/course/*, adapted: instead of hand-authored MDX chapters, this course reads its chapters LIVE from grammars/historiographies-of-astrology/grammar.json — the same grammar the Library already serves. Adding a chapter is a data edit in that grammar (add a new item[] whose id starts with chapterIdPrefix); this manifest only carries the course-level config + optional per-chapter companion links. Keep this in sync if the source grammar's item ids change.",
+  "title": "History of Astrology",
+  "kicker": "The Recursive Astrology · a dynamic course, read from the library itself",
+  "description": "Five thousand years of astrological practice, era by era — Babylonian omen-craft to the contemporary resurgence — read directly from the Historiographies of Astrology grammar. Each chapter is one view honestly held in its own terms; where this repo has a matching primary-source grammar (Ptolemy, Alan Leo, Proctor’s critique, the flagship interpretation set), the chapter links onward to it.",
+  "sourceGrammar": "historiographies-of-astrology",
+  "chapterIdPrefix": "view-",
+  "appendixIdPrefix": "pattern-",
+  "appendixTitle": "Patterns across eras",
+  "appendixIntro": "Three cross-cutting patterns the chapters above share, drawn from the same grammar — not another era, but a thread running through several of them.",
+  "sectionOrder": ["What this view holds", "In its own words", "The record", "Reading", "Research note"],
+  "appendixSectionOrder": ["About this pattern", "Why it matters"],
+  "companions": {
+    "_note": "chapter item id -> array of grammar slugs (from ids.json) offered as 'Read the primary source' links. Chapters not listed here simply show no companion — an honest gap (no primary-source grammar yet in this repo), not a hidden fallback.",
+    "view-mesopotamian-omens": ["mesopotamian-omens"],
+    "view-hellenistic-synthesis": ["tetrabiblos-ashmand"],
+    "view-jyotisha": ["jyotisa-brhat-jataka"],
+    "view-medieval-renaissance-court": ["western-astrology-canonical", "william-lilly-christian-astrology"],
+    "view-theosophical-revival": ["alan-leo"],
+    "view-decline-demarcation": ["proctor-skeptical-astrology"],
+    "view-empirical-test-tradition": ["proctor-skeptical-astrology"],
+    "view-humanistic-psychological": ["western-astrology-canonical"],
+    "view-contemporary-resurgence": ["western-astrology-canonical"]
+  }
+}

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wheel — twelve houses, a chart-shaped casting</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* Layout only — every colour comes from theme.css (the one source). Do not add colour tokens here. */
+  html,body{margin:0;background:var(--bg);color:var(--ink);color-scheme:light;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+  .wrap{max-width:960px;margin:0 auto;padding:28px 18px 80px}
+  header.hero{padding:14px 0 8px}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  h1{font-family:"Fraunces",Georgia,serif;font-size:30px;margin:6px 0 8px;color:var(--ink);display:flex;align-items:center;gap:12px}
+  h1 svg{flex:none;color:var(--accent)}
+  .lede{color:var(--muted);font-size:15.5px;max-width:70ch}
+  .framebar{display:flex;align-items:center;justify-content:center;gap:10px;margin:20px 0 0;flex-wrap:wrap}
+  .framelabel{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+  .frame-pills{display:flex;gap:8px;flex-wrap:wrap}
+  .framepill{font-family:inherit;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink-soft);cursor:pointer;transition:border-color .15s,color .15s,background .15s}
+  .framepill:hover{border-color:var(--accent);color:var(--ink)}
+  .framepill.on{background:var(--chip,#f1ece1);border-color:var(--accent);color:var(--accent)}
+  .frame-hint{text-align:center;font-size:12.5px;color:var(--muted);margin:6px 0 0}
+  .stage{display:flex;justify-content:center;margin:26px 0 8px}
+  /* the viewBox carries 50 units of side gutter so the horizontal house labels
+     have somewhere to sit outside the rim; max-width is raised to match so the
+     wheel itself keeps roughly the size it had before the gutter was added. */
+  svg.wheel{max-width:660px;width:100%;height:auto}
+  .sector{fill:var(--panel);stroke:var(--line);cursor:pointer;transition:fill .15s,stroke .15s}
+  .sector:hover,.sector:focus{fill:var(--chip,#f1ece1);outline:none}
+  .sector.framed{fill:var(--chip,#f1ece1);stroke:var(--accent);stroke-width:2}
+  .sector.framed:hover,.sector.framed:focus{fill:var(--chip,#f1ece1);stroke-width:2.5}
+  .hub{fill:none;stroke:var(--line)}
+  .axis{stroke:var(--line);stroke-dasharray:3 4}
+  .num{font-family:"Fraunces",Georgia,serif;font-size:15px;fill:var(--accent);pointer-events:none}
+  .houselabel{font-size:8.5px;fill:var(--muted);pointer-events:none;text-transform:uppercase;letter-spacing:.08em}
+  .anglelabel{font-size:9px;fill:var(--muted)}
+  .creed{font-size:9.5px;fill:var(--muted)}
+  dialog{border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--ink);
+    max-width:640px;width:calc(100% - 32px);padding:0}
+  dialog::backdrop{background:rgba(20,15,8,.42)}
+  .dhead{padding:20px 22px 4px}
+  .dbody{padding:2px 22px 22px}
+  .dhead .cat{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+  .dhead h2{font-family:"Fraunces",Georgia,serif;margin:6px 0 0;font-size:23px}
+  .sec{margin-top:16px}
+  .sec h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 4px}
+  .sec p{margin:0;font-size:15px;color:var(--ink)}
+  .close{position:sticky;top:0;float:right;margin:12px 14px 0 0;border:0;background:none;font-size:22px;
+    line-height:1;cursor:pointer;color:var(--muted)}
+  .note{margin-top:30px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;
+    background:var(--chip,#f7f3ea);font-size:13.5px;color:var(--muted)}
+  .note b{color:var(--ink)}
+  a{color:var(--accent)}
+
+  /* the frame's "every voice" stack, inside the house dialog — same pattern archetypal.html
+     uses for planets, keyed on houses instead. */
+  .framestack{margin-top:22px;padding-top:16px;border-top:1px dashed var(--line)}
+  .plabelh{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px;
+    display:flex;align-items:center;gap:10px}
+  .plabelh::after{content:'';flex:1;height:1px;background:var(--line)}
+  .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .vcard2{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .vcard2 .trad{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+  .vcard2 .era{font-size:11px;color:var(--muted);margin:1px 0 8px}
+  .vcard2 .sec2{margin-top:8px}
+  .vcard2 .sec2 h4{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 3px}
+  .vcard2 .sec2 p{margin:0;font-size:13px;color:var(--ink)}
+  .vcard2 .empty{font-size:12.5px;color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<script src="site-header.js?v=47"></script>
+<script src="grammar-picker.js?v=1"></script>
+<site-header active="wheel"></site-header>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">The Recursive Astrology · a casting, not a prediction</div>
+    <h1>
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3v18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" />
+      </svg>
+      The Wheel — twelve houses
+    </h1>
+    <p class="lede" id="g-desc">Loading…</p>
+  </header>
+
+  <div class="framebar" role="group" aria-label="Frame mode">
+    <span class="framelabel">Frame</span>
+    <div class="frame-pills" id="framepills"></div>
+  </div>
+  <p class="frame-hint" id="frame-hint"></p>
+
+  <div id="grammar-picker"></div>
+
+  <div class="stage"><svg class="wheel" id="wheel" viewBox="-50 0 560 460" role="list"
+    aria-label="The twelve houses of a chart, as a wheel"></svg></div>
+
+  <div class="note">
+    <b>Nothing here is drawn at random — the positions are your own chart.</b> Click a house.
+    Each opens its position prompt from the casting grammar and its meaning from the
+    <a href="viewers/cards.html?src=../grammars/western-astrology-canonical/grammar.json">flagship
+    interpretation set</a>.
+    Resolving <em>your</em> cusps and planets needs a real chart calculation (birth time + place);
+    until that is wired into the app, the wheel reads honestly as the twelve standing rooms of a
+    life — enter placements you already know, or simply reflect house by house. Data:
+    <code>grammars/casting-twelve-houses/grammar.json</code>. The creed holds on every surface:
+    a chart is a mirror and a calendar, never a command.
+    <b>The All Houses frame</b> (on by default — glowing sectors) also stacks whichever grammars
+    you pick above (every house-bearing voice, by default — Ptolemy's Tetrabiblos, the Victorian
+    skeptic Proctor, Alan Leo, the Canonical Western set, and the generated Astro-of-all-astros
+    synthesis) for the house you tap —
+    read live from <code>grammars/_collection.json</code>, matched by house number the same way
+    <a href="archetypal.html">Archetypal Astrology</a> matches planets. The picker highlights which
+    grammars actually have house content and lets you narrow the stack to just the voices you want.
+    See <a href="docs/DESIGN-wheel-frames.md">docs/DESIGN-wheel-frames.md</a>.
+  </div>
+</div>
+
+<dialog id="detail">
+  <button class="close" aria-label="Close" onclick="detail.close()">×</button>
+  <div class="dhead"><div class="cat" id="d-cat"></div><h2 id="d-name"></h2></div>
+  <div class="dbody" id="d-sections"></div>
+</dialog>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const NS = 'http://www.w3.org/2000/svg';
+const CX = 230, CY = 230, R = 190, R0 = 78, RNUM = 134, RLAB = 208;
+
+let CASTING = null, SET = null;
+let TRADITIONS = null;   // every public astrology grammar with house items; null = still loading
+let OPEN_HOUSE = null;   // the house position currently shown in the dialog, or null
+
+// ── Frame modes — hardcoded UI modes, not grammars (docs/DESIGN-wheel-frames.md).
+// Each mode names which wheel positions get the visual highlight + the tap-for-every-
+// voice behavior. "All Houses" is the first frame; the array shape is the mechanism a
+// second frame (Big Three, One Aspect, …) plugs into later without a rewrite — a future
+// frame just adds another entry with its own `selects()`.
+const FRAME_MODES = [
+  { key: 'none', label: 'No frame',
+    hint: 'Click any house for its position prompt + the flagship interpretation set, as before.',
+    selects: () => [] },
+  { key: 'all-houses', label: 'All Houses',
+    hint: 'Every house glows — tap a highlighted house to hear every voice in this library answer for it.',
+    selects: () => [1,2,3,4,5,6,7,8,9,10,11,12] },
+];
+let ACTIVE_FRAME = 'all-houses'; // the frame the homepage's "Frame" card already promises
+
+function frameSelects(pos){
+  const mode = FRAME_MODES.find(m => m.key === ACTIVE_FRAME) || FRAME_MODES[0];
+  return mode.selects().includes(pos);
+}
+
+function renderFramePills(){
+  const wrap = $('#framepills');
+  wrap.innerHTML = '';
+  FRAME_MODES.forEach(mode => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'framepill' + (ACTIVE_FRAME === mode.key ? ' on' : '');
+    btn.textContent = mode.label;
+    btn.setAttribute('aria-pressed', ACTIVE_FRAME === mode.key ? 'true' : 'false');
+    btn.onclick = () => setFrame(mode.key);
+    wrap.appendChild(btn);
+  });
+  const active = FRAME_MODES.find(m => m.key === ACTIVE_FRAME);
+  $('#frame-hint').textContent = active ? active.hint : '';
+}
+
+function setFrame(key){
+  ACTIVE_FRAME = key;
+  renderFramePills();
+  if (CASTING) draw();
+}
+
+function pt(radius, deg){ const a = deg * Math.PI / 180; return [CX + radius * Math.cos(a), CY - radius * Math.sin(a)]; }
+
+function sectorPath(a0, a1){
+  const [x0o, y0o] = pt(R, a0), [x1o, y1o] = pt(R, a1);
+  const [x0i, y0i] = pt(R0, a0), [x1i, y1i] = pt(R0, a1);
+  return `M ${x0i} ${y0i} L ${x0o} ${y0o} A ${R} ${R} 0 0 0 ${x1o} ${y1o} L ${x1i} ${y1i} A ${R0} ${R0} 0 0 1 ${x0i} ${y0i} Z`;
+}
+
+function el(tag, attrs, text){
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function mdLite(s){
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g,'<em>$1</em>')
+    .replace(/`(.+?)`/g,'<code>$1</code>');
+}
+
+// ── voice matching — the same cross-grammar approach archetypal.html uses for planets,
+// keyed on houses: read house items by id `house-N` (the convention every voice grammar
+// in this repo follows) or, as a fallback, `metadata.house` (some grammars store it as a
+// string, some as a number, so compare loosely). A "content-bearing" entry has a real
+// section beyond a thin provenance stub (docs/DESIGN-archetypal.md). Collection loading +
+// shape detection + the multi-select picker itself live in grammar-picker.js, shared with
+// any other viewer that stacks "every voice" for an entity — see that file's header.
+const { contentBearing } = GrammarPicker;
+
+function findHouseItem(grammar, n){
+  const items = grammar.items || [];
+  const target = String(n);
+  return items.find(it => (it.category || '') === 'house' &&
+    (it.id === `house-${n}` || String((it.metadata || {}).house) === target)) || null;
+}
+
+function renderHouseVoiceStack(n){
+  if (TRADITIONS === null){
+    return `<p class="plabelh">House ${n} — every voice</p><div class="vgrid">
+      <div class="vcard2"><p class="empty">Loading every voice…</p></div></div>`;
+  }
+  const cards = TRADITIONS.map(t => {
+    const item = findHouseItem(t.grammar, n);
+    if (!item || !contentBearing(item)) {
+      return `<div class="vcard2"><div class="trad">${esc(t.voiceLabel)}</div><div class="era">${esc(t.eraLabel)}</div>
+        <p class="empty">No entry for House ${n} in this voice.</p></div>`;
+    }
+    const secs = Object.entries(item.sections || {}).filter(([k]) => k !== 'See also').map(([label, text]) =>
+      `<div class="sec2"><h4>${esc(label)}</h4><p>${mdLite(text)}</p></div>`).join('');
+    return `<div class="vcard2"><div class="trad">${esc(t.voiceLabel)}</div><div class="era">${esc(t.eraLabel)}</div>${secs}</div>`;
+  }).join('');
+  return `<p class="plabelh">House ${n} — every voice</p><div class="vgrid">${cards}</div>`;
+}
+
+function buildHouseDialogBody(pos){
+  const it = CASTING.items.find(i => i.position === pos);
+  const houseItem = SET && SET.items.find(i => i.id === `house-${pos}`);
+  $('#d-cat').textContent = `position ${pos} of 12 · derived from your chart, never drawn`;
+  $('#d-name').textContent = it.name;
+  const body = $('#d-sections');
+  body.innerHTML = '';
+  const secs = Object.assign({}, it.sections);
+  if (houseItem) for (const [k, v] of Object.entries(houseItem.sections)) secs[`${houseItem.name} — ${k}`] = v;
+  for (const [label, text] of Object.entries(secs)){
+    const div = document.createElement('div');
+    div.className = 'sec';
+    div.innerHTML = `<h3>${label}</h3><p>${mdLite(text)}</p>`;
+    body.appendChild(div);
+  }
+  // the active frame's tap-for-every-voice behavior — only for positions the frame selects
+  if (frameSelects(pos)){
+    const stackDiv = document.createElement('div');
+    stackDiv.className = 'framestack';
+    stackDiv.innerHTML = renderHouseVoiceStack(pos);
+    body.appendChild(stackDiv);
+  }
+}
+
+function openHouse(pos){
+  OPEN_HOUSE = pos;
+  buildHouseDialogBody(pos);
+  $('#detail').showModal();
+}
+
+function draw(){
+  const svg = $('#wheel');
+  svg.innerHTML = '';
+  svg.appendChild(el('circle', {cx: CX, cy: CY, r: R, class: 'hub'}));
+  svg.appendChild(el('circle', {cx: CX, cy: CY, r: R0, class: 'hub'}));
+  CASTING.items.forEach(it => {
+    const n = it.position;
+    const a0 = 180 + (n - 1) * 30, a1 = a0 + 30, mid = a0 + 15;
+    const framed = frameSelects(n);
+    const label = framed ? `${it.name} — highlighted, tap to hear every voice` : it.name;
+    const p = el('path', {d: sectorPath(a0, a1), class: 'sector' + (framed ? ' framed' : ''),
+      tabindex: 0, role: 'listitem', 'aria-label': label});
+    p.appendChild(el('title', {}, label)); // hover tooltip (native, no new UI needed)
+    p.addEventListener('click', () => openHouse(n));
+    p.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openHouse(n); }});
+    svg.appendChild(p);
+    const [nx, ny] = pt(RNUM, mid);
+    svg.appendChild(el('text', {x: nx, y: ny + 5, class: 'num', 'text-anchor': 'middle'}, n));
+    const [lx, ly] = pt(RLAB, mid);
+    const short = it.name.replace(/^\d+\.\s*House of\s*/i, '');
+    // Horizontal text centred on a radial point straddles the rim: the labels
+    // beside the horizon ("The Hidden", "The Other", "Self", "Craft"…) were
+    // printed over the circle. Anchor each label so it grows AWAY from the
+    // wheel; only the top and bottom labels stay centred.
+    const c = Math.cos(mid * Math.PI / 180);
+    const anchor = c > 0.35 ? 'start' : (c < -0.35 ? 'end' : 'middle');
+    const lxa = anchor === 'start' ? lx + 4 : (anchor === 'end' ? lx - 4 : lx);
+    svg.appendChild(el('text', {x: lxa, y: ly + 3, class: 'houselabel', 'text-anchor': anchor}, short));
+  });
+  // the horizon (ASC–DSC) axis, painted over the sectors so it stays visible
+  svg.appendChild(el('line', {x1: CX - R, y1: CY, x2: CX - R0, y2: CY, class: 'axis'}));
+  svg.appendChild(el('line', {x1: CX + R0, y1: CY, x2: CX + R, y2: CY, class: 'axis'}));
+  svg.appendChild(el('text', {x: CX - R + 8, y: CY - 6, class: 'anglelabel', 'text-anchor': 'start'}, 'ASC'));
+  // the creed, in the hub
+  const creed = ['a mirror and a calendar,', 'never a command'];
+  creed.forEach((line, i) => {
+    svg.appendChild(el('text', {x: CX, y: CY - 4 + i * 13, class: 'creed', 'text-anchor': 'middle'}, line));
+  });
+}
+
+renderFramePills();
+
+// Grammar picker (grammar-picker.js): loads every public grammar once, detects
+// which ones actually carry house content, and lets the reader multi-select
+// which voices stack in the "every voice" section of the house dialog — live,
+// no page reload. TRADITIONS mirrors the picker's current selection; if a
+// visitor taps a framed house before the picker's first load resolves,
+// renderHouseVoiceStack() shows an honest "Loading every voice…" card (never
+// a silently blank grid — the exact race archetypal.html's Round 2 fixed,
+// same pattern here), and every onChange (including that first load) refreshes
+// an already-open dialog in place.
+const grammarPicker = GrammarPicker.create({
+  mount: $('#grammar-picker'),
+  shape: 'house',
+  storageKey: 'wheel-grammar-picker-v1',
+  onChange(chosen){
+    TRADITIONS = chosen;
+    if (OPEN_HOUSE != null && $('#detail').open) buildHouseDialogBody(OPEN_HOUSE);
+  }
+});
+
+Promise.all([
+  fetch('grammars/casting-twelve-houses/grammar.json').then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+  fetch('grammars/western-astrology-canonical/grammar.json').then(r => r.ok ? r.json() : null).catch(() => null),
+]).then(([casting, set]) => {
+  CASTING = casting; SET = set;
+  $('#g-desc').textContent = casting.description;
+  draw();
+}).catch(() => {
+  $('#g-desc').innerHTML = 'Could not load the casting grammar. Browsers block <code>file://</code> fetches — '
+    + 'serve locally (<code>python -m http.server 8091</code>) or view on GitHub Pages.';
+});
+</script>
+
+<script src="site-footer.js?v=1"></script>
+<script src="assistant.js" defer></script>
+<site-footer></site-footer>
+</body>
+</html>

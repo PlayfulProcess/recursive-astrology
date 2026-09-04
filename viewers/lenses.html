@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../theme.css?v=3">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lenses — Five Ways to See the Same Data · Recursive Astrology</title>
+<style>
+  /* No :root block here on purpose — every colour token lives in theme.css. */
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 -apple-system,Segoe UI,Roboto,sans-serif}
+  header{padding:14px 18px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .tabrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+  #lens-pick{background:var(--panel2);color:var(--text);border:1px solid #cfc8ba;border-radius:8px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer}
+  h1{font-size:17px;margin:0 0 3px}
+  .sub{font-size:12px;color:var(--muted)}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;align-items:center}
+  .tab{padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--panel);
+    color:var(--text);cursor:pointer;font-size:13px;font-weight:600}
+  .tab.on{background:var(--accent2);border-color:var(--accent2);color:#fff}
+  .deckbtn{margin-left:auto;padding:7px 13px;border:1px solid var(--line);border-radius:8px;
+    background:var(--panel2);color:var(--text);cursor:pointer;font-size:13px;font-weight:600}
+  main{padding:18px;max-width:1340px;margin:0 auto}
+  .ctl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+  /* max-width keeps the long entity names (e.g. "Parā — Door Of Light Looks") from
+     stretching the <select> past a 375px viewport and scrolling the whole page. */
+  select{background:var(--panel2);color:var(--text);border:1px solid #cfc8ba;border-radius:8px;padding:7px 11px;font-size:13px;font-weight:600;cursor:pointer;max-width:100%}
+  label.lbl{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .seg button{background:var(--panel2);color:var(--muted);border:0;padding:6px 11px;font-size:12px;font-weight:600;cursor:pointer}
+  .seg button.on{background:var(--accent2);color:#fff}
+  .loading{color:var(--muted);padding:40px;text-align:center}
+  .legend{font-size:11px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 0}
+  /* "Across the grammars" synthesis banner — content of the emergent entity node */
+  .synth{background:linear-gradient(135deg,rgba(47,93,138,.12),rgba(212,150,90,.06));
+    border:1px solid rgba(181,101,29,.25);border-radius:12px;padding:14px 16px;margin:0 0 16px;font-size:13px;line-height:1.65}
+  .synth .sh{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:7px;font-weight:700}
+  .synth b.md{color:#221f1a}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:middle;margin-right:4px}
+
+  /* Grammar picker panel */
+  #deckpanel{position:absolute;right:18px;top:58px;z-index:30;background:var(--panel);border:1px solid var(--line);
+    border-radius:12px;box-shadow:0 12px 40px rgba(60,45,20,.4);padding:12px;width:340px;max-height:70vh;overflow:auto;display:none}
+  #deckpanel.open{display:block}
+  #deckpanel .pbtns{display:flex;gap:6px;margin-bottom:8px}
+  #deckpanel .pbtns button{flex:1;font-size:11px;padding:5px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;color:var(--text);cursor:pointer}
+  #deckpanel label{display:flex;align-items:center;gap:8px;font-size:12.5px;padding:3px 2px;cursor:pointer}
+  #deckpanel label .yr{color:var(--muted);font-size:11px;margin-left:auto}
+  /* Highlight which grammars actually have the currently-viewed entity — same
+     "show gaps, don't hide them" convention as grammar-picker.js: has-entity
+     stays full ink, no-entity is visible but de-emphasized, never removed. */
+  #deckpanel .dp-hint{font-size:11px;color:var(--muted);margin:0 0 8px;font-style:italic}
+  #deckpanel label.dp-has span.dp-label{font-weight:600;color:var(--text)}
+  #deckpanel label.dp-gap{opacity:.55}
+  #deckpanel label.dp-gap span.dp-label{font-style:italic}
+
+  /* Matrix */
+  table.matrix{border-collapse:collapse;font-size:12px}
+  table.matrix th,table.matrix td{border:1px solid var(--line);padding:0}
+  table.matrix th{background:var(--panel);position:sticky;font-weight:600;color:var(--muted)}
+  table.matrix thead th{top:0;z-index:3;padding:8px 6px;white-space:nowrap;vertical-align:bottom}
+  table.matrix tbody th{left:0;z-index:2;text-align:left;padding:6px 10px;background:var(--panel);max-width:230px}
+  table.matrix tbody th .ttl{color:var(--text);font-weight:600}
+  table.matrix tbody th .later-tag{font-size:9px;color:var(--later);border:1px solid rgba(181,101,29,.4);border-radius:4px;padding:0 3px;margin-left:5px}
+  .cell{width:54px;height:32px;display:flex;align-items:center;justify-content:center;font-size:11px}
+
+  /* Synopsis — no inner column scroll (page scrolls); sticky images */
+  .cols{display:flex;flex-wrap:wrap;gap:14px;padding-bottom:8px;align-items:flex-start}
+  .col{flex:0 0 320px;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    overflow-y:auto;max-height:calc(100vh - 132px)}
+  .col h3{margin:0;padding:10px 12px;font-size:13px;background:var(--panel2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+  .col .colimg{height:160px;background:#faf8f3 center/contain no-repeat;position:sticky;top:39px;z-index:1}
+  .col .secs{padding:10px 12px}
+  .sec{margin:0 0 12px}
+  .sec .st{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--accent);margin:0 0 3px}
+  .sec.later .st{color:var(--later)}
+  .sec .sb{font-size:12.5px;color:#4a4439}
+  .sec .attr{font-size:10px;font-style:italic;color:var(--muted);display:block;margin-bottom:3px}
+  .divider{border:0;border-top:1px dashed rgba(181,101,29,.3);margin:14px 0 10px}
+  .divider-lbl{font-size:10px;color:var(--later);text-transform:uppercase;letter-spacing:.05em}
+  /* Synopsis transpose — section rows, grammar columns */
+  table.synT{border-collapse:collapse;font-size:12px;width:100%}
+  table.synT th,table.synT td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+  table.synT thead th{background:var(--panel);position:sticky;top:64px;z-index:3;font-size:11px;white-space:nowrap}
+  table.synT tbody th{background:var(--panel);position:sticky;left:0;z-index:2;font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--accent);max-width:140px}
+  table.synT tbody th.later{color:var(--later)}
+  table.synT td{min-width:230px;max-width:340px;font-size:12px;color:#4a4439}
+  table.synT td .attr{font-size:10px;font-style:italic;color:var(--muted);display:block;margin-bottom:3px}
+  table.synT td.empty{color:#d8d2c6;text-align:center}
+
+  .card-open{cursor:pointer;transition:outline .12s}
+  .card-open:hover{outline:2px solid var(--gold);outline-offset:1px}
+  /* Ribbon — the wide content scrolls inside its OWN container so a 375px page
+     never scrolls sideways; the ribbon keeps a readable minimum width. */
+  .ribbon-scroll{overflow-x:auto;overflow-y:hidden;padding-bottom:6px}
+  /* --axis-y is set per render (viewRibbon): the band above the line is reserved
+     only when there is a plate thumbnail to hang in it. */
+  .ribbon{position:relative;margin:22px 0 10px;min-width:700px;--axis-y:130px}
+  .axis{position:absolute;left:0;right:0;top:var(--axis-y);height:2px;background:linear-gradient(90deg,var(--line-soft),var(--accent))}
+  /* Ruled gradations on the time axis — a linear year scale you can actually read,
+     so a long blank run is legible AS elapsed time rather than as a broken chart. */
+  .gtick{position:absolute;top:var(--axis-y);width:1px;height:7px;background:var(--line-soft);transform:translateX(-50%)}
+  .gtick .gy{position:absolute;top:8px;left:0;transform:translateX(-50%);font-size:9px;
+    color:var(--faint);white-space:nowrap;letter-spacing:.02em}
+  /* Grammars with no source date are listed here instead of being parked at a fake
+     year on the axis. Same "show the gap, don't hide it" convention as the picker. */
+  .undated-list{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:2px 0 10px;
+    padding:9px 11px;border:1px dashed var(--line);border-radius:10px;background:var(--panel2)}
+  .undated-list .ul-h{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);flex-basis:100%}
+  .undated-list .ul-chip{font:inherit;font-size:11.5px;padding:4px 10px;border-radius:999px;
+    border:1px solid var(--line);background:var(--panel);color:var(--ink-soft);cursor:pointer}
+  .undated-list .ul-chip:hover{border-color:var(--accent);color:var(--accent)}
+  .tick{position:absolute;top:var(--axis-y)}
+  .tick .pt{width:13px;height:13px;border-radius:50%;border:2px solid var(--bg);cursor:pointer;transform:translate(-50%,-50%)}
+  .tick .stem{position:absolute;left:0;width:1px;background:rgba(0,0,0,.10);transform:translateX(-50%)}
+  /* labels WRAP to two lines instead of being cut mid-word; the full text is always
+     in the title attribute so nothing is lost. */
+  .tick .lbl{position:absolute;transform:translateX(-50%);font-size:10px;color:var(--text);text-align:center;width:108px;line-height:1.25}
+  .tick .lbl .nm{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+  .tick .yr{display:block;font-size:9px;color:var(--muted)}
+  .tick.native .pt{background:var(--native)}
+  .tick.later .pt{background:var(--later)}
+  .tick .thumb{position:absolute;transform:translateX(-50%);width:34px;height:52px;object-fit:cover;border-radius:4px;border:1px solid var(--line)}
+  #ribbon-read{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin-top:12px;min-height:60px;font-size:13px}
+
+  /* Small multiples */
+  /* Masonry, not a grid. Tiles are now genuinely different heights (an illustrated
+     tile carries a 190px plate + its credit; an unillustrated one carries a single
+     line), and in a grid every row is as tall as its tallest tile — so one plate
+     punched a column of blank page through the whole row. A multi-column flow packs
+     them. Same fix, same reason, as all-astros.html's .voices. */
+  .multiples{columns:230px;column-gap:14px}
+  .mtile{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    break-inside:avoid;margin:0 0 14px;width:100%}
+  .mtile .mimg{height:190px;background:var(--thumb-bg) center/contain no-repeat}
+  /* the honest stand-in for a tile with no plate — a line of text, not 190px of grey */
+  .mtile .mnoimg{padding:16px 10px;font-size:10.5px;font-style:italic;text-align:center;
+    color:var(--faint);background:var(--panel2);border-bottom:1px solid var(--line)}
+  .mtile .mcredit{padding:0 9px}
+  .mtile .mcredit .md-credit{color:var(--muted);font-size:9.5px}
+  .mtile .mcap{padding:7px 9px;font-size:11px;color:var(--muted)}
+  .mtile .mcap b{color:var(--text);display:block;font-size:12px}
+
+  /* Reader */
+  .reader{max-width:640px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .reader .rimg{height:280px;background:var(--thumb-bg) center/contain no-repeat;margin:18px 18px 4px}
+  .reader .rcredit{margin:0 26px 12px}
+  .reader .rcredit .md-credit{color:var(--muted);text-align:center}
+  .reader .rbody{padding:0 26px 26px}
+  .reader h2{font-size:22px;margin:0 0 4px}
+  .reader .rsec{margin:0 0 16px}
+  .reader .rsec .st{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin:0 0 4px}
+  .reader .rsec.later .st{color:var(--later)}
+  .reader details{border-top:1px dashed rgba(181,101,29,.3);padding-top:10px;margin-top:14px}
+  .reader summary{cursor:pointer;font-size:12px;color:var(--later);text-transform:uppercase;letter-spacing:.04em}
+  .nav{display:flex;justify-content:space-between;padding:14px 26px;border-top:1px solid var(--line)}
+  .nav button{background:var(--panel2);border:1px solid #cfc8ba;color:var(--text);border-radius:8px;padding:8px 16px;cursor:pointer;font-weight:600}
+  .attr{font-size:10px;font-style:italic;color:var(--muted);display:block;margin-bottom:4px}
+  /* was #fff — white bold on a white panel, i.e. every **bold** run in every
+     section body rendered invisible. Light-only theme: ink, from the token. */
+  b.md,.sb strong,.reader strong,td strong,#ribbon-read strong{color:var(--ink)}
+  /* long public-domain excerpts: blockquote + caption need breathing room */
+  .sb blockquote,.reader blockquote,td blockquote,#ribbon-read blockquote{color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<script src="../site-header.js?v=47"></script>
+<script src="md.js?v=2"></script>
+<site-header active="lenses"></site-header>
+<header>
+  <h1>Lenses <span style="color:var(--muted);font-weight:400">· five ways to see the same data</span></h1>
+  <div class="sub" id="status">Loading every grammar from the collection…</div>
+  <div class="tabrow">
+    <select id="lens-pick" title="Choose a lens"></select>
+    <div class="tabs" id="tabs"></div>
+  </div>
+  <button class="deckbtn" id="deckbtn" style="display:none">✦ Grammars ▾</button>
+</header>
+<div id="deckpanel"></div>
+<main id="main"><div class="loading">Loading…</div></main>
+
+<script>
+// ── helpers (shared Section Lens contract) ────────────────────────────────────
+const STOP=new Set(['the','a','an','this','that','these','those','it','its']);
+const lensNorm=s=>String(s).toLowerCase().replace(/['’]s\b/g,'').replace(/[_\-]+/g,' ').replace(/[.:;,]+$/,'').split(/\s+/).filter(w=>w&&!STOP.has(w)).join(' ').trim();
+const lensAttr=t=>{ if(typeof t!=='string')return null; const m=t.trim().match(/^\[([^\]]{3,200})\]/); return m?m[1].trim():null; };
+const attrYear=a=>{ const m=a&&a.match(/\b(1[0-9]{3}|20[0-9]{2})\b/); return m?+m[1]:Infinity; };
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// One shared renderer (viewers/md.js) — the local two-liner only knew **bold**, so the
+// public-domain "The record — …" sections showed their `*caption*` asterisks and `> `
+// blockquote markers as literal punctuation. MD.toHtml emits real <em>/<blockquote>.
+const md=s=>MD.toHtml(s);
+const clip=(s,n)=>MD.clip(s,n);
+
+// ── Dating contract (grammars/_collection.json `_dating_contract`) ───────────────
+// `provenance` is 'record' | 'contemporary' | 'casting'; `year_label` is always a
+// human string; `year` exists ONLY for provenance === 'record'. An ABSENT year means
+// genuinely undated — bucket it and say so. NEVER substitute a sentinel: this view
+// used to fall back to 9999 and printed "9999" on the ribbon as if it were a date.
+const isDated=d=>typeof d.year==='number';
+// Short, honest year text for chips and headers; `year_label` is the long honest form.
+const yearText=d=>isDated(d)?(d.year<0?Math.abs(d.year)+' BCE':String(d.year)):'undated';
+const shortName=n=>String(n||'').split(' — ')[0].trim();
+// Two grammars can share a short name — "Archetypal Astrology" (Tarnas pairs vs the
+// pair library) and "Mesopotamian Omen-Craft" both collided, so columns and the picker
+// showed two identical, indistinguishable labels. Keep the qualifier for those.
+function dedupeLabels(list){
+  const n={}; list.forEach(d=>n[d.label]=(n[d.label]||0)+1);
+  list.forEach(d=>{ if(n[d.label]>1){
+    const rest=String(d.full||'').split(' — ').slice(1).join(' — ').trim();
+    d.label=d.label+' — '+(rest||d.slug);
+  }});
+}
+
+// ── Cross-grammar entity key ───────────────────────────────────────────────────
+// Tarot matched cards across decks with a stamped metadata.trump_key/minor_key
+// (deck card NAMES vary by tradition/language). Astrology's voice libraries name
+// their entities identically across grammars — "Saturn" is "Saturn" in Ptolemy,
+// Alan Leo, and the flagship interpretation set — so the normalized item NAME
+// itself is the shared key. Simpler, and it falls straight out of the data.
+const CATEGORY_ORDER={planet:0,sign:1,house:2,aspect:3,position:4,lens:5};
+const PLANET_ORDER=['sun','moon','mercury','venus','mars','jupiter','saturn','uranus','neptune','pluto'];
+const SIGN_ORDER=['aries','taurus','gemini','cancer','leo','virgo','libra','scorpio','sagittarius','capricorn','aquarius','pisces'];
+function entityKey(name){ return lensNorm(String(name||'').replace(/^[0-9]+\.\s*/,'')); }
+function entityOrder(key,category){
+  const catBase=(CATEGORY_ORDER[category]??9)*100;
+  const within = category==='planet' ? PLANET_ORDER.indexOf(key)
+               : category==='sign'   ? SIGN_ORDER.indexOf(key) : -1;
+  return catBase + (within>=0?within:50);
+}
+function cardLabel(key){ return key.replace(/\b\w/g,c=>c.toUpperCase()); }
+
+let DECKS=[];        // [{slug,full,label,year|null,yearLabel,provenance,branch}] from the collection
+let SELECTED=new Set();  // selected grammar slugs
+let ITEMS=[];        // flat: {deck,label,full,year,yearLabel,id,name,sections,image,cardKey,cardOrder,category}
+const deckOf=slug=>DECKS.find(d=>d.slug===slug)||{label:slug,full:slug,year:null,yearLabel:''};
+let SECGROUPS=[];
+// The entity the reader is currently looking at, whenever the active lens view is
+// entity-scoped (Synopsis/Ribbon/Small multiples all resolve to one `card`); null
+// for Matrix/Reader, which aren't about a single entity. Drives the "which
+// grammars actually populate this" highlight in the grammar picker below —
+// builder's ask: "recon grammars with houses [entities] and highlight the ones
+// for which they populate."
+let currentEntityKey=null;
+const SYNTHESIS={};  // no cross-grammar evolution commentary file exists for this repo (yet) — always empty
+function synthHTML(){ return ''; }
+
+// ── load EVERY grammar from the collection (programmatic; new grammars just appear) ──
+async function load(){
+  const col=await (await fetch('../grammars/_collection.json')).json();
+  // Dated grammars first, oldest → newest; undated ones after, alphabetically. They
+  // are never given a fake year, and never a fake position on a time axis.
+  DECKS=col.grammars.filter(g=>!g.is_meta)
+    .map(g=>({slug:g.slug,full:(g.name||g.slug),label:shortName(g.name||g.slug),
+              year:(typeof g.year==='number'?g.year:null),
+              yearLabel:g.year_label||'',provenance:g.provenance||'',branch:g.branch}))
+    .sort((a,b)=>(isDated(a)?0:1)-(isDated(b)?0:1)
+              || (isDated(a)?a.year-b.year:a.label.localeCompare(b.label)));
+  dedupeLabels(DECKS);
+  SELECTED=new Set(DECKS.map(d=>d.slug));
+  const out=[];
+  await Promise.all(DECKS.map(async d=>{
+    try{
+      const g=await (await fetch(`../grammars/${d.slug}/grammar.json`)).json();
+      for(const it of (g.items||[])){
+        const secs=it.sections||{};
+        const hasText=Object.values(secs).some(v=>typeof v==='string'&&v.trim());
+        if(!hasText && !it.image_url) continue;
+        const cardKey=entityKey(it.name);
+        if(!cardKey) continue;
+        const cardOrder=entityOrder(cardKey,it.category);
+        out.push({deck:d.slug,label:d.label,full:d.full,year:d.year,yearLabel:d.yearLabel,
+          id:it.id,name:it.name||it.id,
+          sections:secs,image:it.image_url||'',
+          // the plate's public-domain provenance travels with the URL so the views
+          // that SHOW a picture can credit it (viewers/md.js → MD.credit)
+          credit:(it.metadata||{}).image_credit||null,
+          category:it.category||'other', cardKey, cardOrder});
+      }
+    }catch(e){ console.warn('skip',d.slug,e); }
+  }));
+  ITEMS=out;
+  recomputeSections();
+  document.getElementById('status').textContent=`${DECKS.length} grammars · ${ITEMS.length} items · all loaded from the collection`;
+}
+function recomputeSections(){
+  const m=new Map();
+  for(const it of activeItems()) for(const [k,v] of Object.entries(it.sections)){
+    if(typeof v!=='string'||!v.trim())continue;
+    const key=lensNorm(k); if(!key)continue;
+    let s=m.get(key); if(!s){s={key,count:0,labels:new Map(),attributed:false,year:Infinity};m.set(key,s);}
+    s.count++; s.labels.set(k,(s.labels.get(k)||0)+1);
+    const a=lensAttr(v); if(a){s.attributed=true; s.year=Math.min(s.year,attrYear(a));}
+  }
+  SECGROUPS=[...m.values()].map(s=>({...s,label:[...s.labels].sort((a,b)=>b[1]-a[1])[0][0]})).sort((a,b)=>b.count-a.count);
+}
+const activeDecks=()=>DECKS.filter(d=>SELECTED.has(d.slug));
+const activeItems=()=>ITEMS.filter(i=>SELECTED.has(i.deck));
+const secOf=(it,key)=>{ for(const [k,v] of Object.entries(it.sections)){ if(typeof v==='string'&&v.trim()&&lensNorm(k)===key) return {raw:k,val:v}; } return null; };
+// entities present (by normalized name) across the selected grammars, ordered by category then canonical order
+function cardOptions(){
+  const m=new Map();
+  for(const it of activeItems()) if(it.cardKey){ if(!m.has(it.cardKey)) m.set(it.cardKey,it.cardOrder); }
+  return [...m.entries()].sort((a,b)=>a[1]-b[1]).map(([k])=>k);
+}
+// grouped <optgroup> options for the entity picker, grouped by the category most items share
+function cardOptionsHTML(sel){
+  const keys=cardOptions();
+  const catOf=new Map();
+  for(const it of activeItems()) if(!catOf.has(it.cardKey)) catOf.set(it.cardKey,it.category);
+  const groups={};
+  for(const k of keys){ const c=catOf.get(k)||'other'; (groups[c]=groups[c]||[]).push(k); }
+  const order=Object.keys(groups).sort((a,b)=>(CATEGORY_ORDER[a]??9)-(CATEGORY_ORDER[b]??9));
+  let h='';
+  for(const g of order){ const arr=groups[g]; if(!arr||!arr.length) continue;
+    const label=g.charAt(0).toUpperCase()+g.slice(1)+'s';
+    h+=`<optgroup label="${esc(label)}">`+arr.map(k=>`<option value="${esc(k)}"${k===sel?' selected':''}>${esc(cardLabel(k))}</option>`).join('')+`</optgroup>`; }
+  return h;
+}
+
+// ── grammar picker ───────────────────────────────────────────────────────────────
+// Which decks actually have the currently-viewed entity — data-shape inference
+// (does any item in this deck share the entity's cardKey?), never a slug/type check.
+function decksWithCurrentEntity(){
+  if(!currentEntityKey) return null;
+  const has=new Set(ITEMS.filter(i=>i.cardKey===currentEntityKey).map(i=>i.deck));
+  return has;
+}
+function renderDeckPanel(){
+  const p=document.getElementById('deckpanel');
+  const hasSet=decksWithCurrentEntity();
+  const hint = hasSet
+    ? `<p class="dp-hint">${hasSet.size} of ${DECKS.length} grammars have “${esc(cardLabel(currentEntityKey))}” — those are highlighted below.</p>`
+    : '';
+  p.innerHTML=`<div class="pbtns"><button data-a="all">All</button><button data-a="none">None</button><button data-a="primary">Primary sources</button></div>`+
+    hint+
+    DECKS.map(d=>{
+      const has = hasSet ? hasSet.has(d.slug) : null;
+      const cls = has===null ? '' : (has ? 'dp-has' : 'dp-gap');
+      return `<label class="${cls}" data-slug="${esc(d.slug)}" title="${esc(d.full)}${d.yearLabel?' · '+esc(d.yearLabel):''}"><input type="checkbox" data-slug="${esc(d.slug)}" ${SELECTED.has(d.slug)?'checked':''}> <span class="dp-label">${esc(d.label)}</span> <span class="yr">${esc(yearText(d))}</span></label>`;
+    }).join('');
+  p.querySelectorAll('input').forEach(cb=>cb.onchange=()=>{ cb.checked?SELECTED.add(cb.dataset.slug):SELECTED.delete(cb.dataset.slug); afterDeckChange(); });
+  p.querySelectorAll('.pbtns button').forEach(b=>b.onclick=()=>{
+    if(b.dataset.a==='all') SELECTED=new Set(DECKS.map(d=>d.slug));
+    else if(b.dataset.a==='none') SELECTED=new Set();
+    else SELECTED=new Set(DECKS.filter(d=>d.branch==='primary-sources').map(d=>d.slug));
+    renderDeckPanel(); afterDeckChange();
+  });
+}
+function afterDeckChange(){
+  document.getElementById('deckbtn').textContent=`✦ Grammars (${SELECTED.size}/${DECKS.length}) ▾`;
+  recomputeSections(); render();
+}
+
+// ── VIEW 1: MATRIX ────────────────────────────────────────────────────────────
+function viewMatrix(){
+  const decks=activeDecks(); const rows=SECGROUPS.filter(s=>s.count>=2);
+  const tot={}; decks.forEach(d=>tot[d.slug]=activeItems().filter(i=>i.deck===d.slug).length);
+  let h=`<div class="ctl"><div><b>Matrix</b> — section coverage across every selected grammar (green native · rust later/attributed). Reveals which commentary belongs where.</div></div>
+   <div class="legend"><span><span class="dot" style="background:var(--native)"></span>native</span><span><span class="dot" style="background:var(--later)"></span>later (dated)</span></div>
+   <div style="overflow:auto;margin-top:12px"><table class="matrix"><thead><tr><th>section ↓ &nbsp; grammar →</th>`;
+  decks.forEach(d=>h+=`<th title="${esc(d.full)}${d.yearLabel?' · '+esc(d.yearLabel):''}">${esc(clip(d.label,22))}<br><span style="font-weight:400">${esc(yearText(d))}</span></th>`);
+  h+=`</tr></thead><tbody>`;
+  for(const s of rows){
+    h+=`<tr><th><span class="ttl">${esc(s.label)}</span>${s.attributed?`<span class="later-tag">${s.year<Infinity?s.year:'later'}</span>`:''}</th>`;
+    for(const d of decks){
+      const n=activeItems().filter(i=>i.deck===d.slug && secOf(i,s.key)).length;
+      const cov=n/(tot[d.slug]||1); const base=s.attributed?'181,101,29':'110,231,183';
+      h+=`<td><div class="cell" style="${n?`background:rgba(${base},${(0.12+cov*0.6).toFixed(2)})`:''}" title="${esc(s.label)} · ${esc(d.label)}: ${n}/${tot[d.slug]||0}">${n||''}</div></td>`;
+    }
+    h+=`</tr>`;
+  }
+  return h+`</tbody></table></div>`;
+}
+
+// ── VIEW 2: SYNOPSIS (by grammar OR transposed by section) ───────────────────────
+let synMode='deck';
+function viewSynopsis(sel){
+  const opts=cardOptions(); const card=opts.includes(sel)?sel:opts[0];
+  const decksWith=activeDecks().map(d=>activeItems().find(i=>i.deck===d.slug && i.cardKey===card)).filter(Boolean);
+  let h=`<div class="ctl"><label class="lbl">Entity</label><select id="syn-sel">${cardOptionsHTML(card)}</select>
+    <span class="seg"><button data-m="deck" class="${synMode==='deck'?'on':''}">By grammar</button><button data-m="section" class="${synMode==='section'?'on':''}">By section</button></span>
+    <span style="color:var(--muted);font-size:12px">${decksWith.length} grammars have this entity</span></div>`;
+  h+=synthHTML(card);
+  if(!decksWith.length) return h+'<p style="color:var(--muted)">No grammar in the current selection has this entity.</p>';
+  const secEntries=it=>Object.entries(it.sections).filter(([k,v])=>typeof v==='string'&&v.trim())
+      .map(([k,v],i)=>{const a=lensAttr(v);return{k,v,i,attributed:!!a,attr:a,year:a?attrYear(a):Infinity};})
+      .sort((a,b)=>(a.attributed-b.attributed)||(a.attributed?(a.year-b.year):(a.i-b.i)));
+
+  if(synMode==='section'){
+    // rows = section groups (native first, later after by year), cols = grammars
+    const groups=[]; const seen=new Set();
+    decksWith.forEach(it=>secEntries(it).forEach(e=>{const key=lensNorm(e.k); if(!seen.has(key)){seen.add(key);groups.push({key,label:e.k,attributed:e.attributed,year:e.year});}}));
+    groups.sort((a,b)=>(a.attributed-b.attributed)||(a.attributed?(a.year-b.year):0));
+    h+=`<div style="overflow:auto"><table class="synT"><thead><tr><th>section ↓ grammar →</th>${decksWith.map(it=>`<th title="${esc(it.full||it.label)}${it.yearLabel?' · '+esc(it.yearLabel):''}">${esc(clip(it.label,24))}<br><span style="color:var(--muted);font-weight:400">${esc(yearText(it))}</span></th>`).join('')}</tr></thead><tbody>`;
+    for(const g of groups){
+      h+=`<tr><th class="${g.attributed?'later':''}">${esc(g.label)}${g.attributed?` <span style="font-size:9px">·${g.year<Infinity?g.year:'later'}</span>`:''}</th>`;
+      for(const it of decksWith){ const s=secOf(it,g.key);
+        if(!s){h+='<td class="empty">—</td>';continue;}
+        const a=lensAttr(s.val); const body=a?s.val.trim().replace(/^\[[^\]]*\]\s*/,''):s.val;
+        // Dense comparison grid: plain text, markers stripped (a hard 700-char cut can
+        // fall inside a `**` pair or a blockquote and leak raw punctuation), clipped on
+        // a word boundary, with the full section in the title attribute.
+        const plain=MD.strip(body);
+        h+=`<td title="${esc(a?a+' — '+plain:plain)}">${a?`<span class="attr">${esc(clip(a,60))}</span>`:''}<p style="margin:0">${esc(clip(plain,700))}</p></td>`;
+      }
+      h+=`</tr>`;
+    }
+    return h+`</tbody></table></div>`;
+  }
+  // by grammar (columns) — no inner scroll; sticky image+header
+  h+=`<div class="cols">`;
+  for(const it of decksWith){
+    let body='',dividerDone=false;
+    for(const e of secEntries(it)){
+      if(e.attributed&&!dividerDone){body+=`<hr class="divider"><div class="divider-lbl">later interpretations</div>`;dividerDone=true;}
+      const bv=e.attr?e.v.trim().replace(/^\[[^\]]*\]\s*/,''):e.v;
+      body+=`<div class="sec ${e.attributed?'later':''}"><div class="st">${esc(e.k)}</div>${e.attr?`<span class="attr">${esc(e.attr)}</span>`:''}<div class="sb">${md(bv)}</div></div>`;
+    }
+    h+=`<div class="col"><h3 title="${esc(it.full||it.label)}${it.yearLabel?' · '+esc(it.yearLabel):''}">${esc(it.label)} · ${esc(yearText(it))}</h3>${it.image?`<div class="colimg card-open" data-od="${it.deck}|${esc(it.id)}" title="Open this item in the Cards viewer" style="background-image:url('${esc(it.image)}')"></div>`:''}<div class="secs">${body}</div></div>`;
+  }
+  return h+`</div>`;
+}
+
+// Honest year text: the collection stores a signed integer (-700 = 700 BCE), and
+// printing that raw put "-700" on the ribbon and in its detail card as if it were
+// a date. Same rule as viewers/timeline.html's fmtYear.
+const fmtY=y=>(y==null||!isFinite(y))?'':(y<0?Math.abs(y)+' BCE':(y<1000?y+' CE':String(y)));
+
+// ── VIEW 3: PROVENANCE RIBBON ─────────────────────────────────────────────────
+// Rebuilt Jul 26 2026 after the builder caught four defects here (this is the tab
+// in the bug screenshot): a "9999" sentinel printed as a real year, names cut to
+// 16 chars into meaningless fragments, labels stacked past the bottom of a fixed-
+// height container, and a dated commentary point that read as if it WERE the
+// grammar it quotes. Rules now: only genuinely dated things go on the time axis;
+// undated grammars are listed separately and labelled as undated; labels wrap and
+// keep their full text in a title; every point says which grammar it lives in.
+function viewRibbon(sel){
+  const opts=cardOptions(); const card=opts.includes(sel)?sel:(opts.includes('saturn')?'saturn':opts[0]);
+  const pts=[];           // dated points only — these are the ones the axis can place
+  const undatedDecks=[];  // grammars with no source date: shown as a labelled list
+  const missingDecks=[];  // selected grammars that have no entry for this entity at all
+  for(const d of activeDecks()){
+    const it=activeItems().find(i=>i.deck===d.slug && i.cardKey===card);
+    if(!it){ missingDecks.push(d); continue; }
+    // Split this item's sections into the grammar's OWN treatment and its dated
+    // commentary. A section whose body opens with an "[attribution … 1647]" prefix
+    // becomes its own rust point on the axis below; everything else *is* this
+    // grammar's reading of the entity and belongs to the green point.
+    //
+    // Fixed Jul 26 2026: the green point used to carry a hardcoded one-line stub
+    // ("… — this entity as treated in this grammar") instead of the item's real
+    // sections, so clicking Alan Leo's Saturn showed a near-empty card and the
+    // builder reasonably asked "Alan Leo does not have saturn?" — he does, with a
+    // full record + Interpretation + Keywords. Only the rust points ever rendered
+    // real text. Now both kinds read from the data.
+    const own=[], dated=[];
+    for(const [k,v] of Object.entries(it.sections||{})){
+      if(typeof v!=='string'||!v.trim()) continue;
+      const a=lensAttr(v), y=a?attrYear(a):Infinity;
+      (a && y!==Infinity ? dated : own).push({k,v,attr:a,year:y});
+    }
+    // An attributed section with no parseable year can't be placed on the axis, so it
+    // stays with the grammar's own text rather than vanishing — its attribution is
+    // kept as an italic line so it is never read as the grammar's own voice.
+    const nativeText = own.length
+      ? own.map(e=>`### ${e.k}\n`+(e.attr?`*${e.attr}*\n\n`:'')+
+          (e.attr?e.v.trim().replace(/^\[[^\]]*\]\s*/,''):e.v.trim())).join('\n\n')
+      : `*${d.label} has an entry for ${cardLabel(card)}, but every section in it is dated `+
+        `commentary quoting someone else — those are the rust points on the axis.*`;
+    const nativePt={year:isDated(d)?d.year:null,kind:'native',label:d.label,full:d.full,
+      grammarLabel:d.label,entityName:it.name,yearLabel:d.yearLabel,img:it.image,credit:it.credit,
+      deck:d.slug,id:it.id,text:nativeText,secCount:own.length};
+    if(isDated(d)) pts.push(nativePt);
+    else undatedDecks.push({...d,item:it,point:nativePt});
+    for(const e of dated){
+      if(pts.some(p=>p.kind==='later'&&p.year===e.year&&p.src===e.k&&p.deck===d.slug))continue;
+      // `grammarLabel` is the grammar this section actually LIVES in — without it a
+      // rust point like "1647 · What dignity means" sitting next to the native Lilly
+      // point read as if it were Lilly's own grammar, when it is dignities-rulerships
+      // quoting Lilly. The [attribution] prefix in the data stays exactly as authored.
+      pts.push({year:e.year,kind:'later',label:e.k,src:e.k,attr:e.attr,deck:d.slug,id:it.id,
+        grammarLabel:d.label,full:d.full,entityName:it.name,
+        text:e.v.trim().replace(/^\[[^\]]*\]\s*/,'')});
+    }
+  }
+  pts.sort((a,b)=>a.year-b.year||(a.kind==='native'?-1:1));
+
+  // ── axis: dated points only, so nothing is placed at a year it does not have ──
+  // The mapping is and stays STRICTLY LINEAR in years: an empty stretch of ribbon
+  // is a real gap in the record, and squeezing it (log/ordinal) would make the
+  // library look denser than it is. What was missing was any way to READ that gap
+  // — the axis carried no scale at all, so the run from Ptolemy to Lilly looked
+  // like a rendering fault rather than fifteen centuries. It is now ruled.
+  const yrs=pts.map(p=>p.year);
+  const min=yrs.length?Math.min(...yrs):150, max=yrs.length?Math.max(...yrs):2026;
+  // Usable % band. A label is 108px wide and centred on its point, so the band has
+  // to start at least half a label in from each edge or the first and last names
+  // get sliced by the container (at 375px the ribbon opened on "emy's Tetrabiblos").
+  // 8% of the 700px minimum ribbon is 56px — just over half a label.
+  const L=8, R=90;
+  const X=y=>((y-min)/(max-min||1))*(R-L)+L;
+  // Ruled scale: a round step that yields roughly 4–9 gradations across the span.
+  function scaleTicks(){
+    const span=max-min; if(!(span>0)) return [];
+    const steps=[10,25,50,100,200,250,500,1000,2000];
+    const step=steps.find(s=>span/s<=9)||2000;
+    const out=[];
+    for(let y=Math.ceil(min/step)*step; y<=max; y+=step){ if(y===0) continue; out.push(y); }
+    return out;
+  }
+  // Collision dodge: a label box is LABEL_W px wide inside a ribbon at least
+  // RIBBON_MIN px, so two labels collide within ~LABEL_W/RIBBON_MIN of each other.
+  // Compare against every label already placed in a lane (not just the previous
+  // one) and take the first free lane — a run of near-identical x values used to
+  // march lane 0,1,2,3… straight out of the fixed-height container.
+  const LABEL_W=108, RIBBON_MIN=700, GAP=(LABEL_W/RIBBON_MIN)*100;
+  const laneLastX=[];
+  pts.forEach(p=>{
+    const x=X(p.year);
+    let lane=0;
+    while(laneLastX[lane]!=null && x-laneLastX[lane]<GAP) lane++;
+    laneLastX[lane]=x; p._lane=lane; p._x=x;
+  });
+  window._ribbonPts=pts;
+  // The band above the axis exists only to hold the plate thumbnails, and most
+  // entities have at most one. It was a fixed 130px, so a typical ribbon opened
+  // with a hand's width of blank page above the line before anything was drawn.
+  // Reserve the room only when there is actually a thumbnail to put in it.
+  const hasThumb=pts.some(p=>p.kind==='native'&&p.img);
+  const AXIS_Y=hasThumb?92:34, LANE0=36, LANE_H=44;
+  const maxLane=pts.reduce((m,p)=>Math.max(m,p._lane),0);
+  // Height follows the deepest lane so labels can never spill past the container.
+  const ribbonH=Math.max(150, AXIS_Y+LANE0+(maxLane+1)*LANE_H+16);
+
+  // Ruled gradations, drawn under the axis and above the first label lane, so the
+  // reader can see WHERE the empty stretches are rather than only that they exist.
+  const scale=scaleTicks().map(y=>
+    `<div class="gtick" style="left:${X(y).toFixed(2)}%"><span class="gy">${esc(fmtY(y))}</span></div>`).join('');
+
+  let ticks='';
+  pts.forEach((p,i)=>{
+    const labY=LANE0+p._lane*LANE_H;            // dodge downward
+    const tip=`${p.kind==='later'?p.label+' — in '+(p.grammarLabel||''):(p.full||p.label)}`+
+              ` · ${fmtY(p.year)}`+(p.attr?` · ${p.attr}`:'');
+    const thumbTip=p.kind==='native'&&p.img
+      ? (MD.creditText(p.credit)||'') : '';
+    ticks+=`<div class="tick ${p.kind}" style="left:${p._x.toFixed(1)}%">
+      ${p.kind==='native'&&p.img?`<img class="thumb card-open" src="${esc(p.img)}" data-od="${p.deck}|${esc(p.id)}" title="${esc(thumbTip?thumbTip+' — click to open this item in the Cards viewer':'Open this item in the Cards viewer')}" style="top:-68px">`:''}
+      <div class="stem" style="top:7px;height:${labY-7}px"></div>
+      <div class="pt" data-i="${i}" title="${esc(tip)}"></div>
+      <div class="lbl" style="top:${labY}px" title="${esc(tip)}"><span class="nm">${esc(p.label)}</span><span class="yr">${esc(fmtY(p.year))}</span></div></div>`;
+  });
+
+  // Undated grammars get an honest list, not a fake position at the right edge.
+  const undatedHTML = undatedDecks.length
+    ? `<div class="undated-list"><span class="ul-h">No source date — not placed on the axis (${undatedDecks.length})</span>`+
+      undatedDecks.map((d,i)=>`<button class="ul-chip" data-u="${i}" title="${esc(d.full)}${d.yearLabel?' · '+esc(d.yearLabel):''}">${esc(d.label)}</button>`).join('')+
+      `</div>` : '';
+  window._ribbonUndated=undatedDecks;
+
+  // A grammar that simply has no entry for this entity is said out loud rather than
+  // silently dropped — same "show the gap, don't hide it" convention as the picker
+  // and the undated list. A real absence is information; an invisible one is not.
+  const missingHTML = missingDecks.length
+    ? `<p style="font-size:11.5px;color:var(--muted);margin:9px 0 0;font-style:italic">`+
+      `No entry for ${esc(cardLabel(card))} in ${missingDecks.length} selected grammar`+
+      `${missingDecks.length>1?'s':''}: ${missingDecks.map(d=>esc(d.label)).join(' · ')}.</p>` : '';
+
+  return `<div class="ctl"><label class="lbl">Entity</label><select id="rib-sel">${cardOptionsHTML(card)}</select>
+    <span style="color:var(--muted);font-size:12px">— one entity's whole record: each dated grammar's own treatment (green) + each dated commentary it carries (rust). Click a point to read that layer in full. Grammars with no source date are listed under the axis rather than given a year they don't have; grammars with no entry for this entity are named too.</span></div>
+    ${synthHTML(card)}
+    <div class="ribbon-scroll"><div class="ribbon" style="height:${ribbonH}px;--axis-y:${AXIS_Y}px"><div class="axis"></div>${scale}${ticks}</div></div>
+    ${undatedHTML}
+    ${missingHTML}
+    <div id="ribbon-read"><span style="color:var(--muted)">Click a point on the timeline to read that layer.</span></div>`;
+}
+
+// ── VIEW 4: SMALL MULTIPLES ───────────────────────────────────────────────────
+function viewMultiples(sel){
+  const opts=cardOptions(); const card=opts.includes(sel)?sel:opts[0];
+  let tiles='';
+  for(const d of activeDecks()){
+    const matches=activeItems().filter(i=>i.deck===d.slug && i.cardKey===card);
+    const it=matches.find(m=>m.image)||matches[0]; if(!it)continue;
+    // Only a minority of entries carry a plate. The tile used to reserve the full
+    // 190px picture box either way, so a typical entity (Sun: 1 of 9 illustrated)
+    // rendered as eight identical empty grey rectangles — a grid that looked
+    // broken rather than sparse. An unillustrated tile now says so, in one short
+    // line, and takes only the room that line needs: honest gap, not dead space.
+    const visual = it.image
+      ? `<div class="mimg" style="background-image:url('${esc(it.image||'')}')"></div>`
+        + `<div class="mcredit">${MD.credit(it.credit,{compact:true})||''}</div>`
+      : `<div class="mnoimg">no illustration yet</div>`;
+    tiles+=`<div class="mtile card-open" data-od="${it.deck}|${esc(it.id)}" title="${esc(d.full)}${d.yearLabel?' · '+esc(d.yearLabel):''} — open this item in the Cards viewer">${visual}<div class="mcap"><b>${esc(d.label)}</b>${esc(yearText(d))} · ${esc(clip(it.name,34))}</div></div>`;
+  }
+  return `<div class="ctl"><label class="lbl">Entity</label><select id="mul-sel">${cardOptionsHTML(card)}</select>
+    <span style="color:var(--muted);font-size:12px">— the same entity interpreted by every selected tradition.</span></div><div class="multiples">${tiles||'<span style="color:var(--muted)">No images.</span>'}</div>`;
+}
+
+// ── VIEW 5: READER ────────────────────────────────────────────────────────────
+let readerDeck=null, readerIdx=0;
+function viewReader(){
+  const decks=activeDecks(); if(!decks.length) return '<p style="color:var(--muted)">No grammars selected.</p>';
+  if(!readerDeck||!SELECTED.has(readerDeck)) readerDeck=decks[0].slug;
+  const list=activeItems().filter(i=>i.deck===readerDeck);
+  if(readerIdx>=list.length)readerIdx=0; if(readerIdx<0)readerIdx=list.length-1;
+  const it=list[readerIdx]||{};
+  const entries=Object.entries(it.sections||{}).filter(([k,v])=>typeof v==='string'&&v.trim())
+    .map(([k,v],i)=>{const a=lensAttr(v);return{k,v,i,attributed:!!a,attr:a,year:a?attrYear(a):Infinity};})
+    .sort((a,b)=>(a.attributed-b.attributed)||(a.attributed?(a.year-b.year):(a.i-b.i)));
+  const native=entries.filter(e=>!e.attributed), later=entries.filter(e=>e.attributed);
+  const secHtml=e=>{const bv=e.attr?e.v.trim().replace(/^\[[^\]]*\]\s*/,''):e.v;
+    return `<div class="rsec ${e.attributed?'later':''}"><div class="st">${esc(e.k)}</div>${e.attr?`<span class="attr">${esc(e.attr)}</span>`:''}<div>${md(bv)}</div></div>`;};
+  return `<div class="ctl"><label class="lbl">Grammar</label><select id="rd-deck">${decks.map(d=>`<option value="${d.slug}"${d.slug===readerDeck?' selected':''}>${esc(d.label)}</option>`).join('')}</select>
+    <span style="color:var(--muted);font-size:12px">— one entity per spread; later layers in an expander.</span></div>
+   <div class="reader">${it.image?`<figure style="margin:0"><div class="rimg card-open" data-od="${it.deck}|${esc(it.id)}" title="Open this item in the Cards viewer" style="background-image:url('${esc(it.image)}')"></div><div class="rcredit">${MD.credit(it.credit)||''}</div></figure>`:''}
+     <div class="rbody"><h2>${esc(it.name||'—')}</h2><div class="sub" style="color:var(--muted);margin-bottom:14px" title="${esc(deckOf(readerDeck).full)}${deckOf(readerDeck).yearLabel?' · '+esc(deckOf(readerDeck).yearLabel):''}">${esc(deckOf(readerDeck).label)} · ${esc(yearText(deckOf(readerDeck)))} · ${readerIdx+1} / ${list.length}</div>
+       ${native.map(secHtml).join('')}${later.length?`<details open><summary>${later.length} later interpretation${later.length>1?'s':''} ▾</summary>${later.map(secHtml).join('')}</details>`:''}</div>
+     <div class="nav"><button id="rd-prev">← Prev</button><button id="rd-next">Next →</button></div></div>`;
+}
+
+// ── tabs + plumbing ───────────────────────────────────────────────────────────
+const VIEWS=[['ribbon','Provenance ribbon',s=>viewRibbon(s)],['synopsis','Synopsis',s=>viewSynopsis(s)],
+ ['multiples','Small multiples',s=>viewMultiples(s)],['matrix','Matrix',()=>viewMatrix()],['reader','Reader',()=>viewReader()]];
+let cur='ribbon';
+function render(arg){
+  document.getElementById('main').innerHTML=VIEWS.find(v=>v[0]===cur)[2](arg);
+  const on=(id,ev,fn)=>{const e=document.getElementById(id);if(e)e[ev]=fn;};
+  on('syn-sel','onchange',e=>render(e.target.value));
+  on('mul-sel','onchange',e=>render(e.target.value));
+  on('rib-sel','onchange',e=>render(e.target.value));
+  document.querySelectorAll('.seg button[data-m]').forEach(b=>b.onclick=()=>{synMode=b.dataset.m;render(document.getElementById('syn-sel')?.value);});
+  // Detail card for a ribbon point. Both kinds get the same "<entity> — in <grammar>"
+  // header: the header always names the grammar the layer LIVES IN ("in Essential
+  // Dignities & Rulerships") before the [attribution] line that says whom it quotes —
+  // otherwise a rust point sitting next to a native point of the same year reads as if
+  // it were that other grammar's own text, and a green point reads as if the grammar
+  // itself were the subject rather than its reading of the entity. Body is rendered in
+  // full: truncating a source excerpt is what destroys its meaning.
+  const ribbonCard=p=>{
+    const kindColor=p.kind==='later'?'later':'native';
+    const subject=p.kind==='later'?p.label:(p.entityName||p.label);
+    const inGrammar=p.grammarLabel||(p.kind==='later'?'':p.label);
+    const head=`${p.year!=null?esc(fmtY(p.year)):'undated'} · ${esc(subject)}`+
+      (inGrammar?` <span style="text-transform:none;letter-spacing:0;color:var(--muted)">— in ${esc(inGrammar)}</span>`:'');
+    return `<div style="font-size:11px;color:var(--${kindColor});text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">${head}</div>`+
+      (p.yearLabel?`<span class="attr">${esc(p.yearLabel)}</span>`:'')+
+      (p.attr?`<span class="attr">quoting ${esc(p.attr)}</span>`:'')+
+      md(p.text);
+  };
+  if(cur==='ribbon'){
+    document.querySelectorAll('.tick .pt').forEach(pt=>pt.onclick=()=>{
+      document.getElementById('ribbon-read').innerHTML=ribbonCard(window._ribbonPts[+pt.dataset.i]);
+    });
+    // Undated grammars are clickable too — they read the same way (the same fully
+    // built point object, so the same real sections), they just have no place on the axis.
+    document.querySelectorAll('.ul-chip').forEach(c=>c.onclick=()=>{
+      document.getElementById('ribbon-read').innerHTML=ribbonCard(window._ribbonUndated[+c.dataset.u].point);
+    });
+  }
+  if(cur==='reader'){ on('rd-deck','onchange',e=>{readerDeck=e.target.value;readerIdx=0;render();});
+    on('rd-prev','onclick',()=>{readerIdx--;render();}); on('rd-next','onclick',()=>{readerIdx++;render();}); }
+
+  // Track the entity currently in view — only Synopsis/Ribbon/Small-multiples are
+  // entity-scoped (each resolves to one `card` via its own <select>); Matrix/Reader
+  // aren't about a single entity, so the picker's highlight clears for those.
+  const entitySelectId = cur==='synopsis' ? 'syn-sel' : cur==='ribbon' ? 'rib-sel' : cur==='multiples' ? 'mul-sel' : null;
+  const nextEntityKey = entitySelectId ? (document.getElementById(entitySelectId)?.value || null) : null;
+  if (nextEntityKey !== currentEntityKey) {
+    currentEntityKey = nextEntityKey;
+    if (document.getElementById('deckpanel').classList.contains('open')) renderDeckPanel();
+  }
+}
+function buildTabs(){
+  document.getElementById('tabs').innerHTML=VIEWS.map(v=>`<span class="tab ${v[0]===cur?'on':''}" data-v="${v[0]}">${v[1]}</span>`).join('');
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{cur=t.dataset.v;buildTabs();render();});
+  const pick=document.getElementById('lens-pick');   // dropdown mirrors the tabs (handy on mobile)
+  if(pick){ pick.innerHTML=VIEWS.map(v=>`<option value="${v[0]}"${v[0]===cur?' selected':''}>${v[1]}</option>`).join('');
+    pick.onchange=e=>{cur=e.target.value;buildTabs();render();}; }
+}
+(async function(){
+  await load();
+  buildTabs(); renderDeckPanel();
+  const db=document.getElementById('deckbtn'); db.style.display=''; db.textContent=`✦ Grammars (${SELECTED.size}/${DECKS.length}) ▾`;
+  db.onclick=()=>{
+    const panel=document.getElementById('deckpanel');
+    const opening=!panel.classList.contains('open');
+    panel.classList.toggle('open');
+    // Rebuild on open so the highlight reflects whatever entity is currently in
+    // view — the panel's last render could be stale (e.g. built at page load,
+    // before any entity was picked) since render() only refreshes it in place
+    // while it's already open.
+    if(opening) renderDeckPanel();
+  };
+  // Deep-link: ?card=<entity-key> lands on that entity in the Synopsis
+  const deep=new URLSearchParams(location.search).get('card');
+  if(deep && cardOptions().includes(deep)){ cur='synopsis'; buildTabs(); render(deep); }
+  else render();
+})();
+// Click any item in a lens to open its full detail in the Cards viewer (shared code, deep-linked).
+document.addEventListener('click', e=>{ const t=e.target.closest('[data-od]'); if(!t)return;
+  const [deck,id]=t.dataset.od.split('|'); if(!deck||!id)return;
+  window.open('cards.html?src=' + encodeURIComponent('../grammars/'+deck+'/grammar.json') + '&item='+encodeURIComponent(id),'_blank','noopener'); });
+</script>
+
+<script src="../site-footer.js"></script>
+<site-footer base="../"></site-footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HD Bodygraph — approval mockup (real framework)</title>
+<style>
+  /* Approval mockup for the bodygraph redesign (docs/BODYGRAPH-REDESIGN-PLAN.md).
+     Sourced from the app's REAL framework — GATE_POSITIONS (64 anchors),
+     HD_CHANNELS (the 36), HD_CENTERS — copied verbatim from
+     viewer/astrology-viewer.html. Channels drawn as the canonical two-half
+     split (Personality = ink/black, Design = red). Sample chart only.
+     ?theme=light for the light skin (default light); ?theme=dark for dark. */
+  :root{
+    --bg:#f6f3ee; --panel:#fffdf9; --ink:#2b2735; --mut:#7c7790; --line:#e6e0d5;
+    --p:#26222f;        /* Personality = black/ink */
+    --d:#d1403a;        /* Design = red */
+    --dormant:#d9d3c7;  /* undefined / dormant */
+    --chip-open:#fffdf9; --chip-open-ink:#8b8598;
+    --shadow:rgba(60,50,30,.10);
+  }
+  body.dark{
+    --bg:#12111a; --panel:#1a1922; --ink:#e9e6f0; --mut:#9a95ab; --line:#2b2a36;
+    --p:#eae7f2; --d:#f0605a; --dormant:#33323f;
+    --chip-open:#1a1922; --chip-open-ink:#6f6a80; --shadow:rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.5}
+  .wrap{max-width:760px;margin:0 auto;padding:24px 18px 60px}
+  h1{font-size:20px;margin:0 0 2px;font-weight:650}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .stage{background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    padding:16px 10px;display:flex;justify-content:center;box-shadow:0 8px 30px var(--shadow)}
+  svg{width:100%;max-width:400px;height:auto;display:block}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:18px 2px 0;font-size:12.5px;color:var(--mut)}
+  .legend b{color:var(--ink);font-weight:600}
+  .sw{display:inline-block;width:22px;height:0;border-top-width:4px;border-top-style:solid;
+    vertical-align:3px;margin-right:6px;border-radius:2px}
+  .box{display:inline-block;width:13px;height:13px;border-radius:3px;vertical-align:-2px;margin-right:5px}
+  .toggle{margin:14px 0 0;font-size:12.5px;color:var(--mut)}
+  .toggle a{color:var(--d)}
+  .cap{font-size:12px;color:var(--mut);margin:10px 2px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>HD Bodygraph — approval mockup</h1>
+  <p class="sub">Built from the app's <b>real</b> framework: the 64 gate anchors, the 36 channels, the 9 centers.
+  Channels drawn gate-to-gate with the canonical <b>split</b> — each half coloured by its own gate
+  (<b>Personality = black</b>, <b>Design = red</b>, <b>both = mixed</b>). All 64 gates numbered.
+  Standard rounded centers. <em>Sample chart, for look approval only.</em></p>
+
+  <div class="stage">
+    <svg id="bg" viewBox="95 8 210 490" role="img" aria-label="Human Design bodygraph approval mockup"></svg>
+  </div>
+
+  <div class="legend">
+    <span><span class="sw" style="border-top-color:var(--p)"></span><b>Personality</b> half (black)</span>
+    <span><span class="sw" style="border-top-color:var(--d)"></span><b>Design</b> half (red)</span>
+    <span><span class="sw" style="border-top-color:var(--dormant)"></span>dormant / hanging</span>
+    <span><span class="box" style="background:#d1403a"></span>Defined center — filled</span>
+    <span><span class="box" style="background:transparent;border:2px solid #d1403a"></span>Open — outlined</span>
+  </div>
+  <p class="cap">Sample: Sacral · Throat · G · Ajna · Spleen defined; Head · Heart · Solar Plexus · Root open.</p>
+  <p class="toggle">Preview: <a href="?theme=light">light</a> · <a href="?theme=dark">dark</a> — matches the calculator's <code>theme</code> param.</p>
+</div>
+
+<script>
+(function(){
+  var t = new URLSearchParams(location.search).get('theme');
+  if (t === 'dark') document.body.classList.add('dark');
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('bg');
+  function el(tag,a,txt){var e=document.createElementNS(NS,tag);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+
+  // ---- REAL framework, copied verbatim from astrology-viewer.html ----
+  var GATE_POSITIONS = {
+    61:{x:200,y:28},63:{x:180,y:35},64:{x:220,y:35},
+    4:{x:175,y:85},11:{x:230,y:115},17:{x:170,y:115},24:{x:200,y:70},43:{x:215,y:95},47:{x:225,y:85},
+    8:{x:185,y:170},12:{x:240,y:195},16:{x:145,y:195},20:{x:200,y:155},23:{x:215,y:165},31:{x:200,y:195},
+    33:{x:230,y:170},35:{x:255,y:185},45:{x:145,y:205},56:{x:230,y:135},62:{x:170,y:135},
+    1:{x:185,y:245},2:{x:200,y:295},7:{x:200,y:230},10:{x:175,y:260},13:{x:225,y:245},15:{x:200,y:305},25:{x:155,y:265},46:{x:215,y:300},
+    21:{x:125,y:230},26:{x:115,y:275},40:{x:145,y:295},51:{x:140,y:250},
+    3:{x:200,y:405},5:{x:200,y:365},9:{x:185,y:390},14:{x:200,y:345},27:{x:155,y:375},29:{x:215,y:355},34:{x:175,y:350},42:{x:215,y:395},59:{x:245,y:375},
+    18:{x:115,y:390},28:{x:115,y:405},32:{x:125,y:370},44:{x:120,y:320},48:{x:135,y:345},50:{x:145,y:360},57:{x:155,y:335},
+    6:{x:265,y:360},22:{x:260,y:305},30:{x:285,y:380},36:{x:270,y:295},37:{x:245,y:330},49:{x:280,y:395},55:{x:285,y:365},
+    19:{x:250,y:475},38:{x:130,y:475},39:{x:265,y:455},41:{x:280,y:440},52:{x:175,y:460},53:{x:225,y:460},54:{x:145,y:455},58:{x:115,y:455},60:{x:200,y:475}
+  };
+  var HD_CHANNELS = {
+    '1-8':{centers:['g','throat']},'2-14':{centers:['g','sacral']},'3-60':{centers:['sacral','root']},
+    '4-63':{centers:['ajna','head']},'5-15':{centers:['sacral','g']},'6-59':{centers:['solar','sacral']},
+    '7-31':{centers:['g','throat']},'9-52':{centers:['sacral','root']},'10-20':{centers:['g','throat']},
+    '10-34':{centers:['g','sacral']},'10-57':{centers:['g','spleen']},'11-56':{centers:['ajna','throat']},
+    '12-22':{centers:['throat','solar']},'13-33':{centers:['g','throat']},'16-48':{centers:['throat','spleen']},
+    '17-62':{centers:['ajna','throat']},'18-58':{centers:['spleen','root']},'19-49':{centers:['root','solar']},
+    '20-34':{centers:['throat','sacral']},'20-57':{centers:['throat','spleen']},'21-45':{centers:['heart','throat']},
+    '23-43':{centers:['throat','ajna']},'24-61':{centers:['ajna','head']},'25-51':{centers:['g','heart']},
+    '26-44':{centers:['heart','spleen']},'27-50':{centers:['sacral','spleen']},'28-38':{centers:['spleen','root']},
+    '29-46':{centers:['sacral','g']},'30-41':{centers:['solar','root']},'32-54':{centers:['spleen','root']},
+    '34-57':{centers:['sacral','spleen']},'35-36':{centers:['throat','solar']},'37-40':{centers:['solar','heart']},
+    '39-55':{centers:['root','solar']},'42-53':{centers:['sacral','root']},'47-64':{centers:['ajna','head']}
+  };
+  // center render geometry (from the app's `centers` object) + canonical HD colours
+  var CENTERS = {
+    head:  {x:200,y:45, shape:'tri-up',    size:30, color:'#F2C230'},
+    ajna:  {x:200,y:105,shape:'tri-down',  size:30, color:'#5BB98C'},
+    throat:{x:200,y:175,shape:'square',    size:32, color:'#B07B4E'},
+    g:     {x:200,y:270,shape:'diamond',   size:32, color:'#F2C230'},
+    heart: {x:130,y:260,shape:'tri-right', size:24, color:'#D1403A'},
+    spleen:{x:130,y:360,shape:'square',    size:27, color:'#B07B4E'},
+    sacral:{x:200,y:375,shape:'square',    size:32, color:'#D1403A'},
+    solar: {x:270,y:345,shape:'tri-left',  size:30, color:'#B07B4E'},
+    root:  {x:200,y:465,shape:'square',    size:32, color:'#B07B4E'}
+  };
+  var GATE_CENTER = {}; // gate -> center id
+  (function(){var g={head:[61,63,64],ajna:[4,11,17,24,43,47],throat:[8,12,16,20,23,31,33,35,45,56,62],
+    g:[1,2,7,10,13,15,25,46],heart:[21,26,40,51],sacral:[3,5,9,14,27,29,34,42,59],
+    spleen:[18,28,32,44,48,50,57],solar:[6,22,30,36,37,49,55],root:[19,38,39,41,52,53,54,58,60]};
+    for(var c in g)g[c].forEach(function(n){GATE_CENTER[n]=c;});})();
+
+  // ---- sample chart: gate -> activation ('p' personality, 'd' design, 'both') ----
+  var ACT = {
+    34:'p',20:'d',1:'p',8:'p',2:'d',14:'d',10:'both',62:'p',17:'d',23:'p',43:'d',57:'p',
+    5:'p',29:'d',60:'p',52:'d',48:'p'
+  };
+  // defined channel = BOTH gates active; defined center = touched by a defined channel
+  var definedChannels={}, definedCenters={};
+  Object.keys(HD_CHANNELS).forEach(function(id){
+    var g=id.split('-').map(Number);
+    if(ACT[g[0]]&&ACT[g[1]]){definedChannels[id]=true;
+      HD_CHANNELS[id].centers.forEach(function(c){definedCenters[c]=true;});}
+  });
+
+  // ---- 1. channels (behind), canonical two-half split ----
+  function halfColor(state){ // colour for one gate's half of a channel
+    if(state==='p')return 'var(--p)';
+    if(state==='d')return 'var(--d)';
+    if(state==='both')return 'MIX';
+    return 'var(--dormant)';
+  }
+  Object.keys(HD_CHANNELS).forEach(function(id){
+    var g=id.split('-').map(Number);
+    var p1=GATE_POSITIONS[g[0]], p2=GATE_POSITIONS[g[1]];
+    if(!p1||!p2)return;
+    var mid={x:(p1.x+p2.x)/2,y:(p1.y+p2.y)/2};
+    var def=definedChannels[id];
+    var w=def?5:3.5;
+    [[p1,mid,ACT[g[0]]],[mid,p2,ACT[g[1]]]].forEach(function(seg){
+      var col=halfColor(seg[2]);
+      if(col==='MIX'){ // both: black core + red dashed overlay
+        svg.appendChild(el('line',{x1:seg[0].x,y1:seg[0].y,x2:seg[1].x,y2:seg[1].y,stroke:'var(--p)','stroke-width':w,'stroke-linecap':'round'}));
+        svg.appendChild(el('line',{x1:seg[0].x,y1:seg[0].y,x2:seg[1].x,y2:seg[1].y,stroke:'var(--d)','stroke-width':w*0.5,'stroke-dasharray':'2 5','stroke-linecap':'round'}));
+      }else{
+        svg.appendChild(el('line',{x1:seg[0].x,y1:seg[0].y,x2:seg[1].x,y2:seg[1].y,stroke:col,'stroke-width':seg[2]?w:2.6,'stroke-linecap':'round','opacity':seg[2]?1:0.55}));
+      }
+    });
+  });
+
+  // ---- 2. centers, standard rounded shapes ----
+  function centerShape(c,cfg){
+    var x=cfg.x,y=cfg.y,s=cfg.size,def=definedCenters[c];
+    var fill=def?cfg.color:'var(--chip-open)';
+    var stroke=cfg.color, sw=def?2:2.2, r=6;
+    var common={fill:fill,stroke:stroke,'stroke-width':sw,'stroke-linejoin':'round'};
+    if(cfg.shape==='diamond'){
+      var e=el('path',Object.assign({d:'M '+x+' '+(y-s)+' L '+(x+s)+' '+y+' L '+x+' '+(y+s)+' L '+(x-s)+' '+y+' Z','stroke-linejoin':'round'},common));return e;
+    }
+    if(cfg.shape==='tri-up')  return el('path',Object.assign({d:'M '+x+' '+(y-s)+' L '+(x+s)+' '+(y+s*0.62)+' L '+(x-s)+' '+(y+s*0.62)+' Z'},common));
+    if(cfg.shape==='tri-down')return el('path',Object.assign({d:'M '+(x-s)+' '+(y-s*0.62)+' L '+(x+s)+' '+(y-s*0.62)+' L '+x+' '+(y+s)+' Z'},common));
+    if(cfg.shape==='tri-right')return el('path',Object.assign({d:'M '+(x-s*0.55)+' '+(y-s)+' L '+(x+s*0.75)+' '+y+' L '+(x-s*0.55)+' '+(y+s)+' Z'},common));
+    if(cfg.shape==='tri-left') return el('path',Object.assign({d:'M '+(x+s*0.55)+' '+(y-s)+' L '+(x-s*0.75)+' '+y+' L '+(x+s*0.55)+' '+(y+s)+' Z'},common));
+    return el('rect',Object.assign({x:x-s,y:y-s,width:s*2,height:s*2,rx:r},common));
+  }
+  for(var c in CENTERS) svg.appendChild(centerShape(c,CENTERS[c]));
+
+  // ---- 3. gates: always-visible numbered chips at real anchors ----
+  for(var gate=1;gate<=64;gate++){
+    var pos=GATE_POSITIONS[gate]; if(!pos)continue;
+    var st=ACT[gate];
+    var chipFill, txt, strokeCol, sw2;
+    if(st==='p'){chipFill='var(--p)';txt='#fff';strokeCol='var(--p)';sw2=0;}
+    else if(st==='d'){chipFill='var(--d)';txt='#fff';strokeCol='var(--d)';sw2=0;}
+    else if(st==='both'){chipFill='var(--p)';txt='#fff';strokeCol='var(--d)';sw2=1.6;}
+    else {chipFill='var(--chip-open)';txt='var(--chip-open-ink)';strokeCol='var(--line)';sw2=1;}
+    // dark bodygraph theme uses light ink for personality chip -> flip number colour
+    var numColor = (st==='p'&&document.body.classList.contains('dark'))?'#12111a':txt;
+    svg.appendChild(el('rect',{x:pos.x-8,y:pos.y-8,width:16,height:16,rx:4,fill:chipFill,stroke:strokeCol,'stroke-width':sw2}));
+    svg.appendChild(el('text',{x:pos.x,y:pos.y+3.2,'text-anchor':'middle','font-size':8.5,'font-weight':700,'font-family':'ui-monospace,Menlo,monospace',fill:numColor,'pointer-events':'none'},gate));
+  }
+})();
+</script>
+</body>
+</html>

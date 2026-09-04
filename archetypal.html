@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archetypal Astrology — the planets in relationship, after Tarnas — The Recursive Astrology</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* Layout only — every colour comes from theme.css (the one source). Do not add colour tokens here. */
+  html,body{margin:0;background:var(--bg);color:var(--ink);color-scheme:light;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+  .wrap{max-width:760px;margin:0 auto;padding:24px 16px 80px}
+  header.hero{padding:14px 0 8px}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  h1{font-family:"Fraunces",Georgia,serif;font-size:26px;margin:6px 0 8px;color:var(--ink);display:flex;align-items:center;gap:10px}
+  h1 svg{flex:none;color:var(--accent)}
+  .lede{color:var(--muted);font-size:14.5px;max-width:70ch}
+
+  /* the honesty frame — visible, not buried. required on this page per the grammar's own contract. */
+  .honesty{margin:16px 0 6px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;
+    background:var(--chip,#eaf0f7);font-size:13px;color:var(--ink-soft);line-height:1.55}
+  .honesty b{color:var(--ink)}
+  .honesty a{color:var(--accent);font-weight:600}
+
+  .stage-ring{display:flex;justify-content:center;margin:22px 0 4px}
+  /* viewBox carries a 25-unit side gutter for the outer planet labels; max-width
+     is raised to match so the ring itself keeps the size it had before. */
+  svg.ring{max-width:470px;width:100%;height:auto}
+  .pnode{fill:var(--panel);stroke:var(--line);stroke-width:1.5;cursor:pointer;transition:fill .15s,stroke .15s}
+  .pnode:hover,.pnode:focus{stroke:var(--accent);outline:none}
+  .pnode.sel{fill:var(--chip,#eaf0f7);stroke:var(--accent);stroke-width:2.5}
+  .psym{font-size:19px;pointer-events:none;text-anchor:middle;dominant-baseline:central;fill:var(--ink)}
+  .psym.sel{fill:var(--accent)}
+  .plabel{font-size:8.5px;fill:var(--muted);pointer-events:none;text-transform:uppercase;letter-spacing:.06em}
+  .chord{stroke:var(--accent);stroke-width:2;fill:none;opacity:0}
+  .chord.on{opacity:.85}
+  .huntxt{font-size:10px;fill:var(--muted);text-anchor:middle}
+
+  .pickhint{text-align:center;font-size:12.5px;color:var(--muted);margin:6px 0 0}
+  .pickhint b{color:var(--ink)}
+
+  .selrow{display:flex;justify-content:center;gap:10px;margin:14px 0 0;flex-wrap:wrap}
+  .selchip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:6px 12px;
+    border-radius:999px;background:var(--chip,#eaf0f7);border:1px solid var(--line);color:var(--ink)}
+  .selchip button{border:0;background:none;color:var(--muted);cursor:pointer;font-size:14px;line-height:1;padding:0 0 0 2px}
+  .selchip button:hover{color:var(--ink)}
+
+  .stage{margin-top:28px}
+  .synth{background:var(--panel);border:1px solid var(--accent);border-radius:14px;padding:18px 20px;margin-bottom:20px}
+  .synth .stag{font-size:10.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:0 0 4px}
+  .synth h2{font-family:"Fraunces",Georgia,serif;font-size:21px;margin:2px 0 12px;color:var(--ink)}
+  .synth .sec{margin-top:12px}
+  .synth .sec h3{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 4px}
+  .synth .sec p{margin:0;font-size:14.5px;color:var(--ink)}
+
+  .gapnote{padding:14px 16px;border:1px dashed var(--line);border-radius:12px;background:var(--panel2);
+    font-size:13.5px;color:var(--muted);margin-bottom:20px}
+  .gapnote b{color:var(--ink)}
+
+  .plabelh{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:22px 0 10px;
+    display:flex;align-items:center;gap:10px}
+  .plabelh::after{content:'';flex:1;height:1px;background:var(--line)}
+
+  .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .vcard2{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .vcard2 .trad{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+  .vcard2 .era{font-size:11px;color:var(--muted);margin:1px 0 8px}
+  .vcard2 .sec2{margin-top:8px}
+  .vcard2 .sec2 h4{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 3px}
+  .vcard2 .sec2 p{margin:0;font-size:13px;color:var(--ink)}
+  .vcard2 .empty{font-size:12.5px;color:var(--muted);font-style:italic}
+
+  .placeholder{text-align:center;padding:36px 18px;color:var(--muted);font-size:14px}
+
+  .note{margin-top:34px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;
+    background:var(--chip,#eaf0f7);font-size:13.5px;color:var(--muted)}
+  .note b{color:var(--ink)}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<script src="site-header.js?v=47"></script>
+<site-header active="archetypal"></site-header>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">The Recursive Astrology · an interpretation, not a prediction</div>
+    <h1>
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="7" cy="12" r="4" /><circle cx="17" cy="12" r="4" /><path d="M11 12h2" />
+      </svg>
+      Archetypal Astrology — planets in relationship
+    </h1>
+    <p class="lede" id="g-desc">Loading…</p>
+  </header>
+
+  <div class="honesty">
+    <b>Honestly, first:</b> inspired by Richard Tarnas's archetypal astrology (<em>Cosmos and Psyche</em>,
+    2006; <em>The Passion of the Western Mind</em>). Every reading below is <b>PlayfulProcess's
+    interpretation</b>, written with an AI from its knowledge of his work — <b>not Tarnas's words, not
+    his endorsement.</b> Go to the source: <a href="https://cosmosandpsyche.com/" target="_blank" rel="noopener">cosmosandpsyche.com ↗</a>
+  </div>
+
+  <p class="pickhint">Tap <b>one planet</b> to read its archetype and hear every voice in this library; tap a <b>second</b> to read the complex between them.</p>
+  <div class="stage-ring"><svg class="ring" id="ring" viewBox="-25 0 450 400" role="list"
+    aria-label="The ten planets, tap two to read the complex between them"></svg></div>
+  <div class="selrow" id="selrow"></div>
+
+  <div class="stage" id="stage">
+    <p class="placeholder">Tap a planet above to read its archetype and hear every voice in this library
+      answer for it. Tap a second planet and the relationship between them — the place Tarnas's whole
+      method actually starts — reads too.</p>
+  </div>
+
+  <div class="note">
+    <b>How this works.</b> Tapping <b>one</b> planet looks up its own archetype in
+    <a href="viewers/cards.html?src=../grammars/archetypal-pairs/grammar.json">Archetypal Astrology —
+    planetary pairs</a> (hand-authored, not generated) and stacks every other voice grammar's entry for
+    that planet beneath it — Planetary Myths, Ptolemy's Tetrabiblos, Lilly's Christian Astrology, the
+    Jyotiṣa Bṛhat Jātaka, Alan Leo, and the Canonical synthesis — read live from
+    <code>grammars/_collection.json</code>, the same cross-grammar matching the
+    <a href="viewers/lenses.html">Lenses</a> viewer uses. Tapping a <b>second</b> planet adds the complex
+    between the two, from the same hand-authored grammar, above both stacks. This <em>is</em> the meta
+    layer: not a second generator script, but the parents' many voices stacking beneath their own or their
+    pair's synthesis, live, on every load. See <a href="docs/DESIGN-archetypal.md">docs/DESIGN-archetypal.md</a>.
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const NS = 'http://www.w3.org/2000/svg';
+
+const PLANETS = [
+  ['Sun','☉'], ['Moon','☽'], ['Mercury','☿'], ['Venus','♀'], ['Mars','♂'],
+  ['Jupiter','♃'], ['Saturn','♄'], ['Uranus','♅'], ['Neptune','♆'], ['Pluto','♇'],
+];
+
+const CX = 200, CY = 200, R = 138;
+let SELECTED = [];      // up to 2 planet names, in tap order
+let PAIRS = null;       // archetypal-pairs/grammar.json
+let TRADITIONS = null;  // every public astrology grammar with planet items; null = still loading
+
+function pt(deg){ const a = (deg - 90) * Math.PI / 180; return [CX + R * Math.cos(a), CY + R * Math.sin(a)]; }
+function el(tag, attrs, text){
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  return e;
+}
+function mdLite(s){
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g,'<em>$1</em>')
+    .replace(/`(.+?)`/g,'<code>$1</code>');
+}
+
+function drawRing(){
+  const svg = $('#ring');
+  svg.innerHTML = '';
+  svg.appendChild(el('circle', {cx: CX, cy: CY, r: R + 30, fill: 'none', stroke: 'var(--line)', 'stroke-dasharray': '2 5'}));
+  svg.appendChild(el('text', {x: CX, y: CY - 4, class: 'huntxt', 'text-anchor': 'middle'}, 'an interpretation,'));
+  svg.appendChild(el('text', {x: CX, y: CY + 10, class: 'huntxt', 'text-anchor': 'middle'}, 'never a command'));
+
+  // the chord, painted first so planet nodes sit on top of it
+  const chord = el('line', {class: 'chord', id: 'chordline'});
+  svg.appendChild(chord);
+
+  PLANETS.forEach(([name, sym]) => {
+    const deg = 360 / PLANETS.length * PLANETS.findIndex(p => p[0] === name);
+    const [x, y] = pt(deg);
+    const g = el('g', {tabindex: 0, role: 'listitem', 'aria-label': name, 'data-planet': name});
+    const circ = el('circle', {cx: x, cy: y, r: 24, class: 'pnode', 'data-planet': name});
+    const symtxt = el('text', {x, y, class: 'psym', 'data-planet': name}, sym);
+    const outerA = (deg - 90) * Math.PI / 180;
+    const cosA = Math.cos(outerA);
+    // The node discs have r=24, so a label ring at R+20 sat INSIDE them — the
+    // top and bottom labels (Sun, Jupiter) have no sideways escape and were
+    // printed over the disc. R+38 clears both the disc and the dotted guide.
+    const lox = CX + (R + 38) * cosA, loy = CY + (R + 38) * Math.sin(outerA);
+    // dynamic anchor: labels on the right side start-align (grow rightward), left side
+    // end-align (grow leftward), top/bottom stay centered — keeps every label inside the
+    // viewBox instead of overflowing past the SVG edge at 0/180 degrees.
+    const anchor = cosA > 0.35 ? 'start' : cosA < -0.35 ? 'end' : 'middle';
+    const label = el('text', {x: lox, y: loy, class: 'plabel', 'text-anchor': anchor}, name);
+    g.appendChild(circ); g.appendChild(symtxt); g.appendChild(label);
+    const activate = () => togglePlanet(name);
+    g.addEventListener('click', activate);
+    g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }});
+    svg.appendChild(g);
+  });
+  paintSelection();
+}
+
+function paintSelection(){
+  document.querySelectorAll('#ring [data-planet]').forEach(node => {
+    const sel = SELECTED.includes(node.getAttribute('data-planet'));
+    node.classList.toggle('sel', sel && node.tagName === 'circle');
+    if (node.tagName === 'text' && node.classList.contains('psym')) node.classList.toggle('sel', sel);
+  });
+  const chord = $('#chordline');
+  if (SELECTED.length === 2){
+    const iA = PLANETS.findIndex(p => p[0] === SELECTED[0]);
+    const iB = PLANETS.findIndex(p => p[0] === SELECTED[1]);
+    const [ax, ay] = pt(360 / PLANETS.length * iA);
+    const [bx, by] = pt(360 / PLANETS.length * iB);
+    chord.setAttribute('x1', ax); chord.setAttribute('y1', ay);
+    chord.setAttribute('x2', bx); chord.setAttribute('y2', by);
+    chord.classList.add('on');
+  } else {
+    chord.classList.remove('on');
+  }
+}
+
+function renderSelRow(){
+  const row = $('#selrow');
+  row.innerHTML = '';
+  SELECTED.forEach(name => {
+    const chip = document.createElement('span');
+    chip.className = 'selchip';
+    chip.innerHTML = `${esc(name)} <button aria-label="Remove ${esc(name)}">×</button>`;
+    chip.querySelector('button').onclick = () => togglePlanet(name);
+    row.appendChild(chip);
+  });
+}
+
+function togglePlanet(name){
+  const i = SELECTED.indexOf(name);
+  if (i !== -1) { SELECTED.splice(i, 1); }
+  else {
+    SELECTED.push(name);
+    if (SELECTED.length > 2) SELECTED.shift(); // most recent two win — a fresh pair each third tap
+  }
+  paintSelection();
+  renderSelRow();
+  updateHash();
+  renderStage();
+}
+
+// ── voice matching — the same cross-grammar approach viewers/lenses.html uses:
+// load the collection index, fetch every public grammar, and read planet items by
+// metadata.planet. A "content-bearing" entry has a real section beyond the thin
+// local resolution stub archetypal-pairs carries for composite_of (see
+// docs/DESIGN-archetypal.md) — inferred from the DATA shape, never from a slug check.
+function contentBearing(item){
+  const keys = Object.keys(item.sections || {});
+  return keys.some(k => k !== 'See also');
+}
+
+// "PlayfulProcess" is the repo owner, not a voice — it must never be printed as one
+// (four cards in this stack read "PlayfulProcess" before Jul 2026, including Lilly's
+// Christian Astrology and the Bṛhat Jātaka, which the note below names by name).
+const OWNER = 'PlayfulProcess';
+const isOwner = s => String(s || '').trim() === OWNER;
+// Splitting a grammar name on any hyphen mangled "Mesopotamian Omen-Craft" into
+// "Mesopotamian Omen"; only the em-dash separates a name from its subtitle here.
+const shortName = g => (g.name || '').split('—')[0].trim() || g.slug || '';
+
+// `col` is this grammar's entry in grammars/_collection.json (already fetched here for
+// the slug list). Several grammars — the Bṛhat Jātaka, Lilly's Christian Astrology —
+// carry no attribution.source_year of their own and were being labelled "contemporary"
+// beside a homepage that dates them c. 6th c. CE and 1647. The collection index is
+// authored data, so prefer the grammar's own attribution and fall back to it.
+function extractEra(g, col){
+  const attr = g.attribution || {};
+  const rawYearStr = attr.source_year || null;
+  let year = null, eraLabel = null, voiceLabel = isOwner(attr.source_author) ? null : (attr.source_author || null);
+  if (rawYearStr) {
+    // A BCE source carries a modern editor's publication year in the same string
+    // ("c. 8th–7th century BCE reports (Thompson ed. 1900)") — the plain digit grab
+    // read that as 1900 and sorted Babylon after Proctor. Don't pin a BCE year;
+    // just place it before everything CE.
+    if (/\bBCE?\b/.test(rawYearStr)) year = -1e6;
+    else {
+      const ce = rawYearStr.match(/c\.\s*(\d{1,4})\s*CE/i);
+      if (ce) year = parseInt(ce[1], 10);
+      else { const y = rawYearStr.match(/(\d{3,4})/); if (y) year = parseInt(y[1], 10); }
+    }
+    eraLabel = rawYearStr;
+  }
+  if (year == null && g.author && !isOwner(g.author)) {
+    const range = g.author.match(/(\d{4})\s*-\s*(\d{4})/);
+    if (range) { year = parseInt(range[2], 10); eraLabel = `${range[1]}–${range[2]}`; }
+    if (!voiceLabel) voiceLabel = g.author.replace(/\s*\([^)]*\)\s*/g, '').trim();
+  }
+  if (year == null && col && Number.isFinite(col.year)) {
+    year = col.year;
+    eraLabel = eraLabel || String(col.year_label || '').split(' — ')[0].trim() || String(col.year);
+  }
+  if (!voiceLabel) voiceLabel = (g.creator_name && !isOwner(g.creator_name)) ? g.creator_name : shortName(g);
+  if (year == null) { year = Infinity; eraLabel = eraLabel || 'contemporary'; }
+  return { year, eraLabel, voiceLabel };
+}
+
+function findPlanetItem(grammar, name){
+  const items = grammar.items || [];
+  const target = name.toLowerCase();
+  return items.find(it => (it.category || '') === 'planet' &&
+    (((it.metadata || {}).planet || '').toLowerCase() === target || (it.name || '').toLowerCase() === target)) || null;
+}
+
+function findPairItem(name1, name2){
+  if (!PAIRS) return null;
+  const items = PAIRS.items || [];
+  return items.find(it => it.category === 'archetypal-pair' &&
+    Array.isArray((it.metadata || {}).planets) &&
+    it.metadata.planets.includes(name1) && it.metadata.planets.includes(name2)) || null;
+}
+
+// The single-planet entry in archetypal-pairs itself (Uranus/Neptune/Pluto are
+// authored in full; Sun–Saturn carry a shorter synthesis plus the "See also"
+// pointer to their canonical full entry — see docs/DESIGN-archetypal.md).
+function findTarnasPlanetItem(name){
+  if (!PAIRS) return null;
+  const items = PAIRS.items || [];
+  return items.find(it => it.category === 'planet' && (it.metadata || {}).planet === name) || null;
+}
+
+function renderSingleSynthesis(name){
+  const item = findTarnasPlanetItem(name);
+  const archetype = item && item.sections && item.sections['Archetype'];
+  if (!archetype){
+    return `<div class="gapnote"><b>No authored archetype yet for ${esc(name)}.</b>
+      The parent still speaks below, from every voice in this library.</div>`;
+  }
+  return `<div class="synth">
+    <div class="stag">The archetype, after Tarnas</div>
+    <h2>${esc(name)}</h2>
+    <div class="sec"><p>${mdLite(archetype)}</p></div>
+  </div>`;
+}
+
+function renderPairSynthesis(item, name1, name2){
+  if (!item){
+    return `<div class="gapnote"><b>No authored complex yet for ${esc(name1)}–${esc(name2)}.</b>
+      This exact pairing isn't in <a href="viewers/cards.html?src=../grammars/archetypal-pairs/grammar.json">Archetypal
+      Astrology — planetary pairs</a> yet — the parents still speak below, from every other voice in this
+      library. Tarnas's own book focuses on a specific set of relationships (mostly the outer and social
+      planets); this one may simply not be among them.</div>`;
+  }
+  const secs = Object.entries(item.sections || {}).map(([label, text]) =>
+    `<div class="sec"><h3>${esc(label)}</h3><p>${mdLite(text)}</p></div>`).join('');
+  return `<div class="synth">
+    <div class="stag">The complex, after Tarnas · ${esc((item.metadata||{}).archetype || '')}</div>
+    <h2>${esc(item.name)}</h2>
+    ${secs}
+  </div>`;
+}
+
+function renderParentStack(name){
+  if (TRADITIONS === null){
+    return `<p class="plabelh">${esc(name)} — every voice</p><div class="vgrid">
+      <div class="vcard2"><p class="empty">Loading every voice…</p></div></div>`;
+  }
+  const cards = TRADITIONS.map(t => {
+    const item = findPlanetItem(t.grammar, name);
+    if (!item || !contentBearing(item)) {
+      return `<div class="vcard2"><div class="trad">${esc(t.voiceLabel)}</div><div class="era">${esc(t.eraLabel)}</div>
+        <p class="empty">No entry for ${esc(name)} in this voice.</p></div>`;
+    }
+    const secs = Object.entries(item.sections || {}).filter(([k]) => k !== 'See also').map(([label, text]) =>
+      `<div class="sec2"><h4>${esc(label)}</h4><p>${mdLite(text)}</p></div>`).join('');
+    return `<div class="vcard2"><div class="trad">${esc(t.voiceLabel)}</div><div class="era">${esc(t.eraLabel)}</div>${secs}</div>`;
+  }).join('');
+  return `<p class="plabelh">${esc(name)} — every voice</p><div class="vgrid">${cards}</div>`;
+}
+
+function renderStage(){
+  const stage = $('#stage');
+  if (SELECTED.length === 0){
+    stage.innerHTML = '<p class="placeholder">Tap a planet above to read its archetype and hear every '
+      + 'voice in this library answer for it. Tap a second planet and the relationship between them — '
+      + 'the place Tarnas\'s whole method actually starts — reads too.</p>';
+    return;
+  }
+  if (SELECTED.length === 1){
+    const [a] = SELECTED;
+    stage.innerHTML = renderSingleSynthesis(a) + renderParentStack(a);
+    return;
+  }
+  const [a, b] = SELECTED;
+  const pairItem = findPairItem(a, b);
+  let html = renderPairSynthesis(pairItem, a, b);
+  html += renderParentStack(a);
+  html += renderParentStack(b);
+  stage.innerHTML = html;
+}
+
+function updateHash(){
+  try {
+    const params = new URLSearchParams();
+    if (SELECTED.length) params.set('pair', SELECTED.join(','));
+    history.replaceState(null, '', SELECTED.length ? '#' + params.toString() : location.pathname);
+  } catch (e) { /* ignore */ }
+}
+
+function applyDeepLinkFromHash(){
+  try {
+    const params = new URLSearchParams(location.hash.replace(/^#/, ''));
+    const p = params.get('pair');
+    if (p) {
+      const names = p.split(',').map(s => s.trim()).filter(n => PLANETS.some(pl => pl[0] === n));
+      SELECTED = names.slice(-2);
+    }
+  } catch (e) { /* ignore */ }
+}
+
+async function loadJSON(path){
+  const r = await fetch(path, { cache: 'no-cache' });
+  if (!r.ok) throw new Error(String(r.status));
+  return r.json();
+}
+
+(async function init(){
+  drawRing();
+  applyDeepLinkFromHash();
+  paintSelection();
+  renderSelRow();
+
+  try {
+    PAIRS = await loadJSON('grammars/archetypal-pairs/grammar.json');
+    $('#g-desc').textContent = (PAIRS.description || '').split('\n')[0];
+  } catch (e) {
+    $('#g-desc').innerHTML = 'Could not load the pairs grammar. Browsers block <code>file://</code> fetches — '
+      + 'serve locally (<code>python -m http.server 8091</code>) or view on GitHub Pages.';
+  }
+
+  try {
+    const col = await loadJSON('grammars/_collection.json');
+    const entries = (col.grammars || []).filter(g => !g.is_meta);
+    const loaded = await Promise.all(entries.map(async entry => {
+      try { return { entry, g: await loadJSON(`grammars/${entry.slug}/grammar.json`) }; }
+      catch (e) { return { entry, g: null }; }
+    }));
+    TRADITIONS = loaded
+      .filter(({ g }) => g && Array.isArray(g.items) && g.items.some(it => it.category === 'planet'))
+      .map(({ entry, g }) => ({ slug: entry.slug, grammar: g, ...extractEra(g, entry) }))
+      .sort((x, y) => x.year - y.year || x.voiceLabel.localeCompare(y.voiceLabel));
+  } catch (e) { TRADITIONS = []; }
+
+  renderStage();
+})();
+</script>
+
+<script src="site-footer.js?v=1"></script>
+<script src="assistant.js" defer></script>
+<site-footer></site-footer>
+</body>
+</html>

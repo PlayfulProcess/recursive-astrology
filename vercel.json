@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    { "src": "viewer/**", "use": "@vercel/static" },
+    { "src": "api/calculate_chart.py", "use": "@vercel/python" },
+    {
+      "src": "api/transit_timeline.py",
+      "use": "@vercel/python",
+      "config": { "includeFiles": "api/**" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(viewer/.*|)",
+      "headers": {
+        "Content-Security-Policy": "frame-ancestors https://*.recursive.eco https://*.vercel.app https://localhost:* http://localhost:* 'self'"
+      },
+      "continue": true
+    },
+    { "src": "/api/calculate-chart", "dest": "/api/calculate_chart.py" },
+    { "src": "/api/transit-timeline", "dest": "/api/transit_timeline.py" },
+    { "src": "/", "dest": "/viewer/astrology-viewer.html" },
+    { "handle": "filesystem" }
+  ]
+}

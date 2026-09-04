@@ -1,0 +1,98 @@
+{
+  "_grammar_commons": true,
+  "slug": "trika-lens",
+  "name": "The Trika Lens — three doors into a chart",
+  "description": "A way of reading the sky through the three goddesses of the Trika — Parā, Parāparā, and Aparā. Not a traditional teaching: this is PlayfulProcess's own synthesis, mapping a non-dual Shaiva grammar onto astrology, offered as a lens to hold a chart with, not a doctrine. Parā is the light that looks; Aparā is the world that is looked at; Parāparā — the middle door — is the relating between them, which is where meaning actually lives.",
+  "grammar_type": "custom",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — contemporary synthesis. The Trika triad it draws on is a real structure of non-dual Kashmir Shaivism, but mapping it onto chart-reading is this repo's own lens, not a dated teaching; see _synthesis_note."
+  },
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "is_published": true,
+  "tags": [
+    "astrology",
+    "trika",
+    "shaiva",
+    "lens",
+    "synthesis"
+  ],
+  "_synthesis_note": "The Trika (Parā / Parāparā / Aparā — supreme, supreme-and-non-supreme, non-supreme) is a real structure of non-dual Kashmir Shaivism (Abhinavagupta's Tantrāloka; see Christopher Wallis, Tantra Illuminated). Mapping it onto how one READS an astrological chart is NOT traditional — no lineage teaches this. It is the builder's own synthesis, held lightly and honestly, and must always be presented as such: a way of looking, offered by a non-scholar, with links to the real sources so the reader can go to the tradition itself.",
+  "items": [
+    {
+      "id": "para",
+      "name": "Parā — the door of the light that looks",
+      "sort_order": 0,
+      "category": "lens",
+      "keywords": [
+        "supreme",
+        "subject",
+        "awareness",
+        "the one who sees",
+        "ascendant"
+      ],
+      "sections": {
+        "The goddess": "Parā is the highest of the three goddesses of the Trika — the Supreme, undivided awareness, consciousness before it has split into a seer and a seen. In the non-dual Shaiva grammar she is not a being above the world but the very fact of experiencing, the light in which everything else appears. (Abhinavagupta, Tantrāloka; summarised in Christopher Wallis, Tantra Illuminated — go to those for the tradition; what follows is my own use of it.)",
+        "As a way of reading the sky": "Through the Parā door you do not read the chart for what it predicts. You read it for the one who is reading it. Every planet, every house, is appearing to an awareness that is not itself on the wheel — you, looking. The ascendant, the horizon where sky meets self, is Parā's natural home here: not your fate, but the angle from which the whole of it is being seen. To read in Parā is to remember, first, that a chart is a mirror held up to a consciousness, and the consciousness is prior to the mirror.",
+        "Reflection": "Before any interpretation: who is looking? What in me is untouched by anything the chart could say — the awareness that would still be here if every placement were different? Start there, and nothing the sky says can shrink you.",
+        "Emanation": "Resonates with Paradevi, the Light Grammar (kali-paradevi) — first light, what pours forth and illumines."
+      },
+      "metadata": {
+        "triad": "supreme",
+        "resonance": "paradevi",
+        "angle": "ascendant"
+      }
+    },
+    {
+      "id": "aparai",
+      "name": "Aparā — the door of the world that is looked at",
+      "sort_order": 2,
+      "category": "lens",
+      "keywords": [
+        "immanent",
+        "object",
+        "circumstance",
+        "the given",
+        "houses",
+        "transits"
+      ],
+      "sections": {
+        "The goddess": "Aparā is the immanent goddess — the Supreme having become the whole dense, particular, gorgeous world of things: this body, this hour, this difficulty, this room. In the Trika she is not lesser or unreal; she is the same consciousness fully committed to being something specific. (Same sources; same honesty — my mapping, not the tradition's.)",
+        "As a way of reading the sky": "Through the Aparā door you read the chart as the concrete givens of a life: the houses and their affairs, the transits actually arriving, the circumstances you did not choose. This is the door astrology usually opens first, and it is also the door where astrology goes wrong — when Aparā is taken alone, the given hardens into fate, and a reading becomes a sentence. Read here honestly: these are the materials, real and weighty, and they are exactly that — materials, not a verdict.",
+        "Reflection": "What is simply the case right now, that I keep arguing with? Aparā asks you to look at the given without flinching and without collapsing into it — to hold the weather as weather, not as a judgement about you.",
+        "Emanation": "Resonates with Kali, the Dark Grammar (kali-paradevi) — the void, what devours and dissolves, the ground that receives."
+      },
+      "metadata": {
+        "triad": "non-supreme",
+        "resonance": "kali",
+        "angle": "houses-transits"
+      }
+    },
+    {
+      "id": "parapara",
+      "name": "Parāparā — the middle door, where meaning lives",
+      "sort_order": 1,
+      "category": "lens",
+      "keywords": [
+        "relation",
+        "between",
+        "aspect",
+        "dialogue",
+        "meaning-making",
+        "the moon is relationship"
+      ],
+      "sections": {
+        "The goddess": "Parāparā is the goddess of the middle — supreme-and-non-supreme at once, the very relation between the light that looks and the world that is looked at. She is the least talked-about of the three and, I think, the most important: she is not subject, not object, but the living between-them, the place where the two touch and meaning is born. (Abhinavagupta names her the door of relation; the use I make of her below is mine.)",
+        "As a way of reading the sky": "Through the Parāparā door you read neither for the self alone nor the circumstance alone, but for the RELATING between them — which in a chart is exactly what the aspects are: planets in dialogue, angles of tension and ease, the conversation the sky is having with itself and with you. This is the door this whole project keeps arriving at. A reading is not the light and it is not the world; it is what happens in the space where you and the given meet and make something of each other. Read in Parāparā and astrology stops being prediction and becomes what it always was underneath — a practice of relationship.",
+        "Reflection": "Not 'who am I' and not 'what is happening', but: what is being asked of the relationship between them? What would it mean to meet this given, from this awareness, well? The answer is never on the wheel. It is made in the meeting.",
+        "Emanation": "The bridge between Paradevi and Kali — the emanation itself, light and dark in relation. Where the pair becomes a living third."
+      },
+      "metadata": {
+        "triad": "supreme-and-non-supreme",
+        "resonance": "the-relation-itself",
+        "angle": "aspects"
+      }
+    }
+  ]
+}

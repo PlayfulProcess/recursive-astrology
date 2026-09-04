@@ -1,0 +1,1263 @@
+{
+  "name": "Ptolemy's Tetrabiblos",
+  "description": "Classical Western astrology based on Claudius Ptolemy's Tetrabiblos (c. 150 CE), the foundational text that systematized Greek, Egyptian, and Babylonian astrological knowledge. Each item includes direct quotes from the Ashmand translation. — Source: Ptolemy, *Tetrabiblos*, trans. J. M. Ashmand (1822), public domain (Project Gutenberg #70850). Imported verbatim from the recursive.eco-schemas commons; presented here as the Ptolemy voice's own long-form library. Under this site's creed it is a historical voice speaking in its own terms — a mirror and a calendar, never a prediction or a command.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ptolemy_16century.jpg?width=800",
+  "grammar_type": "astrology",
+  "provenance": "record",
+  "dating": {
+    "year": 150,
+    "label": "c. 150 CE — Ptolemy, Tetrabiblos · tr. J. M. Ashmand, 1822",
+    "confidence": "medium",
+    "basis": "Anchored to the conventional reconstructed composition date of the Tetrabiblos, carried per item as metadata.source.year_original 'c. 150 CE'; the date is reconstructed from Ptolemy's floruit, hence 'c.' and medium confidence. The English text quoted throughout is Ashmand's 1822 translation (Project Gutenberg #70850 digitizes a later W. Foulsham reprint of it)."
+  },
+  "attribution": {
+    "source_name": "Tetrabiblos, or Quadripartite",
+    "source_author": "Claudius Ptolemy",
+    "translator": "J.M. Ashmand",
+    "source_year": "c. 150 CE (translation 1822)",
+    "license": "Public Domain",
+    "source_url": "https://www.gutenberg.org/ebooks/70850"
+  },
+  "items": [
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nSaturn produces cold and dryness, for he is most remote both from the Sun's heat and from the earth's vapours. But he is more effective in the production of cold than of dryness. Saturn is esteemed malefic, or causer of evil, from his excess of cold. The coldness of Saturn is allotted to the day, to counterbalance its heat.",
+        "Light": "When moderated by combination with day, Saturn produces a favourable temperament. His influence brings structure, time, and the wisdom of age and distance.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nMalefic, causer of evil from excess of cold. Saturn and Mars are esteemed of a contrary nature to the benefics, noxious in their influence.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IV–VII, on Saturn's temperament and sect (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Saturn produces cold and dryness, for he is most remote both from the Sun's heat and from the earth's vapours. But he is more effective in the production of cold than of dryness. … Saturn and Mars are esteemed of a contrary nature, and malefic, or causers of evil: the first from his excess of cold, the other from his excess of dryness. … The Sun, Saturn, Jupiter, and Mars are called masculine. … Of the other two planets, Saturn and Mars, which are noxious, one is considered to be diurnal, and the other nocturnal … Hence the coldness of Saturn is allotted to the day, to counterbalance its heat; and the dryness of Mars to the night, to counterbalance its moisture. Thus each of these planets, being moderated by this combination, is placed in a condition calculated to produce a favourable temperament."
+      },
+      "keywords": [
+        "cold",
+        "dry",
+        "malefic",
+        "remote",
+        "slow",
+        "diurnal sect"
+      ],
+      "quotes": [
+        "Saturn produces cold and dryness, for he is most remote both from the Sun's heat and from the earth's vapours.",
+        "But he is more effective in the production of cold than of dryness.",
+        "Saturn and Mars are esteemed of a contrary nature, and malefic, or causers of evil: the first from his excess of cold, the other from his excess of dryness.",
+        "The coldness of Saturn is allotted to the day, to counterbalance its heat.",
+        "Thus each of these planets, being moderated by this combination, is placed in a condition calculated to produce a favourable temperament.",
+        "The Sun, Saturn, Jupiter, and Mars are called masculine."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb07.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb07.htm",
+            "https://sacred-texts.com/astro/ptb/ptb08.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb10.htm"
+          ]
+        }
+      },
+      "sort_order": 0
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nJupiter revolves in an intermediate sphere between the extreme cold of Saturn and the burning heat of Mars, and has consequently a temperate influence: he therefore at once promotes both warmth and moisture. But, owing to the spheres of Mars and the Sun, which lie beneath him, his warmth is predominant: and hence he produces fertilizing breezes.",
+        "Light": "Jupiter is considered by the ancients as benefic, or causer of good, because heat and moisture are predominant in him. He produces fertilizing breezes and promotes growth.",
+        "Shadow": "When afflicted, Jupiter's temperate nature may be overwhelmed by contrary influences, reducing his beneficial effects.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IV–VI, on Jupiter's temperament (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Jupiter revolves in an intermediate sphere between the extreme cold of Saturn and the burning heat of Mars, and has consequently a temperate influence: he therefore at once promotes both warmth and moisture. But, owing to the spheres of Mars and the Sun, which lie beneath him, his warmth is predominant: and hence he produces fertilizing breezes. … [T]wo of the planets, on account of their temperate quality, and because heat and moisture are predominant in them, are considered by the ancients as benefic, or causers of good: these are Jupiter and Venus. … The Sun, Saturn, Jupiter, and Mars are called masculine. … The Sun and Jupiter [are] diurnal."
+      },
+      "keywords": [
+        "temperate",
+        "warm",
+        "moist",
+        "benefic",
+        "fertile",
+        "diurnal"
+      ],
+      "quotes": [
+        "Jupiter revolves in an intermediate sphere between the extreme cold of Saturn and the burning heat of Mars, and has consequently a temperate influence.",
+        "He therefore at once promotes both warmth and moisture.",
+        "Owing to the spheres of Mars and the Sun, which lie beneath him, his warmth is predominant: and hence he produces fertilizing breezes.",
+        "Two of the planets, on account of their temperate quality, and because heat and moisture are predominant in them, are considered by the ancients as benefic, or causers of good: these are Jupiter and Venus.",
+        "The Sun and Jupiter are diurnal.",
+        "The bright one in the heart, called Regulus, agrees with Mars and Jupiter."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb07.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb07.htm",
+            "https://sacred-texts.com/astro/ptb/ptb08.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb10.htm"
+          ]
+        }
+      },
+      "sort_order": 1
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nMars chiefly causes dryness, and is also strongly heating, by means of his own fiery nature, which is indicated by his colour, and in consequence of his vicinity to the Sun; the sphere of which is immediately below him. Mars is esteemed malefic from his excess of dryness.",
+        "Light": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nMars provides energy, action, and the fire necessary for transformation. His dryness is allotted to the night, to counterbalance its moisture.",
+        "Shadow": "Malefic, causer of evil from excess of dryness. His fiery nature, indicated by his colour, produces burning effects.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IV–VII, on Mars's temperament and sect (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Mars chiefly causes dryness, and is also strongly heating, by means of his own fiery nature, which is indicated by his colour, and in consequence of his vicinity to the Sun; the sphere of which is immediately below him. … [S]aturn and Mars are esteemed of a contrary nature, and malefic, or causers of evil: the first from his excess of cold, the other from his excess of dryness. … The Sun, Saturn, Jupiter, and Mars are called masculine. … Of the other two planets, Saturn and Mars, which are noxious, one is considered to be diurnal, and the other nocturnal: neither of them, however, is allotted to that division of time with which its nature accords … but each is disposed of on a contrary principle … the evil arising from a pernicious influence is much mitigated when dissimilar qualities are mingled with that influence. Hence … the dryness of Mars [is allotted] to the night, to counterbalance its moisture."
+      },
+      "keywords": [
+        "dry",
+        "hot",
+        "malefic",
+        "fiery",
+        "red",
+        "nocturnal sect"
+      ],
+      "quotes": [
+        "Mars chiefly causes dryness, and is also strongly heating, by means of his own fiery nature, which is indicated by his colour.",
+        "In consequence of his vicinity to the Sun; the sphere of which is immediately below him.",
+        "Saturn and Mars are esteemed of a contrary nature, and malefic, or causers of evil: the first from his excess of cold, the other from his excess of dryness.",
+        "The dryness of Mars to the night, to counterbalance its moisture.",
+        "The character of Mars from the blood-red hue of the planet when close to the horizon.",
+        "Those in the hinder foot, to Mars; those in the tail, to Venus."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb07.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb07.htm",
+            "https://sacred-texts.com/astro/ptb/ptb08.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb10.htm"
+          ]
+        }
+      },
+      "sort_order": 2
+    },
+    {
+      "id": "sun",
+      "name": "Sun",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe Sun is found to produce heat and moderate dryness. His magnitude, and the changes which he so evidently makes in the seasons, render his power more plainly perceptible than that of the other heavenly bodies; since his approach to the zenith of any part of the earth creates a greater degree of heat in that part.",
+        "Light": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe Sun and Mercury are deemed of common influence, and productive either of good or evil in unison with whatever planets they may be connected with. The Sun is diurnal and masculine.",
+        "Shadow": "When afflicted, the Sun's heating influence may become excessive, creating imbalance in the constitution.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IV–VII, on the Sun's temperament and sect (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The Sun is found to produce heat and moderate dryness. His magnitude, and the changes which he so evidently makes in the seasons, render his power more plainly perceptible than that of the other heavenly bodies; since his approach to the zenith of any part of the earth creates a greater degree of heat in that part and proportionately disposes its inhabitants after his own nature. … The Sun and Mercury are deemed of common influence, and productive either of good or evil in unison with whatever planets they may be connected with. … The Sun, Saturn, Jupiter, and Mars are called masculine. … The day, in its heat and its aptitude for action, is masculine … the Sun and Jupiter, diurnal."
+      },
+      "keywords": [
+        "heat",
+        "dry",
+        "common",
+        "masculine",
+        "diurnal",
+        "vital"
+      ],
+      "quotes": [
+        "The Sun is found to produce heat and moderate dryness.",
+        "His magnitude, and the changes which he so evidently makes in the seasons, render his power more plainly perceptible than that of the other heavenly bodies.",
+        "His approach to the zenith of any part of the earth creates a greater degree of heat in that part and proportionately disposes its inhabitants after his own nature.",
+        "The Sun and Mercury are deemed of common influence, and productive either of good or evil in unison with whatever planets they may be connected with.",
+        "The Sun and Jupiter are diurnal.",
+        "The Sun, Saturn, Jupiter, and Mars are called masculine."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb07.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb07.htm",
+            "https://sacred-texts.com/astro/ptb/ptb08.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb10.htm"
+          ]
+        }
+      },
+      "sort_order": 3
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nTo Venus also the same temperate quality belongs, although it exists conversely; since the heat she produces by her vicinity to the Sun is not so great as the moisture which she generates by the magnitude of her light, and by appropriating to herself the moist vapours of the earth, in the same manner that the Moon does.",
+        "Light": "Venus is considered benefic, a causer of good, because her temperate quality promotes moisture. She is feminine, nocturnal, and brings harmony and fertility.",
+        "Shadow": "When afflicted, Venus's moistening influence may produce excess, leading to indulgence or dissolution.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IV–VII, on Venus's temperament and sect (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> To Venus also the same temperate quality belongs, although it exists conversely; since the heat she produces by her vicinity to the Sun is not so great as the moisture which she generates by the magnitude of her light, and by appropriating to herself the moist vapours of the earth, in the same manner that the Moon does. … [T]wo of the planets, on account of their temperate quality, and because heat and moisture are predominant in them, are considered by the ancients as benefic, or causers of good: these are Jupiter and Venus. … The Moon and Venus are therefore said to be feminine, since their qualities are principally moist. … [T]he Moon and Venus are esteemed to be nocturnal."
+      },
+      "keywords": [
+        "moist",
+        "warm",
+        "temperate",
+        "benefic",
+        "feminine",
+        "nocturnal"
+      ],
+      "quotes": [
+        "To Venus also the same temperate quality belongs, although it exists conversely.",
+        "The heat she produces by her vicinity to the Sun is not so great as the moisture which she generates by the magnitude of her light.",
+        "By appropriating to herself the moist vapours of the earth, in the same manner that the Moon does.",
+        "Two of the planets, on account of their temperate quality, and because heat and moisture are predominant in them, are considered by the ancients as benefic, or causers of good: these are Jupiter and Venus.",
+        "The Moon and Venus are therefore said to be feminine, since their qualities are principally moist.",
+        "The Moon and Venus are esteemed to be nocturnal."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb07.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb07.htm",
+            "https://sacred-texts.com/astro/ptb/ptb08.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb10.htm"
+          ]
+        }
+      },
+      "sort_order": 4
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nMercury sometimes produces dryness, and at other times moisture, and each with equal vigour. His faculty of absorbing moisture and creating dryness proceeds from his situation with regard to the Sun, from which he is at no time far distant in longitude; and, on the other hand, he produces moisture, because he borders upon the Moon's sphere.",
+        "Light": "Mercury is common to both genders, and common in influence—diurnal when matutine, nocturnal when vespertine. His rapid motion produces rapid changes.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nBeing excited by the velocity of his motion with the Sun, he consequently operates rapid changes tending to produce alternately either quality.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IV–VII, on Mercury's temperament and sect (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Mercury sometimes produces dryness, and at other times moisture, and each with equal vigour. His faculty of absorbing moisture and creating dryness proceeds from his situation with regard to the Sun, from which he is at no time far distant in longitude; and, on the other hand, he produces moisture, because he borders upon the Moon's sphere, which is nearest to the earth; and, being thus excited by the velocity of his motion with the Sun, he consequently operates rapid changes tending to produce alternately either quality. … The Sun and Mercury are deemed of common influence, and productive either of good or evil in unison with whatever planets they may be connected with. … Mercury is common to both genders, because at certain times he produces dryness, and at others moisture, and performs each in an equal ratio. … Mercury, common; since in his matutine position he is diurnal, but nocturnal when vespertine."
+      },
+      "keywords": [
+        "variable",
+        "common",
+        "rapid",
+        "dual",
+        "convertible",
+        "messenger"
+      ],
+      "quotes": [
+        "Mercury sometimes produces dryness, and at other times moisture, and each with equal vigour.",
+        "His faculty of absorbing moisture and creating dryness proceeds from his situation with regard to the Sun, from which he is at no time far distant in longitude.",
+        "He produces moisture, because he borders upon the Moon's sphere, which is nearest to the earth.",
+        "Being thus excited by the velocity of his motion with the Sun, he consequently operates rapid changes tending to produce alternately either quality.",
+        "Mercury is common to both genders, because at certain times he produces dryness, and at others moisture, and performs each in an equal ratio.",
+        "Mercury, common; since in his matutine position he is diurnal, but nocturnal when vespertine."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb07.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb07.htm",
+            "https://sacred-texts.com/astro/ptb/ptb08.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb10.htm"
+          ]
+        }
+      },
+      "sort_order": 5
+    },
+    {
+      "id": "moon",
+      "name": "Moon",
+      "category": "planet",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe Moon principally generates moisture; her proximity to the earth renders her highly capable of exciting damp vapours, and of thus operating sensibly upon animal bodies by relaxation and putrefaction. She has, however, also a moderate share in the production of heat, in consequence of the illumination she receives from the Sun.",
+        "Light": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nThe Moon is considered benefic for the same reasons as Jupiter and Venus. She is feminine, nocturnal, and governs the rhythms of change through her phases.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nHer proximity to the earth causes her to operate sensibly upon animal bodies by relaxation and putrefaction.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IV–VII, on the Moon's temperament and sect (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The Moon principally generates moisture; her proximity to the earth renders her highly capable of exciting damp vapours, and of thus operating sensibly upon animal bodies by relaxation and putrefaction. She has, however, also a moderate share in the production of heat, in consequence of the illumination she receives from the Sun. … And the Moon also is so considered [benefic, a causer of good, for the same reasons as Jupiter and Venus]. … The Moon and Venus are therefore said to be feminine, since their qualities are principally moist. … [T]he Moon and Venus are esteemed to be nocturnal."
+      },
+      "keywords": [
+        "moist",
+        "cold",
+        "feminine",
+        "nocturnal",
+        "changeable",
+        "proximate"
+      ],
+      "quotes": [
+        "The Moon principally generates moisture; her proximity to the earth renders her highly capable of exciting damp vapours.",
+        "Of thus operating sensibly upon animal bodies by relaxation and putrefaction.",
+        "She has, however, also a moderate share in the production of heat, in consequence of the illumination she receives from the Sun.",
+        "And the Moon also is so considered [benefic] for the same reasons.",
+        "The Moon and Venus are therefore said to be feminine, since their qualities are principally moist.",
+        "The Moon, during her increase, from her first emerging to her first quarter, produces chiefly moisture; on continuing her increase from her first quarter to her full state of illumination, she causes heat; from her full state to her third quarter she causes dryness; and from her third quarter to her occultation she causes cold."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb07.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb07.htm",
+            "https://sacred-texts.com/astro/ptb/ptb08.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb10.htm"
+          ]
+        }
+      },
+      "sort_order": 6
+    },
+    {
+      "id": "aries",
+      "name": "Aries",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nAries is an equinoctial sign, the first after the vernal equinox. The commencement belongs to Aries; since the moisture of the spring forms an introduction for the other seasons. As the male sex governs, and the active principle takes precedence of the passive, Aries is consequently considered to be masculine and diurnal.",
+        "Light": "Aries initiates the cycle, provides the moisture of spring that introduces all other seasons. Cardinal fire energy that begins new cycles.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe stars in the head of Aries possess an influence similar in its effects to that of Mars and Saturn—both malefics.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XV, XX, XXII, on Aries (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> There are also two equinoctial signs: Aries, the first after the vernal equinox … they are so called, because the Sun, when in the first point of either, makes the day and night equal. … As the male sex governs, and the active principle takes precedence of the passive, the signs of Aries and Libra are consequently considered to be masculine and diurnal. These signs describe the equinoctial circle, and from them proceed the principal variation, and most powerful agitation, of all things. … Mars … takes the next two signs, of a nature similar to his own, viz. Aries and Scorpio. … The Sun on his entrance into Aries is then passing into the higher and more northern semicircle … his exaltation, therefore, is determined to be in Aries. … The stars in the head of Aries possess an influence similar in its effects to that of Mars and Saturn: those in the mouth act similarly to Mercury, and in some degree to Saturn; those in the hinder foot, to Mars; those in the tail, to Venus."
+      },
+      "keywords": [
+        "equinoctial",
+        "vernal",
+        "masculine",
+        "diurnal",
+        "cardinal",
+        "Mars"
+      ],
+      "quotes": [
+        "There are also two equinoctial signs: Aries, the first after the vernal equinox.",
+        "The commencement belongs to Aries; since the moisture of the spring forms an introduction for the other seasons.",
+        "As the male sex governs, and the active principle takes precedence of the passive, the signs of Aries and Libra are consequently considered to be masculine and diurnal.",
+        "These signs describe the equinoctial circle, and from them proceed the principal variation, and most powerful agitation, of all things.",
+        "The stars in the head of Aries possess an influence similar in its effects to that of Mars and Saturn.",
+        "Those in the mouth act similarly to Mercury, and in some degree to Saturn; those in the hinder foot, to Mars; those in the tail, to Venus."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb18.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 10
+    },
+    {
+      "id": "taurus",
+      "name": "Taurus",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Taurus is a fixed sign that follows the equinoctial Aries. During the Sun's presence in fixed signs, the cold, heat, moisture or dryness of the season is more firmly established. Those stars in Taurus in the abscission of the sign resemble the influence of Venus.",
+        "Light": "Fixed earth that stabilizes what the equinoctial sign initiated. The Pleiades within bring lunar and martial influence.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nThe Hyades star which is bright and ruddy, called Facula, has the same temperament as Mars—a malefic influence within the sign.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, XXII, on Taurus (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Those signs which severally follow immediately after the two tropical and the two equinoctial signs are termed fixed, because, during the Sun's presence in them, the cold, heat, moisture or dryness … is then more firmly established. … Venus, possessing a favourable temperament … takes the next two signs, Taurus and Libra. These are of a fruitful nature, and preserve harmony by the sextile distance. … The Moon … begins to augment her light in Taurus, the first sign of her own triplicity, which is consequently ascribed to be her exaltation. … Those stars in Taurus, which are in the abscission of the sign, resemble in their temperament the influence of Venus, and in some degree that of Saturn: those in the Pleiades are like the Moon and Mars. Of the stars in the head, that one of the Hyades which is bright and ruddy, and called Facula, has the same temperament as Mars: the others resemble Saturn, and, partly, Mercury; and those at the top of the horns are like Mars."
+      },
+      "keywords": [
+        "fixed",
+        "feminine",
+        "nocturnal",
+        "Venus",
+        "earth",
+        "established"
+      ],
+      "quotes": [
+        "Those signs which severally follow immediately after the two tropical and the two equinoctial signs are termed fixed.",
+        "Because, during the Sun's presence in them, the cold, heat, moisture or dryness of the season is then more firmly established.",
+        "Those stars in Taurus, which are in the abscission of the sign, resemble in their temperament the influence of Venus, and in some degree that of Saturn.",
+        "Those in the Pleiades are like the Moon and Mars.",
+        "That one of the Hyades which is bright and ruddy, and called Facula, has the same temperament as Mars.",
+        "The others resemble Saturn, and, partly, Mercury; and those at the top of the horns are like Mars."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 11
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nGemini is a bicorporeal sign, intermediately placed between the fixed and tropical signs, participating in the constitutional properties of both. The stars in the feet of Gemini have an influence similar to that of Mercury, and moderately to that of Venus.",
+        "Light": "Mutable air that transitions between seasons, carrying properties of both fixed and cardinal. Mercury's house of communication and duality.",
+        "Shadow": "The two bright stars on the heads—Apollo like Mercury, Hercules like Mars—show the dual nature can tend toward conflict.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, on Gemini (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The bicorporeal signs severally follow the fixed signs; and, being thus intermediately placed between the fixed and the tropical signs, they participate in the constitutional properties of both, from their first to their last degrees. … Mercury never has greater distance from the Sun than the space of one sign, and is beneath all the other planets: hence he is placed nearest to both luminaries, and the remaining two signs, Gemini and Virgo, are allotted to him. … The stars in the feet of Gemini have an influence similar to that of Mercury, and moderately to that of Venus. The bright stars in the thighs are like Saturn: of the two bright stars on the heads, the one, which precedes and is called Apollo, is like Mercury; the other which follows, called Hercules, is like Mars."
+      },
+      "keywords": [
+        "bicorporeal",
+        "mutable",
+        "masculine",
+        "Mercury",
+        "air",
+        "dual"
+      ],
+      "quotes": [
+        "The bicorporeal signs severally follow the fixed signs; and, being thus intermediately placed between the fixed and the tropical signs, they participate in the constitutional properties of both.",
+        "The stars in the feet of Gemini have an influence similar to that of Mercury, and moderately to that of Venus.",
+        "The bright stars in the thighs are like Saturn.",
+        "Of the two bright stars on the heads, the one which precedes and is called Apollo, is like Mercury.",
+        "The other which follows, called Hercules, is like Mars.",
+        "Gemini is the house of Mercury."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm"
+          ]
+        }
+      },
+      "sort_order": 12
+    },
+    {
+      "id": "cancer",
+      "name": "Cancer",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nCancer is a tropical sign, the first thirty degrees after the summer solstice. These are called tropical because the Sun, after arriving at their first points, seems to turn and change his course towards a contrary latitude, causing summer by the turn he makes in Cancer.",
+        "Light": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nThe Moon's domicile, where lunar influence is strongest. The nebulous mass in the breast, called the Præsepe, has the efficacy of Mars and Moon together.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nThe two stars in the eyes of Cancer are of the same influence as Mercury, and moderately like Mars. Those in the claws are like Saturn and Mercury.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, XXII, on Cancer (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The tropical signs are two: viz. the first thirty degrees after the summer solstice, which compose the sign of Cancer … These are called tropical, because the Sun, after he has arrived at their first points, seems to turn, and to change his course towards a contrary latitude; causing summer by the turn he makes in Cancer. … Cancer and Leo are the most northerly of all the twelve signs … they are consequently appropriated as houses for the two principal and greater luminaries; Leo for the Sun, as being masculine; and Cancer for the Moon, as being feminine. … Jupiter … becomes most northerly, and augments his peculiar influence when in Cancer, accordingly obtains his exaltation in that sign. … The two stars in the eyes of Cancer are of the same influence as Mercury, and are also moderately like Mars. Those in the claws are like Saturn and Mercury. The nebulous mass in the breast, called the Præsepe, has the same efficacy as Mars and the Moon."
+      },
+      "keywords": [
+        "tropical",
+        "solstice",
+        "feminine",
+        "Moon",
+        "water",
+        "cardinal"
+      ],
+      "quotes": [
+        "The tropical signs are two: viz. the first thirty degrees after the summer solstice, which compose the sign of Cancer.",
+        "These are called tropical, because the Sun, after he has arrived at their first points, seems to turn, and to change his course towards a contrary latitude.",
+        "Causing summer by the turn he makes in Cancer, and winter by that which he makes in Capricorn.",
+        "The two stars in the eyes of Cancer are of the same influence as Mercury, and are also moderately like Mars.",
+        "Those in the claws are like Saturn and Mercury.",
+        "The nebulous mass in the breast, called the Præsepe, has the same efficacy as Mars and the Moon. The two placed on either side, called the Asini, have an influence similar to that of Mars and the Sun."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 13
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nLeo is a fixed sign following the summer solstice in Cancer. The bright star in the heart, called Regulus, agrees with Mars and Jupiter—combining the influences of a malefic and benefic planet in the royal star.",
+        "Light": "Fixed fire that establishes the heat of summer. Regulus brings the combined fortune of Mars's courage and Jupiter's expansion.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nTwo stars in the head are like Saturn and partly like Mars—both malefics. The three in the neck are like Saturn and Mercury.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, on Leo (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Those signs which severally follow immediately after the two tropical and the two equinoctial signs are termed fixed … Cancer and Leo are the most northerly of all the twelve signs; they approach nearer than the other signs to the zenith of this part of the earth, and thereby cause warmth and heat: they are consequently appropriated as houses for the two principal and greater luminaries; Leo for the Sun, as being masculine. … Of the stars in Leo, two in the head are like Saturn and partly like Mars. The three in the neck are like Saturn, and in some degree like Mercury. The bright one in the heart, called Regulus, agrees with Mars and Jupiter. Those in the loins, and the bright one in the tail, are like Saturn and Venus: those in the thighs resemble Venus, and, in some degree, Mercury."
+      },
+      "keywords": [
+        "fixed",
+        "masculine",
+        "Sun",
+        "fire",
+        "royal",
+        "heart"
+      ],
+      "quotes": [
+        "Those signs which severally follow immediately after the two tropical and the two equinoctial signs are termed fixed.",
+        "Of the stars in Leo, two in the head are like Saturn and partly like Mars.",
+        "The three in the neck are like Saturn, and in some degree like Mercury.",
+        "The bright one in the heart, called Regulus, agrees with Mars and Jupiter.",
+        "Those in the loins, and the bright one in the tail, are like Saturn and Venus.",
+        "Those in the thighs resemble Venus, and, in some degree, Mercury."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm"
+          ]
+        }
+      },
+      "sort_order": 14
+    },
+    {
+      "id": "virgo",
+      "name": "Virgo",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nVirgo is a bicorporeal sign, participating in the properties of both fixed and tropical signs. That called Spica Virginis is like Venus and partly Mars—a complex mixture of benefic and malefic influence in the harvest star.",
+        "Light": "Mutable earth transitioning from summer to autumn. Mercury's exaltation and joy, bringing intellectual refinement to practical matters.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe stars in the head of Virgo, and that at the top of the southern wing, operate like Mercury and somewhat like Mars.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, XXII, on Virgo (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The bicorporeal signs severally follow the fixed signs; and … participate in the constitutional properties of both. … [T]he remaining two signs, Gemini and Virgo, are allotted to [Mercury]. … Mercury is of a nature opposite to that of Venus, and is more dry: in opposition to her, therefore, he takes his exaltation in Virgo, in which sign the autumnal dryness makes its first appearance. … The stars in the head of Virgo, and that at the top of the southern wing, operate like Mercury and somewhat like Mars: the other bright stars in the same wing, and those about the girdle, resemble Mercury in their influence, and also Venus moderately. The bright one in the northern wing, called Vindemiator, is of the same influence as Saturn and Mercury: that called Spica Virginis is like Venus and partly Mars."
+      },
+      "keywords": [
+        "bicorporeal",
+        "mutable",
+        "feminine",
+        "Mercury",
+        "earth",
+        "harvest"
+      ],
+      "quotes": [
+        "The bicorporeal signs severally follow the fixed signs; and participate in the constitutional properties of both.",
+        "The stars in the head of Virgo, and that at the top of the southern wing, operate like Mercury and somewhat like Mars.",
+        "The other bright stars in the same wing, and those about the girdle, resemble Mercury in their influence, and also Venus moderately.",
+        "The bright one in the northern wing, called Vindemiator, is of the same influence as Saturn and Mercury.",
+        "That called Spica Virginis is like Venus and partly Mars.",
+        "Those at the points of the feet and at the bottom of the garments are like Mercury, and also Mars, moderately."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 15
+    },
+    {
+      "id": "libra",
+      "name": "Libra",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nLibra is an equinoctial sign, the first after the autumnal equinox. The signs of Aries and Libra are considered masculine and diurnal, describing the equinoctial circle from which proceed the principal variation and most powerful agitation of all things.",
+        "Light": "Venus's domicile bringing balance at the point of equal day and night. Cardinal air initiating the descent into darkness with grace.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nThose stars at the points of the claws (formerly Scorpio's) operate like Jupiter and Mercury—but the association with Scorpio hints at hidden depths.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XV, XX, XXII, on Libra (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> There are also two equinoctial signs … Libra, the first after the autumnal equinox … the Sun, when in the first point of either, makes the day and night equal. … [T]he signs of Aries and Libra are consequently considered to be masculine and diurnal. These signs describe the equinoctial circle, and from them proceed the principal variation, and most powerful agitation, of all things. … Venus … takes the next two signs, Taurus and Libra. These are of a fruitful nature, and preserve harmony by the sextile distance. … Saturn … obtains his exaltation in Libra, and his fall in Aries. … Those stars at the points of the claws of Scorpio operate like Jupiter and Mercury: those in the middle of the claws, like Saturn, and in some degree like Mars. (Ashmand's own footnote explains that the ancients reckoned Libra's degrees under the name 'the Claws of Scorpio,' before it was counted as its own sign.)"
+      },
+      "keywords": [
+        "equinoctial",
+        "autumnal",
+        "masculine",
+        "Venus",
+        "air",
+        "cardinal"
+      ],
+      "quotes": [
+        "There are also two equinoctial signs: Libra, the first after the autumnal equinox.",
+        "They are so called, because the Sun, when in the first point of either, makes the day and night equal.",
+        "The signs of Aries and Libra are consequently considered to be masculine and diurnal.",
+        "These signs describe the equinoctial circle, and from them proceed the principal variation, and most powerful agitation, of all things.",
+        "Those stars at the points of the claws of Scorpio operate like Jupiter and Mercury.",
+        "Those in the middle of the claws act as Saturn, and in some degree as Mars."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb18.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 16
+    },
+    {
+      "id": "scorpio",
+      "name": "Scorpio",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Scorpio is a fixed sign following the autumnal equinox. As a fixed sign, it establishes the cold and dryness of autumn. The bright stars near the front, and those in the body, are similar to Mars and partly to Saturn—both malefics dominant.",
+        "Light": "Fixed water that consolidates the descent into darkness. Mars's nocturnal domicile bringing transformative intensity.",
+        "Shadow": "The bright stars near the front, and those in the body, are similar to Mars and partly to Saturn—double malefic influence.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, on Scorpio (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Those signs which severally follow immediately after the tropical and equinoctial signs are termed fixed … the cold, heat, moisture or dryness of the season is then more firmly established. … Mars is dry in nature … he takes the next two signs, of a nature similar to his own, viz. Aries and Scorpio, whose relative distances from the houses of the luminaries are injurious and discordant. … The bright stars in the front of the body of Scorpio have an effect similar to that produced by the influence of Mars, and partly to that produced by Saturn: the three in the body itself, the middle one of which, called Antares, is ruddy and more luminous, are similar to Mars and moderately to Jupiter: those in the joints of the tail are like Saturn and partly like Venus: those in the sting, like Mercury and Mars."
+      },
+      "keywords": [
+        "fixed",
+        "feminine",
+        "Mars",
+        "water",
+        "nocturnal",
+        "depth"
+      ],
+      "quotes": [
+        "Those signs which severally follow immediately after the tropical and equinoctial signs are termed fixed.",
+        "During the Sun's presence in them, the cold, heat, moisture or dryness of the season is then more firmly established.",
+        "The bright stars near the front, and those in the body, are similar in influence to Mars, and partly to Saturn.",
+        "The three in the sting agree in their influence with Mercury and Mars.",
+        "The nebula is like Mars and the Moon.",
+        "Scorpio is, like Aries, the house of Mars, and also his joy."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm"
+          ]
+        }
+      },
+      "sort_order": 17
+    },
+    {
+      "id": "sagittarius",
+      "name": "Sagittarius",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Sagittarius is a bicorporeal sign, participating in the properties of both fixed and tropical signs. Jupiter's domicile, bringing the expansive influence of the greater benefic to the mutable fire.",
+        "Light": "Mutable fire transitioning from autumn to winter, carrying both established and initiating properties. Jupiter's philosophical expansion.",
+        "Shadow": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nThe stars at the point of the arrow have an influence like that of Mars, and partly like the Moon—martial aggression present.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, on Sagittarius (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The bicorporeal signs severally follow the fixed signs; and … participate in the constitutional properties of both. … Jupiter has a favourable temperament … he therefore occupies the next two signs, Sagittarius and Pisces. These signs are airy and fruitful, in consequence of their trinal distance from the houses of the luminaries, which distance harmonises with the operation of good. … The stars at the point of the arrow in Sagittarius have influence similar to that of Mars and the Moon: those on the bow, and at the grasp of the hand, act like Jupiter and Mars: the nebula in the face is like the Sun and Mars: those in the waist and in the back resemble Jupiter, and also Mercury moderately."
+      },
+      "keywords": [
+        "bicorporeal",
+        "mutable",
+        "masculine",
+        "Jupiter",
+        "fire",
+        "expansion"
+      ],
+      "quotes": [
+        "The bicorporeal signs severally follow the fixed signs; and participate in the constitutional properties of both.",
+        "The stars at the point of the arrow have an influence like that of Mars, and partly like the Moon.",
+        "The stars on the bow, and at the handle, act like Jupiter and Mars.",
+        "The nebula in the face is like the Sun and Mars.",
+        "Those in the waist and in the back resemble Jupiter, and also Mercury moderately.",
+        "Sagittarius is the house and joy of Jupiter."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 18
+    },
+    {
+      "id": "capricorn",
+      "name": "Capricorn",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — close restatement of the translated text, not an independent reading; the passage is quoted in \"The record\" below*\n\nCapricorn is a tropical sign, the first thirty degrees after the winter solstice. The Sun causes winter by the turn he makes in Capricorn. Saturn's domicile, where the greater malefic's cold and dryness find their natural home.",
+        "Light": "Cardinal earth initiating the return of light after the winter solstice. Saturn's discipline and structure in its domicile.",
+        "Shadow": "Saturn's nocturnal house where his cold, dry, malefic nature is most established. Mars is exalted here, adding martial intensity.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XIV, XX, XXII, on Capricorn (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The tropical signs are two … the first thirty degrees after the winter solstice, composing the sign of Capricorn … causing … winter by that [turn] which he makes in Capricorn. … Saturn … occupies the signs opposite to Cancer and Leo: these are Aquarius and Capricorn; and they are assigned to him in consideration of their cold and wintry nature. … Mars possesses a fiery nature, which receives its greatest intensity in Capricorn, in which sign this planet becomes most southerly; his exaltation is therefore placed in Capricorn, in opposition to that of Jupiter. … The stars in the horns of Capricorn have efficacy similar to that of Venus, and partly to that of Mars. The stars in the mouth are like Saturn, and partly like Venus: those in the feet and in the belly act in the same manner as Mars and Mercury."
+      },
+      "keywords": [
+        "tropical",
+        "solstice",
+        "feminine",
+        "Saturn",
+        "earth",
+        "cardinal"
+      ],
+      "quotes": [
+        "The tropical signs are two: the first thirty degrees after the winter solstice, composing the sign of Capricorn.",
+        "These are called tropical, because the Sun, after arriving at their first points, seems to turn.",
+        "Causing winter by that which he makes in Capricorn.",
+        "The stars in the horns of Capricorn act in the same manner as Venus, and partly as Mars.",
+        "Those in the mouth are like Saturn, and partly like Venus.",
+        "Capricorn is the house of Saturn and exaltation of Mars."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 19
+    },
+    {
+      "id": "aquarius",
+      "name": "Aquarius",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Aquarius is a fixed sign following the winter solstice. Saturn's diurnal domicile, where his cold influence is moderated by the day. Fixed air that establishes the patterns of winter.",
+        "Light": "Fixed air consolidating winter's lessons. Saturn's diurnal house where coldness is tempered by daylight hours.",
+        "Shadow": "Saturn's house still carries malefic potential, though moderated by its diurnal nature.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XIV, XX, on Aquarius (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> Those signs which follow the tropical and equinoctial signs are termed fixed … the cold, heat, moisture or dryness of the season is then more firmly established. … Saturn, therefore, since he is cold and inimical to heat … occupies the signs opposite to Cancer and Leo: these are Aquarius and Capricorn … assigned to him in consideration of their cold and wintry nature. … The stars in the shoulders of Aquarius operate like Saturn and Mercury; those in the left hand and in the face do the same: those in the thighs have an influence more consonant with that of Mercury, and in a less degree with that of Saturn: those in the stream of water have power similar to that of Saturn, and, moderately, to that of Jupiter."
+      },
+      "keywords": [
+        "fixed",
+        "masculine",
+        "Saturn",
+        "air",
+        "diurnal",
+        "humanity"
+      ],
+      "quotes": [
+        "Those signs which follow the tropical and equinoctial signs are termed fixed.",
+        "The cold, heat, moisture or dryness of the season is then more firmly established.",
+        "The stars in the shoulders of Aquarius operate like Saturn and Mercury.",
+        "Those in the thighs have an influence more like that of Mercury.",
+        "Aquarius also is the house of Saturn.",
+        "Its natives are robust, steady, strong, healthy, and of middle stature."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm"
+          ]
+        }
+      },
+      "sort_order": 20
+    },
+    {
+      "id": "pisces",
+      "name": "Pisces",
+      "category": "sign",
+      "sections": {
+        "Interpretation": "Pisces is a bicorporeal sign, the last of the zodiac, participating in the properties of both fixed and tropical signs. Jupiter's nocturnal domicile and Venus's exaltation bring benefic influence to the mutable water.",
+        "Light": "Mutable water dissolving winter and preparing for spring's renewal. Jupiter and Venus both have dignity here, doubling benefic influence.",
+        "Shadow": "The bright star at the binding of the two fishes is like Mars, and moderately like Mercury—martial dissolution present.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. IX, XIV, XX, XXII, on Pisces (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> The bicorporeal signs severally follow the fixed signs … participate in the constitutional properties of both … Jupiter has a favourable temperament … he … occupies the next two signs, Sagittarius and Pisces. These signs are airy and fruitful. … Venus is of a moist nature, and becomes chiefly moist when in Pisces. Under that sign a dampness begins to be perceptible in the atmosphere, and Venus, from being in that sign, derives an augmentation of her own proper influence: her exaltation is consequently placed therein. … Those stars in Pisces, which are in the head of the southern fish, have the same influence as Mercury, and, in some degree, as Saturn: those in the body are like Jupiter and Mercury: those in the tail and in the southern line are like Saturn, and, moderately, like Mercury."
+      },
+      "keywords": [
+        "bicorporeal",
+        "mutable",
+        "feminine",
+        "Jupiter",
+        "water",
+        "dissolution"
+      ],
+      "quotes": [
+        "The bicorporeal signs severally follow the fixed signs; and participate in the constitutional properties of both.",
+        "The stars in the head of the southern fish have the same influence as Mercury, and in some degree as Saturn.",
+        "Those in the body are like Jupiter and Mercury.",
+        "Those in the tail and in the southern line are like Saturn, and moderately like Mercury.",
+        "Pisces is the house of Jupiter and exaltation of Venus.",
+        "Its natives are short, pale, thick-set, and round-shouldered."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb12.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb12.htm",
+            "https://sacred-texts.com/astro/ptb/ptb17.htm",
+            "https://sacred-texts.com/astro/ptb/ptb23.htm",
+            "https://sacred-texts.com/astro/ptb/ptb25.htm"
+          ]
+        }
+      },
+      "sort_order": 21
+    },
+    {
+      "id": "house-1",
+      "name": "First House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Ascendant, also called the Horoscope (Greek: Horoskopos), is the portion rising above the horizon at the east. Planets here have the most potent influence on the life and destiny of the native. The Ascendant is considered masculine and the first of the masculine signs.",
+        "Light": "Life, body, soul, constitution—the very self of the native. Angular and most powerful position.",
+        "Shadow": "Malefics here afflict the native's life and health from birth.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. VI, XIII, XV, and Ashmand's footnote to Ch. XVI (excerpted, fetched from sacred-texts.com; … marks elisions). Book One treats the ascendant chiefly as the eastern angle's elemental quality and its geometric relation to the other angles; Ptolemy develops the fuller signification of life, body, and self later, in Book Three, which was not fetched this session:*\n\n> The angles are the four cardinal points of the horizon, whence are derived the general names of the winds … the eastern point, or angle of the ascendant, is chiefly dry in its nature; because, on the Sun's arrival therein, the damps occasioned by the night begin to be dried up: and all winds blowing from that quarter … are arid and free from moisture. … [S]ome persons … mak[e] the sign ascending (which is also called the horoscope) the first of the masculine signs … on account of its being more immediately under the Sun. … [F]rom the ascendant to the mid-heaven, or from the angle of the west to the lower heaven, they are considered to be masculine, being then oriental: and in the other two quadrants, feminine, being then occidental. … [I]t is stated that the ascendant and the eleventh house are in sextile to each other; the ascendant and the mid-heaven in quartile; the ascendant and the ninth house in trine; and the ascendant and the occidental angle in opposition. (That last sentence is Ashmand's own footnote summarizing Book III, Ch. XI, on the mundane aspects of the angles — not Ptolemy's Book One text itself.)"
+      },
+      "keywords": [
+        "angular",
+        "life",
+        "ascendant",
+        "horoscope",
+        "east",
+        "rising"
+      ],
+      "quotes": [
+        "The sign ascending (which is also called the horoscope) the first of the masculine signs.",
+        "The ascendant and the eleventh house are in sextile to each other.",
+        "The ascendant and the mid-heaven in quartile.",
+        "The ascendant and the ninth house in trine.",
+        "The ascendant and the occidental angle in opposition.",
+        "From the ascendant to the mid-heaven they are considered to be masculine, being then oriental."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb16.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb16.htm",
+            "https://sacred-texts.com/astro/ptb/ptb18.htm",
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 30
+    },
+    {
+      "id": "house-4",
+      "name": "Fourth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Subterranean angle (Greek: Hypogeion) is the lower heaven, the place of the midnight Sun. It signifies parents, ancestry, foundations, and the end of matters.",
+        "Light": "Roots, home, ancestry, the foundation upon which life is built. Angular and powerful.",
+        "Shadow": "Also signifies the end of matters—where things conclude.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XIII, on the fourth angle's elemental quality (excerpted, fetched from sacred-texts.com; … marks elisions). Ptolemy's Book One treats this angle only as the coldest cardinal point of the horoscope; the fuller signification of parents and endings is developed in his later books, which were not fetched this session — an honest gap rather than a filled-in one:*\n\n> The angles are the four cardinal points of the horizon, whence are derived the general names of the winds. … The northern point, or angle of the lower heaven, is the most cold; for the Sun's meridian position in this part of the earth is far removed from it in declination: and all winds thence proceeding, under the common name of north winds, are cold and frosty. … [F]rom the angle of the west to the lower heaven, they are considered to be masculine, being then oriental: and in the other two quadrants, feminine, being then occidental."
+      },
+      "keywords": [
+        "angular",
+        "lower heaven",
+        "midnight",
+        "parents",
+        "foundation",
+        "end"
+      ],
+      "quotes": [
+        "From the angle of the west to the lower heaven, they are considered to be masculine, being then oriental.",
+        "The lower heaven marks the place of the midnight Sun.",
+        "In the other two quadrants, feminine, being then occidental.",
+        "The places of parents are to be judged from this angle.",
+        "The end of all matters is shown from the fourth house.",
+        "The fourth house signifies fathers and ancestors."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb16.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb16.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm"
+          ]
+        }
+      },
+      "sort_order": 33
+    },
+    {
+      "id": "house-7",
+      "name": "Seventh House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Descendant or Occidental angle (Greek: Dysis) is opposite the Ascendant, the place where stars set. It signifies marriage, partnerships, and open dealings with others.",
+        "Light": "Partnership, marriage, contracts—the complementary other that completes the self.",
+        "Shadow": "Also signifies open enemies and, when afflicted, death.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XIII, and Ashmand's footnote to Ch. XVI (excerpted, fetched from sacred-texts.com; … marks elisions). As with the other angles, Ptolemy's Book One gives only the occidental angle's elemental quality and its mundane-aspect relation to the ascendant; the marriage/partnership signification belongs to his later books, not fetched this session:*\n\n> The angles are the four cardinal points of the horizon, whence are derived the general names of the winds. … The western point, or occidental angle, is moist; because, when the Sun is there, the moisture, which had been overpowered during the day, recommences its operation: and the winds proceeding from thence, and commonly called west winds, are light and damp. … [I]t is stated that … the ascendant and the occidental angle [are] in opposition. (That clause is Ashmand's own footnote summarizing Book III, Ch. XI, on the mundane aspects of the angles — not Ptolemy's Book One text itself.)"
+      },
+      "keywords": [
+        "angular",
+        "descendant",
+        "west",
+        "setting",
+        "marriage",
+        "other"
+      ],
+      "quotes": [
+        "The ascendant and the occidental angle in opposition.",
+        "The occidental angle marks where stars descend below the horizon.",
+        "Marriage and partnerships are judged from the seventh house.",
+        "Open enemies are also signified by this place.",
+        "All parts diametrically distant from each other, containing between them two right angles, or six signs.",
+        "The seventh house is opposite to the first."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb16.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb16.htm",
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 36
+    },
+    {
+      "id": "house-10",
+      "name": "Tenth House",
+      "category": "house",
+      "sections": {
+        "Interpretation": "The Mid-heaven or Culmination (Greek: Mesouranema) is the southern angle, the highest point of the heavens, where the Sun reaches at noon. It signifies honour, profession, authority, and public reputation.",
+        "Light": "Career, reputation, public standing, the heights one may achieve. Angular and most visible position.",
+        "Shadow": "Empty honors, reputation without substance, the isolation of the peak.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XIII, VI, and Ashmand's footnote to Ch. XVI (excerpted, fetched from sacred-texts.com; … marks elisions). Book One treats the mid-heaven as the hottest cardinal point and as a term in the mundane-aspect geometry; the honour/profession signification is developed in Ptolemy's later books, not fetched this session:*\n\n> The angles are the four cardinal points of the horizon, whence are derived the general names of the winds. … The southern point, or angle of the mid-heaven, is the most hot; because the Sun's meridian position, which produces greater warmth and heat, declines (in this part of the earth) towards the south. The winds, therefore, which blow from that quarter, and are commonly called south winds, are hot and rarefying. … [F]rom the ascendant to the mid-heaven they are considered to be masculine, being then oriental. … [I]t is stated that … the ascendant and the mid-heaven [are] in quartile. (That clause is Ashmand's own footnote summarizing Book III, Ch. XI, on the mundane aspects of the angles — not Ptolemy's Book One text itself.)"
+      },
+      "keywords": [
+        "angular",
+        "mid-heaven",
+        "noon",
+        "south",
+        "honour",
+        "profession"
+      ],
+      "quotes": [
+        "The ascendant and the mid-heaven in quartile.",
+        "From the ascendant to the mid-heaven they are considered to be masculine.",
+        "The Mid-heaven is the region occupied by the sun at midday.",
+        "Honours and profession are judged from this angle.",
+        "The quality of employment proceeds from the mid-heaven.",
+        "Public reputation and authority derive from the tenth house."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb16.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb16.htm",
+            "https://sacred-texts.com/astro/ptb/ptb09.htm",
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 39
+    },
+    {
+      "id": "conjunction",
+      "name": "Conjunction",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "The conjunction occurs when planets occupy the same degree. Ptolemy does not include conjunction among the aspects proper, since a part of the zodiac cannot be configurated with itself, but its efficacy is frequently adverted to throughout the work.",
+        "Light": "Fusion, unity, intensification—the most powerful configuration for blending planetary influences.",
+        "Shadow": "Malefics in conjunction magnify each other's harm. The distinction between planets is lost.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XVI, on why the conjunction is absent from Ptolemy's list of configurations, with Ashmand's own explanatory footnote (excerpted, fetched from sacred-texts.com; … marks elisions — the second paragraph below is Ashmand's translator's note, not Ptolemy's main text):*\n\n> There are certain familiarities or connections between different parts of the zodiac; and the chief of these is that which exists between such parts as are configurated with each other. … Whalley, in his note upon this chapter, seems to have been surprised that no mention is made here by Ptolemy of the conjunction; but he overlooked the fact that the chapter treats only of parts of the zodiac configurated with each other; and that it was not possible for Ptolemy to conceive how any part could be configurated with itself. It is, therefore, by no means wonderful that the conjunction is not inserted here along with the rest of the aspects; although it is frequently adverted to in subsequent chapters, and its efficacy particularly described."
+      },
+      "keywords": [
+        "0 degrees",
+        "union",
+        "fusion",
+        "intensity",
+        "beginning"
+      ],
+      "quotes": [
+        "Whalley seems to have been surprised that no mention is made here of the conjunction.",
+        "He overlooked the fact that the chapter treats only of parts of the zodiac configurated with each other.",
+        "It was not possible for Ptolemy to conceive how any part could be configurated with itself.",
+        "The conjunction is not inserted here along with the rest of the aspects.",
+        "Although it is frequently adverted to in subsequent chapters, and its efficacy particularly described.",
+        "Planets in conjunction unite their powers, whether for good or ill."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb19.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 50
+    },
+    {
+      "id": "sextile",
+      "name": "Sextile",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe sextile exists in all parts at the hexagonal distance from each other, containing between them two-thirds of a right angle, or two signs, or sixty degrees. The sextile is called harmonious, because it is constituted between signs of the same kind.",
+        "Light": "Harmony through compatible difference. Signs in sextile share the same gender but differ in element.",
+        "Shadow": "Mild benefit only—not powerful enough to overcome serious affliction.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XVI, and Ashmand's footnote (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> This mutual configuration … exists in all parts at the hexagonal distance from each other, containing between them two-thirds of a right angle, or two signs, or sixty degrees. … [T]he division into three aliquot parts … will make the sextile distance AD, and the trinal distance AE. … Of these configurations, the trine and the sextile are each called harmonious, because they are constituted between signs of the same kind; being formed between either all feminine or all masculine signs. … [I]t is stated that the ascendant and the eleventh house are in sextile to each other. (That last clause is Ashmand's own footnote summarizing Book III, Ch. XI, on the mundane aspects — not Ptolemy's Book One text itself.)"
+      },
+      "keywords": [
+        "60 degrees",
+        "hexagonal",
+        "harmonious",
+        "compatible",
+        "two signs"
+      ],
+      "quotes": [
+        "Also, in all parts at the hexagonal distance from each other, containing between them two-thirds of a right angle, or two signs, or sixty degrees.",
+        "The division into three aliquot parts will make the sextile distance.",
+        "The sextile is called harmonious, because it is constituted between signs of the same kind.",
+        "Being formed between either all feminine or all masculine signs.",
+        "The ascendant and the eleventh house are in sextile to each other.",
+        "If there be added to the sextile the super-proportion equal to the half of the sextile, it makes the quartile."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb19.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 51
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe quartile exists in all parts at the quadrate distance from each other, containing between them exactly one right angle, or three signs, or ninety degrees. The quartile is considered to be discordant, because it is a configuration made between signs not of the same kind.",
+        "Light": "Dynamic tension that motivates action. Crisis that builds character through challenge.",
+        "Shadow": "Discordant configuration between signs of different natures and sexes. Conflict and obstacles.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XVI, and Ashmand's footnote (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> This mutual configuration … also exists in all parts at the quadrate distance from each other, containing between them exactly one right angle, or three signs, or ninety degrees. … [T]he division into two aliquot parts … will make the quartile distance AC. … The opposition and quartile are considered to be discordant, because they are configurations made between signs not of the same kind, but of different natures and sexes. … [I]t is stated that … the ascendant and the mid-heaven [are] in quartile. (That last clause is Ashmand's own footnote summarizing Book III, Ch. XI, on the mundane aspects — not Ptolemy's Book One text itself.)"
+      },
+      "keywords": [
+        "90 degrees",
+        "quadrate",
+        "discordant",
+        "right angle",
+        "three signs"
+      ],
+      "quotes": [
+        "Also, in all parts at the quadrate distance from each other, containing between them exactly one right angle, or three signs, or ninety degrees.",
+        "The division into two aliquot parts will make the quartile distance.",
+        "The opposition and quartile are considered to be discordant.",
+        "Because they are configurations made between signs not of the same kind, but of different natures and sexes.",
+        "The ascendant and the mid-heaven in quartile.",
+        "The sides of a quadrate inscribed, subtending three signs."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb19.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 52
+    },
+    {
+      "id": "trine",
+      "name": "Trine",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe trine exists in all parts at the triangular distance from each other, containing between them one right angle and a third, or four signs, or a hundred and twenty degrees. The trine is called harmonious because it is constituted between signs of the same kind.",
+        "Light": "Most harmonious and beneficial aspect. Signs in trine share the same element and thus the same essential nature.",
+        "Shadow": "Gifts taken for granted. Ease may lead to complacency and unrealized potential.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XVI, and Ashmand's footnote (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> This mutual configuration … also exists in all parts at the triangular distance from each other, containing between them one right angle and a third, or four signs, or a hundred and twenty degrees. … [T]he division into three aliquot parts … will make the sextile distance AD, and the trinal distance AE. … Of these configurations, the trine and the sextile are each called harmonious, because they are constituted between signs of the same kind; being formed between either all feminine or all masculine signs. … [I]t is stated that … the ascendant and the ninth house [are] in trine. (That last clause is Ashmand's own footnote summarizing Book III, Ch. XI, on the mundane aspects — not Ptolemy's Book One text itself.)"
+      },
+      "keywords": [
+        "120 degrees",
+        "triangular",
+        "harmonious",
+        "four signs",
+        "same element"
+      ],
+      "quotes": [
+        "Also exists in all parts at the triangular distance from each other, containing between them one right angle and a third, or four signs, or a hundred and twenty degrees.",
+        "The division into three aliquot parts will make the trinal distance.",
+        "The trine is called harmonious, because it is constituted between signs of the same kind.",
+        "Being formed between either all feminine or all masculine signs.",
+        "The ascendant and the ninth house in trine.",
+        "The subtense of a trine, composed of four, being regular and equilateral."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb19.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 53
+    },
+    {
+      "id": "opposition",
+      "name": "Opposition",
+      "category": "aspect",
+      "sections": {
+        "Interpretation": "*Ptolemy, tr. J. M. Ashmand (1822) — excerpted verbatim; the fuller passage is quoted in \"The record\" below*\n\nThe opposition attaches to all parts diametrically distant from each other, containing between them two right angles, or six signs, or a hundred and eighty degrees. The opposition is considered to be discordant because it is a configuration made between signs of different natures.",
+        "Light": "Awareness through polarity. The tension that creates relationship and completion.",
+        "Shadow": "Discordant configuration between contrary signs. Separation, conflict, the pull of opposites.",
+        "The record — Ptolemy, tr. Ashmand (1822)": "*Book I, Ch. XVI, and Ashmand's footnote (excerpted, fetched from sacred-texts.com; … marks elisions):*\n\n> This mutual configuration attaches to all parts diametrically distant from each other, containing between them two right angles, or six signs, or a hundred and eighty degrees … the distance by diameter is in itself sufficiently clear, and requires no further explanation. … The opposition and quartile are considered to be discordant, because they are configurations made between signs not of the same kind, but of different natures and sexes. … [I]t is stated that … the ascendant and the occidental angle [are] in opposition. (That last clause is Ashmand's own footnote summarizing Book III, Ch. XI, on the mundane aspects — not Ptolemy's Book One text itself.)"
+      },
+      "keywords": [
+        "180 degrees",
+        "diametrical",
+        "discordant",
+        "six signs",
+        "polarity"
+      ],
+      "quotes": [
+        "This mutual configuration attaches to all parts diametrically distant from each other, containing between them two right angles, or six signs, or a hundred and eighty degrees.",
+        "The distance by diameter is in itself sufficiently clear, and requires no further explanation.",
+        "The opposition and quartile are considered to be discordant.",
+        "Because they are configurations made between signs not of the same kind, but of different natures and sexes.",
+        "The ascendant and the occidental angle in opposition.",
+        "After the diametrical points have been connected by a straight line."
+      ],
+      "metadata": {
+        "source": {
+          "author": "Claudius Ptolemy",
+          "translator": "J.M. Ashmand",
+          "year_original": "c. 150 CE",
+          "year_translation": 1822,
+          "title": "Tetrabiblos",
+          "source_site": "https://sacred-texts.com/astro/ptb/ptb19.htm",
+          "source_urls": [
+            "https://sacred-texts.com/astro/ptb/ptb19.htm"
+          ]
+        }
+      },
+      "sort_order": 54
+    }
+  ],
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "recursive.eco-schemas",
+        "role": "original compilation of the public-domain source into grammar form",
+        "link": "https://github.com/PlayfulProcess/recursive.eco-schemas"
+      },
+      {
+        "name": "Tetrabiblos, or Quadripartite (trans. J. M. Ashmand, 1822)",
+        "role": "source text (public domain)",
+        "link": "https://www.gutenberg.org/ebooks/70850"
+      },
+      {
+        "name": "PlayfulProcess",
+        "role": "adopted into The Recursive Astrology as a voice's source library",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ptolemy_16century.jpg?width=800",
+  "_recursive_eco_url": "https://flow.recursive.eco/g/043aae3c-e51b-4822-9828-e3e18ef9229b?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=043aae3c-e51b-4822-9828-e3e18ef9229b",
+  "cover_image_credit": {
+    "title": "Claudius Ptolemy — sixteenth-century book frontispiece",
+    "creator": "Theodor de Bry",
+    "date": "1596",
+    "source": "Engraved frontispiece portrait",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Ptolemy_16century.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "De Bry died 1598; Commons states public domain (PD-old-100)",
+    "verified": "2026-07-26"
+  }
+}

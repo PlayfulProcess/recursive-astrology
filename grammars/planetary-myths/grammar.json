@@ -1,0 +1,259 @@
+{
+  "name": "Planetary Myths — the same sky, many readings",
+  "description": "One item per classical planet, carrying the myth that grew up around it in three unrelated traditions — Greco-Roman, Vedic (Jyotiṣa), and Babylonian/Mesopotamian — side by side, so the disagreement between them is visible rather than smoothed over. Each lens is presented as an owned lens: a summary with a link to real sources, never paraphrased as this site's own authority. Built for the History of Astrology course; see research/why-astrology/04-planetary-myths.md for the full source list with confidence markers. Provenance, honestly: this is a 2026 research compilation by an AI research pass for recursive.eco, drawing on public encyclopedic and scholarly-adjacent web sources (cited inline per section) — not a primary-source translation and not a claim of any tradition's own authority. For the historical registers in their own words, see grammars/tetrabiblos-ashmand and grammars/alan-leo in this repo.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_mundani_Ptolemaici.jpg?width=800",
+  "grammar_type": "custom",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — 2026 research compilation across three traditions (Greco-Roman, Vedic, Babylonian). Not a primary-source translation; per-item confidence and inline source lines carry the sourcing."
+  },
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "is_published": true,
+  "tags": [
+    "astrology",
+    "myth",
+    "history"
+  ],
+  "_generated": false,
+  "items": [
+    {
+      "id": "planet-sun",
+      "name": "Sun",
+      "symbol": "☉",
+      "category": "planet",
+      "sections": {
+        "Greco-Roman": "Helios, a Titan, drove a four-horse chariot across the sky each day, lighting the world from dawn to dusk. By the Hellenistic period the Olympian Apollo — god of prophecy, music, and healing — had absorbed most of Helios's solar identity in cult and art, though the two were never formally merged in myth. Sources: Wikipedia, \"Selene\" (cross-referenced) — https://en.wikipedia.org/wiki/Selene; Greek Names, \"Greek names of the planets\" — https://www.greek-names.info/greek-names-of-the-planets/ (confidence: ○ — search-triangulated, direct Wikipedia fetch blocked this session).",
+        "Vedic (graha)": "Sūrya is the graha of soul, vitality, and self-worth — Jyotiṣa treats him as king among the nine grahas and the significator (kāraka) of ego, father, and life-force. He rides a seven-horse chariot driven by Aruṇa, the horses named for the seven Vedic poetic meters (chandas); his arrival is heralded by the dawn-goddess Uṣas. The Ṛgveda's Gāyatrī mantra (3.62.10) is addressed to Sūrya-as-Savitṛ. As taught in Jyotiṣa, summarized — see Wikipedia, \"Surya\" — https://en.wikipedia.org/wiki/Surya; Budaya Bali, \"God Surya and the 7 Horses\" — https://budayabali.com/god-surya-and-the-7-horses-the-timekeeper-energy-controller-and-guardian-of-cosmic-balance (confidence: ○).",
+        "Babylonian/Mesopotamian": "Shamash (Sumerian Utu) was sun-god and god of justice — riding his chariot by day, he was believed to see every human act and so judge right from wrong; Hammurabi's law code claims Shamash as its source. With Sin (Moon) and Ishtar (Venus) he formed an astral triad governing the Babylonian omen-sky, the oldest documented layer beneath the later Greco-Roman planet names. Sources: World History Encyclopedia, \"Utu-Shamash\" — https://www.worldhistory.org/Utu-Shamash/; Britannica, \"Shamash\" — https://www.britannica.com/topic/Shamash (confidence: ✔ — corroborated across independent reference sources).",
+        "What the lens reads": "Three unrelated cultures pointed at the same bright disk and each built a different story: a chariot-driving Titan who became a healer-god, a soul-significator riding meters-of-poetry horses, a judge who sees every human act. None of this is a claim that the Sun causes anything — it is a record of how differently situated humans, looking at the same sky, made sense together. The disagreement between the three readings IS the content."
+      },
+      "keywords": [
+        "sun",
+        "helios",
+        "apollo",
+        "surya",
+        "shamash",
+        "myth",
+        "cross-cultural"
+      ],
+      "metadata": {
+        "planet": "Sun",
+        "greco_roman_deity": "Helios / Apollo",
+        "vedic_graha": "Sūrya",
+        "babylonian_deity": "Shamash / Utu",
+        "confidence": "medium",
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+      }
+    },
+    {
+      "id": "planet-moon",
+      "name": "Moon",
+      "symbol": "☽",
+      "category": "planet",
+      "sections": {
+        "Greco-Roman": "Selene, a Titan daughter of Hyperion and Theia, drove her own moon-chariot nightly across the sky, sister to the sun-god Helios; the Romans called her Luna, who had a temple on Rome's Aventine Hill. In post-classical practice Selene/Luna increasingly blended with Artemis/Diana, goddess of the hunt and wilderness, even though the two began as separate figures — one purely a sky-orb goddess, the other a broader nature deity. Sources: Wikipedia, \"Selene\" — https://en.wikipedia.org/wiki/Selene; Theoi Project, \"Selene\" — https://www.theoi.com/Titan/Selene.html (confidence: ○).",
+        "Vedic (graha)": "Chandra (also called Soma, \"the bright drop\") governs the mind (manas) in Jyotiṣa — a fast-moving, changeable graha tied to emotion, memory, and the 27 nakṣatras, mythologized as his 27 wives, daughters of Daksha. Chandra's favoritism toward Rohiṇī drew Daksha's curse of a wasting sickness, later softened into the Moon's waxing-and-waning cycle — the tradition's own explanation for lunar phases. Whether \"Soma\" originally meant the Moon versus the ritual drink varies by textual layer, sources note. As taught in Jyotiṣa, summarized — Wikipedia, \"Chandra\" — https://en.wikipedia.org/wiki/Chandra; Dharma Station, \"The Myth of Chandra and His 27 Wives\" — https://www.dharmastation.ca/post/the-myth-of-chandra-and-his-27-wives (confidence: ○).",
+        "Babylonian/Mesopotamian": "Nanna (Akkadian Sin), one of Mesopotamia's oldest attested gods (from c. 3500 BCE), was worshipped as moon-god and god of wisdom at his great ziggurat in Ur; during the Ur III period he was additionally cast as judge of the dead. Son of Enlil and Ninlil, he was symbolized by the crescent moon. Source: World History Encyclopedia, \"Nanna\" — https://www.worldhistory.org/Nanna/ (confidence: ○ — single strong tertiary source, content consistent with other reference summaries).",
+        "What the lens reads": "A Titan sister on a nightly chariot ride, a wisdom-god whose crescent watches from a ziggurat in Ur, a changeable mind-graha with 27 star-brides — three cultures, one visibly-changing light in the night sky. Nobody in this grammar is claiming the Moon governs mood; the claim is narrower and more honest: humans across millennia independently reached for story to hold what they could plainly see changing shape above them."
+      },
+      "keywords": [
+        "moon",
+        "selene",
+        "luna",
+        "chandra",
+        "nanna",
+        "sin",
+        "myth"
+      ],
+      "metadata": {
+        "planet": "Moon",
+        "greco_roman_deity": "Selene / Luna",
+        "vedic_graha": "Chandra (Soma)",
+        "babylonian_deity": "Nanna / Sin",
+        "confidence": "medium",
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+      }
+    },
+    {
+      "id": "planet-mercury",
+      "name": "Mercury",
+      "symbol": "☿",
+      "category": "planet",
+      "sections": {
+        "Greco-Roman": "Hermes, son of Zeus and the nymph Maia, served as herald and messenger of the Olympian gods and patron of travelers, merchants, orators, and — frankly — thieves, a boundary-crosser by nature. Rome adopted him as Mercury by the 4th century BCE, merging him with the Etruscan Turms; the name likely derives from merx, \"merchandise.\" Mercury kept Hermes's winged sandals, winged cap, and caduceus. Sources: Wikipedia, \"Hermes\" — https://en.wikipedia.org/wiki/Hermes; Britannica, \"Mercury\" — https://www.britannica.com/topic/Mercury-Roman-god (confidence: ✔).",
+        "Vedic (graha)": "Budha (not to be confused with the Buddha) personifies buddhi, intellect — Jyotiṣa's significator of communication, learning, and adaptable thinking, said to take on the qualities of whichever planet it conjoins. His origin myth is unusually charged: born of Chandra's (the Moon's) affair with Tārā, wife of Bṛhaspati (Jupiter), a lineage dispute called the Tārakāmaya war. Budha later married Ilā and fathered Purūravas, founder of the lunar dynasty. As taught in Jyotiṣa, summarized — Wikipedia, \"Budha\" — https://en.wikipedia.org/wiki/Budha; Exotic India, \"Budha: God of Planet Mercury\" — https://www.exoticindiaart.com/article/god-of-planet-mercury-budha/ (confidence: ○).",
+        "Babylonian/Mesopotamian": "Nabu, patron of scribes, writing, and wisdom, rose to prominence in the 1st millennium BCE as the son of Marduk of Babylon; each New Year his statue traveled from his own city, Borsippa, to pay respects to his father, and by the Neo-Babylonian period he stood nearly equal to Marduk as co-ruler of the pantheon. His signature task was inscribing the Tablet of Destinies. Sources: Ancient Origins, \"Nabu\" — https://www.ancient-origins.net/myths-legends-africa/nabu-0014933; Wikipedia, \"Nabu\" — https://en.wikipedia.org/wiki/Nabu (confidence: ○).",
+        "What the lens reads": "A trickster-herald who invented commerce, an intellect-graha born of a scandalous lunar affair, a divine scribe who wrote the world's fate on a tablet — three very different plots converge on the same idea: this fast, changeable point of light governs thinking, language, and the crossing of boundaries. That convergence is interesting; it is not evidence any of the three literally happened."
+      },
+      "keywords": [
+        "mercury",
+        "hermes",
+        "budha",
+        "nabu",
+        "myth",
+        "communication"
+      ],
+      "metadata": {
+        "planet": "Mercury",
+        "greco_roman_deity": "Hermes / Mercury",
+        "vedic_graha": "Budha",
+        "babylonian_deity": "Nabu",
+        "confidence": "medium",
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
+        "image_credit": {
+          "title": "Statue of Hermes with petasus, cloak, caduceus and purse (Chiaramonti Museum)",
+          "creator": "Unknown sculptor; Roman copy after a Greek original",
+          "date": "Roman period",
+          "source": "Museo Chiaramonti, Vatican Museums",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Statue_Hermes_Chiaramonti.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Ancient sculpture; Commons file page states public domain",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_Hermes_Chiaramonti.jpg?width=800"
+    },
+    {
+      "id": "planet-venus",
+      "name": "Venus",
+      "symbol": "♀",
+      "category": "planet",
+      "sections": {
+        "Greco-Roman": "Aphrodite's birth has two competing accounts even within Greek sources: Hesiod's Theogony has her rising from sea-foam formed when Cronus cast Uranus's severed body into the water; Homer's Iliad instead calls her daughter of Zeus and Dione. Rome's Venus began as a goddess of gardens and spring growth before being formally identified with Aphrodite around the 3rd century BCE, per the historian Livy, after which she absorbed Aphrodite's love-and-beauty portfolio. Sources: Wikipedia, \"Aphrodite\" — https://en.wikipedia.org/wiki/Aphrodite; Ancient-Greece.org, \"Aphrodite (Venus)\" — https://ancient-greece.org/mythology/aphrodite-venus/ (confidence: ✔ for the two-birth-accounts claim, ○ for the Livy dating detail).",
+        "Vedic (graha)": "Shukra, son of the sage Bhṛgu, is guru to the asuras (as Bṛhaspati is guru to the devas) — Jyotiṣa's significator of love, marriage, beauty, and pleasure. His signature myth: austerities won him Sanjīvanī Vidyā from Śiva, the power to revive the dead, which he used to repeatedly resurrect fallen asuras in their war against the devas. As taught in Jyotiṣa, summarized — Wikipedia, \"Shukra\" — https://en.wikipedia.org/wiki/Shukra; Mytho World, \"Shukra — God of Venus and the Guru of Asuras\" — https://www.mythoworld.com/shukra-god-of-venus-and-the-guru-of-asuras/ (confidence: ○).",
+        "Babylonian/Mesopotamian": "Inanna (Akkadian Ishtar), among the oldest deities for whom written evidence survives, combined love, sex, and fertility with war and political power — an unusual pairing for a single figure. Her eight-pointed star marked her identification with Venus in both its \"Morning Star\" (warrior) and \"Evening Star\" (beauty) aspects; her myth of descending to the underworld and returning has been read as a mirror of Venus's own disappearance and reappearance in the sky. Sources: World History Encyclopedia, \"Ishtar\" — https://www.worldhistory.org/ishtar/; Wikipedia, \"Inanna\" — https://en.wikipedia.org/wiki/Inanna (confidence: ✔ for the Venus/eight-pointed-star identification, ◆ for the descent-myth-as-Venus-cycle reading, which is an interpretive one).",
+        "What the lens reads": "Love-goddess and war-goddess, teacher of demons with power to revive the dead, a beauty born from severed divinity in sea-foam — the throughline across three traditions is a bright, twin-aspected planet (morning star and evening star are literally the same body) mapped onto love, value, and attraction. The lens reads a real astronomical phenomenon — Venus's two appearances — through three unrelated symbol systems; none of the three is 'the' correct reading."
+      },
+      "keywords": [
+        "venus",
+        "aphrodite",
+        "shukra",
+        "ishtar",
+        "inanna",
+        "myth"
+      ],
+      "metadata": {
+        "planet": "Venus",
+        "greco_roman_deity": "Aphrodite / Venus",
+        "vedic_graha": "Shukra",
+        "babylonian_deity": "Inanna / Ishtar",
+        "confidence": "medium",
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
+        "image_credit": {
+          "title": "Aphrodite of Melos, the so-called 'Venus de Milo' (Louvre Ma 399)",
+          "creator": "Unknown sculptor",
+          "date": "c. 130-100 BCE",
+          "source": "Musée du Louvre, Paris",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Venus_de_Milo_Louvre_Ma399.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Ancient sculpture; Commons file page states public domain",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venus_de_Milo_Louvre_Ma399.jpg?width=800"
+    },
+    {
+      "id": "planet-mars",
+      "name": "Mars",
+      "symbol": "♂",
+      "category": "planet",
+      "sections": {
+        "Greco-Roman": "Ares, son of Zeus and Hera, embodied war's raw violence and confusion — the Greeks themselves regarded him with distaste, one of their least-worshipped Olympians. Rome's Mars was a very different figure: second only to Jupiter in importance, more disciplined in portrayal, and doubling as an agricultural guardian — a war-and-harvest combination distinctive to early Roman religion. Rome formally identified Mars with Ares despite this temperamental gap. Sources: GreekReporter, \"Ares vs. Mars\" — https://greekreporter.com/2025/08/18/ares-mars-greek-roman-gods-war/; World History Encyclopedia, \"Ares\" — https://www.worldhistory.org/Ares/ (confidence: ✔).",
+        "Vedic (graha)": "Mangala (also Aṅgāraka, \"the red one\") is Jyotiṣa's significator of courage, aggression, and drive — a fiery, challenging graha. Two competing origin myths exist: the Śaiva account has him born from three drops of Śiva's sweat, raised by the Earth-goddess Bhūmi; the Vaiṣṇava account ties his birth to Viṣṇu's boar-avatar Varāha piercing the Earth to rescue it, infusing it with divine essence. As taught in Jyotiṣa, summarized — Wikipedia, \"Mangala\" — https://en.wikipedia.org/wiki/Mangala; Exotic India, \"About Mangala Grah\" — https://www.exoticindiaart.com/article/about-mangala-grah/ (confidence: ○).",
+        "Babylonian/Mesopotamian": "Nergal, god of war, plague, and \"inflicted death,\" began as a regional agricultural deity of the city of Kutha before becoming lord of the underworld — in the myth of Nergal and Ereshkigal, he descends to challenge her, and the two end up ruling the underworld jointly as husband and wife. He was closely associated with the noon sun and the deadly heat of the Mesopotamian dry season. Sources: World History Encyclopedia, \"Nergal\" — https://www.worldhistory.org/Nergal/; Britannica, \"Nergal\" — https://www.britannica.com/topic/Nergal-Mesopotamian-deity (confidence: ✔).",
+        "What the lens reads": "An unloved war-god the Greeks distrusted, an underworld king who won his throne by threatening its queen, a red graha born of sweat or a boar's tusk — every tradition reaches for violence, heat, and challenge to describe the same rust-red point of light. That convergence says something about shared human pattern-recognition (a reddish object read as blood, fire, conflict), not that Mars 'causes' anger."
+      },
+      "keywords": [
+        "mars",
+        "ares",
+        "mangala",
+        "nergal",
+        "myth"
+      ],
+      "metadata": {
+        "planet": "Mars",
+        "greco_roman_deity": "Ares / Mars",
+        "vedic_graha": "Mangala (Aṅgāraka)",
+        "babylonian_deity": "Nergal",
+        "confidence": "medium",
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+      }
+    },
+    {
+      "id": "planet-jupiter",
+      "name": "Jupiter",
+      "symbol": "♃",
+      "category": "planet",
+      "sections": {
+        "Greco-Roman": "Zeus, son of Cronus and Rhea, ruled Olympus as sky-and-thunder god and \"father of gods and men\"; the Greek and Roman names for him (and the Vedic Dyaus, below) share an Indo-European root meaning \"sky father.\" Rome's Jupiter inherited Zeus's role as king of the gods and god of sky, law, and order. Sources: Wikipedia, \"Zeus\" — https://en.wikipedia.org/wiki/Zeus; British Museum blog, \"Gods and goddesses of the Greek and Roman pantheon\" — https://www.britishmuseum.org/blog/gods-and-goddesses-greek-and-roman-pantheon (confidence: ✔).",
+        "Vedic (graha)": "Bṛhaspati (also Guru), teacher of the devas as Shukra teaches the asuras, is Jyotiṣa's significator of wisdom, expansion, and ethics — \"guru\" literally meaning \"heavy [with knowledge].\" He appears already in the Ṛgveda (book 4, hymn 50), described as born from the first light and carrying a bow strung with Ṛta, cosmic order; later texts call him son of the sage Aṅgiras. As taught in Jyotiṣa, summarized — Wikipedia, \"Brihaspati\" — https://en.wikipedia.org/wiki/Brihaspati (confidence: ○).",
+        "Babylonian/Mesopotamian": "Marduk began as a minor agricultural god of Babylon before Hammurabi's reign (c. 1792 BCE) elevated him to supreme sky-god and king of the pantheon. The Enūma Eliš epic tells how he defeated the primordial sea-goddess Tiamat and built the heavens and earth from her body — the mythic charter for Babylon's claim to cosmic and political centrality. Later astral texts equate him with the planet Jupiter. Sources: World History Encyclopedia, \"Enuma Elish\"; EBSCO Research Starters, \"Marduk\" — https://www.ebsco.com/research-starters/religion-and-philosophy/marduk (confidence: ✔ for the Enuma Elish narrative, ○ for the specific Jupiter equation's dating).",
+        "What the lens reads": "A thunder-king who overthrew his own father, a wisdom-teacher whose bowstring is cosmic order itself, a city-god who slew chaos and built the world from its corpse — three cultures independently cast their largest visible wandering star as the \"biggest\" kind of god: king, teacher, world-orderer. The size and brightness of Jupiter in the sky maps onto \"bigness\" of role across traditions that never spoke to each other."
+      },
+      "keywords": [
+        "jupiter",
+        "zeus",
+        "brihaspati",
+        "marduk",
+        "myth"
+      ],
+      "metadata": {
+        "planet": "Jupiter",
+        "greco_roman_deity": "Zeus / Jupiter",
+        "vedic_graha": "Bṛhaspati (Guru)",
+        "babylonian_deity": "Marduk",
+        "confidence": "medium",
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+      }
+    },
+    {
+      "id": "planet-saturn",
+      "name": "Saturn",
+      "symbol": "♄",
+      "category": "planet",
+      "sections": {
+        "Greco-Roman": "Kronos, youngest Titan, castrated his father Uranus and later swallowed his own children on hearing a prophecy he would be overthrown by one of them; Zeus, hidden by Rhea, survived to force his siblings back out and depose him. Beneath the horror-myth, Kronos was likely an older harvest-god — his festival, the Kronia, was a harvest celebration echoed by Rome's Saturnalia. Rome's Saturn kept this agricultural, golden-age, \"time\" association. Sources: Wikipedia, \"Cronus\" — https://en.wikipedia.org/wiki/Cronus; Theoi Project, \"Cronus\" — https://www.theoi.com/Titan/TitanKronos.html (confidence: ✔).",
+        "Vedic (graha)": "Shani, son of Sūrya (the Sun) and his wife's shadow-double Chhāyā, is Jyotiṣa's grim significator of karma, justice, and time's slow reckoning — appointed, in later myth, to oversee everyone's karmic account without exception. His birth story says his first infant glance caused a solar eclipse, and that Sūrya himself could not bear to look at his dark-complexioned son directly. As taught in Jyotiṣa, summarized — Wikipedia, \"Shani\" — https://en.wikipedia.org/wiki/Shani; Exotic India, \"All About Shani Dev\" — https://www.exoticindiaart.com/article/all-about-shani-dev/ (confidence: ○).",
+        "Babylonian/Mesopotamian": "Saturn's Mesopotamian layer is the least settled of the seven: 1st-millennium astral texts (e.g. MUL.APIN) equate Saturn with Ninurta, a farmer-and-war god, but earlier tradition (under the variant name Ninib) sometimes cast the same figure as a solar deity instead — a real ambiguity in the sources, not a settled one-to-one mapping. What's firmer: Ninurta's harvest-god role parallels Kronos's, plausibly why the Greek-to-Babylonian chain (Kronos = Saturn = Ninurta) held. Sources: Ancient Mesopotamia, \"Ninurta\" — https://ancientmesopotamia.org/ideology/ninurta; Wikipedia, \"Ninurta\" — https://en.wikipedia.org/wiki/Ninurta (confidence: ◆ contested — flagged as such in the sources themselves, not just by us).",
+        "What the lens reads": "A child-devouring Titan who was secretly a harvest-god, a karma-accountant whose own father couldn't bear to look at him, a Mesopotamian farmer-god whose \"Saturn\" identity even ancient scribes weren't fully consistent about — Saturn is the one planet where every tradition, including the oldest layer, treats the assignment as difficult and heavy. That the ancients themselves disagreed about which god belongs here is worth sitting with, not smoothing over."
+      },
+      "keywords": [
+        "saturn",
+        "kronos",
+        "shani",
+        "ninurta",
+        "myth"
+      ],
+      "metadata": {
+        "planet": "Saturn",
+        "greco_roman_deity": "Kronos / Saturn",
+        "vedic_graha": "Shani",
+        "babylonian_deity": "Ninurta / Ninib (contested)",
+        "confidence": "low",
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations. Rated low because the Mesopotamian identification for this planet is genuinely contested in the sources themselves (Ninurta vs. the solar Ninib variant), as the Babylonian section says.",
+        "image_credit": {
+          "title": "Saturn Devouring His Son",
+          "creator": "Francisco de Goya",
+          "date": "1820-1823",
+          "source": "One of the 'Black Paintings'; Museo del Prado, Madrid",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Goya died 1828; Commons states public domain (PD-old-100)",
+          "verified": "2026-07-26"
+        }
+      },
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg?width=800"
+    }
+  ],
+  "cover_image_credit": {
+    "title": "Scenographia systematis mundani Ptolemaici — the Ptolemaic (Earth-centred) cosmos, plate 2",
+    "creator": "Andreas Cellarius",
+    "date": "1661",
+    "source": "*Harmonia Macrocosmica* (Amsterdam, 1660/1661)",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_mundani_Ptolemaici.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Cellarius died 1665; Commons states public domain (PD-old-100)",
+    "verified": "2026-07-26"
+  }
+}

@@ -1,0 +1,23 @@
+# Deploy ONLY the chart calculator + its Python API to Vercel.
+# The library site stays on GitHub Pages (README: "GitHub Pages serves it as-is");
+# keeping the library OUT of the Vercel build means it is never duplicated there —
+# Vercel serves just viewer/astrology-viewer.html and api/calculate-chart.
+#
+# Kept for the Vercel build:  api/  requirements.txt  viewer/  vercel.json
+# Everything below is library/tooling and is excluded from Vercel:
+
+grammars/
+research/
+scripts/
+plan/
+docs/
+*.md
+index.html
+channels.html
+wheel.html
+theme.css
+voices.json
+_collection.json
+ids.json
+recursive-eco.json
+check.py

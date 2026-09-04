@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Library · The Recursive Astrology</title>
+<meta name="description" content="The Recursive Astrology library — every grammar in the repo: traditions, casting sequences, and the historiography, each readable here and openable in the astrology channel on recursive.eco.">
+<link rel="stylesheet" href="theme.css">
+<style>
+  /* channels.html — the library index: every grammar in this repo as a card.
+     (Filename kept for the sake of existing links. The page is "the Library";
+     "channel" here means only recursive.eco's own concept — this whole repo is
+     ONE channel over there, and each card below is a grammar inside it.)
+     Pattern source: recursive-tarot/pages/channels.html (same convention as
+     assistant.js — a header comment names the canon; adapt LIBRARY_CONFIG only).
+     Data: _collection.json (scripts/build_collection.py) + ids.json. */
+  *{box-sizing:border-box}
+  main.wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px}
+  .hero{text-align:center;padding:30px 18px 10px;max-width:760px;margin:0 auto}
+  .hero h1{font-family:var(--serif-display,Georgia);font-weight:600;font-size:clamp(30px,6vw,48px);margin:0}
+  .hero h1 .gold{color:var(--gold,#9a7322)}
+  .hero .tag{font-style:italic;color:var(--mut,#7a7060);margin:12px auto 0;max-width:56ch}
+  /* .eco-cta links out to recursive.eco's channel for this repo — the one place the
+     word "channel" is the right word, because it is their concept, not ours. */
+  .eco-cta{display:inline-flex;align-items:center;gap:8px;margin:18px auto 0;padding:10px 18px;border:1px solid var(--line-soft,#e3dccc);
+    border-radius:999px;background:var(--surface,#fff);color:#7c3aed;font-weight:600;text-decoration:none;font-size:.95rem}
+  .eco-cta:hover{border-color:#9333ea;background:rgba(147,51,234,.06)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:28px}
+  .gram{display:flex;flex-direction:column;background:var(--surface,#fff);border:1px solid var(--line-soft,#e3dccc);
+    border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
+  .gram:hover{transform:translateY(-2px);border-color:var(--gold,#9a7322)}
+  .gram h3{margin:0 0 4px;font-size:1.02rem;line-height:1.35;font-family:var(--serif-display,Georgia)}
+  .gram .desc{font-size:.85rem;color:var(--mut,#7a7060);line-height:1.5;flex:1}
+  .gram .meta{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+  .pill{font-size:.72rem;padding:2px 9px;border-radius:999px;border:1px solid var(--line-soft,#e3dccc);color:var(--ink-soft,#5a5244);background:var(--bg,#faf8f3)}
+  .gram .actions{display:flex;gap:10px;font-size:.85rem;border-top:1px solid var(--line-soft,#e3dccc);padding-top:10px}
+  .gram .actions a{text-decoration:none;font-weight:600}
+  .gram .actions .read{color:var(--ink,#2b2620)}
+  .gram .actions .read:hover{color:var(--gold,#9a7322)}
+  .gram .actions .eco{color:#7c3aed;margin-left:auto}
+  .gram .actions .unpub{color:var(--mut,#7a7060);margin-left:auto;font-weight:400;font-size:.78rem;font-style:italic}
+  .loading{text-align:center;color:var(--mut,#7a7060);padding:60px 0;font-style:italic}
+  .count{text-align:center;font-size:.8rem;color:var(--mut,#7a7060);margin-top:22px}
+  .count a{color:var(--gold,#9a7322)}
+</style>
+</head>
+<body>
+<script src="site-header.js?v=47"></script>
+<site-header active="library"></site-header>
+<main class="wrap">
+  <div class="hero">
+    <h1>The <span class="gold">Library</span></h1>
+    <p class="tag">Every grammar in this repo — the traditions, the casting sequences, the historiography.
+      Read the sky to know yourself, not to be told your fate.</p>
+    <p class="tag">The whole library is <em>one channel</em> of recursive.eco: over there this repo appears as
+      the astrology channel, and each grammar below is one of the things inside it.</p>
+    <a class="eco-cta" href="https://flow.recursive.eco/library/channels/astrology" target="_blank" rel="noopener">
+      Open the astrology channel on recursive.eco ↗
+    </a>
+  </div>
+  <div id="root"><p class="loading">Loading the library…</p></div>
+  <p class="count" id="count"></p>
+</main>
+
+<script src="site-footer.js?v=1"></script>
+<site-footer></site-footer>
+
+<script>
+(async function () {
+  const LIBRARY_CONFIG = {
+    collection: '_collection.json',
+    ecoIds: 'ids.json',
+    // index.html has no ?grammar= handler — every "Read here" used to land on the
+    // homepage regardless of which grammar was clicked. Open the Cards viewer on the
+    // grammar itself, the convention the header menu and the homepage gallery use.
+    // (?src is resolved relative to viewers/cards.html, hence the "../".)
+    readerUrl: slug => 'viewers/cards.html?src=../grammars/' + encodeURIComponent(slug) + '/grammar.json',
+    // recursive.eco's own concept: this repo is one channel over there.
+    ecoChannel: 'https://flow.recursive.eco/library/channels/astrology',
+    appDeckUrl: uuid => 'https://flow.recursive.eco/g/' + uuid + '?view=reading',
+  };
+  const root = document.getElementById('root');
+  let col, eco;
+  try {
+    [col, eco] = await Promise.all([
+      fetch(LIBRARY_CONFIG.collection).then(r => r.json()),
+      fetch(LIBRARY_CONFIG.ecoIds).then(r => r.json()).catch(() => ({ ids: {}, _public_now: [] })),
+    ]);
+  } catch (e) { root.innerHTML = '<p class="loading">Could not load the collection index.</p>'; return; }
+  const ids = eco.ids || {}, pub = new Set(eco._public_now || []);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  root.innerHTML = '<div class="cards">' + (col.grammars || []).map(g => {
+    const uuid = ids[g.slug];
+    const app = uuid && pub.has(g.slug)
+      ? '<a class="eco" href="' + esc(LIBRARY_CONFIG.appDeckUrl(uuid)) + '" target="_blank" rel="noopener">recursive.eco ↗</a>'
+      : '<span class="unpub">not yet published</span>';
+    const cats = Object.entries(g.categories || {}).map(([c, n]) => '<span class="pill">' + n + ' ' + esc(c) + (n > 1 ? 's' : '') + '</span>').join('');
+    return '<article class="gram"><h3>' + esc(g.name) + '</h3>' +
+      '<p class="desc">' + esc(g.description) + '</p>' +
+      '<div class="meta"><span class="pill">' + g.items + ' items</span>' + cats + '</div>' +
+      '<div class="actions"><a class="read" href="' + esc(LIBRARY_CONFIG.readerUrl(g.slug)) + '">Read here →</a>' + app + '</div></article>';
+  }).join('') + '</div>';
+
+  // _collection.json is a generated index and can lag the repo. Say what is actually
+  // on this page, and point at the full library when the two disagree, rather than
+  // letting the hero's "every grammar" quietly stand for a stale subset.
+  const shown = (col.grammars || []).length;
+  let total = shown;
+  try {
+    const live = await fetch('grammars/_collection.json').then(r => r.json());
+    total = (live.grammars || []).filter(g => !g.is_meta).length || shown;
+  } catch (e) { /* keep shown */ }
+  document.getElementById('count').innerHTML = shown === total
+    ? shown + ' grammars in this library.'
+    : shown + ' of ' + total + ' grammars in this repo are listed here — this index is generated '
+      + '(<code>scripts/build_collection.py</code>) and is currently behind. '
+      + '<a href="index.html#all-grammars">See every grammar →</a>';
+})();
+</script>
+</body>
+</html>

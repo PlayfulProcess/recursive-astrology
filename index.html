@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="theme.css?v=3">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Recursive Astrology — A Public-Domain Library of the Sky's History</title>
+<meta name="description" content="A public-domain, scholarship-grounded library of astrology's history — the eras and stances through which humans have read meaning into the sky, held honestly to the record. Public-domain voice libraries, chart castings, free viewers and courses, part of recursive.eco.">
+<meta property="og:title" content="The Recursive Astrology — read the sky to know yourself, not to be told your fate">
+<meta property="og:description" content="An open library of astrology's history — public-domain voice libraries, scholarship-grounded dossiers, chart-aspect castings, free viewers and courses — part of recursive.eco.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://astro.recursive.eco/">
+<style>
+  /* ── Editorial homepage (structure ported from recursive-tarot/index.html) ── */
+  main.wrap{max-width:1120px;margin:0 auto;padding:0 18px 80px}
+
+  /* hero — plate left, text right (same pattern as tarot's hero) */
+  .herowrap{display:flex;gap:clamp(28px,5vw,56px);align-items:center;max-width:1060px;margin:18px auto 0;padding:8px}
+  .herowrap .plate{margin:0;flex:0 1 auto;min-width:0;max-width:100%;text-align:center}
+  .herowrap .htext{flex:1 1 auto;min-width:0;text-align:left}
+  .plate .mat{display:inline-block;max-width:100%;box-sizing:border-box;background:#fff;
+    border:1px solid var(--line);border-radius:3px;
+    padding:13px;box-shadow:0 34px 64px -34px rgba(20,30,45,.4)}
+  .plate .mat img{display:block;height:clamp(280px,48vh,460px);width:auto;max-width:100%;object-fit:contain;
+    border:1px solid var(--line);background:var(--panel2)}
+  .plate .cap{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.08em;color:var(--muted);
+    text-transform:uppercase;margin-top:13px}
+  .plate .cap a{color:var(--muted);text-decoration:underline}
+  .plate .cap a:hover{color:var(--accent)}
+  .htext h1{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(30px,4.6vw,50px);
+    line-height:1.06;letter-spacing:.2px;margin:0;color:var(--ink)}
+  .htext h1 .accent{color:var(--accent)}
+  .htext .subtitle{font-family:"Fraunces",Georgia,serif;font-style:italic;color:var(--ink-soft,var(--muted));
+    font-size:clamp(15px,2.1vw,19px);line-height:1.5;margin:14px 0 0;max-width:44ch}
+  .cta-row{display:flex;gap:12px;justify-content:flex-start;flex-wrap:wrap;margin:22px 0 4px}
+  .btn{font-family:Inter,system-ui,sans-serif;text-decoration:none;font-weight:600;font-size:14px;
+    padding:11px 22px;border-radius:8px;transition:background .15s,transform .15s,border-color .15s,color .15s}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.primary:hover{background:#1f4468;transform:translateY(-1px)}
+  .btn.ghost{color:var(--muted);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .lede{font-family:"Fraunces",Georgia,serif;font-size:16.5px;line-height:1.62;color:var(--muted);
+    max-width:58ch;margin:20px 0 0;text-align:left}
+  .lede strong{color:var(--ink)}
+  /* Tablet range (~800–1260px): the engraving was eating the width and
+     squeezing the text column to an unreadable sliver. Shrink the plate and
+     give the text room; below 900px stack the text full-width under the image. */
+  @media(max-width:1260px){
+    .plate .mat img{height:clamp(230px,30vh,340px)}
+  }
+  @media(max-width:900px){
+    .herowrap{flex-direction:column;text-align:center;gap:22px}
+    .herowrap .htext{text-align:center}
+    .htext .subtitle,.lede{margin-left:auto;margin-right:auto;text-align:center}
+    .cta-row{justify-content:center}
+    .plate .mat img{height:clamp(240px,38vh,360px)}
+  }
+  /* Phone widths: the plate is sized by HEIGHT, so on a narrow-but-tall screen
+     it grew wider than the column and overhung both edges — the caption was
+     clipped mid-word at 375px. Below 700px drive the plate by width instead. */
+  @media(max-width:700px){
+    .plate .mat img{height:auto;width:100%}
+  }
+
+  /* three ways in */
+  .ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:44px 0 0}
+  .way{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}
+  .way:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 18px 36px -26px rgba(20,30,45,.4)}
+  .way .top{aspect-ratio:4/3;background:var(--panel2) center/contain no-repeat;border-bottom:1px solid var(--line)}
+  .way .bd{padding:16px 18px 18px}
+  .way .lbl{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:7px}
+  .way h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;margin:0 0 6px;color:var(--ink)}
+  .way p{font-family:"Fraunces",Georgia,serif;font-size:14.5px;line-height:1.55;color:var(--muted);margin:0}
+
+  /* the arch: omen -> command -> mirror (adaptive / maladaptive) */
+  .arch{margin:54px auto 0;max-width:1000px}
+  .arch h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:26px;color:var(--ink);margin:0 0 .25em;text-align:center}
+  .arch .sub{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);text-align:center;margin:0 0 22px}
+  .atag{display:inline-block;font-family:Inter,system-ui,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin:0 0 4px}
+  .atag.ok{background:rgba(63,122,92,.12);color:#3f7a5c}
+  .atag.bad{background:rgba(181,81,47,.1);color:#b5512f}
+  .arch .archnote{font-family:"Fraunces",Georgia,serif;font-size:14.5px;line-height:1.6;color:var(--muted);text-align:center;max-width:62ch;margin:22px auto 0}
+  .arch .archnote a{color:var(--accent)}
+  .archtl{margin-top:26px}
+  .track{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+  .stop{display:grid;grid-template-rows:auto auto 1fr;text-align:center}
+  .stop .ayr{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap;margin-bottom:9px}
+  .stop .rail{position:relative;height:14px;margin-bottom:14px}
+  .stop .adot{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;border:3px solid var(--bg);z-index:1}
+  .adot.ok{background:#3f7a5c}.adot.bad{background:#b5512f}
+  .stop .rail::before{content:'';position:absolute;top:50%;left:-50%;right:-50%;height:2px;background:var(--line);transform:translateY(-50%);z-index:0}
+  .stop:first-child .rail::before{left:50%}
+  .stop:last-child .rail::before{right:50%}
+  .node{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px 20px;text-align:center;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s,box-shadow .15s}
+  .node:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 18px 38px -26px rgba(20,30,45,.4)}
+  .node.now{border-color:var(--accent);box-shadow:0 14px 30px -24px rgba(20,30,45,.3)}
+  .node .athumb{display:block;width:78px;height:100px;object-fit:contain;background:var(--panel2);border:1px solid var(--line);border-radius:4px;margin:0 auto 12px}
+  .node .an{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:18px;color:var(--ink);margin:0 0 8px}
+  .node .ag{font-family:"Fraunces",Georgia,serif;font-size:13px;line-height:1.5;color:var(--muted);margin:8px 0 0}
+  @media(max-width:680px){
+    .track{grid-template-columns:1fr;gap:0}
+    .stop{grid-template-columns:auto 1fr;grid-template-rows:auto 1fr;
+      grid-template-areas:"rail year" "rail node";column-gap:16px;text-align:left;padding-bottom:24px}
+    .stop:last-child{padding-bottom:0}
+    .stop .ayr{grid-area:year;margin:2px 0 10px}
+    .stop .rail{grid-area:rail;width:14px;height:auto;margin:0}
+    .stop .node{grid-area:node;text-align:left}
+    .stop .node .athumb{margin:0 0 12px}
+    .stop .adot{top:7px;left:7px;transform:translate(-50%,-50%)}
+    .stop .rail::before{top:7px;bottom:-31px;left:7px;right:auto;width:2px;height:auto;transform:translateX(-50%)}
+    .stop:last-child .rail::before{display:none}
+  }
+
+  /* editorial prose sections */
+  section.story{margin:40px auto 0;max-width:680px}
+  section.story h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:26px;color:var(--ink);margin:0 0 .35em;text-align:center}
+  section.story .sub{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);text-align:center;margin:0 0 18px}
+  section.story p{font-family:"Fraunces",Georgia,serif;font-size:16px;line-height:1.7;color:var(--muted);margin:0 0 1em}
+  section.story p strong{color:var(--ink)}
+  section.story a{color:var(--accent)}
+
+  /* ── gallery: every view + every grammar ── */
+  .gallery{margin:56px auto 0;max-width:1120px}
+  .gallery h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:26px;color:var(--ink);margin:0 0 .25em;text-align:center}
+  .gallery .sub{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);text-align:center;margin:0 0 22px}
+  .gallery .glabel{display:flex;align-items:center;gap:12px;font-family:Inter,system-ui,sans-serif;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;text-align:left}
+  .gallery .glabel::after{content:'';flex:1;height:1px;background:var(--line)}
+  .viewgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:0 0 12px}
+  .vcard{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}
+  .vcard:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 16px 32px -24px rgba(20,30,45,.4)}
+  .vcard .vthumb{aspect-ratio:16/10;background:var(--panel2) center/contain no-repeat;border-bottom:1px solid var(--line)}
+  .vcard .vb{padding:13px 15px 15px}
+  .vcard .vt{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:17px;color:var(--ink);margin:0 0 3px}
+  .vcard .vd{font-family:"Fraunces",Georgia,serif;font-size:13.5px;line-height:1.5;color:var(--muted);margin:0}
+  .deckgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+  .dcard{display:block;text-decoration:none;color:var(--ink)}
+  .dcard .dthumb{aspect-ratio:3/4;background:var(--panel2) center/contain no-repeat;
+    border:1px solid var(--line);border-radius:4px;transition:transform .15s,box-shadow .15s,border-color .15s}
+  .dcard:hover .dthumb{transform:translateY(-4px);box-shadow:0 16px 30px -22px rgba(20,30,45,.4);border-color:var(--accent)}
+  .dcard .dn{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:13.5px;line-height:1.25;margin:9px 0 1px;color:var(--ink)}
+  .dcard .dy{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.05em;color:var(--muted)}
+  .courses-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+  .ccard{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 17px;
+    text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}
+  .ccard:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 16px 32px -24px rgba(20,30,45,.4)}
+  .ccard .clbl{font-family:Inter,system-ui,sans-serif;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+  .ccard h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:17px;margin:0 0 6px;color:var(--ink)}
+  .ccard p{font-family:"Fraunces",Georgia,serif;font-size:13px;line-height:1.5;color:var(--muted);margin:0}
+
+  /* ── recursive.eco "tree" callout (reusable) ── */
+  .ecotree{margin:52px auto 0;max-width:760px;background:var(--panel);border:1px solid var(--line);
+    border-radius:14px;padding:30px 34px;text-align:center}
+  .ecotree h2{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:23px;color:var(--ink);margin:0 0 .4em}
+  .ecotree p{font-family:"Fraunces",Georgia,serif;font-size:15.5px;line-height:1.65;color:var(--muted);margin:0 auto .9em;max-width:62ch}
+  .ecotree p strong{color:var(--ink)}
+  .ecotree .eco-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .ecotree .eco-cta a{font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:14px;text-decoration:none;
+    padding:11px 22px;border-radius:8px;transition:background .15s,border-color .15s,color .15s,transform .15s;display:inline-block}
+  /* Base solid/line look; theme.css's global recursive.eco-link rule (a.solid[href*="//flow.recursive.eco"])
+     overrides these to platform purple — the wayfinding rule stays the single source for that colour. */
+  .ecotree .eco-cta a.solid{background:var(--accent);color:#fff}
+  .ecotree .eco-cta a.line{color:var(--muted);border:1px solid var(--line)}
+  .ecotree .fine{font-family:Inter,system-ui,sans-serif;font-size:12px;color:var(--muted);margin-top:16px}
+  .ecotree .fine a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<script src="site-header.js?v=47"></script>
+<site-header active="home"></site-header>
+
+<main class="wrap">
+
+  <!-- ── HERO: cover plate left, astro's own hero text right (kept verbatim from recursive-eco.json) ── -->
+  <section class="herowrap">
+    <figure class="plate">
+      <div class="mat">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flammarion.jpg?width=800" alt="The Flammarion engraving — a traveller reaches through the sky to see the machinery beyond it">
+      </div>
+      <!-- provenance, from the grammar's cover_image_credit: the file page states the PD status -->
+      <figcaption class="cap">The Flammarion engraving · anonymous, published 1888 · public domain via
+        <a href="https://commons.wikimedia.org/wiki/File:Flammarion.jpg" target="_blank" rel="noopener">Wikimedia Commons ↗</a></figcaption>
+    </figure>
+    <div class="htext">
+      <h1>The <span class="accent">Recursive Astrology</span></h1>
+      <p class="subtitle">Read the sky to know yourself, not to be told your fate — five thousand years of meaning-making, held to the record.</p>
+      <p class="lede">Every era here speaks in its own terms and is held honestly to the historical record —
+      Babylonian omen-craft to the modern controlled test. The voice libraries are <strong>public domain</strong>
+      (Ptolemy in the 1822 Ashmand translation, Alan Leo, the Victorian skeptics); every load-bearing claim is
+      cited in the research dossiers. A chart is a mirror and a calendar, not a command: castings here reflect
+      aspects of <strong>your own chart</strong> back to you — never a random draw, never a prediction.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="viewer/astrology-viewer.html">Chart viewer — cast &amp; read your own chart ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── THREE WAYS IN ── -->
+  <div class="ways">
+    <a class="way" href="wheel.html">
+      <div class="top" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Horoskop_Johannette_Maria_zu_Wied_1615_img01.jpg?width=800')"></div>
+      <div class="bd">
+        <div class="lbl">Frame · a chart-shaped framing</div>
+        <h3>The Wheel</h3>
+        <!-- No inner <a> here: nesting a link inside this card's own <a class="way">
+             is invalid HTML, and the parser closed the outer anchor early — the card
+             split into an empty clickable thumbnail plus an unclickable, unstyled text
+             block that escaped the card entirely. The Chart Viewer has its own card to
+             the right, and the Oracle is linked from the recursive.eco section below. -->
+        <p>The twelve houses as a framing — click a house and read it through a voice grammar. Your own chart reads in the Chart Viewer; journaling on it with AI lives in the journal's astro oracle, which embeds this very wheel (never a random draw — a reflection of the sky you were given).</p>
+      </div>
+    </a>
+    <a class="way" href="viewers/lenses.html">
+      <div class="top" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Zodiac_woodcut.png?width=800')"></div>
+      <div class="bd">
+        <div class="lbl">Compare · one entity, many traditions</div>
+        <h3>Lenses</h3>
+        <p>Pick one planet or sign and read how every voice library treats it, side by side, in five ways.</p>
+      </div>
+    </a>
+    <a class="way" href="viewer/astrology-viewer.html">
+      <div class="top" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Aspects-ptolemy-tetrabiblos-1533_Hervagius.png?width=800')"></div>
+      <div class="bd">
+        <div class="lbl">Calculate · your own natal chart</div>
+        <h3>Chart Viewer</h3>
+        <p>Calculate your own natal chart — planets, houses, aspects — and save it, signed in.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- ── THE ARCH: how to hold a chart ── -->
+  <section class="arch">
+    <h2>How to hold a chart</h2>
+    <p class="sub">One faculty, two stances — across five thousand years · tap a node</p>
+    <div class="archtl">
+      <div class="track">
+        <div class="stop">
+          <span class="ayr">antiquity</span>
+          <div class="rail"><span class="adot ok"></span></div>
+          <a class="node" href="viewers/cards.html?src=../grammars/mesopotamian-omens/grammar.json">
+            <img class="athumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/NINODeLiagreBohlLB1321.jpg?width=100" alt="">
+            <div class="an">Omen</div>
+            <span class="atag ok">Adaptive · within limits</span>
+            <p class="ag">Babylonian sky-watchers read the heavens for civic and agricultural timing — a public craft, bounded and communal.</p>
+          </a>
+        </div>
+        <div class="stop">
+          <span class="ayr">then, at its worst</span>
+          <div class="rail"><span class="adot bad"></span></div>
+          <a class="node" href="pages/course.html">
+            <img class="athumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ptolemy_16century.jpg?width=100" alt="">
+            <div class="an">Command</div>
+            <span class="atag bad">Maladaptive</span>
+            <p class="ag">Read the chart as fate and you obey the slice it shows you — a warrant for what must happen, not a conjecture held loosely.</p>
+          </a>
+        </div>
+        <div class="stop now">
+          <span class="ayr">now · ongoing</span>
+          <div class="rail"><span class="adot ok"></span></div>
+          <a class="node now" href="viewers/cards.html?src=../grammars/historiographies-of-astrology/grammar.json">
+            <img class="athumb" src="https://commons.wikimedia.org/wiki/Special:FilePath/Anatomical_Man.jpg?width=100" alt="">
+            <div class="an">Mirror, not fate</div>
+            <span class="atag ok">Adaptive</span>
+            <p class="ag">Read the sky to know yourself, not to be told your fate — a calendar of yourself, held loosely, the choice always your own.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="archnote">This library teaches the second stance — and keeps the historical record of the first two honest, not hidden. The full argument is in <a href="pages/course.html">History of Astrology</a>.</p>
+  </section>
+
+  <!-- ── SHORT HONEST FRAME ── -->
+  <section class="story">
+    <p class="sub">The one intention</p>
+    <h2>A mirror and a calendar, never a command</h2>
+    <p>Astrology's history is the record of humans reading meaning <strong>into</strong> the sky — from
+    Mesopotamian omen-craft, through the Hellenistic synthesis that gave it a physics, through the printed
+    almanacs of Renaissance Europe, to the psychological turn of the twentieth century and the empirical tests
+    that followed. Each era is presented here <strong>faithfully, in its own terms</strong> — never as
+    our verdict on it, and never as something to obey.</p>
+    <p>Where the historical record is genuinely uncertain, this library <strong>hedges rather than invents</strong>:
+    dates are marked "c." where reconstructed, contested claims carry a confidence note, and every voice's
+    long-form argument lives in its own course chapter, not smuggled into a one-line intention.
+    <a href="pages/course.html">Read the full illustrated history →</a></p>
+  </section>
+
+  <!-- ── RECURSIVE.ECO — the tree this grows from ── -->
+  <aside class="ecotree">
+    <a href="https://recursive.eco" target="_blank" rel="noopener" aria-label="recursive.eco — the parent project">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:0 auto 10px" aria-hidden="true">
+        <path d="M17 4a7 7 0 1 0 3 11 5.6 5.6 0 0 1-3-11z" /><path d="M8.5 4.5l.6 1.7 1.7.6-1.7.6-.6 1.7-.6-1.7-1.7-.6 1.7-.6z" />
+      </svg>
+    </a>
+    <h2>One branch of a larger tree</h2>
+    <p><a href="https://recursive.eco" target="_blank" rel="noopener"><strong>recursive.eco</strong></a> is the
+    trunk this library grows from — an open platform built on
+    <a href="https://recursive.eco" target="_blank" rel="noopener"><strong>grammars</strong></a>:
+    <em>symbolic systems you make meaning with</em> — made by people, not algorithms (a tarot deck, an
+    I&nbsp;Ching, an astrology set, a children's story). <strong>A voice library is a grammar</strong>, and this
+    whole site is one of them: a <strong>branch</strong> able to render the deep, domain-specific richness —
+    the history, the scholarship, the per-voice research — that the general platform never could.</p>
+    <p>The trunk gives every branch more than it could grow alone: an AI <strong>Oracle</strong> that reflects
+    your own chart back to you in context, a journal, accounts, and the power to build your own grammar and use
+    it as a living library.</p>
+    <div class="eco-cta">
+      <a class="solid" href="https://flow.recursive.eco/" target="_blank" rel="noopener">Read in the Oracle ↗</a>
+      <a class="line" href="https://flow.recursive.eco/create" target="_blank" rel="noopener">Create your own ↗</a>
+    </div>
+    <p class="fine">It's a public commons — fork
+      <a href="https://github.com/PlayfulProcess/Recursive-astrology" target="_blank" rel="noopener">the repo</a>,
+      or see <a href="https://tarot.recursive.eco" target="_blank" rel="noopener">The Recursive Tarot</a> for this
+      library's older sibling — same creed, different domain.</p>
+  </aside>
+
+  <!-- ── GALLERY: every view + every grammar ── -->
+  <section id="explore" class="gallery">
+    <h2>Every view</h2>
+    <p class="sub">Same open data, two levels of lens</p>
+
+    <p class="glabel">By grammar · read one voice library closely</p>
+    <div class="viewgrid">
+      <a class="vcard" href="viewers/cards.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ptolemy_16century.jpg?width=400')"></div>
+        <div class="vb"><div class="vt">Cards</div><div class="vd">One entry at a time, every grammar — sections, keywords, and research notes.</div></div>
+      </a>
+      <a class="vcard" href="viewers/explorer.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_Copernicani.jpg?width=400')"></div>
+        <div class="vb"><div class="vt">Explorer</div><div class="vd">Pivot any field by any field — every grouping is an emergence.</div></div>
+      </a>
+      <a class="vcard" href="viewers/lenses.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Zodiac_woodcut.png?width=400')"></div>
+        <div class="vb"><div class="vt">Lenses</div><div class="vd">One planet or sign read through many traditions, side by side.</div></div>
+      </a>
+      <a class="vcard" href="viewers/tree-viewer.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Navagraha.jpg?width=400')"></div>
+        <div class="vb"><div class="vt">Tree</div><div class="vd">The grammar as a nested tree you open and explore.</div></div>
+      </a>
+    </div>
+
+    <p class="glabel" style="margin-top:26px">Across the collection · the whole library at once</p>
+    <div class="viewgrid">
+      <a class="vcard" href="viewers/timeline.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/NINODeLiagreBohlLB1321.jpg?width=400')"></div>
+        <div class="vb"><div class="vt">Timeline</div><div class="vd">The dated voices across five thousand years, by branch.</div></div>
+      </a>
+      <a class="vcard" href="genealogy.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Flammarion.jpg?width=400')"></div>
+        <div class="vb"><div class="vt">Genealogy</div><div class="vd">How one stance grows out of, forks from, or answers another.</div></div>
+      </a>
+      <a class="vcard" href="wheel.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Horoskop_Johannette_Maria_zu_Wied_1615_img01.jpg?width=400')"></div>
+        <div class="vb"><div class="vt">Chart Wheel</div><div class="vd">The twelve houses as a chart-shaped casting.</div></div>
+      </a>
+      <a class="vcard" href="archetypal.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_Copernicani.jpg?width=400')"></div>
+        <div class="vb"><div class="vt">Archetypal</div><div class="vd">Tap two planets — the complex between them, after Richard Tarnas.</div></div>
+      </a>
+      <a class="vcard" href="viewer/astrology-viewer.html">
+        <div class="vthumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Aspects-ptolemy-tetrabiblos-1533_Hervagius.png?width=400')"></div>
+        <div class="vb"><div class="vt">Chart Viewer</div><div class="vd">Calculate your own natal chart — planets, houses, aspects.</div></div>
+      </a>
+    </div>
+
+    <h2 style="margin-top:50px">Courses</h2>
+    <p class="sub">Read the library as a course, chapter by chapter</p>
+    <div class="courses-grid">
+      <a class="ccard" href="pages/course.html">
+        <div class="clbl">Course · flagship</div>
+        <h3>History of Astrology</h3>
+        <p>Five thousand years of astrological practice, era by era, read directly from the Historiographies grammar.</p>
+      </a>
+      <a class="ccard" href="pages/course-viewer.html?course=the-right-size">
+        <div class="clbl">Reading</div>
+        <h3>The Right Size</h3>
+        <p>The human imperative to negotiate our scale — and how the sky might be an adaptive path.</p>
+      </a>
+      <a class="ccard" href="pages/course-viewer.html?course=three-doors">
+        <div class="clbl">Reading · the Trika lens</div>
+        <h3>Three Doors</h3>
+        <p>Reading the sky through the Trika — a synthesis, offered by a non-scholar.</p>
+      </a>
+    </div>
+
+    <h2 id="all-grammars" style="margin-top:50px">Every grammar in this repo</h2>
+    <p class="sub">Public-domain voices, castings, and readings · click any grammar to read it entry by entry</p>
+    <div id="deckgrid-wrap">
+      <p class="glabel" id="glabel-primary" hidden>Primary sources</p>
+      <div id="deckgrid-primary" class="deckgrid"></div>
+      <p class="glabel" id="glabel-synthesis" style="margin-top:20px" hidden>Synthesis</p>
+      <div id="deckgrid-synthesis" class="deckgrid"></div>
+      <p class="glabel" id="glabel-castings" style="margin-top:20px" hidden>Castings — spread-grammars (positions, not interpretations)</p>
+      <div id="deckgrid-castings" class="deckgrid"></div>
+      <p class="glabel" id="glabel-readings" style="margin-top:20px" hidden>Readings</p>
+      <div id="deckgrid-readings" class="deckgrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Render the grammar galleries from the open collection manifest (always current).
+  (function(){
+    const esc = s => String(s).replace(/</g,'&lt;');
+    const thumb = g => g.cover_image_url
+      ? '<div class="dthumb" style="background-image:url(\''+g.cover_image_url.replace(/'/g,"%27")+'\')"></div>'
+      : '<div class="dthumb" style="display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px;text-align:center;padding:6px">'+esc((g.name||g.slug).split(' — ')[0])+'</div>';
+    // A card caption is one line under a 150px thumbnail. `year_label` is authored as
+    // "<date> — <provenance sentence>", and some of those sentences run 250 characters;
+    // printing the whole thing turned the gallery into walls of 11px text. Show the date
+    // part here and keep the full label (and the full grammar name) on hover/title, so
+    // nothing is lost — just not shouted.
+    const shortYear = g => {
+      const full = String(g.year_label || g.year || '');
+      const head = full.split(' — ')[0].trim();
+      return head.length && head.length <= 42 ? head : full.slice(0, 42);
+    };
+    const card = g => {
+      const fullName = g.name || g.slug, name = fullName.split(' — ')[0];
+      const full = String(g.year_label || g.year || '');
+      const href = 'viewers/cards.html?src=../grammars/'+encodeURIComponent(g.slug)+'/grammar.json';
+      const tip = full ? fullName + ' · ' + full : fullName;
+      return '<a class="dcard" href="'+href+'" title="'+esc(tip).replace(/"/g,'&quot;')+'">'+thumb(g)
+        +'<div class="dn">'+esc(name)+'</div><div class="dy">'+esc(shortYear(g))+'</div></a>';
+    };
+    fetch('grammars/_collection.json',{cache:'no-cache'}).then(r=>r.json()).then(c=>{
+      const all = (c.grammars||[]).filter(g=>!g.is_meta);
+      const byBranch = b => all.filter(g=>g.branch===b).sort((a,b)=>(a.year||9999)-(b.year||9999));
+      const groups = {primary:'primary-sources', synthesis:'synthesis', castings:'castings', readings:'readings'};
+      Object.entries(groups).forEach(([elKey,branch])=>{
+        const list = byBranch(branch);
+        if(!list.length) return;
+        document.getElementById('deckgrid-'+elKey).innerHTML = list.map(card).join('');
+        document.getElementById('glabel-'+elKey).hidden = false;
+      });
+    }).catch(()=>{ document.getElementById('deckgrid-wrap').innerHTML='<p class="sub">Open the <a href="viewers/cards.html">Cards view</a> to browse all grammars.</p>'; });
+  })();
+</script>
+
+<script src="site-footer.js?v=1"></script>
+<script src="assistant.js" defer></script>
+<site-footer></site-footer>
+</body>
+</html>

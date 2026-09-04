@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>History of Astrology — a course — The Recursive Astrology</title>
+<link rel="stylesheet" href="../theme.css">
+<style>
+  /* Layout only — every colour comes from theme.css (the one source). Do not add colour tokens here. */
+  html,body{margin:0;background:var(--bg);color:var(--ink);color-scheme:light;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto;padding:28px 18px 80px}
+  header.hero{padding:14px 0 8px}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  h1{font-family:"Fraunces",Georgia,serif;font-size:30px;margin:6px 0 8px;color:var(--ink)}
+  .lede{color:var(--muted);font-size:15.5px;max-width:72ch}
+
+  .chapters{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:26px}
+  .chapter{display:block;text-align:left;background:var(--panel);border:1px solid var(--line);
+    border-radius:13px;padding:16px 17px;text-decoration:none;color:inherit;position:relative;
+    transition:transform .15s, border-color .15s, box-shadow .15s}
+  .chapter:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 28px rgba(0,0,0,.10)}
+  .chapter .num{position:absolute;top:14px;right:16px;font-family:"Fraunces",Georgia,serif;font-size:22px;color:var(--line-soft)}
+  /* the numeral is absolutely positioned top-right; the title already reserves
+     room for it, but a long era line (chapter 8) ran underneath it — reserve
+     the same 26px here and on the region line. */
+  .chapter .era{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);padding-right:26px}
+  .chapter .region{font-size:11.5px;color:var(--muted);margin:1px 0 8px;padding-right:26px}
+  .chapter b{display:block;font-family:"Fraunces",Georgia,serif;font-size:18px;margin:0 0 8px;padding-right:26px}
+  .chapter .snip{font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .chapter .companion{font-size:11.5px;color:var(--accent);margin-top:9px}
+
+  .appendix{margin-top:44px}
+  .appendix h2{font-size:20px;margin:0 0 4px;font-family:"Fraunces",Georgia,serif;color:var(--ink)}
+  .appendix .asub{font-size:13px;color:var(--muted);margin:0 0 16px;max-width:70ch}
+  .apgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+  .apcard{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 16px;
+    text-decoration:none;color:inherit;display:block;transition:border-color .15s}
+  .apcard:hover{border-color:var(--accent)}
+  .apcard b{display:block;font-family:"Fraunces",Georgia,serif;font-size:15.5px;margin:0 0 6px}
+  .apcard .snip{font-size:12.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+  .note{margin-top:34px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;
+    background:var(--chip,#f7f3ea);font-size:13.5px;color:var(--muted)}
+  .note b{color:var(--ink)}
+  a{color:var(--accent)}
+  #loading{color:var(--muted);font-size:14px;margin-top:20px}
+</style>
+</head>
+<body>
+<script src="../site-header.js?v=47"></script>
+<site-header active="course"></site-header>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker" id="kicker">The Recursive Astrology · a dynamic course</div>
+    <h1 id="course-title">Loading…</h1>
+    <p class="lede" id="course-desc"></p>
+  </header>
+
+  <p id="loading">Loading the course from the library…</p>
+  <nav class="chapters" id="chapters" aria-label="Course chapters" hidden></nav>
+
+  <section class="appendix" id="appendix" hidden>
+    <h2 id="appendix-title">Patterns across eras</h2>
+    <p class="asub" id="appendix-intro"></p>
+    <div class="apgrid" id="apgrid"></div>
+  </section>
+
+  <p class="note" id="fallback" hidden></p>
+
+  <div class="note">
+    <b>How this works.</b> This course has no separate content of its own — each chapter is read live,
+    client-side, from <code>grammars/historiographies-of-astrology/grammar.json</code>, the same grammar
+    that backs <a href="../index.html">the library</a>. Adding a new era to that grammar automatically adds
+    a new chapter here; nothing in this page needs to change. See <code>course/manifest.json</code> for the
+    course-level config (chapter ordering prefix, companion-grammar links, section order).
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+
+// Snippets used to be a blunt .slice(), which cut chapters off mid-word
+// ("a halo round ", "of the whole sky for the mo"). Trim back to the last
+// word boundary and mark the cut, so a fragment reads as a fragment.
+function snippet(text, max){
+  // These previews are plain text (no markdown pass, unlike course-viewer), so
+  // emphasis markers showed up literally — chapter 9 read "Dane Rudhyar's *The
+  // Astrology of Personality* (1936)". Unwrap them and drop blockquote marks.
+  const s = String(text)
+    .replace(/\s*\[@[^\]]+\]/g, '')
+    .replace(/\*\*?([^*]+)\*\*?/g, '$1')
+    .replace(/^\s*>\s*/gm, '')
+    .trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max);
+  const sp = cut.lastIndexOf(' ');
+  return (sp > max * 0.6 ? cut.slice(0, sp) : cut).replace(/[\s,;:.—–-]+$/, '') + '…';
+}
+
+async function main(){
+  let manifest, grammar;
+  try {
+    [manifest, grammar] = await Promise.all([
+      fetch('../course/manifest.json').then(r => { if(!r.ok) throw new Error('manifest '+r.status); return r.json(); }),
+      fetch('../grammars/historiographies-of-astrology/grammar.json').then(r => { if(!r.ok) throw new Error('grammar '+r.status); return r.json(); }),
+    ]);
+  } catch (err) {
+    $('#loading').hidden = true;
+    const fb = $('#fallback');
+    fb.hidden = false;
+    fb.innerHTML = '<b>Could not load the course.</b> Browsers block <code>file://</code> fetches, '
+      + 'so open this over a tiny local server instead: run <code>python -m http.server 8000</code> '
+      + 'in the repo root, then visit <code>http://localhost:8000/pages/course.html</code>. '
+      + '(On GitHub Pages it just works.) Details: ' + (err && err.message || err);
+    return;
+  }
+
+  document.title = manifest.title + ' — a course — The Recursive Astrology';
+  $('#kicker').textContent = manifest.kicker || 'The Recursive Astrology · a dynamic course';
+  $('#course-title').textContent = manifest.title;
+  $('#course-desc').textContent = manifest.description;
+
+  const chapterItems = grammar.items.filter(it => it.id.startsWith(manifest.chapterIdPrefix));
+  const appendixItems = grammar.items.filter(it => it.id.startsWith(manifest.appendixIdPrefix));
+
+  const grid = $('#chapters');
+  chapterItems.forEach((it, i) => {
+    const meta = it.metadata || {};
+    const firstSection = Object.values(it.sections || {})[0] || '';
+    const companions = (manifest.companions || {})[it.id] || [];
+    const a = document.createElement('a');
+    a.className = 'chapter';
+    a.href = 'course-viewer.html?chapter=' + encodeURIComponent(it.id);
+    a.innerHTML = `
+      <span class="num">${i + 1}</span>
+      <div class="era">${meta.era ? meta.era : ''}</div>
+      <div class="region">${meta.region || ''}</div>
+      <b>${it.name}</b>
+      <div class="snip">${snippet(firstSection, 180)}</div>
+      ${companions.length ? `<div class="companion">Primary source in this repo →</div>` : ''}
+    `;
+    grid.appendChild(a);
+  });
+  $('#loading').hidden = true;
+  grid.hidden = false;
+
+  if (appendixItems.length) {
+    $('#appendix-title').textContent = manifest.appendixTitle || 'Patterns across eras';
+    $('#appendix-intro').textContent = manifest.appendixIntro || '';
+    const apgrid = $('#apgrid');
+    appendixItems.forEach(it => {
+      const firstSection = Object.values(it.sections || {})[0] || '';
+      const a = document.createElement('a');
+      a.className = 'apcard';
+      a.href = 'course-viewer.html?chapter=' + encodeURIComponent(it.id);
+      a.innerHTML = `<b>${it.name}</b><div class="snip">${snippet(firstSection, 130)}</div>`;
+      apgrid.appendChild(a);
+    });
+    $('#appendix').hidden = false;
+  }
+}
+main();
+</script>
+
+<script src="../site-footer.js?v=1"></script>
+<script src="../assistant.js" defer></script>
+<site-footer base="../"></site-footer>
+</body>
+</html>

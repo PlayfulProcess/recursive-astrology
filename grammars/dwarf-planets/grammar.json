@@ -1,0 +1,379 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0 (original synthesis). Astronomical facts are from the public sources cited inline in each item; images are public domain, credited per item.",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "role": "author of this synthesis, written with an AI",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "name": "The Dwarf Planets — a symbol system caught in the act of forming",
+  "description": "On 24 August 2006, in a conference hall in Prague, a show of hands changed what Pluto is called. The same vote promoted Ceres, which had been demoted once already, and gave the name Eris to the object whose discovery had forced the question. Two years later Haumea and Makemake joined them, named — by astronomers, not by the traditions the names came from — after a Hawaiian goddess and a Rapa Nui creator god.\n\nThis grammar treats that reclassification as a meaning-making event. Every other library in this repo looks back at a settled tradition and asks how it came to be settled. This one looks at a tradition that is not settled yet. Pluto has had almost a century of astrological writing behind it; Ceres has had about fifty years; Eris, Haumea and Makemake have had roughly two decades of scattered, mostly self-published speculation and no canon at all. That difference is the content. Each item says how old its symbolism is and marks its confidence accordingly, so you can see the seams — where a reading has hardened into something a community shares, and where it is still a handful of people trying things out.\n\nProvenance, honestly: this is a contemporary synthesis written in 2026, not a historical text and not a tradition speaking for itself. The astronomy in each item is verifiable and its sources are named inline; the symbolic readings are attributed to the era of writing that produced them, never to living teachers. Where the young literature is thin, the item says so rather than filling the gap.\n\nAnd the ordinary warning that governs this whole site applies with extra force here: under the creed, a chart is a mirror and a calendar, never a prediction and never a command. That is doubly true of five bodies whose meanings are two decades old and were read off names that astronomers picked, in some cases without asking anyone.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/2006-16-d-print.jpg?width=800",
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/2006-16-d-print.jpg?width=800",
+  "grammar_type": "astrology",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — contemporary synthesis, written 2026, about the IAU's 2006 reclassification and the astrological writing that has appeared since. The astronomy it reports is dated and sourced per item; the symbolism is a literature still forming, so the grammar carries no source year rather than pretending to one."
+  },
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "default_view": "cards",
+  "default_preview": "cards",
+  "is_published": true,
+  "tags": [
+    "astrology",
+    "dwarf-planets",
+    "pluto",
+    "ceres",
+    "eris",
+    "contemporary",
+    "historiography"
+  ],
+  "_category_roles": {
+    "dwarf-planet": "planet",
+    "reclassification": "emergence"
+  },
+  "_section_roles": {
+    "The symbolism so far": "significations",
+    "A question": "questions"
+  },
+  "_honesty_frame": "Two registers, kept apart on purpose. THE ASTRONOMY is verifiable and every item names the sources it was taken from (English Wikipedia articles and NASA pages, each fetched and read on 27 July 2026); where two sources disagree, the item says which one it followed. THE SYMBOLISM is not verifiable and is not presented as if it were: each item states how many years of writing stand behind its reading and carries a metadata.confidence to match — high only for Pluto's astronomy, medium for Ceres (about fifty years of use), low for Eris, Haumea and Makemake (roughly two decades, no canon). No living astrologer is named anywhere; readings are attributed to the era and body of writing that produced them, per this repo's 'name a school, not a living person' rule. The IAU's own resolution pages could not be fetched (iau.org returned HTTP 403 on 27 July 2026), so the wording of the 2006 resolutions is reported at one remove, from the English Wikipedia article on the IAU definition of planet, and is flagged as such rather than quoted as if from the source.",
+  "_sensitivity_note": "Haumea and Makemake are names from living cultures — Kānaka Maoli (Native Hawaiian) and Rapa Nui — and Sedna, Quaoar and Gonggong likewise. The naming was done by astronomers and ratified by the IAU. This grammar reports the naming as an act performed by astronomers, does not claim any tradition's authority, does not reproduce sacred imagery for those items, and points readers to the traditions' own keepers rather than paraphrasing them. Where a discovery team did seek permission (Quaoar), that is recorded; where the published record shows no such consultation, the grammar says only that — not that none occurred.",
+  "items": [
+    {
+      "id": "dwarf-pluto",
+      "name": "Pluto — the reclassified",
+      "symbol": "♇",
+      "category": "dwarf-planet",
+      "level": 1,
+      "sort_order": 1,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nh-pluto-in-true-color_2x.jpg?width=800",
+      "keywords": [
+        "pluto",
+        "dwarf-planet",
+        "reclassification",
+        "iau-2006",
+        "new-horizons",
+        "tombaugh"
+      ],
+      "sections": {
+        "The astronomy": "Found on 18 February 1930 by Clyde Tombaugh at Lowell Observatory, Flagstaff, by blinking photographic plates against each other until one dot moved. It is 2,376.6 km across, takes 247.94 years to go round the Sun on an orbit noticeably eccentric (0.249) and tilted 17.16° out of the plane the planets keep to, and has five moons — Charon, the largest, is just over half Pluto's own diameter. New Horizons flew past on 14 July 2015, the first spacecraft ever to go there, and turned a smudge into a landscape.\n\nOn 24 August 2006, at the IAU General Assembly in Prague, a resolution defined a planet as a body that orbits the Sun, is massive enough that its own gravity has pulled it round, and has cleared the neighbourhood around its orbit. Pluto meets the first two and fails the third: it shares its region with the rest of the Kuiper belt. It was reclassified as a dwarf planet and given the minor-planet number (134340). Sources: Wikipedia, \"Pluto\" — https://en.wikipedia.org/wiki/Pluto; Wikipedia, \"IAU definition of planet\" — https://en.wikipedia.org/wiki/IAU_definition_of_planet; NASA, \"Dwarf Planets\" — https://science.nasa.gov/dwarf-planets/ (all fetched 27 Jul 2026; the IAU's own resolution page could not be retrieved, so the resolution wording here is at one remove).",
+        "The name, and who chose it": "Pluto is the Roman god of the underworld, and the name is also an epithet of the Greek Hades. It was suggested by Venetia Burney, eleven years old, in Oxford. Her grandfather passed it to an astronomy professor, who cabled it to Lowell Observatory on 16 March 1930 — three days after the discovery was announced.\n\nThat is worth sitting with. Almost a century of astrological writing about descent, power, mortality and the underworld rests on a word chosen by a child at breakfast and relayed by two men who happened to know each other. The symbol did not come down from the sky. It came down a chain of people. (Source: Wikipedia, \"Pluto\".)",
+        "The symbolism so far": "Pluto is the one body in this grammar with a settled astrological literature — nearly a century of it, and this repo already carries two readings of it, both written in the register from before the vote: the Alchemist of `grammars/western-astrology-canonical` (item `planet-pluto`) and the Promethean-underworld reading after Tarnas in `grammars/archetypal-pairs` (item `planet-pluto`). They are not repeated here; go and read them there.\n\nWhat this item adds is the question the 2006 vote puts to them. Nothing about Pluto changed that August. Same mass, same 248-year circuit, same five moons, same dark and bright terrain that New Horizons would photograph nine years later. What changed was a word, decided by a show of hands in a hall in Prague. So: if the symbol survives the demotion unaltered — and in practice astrologers kept using Pluto exactly as before — that tells you the meaning was never resting on the astronomy in the first place. It was resting on the name, and on the ninety years of people using it. Which is either a devastating objection or the whole point, depending on what you think a symbol is. This grammar thinks it is the whole point, and says so rather than hiding it.",
+        "A question": "Something you were told you were — a category, a diagnosis, a rank, a title — was revised by people in a room you were not in. What actually changed, and what only seemed to?"
+      },
+      "metadata": {
+        "iau_status": "Dwarf planet, recognized 2006. Minor planet (134340).",
+        "discovered": "18 February 1930, Clyde Tombaugh, Lowell Observatory",
+        "named": "1930, from a suggestion by Venetia Burney (aged 11)",
+        "symbolism_age": "c. 95 years of astrological use (from 1930)",
+        "confidence": "high",
+        "_confidence_basis": "Astronomy corroborated across the Wikipedia article and NASA's dwarf-planet page, both fetched 27 Jul 2026. No new symbolic claim is asserted here — the item points at the two existing Pluto readings in this repo and raises a question about them rather than adding a third.",
+        "see_also": [
+          {
+            "slug": "western-astrology-canonical",
+            "item_id": "planet-pluto"
+          },
+          {
+            "slug": "archetypal-pairs",
+            "item_id": "planet-pluto"
+          }
+        ],
+        "image_credit": {
+          "title": "Global mosaic of Pluto in true colour, from New Horizons",
+          "creator": "NASA / Johns Hopkins University Applied Physics Laboratory / Southwest Research Institute",
+          "date": "Imaged 14 July 2015; released 25 July 2015",
+          "source": "New Horizons LORRI mosaic coloured with Ralph data (NASA/JHUAPL/SwRI release)",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Nh-pluto-in-true-color_2x.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "NASA, US federal government work — the Commons file page states the file is in the public domain in the United States because it was solely created by NASA",
+          "verified": "2026-07-27"
+        }
+      }
+    },
+    {
+      "id": "dwarf-ceres",
+      "name": "Ceres — the promoted",
+      "symbol": "⚳",
+      "category": "dwarf-planet",
+      "level": 1,
+      "sort_order": 2,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PIA21078_Occator_on_Ceres%27_Limb.jpg?width=800",
+      "keywords": [
+        "ceres",
+        "dwarf-planet",
+        "asteroid-belt",
+        "piazzi",
+        "dawn",
+        "demeter"
+      ],
+      "sections": {
+        "The astronomy": "Found on 1 January 1801 by Giuseppe Piazzi at the Palermo observatory in Sicily — the first object ever found in the gap between Mars and Jupiter. It was announced as a new planet, and it stayed one: Ceres was listed as a planet in astronomy books and tables, alongside Pallas, Juno and Vesta, for more than half a century. William Herschel coined the word \"asteroid\" for the new objects in 1802, and by the 1860s astronomers had settled on there being a difference in kind. Ceres was demoted.\n\nIt is 939.4 km across, about a quarter the Moon's diameter, and goes round the Sun in 4.6 years. It is the largest thing in the asteroid belt and holds roughly 40% of the belt's entire mass — which is precisely why it fails the \"cleared the neighbourhood\" test and is a dwarf planet rather than a planet. NASA's Dawn launched on 27 September 2007 and arrived on 6 March 2015; the famous bright patches in Occator crater turned out to be sodium carbonate with smaller amounts of ammonium chloride or bicarbonate, left by briny water that reached the surface and froze. Sources: Wikipedia, \"Ceres (dwarf planet)\" — https://en.wikipedia.org/wiki/Ceres_(dwarf_planet); NASA, \"Dwarf Planets\" — https://science.nasa.gov/dwarf-planets/ (fetched 27 Jul 2026).\n\nSo Ceres has been a planet, then an asteroid, then a dwarf planet. The 2006 vote that took a rank away from Pluto handed one back to Ceres. Same vote, opposite direction.",
+        "The name, and who chose it": "Ceres is the Roman goddess of grain and agriculture; her oldest temple stood in Sicily, which is where Piazzi was observing when he found her. Her Greek counterpart is Demeter, and the story that carries the name is the one about the daughter: Persephone is taken to the underworld, Demeter withdraws her gift and the earth goes barren, and a bargain is struck that returns the daughter for part of each year and takes her back for the rest.\n\nA grief myth about something going away and coming back, attached to the one body in this grammar that lost its rank and got it back. Nobody planned that. It is a coincidence, and this grammar will not pretend otherwise — but it is the kind of coincidence a symbol system feeds on, and noticing that is part of watching one form.",
+        "The symbolism so far": "Ceres is the only body here with a real astrological literature, and it is younger than people assume. Astrologers did not take up the asteroids in the nineteenth century, when astronomers were still calling them planets. The use begins in 1973, with the first published ephemeris for Ceres, Pallas, Juno and Vesta, and consolidates through a body of \"asteroid goddess\" writing in the 1980s that read each one by its myth. (Source: Wikipedia, \"Asteroids in astrology\" — https://en.wikipedia.org/wiki/Asteroids_in_astrology, fetched 27 Jul 2026. Named here by era and by book rather than by author, per this repo's practice of naming a school rather than a living person.)\n\nWhat that literature circles around, read straight off the Demeter story: what a person actually needs in order to feel nourished and cared for, how they nourish others, and how they meet loss — separation, the thing taken, the negotiated return that is never quite a restoration. About fifty years of use. Long enough that the reading has settled into something several communities share; short enough that you can still see it was assembled, in living memory, from a myth and an ephemeris.",
+        "A question": "What do you actually need in order to feel fed — not who feeds you, what the feeding is? And what have you agreed to lose for part of every year in order to have it back for the rest?"
+      },
+      "metadata": {
+        "iau_status": "Dwarf planet, recognized 2006 — promoted from asteroid. Minor planet (1) Ceres.",
+        "discovered": "1 January 1801, Giuseppe Piazzi, Palermo Astronomical Observatory",
+        "named": "1801, by Piazzi, after the Roman goddess whose oldest temple stood in Sicily",
+        "symbolism_age": "c. 50 years of astrological use (from 1973)",
+        "confidence": "medium",
+        "_confidence_basis": "Astronomy is high-confidence and corroborated. The symbolic reading is rated medium: it is genuinely established across half a century of asteroid-astrology writing, but it is a modern reading assembled from a myth, not a transmitted tradition, and the Wikipedia article is a summary source rather than a survey of the literature.",
+        "image_credit": {
+          "title": "Occator crater on the limb of Ceres, from Dawn",
+          "creator": "NASA/JPL-Caltech/UCLA/MPS/DLR/IDA",
+          "date": "Acquired 17 October 2016 (Dawn second extended mission, XMO2)",
+          "source": "NASA Photojournal PIA21078 — https://science.nasa.gov/photojournal/occator-on-ceres-limb",
+          "file_page": "https://commons.wikimedia.org/wiki/File:PIA21078_Occator_on_Ceres%27_Limb.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "NASA, US federal government work — the Commons file page states the file is in the public domain in the United States because it was solely created by NASA",
+          "verified": "2026-07-27"
+        }
+      }
+    },
+    {
+      "id": "dwarf-eris",
+      "name": "Eris — the one who forced the question",
+      "category": "dwarf-planet",
+      "level": 1,
+      "sort_order": 3,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Apple_of_Discord_by_Jacob_Jordaens.jpg?width=800",
+      "keywords": [
+        "eris",
+        "dwarf-planet",
+        "discord",
+        "dysnomia",
+        "iau-2006",
+        "kuiper-belt"
+      ],
+      "sections": {
+        "The astronomy": "It was photographed on 21 October 2003 at Palomar Observatory, on the 1.2 m Samuel Oschin Schmidt telescope, and then sat unnoticed in the data: the team's software had been throwing out anything moving slower than 1.5 arcseconds an hour, and Eris is further away than that filter allowed for. After Sedna turned up moving at 1.75, they went back through the old plates and found it on 5 January 2005. The discovery is credited to Mike Brown, Chad Trujillo and David Rabinowitz.\n\nIt is 2,326 ± 12 km across, measured by watching it pass in front of a star in 2010 — very slightly smaller than Pluto in volume, but 27% more massive. Its orbit takes 558.4 years and swings from 38.1 AU out to 97.49. Its moon Dysnomia was found on 10 September 2005.\n\nThis is the object that forced the vote. When the first measurements made it look larger than Pluto, NASA called it a tenth planet, and the choice in front of astronomers became: keep adding planets as the Kuiper belt keeps producing them, or define the word. They defined the word, on 24 August 2006, and the definition demoted Pluto. Eris got its own name three weeks later, on 13 September 2006. Sources: Wikipedia, \"Eris (dwarf planet)\" — https://en.wikipedia.org/wiki/Eris_(dwarf_planet); Wikipedia, \"IAU definition of planet\" — https://en.wikipedia.org/wiki/IAU_definition_of_planet (fetched 27 Jul 2026).",
+        "The name, and who chose it": "Eris is the Greek goddess of strife. Not invited to the wedding of Peleus and Thetis, she rolled a golden apple into the hall inscribed \"for the fairest\"; three goddesses claimed it, a mortal was made to judge, and the quarrel ran all the way to the Trojan War. Her daughter Dysnomia — lawlessness — is the name given to the moon.\n\nWhat makes this naming unusual is the stated reason. The team had been calling it Xena. The reason given for settling on Eris was not a resemblance anyone found in the object itself but what the object had already done: it caused quarrels among astronomers, so it got the goddess of quarrels. A name chosen for an effect already produced, rather than a meaning read into a light in a telescope. Almost every other name in this grammar works the other way round. (Source: Wikipedia, \"Eris (dwarf planet)\", quoting the discoverer's own account.)",
+        "The symbolism so far": "Roughly two decades of writing, scattered across online journals, astrological software documentation and self-published work, with no canonical text and no agreement. Meanings are still forming; what follows is what the young literature circles around, held lightly, and it should be read as a hypothesis a community is currently testing rather than as a finding.\n\nThe themes that recur: exclusion, and what the excluded one does about it. The uninvited guest who does not stay away. The fight over who counts as legitimate, and who gets to decide. The particular discomfort a system feels when the thing it did not plan for turns out to be bigger than the thing its categories were built around — which is, quite literally, what Eris did to the solar system.\n\nNotice how much of that is being read off the name and off the discovery story rather than off the sky. Two decades from now some of it will have hardened into what \"Eris in the seventh\" means, and the people using it will not remember that the meaning was assembled, in public, from a myth about an apple and a press release about a telescope. This item exists so that they can.",
+        "A question": "Where were you left off the list — and what did you roll into the room instead of staying away?"
+      },
+      "metadata": {
+        "iau_status": "Dwarf planet, recognized 2006. Minor planet (136199) Eris.",
+        "discovered": "Imaged 21 October 2003; identified 5 January 2005 — M. Brown, C. Trujillo, D. Rabinowitz, Palomar Observatory",
+        "named": "13 September 2006, after the Greek goddess of strife",
+        "symbolism_age": "c. 20 years of astrological writing (from 2005); no canonical text",
+        "confidence": "low",
+        "_confidence_basis": "The astronomy is high-confidence and sourced. The symbolic section is rated low because there is no established literature to report — only two decades of dispersed, mostly self-published writing whose themes are summarized here without being endorsed. No symbol glyph is carried: Eris's Unicode astronomical symbol is too new for reliable font support, and a broken box is worse than none.",
+        "image_credit": {
+          "title": "The Wedding of Thetis and Peleus — the Golden Apple of Discord",
+          "creator": "Jacob Jordaens (1593–1678), after a design by Peter Paul Rubens",
+          "date": "1633 (dated 1636–1638 by some catalogues)",
+          "source": "Museo del Prado, Madrid (P001634), oil on canvas",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Golden_Apple_of_Discord_by_Jacob_Jordaens.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "Jordaens died 1678 — the Commons file page states PD-old-100, and PD-Art for the photographic reproduction of a two-dimensional public-domain work",
+          "verified": "2026-07-27",
+          "_why_this_image": "The scene the name comes from, not the object — Eris has never been resolved as a disk by any telescope. An honest picture of the myth beats an artist's impression of a world nobody has seen."
+        }
+      }
+    },
+    {
+      "id": "dwarf-haumea",
+      "name": "Haumea — the fast one, and a borrowed name",
+      "category": "dwarf-planet",
+      "level": 1,
+      "sort_order": 4,
+      "keywords": [
+        "haumea",
+        "dwarf-planet",
+        "hawaii",
+        "naming",
+        "rings",
+        "kuiper-belt"
+      ],
+      "sections": {
+        "The astronomy": "Haumea has a contested discovery. A team at the Sierra Nevada Observatory in Spain had it in images taken 7–10 March 2003 and filed the first report with the Minor Planet Center on 27 July 2005; a Caltech team had found it independently on 28 December 2004. Brown, of the Caltech team, initially conceded the credit and later disputed it after learning the Spanish observatory had accessed his observing logs the day before their announcement; Ortiz acknowledged accessing the logs and denied wrongdoing, saying he had been checking whether they had found the same object. The IAU's announcement of 17 September 2008 resolved it by naming no discoverer at all: it credited the discovery *location* to Sierra Nevada and adopted the *name* proposed by the Caltech team. A settlement that gives each side half of something neither asked to split.\n\nIt turns once every 3.915 hours — among the fastest large bodies in the solar system — and the spin has stretched it into an ellipsoid roughly 2,000 × 1,500 × 1,000 km; spin it much faster and it would pull itself apart. It has two moons, Hiʻiaka (26 January 2005) and Namaka (30 June 2005), and a ring found by stellar occultation on 21 January 2017 and announced that October: the first ring system known around any trans-Neptunian object. Its orbit takes 283 years.\n\nAnd no telescope has ever resolved it as a disk. Its shape is inferred from how its brightness rises and falls as it spins, and from what it blocked when it crossed in front of a star. We know it is a stretched ellipsoid the way you know the shape of something in a dark room by touch. Source: Wikipedia, \"Haumea\" — https://en.wikipedia.org/wiki/Haumea (fetched 27 Jul 2026).",
+        "The name, and who chose it": "Haumea is a goddess of the Hawaiian tradition — described in the source consulted here as the matron goddess of the island of Hawaiʻi and a goddess of fertility and childbirth, with many children who came from different parts of her body. Hiʻiaka and Namaka are among her daughters.\n\nHow the name got onto a Kuiper belt object should be said plainly, because it matters. The Caltech team proposed Hawaiian names in order to honour Mauna Kea, where the moons were observed, and the IAU approved them in 2008. The published record describes the astronomers' reasons for choosing the name. It does not describe a request from Kānaka Maoli, and nothing in this grammar should be read as one. The much-repeated fit — a body whose moons are thought to be fragments knocked off it, named for a goddess whose children came from parts of her body — was found *after* the name was on the table, not before.\n\nThis is a living tradition, not a dead mythology, and this grammar is not its keeper. What is reported above is astronomy's borrowing. For Haumea herself, go to Kānaka Maoli sources and teachers; do not take a summary written for an astrology deck as an account of anyone's gods. (Source for the naming: Wikipedia, \"Haumea\".)",
+        "The symbolism so far": "About two decades, and thin even by the standard of this grammar — very little has been written, and what exists reaches for exactly what the name hands it: fertility, birth, making things out of one's own substance, what gets broken off and goes into orbit.\n\nWhich is the whole demonstration, in miniature. The meaning is being read off the name. The name was chosen by a discovery team in 2008 for reasons of geographical courtesy. There is no observed correlation underneath it, no centuries of use, no tradition transmitting anything — there is a word, and people beginning to work with the word. If you want to watch a symbol being made rather than inherited, this is the clearest view in the repo. Hold it that lightly. It may not last, and it is under no obligation to.",
+        "A question": "What are you making right now out of your own material — and who put the name on it before you did?"
+      },
+      "metadata": {
+        "iau_status": "Dwarf planet, recognized 2008 (named 17 September 2008). Minor planet (136108) Haumea.",
+        "discovered": "Contested: Sierra Nevada Observatory images 7–10 March 2003 / Caltech team 28 December 2004. The IAU credited the location, not a discoverer.",
+        "named": "2008, proposed by the Caltech team from Hawaiian tradition, to honour Mauna Kea",
+        "symbolism_age": "c. 18 years of astrological writing (from 2008); no canonical text",
+        "confidence": "low",
+        "_confidence_basis": "Astronomy sourced and high-confidence, including the credit dispute, which the source reports as disputed and this item repeats as disputed. The symbolic section is rated low: the literature is barely two decades old, very small, and demonstrably derived from the name rather than from anything observed. The mythological summary is deliberately minimal and points readers to the tradition's own keepers.",
+        "_no_image_why": "Deliberate gap. There is no public-domain image of Haumea, because there is no image of Haumea — it has never been resolved as a disk. The alternatives were an artist's impression under a CC licence (not public domain, so not permitted here) or a picture of a Hawaiian deity, which would be exactly the kind of borrowing this item is trying to make visible. An honest gap beats both."
+      }
+    },
+    {
+      "id": "dwarf-makemake",
+      "name": "Makemake — the Easter object, and a borrowed name",
+      "category": "dwarf-planet",
+      "level": 1,
+      "sort_order": 5,
+      "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Makemake_moon_Hubble_image_with_legend.jpg?width=800",
+      "keywords": [
+        "makemake",
+        "dwarf-planet",
+        "rapa-nui",
+        "naming",
+        "plutoid",
+        "kuiper-belt"
+      ],
+      "sections": {
+        "The astronomy": "Found on 31 March 2005 by Mike Brown, Chad Trujillo and David Rabinowitz at Palomar Observatory, and nicknamed \"Easterbunny\" by the team because it turned up just after Easter. Average diameter about 1,430 km; it goes round the Sun once every 307 years at an average distance of 45.5 AU. A moon, provisionally S/2015 (136472) 1 and nicknamed MK 2, was picked out of Hubble images taken on 27 April 2015 and announced in 2016; it is still unnamed.\n\nIt was recognized as a dwarf planet in July 2008 and classed as a *plutoid* — a term the IAU's Executive Committee announced on 11 June 2008 for trans-Neptunian dwarf planets, and which other parts of the IAU then declined to use. A small fact worth keeping: even the taxonomy of the taxonomy did not stick. Sources: Wikipedia, \"Makemake\" — https://en.wikipedia.org/wiki/Makemake; Wikipedia, \"Dwarf planet\" — https://en.wikipedia.org/wiki/Dwarf_planet (fetched 27 Jul 2026). Note: the ESA caption on some releases of the Hubble image gives a much larger diameter; this item follows the Wikipedia article's figure.",
+        "The name, and who chose it": "Make-make is a creator god of the Rapa Nui, associated with fertility and with the birdman tradition centred at Orongo on Rapa Nui (Easter Island).\n\nThe route from there to a Kuiper belt object is not mysterious and is worth stating exactly. IAU convention requires classical Kuiper belt objects to be named after creation deities. The team wanted a name that preserved their Easter joke. Those two constraints met on Rapa Nui, and the IAU approved the name in July 2008. That is the whole mechanism: a naming rule and a pun, not a resemblance discovered in the object.\n\nThis is a living people's god, and this grammar claims no authority over it and reproduces no sacred imagery for it. What is reported here is a fact about astronomers. For Make-make, go to Rapa Nui sources. (Source: Wikipedia, \"Makemake\".)",
+        "The symbolism so far": "Two decades, sparse, no canon — the same caveat as Eris and Haumea, and if anything more so. What the post-2005 writing reaches for: connection to the world one lives in rather than to one's own interior, advocacy, the created world and one's obligations toward it, the pull outward from private life into the collective.\n\nRead that in the light of the paragraph above and you can see it being built: the astrological themes track the *word* \"creator\", and the word arrived through a naming convention and an Easter pun. That is not a debunking. Symbols are made this way — the classical planets got their meanings through comparable accidents of language and cult, only slowly enough that nobody was around to write down which week it happened. Here we can watch. Held lightly, and marked low.",
+        "A question": "Who taught you the name for the thing you believe in — and did they ask the people it came from?"
+      },
+      "metadata": {
+        "iau_status": "Dwarf planet, recognized July 2008; classed as a plutoid. Minor planet (136472) Makemake.",
+        "discovered": "31 March 2005 — M. Brown, C. Trujillo, D. Rabinowitz, Palomar Observatory",
+        "named": "July 2008, after a Rapa Nui creator deity, under the IAU convention for classical Kuiper belt objects",
+        "symbolism_age": "c. 20 years of astrological writing (from 2005); no canonical text",
+        "confidence": "low",
+        "_confidence_basis": "Astronomy sourced; the two sources fetched disagree on diameter (Wikipedia c. 1,430 km; an ESA image caption c. 2,200 km) and the item says which it followed. The symbolic section is rated low — two decades of dispersed writing, visibly derived from the name. The mythological summary is minimal by design.",
+        "image_credit": {
+          "title": "Makemake and its moon S/2015 (136472) 1 (\"MK 2\"), Hubble Space Telescope",
+          "creator": "NASA, ESA, A. Parker and M. Buie (Southwest Research Institute), W. Grundy (Lowell Observatory), and K. Noll (NASA GSFC)",
+          "date": "Observed 27 April 2015; released 26 April 2016",
+          "source": "HubbleSite news release 2016-18",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Makemake_moon_Hubble_image_with_legend.jpg",
+          "license": "Public domain (as stated on the Wikimedia Commons file page)",
+          "pd_basis": "NASA, US federal government work — the Commons file page states public domain on the ground that NASA Hubble material is copyright-free. Recorded honestly: the credit line also carries ESA, and the Commons tag's own caveat excludes post-2008 ESA-created material; the image is a NASA-led Hubble release processed by US institutions, and the file page states public domain without qualification.",
+          "verified": "2026-07-27"
+        }
+      }
+    },
+    {
+      "id": "dwarf-candidates",
+      "name": "The candidates — Sedna, Quaoar, Gonggong, Orcus",
+      "category": "dwarf-planet",
+      "level": 1,
+      "sort_order": 6,
+      "keywords": [
+        "sedna",
+        "quaoar",
+        "gonggong",
+        "orcus",
+        "naming",
+        "dwarf-planet-candidates"
+      ],
+      "sections": {
+        "The astronomy": "One item, not four, on purpose. None of these is on the IAU's list — that list has not changed since 2006 and 2008, despite recommendations that it should. Most astronomers call them dwarf planets anyway; the IAU itself called Quaoar one in an annual report, and NASA's own JPL has called Gonggong one, without any of it being formalized. They are here because four bodies with no astrology attached to them answer the naming question four different ways.\n\n**Sedna** — found 14 November 2003 by Brown, Trujillo and Rabinowitz at Palomar. Its orbit takes about 11,400 years and runs from 76 AU at closest to 937 AU at furthest: one Sednan year is several times the whole of recorded human history. Named for a goddess of the Inuit sea. The reasons given for the name were that the goddess lives at the bottom of a freezing ocean (a fit for the cold and the distance), that the discoverer believed the Inuit were the polar people nearest his home in Pasadena — they are not — and that the name is easy for English speakers to say. The IAU's small-body naming committee accepted it in September 2004. The source records no consultation with Inuit people.\n\n**Quaoar** — found 4 June 2002 by Trujillo and Brown at Palomar; orbit about 289 years; rings found in 2023; a moon, Weywot, found in 2006. Named for Kwawar of the Tongva, in that tradition the genderless creation force that sings and dances the gods into being. Here the discoverers, on finding that there are living Tongva people, went and asked: a tribal historian approved the name. Weywot is the Tongva sky god. Same team, same decade, one conversation different.\n\n**Gonggong** — found 17 July 2007 by Schwamb, Brown and Rabinowitz at Palomar; nicknamed \"Snow White\" on the assumption it would be icy, until it turned out to be red. Orbit about 547 years. In 2019 the discoverers put three names to a public vote; Gonggong won with 46% of roughly 280,000 votes, and the IAU accepted it on 5 February 2020. Gonggong is a Chinese water god — red-haired human head, serpent's body — who flooded the world and tilted the earth; the moon Xiangliu is his nine-headed serpent companion. Naming by ballot.\n\n**Orcus** — found 17 February 2004 by Brown, Trujillo and Rabinowitz; orbit about 245 years. Named for the Etruscan and Roman underworld god who punishes the condemned, chosen as a counterpart to Pluto because Orcus keeps a near-mirror of Pluto's path: the same 2:3 resonance with Neptune, in opposite phase, so it is at its furthest when Pluto is at its nearest. Astronomers call it the anti-Pluto. Its moon Vanth is an Etruscan winged figure who guides the dead. Naming by symmetry.\n\nSources: Wikipedia, \"Dwarf planet\" — https://en.wikipedia.org/wiki/Dwarf_planet; \"90377 Sedna\" — https://en.wikipedia.org/wiki/90377_Sedna; \"50000 Quaoar\" — https://en.wikipedia.org/wiki/50000_Quaoar; \"225088 Gonggong\" — https://en.wikipedia.org/wiki/225088_Gonggong; \"90482 Orcus\" — https://en.wikipedia.org/wiki/90482_Orcus (all fetched 27 Jul 2026).",
+        "The name, and who chose it": "Four ways to name a thing, all of them used by overlapping groups of astronomers within about five years of each other:\n\n- **By resemblance** (Sedna): find a myth that matches a physical property, and take the name.\n- **By permission** (Quaoar): find out whether the tradition has living members, and ask them.\n- **By ballot** (Gonggong): put a shortlist to the public and count.\n- **By symmetry** (Orcus): name it for its relation to something already named.\n\nOnly one of those four involves the people whose god is being borrowed, and it happened because someone thought to check. Sedna, Quaoar and Gonggong all draw on traditions with living communities — Inuit, Tongva, Chinese. Whichever names stick will be inherited by everyone who comes after, astrologers included, and the method will be invisible by then. That is the ordinary way a symbol arrives: fully formed, with the argument that produced it already forgotten.",
+        "The symbolism so far": "Almost nothing, and this grammar is not going to invent any. Scattered astrological writing exists for Sedna and, more thinly, for the others; there is no body of use worth summarizing and no community agreement to report. Naming a set of themes here would be manufacturing exactly the thing the rest of this grammar is trying to make visible.\n\nSo: no reading. These four are in the deck as evidence about *how naming works*, not as symbols to draw. If a literature grows around them, it can be added later, dated, and marked — which is the whole method.",
+        "A question": "Read the four naming methods again. Which one would you want used on you?"
+      },
+      "metadata": {
+        "iau_status": "None of the four is on the IAU's list of recognized dwarf planets; the list has not been added to since 2008. All four are widely treated as dwarf planets by astronomers.",
+        "discovered": "Quaoar 2002; Sedna 2003; Orcus 2004; Gonggong 2007 — all at Palomar Observatory, by overlapping teams",
+        "symbolism_age": "Negligible; no reading offered",
+        "confidence": "medium",
+        "_confidence_basis": "Astronomy and naming history are sourced per body and are high-confidence individually. Rated medium overall because the classification status of these four is genuinely unsettled — the fetched sources differ on whether to call them dwarf planets, and this item follows the Wikipedia 'Dwarf planet' article's careful line (widely treated as such by astronomers, never formally added by the IAU) rather than the looser phrasing found elsewhere. No symbolic claim is made at all.",
+        "_no_image_why": "Deliberate gap. None of the four has been resolved as a disk, and the available comparison diagrams are CC-licensed rather than public domain. The item is about naming, not appearance."
+      }
+    },
+    {
+      "id": "pattern-the-2006-vote",
+      "name": "The vote — 24 August 2006, Prague",
+      "category": "reclassification",
+      "level": 2,
+      "sort_order": 10,
+      "composite_of": [
+        "dwarf-ceres",
+        "dwarf-pluto",
+        "dwarf-eris"
+      ],
+      "keywords": [
+        "iau-2006",
+        "reclassification",
+        "prague",
+        "definition"
+      ],
+      "sections": {
+        "The pattern": "Three bodies, one afternoon, three different outcomes. Ceres was promoted, having been demoted a century and a half earlier. Pluto was demoted, having been a planet for seventy-six years. Eris, which had made the whole thing necessary by turning up more massive than Pluto, was defined into a category on 24 August and given its name on 13 September.\n\nThe instrument was a definition: to be a planet a body must orbit the Sun, be massive enough that its own gravity has made it round, and have cleared the neighbourhood around its orbit. The first two are properties of the body. The third is a property of the body's *situation* — of what else is nearby. That is why Ceres and Pluto fail it: not for anything about themselves, but for the company they keep. A companion resolution proposing to keep \"classical planet\" as an umbrella term was voted down. (Reported from Wikipedia, \"IAU definition of planet\", fetched 27 Jul 2026; the IAU's own resolution pages returned HTTP 403 that day and could not be read directly, so this is at one remove and is marked as such.)",
+        "What actually changed": "Physically, nothing. No mass moved, no orbit shifted, no surface altered. What changed was a taxonomy — and taxonomies are made by people in rooms, by procedures, in the presence of everyone who could afford the airfare to Prague that August.\n\nAstrology carried on using Pluto exactly as before, which is the interesting part. If the meaning had been derived from the astronomical status, the demotion should have cost it something. It cost it nothing, because the meaning was never derived from the status: it was derived from the name, and from ninety years of people using the name together. This grammar takes that as evidence for a general claim it makes throughout — that symbols are held by communities over time, not read off objects — and it says so out loud rather than quietly assuming it.\n\nThe reverse experiment is also available. Ceres was in the sky, catalogued and calculable, for 172 years before astrologers made anything of it. Availability was never the constraint. Attention was.",
+        "A question": "What in your own life has been reclassified without being changed — and how much of what followed came from the thing itself, and how much from the new word for it?"
+      },
+      "metadata": {
+        "confidence": "high",
+        "_confidence_basis": "The facts of the vote are sourced; the interpretive claim in 'What actually changed' is offered as this grammar's own reading and is marked as such in the text.",
+        "_source_note": "iau.org returned HTTP 403 when fetched on 27 Jul 2026, so the resolution wording is reported from the English Wikipedia article rather than quoted from the IAU. Not treated as a direct quotation of the resolution."
+      }
+    },
+    {
+      "id": "pattern-borrowed-names",
+      "name": "Borrowed names — who gets to name a world",
+      "category": "reclassification",
+      "level": 2,
+      "sort_order": 11,
+      "composite_of": [
+        "dwarf-haumea",
+        "dwarf-makemake",
+        "dwarf-candidates"
+      ],
+      "keywords": [
+        "naming",
+        "living-traditions",
+        "hawaii",
+        "rapa-nui",
+        "tongva",
+        "inuit"
+      ],
+      "sections": {
+        "The pattern": "The classical planets were named inside the cultures that used them — Greeks and Romans naming Greek and Roman gods, over centuries, with the meanings and the names growing together and nobody able to say which came first. Every name in this grouping was chosen differently: by small teams of professional astronomers, mostly at one observatory in California, mostly within five years of each other, and mostly from traditions the namers did not belong to. Hawaiian, Rapa Nui, Inuit, Tongva, Chinese, Etruscan.\n\nThe Etruscans are not around to mind. The others are.",
+        "In history": "What the record actually shows, kept separate from what it does not:\n\n- For Quaoar, the discoverers established that there are living Tongva people and asked a tribal historian for permission, which was given. That is documented.\n- For Sedna, the reasons given were the myth's fit with cold and distance, a mistaken belief about which polar culture was geographically nearest, and English pronounceability. The source records no consultation.\n- For Haumea, the Hawaiian names were proposed to honour the mountain where the moons were observed. The published record describes the astronomers' reasoning, not a request from Kānaka Maoli.\n- For Makemake, an IAU naming convention requiring a creator deity met a team's Easter joke.\n\n\"The record does not show a consultation\" is not the same as \"no consultation occurred,\" and this grammar will not upgrade the first into the second. What can be said is that in one case out of four the asking is on the record, and in three it is not.\n\nWhy it matters here rather than only in astronomy: whatever astrological meaning eventually attaches to these bodies will be read off the names. That is demonstrably how the young literature is proceeding — Haumea gets fertility because the name means fertility. So the naming decision is not a label on a symbol; it *is* the symbol's origin, and it was made in the mid-2000s by a handful of people, some of whom asked and some of whom did not.",
+        "A question": "Whose word are you using for the thing that matters most to you — and do you know how it got to you?"
+      },
+      "metadata": {
+        "confidence": "medium",
+        "_confidence_basis": "Each naming account is sourced to the body's own article, fetched 27 Jul 2026. Rated medium rather than high because these are encyclopedia summaries of the naming, not the IAU citations themselves, and because absence of a recorded consultation is weaker evidence than a recorded one — a distinction the section text makes explicitly.",
+        "_care_note": "Written to report astronomers' actions, not to speak for Kānaka Maoli, Rapa Nui, Inuit, Tongva or Chinese traditions, and not to reproduce their sacred imagery. Readers wanting those traditions are pointed to their own keepers."
+      }
+    },
+    {
+      "id": "pattern-watching-a-symbol-form",
+      "name": "Watching a symbol form",
+      "category": "reclassification",
+      "level": 3,
+      "sort_order": 20,
+      "composite_of": [
+        "pattern-the-2006-vote",
+        "pattern-borrowed-names"
+      ],
+      "keywords": [
+        "historiography",
+        "meaning-making",
+        "confidence",
+        "creed"
+      ],
+      "sections": {
+        "The pattern": "Everywhere else in this repo, the meanings arrive already made. Ptolemy inherits a scheme whose assembly is lost behind him; Lilly inherits Ptolemy; the Bṛhat Jātaka inherits something older still, and the historians argue about what. You can read the traditions faithfully, in their own terms, but you cannot watch them being built, because the building happened before anyone was writing it down.\n\nHere you can. The bodies were found between 2001 and 2007. The names were assigned between 2004 and 2008, by identifiable people, for reasons they wrote down. The astrological readings began appearing almost immediately and are still visibly unsettled, still being argued about, still mostly being derived from the names rather than from anything anyone has observed. The whole apparatus is out on the table with the lid off.\n\nThat is what this grammar is for. Not to tell you what Eris means — nobody knows what Eris means, including the people currently writing that they do. To let you see the process that will, in a century, have produced an answer that feels ancient.",
+        "In history": "Two things the record shows, which are easy to state and hard to hold at the same time.\n\nFirst: the astronomy is not the source of the meaning. Pluto's demotion cost its symbolism nothing; Ceres's availability from 1801 bought its symbolism nothing until 1973. The meaning tracked human attention and human agreement, not the sky.\n\nSecond: that does not make the meaning fake, unless you also want to call the classical planets fake. Mars did not acquire war from anything observable about a red point of light either. It acquired it from a cult, a language, and a very long time. The only difference between Mars and Haumea is 2,500 years of use — which is an enormous difference, and it is a difference of degree.\n\nSo the honest position, and this repo's position: hold the young readings lightly and say how young they are; hold the old readings as what they are, which is the same thing with more time in it; and do not confuse either with a claim about the sky.",
+        "A question": "You are watching a symbol get made. Do you want to help make it — and if you do, what would you owe the people whose god's name is on it?"
+      },
+      "metadata": {
+        "confidence": "medium",
+        "_confidence_basis": "This is the grammar's own historiographic argument, not a sourced finding, and is marked as interpretation. The factual claims it leans on (the 2006 vote, the 1973 start of asteroid astrology, the naming dates) are sourced in the items below it.",
+        "_creed_note": "Under this site's creed a chart is a mirror and a calendar, never a prediction and never a command. Nothing in this grammar tells anyone what a placement will do to them; the strongest thing said anywhere here is that a community is currently deciding what a word will mean."
+      }
+    }
+  ],
+  "cover_image_credit": {
+    "title": "Size comparison of the largest known Kuiper belt objects and Earth — labelled with the provisional designations 2003 UB313 (later Eris), 2005 FY9 (Makemake) and 2003 EL61 (Haumea), alongside Pluto, Sedna and Quaoar",
+    "creator": "A. Feild (Space Telescope Science Institute), for NASA and ESA",
+    "date": "11 April 2006",
+    "source": "HubbleSite / STScI news release 2006-16, published four months before the IAU vote that produced the dwarf-planet category",
+    "file_page": "https://commons.wikimedia.org/wiki/File:2006-16-d-print.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "NASA, US federal government work — the Commons file page states the file is in the public domain in the United States because it was solely created by NASA",
+    "verified": "2026-07-27",
+    "_why_this_image": "A picture of the moment before the names: three of these worlds are still catalogue numbers here, four months from being given gods to carry. That is the grammar's subject in one frame."
+  },
+  "_recursive_eco_url": "https://flow.recursive.eco/g/c9057941-2073-4965-9e8d-b4315a0adf1d?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=c9057941-2073-4965-9e8d-b4315a0adf1d"
+}

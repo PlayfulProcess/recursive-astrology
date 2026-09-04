@@ -1,0 +1,1017 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "recursive.eco community",
+        "role": "original author of the canonical synthesis",
+        "link": "https://github.com/PlayfulProcess/recursive.eco-schemas"
+      },
+      {
+        "name": "PlayfulProcess",
+        "role": "adopted as the astrology channel's flagship interpretation set",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "name": "Western Astrology — Canonical",
+  "description": "A canonical Western astrology grammar covering planets, signs, houses, and aspects with archetypal interpretations. A living document — contribute at github.com/PlayfulProcess/recursive.eco-schemas — Adopted as this channel's flagship interpretation set. Provenance, honestly: this is a contemporary community-authored synthesis in the psychological register (CC-BY-SA), not a historical text; for the historical registers see the public-domain voice libraries in this repo (grammars/tetrabiblos-ashmand, grammars/alan-leo, grammars/proctor-skeptical-astrology) and the cited dossiers under research/. Under this site's creed every item is a mirror-prompt: a chart is a mirror and a calendar, never a prediction and never a command.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Science_of_casting_horoscopes,_from_Utriusque_Cosmi_Historia,_by_Robert_Fludd.png?width=800",
+  "grammar_type": "astrology",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — contemporary community-authored synthesis in the psychological register, adopted as this channel's flagship interpretation set. Not a historical text."
+  },
+  "tags": [
+    "archetypal",
+    "astrology",
+    "canonical",
+    "recursive-eco",
+    "tropical",
+    "western"
+  ],
+  "items": [
+    {
+      "id": "planet-sun",
+      "name": "Sun",
+      "symbol": "☉",
+      "category": "planet",
+      "sections": {
+        "Story": "The Sun is your core identity — who you are becoming. It represents your conscious will, creative force, and the central organizing principle of your life.",
+        "Light": "Vitality, self-expression, leadership, creative power, confidence, generosity.",
+        "Shadow": "Ego inflation, domination, burnout from over-identification with achievement.",
+        "Archetype": "The King/Queen — sovereign consciousness that gives light and warmth."
+      },
+      "keywords": [
+        "identity",
+        "will",
+        "vitality",
+        "ego",
+        "father",
+        "authority"
+      ],
+      "metadata": {
+        "planet": "Sun"
+      }
+    },
+    {
+      "id": "planet-moon",
+      "name": "Moon",
+      "symbol": "☽",
+      "category": "planet",
+      "sections": {
+        "Story": "The Moon is your emotional body — how you feel, what you need, and where you seek comfort. It governs your instinctual responses and your relationship to home, nurturing, and memory.",
+        "Light": "Emotional intelligence, receptivity, nurturing, intuition, responsiveness.",
+        "Shadow": "Moodiness, dependency, emotional overwhelm, clinging to the past.",
+        "Archetype": "The Mother — the container that holds and nourishes life."
+      },
+      "keywords": [
+        "emotions",
+        "needs",
+        "mother",
+        "home",
+        "instinct",
+        "memory"
+      ],
+      "metadata": {
+        "planet": "Moon"
+      }
+    },
+    {
+      "id": "planet-mercury",
+      "name": "Mercury",
+      "symbol": "☿",
+      "category": "planet",
+      "sections": {
+        "Story": "Mercury is the mind in motion — how you think, communicate, and make sense of the world. It governs language, learning, commerce, and the bridges between things.",
+        "Light": "Articulate, curious, adaptable, quick-witted, perceptive.",
+        "Shadow": "Overthinking, trickery, scattered attention, nervousness.",
+        "Archetype": "The Messenger — the one who carries meaning between worlds."
+      },
+      "keywords": [
+        "communication",
+        "thinking",
+        "learning",
+        "travel",
+        "siblings"
+      ],
+      "metadata": {
+        "planet": "Mercury"
+      }
+    },
+    {
+      "id": "planet-venus",
+      "name": "Venus",
+      "symbol": "♀",
+      "category": "planet",
+      "sections": {
+        "Story": "Venus is what you love, what you value, and how you attract. She governs beauty, pleasure, relationship, aesthetics, and the principle of harmony.",
+        "Light": "Grace, magnetism, aesthetic sense, diplomacy, devotion.",
+        "Shadow": "Vanity, possessiveness, people-pleasing, overindulgence.",
+        "Archetype": "The Lover — the force that draws things together through beauty."
+      },
+      "keywords": [
+        "love",
+        "beauty",
+        "values",
+        "pleasure",
+        "money",
+        "art"
+      ],
+      "metadata": {
+        "planet": "Venus"
+      }
+    },
+    {
+      "id": "planet-mars",
+      "name": "Mars",
+      "symbol": "♂",
+      "category": "planet",
+      "sections": {
+        "Story": "Mars is your drive, desire, and fighting spirit. It governs how you assert yourself, pursue what you want, and handle conflict and competition.",
+        "Light": "Courage, initiative, passion, decisiveness, physical vitality.",
+        "Shadow": "Aggression, impatience, recklessness, anger, domination.",
+        "Archetype": "The Warrior — the force that cuts through and takes action."
+      },
+      "keywords": [
+        "action",
+        "desire",
+        "anger",
+        "courage",
+        "competition",
+        "sex"
+      ],
+      "metadata": {
+        "planet": "Mars"
+      }
+    },
+    {
+      "id": "planet-jupiter",
+      "name": "Jupiter",
+      "symbol": "♃",
+      "category": "planet",
+      "sections": {
+        "Story": "Jupiter is expansion, meaning, and faith. It governs your search for truth, your sense of abundance, and your capacity for growth, wisdom, and joy.",
+        "Light": "Generosity, optimism, wisdom, philosophical depth, good fortune.",
+        "Shadow": "Excess, overconfidence, dogmatism, restlessness, waste.",
+        "Archetype": "The Sage — the one who sees the larger pattern and offers meaning."
+      },
+      "keywords": [
+        "expansion",
+        "wisdom",
+        "faith",
+        "abundance",
+        "travel",
+        "teaching"
+      ],
+      "metadata": {
+        "planet": "Jupiter"
+      }
+    },
+    {
+      "id": "planet-saturn",
+      "name": "Saturn",
+      "symbol": "♄",
+      "category": "planet",
+      "sections": {
+        "Story": "Saturn is structure, time, and responsibility. It governs your relationship to limits, mastery, maturity, and the hard-won wisdom that comes from endurance.",
+        "Light": "Discipline, integrity, perseverance, mastery, wisdom through experience.",
+        "Shadow": "Rigidity, fear, depression, excessive control, self-denial.",
+        "Archetype": "The Elder — the keeper of boundaries who teaches through limitation."
+      },
+      "keywords": [
+        "structure",
+        "discipline",
+        "time",
+        "karma",
+        "authority",
+        "mastery"
+      ],
+      "metadata": {
+        "planet": "Saturn"
+      }
+    },
+    {
+      "id": "planet-uranus",
+      "name": "Uranus",
+      "symbol": "♅",
+      "category": "planet",
+      "sections": {
+        "Story": "Uranus is the awakener — sudden insight, revolution, and liberation from the old. It governs innovation, eccentricity, and the impulse to break free.",
+        "Light": "Originality, genius, liberation, humanitarian vision, breakthrough.",
+        "Shadow": "Rebellion without cause, detachment, instability, contrarianism.",
+        "Archetype": "The Revolutionary — the lightning bolt that shatters old forms."
+      },
+      "keywords": [
+        "revolution",
+        "freedom",
+        "innovation",
+        "technology",
+        "awakening"
+      ],
+      "metadata": {
+        "planet": "Uranus"
+      }
+    },
+    {
+      "id": "planet-neptune",
+      "name": "Neptune",
+      "symbol": "♆",
+      "category": "planet",
+      "sections": {
+        "Story": "Neptune dissolves boundaries — between self and other, real and imagined, sacred and mundane. It governs dreams, spirituality, compassion, and the longing to merge with something greater.",
+        "Light": "Compassion, imagination, spiritual devotion, artistic vision, transcendence.",
+        "Shadow": "Delusion, addiction, escapism, victimhood, confusion.",
+        "Archetype": "The Mystic — the one who sees through the veil."
+      },
+      "keywords": [
+        "dreams",
+        "spirituality",
+        "illusion",
+        "compassion",
+        "art",
+        "dissolution"
+      ],
+      "metadata": {
+        "planet": "Neptune"
+      }
+    },
+    {
+      "id": "planet-pluto",
+      "name": "Pluto",
+      "symbol": "♇",
+      "category": "planet",
+      "sections": {
+        "Story": "Pluto is the force of transformation — death, rebirth, and the confrontation with power in its rawest form. It governs the underworld of the psyche and the process of radical change.",
+        "Light": "Transformation, regeneration, depth psychology, empowerment, truth.",
+        "Shadow": "Obsession, manipulation, power struggles, destructiveness.",
+        "Archetype": "The Alchemist — the one who transforms through descent into the depths."
+      },
+      "keywords": [
+        "transformation",
+        "power",
+        "death",
+        "rebirth",
+        "shadow",
+        "intensity"
+      ],
+      "metadata": {
+        "planet": "Pluto"
+      }
+    },
+    {
+      "id": "planet-north-node",
+      "name": "North Node",
+      "symbol": "☊",
+      "category": "planet",
+      "sections": {
+        "Story": "The North Node points to your evolutionary direction — the unfamiliar territory your soul is growing toward in this lifetime. It feels uncomfortable precisely because it is new.",
+        "Light": "Growth edge, soul purpose, future direction, evolutionary calling.",
+        "Shadow": "Overreaching, anxiety about the unknown, spiritual bypassing.",
+        "Archetype": "The Compass — pointing toward what you came here to learn."
+      },
+      "keywords": [
+        "destiny",
+        "growth",
+        "purpose",
+        "future",
+        "dharma"
+      ],
+      "metadata": {
+        "planet": "North Node"
+      }
+    },
+    {
+      "id": "planet-south-node",
+      "name": "South Node",
+      "symbol": "☋",
+      "category": "planet",
+      "sections": {
+        "Story": "The South Node represents what you already know — gifts, patterns, and tendencies carried from the past. Mastery here is the foundation, but over-reliance becomes a trap.",
+        "Light": "Natural talent, deep familiarity, comfort zone, karmic gifts.",
+        "Shadow": "Stagnation, regression, repeating old patterns, avoiding growth.",
+        "Archetype": "The Ancestor — the inherited wisdom that can become a prison."
+      },
+      "keywords": [
+        "past",
+        "karma",
+        "comfort",
+        "release",
+        "inherited patterns"
+      ],
+      "metadata": {
+        "planet": "South Node"
+      }
+    },
+    {
+      "id": "planet-chiron",
+      "name": "Chiron",
+      "symbol": "⚷",
+      "category": "planet",
+      "sections": {
+        "Story": "Chiron is the wound that becomes a gift. It shows where you carry a deep, often early wound — and where your greatest capacity to heal others lives.",
+        "Light": "Healing wisdom, mentorship, bridging worlds, compassionate teaching.",
+        "Shadow": "Chronic pain, feeling broken, avoiding the wound, over-identification with suffering.",
+        "Archetype": "The Wounded Healer — the one whose wound becomes medicine."
+      },
+      "keywords": [
+        "wound",
+        "healing",
+        "mentor",
+        "bridge",
+        "vulnerability"
+      ],
+      "metadata": {
+        "planet": "Chiron"
+      }
+    },
+    {
+      "id": "sign-aries",
+      "name": "Aries",
+      "symbol": "♈",
+      "category": "sign",
+      "sections": {
+        "Story": "Aries is the spark of initiation — the first fire, the impulse to exist. Here energy moves before thought, asserting itself into being.",
+        "Light": "Courage, initiative, authenticity, pioneering spirit, directness.",
+        "Shadow": "Impatience, selfishness, combativeness, recklessness.",
+        "Archetype": "The Pioneer — first to arrive, first to act."
+      },
+      "keywords": [
+        "initiative",
+        "courage",
+        "self",
+        "fire",
+        "cardinal"
+      ],
+      "metadata": {
+        "sign": "Aries",
+        "element": "Fire",
+        "modality": "Cardinal"
+      }
+    },
+    {
+      "id": "sign-taurus",
+      "name": "Taurus",
+      "symbol": "♉",
+      "category": "sign",
+      "sections": {
+        "Story": "Taurus is embodiment — the pleasure of having form, of touching earth, of building something that lasts. Here spirit takes root in matter.",
+        "Light": "Stability, sensuality, patience, resourcefulness, loyalty.",
+        "Shadow": "Stubbornness, possessiveness, materialism, resistance to change.",
+        "Archetype": "The Builder — the one who gives form to what matters."
+      },
+      "keywords": [
+        "stability",
+        "pleasure",
+        "values",
+        "earth",
+        "fixed"
+      ],
+      "metadata": {
+        "sign": "Taurus",
+        "element": "Earth",
+        "modality": "Fixed"
+      }
+    },
+    {
+      "id": "sign-gemini",
+      "name": "Gemini",
+      "symbol": "♊",
+      "category": "sign",
+      "sections": {
+        "Story": "Gemini is the dance of duality — the mind that plays with ideas, makes connections, and refuses to be pinned to a single truth. Here reality becomes conversation.",
+        "Light": "Versatility, wit, curiosity, communication, adaptability.",
+        "Shadow": "Superficiality, inconsistency, gossip, restlessness.",
+        "Archetype": "The Storyteller — the one who gives voice to multiplicity."
+      },
+      "keywords": [
+        "communication",
+        "duality",
+        "curiosity",
+        "air",
+        "mutable"
+      ],
+      "metadata": {
+        "sign": "Gemini",
+        "element": "Air",
+        "modality": "Mutable"
+      }
+    },
+    {
+      "id": "sign-cancer",
+      "name": "Cancer",
+      "symbol": "♋",
+      "category": "sign",
+      "sections": {
+        "Story": "Cancer is the shell and the softness within — the impulse to protect, nourish, and create a container for vulnerability. Here the emotional body becomes home.",
+        "Light": "Nurturing, emotional depth, protectiveness, tenacity, memory.",
+        "Shadow": "Clinginess, moodiness, defensiveness, emotional manipulation.",
+        "Archetype": "The Nurturer — the one who creates sanctuary."
+      },
+      "keywords": [
+        "home",
+        "family",
+        "emotions",
+        "water",
+        "cardinal"
+      ],
+      "metadata": {
+        "sign": "Cancer",
+        "element": "Water",
+        "modality": "Cardinal"
+      }
+    },
+    {
+      "id": "sign-leo",
+      "name": "Leo",
+      "symbol": "♌",
+      "category": "sign",
+      "sections": {
+        "Story": "Leo is the radiance of the creative self — the heart that shines, performs, and celebrates being alive. Here consciousness becomes an art form.",
+        "Light": "Creativity, generosity, warmth, leadership, self-expression.",
+        "Shadow": "Pride, attention-seeking, drama, stubbornness.",
+        "Archetype": "The Performer — the one whose light calls others to their own."
+      },
+      "keywords": [
+        "creativity",
+        "self-expression",
+        "fire",
+        "fixed",
+        "heart"
+      ],
+      "metadata": {
+        "sign": "Leo",
+        "element": "Fire",
+        "modality": "Fixed"
+      }
+    },
+    {
+      "id": "sign-virgo",
+      "name": "Virgo",
+      "symbol": "♍",
+      "category": "sign",
+      "sections": {
+        "Story": "Virgo is devotion to craft — the sacred attention to detail, the impulse to refine, heal, and serve. Here consciousness meets the world through care.",
+        "Light": "Discernment, service, practical wisdom, humility, healing.",
+        "Shadow": "Perfectionism, criticism, anxiety, self-doubt.",
+        "Archetype": "The Healer — the one who makes whole through attention."
+      },
+      "keywords": [
+        "service",
+        "analysis",
+        "health",
+        "earth",
+        "mutable"
+      ],
+      "metadata": {
+        "sign": "Virgo",
+        "element": "Earth",
+        "modality": "Mutable"
+      }
+    },
+    {
+      "id": "sign-libra",
+      "name": "Libra",
+      "symbol": "♎",
+      "category": "sign",
+      "sections": {
+        "Story": "Libra is the art of relationship — the search for balance, beauty, and justice in the space between self and other. Here consciousness becomes dialogue.",
+        "Light": "Harmony, fairness, aesthetic sense, diplomacy, partnership.",
+        "Shadow": "Indecision, people-pleasing, avoidance of conflict, dependency.",
+        "Archetype": "The Artist — the one who creates beauty in the between."
+      },
+      "keywords": [
+        "balance",
+        "partnership",
+        "beauty",
+        "air",
+        "cardinal"
+      ],
+      "metadata": {
+        "sign": "Libra",
+        "element": "Air",
+        "modality": "Cardinal"
+      }
+    },
+    {
+      "id": "sign-scorpio",
+      "name": "Scorpio",
+      "symbol": "♏",
+      "category": "sign",
+      "sections": {
+        "Story": "Scorpio is the descent — the willingness to go where others won't, to face death, desire, and the raw truth of power. Here consciousness transforms through intensity.",
+        "Light": "Depth, passion, loyalty, psychological insight, regeneration.",
+        "Shadow": "Jealousy, manipulation, obsession, vindictiveness.",
+        "Archetype": "The Shaman — the one who travels between worlds."
+      },
+      "keywords": [
+        "transformation",
+        "intensity",
+        "power",
+        "water",
+        "fixed"
+      ],
+      "metadata": {
+        "sign": "Scorpio",
+        "element": "Water",
+        "modality": "Fixed"
+      }
+    },
+    {
+      "id": "sign-sagittarius",
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "category": "sign",
+      "sections": {
+        "Story": "Sagittarius is the arrow in flight — the search for meaning, truth, and horizons beyond the known. Here consciousness expands through vision and adventure.",
+        "Light": "Optimism, philosophy, adventure, generosity, truthfulness.",
+        "Shadow": "Dogmatism, excess, restlessness, bluntness, irresponsibility.",
+        "Archetype": "The Explorer — the one who follows the arrow of meaning."
+      },
+      "keywords": [
+        "expansion",
+        "truth",
+        "adventure",
+        "fire",
+        "mutable"
+      ],
+      "metadata": {
+        "sign": "Sagittarius",
+        "element": "Fire",
+        "modality": "Mutable"
+      }
+    },
+    {
+      "id": "sign-capricorn",
+      "name": "Capricorn",
+      "symbol": "♑",
+      "category": "sign",
+      "sections": {
+        "Story": "Capricorn is the mountain — the slow, determined climb toward mastery and legacy. Here consciousness meets time, structure, and the weight of responsibility.",
+        "Light": "Ambition, discipline, integrity, practical wisdom, authority.",
+        "Shadow": "Coldness, workaholism, pessimism, rigidity, status obsession.",
+        "Archetype": "The Elder — the one who builds what endures."
+      },
+      "keywords": [
+        "ambition",
+        "structure",
+        "mastery",
+        "earth",
+        "cardinal"
+      ],
+      "metadata": {
+        "sign": "Capricorn",
+        "element": "Earth",
+        "modality": "Cardinal"
+      }
+    },
+    {
+      "id": "sign-aquarius",
+      "name": "Aquarius",
+      "symbol": "♒",
+      "category": "sign",
+      "sections": {
+        "Story": "Aquarius is the vision of what could be — the impulse toward collective evolution, individual freedom, and the future. Here consciousness serves the whole through radical originality.",
+        "Light": "Vision, humanitarianism, originality, intellectual independence.",
+        "Shadow": "Detachment, contrarianism, emotional avoidance, superiority.",
+        "Archetype": "The Visionary — the one who sees the future in the present."
+      },
+      "keywords": [
+        "innovation",
+        "community",
+        "freedom",
+        "air",
+        "fixed"
+      ],
+      "metadata": {
+        "sign": "Aquarius",
+        "element": "Air",
+        "modality": "Fixed"
+      }
+    },
+    {
+      "id": "sign-pisces",
+      "name": "Pisces",
+      "symbol": "♓",
+      "category": "sign",
+      "sections": {
+        "Story": "Pisces is the ocean — the dissolution of separate self into the infinite. Here consciousness merges with everything, swimming in compassion, imagination, and the dream of unity.",
+        "Light": "Compassion, imagination, spirituality, artistic sensitivity, transcendence.",
+        "Shadow": "Escapism, victimhood, confusion, boundary dissolution.",
+        "Archetype": "The Dreamer — the one who remembers what the world has forgotten."
+      },
+      "keywords": [
+        "transcendence",
+        "compassion",
+        "imagination",
+        "water",
+        "mutable"
+      ],
+      "metadata": {
+        "sign": "Pisces",
+        "element": "Water",
+        "modality": "Mutable"
+      }
+    },
+    {
+      "id": "house-1",
+      "name": "1st House",
+      "symbol": "I",
+      "category": "house",
+      "sections": {
+        "Story": "The house of self and emergence. How you appear, how you begin, how you enter a room and a life. The mask that becomes the face.",
+        "Light": "Self-awareness, physical vitality, personal initiative.",
+        "Shadow": "Self-absorption, identity crises, over-concern with image."
+      },
+      "keywords": [
+        "self",
+        "appearance",
+        "identity",
+        "beginnings",
+        "body"
+      ],
+      "metadata": {
+        "house": "1"
+      }
+    },
+    {
+      "id": "house-2",
+      "name": "2nd House",
+      "symbol": "II",
+      "category": "house",
+      "sections": {
+        "Story": "The house of resources and values. What you possess, what possesses you, and what you consider worth having. Your relationship to material reality.",
+        "Light": "Self-worth, material security, talent, sensory pleasure.",
+        "Shadow": "Greed, insecurity, over-attachment to possessions."
+      },
+      "keywords": [
+        "money",
+        "values",
+        "possessions",
+        "self-worth",
+        "resources"
+      ],
+      "metadata": {
+        "house": "2"
+      }
+    },
+    {
+      "id": "house-3",
+      "name": "3rd House",
+      "symbol": "III",
+      "category": "house",
+      "sections": {
+        "Story": "The house of communication and mind. How you speak, write, learn, and connect with your immediate environment. The neighborhood of consciousness.",
+        "Light": "Curiosity, articulation, mental agility, sibling bonds.",
+        "Shadow": "Gossip, scattered thinking, superficial connections."
+      },
+      "keywords": [
+        "communication",
+        "learning",
+        "siblings",
+        "neighborhood",
+        "mind"
+      ],
+      "metadata": {
+        "house": "3"
+      }
+    },
+    {
+      "id": "house-4",
+      "name": "4th House",
+      "symbol": "IV",
+      "category": "house",
+      "sections": {
+        "Story": "The house of roots and foundation. Your home, your family of origin, your emotional bedrock. The place you return to when everything else falls away.",
+        "Light": "Emotional security, ancestry, belonging, inner foundation.",
+        "Shadow": "Family wounds, rootlessness, clinging to the past."
+      },
+      "keywords": [
+        "home",
+        "family",
+        "roots",
+        "mother",
+        "foundation"
+      ],
+      "metadata": {
+        "house": "4"
+      }
+    },
+    {
+      "id": "house-5",
+      "name": "5th House",
+      "symbol": "V",
+      "category": "house",
+      "sections": {
+        "Story": "The house of creation and play. Where you make things for the joy of making them — children, art, romance, games. The stage where your heart performs.",
+        "Light": "Creative expression, romance, children, joy, risk-taking.",
+        "Shadow": "Drama addiction, gambling, narcissistic expression."
+      },
+      "keywords": [
+        "creativity",
+        "romance",
+        "children",
+        "play",
+        "joy"
+      ],
+      "metadata": {
+        "house": "5"
+      }
+    },
+    {
+      "id": "house-6",
+      "name": "6th House",
+      "symbol": "VI",
+      "category": "house",
+      "sections": {
+        "Story": "The house of service and daily practice. How you maintain your body, refine your craft, and serve the world through ordinary devotion. The sacred mundane.",
+        "Light": "Service, health awareness, craftsmanship, daily ritual.",
+        "Shadow": "Workaholism, hypochondria, perfectionism, servitude."
+      },
+      "keywords": [
+        "health",
+        "work",
+        "service",
+        "routine",
+        "craft"
+      ],
+      "metadata": {
+        "house": "6"
+      }
+    },
+    {
+      "id": "house-7",
+      "name": "7th House",
+      "symbol": "VII",
+      "category": "house",
+      "sections": {
+        "Story": "The house of the other. Your partnerships, marriages, open enemies, and projections. The mirror in which you see what you cannot see alone.",
+        "Light": "Partnership, commitment, diplomacy, balance through relationship.",
+        "Shadow": "Codependency, projection, loss of self in others."
+      },
+      "keywords": [
+        "partnership",
+        "marriage",
+        "other",
+        "contracts",
+        "balance"
+      ],
+      "metadata": {
+        "house": "7"
+      }
+    },
+    {
+      "id": "house-8",
+      "name": "8th House",
+      "symbol": "VIII",
+      "category": "house",
+      "sections": {
+        "Story": "The house of transformation and shared resources. Where you merge with others — financially, sexually, psychologically. The territory of death, inheritance, and rebirth.",
+        "Light": "Psychological depth, intimacy, shared power, transformation.",
+        "Shadow": "Power struggles, obsession, fear of loss, manipulation."
+      },
+      "keywords": [
+        "transformation",
+        "death",
+        "sex",
+        "shared resources",
+        "power"
+      ],
+      "metadata": {
+        "house": "8"
+      }
+    },
+    {
+      "id": "house-9",
+      "name": "9th House",
+      "symbol": "IX",
+      "category": "house",
+      "sections": {
+        "Story": "The house of expansion and meaning. Your philosophy, long journeys, higher education, and relationship to truth. Where you search for the big picture.",
+        "Light": "Wisdom, faith, cross-cultural understanding, philosophical depth.",
+        "Shadow": "Dogmatism, restlessness, spiritual bypassing, arrogance."
+      },
+      "keywords": [
+        "philosophy",
+        "travel",
+        "education",
+        "meaning",
+        "faith"
+      ],
+      "metadata": {
+        "house": "9"
+      }
+    },
+    {
+      "id": "house-10",
+      "name": "10th House",
+      "symbol": "X",
+      "category": "house",
+      "sections": {
+        "Story": "The house of vocation and public life. Your career, reputation, and contribution to the world. The peak of the chart — what you are seen to do.",
+        "Light": "Purpose, achievement, public contribution, authority.",
+        "Shadow": "Status obsession, workaholism, empty ambition, fear of failure."
+      },
+      "keywords": [
+        "career",
+        "reputation",
+        "authority",
+        "legacy",
+        "public life"
+      ],
+      "metadata": {
+        "house": "10"
+      }
+    },
+    {
+      "id": "house-11",
+      "name": "11th House",
+      "symbol": "XI",
+      "category": "house",
+      "sections": {
+        "Story": "The house of community and vision. Your friends, networks, hopes, and the groups you belong to. Where individual purpose meets collective dreaming.",
+        "Light": "Community, friendship, humanitarian ideals, innovation.",
+        "Shadow": "Conformity, detachment, misplaced idealism, loneliness in crowds."
+      },
+      "keywords": [
+        "friends",
+        "community",
+        "hopes",
+        "networks",
+        "future"
+      ],
+      "metadata": {
+        "house": "11"
+      }
+    },
+    {
+      "id": "house-12",
+      "name": "12th House",
+      "symbol": "XII",
+      "category": "house",
+      "sections": {
+        "Story": "The house of the unseen. Your unconscious, your connection to the collective dream, your hidden strengths and sorrows. The place before birth and after death.",
+        "Light": "Spiritual depth, compassion, artistic vision, surrender, healing.",
+        "Shadow": "Self-undoing, isolation, addiction, martyrdom, hidden enemies."
+      },
+      "keywords": [
+        "unconscious",
+        "spirituality",
+        "isolation",
+        "dreams",
+        "surrender"
+      ],
+      "metadata": {
+        "house": "12"
+      }
+    },
+    {
+      "id": "aspect-conjunction",
+      "name": "Conjunction",
+      "symbol": "☌",
+      "category": "aspect",
+      "sections": {
+        "Story": "Two planets merge — their energies fuse into a single intensified force. Neither can be seen without the other. This is union, for better and worse.",
+        "Light": "Concentrated power, unified purpose, amplified expression.",
+        "Shadow": "Blind spots from over-identification, inability to separate energies."
+      },
+      "keywords": [
+        "union",
+        "fusion",
+        "intensity",
+        "blend"
+      ],
+      "metadata": {
+        "aspect": "Conjunction",
+        "angle": 0,
+        "orb": 8
+      }
+    },
+    {
+      "id": "aspect-opposition",
+      "name": "Opposition",
+      "symbol": "☍",
+      "category": "aspect",
+      "sections": {
+        "Story": "Two planets face each other across the chart — a full-moon tension between polarities. The challenge is integration, not choosing sides.",
+        "Light": "Awareness through contrast, balance, objectivity, partnership dynamics.",
+        "Shadow": "Projection, polarization, seesaw between extremes."
+      },
+      "keywords": [
+        "polarity",
+        "tension",
+        "balance",
+        "awareness"
+      ],
+      "metadata": {
+        "aspect": "Opposition",
+        "angle": 180,
+        "orb": 8
+      }
+    },
+    {
+      "id": "aspect-trine",
+      "name": "Trine",
+      "symbol": "△",
+      "category": "aspect",
+      "sections": {
+        "Story": "Two planets flow together effortlessly — gifts that come naturally, talents that feel easy. The risk is taking them for granted.",
+        "Light": "Natural talent, ease, creative flow, harmony.",
+        "Shadow": "Complacency, laziness, wasted potential, taking gifts for granted."
+      },
+      "keywords": [
+        "harmony",
+        "flow",
+        "talent",
+        "ease"
+      ],
+      "metadata": {
+        "aspect": "Trine",
+        "angle": 120,
+        "orb": 8
+      }
+    },
+    {
+      "id": "aspect-square",
+      "name": "Square",
+      "symbol": "□",
+      "category": "aspect",
+      "sections": {
+        "Story": "Two planets clash at a right angle — creating friction, challenge, and ultimately growth. Squares are where the work is.",
+        "Light": "Motivation, dynamic tension, breakthrough, strength through challenge.",
+        "Shadow": "Chronic frustration, internal conflict, crisis patterns."
+      },
+      "keywords": [
+        "challenge",
+        "tension",
+        "growth",
+        "friction"
+      ],
+      "metadata": {
+        "aspect": "Square",
+        "angle": 90,
+        "orb": 7
+      }
+    },
+    {
+      "id": "aspect-sextile",
+      "name": "Sextile",
+      "symbol": "⚹",
+      "category": "aspect",
+      "sections": {
+        "Story": "Two planets extend a hand — an opportunity aspect that requires a small effort to activate. The door is open but you must walk through it.",
+        "Light": "Opportunity, communication between energies, creative potential.",
+        "Shadow": "Missed opportunities from passivity, unrealized potential."
+      },
+      "keywords": [
+        "opportunity",
+        "cooperation",
+        "potential"
+      ],
+      "metadata": {
+        "aspect": "Sextile",
+        "angle": 60,
+        "orb": 6
+      }
+    },
+    {
+      "id": "aspect-quincunx",
+      "name": "Quincunx",
+      "symbol": "⚻",
+      "category": "aspect",
+      "sections": {
+        "Story": "Two planets that have nothing in common — no element, no modality, no angle of recognition. The adjustment is perpetual, the integration creative and strange.",
+        "Light": "Creative adaptation, integrating the incompatible, resourcefulness.",
+        "Shadow": "Chronic adjustment fatigue, health issues from unresolved tension."
+      },
+      "keywords": [
+        "adjustment",
+        "integration",
+        "discomfort",
+        "adaptation"
+      ],
+      "metadata": {
+        "aspect": "Quincunx",
+        "angle": 150,
+        "orb": 3
+      }
+    }
+  ],
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Science_of_casting_horoscopes,_from_Utriusque_Cosmi_Historia,_by_Robert_Fludd.png?width=800",
+  "_recursive_eco_url": "https://flow.recursive.eco/g/a0a21e50-807d-45ff-b2ab-13fbb4ae86be?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=a0a21e50-807d-45ff-b2ab-13fbb4ae86be",
+  "cover_image_credit": {
+    "title": "The science of casting horoscopes — the astrologer at his figure",
+    "creator": "Robert Fludd",
+    "date": "1618",
+    "source": "*Utriusque Cosmi Historia*, tract on general astrology (Oppenheim, 1617-1618)",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Science_of_casting_horoscopes,_from_Utriusque_Cosmi_Historia,_by_Robert_Fludd.png",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Fludd died 1637; Commons states public domain (PD-old-100)",
+    "verified": "2026-07-26"
+  }
+}

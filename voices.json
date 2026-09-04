@@ -1,0 +1,50 @@
+{
+  "_type": "recursive-astrology-voices",
+  "_version": 1,
+  "_note": "The orientations you can consult before you read a sky — the astrology counterpart of the tarot voices.json (same creed, same shape, different domain). Each voice presents one historiographical stance FAITHFULLY, in its own vocabulary, never editorialized. Every voice obeys shared_intention — a chart is a mirror and a calendar, never a command. NAME A SCHOOL, NOT A LIVING PERSON: only dead, eponymous figures carry their own name (Ptolemy, Jung); a stance drawn from living teachers is titled by its tradition and says 'inspired by'. The Skeptical School is a genuine tradition of critique (Pico della Mirandola through the modern controlled tests) presented as ITS own view, not as our verdict on the others. Any disagreement between a voice and the record is kept in the long form (its `course`), never in the short `intention`. `shared_intention.interpretation_note` is the standing user-facing disclaimer. PD/own content only; author PlayfulProcess.",
+  "shared_intention": {
+    "title": "Before you read a sky — the one intention",
+    "creed": "Read the sky to know yourself, not to be told your fate. A chart is a mirror and a calendar, not a command — it starts a conversation with what is already alive in you and in your season, so hold what you find loosely, author its meaning yourself, and keep the choice your own. Astrology's history is the record of humans reading meaning INTO the sky; that history is the subject here, held honestly. Relate to the symbol; never obey it.",
+    "principles": [
+      "Know, don't be told — a mirror, not a prophecy.",
+      "A chart is a calendar of yourself, not a warrant for what must happen.",
+      "Hold it loosely — a meaning you can revise tomorrow.",
+      "Keep the choice yours — the sky asks; you decide.",
+      "The history is the subject — the record of a meaning-making, kept honest.",
+      "Stay humble — every reading is one shape of the sky among many."
+    ],
+    "interpretation_note": "A word of honesty: these voices are lenses on a history, not verdicts and not people. Each presents a tradition faithfully in its own terms, but every presentation is still an interpretation — never the tradition's own words or its endorsement of this project. Jung names a stance inspired by the work of C. G. Jung; the Skeptical School names a lineage of critique, not a person; Ptolemy names his own text. Where a stance and the historical record disagree, that argument is kept in the long form, not smuggled into the short intention. Every reading here is my interpretation of a record I did not write."
+  },
+  "voices": [
+    {
+      "id": "ptolemy",
+      "name": "Ptolemy",
+      "tagline": "the physics of its age",
+      "glyph": "circle",
+      "color": "#c08a3e",
+      "intention": "Read the sky as the natural philosophy of its time read it — the heavens acting on the sublunary world as heat and moisture and season act, a physics of influence. Take it as Ptolemy himself took it: a conjectural art, not a certainty, and never a decree you must obey.",
+      "how": "Read as the Tetrabiblos teaches — the Sun plainly governs the seasons, the Moon the tides and moistures, and the other stars are held to temper the air and the mixtures of bodies by their risings and configurations. The art is second to astronomy and, being of matter, admits of error; the wise reader states tendencies, not fixed outcomes, and knows a foreknown disposition may be tempered by nature and by prudence.",
+      "course": "Long-form home for the argument (where Ptolemy's own hedging, and the modern reading of celestial 'influence' as physics-of-its-age, are set against the record): grammars/historiographies-of-astrology → 'The Hellenistic synthesis' and 'Astrology as the science of its age'. The voice's own library, in its own words: grammars/tetrabiblos-ashmand (public-domain Ashmand 1822 translation, imported from recursive.eco-schemas)."
+    },
+    {
+      "id": "jung",
+      "name": "Jung",
+      "tagline": "the archetypal mirror",
+      "glyph": "sun",
+      "color": "#d4a017",
+      "intention": "Read the chart as a mirror of the psyche — the horoscope as a map of archetypes constellated at a moment, meaningful by correspondence rather than by cause. What you meet in it is a part of yourself asking to be seen; do not obey it, integrate it.",
+      "how": "Read as depth psychology reads it — through synchronicity, an acausal connecting principle in which an inner state and an outer symbol coincide meaningfully without one compelling the other. The birth moment mirrors the psyche's constellation; the planets are names for archetypes of the collective unconscious. The chart does not predict the fate; it shows what is pressing toward consciousness and wants integrating. (A lens inspired by the work of C. G. Jung.)",
+      "course": "Long-form home for the argument (synchronicity as correspondence not causation, and the twentieth-century turn from prediction to psychology): grammars/historiographies-of-astrology → 'Humanistic & psychological astrology' and 'Astrology psychologized'. The turn's public-domain ancestor library: grammars/alan-leo (Alan Leo's corpus, d. 1917, imported from recursive.eco-schemas)."
+    },
+    {
+      "id": "skeptical-school",
+      "name": "The Skeptical School",
+      "tagline": "the reader, not the sky",
+      "glyph": "balance",
+      "color": "#6b7a8f",
+      "intention": "Read astrology's effects as the work of the reader, not the sky — a tradition of critique in its own right, from Pico della Mirandola to the modern controlled test. Its point is autonomy too: what moves you is your own meaning-making, and knowing that keeps the choice yours.",
+      "how": "Read as the critics have read it for five centuries — Pico's 1494 Disputationes arguing the astrologers explain by the stars what is better explained on the ground; the modern test tradition adding the controlled trial and the Forer, or Barnum, effect, in which people accept a vague, flattering description as uniquely their own. On this view a chart's uncanny fit is a mirror the reader supplies — the sky says nothing; the person, and the culture, say it all. Presented here as its own tradition, with its own history, not as a verdict on the rest.",
+      "course": "Long-form home for the argument (the critique from within and without, held to its own record): grammars/historiographies-of-astrology → 'The empirical test tradition' and 'The critique from within and without'. A Victorian document of the school, in its own sardonic idiom: grammars/proctor-skeptical-astrology (Proctor 1896, public domain, imported from recursive.eco-schemas)."
+    }
+  ]
+}

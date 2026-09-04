@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genealogy — the history of astrology as a lineage — The Recursive Astrology</title>
+<link rel="stylesheet" href="theme.css">
+<!--
+  Self-contained genealogy view for the recursive-astrology repo.
+  - No build, no server needed to VIEW: a single file + the committed grammar JSON.
+  - Data-driven nodes: reads grammars/historiographies-of-astrology/grammar.json's
+    `view-*` items (each era's name / dates / description / image is authored there,
+    once — this page never repeats it). Only the parent -> child EDGES below are
+    hardcoded, because "who influenced whom" isn't itself grammar data, it's a
+    historiographical claim this page makes.
+  - Honest edges: a simplified lineage of historiographical STANCES, not a claim
+    that (say) Alan Leo personally read Ptolemy. Dashed edges mark a parallel or
+    diverging branch (a tradition that continues on its own, or a reaction against
+    the mainline), not a continuation of the main sequence.
+  - Plain CSS + SVG connectors, no external library, no framework — companion in
+    spirit to recursive-tarot/genealogy.html (the family's pattern source), but
+    rendered as a vertical flowing tree rather than a force-directed graph, since
+    a strict multi-era lineage reads more honestly top-to-bottom than as a cloud.
+-->
+<style>
+  /* Layout only — every colour comes from theme.css (the one source). Do not add colour tokens here. */
+  html,body{margin:0;background:var(--bg);color:var(--ink);color-scheme:light;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 80px}
+  header.hero{padding:14px 0 8px}
+  .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+  h1{font-family:"Fraunces",Georgia,serif;font-size:28px;margin:6px 0 8px;color:var(--ink)}
+  .lede{color:var(--muted);font-size:15px;max-width:74ch}
+
+  #fallback{margin-top:24px}
+
+  /* ── the tree itself ── */
+  #tree-wrap{position:relative;margin-top:40px;padding:6px 4px 10px}
+  #edges-svg{position:absolute;top:0;left:0;overflow:visible;pointer-events:none}
+  .edge{fill:none;stroke:var(--accent);stroke-width:2;opacity:.75}
+  .edge.branch{stroke-dasharray:5 5;stroke:var(--occult,#9c47d1);opacity:.8}
+  .level{display:flex;justify-content:center;align-items:flex-start;gap:22px;flex-wrap:wrap;
+    margin:0 0 76px;position:relative;z-index:1}
+  .level:last-child{margin-bottom:6px}
+  .node{width:230px;max-width:min(230px,88vw);display:flex;flex-direction:column;gap:6px}
+  .nopen{all:unset;box-sizing:border-box;cursor:pointer;background:var(--panel);border:1px solid var(--line);
+    border-radius:13px;padding:12px 13px 11px;display:flex;flex-direction:column;gap:7px;width:100%;
+    transition:transform .15s,border-color .15s,box-shadow .15s}
+  .nopen:hover,.nopen:focus-visible{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 12px 26px rgba(0,0,0,.10)}
+  .nimg{width:100%;height:104px;object-fit:cover;border-radius:8px;background:var(--panel2);display:block}
+  .nimg-empty{display:block}
+  .ncat{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+  .nname{font-family:"Fraunces",Georgia,serif;font-size:15.5px;color:var(--ink);line-height:1.28;margin:0}
+  .ndesc{font-size:12.5px;color:var(--muted);margin:0;line-height:1.45;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .nlinks{display:flex;flex-wrap:wrap;gap:6px;padding:0 2px}
+
+  /* ── legend + note ── */
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .lline{width:22px;height:0;border-top:2px solid var(--accent);display:inline-block}
+  .lline.branch{border-top:2px dashed var(--occult,#9c47d1)}
+  .note{margin-top:36px;padding:16px 18px;border:1px dashed var(--line);border-radius:12px;
+    background:var(--chip,#f7f3ea);font-size:13.5px;color:var(--muted)}
+  .note b{color:var(--ink)}
+  a{color:var(--accent)}
+
+  /* ── detail dialog (same pattern as index.html / lenses.html) ── */
+  dialog{border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--ink);
+    max-width:640px;width:calc(100% - 32px);padding:0}
+  dialog::backdrop{background:rgba(20,15,8,.42)}
+  .dhead{padding:20px 22px 4px}
+  .dbody{padding:2px 22px 22px}
+  .dhead .cat{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+  .dhead h2{font-family:"Fraunces",Georgia,serif;margin:6px 0 0;font-size:23px}
+  .dhead .dimg{width:100%;height:160px;object-fit:cover;border-radius:10px;margin-top:12px;background:var(--panel2)}
+  /* provenance for the plate: the grammar records where each image came from
+     and why it is public domain, so say so rather than keeping it in the JSON. */
+  .dhead .dcredit{margin:7px 0 0;font-size:11.5px;line-height:1.45;color:var(--muted)}
+  .dhead .dcredit a{color:var(--muted);text-decoration:underline}
+  .dhead .dcredit a:hover{color:var(--accent)}
+  .sec{margin-top:16px}
+  .sec h3{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0 0 4px}
+  .sec p{margin:0;font-size:15px;color:var(--ink)}
+  .dlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .close{position:sticky;top:0;float:right;margin:12px 14px 0 0;border:0;background:none;font-size:22px;
+    line-height:1;cursor:pointer;color:var(--muted)}
+</style>
+</head>
+<body>
+<script src="site-header.js?v=47"></script>
+<site-header active="genealogy"></site-header>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">The Recursive Astrology &middot; genealogy</div>
+    <h1>The history of astrology, as a lineage</h1>
+    <p class="lede"><span id="era-count">The</span> historiographical eras, oldest at the top, read as a family tree rather than a
+      list — where one stance grows out of another, where it forks, and where a later voice answers or
+      breaks from what came before. Every node's name, dates, and description come straight from this
+      repo's own <code>historiographies-of-astrology</code> grammar; only the lines connecting them are
+      this page's own claim about lineage. Tap any era to read more, or open it as a grammar where one
+      exists in this repo. See also <a href="viewers/lenses.html">Lenses</a> for the same planet read across
+      traditions, or <a href="index.html#all-grammars">all grammars</a> for the full library.</p>
+  </header>
+
+  <div id="tree-wrap" aria-live="polite">
+    <svg id="edges-svg" aria-hidden="true"></svg>
+  </div>
+
+  <div class="legend">
+    <span><i class="lline" aria-hidden="true"></i>continues the line</span>
+    <span><i class="lline branch" aria-hidden="true"></i>parallel or diverging branch</span>
+  </div>
+
+  <p class="note" id="fallback" hidden></p>
+
+  <div class="note">
+    <b>How this reads.</b> The eras and their descriptions are read live from
+    <code>grammars/historiographies-of-astrology/grammar.json</code> — add or edit a <code>view-*</code>
+    item there and it appears here automatically, no code change needed. The parent&rarr;child lines are
+    a small hardcoded <code>EDGES</code> list in this page, because lineage is this page's own honest
+    simplification of a five-thousand-year practice, not a fact stored in the grammar itself.
+    <span id="grammar-count">Some</span> eras here also have a full grammar in this repo you can open —
+    Ptolemy's <em>Tetrabiblos</em>, Alan Leo, Proctor's skeptical astrology, and the canonical Western
+    interpretation set — look for their Cards / Study / Tree links on the matching node.
+  </div>
+</div>
+
+<script src="site-footer.js?v=1"></script>
+<script src="assistant.js" defer></script>
+<site-footer></site-footer>
+
+<dialog id="detail">
+  <button class="close" aria-label="Close" onclick="detail.close()">&times;</button>
+  <div class="dhead">
+    <div class="cat" id="d-cat"></div>
+    <h2 id="d-name"></h2>
+    <img class="dimg" id="d-img" alt="" hidden>
+    <p class="dcredit" id="d-credit" hidden></p>
+  </div>
+  <div class="dbody">
+    <div id="d-sections"></div>
+    <div class="dlinks" id="d-links"></div>
+  </div>
+</dialog>
+
+<script>
+const GRAMMAR_URL = 'grammars/historiographies-of-astrology/grammar.json';
+const $ = s => document.querySelector(s);
+function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function mdLite(s){
+  return escHtml(s)
+    .replace(/\*(.+?)\*/g,'<em>$1</em>')
+    .replace(/`(.+?)`/g,'<code>$1</code>');
+}
+function firstProse(sections){
+  const v = Object.values(sections || {})[0] || '';
+  return String(v).replace(/[*`_#>]/g,'');
+}
+// Trim to a word boundary so a card blurb never ends mid-word ("…of the whole sk…").
+function snippet(text, max){
+  const s = String(text).trim();
+  if (s.length <= max) return { text: s, cut: false };
+  const cut = s.slice(0, max), sp = cut.lastIndexOf(' ');
+  return { text: (sp > max * 0.6 ? cut.slice(0, sp) : cut).replace(/[\s,;:.—–-]+$/, ''), cut: true };
+}
+// Counts stated in prose are read from the data, never typed in — the page used to
+// claim "Ten eras" after an eleventh (the Sun-Sign Press) was added to the grammar.
+const NUMWORD = ['No','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten',
+                 'Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen'];
+const numWord = n => NUMWORD[n] || String(n);
+
+// ── the one hardcoded claim on this page: who grows out of whom.
+// [parent id, child id, isBranch] — isBranch = a parallel/diverging line, not
+// a continuation of the historiographical mainline (rendered dashed). ──
+const EDGES = [
+  ['view-mesopotamian-omens',        'view-hellenistic-synthesis',       false],
+  ['view-hellenistic-synthesis',     'view-jyotisha',                    true],
+  ['view-hellenistic-synthesis',     'view-islamic-golden-age',          false],
+  ['view-islamic-golden-age',        'view-medieval-renaissance-court',  false],
+  ['view-medieval-renaissance-court','view-decline-demarcation',         false],
+  ['view-decline-demarcation',       'view-theosophical-revival',        false],
+  ['view-theosophical-revival',      'view-humanistic-psychological',    false],
+  ['view-theosophical-revival',      'view-empirical-test-tradition',    true],
+  // The sun-sign column (Naylor, Sunday Express, 1930) is the popular commercial
+  // offshoot of the Theosophical revival's sign-centred astrology — a diverging
+  // branch, not a continuation of the historiographical mainline. Without this
+  // edge the era had no parent and rendered at the TOP of a tree whose whole
+  // claim is "oldest first", beside 2nd-millennium-BCE Babylon.
+  ['view-theosophical-revival',      'view-sun-sign-press',              true],
+  ['view-humanistic-psychological',  'view-contemporary-resurgence',     false],
+  ['view-empirical-test-tradition',  'view-contemporary-resurgence',     true],
+];
+
+// Where a historiographical era has a full grammar in this repo, link the node
+// straight to it — Cards / Study / Tree, resolved from ids.json's preview_links
+// (the same source index.html's "Browse every grammar" gallery uses).
+const GRAMMAR_LINKS = {
+  'view-hellenistic-synthesis':    'tetrabiblos-ashmand',
+  'view-theosophical-revival':     'alan-leo',
+  'view-empirical-test-tradition': 'proctor-skeptical-astrology',
+  'view-contemporary-resurgence':  'western-astrology-canonical',
+};
+
+let NODES = {};      // id -> item
+let PREVIEW = {};    // slug -> preview_links entry
+
+function levelsOf(ids, edges){
+  const parentsOf = {};
+  edges.forEach(([p,c]) => { (parentsOf[c] ||= []).push(p); });
+  const memo = {};
+  function levelOf(id){
+    if (memo[id] != null) return memo[id];
+    const ps = parentsOf[id] || [];
+    memo[id] = ps.length ? Math.max(...ps.map(levelOf)) + 1 : 0;
+    return memo[id];
+  }
+  ids.forEach(levelOf);
+  const rows = [];
+  ids.forEach(id => { (rows[memo[id]] ||= []).push(id); });
+  return rows;
+}
+
+function linkChips(slug){
+  const pl = PREVIEW[slug];
+  if (!pl) return '';
+  const chip = (href, label) => href ? `<a class="eco-chip" href="${href}" target="_blank" rel="noopener">${label}</a>` : '';
+  return chip(pl.cards, 'Cards') + chip(pl.study, 'Study') + chip(pl.tree, 'Tree');
+}
+
+function nodeCardHTML(id){
+  const it = NODES[id];
+  const era = (it.metadata && it.metadata.era) || '';
+  // No plate on record → no plate. The old placeholder rendered a bare 104px grey
+  // slab that read as a broken image, on the two eras the grammar has no image for.
+  const img = it.image_url
+    ? `<img class="nimg" src="${escHtml(it.image_url)}" alt="" loading="lazy" onerror="this.remove()">`
+    : '';
+  const snip = snippet(firstProse(it.sections), 168);
+  const desc = escHtml(snip.text) + (snip.cut ? '&hellip;' : '');
+  const slug = GRAMMAR_LINKS[id];
+  const links = slug ? `<div class="nlinks">${linkChips(slug)}</div>` : '';
+  return `<div class="node">
+    <button class="nopen" type="button" data-id="${id}" aria-haspopup="dialog">
+      ${img}
+      <div class="ncat">${escHtml(era)}</div>
+      <b class="nname">${escHtml(it.name)}</b>
+      <p class="ndesc">${desc}</p>
+    </button>
+    ${links}
+  </div>`;
+}
+
+function drawEdges(){
+  const wrap = $('#tree-wrap');
+  const svg = $('#edges-svg');
+  // The ResizeObserver and the window resize listener outlive the nodes they
+  // were set up for; if the tree is gone, redrawing it is a no-op, not a crash.
+  if (!wrap || !svg) return;
+  const wrapRect = wrap.getBoundingClientRect();
+  svg.setAttribute('width', Math.ceil(wrap.scrollWidth));
+  svg.setAttribute('height', Math.ceil(wrap.scrollHeight));
+  svg.innerHTML = '';
+  EDGES.forEach(([p, c, branch]) => {
+    const pEl = wrap.querySelector(`.nopen[data-id="${p}"]`);
+    const cEl = wrap.querySelector(`.nopen[data-id="${c}"]`);
+    if (!pEl || !cEl) return;
+    const pr = pEl.getBoundingClientRect(), cr = cEl.getBoundingClientRect();
+    const x1 = pr.left + pr.width / 2 - wrapRect.left, y1 = pr.bottom - wrapRect.top;
+    const x2 = cr.left + cr.width / 2 - wrapRect.left, y2 = cr.top - wrapRect.top;
+    const midY = (y1 + y2) / 2;
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', `M ${x1} ${y1} C ${x1} ${midY}, ${x2} ${midY}, ${x2} ${y2}`);
+    path.setAttribute('class', branch ? 'edge branch' : 'edge');
+    svg.appendChild(path);
+  });
+}
+
+function openDetail(id){
+  const it = NODES[id];
+  $('#d-cat').textContent = (it.metadata && it.metadata.era) || '';
+  $('#d-name').textContent = it.name;
+  const img = $('#d-img');
+  const cred = $('#d-credit');
+  if (it.image_url) { img.src = it.image_url; img.hidden = false; img.onerror = () => { img.hidden = true; cred.hidden = true; }; }
+  else img.hidden = true;
+  // Show the recorded provenance under the plate — title, who made it and when,
+  // and a link to the Commons file page that states the public-domain status.
+  const c = (it.metadata && it.metadata.image_credit) || null;
+  if (c && !img.hidden) {
+    const who = [c.creator, c.date].filter(Boolean).join(', ');
+    const link = c.file_page
+      ? `<a href="${escHtml(c.file_page)}" target="_blank" rel="noopener">Wikimedia Commons ↗</a>`
+      : '';
+    cred.innerHTML = [
+      c.title ? mdLite(c.title) : '',
+      who ? escHtml(who) : '',
+      [c.license ? escHtml(c.license) : '', link].filter(Boolean).join(' · ')
+    ].filter(Boolean).join(' — ');
+    cred.hidden = false;
+  } else cred.hidden = true;
+  const body = $('#d-sections');
+  body.innerHTML = '';
+  Object.entries(it.sections || {}).forEach(([label, text]) => {
+    const div = document.createElement('div');
+    div.className = 'sec';
+    div.innerHTML = `<h3>${escHtml(label)}</h3><p>${mdLite(text)}</p>`;
+    body.appendChild(div);
+  });
+  if (it.metadata && (it.metadata.region || it.metadata.stance || it.metadata.confidence)) {
+    const div = document.createElement('div');
+    div.className = 'sec';
+    div.innerHTML = `<h3>At a glance</h3><p>${[
+      it.metadata.region ? `Region: ${escHtml(it.metadata.region)}` : '',
+      it.metadata.stance ? `Stance: ${escHtml(it.metadata.stance)}` : '',
+      it.metadata.confidence ? `Confidence: ${escHtml(it.metadata.confidence)}` : '',
+    ].filter(Boolean).join(' &middot; ')}</p>`;
+    body.appendChild(div);
+  }
+  const slug = GRAMMAR_LINKS[id];
+  $('#d-links').innerHTML = slug ? linkChips(slug) : '';
+  $('#detail').showModal();
+}
+
+async function init(){
+  let meta;
+  try {
+    meta = await (await fetch(GRAMMAR_URL, { cache: 'no-cache' })).json();
+  } catch (e) {
+    const fb = $('#fallback');
+    fb.hidden = false;
+    fb.innerHTML = '<b>Could not load the grammar.</b> Browsers block <code>file://</code> fetches, '
+      + 'so open this over a tiny local server instead: run <code>python -m http.server 8000</code> '
+      + 'in this folder, then visit <code>http://localhost:8000/genealogy.html</code>. '
+      + '(On the live site it just works.)';
+    return;
+  }
+  (meta.items || []).forEach(it => { if (it.id && it.id.startsWith('view-')) NODES[it.id] = it; });
+  if (!Object.keys(NODES).length) {
+    $('#fallback').hidden = false;
+    $('#fallback').innerHTML = '<b>No eras found.</b> Expected <code>view-*</code> items in ' + GRAMMAR_URL + '.';
+    return;
+  }
+
+  try {
+    const idsDoc = await (await fetch('ids.json', { cache: 'no-cache' })).json();
+    PREVIEW = idsDoc.preview_links || {};
+  } catch (e) { /* links are additive — the tree still renders without them */ }
+
+  const ids = Object.keys(NODES);
+  $('#era-count').textContent = numWord(ids.length);
+  $('#grammar-count').textContent = numWord(ids.filter(id => GRAMMAR_LINKS[id] && PREVIEW[GRAMMAR_LINKS[id]]).length);
+  const rows = levelsOf(ids, EDGES.filter(([p, c]) => NODES[p] && NODES[c]));
+  const wrap = $('#tree-wrap');
+  rows.forEach((rowIds, i) => {
+    const row = document.createElement('div');
+    row.className = 'level';
+    row.dataset.level = String(i);
+    row.innerHTML = rowIds.map(nodeCardHTML).join('');
+    wrap.appendChild(row);
+  });
+
+  wrap.addEventListener('click', e => {
+    const btn = e.target.closest('.nopen');
+    if (btn) openDetail(btn.dataset.id);
+  });
+
+  drawEdges();
+  // Redraw after images finish loading (they change each card's height, which
+  // shifts every connector below it) and on resize/orientation-change.
+  wrap.querySelectorAll('img.nimg').forEach(img => {
+    if (img.complete) return;
+    img.addEventListener('load', drawEdges, { once: true });
+    img.addEventListener('error', drawEdges, { once: true });
+  });
+  new ResizeObserver(() => drawEdges()).observe(wrap);
+  window.addEventListener('resize', drawEdges);
+}
+
+init();
+</script>
+</body>
+</html>

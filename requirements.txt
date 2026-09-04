@@ -1,0 +1,6 @@
+skyfield>=1.46
+# Pulled in by skyfield anyway, but the node is built from vectors with it, so
+# it is a direct dependency of this API and named as one.
+numpy>=1.24
+timezonefinder>=6.0.0
+pytz>=2023.0

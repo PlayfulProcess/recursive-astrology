@@ -1,0 +1,1236 @@
+{
+  "name": "Alan Leo's Astrology",
+  "description": "Classical astrological interpretations from Alan Leo (1860-1917), the father of modern astrology. Drawn from Astrology for All, The Art of Synthesis, and How to Judge a Nativity. — Source: the works of Alan Leo (1860–1917): *Astrology for All*, *The Art of Synthesis*, and *How to Judge a Nativity*; public domain (Leo died 1917). Imported verbatim from the recursive.eco-schemas commons; presented here as the Theosophical revival speaking in its own terms — character over event, growth over fate — never as prediction or command.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/AlanLeo.jpg?width=800",
+  "grammar_type": "astrology",
+  "provenance": "record",
+  "dating": {
+    "year": 1899,
+    "label": "1899–1903 — Alan Leo (Astrology for All, 1899; How to Judge a Nativity, 1903)",
+    "confidence": "high",
+    "basis": "Anchored to the earliest source work this grammar quotes. Both years are carried per item in metadata.source inside this file: the twelve sign items cite Astrology for All (1899), the planets/houses/aspects cite How to Judge a Nativity (1903, quoted from the later 1928 printing). Leo d. 1917, so the corpus is closed."
+  },
+  "author": "Alan Leo (1860-1917)",
+  "source": "Astrology for All, The Art of Synthesis, How to Judge a Nativity",
+  "license": "Public Domain",
+  "items": [
+    {
+      "id": "sign-aries",
+      "name": "Aries",
+      "symbol": "♈",
+      "category": "sign",
+      "subcategory": "fire",
+      "keywords": [
+        "pioneer",
+        "initiative",
+        "courage",
+        "enterprise",
+        "warrior"
+      ],
+      "sort_order": 0,
+      "sections": {
+        "Interpretation": "The pioneer of the zodiac. Aries represents the outrushing of spirit into matter, the primal will to exist. Those born under this sign possess courage, enterprise, and the power to initiate. The Aries nature is direct, frank, and fearless, with strong executive ability. The higher type shows the spiritual warrior, fighting for principle rather than personal gain.",
+        "Light": "The spiritual warrior—courage devoted to principle, leadership that inspires others to action.",
+        "Shadow": "Selfishness, impatience, the lower martial nature that fights for personal gain alone.",
+        "Keywords": "I Am",
+        "The record — Alan Leo (Astrology for All, 1899)": "This sign governs the head and face, hence the consciousness making the character of the Aries individual will always express itself through the head; this sign is the head of the fiery triplicity, and belongs to the cardinal signs. We find persons born under the rule of this sign always looking forward, they are leaders in ideals and pioneers of advanced thought. They have great mental energy but are inclined to be very headstrong and impulsive. They are always prophetic, and love to predict things that will happen. They can look ahead into the future and foresee things with remarkable clearness of vision. When freed from other influences and not slaves to their personality, they become truly clairvoyant, and are remarkably gifted in this direction. This sign gives extreme ideality, and those born under it are more ideal than practical. They are always full of new schemes and plans, ever exploring and originating. They are fond of constant change, loving novelty, romance and speculation and nearly always live in a world of theory. They are very highly strung, sometimes hyper-sensitive and are remarkable for their perception. … They are very self-willed and often self-opinionated, and it is exceedingly difficult to restrain them, as they are always inclined to act upon impulse without waiting to mature their plans. They are frank and outspoken by choice, but often combative and assertive. They are generous from impulse, and are fond of reason and argument. … They are decidedly lacking in caution, being far too venturesome and often running to great extremes, at times even lacking in discretion, but never in zeal and enthusiasm."
+      },
+      "metadata": {
+        "element": "Fire",
+        "quality": "Cardinal",
+        "ruler": "Mars",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-taurus",
+      "name": "Taurus",
+      "symbol": "♉",
+      "category": "sign",
+      "subcategory": "earth",
+      "keywords": [
+        "builder",
+        "stability",
+        "patience",
+        "determination",
+        "stewardship"
+      ],
+      "sort_order": 1,
+      "sections": {
+        "Interpretation": "The builder and stabilizer. Taurus represents the desire nature seeking permanent form. Those born here possess determination, patience, and practical ability. The Taurus nature is steady, reliable, and appreciative of beauty and comfort. The higher type transmutes possessiveness into stewardship, using material resources for spiritual purposes.",
+        "Light": "The spiritual steward—using material resources for higher purposes, building forms that serve the soul.",
+        "Shadow": "Possessiveness, materialism, stubborn attachment to forms that have outlived their purpose.",
+        "Keywords": "I Have",
+        "The record — Alan Leo (Astrology for All, 1899)": "This sign is the first of the earthy triplicity and the first of the fixed signs, and in this sign is concealed will and desire, both of which express themselves, more or less, in the character of the Taureans. This being the sign of solidity it makes those born in it exceedingly solid, practical, and substantial. They are exactly the reverse of all that has been said in the foregoing sign, Aries being all that is idealistic, while Taurus is all that is practical. The Taureans are slow, plodding, patient, enduring, persistent, executive and matter-of-fact persons. They are remarkable for their conservatism, and they never seem to waste their forces like the Aries types, who scatter them broadcast. Persons possessing the strongest wills are born under this sign, but when living for themselves exclusively, they become as obstinate as it is possible for them to be. They can be very determined, persistent and dogmatic; they usually speak with a quiet, firm, inflexible and almost authoritative tone. Possessing a considerable amount of physical vitality, the Taureans become very furious and violent when severely angered, but as they are usually slow, careful and cautious, it takes a very great deal to excite them, although when very excited they stand beside themselves with rage. They can do a great amount of good by their steady, building capacity, being capable and able to carry out all plans entrusted to them."
+      },
+      "metadata": {
+        "element": "Earth",
+        "quality": "Fixed",
+        "ruler": "Venus",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-gemini",
+      "name": "Gemini",
+      "symbol": "♊",
+      "category": "sign",
+      "subcategory": "air",
+      "keywords": [
+        "messenger",
+        "communicator",
+        "versatility",
+        "curiosity",
+        "expression"
+      ],
+      "sort_order": 2,
+      "sections": {
+        "Interpretation": "The messenger and communicator. Gemini represents the reasoning mind seeking to understand duality. Those born here possess versatility, intellectual curiosity, and the gift of expression. The Gemini nature is alert, adaptable, and forever seeking new knowledge. The higher type unifies the lower and higher mind, becoming a channel for wisdom.",
+        "Light": "The divine messenger—unifying lower and higher mind, channeling wisdom through intellect.",
+        "Shadow": "Superficiality, scattered attention, the lower mind that gathers without synthesizing.",
+        "Keywords": "I Think",
+        "The record — Alan Leo (Astrology for All, 1899)": "This is the first sign of the airy triplicity, also the first of the mutable signs. The airy triplicity governs the mental conditions of humanity, hence we find those born in this sign living more in the mind, but, owing to the sign belonging to the mutable group, they are dualistic — this being the main feature of the mutable signs, and from this comes the tendency to express two conditions and an inclination at times to be rather easily influenced on one side or the other. Gemini governs the lungs, also the hands and arms, hence it may be seen that one hand may act differently to the other. These persons are rarely content with a single occupation or pursuit, and seem to delight in having two things in hand at the same time. They can very quickly adapt themselves to surroundings or environment and they are remarkable for their versatility, but they are very sensitive and have the ability to reason upon and analyse their sensations. They love change and diversity, and they are always the best persons to rely upon in an emergency, as they can instantly respond to the requirements of the moment. They love variety of thought and all mental pursuits, and these they sometimes carry into extremes; they seem to take an especial delight in leaving their work unfinished."
+      },
+      "metadata": {
+        "element": "Air",
+        "quality": "Mutable",
+        "ruler": "Mercury",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-cancer",
+      "name": "Cancer",
+      "symbol": "♋",
+      "category": "sign",
+      "subcategory": "water",
+      "keywords": [
+        "mother",
+        "nurturing",
+        "sensitivity",
+        "protection",
+        "memory"
+      ],
+      "sort_order": 3,
+      "sections": {
+        "Interpretation": "The mother of the zodiac. Cancer represents the soul seeking incarnation through feeling and memory. Those born here possess sensitivity, tenacity, and deep protective instincts. The Cancer nature is receptive, nurturing, and connected to the past. The higher type becomes the universal mother, extending care beyond personal attachments.",
+        "Light": "The universal mother—extending nurturing care beyond personal attachments to all who need it.",
+        "Shadow": "Moodiness, clinging to the past, emotional manipulation through guilt or need.",
+        "Keywords": "I Feel",
+        "The record — Alan Leo (Astrology for All, 1899)": "The sign Cancer begins the maternal trinity. It is the first of the watery triplicity and the second of the cardinal signs. This sign governs the breast and stomach. It is one of the most sensitive signs of the zodiac, and belonging as it does to the maternal trinity, it governs all home and domestic affairs in which the feelings play a prominent part. Persons born in this sign are characterised as being slow but sure. They are best described by the crab, whose tenacity is proverbial; this creature moves forward by going backward, and it has come to be looked upon as a sign of retrogression. The main feature, however, of this sign is the power of retentive memory. The Cancer individual has the most remarkable memory of any given by the twelve signs, and it is no difficulty for them to recall minute incidents of the past. … Their highly sensitive nature makes them feel very keenly everything that affects the other members of the family, and for them domestic affairs become a kind of brake on their own individual progress. They are rather approbative, love to be approved of, and always yearn for the sympathy of others. They are very timid, reserved, and shy, and fear ridicule or disapproval very much…"
+      },
+      "metadata": {
+        "element": "Water",
+        "quality": "Cardinal",
+        "ruler": "Moon",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-leo",
+      "name": "Leo",
+      "symbol": "♌",
+      "category": "sign",
+      "subcategory": "fire",
+      "keywords": [
+        "king",
+        "creator",
+        "dignity",
+        "generosity",
+        "authority"
+      ],
+      "sort_order": 4,
+      "sections": {
+        "Interpretation": "The king and creator. Leo represents the individualized self seeking expression and recognition. Those born here possess dignity, generosity, and natural authority. The Leo nature is warm, dramatic, and magnanimous when evolved. The higher type rules through love rather than dominion, radiating light that elevates others.",
+        "Light": "The benevolent ruler—leading through love, radiating light that elevates all it touches.",
+        "Shadow": "Pride, arrogance, the need for constant recognition, dominion rather than service.",
+        "Keywords": "I Will",
+        "The record — Alan Leo (Astrology for All, 1899)": "Leo is the middle sign of the maternal trinity, the second of the fiery triplicity, and also the second of the fixed signs, therefore it may be said to hold the central point in the zodiac… Leo governs the heart, therefore it will be from this centre that the character of those born in this sign must be judged. … generally speaking, the emotions are fully active in the Leo characters. They are forceful and highly magnetic, and possessing an abundance of vitality, they carry with them an aura that is beneficial to all. They are genuinely kind, warm-hearted and loving, but usually like to express their love in action, their emotional nature being deep and of the heart. They can be impulsive and diffusive, but it is usually the impulse of a generous nature. They possess a very attractive individuality and are always decided characters. They are usually very practical with regard to their ideals, as they prefer to live them rather than talk of them. … Being the centre of the fiery triplicity they possess a very strong love nature, which makes them very ardent and sincere in their affections. … The Leos love to rule, but it is more from the heart and motive than from the head. They are philanthropic and always obey the impulses of the heart where sympathy is concerned."
+      },
+      "metadata": {
+        "element": "Fire",
+        "quality": "Fixed",
+        "ruler": "Sun",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-virgo",
+      "name": "Virgo",
+      "symbol": "♍",
+      "category": "sign",
+      "subcategory": "earth",
+      "keywords": [
+        "craftsman",
+        "servant",
+        "analysis",
+        "skill",
+        "improvement"
+      ],
+      "sort_order": 5,
+      "sections": {
+        "Interpretation": "The craftsman and servant. Virgo represents the discriminating mind perfecting form through service. Those born here possess analytical ability, practical skill, and dedication to improvement. The Virgo nature is modest, methodical, and health-conscious. The higher type serves humanity selflessly, finding divinity in the details of daily work.",
+        "Light": "The sacred servant—finding divinity in details, perfecting form as an act of devotion.",
+        "Shadow": "Criticism, worry, perfectionism that paralyzes rather than refines.",
+        "Keywords": "I Analyze",
+        "The record — Alan Leo (Astrology for All, 1899)": "The sign Virgo is the second of the earthy triplicity, the second of the mutable signs, and the turning-point from the northern to the southern signs. This sign is specially characterised for its self-containing qualities; it is out of this sign that wisdom is to be born for the majority of individualities. … The individuals born in this sign are constructive and able to make the most of their conditions; they are more generally found in the business world, particularly in pursuits which provide for the general welfare of the whole of the community. As characters they are philosophical, and nearly always seem to blend the ideal with the practical in a marvellous manner, this makes them very discriminative, giving them large reasoning powers and very ingenious methods of working. They are the most critical of all individuals, but they usually turn this criticism also upon themselves. They are self-analytical, and seem to be always taking themselves to pieces. They are careful and cautious, and usually act somewhat methodically, or with much apparent forethought. They are very industrious, persistent, and tend more toward the practical than the ideal. They are usually precise in details, and can readily put right any errors and defects in their own character, but they are also extremely sensitive, not from a sympathetic standpoint, but more from a mental attitude."
+      },
+      "metadata": {
+        "element": "Earth",
+        "quality": "Mutable",
+        "ruler": "Mercury",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-libra",
+      "name": "Libra",
+      "symbol": "♎",
+      "category": "sign",
+      "subcategory": "air",
+      "keywords": [
+        "harmonizer",
+        "judge",
+        "diplomacy",
+        "justice",
+        "balance"
+      ],
+      "sort_order": 6,
+      "sections": {
+        "Interpretation": "The harmonizer and judge. Libra represents the soul seeking equilibrium through relationship. Those born here possess diplomacy, artistic sense, and the desire for justice. The Libra nature is refined, cooperative, and peace-loving. The higher type achieves inner balance that no longer depends on external harmony, becoming a true peacemaker.",
+        "Light": "The true peacemaker—achieving inner balance that radiates outward, justice tempered by love.",
+        "Shadow": "Indecision, dependence on others for equilibrium, peace-keeping that avoids necessary conflict.",
+        "Keywords": "I Balance",
+        "The record — Alan Leo (Astrology for All, 1899)": "Libra, the sign of the balance, the equalising sign of the zodiac, is the second of the airy triplicity, and the third of the cardinal signs. The individuality of this sign is expressed in justice, equilibrium, balance, order and dispassionate judgment. Those born in this sign are remarkable for their powers of comparison; they seem to be able to weigh and balance all things mentally, as though they were inspired. Extremes may be found in this sign as in all the cardinal signs, but sooner or later opportunities come into the life to take an impartial and impassionate view. It is the aim of the individuality working through this sign to seek equilibrium, and this causes them to love harmony so much, that they feel exceedingly sensitive until the whole of their organism is in a state of balance. They have always a kind and amiable disposition, expressing the Venus side of their nature more than any other; this makes them courteous, agreeable and very pleasant persons. They are remarkable for their perceptive faculties, and there is a great amount of inspiration in this sign… When working along personal lines these persons live more to the form-side of life; they then become exceedingly approbative and very sensitive; they are rather impatient and inclined to be somewhat careless, but their personal faults and failings are such as may be easily forgiven, as they are usually very even-tempered and amenable to the good influences that generally surround them."
+      },
+      "metadata": {
+        "element": "Air",
+        "quality": "Cardinal",
+        "ruler": "Venus",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-scorpio",
+      "name": "Scorpio",
+      "symbol": "♏",
+      "category": "sign",
+      "subcategory": "water",
+      "keywords": [
+        "transformer",
+        "regenerator",
+        "intensity",
+        "insight",
+        "passion"
+      ],
+      "sort_order": 7,
+      "sections": {
+        "Interpretation": "The transformer and regenerator. Scorpio represents the emotional nature confronting death and rebirth. Those born here possess intensity, resourcefulness, and penetrating insight. The Scorpio nature is passionate, secretive, and powerfully magnetic. The higher type transmutes personal desire into spiritual will, becoming the eagle that soars above the serpent.",
+        "Light": "The eagle—transmuting desire into will, using emotional power for transformation and healing.",
+        "Shadow": "The scorpion—jealousy, revenge, using emotional intensity to manipulate or destroy.",
+        "Keywords": "I Desire",
+        "The record — Alan Leo (Astrology for All, 1899)": "Scorpio is the third of the fixed signs and the second or middle of the watery triplicity. Its symbol is known as the scorpion, whose sting becomes the most prominent feature in evolving through this sign. We may find characters born in this sign from the lowest and most degraded to the highest and most exalted, and in this sign there appears to be more scope for extremes of character than in any other. The Scorpio character is somewhat decided and unmistakable, being rarely, if ever, vacillating or feeble. … When living the purely personal life, living only for the self, the Scorpio types of humanity are very uncompromising and exacting beings, and their vindictiveness and fault-finding tendencies can be carried to abnormal degrees. … but when they are regenerate or self-conscious, they may reach a great height of exaltation. The generative force within them may be turned into psychical faculty, the 'vril' with which they abound is turned into shrewdness and penetration, and they become the true mystics whose awakening vision quickly senses the future possibilities that lie before the soul. They become gifted with what is called second sight, or clairvoyance… Those who are individualised in Scorpio are remarkable for their keen judgment; they can criticise perfectly and impartially, and they are able to give their judgment in a decisive and clear manner."
+      },
+      "metadata": {
+        "element": "Water",
+        "quality": "Fixed",
+        "ruler": "Mars",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-sagittarius",
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "category": "sign",
+      "subcategory": "fire",
+      "keywords": [
+        "philosopher",
+        "seeker",
+        "enthusiasm",
+        "optimism",
+        "freedom"
+      ],
+      "sort_order": 8,
+      "sections": {
+        "Interpretation": "The philosopher and seeker. Sagittarius represents the higher mind aspiring toward truth and meaning. Those born here possess enthusiasm, optimism, and love of freedom. The Sagittarian nature is jovial, adventurous, and prophetic. The higher type becomes the true teacher, pointing the way to wisdom while respecting each soul's unique path.",
+        "Light": "The true teacher—pointing toward wisdom while honoring each soul's unique journey.",
+        "Shadow": "Dogmatism, restlessness, the preacher who imposes rather than inspires.",
+        "Keywords": "I Perceive",
+        "The record — Alan Leo (Astrology for All, 1899)": "Sagittarius is the sign of the archer, who stands ready to shoot from his bow the arrow which is said to never fail in hitting the mark, which means that they have the power of prophecy for their special feature. There is an idea of freedom conveyed in the symbol of the archer, and of these individuals it may be said that they always aim for the highest. … Sagittarius is the last of the fiery triplicity and the third of the mutable signs; it therefore represents the union of qualities of the head and heart, now sent upward in devotion to the Heart of all things. When fully individualised, those born in this sign are great lovers of law and order. They are very intuitive, very prophetic, and possess the power of sending their thoughts on the wireless telegraph to any distance that they wish. The seer and the prophet are born in this sign, and we find these individuals to be the most self-confident and self-reliant of any of the signs, when awakened. They are always looking forward with a bright, hopeful, and happy disposition, which makes them full of hope and full of joy for the future."
+      },
+      "metadata": {
+        "element": "Fire",
+        "quality": "Mutable",
+        "ruler": "Jupiter",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-capricorn",
+      "name": "Capricorn",
+      "symbol": "♑",
+      "category": "sign",
+      "subcategory": "earth",
+      "keywords": [
+        "father",
+        "administrator",
+        "endurance",
+        "ambition",
+        "discipline"
+      ],
+      "sort_order": 9,
+      "sections": {
+        "Interpretation": "The father and administrator. Capricorn represents ambition crystallizing into achievement through discipline. Those born here possess endurance, organizational ability, and respect for tradition. The Capricorn nature is serious, responsible, and ambitious. The higher type uses worldly position for spiritual service, becoming the initiate who has mastered matter.",
+        "Light": "The initiate—using mastery of matter for spiritual service, worldly position devoted to higher purpose.",
+        "Shadow": "Cold ambition, materialism, using structure to control rather than to serve.",
+        "Keywords": "I Use",
+        "The record — Alan Leo (Astrology for All, 1899)": "Capricorn is the last of the cardinal signs, and also the last of the earthy triplicity and the first of what is well termed the serving trinity. … The Capricornians, when individualised, are impartial, just and accurate, aiming to be precise, exact and constant, fulfilling all things with a persistent, persevering and industrious nature. They are assiduous, arduous and careful, zealous and diligent, ever enduring with a calm, earnest patience, and a grave reflective demeanour. They seem to have brought the economy of Cancer to a kind of perfection, and they know how to be frugal and thrifty without being mean; when fully individualised they are very contemplative, reserved, deep and profound. They are always independent characters, possessing a quiet self-reliance and determination, and when living up to their highest ideal are the true servants of humanity; but when not awakened, and living to the personal side of their nature, they pass through the extremes of all these virtues. They are always more or less self-conscious, and seem to know the state of consciousness they are in more readily than those born in the other signs."
+      },
+      "metadata": {
+        "element": "Earth",
+        "quality": "Cardinal",
+        "ruler": "Saturn",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-aquarius",
+      "name": "Aquarius",
+      "symbol": "♒",
+      "category": "sign",
+      "subcategory": "air",
+      "keywords": [
+        "humanitarian",
+        "reformer",
+        "originality",
+        "independence",
+        "brotherhood"
+      ],
+      "sort_order": 10,
+      "sections": {
+        "Interpretation": "The humanitarian and reformer. Aquarius represents the universal mind working for collective progress. Those born here possess originality, humanitarian ideals, and scientific ability. The Aquarian nature is independent, progressive, and oriented toward the future. The higher type serves humanity through brotherhood, seeing all as equal expressions of the one life.",
+        "Light": "The world server—seeing all as equal expressions of one life, working for humanity's progress.",
+        "Shadow": "Emotional detachment, eccentricity for its own sake, ideas divorced from human feeling.",
+        "Keywords": "I Know",
+        "The record — Alan Leo (Astrology for All, 1899)": "Aquarius is the last of the airy triplicity, also the last of the fixed signs and the centre of the serving trinity. … Its symbol is the man commonly known as the water-bearer… Aquarian individuals are determined, patient, quiet, unobtrusive and faithful. They have the power of concentrating their thoughts, and are generally philosophic and scientific. They lead toward the unconventional, and thus become excellent reformers; they have bright and clear intellects, and persevere patiently with all their pursuits. They are persons one feels one can depend upon, and they inspire trust by their equable dispositions. They are nearly always kind, humane and retiring. They are exceedingly fond of art, music and literature; but seem to have more ability for scientific studies, and in this they are helped considerably by their intuitive and penetrating nature. When fully individualised, they have a great love for all humanitarian undertakings and concerns that produce harmony for the many; this gives them marked social tendencies, and makes them delight in giving pleasure to others."
+      },
+      "metadata": {
+        "element": "Air",
+        "quality": "Fixed",
+        "ruler": "Saturn",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "sign-pisces",
+      "name": "Pisces",
+      "symbol": "♓",
+      "category": "sign",
+      "subcategory": "water",
+      "keywords": [
+        "mystic",
+        "redeemer",
+        "imagination",
+        "compassion",
+        "spirituality"
+      ],
+      "sort_order": 11,
+      "sections": {
+        "Interpretation": "The mystic and redeemer. Pisces represents the soul completing its cycle, dissolving separateness through compassion. Those born here possess imagination, sensitivity, and spiritual receptivity. The Piscean nature is gentle, impressionable, and self-sacrificing. The higher type becomes the conscious server, willingly taking on the suffering of others to aid their liberation.",
+        "Light": "The conscious server—willingly bearing others' suffering to aid liberation, redeeming through love.",
+        "Shadow": "Victimhood, escapism, losing self in others' pain without the strength to transform it.",
+        "Keywords": "I Believe",
+        "The record — Alan Leo (Astrology for All, 1899)": "This is the last sign of the zodiac, the sign of the fishes. It is the last of the watery and mutable signs. Its symbol represents two fishes tied together, one swimming in one direction and the other in the opposite. … There can be no such thing as a real failure; but if we were to think of a progression through all the signs, and then think of the sign Pisces as representing, on the one hand, those who had succeeded in extracting the virtue from each, and, on the other hand, those who had failed to accomplish, we might obtain some idea of what is meant by the term often applied to this sign of 'self-undoing.' … When becoming individualised and more self-controlled, they are very patient, gentle and submissive persons, possessing a quiet understanding; as they awaken and unfold, they become deeply interested in occult phenomena. Their character, as it grows, becomes more confiding, more trustful, but rarely self-reliant; although they are capable of being very honest, amiable, loving and kind, with an abundance of sympathy, especially to all dumb animals."
+      },
+      "metadata": {
+        "element": "Water",
+        "quality": "Mutable",
+        "ruler": "Jupiter",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1899,
+          "title": "Astrology for All: To Which Is Added a Complete System of Predictive Astrology",
+          "source_site": "https://archive.org/details/astrologyforall00leogoog",
+          "publisher": "L.N. Fowler & Co., London"
+        }
+      }
+    },
+    {
+      "id": "planet-sun",
+      "name": "Sun",
+      "symbol": "☉",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "individuality",
+        "spirit",
+        "life-force",
+        "authority",
+        "purpose"
+      ],
+      "sort_order": 12,
+      "sections": {
+        "Interpretation": "The Sun represents the immortal Individuality, the divine spark within. It shows what we are becoming through evolution, our essential spiritual nature. In the horoscope, a strong Sun indicates one who can express their true self with power and authority. The Sun is the life-giver, and its position shows where we must shine.",
+        "Keywords": "Individuality",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The Sun, we are taught by those who are seeking the Path of Wisdom, is the body of God, the Logos of this solar system, through which He gives His Love, Light and Life. In astrologic study the Sun gives to every living organism its Prāna, or life and heat, each individual specialising his own store from the cosmic Prāna. Every living thing is plunged into a great ocean of life — God's life; and every organism, whether great or small, appropriates to itself some of this universal life which is ever flowing from the Sun, the vehicle through which the Solar Logos is manifesting. The Sun, giving life, light and heat to the world, stands in each nativity as the symbol of vitality and activity, mind and intellect, love and feeling. In one word it represents the centre of each separate individual character as the sum total of himself, by absorbing into himself as much of the influence of the solar rays and the planetary vibrations as possible during his previous physical manifestations."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-moon",
+      "name": "Moon",
+      "symbol": "☽",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "personality",
+        "habits",
+        "instincts",
+        "receptivity",
+        "feelings"
+      ],
+      "sort_order": 13,
+      "sections": {
+        "Interpretation": "The Moon represents the Personality, the sum of past experiences carried into this life. It shows our habits, instincts, and automatic responses—what we have been. The Moon governs the physical body, the public, women, and all matters of common everyday life. Its position shows our receptive, feeling nature.",
+        "Keywords": "Personality",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The Moon acts as the vehicle, or link of communication between the Sun and each living thing. In Astrology the Moon is the representation of the Personality, the portion of the individual that is manifested during the one life period, and as such the Moon's position and aspects become the most important when judging a nativity. If the Moon has no aspect whatever with the Sun, or is in much affliction with this luminary, then the life forces do not flow evenly, the mentality is not so sharp and clear, and the feelings are apt to be distorted; but the principal effect of the affliction is to hinder the flow of the life-current and thus affect the general health. … The permanent and vital conditions of each life are denoted by the Sun, and the fleeting and impermanent personal conditions are indicated by the Moon, this latter luminary thus representing the focussing point of a nativity."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-mercury",
+      "name": "Mercury",
+      "symbol": "☿",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "mentality",
+        "communication",
+        "learning",
+        "reason",
+        "expression"
+      ],
+      "sort_order": 14,
+      "sections": {
+        "Interpretation": "Mercury represents the rational mind, the link between higher and lower self. It governs communication, learning, and the nervous system. Mercury shows how we think, speak, and process information. Well-aspected, it gives intellectual brilliance; afflicted, it produces worry and nervous disorders.",
+        "Keywords": "Mentality",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "Mercury is known as the 'convertible' planet. It is neither positive nor negative, but both. It is the planet of the adept, being the planet of adaptation in the widest sense of the word. Mercury is termed the Winged Messenger of the Gods, and takes upon himself the vibrations of all the other planets. It is, in one word, the planet of Reason. In the physical world Mercury governs the sense of seeing. It has also a very close relationship with the mind. … It has also a subjective as well as an objective influence, and all planets may be said to be powerful or weak, according to the strength of Mercury. Mercury, accompanying the soul into Hades, represents the silver thread of memory, upon which are strung the beads which represent the personalities of its earth lives. In every nativity Mercury will represent the ego in physical manifestation, the actor, playing the part allotted to him during each separate earthly existence; and at the close of each life Mercury represents the knowledge gained, as Memory, the cream of which is rendered a permanent possession of the ego as Wisdom."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-venus",
+      "name": "Venus",
+      "symbol": "♀",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "affection",
+        "love",
+        "harmony",
+        "beauty",
+        "values"
+      ],
+      "sort_order": 15,
+      "sections": {
+        "Interpretation": "Venus represents the love nature, attraction, and the desire for harmony. It governs art, beauty, social relations, and values. Venus shows what we love and find beautiful. Well-aspected, it gives charm and artistic ability; afflicted, it produces excessive pleasure-seeking or difficulty in relationships.",
+        "Keywords": "Affection",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The two benefic planets are Venus and Jupiter. Venus and Jupiter are the respective counterparts of Mars and Saturn… The only real difference between these two planets, Mars and Venus, arises from the special vibrations. Mars is attracted from without through desire and impulse. Venus causes all action to come from within, and instead of feeling rushing outwards to objects and becoming captive to externals, it moves from within through the ego's direct intuitive power. The vibrations of Venus directly affect the higher part of the nature through the human soul and higher mind. In the physical world Venus presides over the sense of touch… All the distinctly human and refining qualities come under the influence of Venus, the whole of the tendencies of this planet's vibration being to centralise and draw in from the objective world the experience necessary to awaken the inner and more subjective centres of consciousness. Venus is on the side of Will and the Immortal Trinity, and all vibrations that are assimilated are made permanent soul possessions. … Venus preserves, nourishes, rebuilds, and all who come fully under the influence of this planet are capable of living purely and appreciating beauty and goodness to the full."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-mars",
+      "name": "Mars",
+      "symbol": "♂",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "energy",
+        "desire",
+        "courage",
+        "action",
+        "assertion"
+      ],
+      "sort_order": 16,
+      "sections": {
+        "Interpretation": "Mars represents the desire nature, courage, and the power to act. It governs physical energy, competition, and the sexual drive. Mars shows how we assert ourselves and fight for what we want. Well-aspected, it gives courage and enterprise; afflicted, it produces anger, accidents, and strife.",
+        "Keywords": "Energy",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "Mars is the planet of focussed force, and out-going impulse. Physical heat and motion are more under the direct influence of Mars than any other planet. He governs the sense of taste in its widest application. All the animal propensities, sensations, passions, desires and appetites come under the vibration of Mars. … Force and energy are at all times necessary on the physical plane, and without the martial influence humanity would be tame and inactive, therefore use will make the vibrations of Mars as beneficial as abuse will make them evil. Each planet portrays a particular virtue, and that of Mars, strength, acts more especially through the muscular system… The strength absorbed from the planet Mars will do much to improve an otherwise weak nativity, and in no position in a horoscope can Mars be said to be an evil influence unless the nature is wholly depraved. Men who have strong and personal natures will, by transmuting the force and turning the direction of the currents, become ambitious and energetic and thus raise themselves to a higher state of refinement and progress."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-jupiter",
+      "name": "Jupiter",
+      "symbol": "♃",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "expansion",
+        "faith",
+        "growth",
+        "wisdom",
+        "prosperity"
+      ],
+      "sort_order": 17,
+      "sections": {
+        "Interpretation": "Jupiter represents the higher mind, faith, and the principle of growth. It governs philosophy, religion, law, and long journeys. Jupiter shows where we seek meaning and where fortune smiles upon us. Well-aspected, it gives wisdom and prosperity; afflicted, it produces excess, extravagance, and false optimism.",
+        "Keywords": "Expansion",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "Jupiter is termed the Greater Fortune. Its vibrations are concerned with the form side of manifestation and like Saturn it symbolises the vehicle which holds the life. … Saturn contracts and acts microscopically. Jupiter expands and has no limit to its expansion. Mind and feeling are condensed and focussed in the limiting form of Saturn, and expanded, broadened, and extended through the ever-increasing form of Jupiter. In these two extremes we have all the elements of pleasure and pain, joy and sorrow, increase and decrease, bondage and freedom, expansion and contraction. … In the physical world Jupiter governs the sense of smell. … The success promised by Jupiter may be traced to the best side of the character, wherein hope and the power to expand and enlarge are prominent. Saturn gives financial gain and prosperity through economy, thrift, perseverance, and industry, but Jupiter when concerned with financial success brings gain through the social life, and those under the most favourable influence of Jupiter can accomplish more in one day than the ordinary Saturnine man could achieve in a year."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-saturn",
+      "name": "Saturn",
+      "symbol": "♄",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "limitation",
+        "karma",
+        "discipline",
+        "structure",
+        "lessons"
+      ],
+      "sort_order": 18,
+      "sections": {
+        "Interpretation": "Saturn represents karma, discipline, and the lessons of time. It governs structure, responsibility, and crystallization. Saturn shows where we must work hard and accept limitation. Well-aspected, it gives stability and achievement; afflicted, it produces fear, delay, and depression. Saturn is the great teacher.",
+        "Keywords": "Limitation",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The next so-called evil planet is Saturn. The nature and influence of this planet is cold and binding, exactly opposite to that of the fiery Mars. … Saturn governs the sense of hearing, a negative or receptive sense. The listener suggests patience, forbearance, silence and caution. The planetary vibration of Saturn restricts, limits, crystallises and binds everything; holding, restraining, fashioning and solidifying all that comes under its sphere of influence. … It is therefore the vibrations of Saturn that cause each human personality to know itself as a separate, distinct and self-conscious entity. Saturn, as ruler of the personal ego, is the planet of fate, for it represents the personal Will, the lower brain-mind, and is practically the ego in manifestation in the physical world… The highest states signified by the vibrations of Saturn in the physical world are physical purity and justice, which produce the virtues of chastity, economy, thrift, industry, perseverance, prudence, veneration, and love of truth. When the vibrations of Saturn are perverted through the personality, miserliness, meanness, envy, covetousness and extreme selfishness result."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-uranus",
+      "name": "Uranus",
+      "symbol": "♅",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "awakening",
+        "liberation",
+        "change",
+        "originality",
+        "revolution"
+      ],
+      "sort_order": 19,
+      "sections": {
+        "Interpretation": "Uranus represents the higher will, sudden change, and liberation from the past. It governs originality, invention, and revolution. Uranus shows where we break free from convention and express our uniqueness. Its influence is sudden, unexpected, and often disruptive to the status quo.",
+        "Keywords": "Awakening",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The planet Uranus has less influence at the present day than any other planet except Neptune. It is the planet of the coming race, for its vibrations will then be more important than to-day. It is thought by the author to represent the fully individualised Ego, and as such is the houseless wanderer half-way between earth and heaven. Its vibrations are different from those of any other planet, governing all things that are not bound by convention or limited entirely to the form side of things… It appears to govern all things that are original, eccentric, and free to act apart from any conventional groove or accepted custom. It has been found to exercise the greatest influence for good over advanced thinkers — those who act independently, and from within more than from without. … No definite or precise rules can be laid down with regard to Uranus; the most elaborate plans and calculations may be upset in an instant of time by the vibrations of this planet. Sudden and unexpected events will occur, and act in an almost unknowable manner, which makes it impossible to judge accurately exactly what will happen under his vibrations."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "planet-neptune",
+      "name": "Neptune",
+      "symbol": "♆",
+      "category": "planet",
+      "subcategory": null,
+      "keywords": [
+        "illumination",
+        "inspiration",
+        "transcendence",
+        "mysticism",
+        "dreams"
+      ],
+      "sort_order": 20,
+      "sections": {
+        "Interpretation": "Neptune represents the higher love, inspiration, and the dissolution of boundaries. It governs mysticism, dreams, and the unseen realms. Neptune shows where we transcend ordinary consciousness. Well-aspected, it gives spiritual vision; afflicted, it produces confusion, deception, and escapism.",
+        "Keywords": "Illumination",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "Neptune, the last discovered planet, has, on the whole, but a faint influence upon our earth and its inhabitants. The undeveloped psychic who is unable to control the mediumistic tendencies induced from without, and those who are easily obsessed or of very weak will, always subject to changing impressions, will in one sense come under Neptune as will also those who are very highly advanced psychically. Experience tends to prove that the influence of an afflicted Neptune as a rule is undesirable. There is a possibility of there being such a thing as a lost personality, metaphorically speaking, and such may be in some peculiar manner under this influence. Depravity and exceptional immorality seem to be under the influence of Neptune, but many years must elapse before sufficient tabulation is made to warrant a reliable opinion concerning Neptune's vibrations."
+      },
+      "metadata": {
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-1",
+      "name": "First House",
+      "symbol": "I",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "self",
+        "appearance",
+        "personality",
+        "approach",
+        "beginnings"
+      ],
+      "sort_order": 22,
+      "sections": {
+        "Interpretation": "The house of the physical body and personal appearance. It represents the mask we wear, our approach to life, and how others see us. Planets here strongly color the personality and physical constitution.",
+        "Keywords": "Self",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The sign, and more especially the particular degree, of the zodiac rising upon the eastern horizon at birth is known as the Ascendant. This term also embraces the whole of the first house… The ascendant rules the personal appearance and to a considerable extent also the health, mind, and disposition. It is that part of the horoscope which has more to do with the physical body and its material wants than any other portion. The five physical senses find their outlet through this ascendant, and much depends upon the nature of the sign rising and any planets in the ascendant, if such there are, as regards the expression of the Ego in the physical world. Fiery Signs rising denote good vitality, much force and energy, giving enough stamina to sustain life under adverse aspects and planetary positions; in a general sense they give good health. The disposition is to be hasty; impulsive; ambitious; proud; enterprising; commanding, with more desire to lead than serve; argumentative; quick-tempered; self-confident; and generally fortunate. The mind is aspiring; free; independent; acute; and penetrative."
+      },
+      "metadata": {
+        "number": 1,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-2",
+      "name": "Second House",
+      "symbol": "II",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "possessions",
+        "money",
+        "values",
+        "security",
+        "resources"
+      ],
+      "sort_order": 23,
+      "sections": {
+        "Interpretation": "The house of money, possessions, and personal values. It shows our attitude toward material security and what we value. The second house reveals our earning capacity and relationship with the material world.",
+        "Keywords": "Possessions",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "In any horoscope money matters are judged largely, but not exclusively, from the state of the second house. As we have seen elsewhere, this house belongs to the triad of tenth, second and sixth: and of these the tenth house or mid-heaven is concerned to a great extent with occupation, business, profession; the sixth with servants, employees, situations, positions or spheres of activity in which money may be earned; and the second with money. In addition, the eighth house has to do with money inherited, legacies, and money coming to the native through other people (chiefly through the business or marriage partner); and in a similar way the twelfth and fourth houses may be considered to have a similar reflex influence, as it were, of the sixth and tenth houses. The question of money cannot therefore be judged exclusively from the second house, for these others have also to be taken into consideration and judged in their relation to each other and to the horoscope as a whole, nevertheless the second house must be allowed final voice in the matter."
+      },
+      "metadata": {
+        "number": 2,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-3",
+      "name": "Third House",
+      "symbol": "III",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "communication",
+        "siblings",
+        "learning",
+        "environment",
+        "expression"
+      ],
+      "sort_order": 24,
+      "sections": {
+        "Interpretation": "The house of the concrete mind, communication, and immediate environment. It governs siblings, neighbors, short journeys, and early education. This house shows how we think and express our thoughts.",
+        "Keywords": "Communication",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The First House has a very decided influence over the physical body as a whole, governing what we may term the general temperament. The Second House has also a decided influence in this respect, having considerable sway over the emotional and desire nature. The Third House in the same way has a definite influence over the mind; these three houses analogically coming under the dominant rulership of the three planets Mars, Venus and Mercury respectively. In the Third House, which we are now to consider, we study all that relates to movement, transition, and change. It is also related to the seventh house… and thus governs relatives and kindred; but, generally speaking, it rules all affairs that seriously affect the mind, and the mental tendencies."
+      },
+      "metadata": {
+        "number": 3,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-4",
+      "name": "Fourth House",
+      "symbol": "IV",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "home",
+        "family",
+        "roots",
+        "foundations",
+        "security"
+      ],
+      "sort_order": 25,
+      "sections": {
+        "Interpretation": "The house of home, family, and psychological foundations. It represents one parent, our roots, and the end of life. The fourth house shows our deepest private self and sense of security.",
+        "Keywords": "Home",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The fourth house relates to the 'grave,' the end of life, one of the parents — usually the father, according to Western astrologers, though the Hindus say the mother, since the fourth house corresponds to Cancer — and denotes also the environment, residence and family conditions in which the native dwells. … The fourth house may be briefly summarised as the personal environment, the tenth house as the individual environment. … the fourth house represents in a general sense the centre or focus of the personal or domestic environment, the tenth house represents the focus of the individual or business environment. Looked at in this way, a horoscope becomes exceedingly interesting when we study it from the standpoint of business or marriage. … A young man's start in life is reckoned from the time when he first sets out in business (tenth house, business, honours, ideals, ambition); and similarly a young woman's start in life dates from marriage, when she removes to the house provided by her husband."
+      },
+      "metadata": {
+        "number": 4,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-5",
+      "name": "Fifth House",
+      "symbol": "V",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "creativity",
+        "children",
+        "romance",
+        "pleasure",
+        "expression"
+      ],
+      "sort_order": 26,
+      "sections": {
+        "Interpretation": "The house of self-expression, creativity, and pleasure. It governs children, romance, speculation, and amusements. This house shows how we express our creative power and find joy.",
+        "Keywords": "Creativity",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The fifth house relates to pleasure, society and social inclinations, also the emotions and feelings. It may be regarded as a material representation of the eleventh house, which governs hopes and wishes, and often denotes their worldly fulfilment. It shows the nature of the native's love affairs, courtships, and the affections which spring from the feeling and emotional side of the nature; it represents the seat of the physical and magnetic attractions between the sexes. It is also concerned with speculative affairs and all matters of enterprise and activity prompted by the desire nature; having a direct and what may be termed a lunar reflection from the eleventh house, which denotes the internal nature of the desires, hopes and wishes."
+      },
+      "metadata": {
+        "number": 5,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-6",
+      "name": "Sixth House",
+      "symbol": "VI",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "service",
+        "health",
+        "work",
+        "routine",
+        "duty"
+      ],
+      "sort_order": 27,
+      "sections": {
+        "Interpretation": "The house of health, work, and service. It governs employment, daily routine, and small animals. This house shows our attitude toward duty and the care of the physical body.",
+        "Keywords": "Service",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The sixth house is connected with the mid-heaven and the second house and relates to work and servants, also to sickness, and the condition of the physical body. It is an unimportant house if no planets are found in it, or if the sign upon the cusp has no definite indication relating to sixth house affairs. In some cases it is necessary to study the ruler of this house, but only when so placed or aspected as to show marked signs of importance. In all cases where a planet occupies this house it will have some direct bearing upon the work in which the native is engaged, the inferiors he contacts and the sickness or ill-health he is liable to suffer. In an indirect way it governs uncles and aunts or the relatives of the father."
+      },
+      "metadata": {
+        "number": 6,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-7",
+      "name": "Seventh House",
+      "symbol": "VII",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "partnership",
+        "marriage",
+        "relationships",
+        "others",
+        "contracts"
+      ],
+      "sort_order": 28,
+      "sections": {
+        "Interpretation": "The house of marriage, partnership, and open enemies. It represents our approach to committed relationships and what we seek in others. This house shows how we relate one-to-one.",
+        "Keywords": "Partnership",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "Marriage is the chief influence of the seventh house. The seventh house in every horoscope is the complement of the first, and represents the unifying of all that is separated or isolated in the ascendant; it indicates the subjective side of the nature as distinguished from the objective side indicated by the first house: and successfully to unify all that is denoted by the first and seventh means an enlarged experience which can be gained in no other way. In the abstract, it means the blending of Mars and Venus, Mercury and Jupiter, or the luminaries and Saturn. In other words it signifies the transmutation of the passions into pure love, the exchange of intellect for wisdom and the perfect individualisation of the conscious Self. Just as there is to be a divine marriage of the Personality with the Individuality when man attains to the perfection he is destined to reach; so on a minor scale, on the physical plane, the union of the sexes is a commencement of that unification which is eventually to unite the self to all other selves."
+      },
+      "metadata": {
+        "number": 7,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-8",
+      "name": "Eighth House",
+      "symbol": "VIII",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "regeneration",
+        "transformation",
+        "death",
+        "shared resources",
+        "occult"
+      ],
+      "sort_order": 29,
+      "sections": {
+        "Interpretation": "The house of death, transformation, and shared resources. It governs inheritance, the occult, and deep psychological change. This house shows our capacity for rebirth and handling of others' resources.",
+        "Keywords": "Regeneration",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "This house belongs to the triangle of fourth, eighth, and twelfth; which have as their correspondences Cancer, Scorpio and Pisces, ruled by the Moon, Mars and Jupiter. These form the watery, psychic, or astral subdivision of the zodiac and indicate channels through which influences (good or bad) may flow down upon the man from the next interior plane of being, as well as ways by which he may himself contact that plane. Of these three, the eighth house is generally considered to have a direct bearing upon death and all matters connected therewith, such as the goods of the dead, legacies, occupations connected with death, executorships, coroners, surgeons, medical officers of health, sanitary officers or inspectors, slaughter-houses, butchers. It also has relation to some forms of mediumship and occultism, generally of a practical executive kind."
+      },
+      "metadata": {
+        "number": 8,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-9",
+      "name": "Ninth House",
+      "symbol": "IX",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "philosophy",
+        "higher mind",
+        "travel",
+        "religion",
+        "meaning"
+      ],
+      "sort_order": 30,
+      "sections": {
+        "Interpretation": "The house of the higher mind, religion, and long journeys. It governs philosophy, law, publishing, and foreign cultures. This house shows our search for meaning and expansion of consciousness.",
+        "Keywords": "Philosophy",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The ninth house is the house of philosophy, the higher mind, and hence of all that concerns the scientific and religious attitude of the native. It is the house of the subjective and abstract mind as opposed to the objective and concrete brain mind, represented by the third house. The third house, representing the smaller and slower mind which has its range in the physical world only, also represents short journeys and travelling by land; while the ninth house, signifying the wider and less limited mind, also represents transit that is rapid, long journeys, sea voyages, foreign travel, etc. The third house governs education and studies of the minor and more conventional order, the ninth house philosophy and deep thinking. The third is the house of perception and learning, the ninth the house of reason and intuition. … The ninth is a house that represents the future more than the past (fifth) or present (first), and in this respect it governs dreams, visions, prophecy, imagination and thought, also intuition and pure reason."
+      },
+      "metadata": {
+        "number": 9,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-10",
+      "name": "Tenth House",
+      "symbol": "X",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "career",
+        "reputation",
+        "authority",
+        "ambition",
+        "public standing"
+      ],
+      "sort_order": 31,
+      "sections": {
+        "Interpretation": "The house of career, reputation, and public standing. It represents one parent, authority figures, and our ambitions. This house shows our contribution to society and how we're known publicly.",
+        "Keywords": "Career",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "This is the house of honour, reputation, profession, business or occupation, and represents the public standing or worldly position of the native. It may be taken as the apex of the horoscope, or that portion which is thrust out most prominently into the busy life of the world. Good and evil must both alike find expression, and culminate in honour or dishonour; and the culminating point is the tenth house. An action may be said to be the child of thought and desire, which are its parents. The impulse to action first arises in one of these two, either thought or desire; the other — whichever it may be — quickly responds; but the action cannot take place until circumstances permit. … Regarded as indicative of actions, therefore, the horoscope at birth may be said to be the necessary outcome of those thoughts and desires that remained unexhausted at the death of the last personality."
+      },
+      "metadata": {
+        "number": 10,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-11",
+      "name": "Eleventh House",
+      "symbol": "XI",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "friendship",
+        "groups",
+        "hopes",
+        "community",
+        "wishes"
+      ],
+      "sort_order": 32,
+      "sections": {
+        "Interpretation": "The house of friends, groups, and hopes. It governs social circles, humanitarian interests, and our wishes for the future. This house shows how we participate in collective endeavors.",
+        "Keywords": "Friendship",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "This house is that of friends, acquaintances, hopes, wishes, aspirations. It belongs to the triangle of the seventh and third houses, and has a great deal in common with both of these. By secondary influence it stands to the seventh house as the fifth stands to the first; that is, it is the fifth house of the marriage partner, and therefore has to be taken into account when considering questions concerning children and the other affairs of the fifth house. Taken by itself, free from affliction, it may be considered a benefic house, as its natural tendency seems to be towards good fortune, pleasure, happiness and prosperity; and benefics in this house or planets well aspected will benefit the native, socially or otherwise, and lift him up in the world, according to the nature of the planet. It has a great deal of sympathy also with the tenth house; and is often found containing strong or fortunate planets in the horoscopes of persons who are prominent in politics, in municipal affairs, or who in business matters are concerned with the many rather than the few, through factories, companies, associations, stores, societies, etc."
+      },
+      "metadata": {
+        "number": 11,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "house-12",
+      "name": "Twelfth House",
+      "symbol": "XII",
+      "category": "house",
+      "subcategory": null,
+      "keywords": [
+        "karma",
+        "seclusion",
+        "unconscious",
+        "hidden",
+        "retreat"
+      ],
+      "sort_order": 33,
+      "sections": {
+        "Interpretation": "The house of seclusion, karma, and self-undoing. It governs hospitals, prisons, hidden enemies, and the unconscious. This house shows our hidden strengths and weaknesses, and the soul's need for retreat.",
+        "Keywords": "Karma",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The twelfth house is generally supposed to be the house of sorrow, enemies, imprisonment and misfortune. This is probably owing to its being one of the houses belonging to the psychic trinity; and, as the cadent houses of that triangle, it is the least fortunate of the three. … The Cardinal houses or 'Angles' represent the physical body, and all that is expressed by action in the outer or external world; they are quick, acute, active, energetic, open. … The Succedent houses are less physical and material in their nature, being more in sympathy with the feelings and emotions. … The Cadent houses are the least expressed of any signs; they govern the mind and thought more than emotion or action, and are more closely related to the limbs of the body than the other signs. … The third, sixth, ninth and twelfth signs in the order of the signs are common or mutable signs and in the order of the twelve houses are the 'cadent' houses; these are 'unfortunate,' owing to their latency or lack of practical external expression."
+      },
+      "metadata": {
+        "number": 12,
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "aspect-conjunction",
+      "name": "Conjunction",
+      "symbol": "☌",
+      "category": "aspect",
+      "subcategory": null,
+      "keywords": [
+        "blending",
+        "intensification",
+        "new beginning",
+        "concentration",
+        "union"
+      ],
+      "sort_order": 34,
+      "sections": {
+        "Interpretation": "A blending and intensification of planetary energies. The conjunction unites two principles for good or ill depending on the planets involved. It represents a new beginning, a seed point of concentrated force.",
+        "Keywords": "Blending, intensification, new beginning",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "Conjunction is when two heavenly bodies are together at the same point of the zodiac. It therefore stands, symbolically if not practically, for union, synthesis, the blending of two in one. What effect the union will have depends upon the nature of the combined planets. When two forces meet, the resultant varies according to the angle between them and the strength of each force. When two notes are sounded together upon a musical instrument, the resulting sound depends upon whether the two sets of vibrations harmonise or not. And so with planetary conjunctions. If we suppose the planets to transmit their influence by means of vibrations sent through the subtle ethers of the solar system, the effects detected by the astrologer in a horoscope will vary according to whether the waves of the one supplement or contradict those of the other. … Broadly speaking, the conjunction of a neutral planet with a benefic is good and tends to harmony both in terms of fate and of character. The conjunction of a neutral planet with a malefic is exactly the reverse… The conjunction of one benefic and one malefic is neither wholly good nor wholly evil, but strikes a mean between the two; and that of two benefics or two malefics is neither so good nor so bad as might be expected."
+      },
+      "metadata": {
+        "degrees": 0,
+        "nature": "Variable",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "aspect-sextile",
+      "name": "Sextile",
+      "symbol": "⚹",
+      "category": "aspect",
+      "subcategory": null,
+      "keywords": [
+        "opportunity",
+        "talent",
+        "cooperation",
+        "development",
+        "harmony"
+      ],
+      "sort_order": 35,
+      "sections": {
+        "Interpretation": "An aspect of opportunity and talent. The sextile indicates natural abilities that can be developed with effort. It represents harmonious cooperation between planetary principles.",
+        "Keywords": "Opportunity, talent, cooperation",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The formation of these aspects will be made clear to the mind by the following illustration. At the time of the New Moon, the Moon and Sun are in conjunction, i.e., they occupy the same degree of the zodiac, but as the Moon moves faster than the Sun, they very soon separate, and in fact two-and-a-half days later the Moon is 30° further on in the zodiac than the Sun is, and five days later 60° further on; hence they are said to be respectively in 'semi-sextile' and in 'sextile' to each other at these dates. … The Good Aspects are all based upon a threefold division of the circle of the zodiac … the sextile, 60°, is half a trine, and the semi-sextile, 30°, half a sextile. … The Sextile aspect is appreciably weaker [than the trine], but is nevertheless good, and may be compared to Venus. The Semi-Sextile is extremely weak and may be compared to Mercury, the 'convertible' planet; not much is lost if it is omitted from consideration."
+      },
+      "metadata": {
+        "degrees": 60,
+        "nature": "Harmonious",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "aspect-square",
+      "name": "Square",
+      "symbol": "□",
+      "category": "aspect",
+      "subcategory": null,
+      "keywords": [
+        "friction",
+        "challenge",
+        "action",
+        "growth",
+        "tension"
+      ],
+      "sort_order": 36,
+      "sections": {
+        "Interpretation": "An aspect of friction and challenge. The square creates tension that demands action and growth. It represents obstacles that build character when overcome.",
+        "Keywords": "Friction, challenge, growth",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The Evil Aspects represent the circle halved or quartered. Thus the opposition, 180°, is half the circle, the square, 90°, is a quarter of the circle, and the semi-square, 45°, and sesquiquadrate, 135°, are respectively half a square and a square and a half. … Of the evil aspects, the Opposition and Square may be compared to Saturn and Mars respectively. The opposition separates, and causes rivalry, antagonism, duality, in this respect being not unlike the mutable signs in its influence. The square acts somewhat like the fixed signs; it alternately crystallises and limits into a settled habit, and disrupts and shatters by a sudden shock. The Semi-Square and Sesquiquadrate are weaker than the square and not so lasting, but are similar to it in nature… We seem, therefore, bound to suppose that aspects based upon the square represent clash, conflict and discord; and that the soul which finds itself surrounded by forces working in this fashion has itself created the discord from which it is now suffering. The effect, although temporarily painful, is spiritually good, because the soul learns by its own experience to distinguish between that which will produce discord and that which will produce harmony; so that the clash and conflict of opposition end in wisdom."
+      },
+      "metadata": {
+        "degrees": 90,
+        "nature": "Challenging",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "aspect-trine",
+      "name": "Trine",
+      "symbol": "△",
+      "category": "aspect",
+      "subcategory": null,
+      "keywords": [
+        "ease",
+        "flow",
+        "talent",
+        "gifts",
+        "harmony"
+      ],
+      "sort_order": 37,
+      "sections": {
+        "Interpretation": "An aspect of ease and natural flow. The trine indicates gifts and talents that express effortlessly. It represents harmony between planetary principles, though it may produce complacency.",
+        "Keywords": "Ease, natural flow, harmony",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The Good Aspects are all based upon a threefold division of the circle of the zodiac. Thus the trine, 120°, is a third of the circle… The religious philosophy of the mystic assures us that there is a basic three-fold mode of operation underlying the whole universe, and that it can be stated in terms of consciousness and in terms of force working through matter. … We are apparently justified in conjecturing that the angle of 120° harmonises with the material constitution of the solar system and with the modes of operation of vitality, consciousness and force. … It may be noted that the Trine is by far the strongest of the good aspects; it stands for progression and harmony, and may be compared to Jupiter, the greater benefic. It seems to bring even better fortune than a conjunction with a benefic planet."
+      },
+      "metadata": {
+        "degrees": 120,
+        "nature": "Harmonious",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    },
+    {
+      "id": "aspect-opposition",
+      "name": "Opposition",
+      "symbol": "☍",
+      "category": "aspect",
+      "subcategory": null,
+      "keywords": [
+        "awareness",
+        "polarity",
+        "balance",
+        "integration",
+        "tension"
+      ],
+      "sort_order": 38,
+      "sections": {
+        "Interpretation": "An aspect of awareness through polarity. The opposition creates tension between opposing principles that must be balanced. It represents the need to integrate seemingly contradictory energies through relationship.",
+        "Keywords": "Awareness, polarity, integration",
+        "The record — Alan Leo (How to Judge a Nativity, 1903)": "The opposition aspect is when two planets are situated at exactly opposite points in the zodiac. Let us suppose that these are Venus and Mars. In this case the soul and the senses will be at war and the person will suffer. He will find it a hard task to preserve a straight course morally through life; his passions will be continually overstepping the bounds of moderation, especially in the direction of sex. When he truly realises this, and that it is a highly undesirable phase of character, he will have made a big step in the knowledge of the difference between good and evil, wisdom and foolishness. But mere knowledge will not of itself suffice to undo the harm done; action, will, is necessary. A strong will may gradually rein in the runaway passions, and the knowledge acquired will direct them into the right path. This may take a lifetime or even more to accomplish, but the result is good, doubly good indeed, for there is an increase of wisdom and a greatly increased strength of will brought out by the continual effort at self-control. If Venus is elevated or is otherwise the stronger of the two, the task will be rather easier than it otherwise would be."
+      },
+      "metadata": {
+        "degrees": 180,
+        "nature": "Challenging",
+        "source": {
+          "author": "Alan Leo",
+          "year": 1903,
+          "title": "How to Judge a Nativity: The Reading of the Horoscope",
+          "source_site": "https://archive.org/details/howtojudgenativi00leoa",
+          "note": "First published 1903; text quoted from the archive.org scan of the later (1928, Modern Astrology Office) London printing."
+        }
+      }
+    }
+  ],
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "recursive.eco-schemas",
+        "role": "original compilation of the public-domain source into grammar form",
+        "link": "https://github.com/PlayfulProcess/recursive.eco-schemas"
+      },
+      {
+        "name": "Alan Leo: Astrology for All; The Art of Synthesis; How to Judge a Nativity",
+        "role": "source texts (public domain; author d. 1917)"
+      },
+      {
+        "name": "PlayfulProcess",
+        "role": "adopted into The Recursive Astrology as a voice's source library",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/AlanLeo.jpg?width=800",
+  "_recursive_eco_url": "https://flow.recursive.eco/g/6a50ce87-e54b-47f2-9fc5-70b19c06d179?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=6a50ce87-e54b-47f2-9fc5-70b19c06d179",
+  "cover_image_credit": {
+    "title": "Photograph of the astrologer Alan Leo (1860-1917)",
+    "creator": "Unknown photographer",
+    "date": "before 1917",
+    "source": "Portrait photograph",
+    "file_page": "https://commons.wikimedia.org/wiki/File:AlanLeo.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Commons file page states public domain",
+    "verified": "2026-07-26"
+  }
+}

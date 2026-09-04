@@ -1,0 +1,78 @@
+{
+  "name": "One Aspect — the smallest casting",
+  "description": "The minimal casting, and the purest statement of this channel's rule: one position, filled by ANY single aspect of your own chart — a planet in its sign, a house and what stands in it, or an aspect between two planets. You choose it (or a chart calculation surfaces the day's exact aspect); it is never drawn at random, because the deck being 'drawn' from is your own chart. Read against the flagship interpretation set (western-astrology-canonical) or any voice library. A chart is a mirror and a calendar, never a command.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cellarius_Harmonia_Macrocosmica_-_Typus_Aspectuum,_Oppositionum_et_Conjunctionum.jpg?width=800",
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cellarius_Harmonia_Macrocosmica_-_Typus_Aspectuum,_Oppositionum_et_Conjunctionum.jpg?width=800",
+  "grammar_type": "sequence",
+  "provenance": "casting",
+  "dating": {
+    "label": "Undated — casting spread (positions, not interpretations). A spread has no source date; it resolves against whichever dated or contemporary interpretation grammar the reader chooses."
+  },
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "tags": [
+    "astrology",
+    "casting",
+    "spread",
+    "aspect",
+    "recursive-eco"
+  ],
+  "casting": {
+    "draw": "choose",
+    "from": "western-astrology-canonical",
+    "allow_reversed": false,
+    "requires": [],
+    "choose_from": [
+      "planet-in-sign",
+      "house",
+      "aspect-between-planets"
+    ],
+    "_note": "draw:'choose' — the querent picks one feature of their own chart (no birth data required if they already know a placement; a full chart calc can instead offer today's exact transits to choose from). Resolution: the chosen feature binds to its matching item(s) in the `from` grammar — a planet item + sign item, a house item, or an aspect item + the two planet items it joins."
+  },
+  "items": [
+    {
+      "id": "position-one-aspect",
+      "name": "One aspect of your chart",
+      "level": 1,
+      "category": "position",
+      "position": 1,
+      "maps_to": {
+        "kind": "any-chart-feature"
+      },
+      "sections": {
+        "Position": "One feature of your own chart, chosen by you: a planet in its sign (your Mercury in Gemini), a house and its tenants (your 10th and what stands there), or an aspect between two planets (your Moon square Saturn). The whole casting is this single mirror.",
+        "Prompt": "Sit with the one item (or pair) this feature resolves to. Ask three questions the tradition would ask, in order: What does this describe that I recognize? What does it describe that I resist? And what would relating to it — not obeying it — change this week? One aspect, honestly read, beats a whole chart skimmed."
+      },
+      "keywords": [
+        "aspect",
+        "single",
+        "reflection"
+      ]
+    }
+  ],
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "role": "author",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "_recursive_eco_url": "https://flow.recursive.eco/g/d157cb7d-33d4-4cd2-82b8-77fc63c0e34f?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=d157cb7d-33d4-4cd2-82b8-77fc63c0e34f",
+  "cover_image_credit": {
+    "title": "Typus aspectuum, oppositionum et coniunctionum etz in planetis — the aspects, oppositions and conjunctions among the planets, plate 15",
+    "creator": "Andreas Cellarius",
+    "date": "1661",
+    "source": "*Harmonia Macrocosmica* (Amsterdam, 1660/1661)",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Cellarius_Harmonia_Macrocosmica_-_Typus_Aspectuum,_Oppositionum_et_Conjunctionum.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Cellarius died 1665; Commons states public domain (PD-old-100)",
+    "verified": "2026-07-27",
+    "_why_this_image": "A whole lattice of aspect geometry over the zodiac circle — the square, trine and sextile figures drawn and named, with conjunction under one sign at the centre. The casting asks for ONE of those relations; the plate is the field it is chosen from. (The 1533 Hervagius aspect figure would have suited too, but it is already the cover of grammars/aspects-commented, and one file carries at most one cover.)"
+  }
+}

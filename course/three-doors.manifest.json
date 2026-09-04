@@ -1,0 +1,18 @@
+{
+  "_note": "Manifest for the reading 'Three Doors' (the Trika lens). Read by pages/course-viewer.html via ?course=three-doors.",
+  "title": "Three Doors",
+  "kicker": "The Recursive Astrology · a reading, in the spirit of The Right Size",
+  "description": "Reading the sky through the Trika — a synthesis, offered by a non-scholar.",
+  "sourceGrammar": "three-doors",
+  "chapterIdPrefix": "chapter-",
+  "appendixIdPrefix": "note-",
+  "appendixTitle": "A closing note",
+  "appendixIntro": "",
+  "sectionOrder": [
+    "Reading"
+  ],
+  "appendixSectionOrder": [
+    "About this note"
+  ],
+  "companions": {}
+}

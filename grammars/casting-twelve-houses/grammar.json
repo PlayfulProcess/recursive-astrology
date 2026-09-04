@@ -1,0 +1,288 @@
+{
+  "name": "The Twelve Houses — a chart-wheel casting",
+  "description": "The chart-shaped casting: the twelve houses as twelve fixed positions on the wheel — the richer target the three-position casting graduates into. Nothing is drawn at random: the positions ARE your chart. Each house resolves to the sign on its cusp and the planets standing in it, read against the flagship interpretation set (western-astrology-canonical) or any interpretation grammar the reader chooses. Requires a real chart calculation (birth time + place -> house cusps); data-only fallback: enter placements you already know, or read the houses as twelve standing rooms of a life. A chart is a mirror and a calendar, never a command. Rendered as a wheel by this repo's wheel.html.",
+  "cover_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Horoskop_Johannette_Maria_zu_Wied_1615_img01.jpg?width=800",
+  "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Horoskop_Johannette_Maria_zu_Wied_1615_img01.jpg?width=800",
+  "grammar_type": "sequence",
+  "provenance": "casting",
+  "dating": {
+    "label": "Undated — casting spread (positions, not interpretations). A spread has no source date; it resolves against whichever dated or contemporary interpretation grammar the reader chooses."
+  },
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "tags": [
+    "astrology",
+    "casting",
+    "spread",
+    "houses",
+    "wheel",
+    "recursive-eco"
+  ],
+  "casting": {
+    "draw": "derived",
+    "from": "western-astrology-canonical",
+    "allow_reversed": false,
+    "requires": [
+      "birth_datetime",
+      "birth_place"
+    ],
+    "fallback": "user_entered_placements",
+    "layout": "wheel",
+    "_note": "NEVER random: positions are the querent's own twelve houses. House cusps require an ephemeris-backed chart calculation (the family's engine: the Skyfield backend noted in nara's assets inventory / recursive-eco calculate-chart.py); until wired, the casting still works data-only as twelve fixed reflection rooms. Resolution: position-house-N binds to house-N of the `from` grammar, plus the derived sign-on-cusp and planets-in-house once a calc supplies them."
+  },
+  "items": [
+    {
+      "id": "position-house-1",
+      "name": "1. House of Self",
+      "level": 1,
+      "category": "position",
+      "position": 1,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-1"
+      },
+      "sections": {
+        "Position": "The 1st house of your chart — how you appear, begin, and enter — the mask that becomes the face. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "self"
+      ]
+    },
+    {
+      "id": "position-house-2",
+      "name": "2. House of Worth",
+      "level": 1,
+      "category": "position",
+      "position": 2,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-2"
+      },
+      "sections": {
+        "Position": "The 2nd house of your chart — what you own, earn, and value — resources and self-worth. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "worth"
+      ]
+    },
+    {
+      "id": "position-house-3",
+      "name": "3. House of Voice",
+      "level": 1,
+      "category": "position",
+      "position": 3,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-3"
+      },
+      "sections": {
+        "Position": "The 3rd house of your chart — how you speak, learn, and move nearby — siblings, errands, words. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "voice"
+      ]
+    },
+    {
+      "id": "position-house-4",
+      "name": "4. House of Root",
+      "level": 1,
+      "category": "position",
+      "position": 4,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-4"
+      },
+      "sections": {
+        "Position": "The 4th house of your chart — home, family, the private floor of the self. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "root"
+      ]
+    },
+    {
+      "id": "position-house-5",
+      "name": "5. House of Play",
+      "level": 1,
+      "category": "position",
+      "position": 5,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-5"
+      },
+      "sections": {
+        "Position": "The 5th house of your chart — creation, pleasure, children, the courage to be seen enjoying. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "play"
+      ]
+    },
+    {
+      "id": "position-house-6",
+      "name": "6. House of Craft",
+      "level": 1,
+      "category": "position",
+      "position": 6,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-6"
+      },
+      "sections": {
+        "Position": "The 6th house of your chart — work, health, service — the daily repair of a life. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "craft"
+      ]
+    },
+    {
+      "id": "position-house-7",
+      "name": "7. House of the Other",
+      "level": 1,
+      "category": "position",
+      "position": 7,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-7"
+      },
+      "sections": {
+        "Position": "The 7th house of your chart — partnership, marriage, open rivals — the mirror held by another. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "the other"
+      ]
+    },
+    {
+      "id": "position-house-8",
+      "name": "8. House of Depth",
+      "level": 1,
+      "category": "position",
+      "position": 8,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-8"
+      },
+      "sections": {
+        "Position": "The 8th house of your chart — what is shared, lost, and transformed — debts, intimacy, endings. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "depth"
+      ]
+    },
+    {
+      "id": "position-house-9",
+      "name": "9. House of Horizon",
+      "level": 1,
+      "category": "position",
+      "position": 9,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-9"
+      },
+      "sections": {
+        "Position": "The 9th house of your chart — long journeys, belief, higher learning — the far frame of meaning. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "horizon"
+      ]
+    },
+    {
+      "id": "position-house-10",
+      "name": "10. House of Work-in-the-World",
+      "level": 1,
+      "category": "position",
+      "position": 10,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-10"
+      },
+      "sections": {
+        "Position": "The 10th house of your chart — vocation, reputation, the visible summit. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "work-in-the-world"
+      ]
+    },
+    {
+      "id": "position-house-11",
+      "name": "11. House of the Many",
+      "level": 1,
+      "category": "position",
+      "position": 11,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-11"
+      },
+      "sections": {
+        "Position": "The 11th house of your chart — friends, allies, causes — hopes held in common. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "the many"
+      ]
+    },
+    {
+      "id": "position-house-12",
+      "name": "12. House of the Hidden",
+      "level": 1,
+      "category": "position",
+      "position": 12,
+      "maps_to": {
+        "kind": "house",
+        "house": "house-12"
+      },
+      "sections": {
+        "Position": "The 12th house of your chart — retreat, dreams, what works on you unseen. Resolved from your chart: the sign on this house's cusp and any planets standing in it.",
+        "Prompt": "Read this house's item in the interpretation set, then your own placements in it. What part of your life does this house name right now — and what would tending it, rather than obeying it, look like this season? The chart shows a room; you decide what happens in it."
+      },
+      "keywords": [
+        "house",
+        "the hidden"
+      ]
+    }
+  ],
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "role": "author",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "_recursive_eco_url": "https://flow.recursive.eco/g/90604ab1-c0c1-4e79-abfd-01e784014319?view=reading",
+  "_recursive_eco_edit_url": "https://flow.recursive.eco/create/dashboard/unified/new?id=90604ab1-c0c1-4e79-abfd-01e784014319",
+  "cover_image_credit": {
+    "title": "Nativity of Johannette Maria zu Wied — a square horoscope figure, the twelve houses as triangular compartments around a central panel",
+    "creator": "Unknown scribe, Upper County of Wied",
+    "date": "1615 (the nativity cast for a birth of 28 July 1615; the Commons file page notes watermark evidence suggesting the surviving manuscript may be c. 1633)",
+    "source": "Manuscript on paper, Obere Grafschaft Wied; sold through Zisska & Schauer",
+    "file_page": "https://commons.wikimedia.org/wiki/File:Horoskop_Johannette_Maria_zu_Wied_1615_img01.jpg",
+    "license": "Public domain (as stated on the Wikimedia Commons file page)",
+    "pd_basis": "Anonymous manuscript of 1615; Commons states public domain (author's life plus 100 years or fewer)",
+    "verified": "2026-07-27",
+    "_why_this_image": "An actual cast chart in the square form, its twelve house compartments drawn and filled — the thing this casting is a scaffold for, made by hand four centuries ago. It even names its ephemeris ('Motus Solis et Lunae ex Tychone Braheo'), which is the honest note this repo likes: a chart is only ever as good as the tables behind it. Replaces the Wellcome Iskandar horoscope the app proposed, which is CC BY 4.0, not public domain."
+  }
+}

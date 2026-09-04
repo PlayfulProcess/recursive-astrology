@@ -1,0 +1,277 @@
+{
+  "repo": "PlayfulProcess/Recursive-astrology",
+  "channel": "astrology",
+  "_note": "Derived index for channels.html — regenerate with scripts/build_collection.py; never hand-edit.",
+  "_dating_contract": "Every entry carries `provenance` ('record' = a dated historical source | 'contemporary' = a present-day synthesis/reading | 'casting' = a spread grammar) and `year_label` (a human string, always present). `year` (integer, negative = BCE) is present ONLY when provenance == 'record'. ABSENT `year` means genuinely undated: skip the grammar or bucket it as undated — never substitute a sentinel such as 9999. Source of truth is each grammar.json's own `provenance` + `dating` block; this file is derived by scripts/build_collection.py. See GRAMMAR_FORMAT.md 'Dating & provenance'.",
+  "grammars": [
+    {
+      "slug": "alan-leo",
+      "name": "Alan Leo's Astrology",
+      "description": "Classical astrological interpretations from Alan Leo (1860-1917), the father of modern astrology",
+      "grammar_type": "astrology",
+      "items": 38,
+      "categories": {
+        "sign": 12,
+        "planet": 9,
+        "house": 12,
+        "aspect": 5
+      },
+      "provenance": "record",
+      "year_label": "1899–1903 — Alan Leo (Astrology for All, 1899; How to Judge a Nativity, 1903)",
+      "year": 1899
+    },
+    {
+      "slug": "archetypal-pairs",
+      "name": "Archetypal Astrology — planetary pairs, after Tarnas",
+      "description": "Archetypal Astrology — the planets in relationship, not sign by sign but pair by pair",
+      "grammar_type": "astrology",
+      "items": 25,
+      "categories": {
+        "planet": 10,
+        "archetypal-pair": 15
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary synthesis, written 2026 after Richard Tarnas's archetypal astrology (Cosmos and Psyche, 2006). Not Tarnas's text; see _synthesis_note."
+    },
+    {
+      "slug": "aspects-commented",
+      "name": "The Aspects, Commented — Ptolemy · Lilly · Canonical",
+      "description": "The five classical (Ptolemaic) aspects — conjunction, sextile, square, trine, opposition — each as an item carrying tradition-sourced commentary from two public-domain voices plus a contemporary synth",
+      "grammar_type": "astrology",
+      "items": 5,
+      "categories": {
+        "aspect": 5
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary compilation. Its quoted layers are dated per item and per section (Ptolemy c. 150 CE in Ashmand's 1822 translation; Lilly 1647); the Canonical layer is present-day synthesis."
+    },
+    {
+      "slug": "astro-of-all-astros",
+      "name": "Astro of All Astros — every voice, one placement",
+      "description": "A generated meta-voice grammar aggregating every interpretation grammar in this repo into one navigable set: one item per planet, sign, and house, each carrying every voice's own reading of that place",
+      "grammar_type": "astrology",
+      "items": 31,
+      "categories": {
+        "planet": 7,
+        "sign": 12,
+        "house": 12
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — generated meta-voice projection over the voice grammars in this repo. The voices it stacks are dated individually (Ptolemy c. 150 CE, Lilly 1647, Bṛhat Jātaka c. 6th c. CE, Alan Leo 1899–1903); the projection itself is present-day and rebuilt on every run."
+    },
+    {
+      "slug": "casting-big-three",
+      "name": "The Big Three — a reflection casting",
+      "description": "A three-position casting that mirrors the tarot three-card spread so it works in the oracle from day one — but nothing here is drawn at random: every position resolves to an aspect of YOUR OWN chart (",
+      "grammar_type": "sequence",
+      "items": 3,
+      "categories": {
+        "position": 3
+      },
+      "provenance": "casting",
+      "year_label": "Undated — casting spread (positions, not interpretations). A spread has no source date; it resolves against whichever dated or contemporary interpretation grammar the reader chooses."
+    },
+    {
+      "slug": "casting-single-aspect",
+      "name": "One Aspect — the smallest casting",
+      "description": "The minimal casting, and the purest statement of this channel's rule: one position, filled by ANY single aspect of your own chart — a planet in its sign, a house and what stands in it, or an aspect be",
+      "grammar_type": "sequence",
+      "items": 1,
+      "categories": {
+        "position": 1
+      },
+      "provenance": "casting",
+      "year_label": "Undated — casting spread (positions, not interpretations). A spread has no source date; it resolves against whichever dated or contemporary interpretation grammar the reader chooses."
+    },
+    {
+      "slug": "casting-twelve-houses",
+      "name": "The Twelve Houses — a chart-wheel casting",
+      "description": "The chart-shaped casting: the twelve houses as twelve fixed positions on the wheel — the richer target the three-position casting graduates into",
+      "grammar_type": "sequence",
+      "items": 12,
+      "categories": {
+        "position": 12
+      },
+      "provenance": "casting",
+      "year_label": "Undated — casting spread (positions, not interpretations). A spread has no source date; it resolves against whichever dated or contemporary interpretation grammar the reader chooses."
+    },
+    {
+      "slug": "dignities-rulerships",
+      "name": "Essential Dignities & Rulerships — the traditional scheme, planet by planet and sign by sign",
+      "description": "Essential dignities and rulerships as a LENS grammar: the seven classical planets, each carrying its domicile(s), exaltation (with the traditional degree), detriment, and fall — and the twelve signs, ",
+      "grammar_type": "astrology",
+      "items": 19,
+      "categories": {
+        "planet": 7,
+        "sign": 12
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary lens compilation of the traditional dignities table. Its layers are dated in the item sections (Ptolemy c. 150 CE; Lilly 1647; public-domain enrichment from Raphael 1828 and Sepharial 1920); the table itself belongs to no single edition."
+    },
+    {
+      "slug": "dwarf-planets",
+      "name": "The Dwarf Planets — a symbol system caught in the act of forming",
+      "description": "On 24 August 2006, in a conference hall in Prague, a show of hands changed what Pluto is called",
+      "grammar_type": "astrology",
+      "items": 9,
+      "categories": {
+        "dwarf-planet": 6,
+        "reclassification": 3
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary synthesis, written 2026, about the IAU's 2006 reclassification and the astrological writing that has appeared since. The astronomy it reports is dated and sourced per item; the symbolism is a literature still forming, so the grammar carries no source year rather than pretending to one."
+    },
+    {
+      "slug": "historiographies-of-astrology",
+      "name": "Historiographies of Astrology",
+      "description": "A library of the major historiographical VIEWS of astrology — the eras and stances through which humans have read meaning into the sky, each presented faithfully in its own terms and held honestly to ",
+      "grammar_type": "custom",
+      "items": 14,
+      "categories": {
+        "view": 11,
+        "pattern": 3
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary historiographical survey (this repo's meta-grammar). Each view item carries its own era range in metadata.era; the survey itself is present-day."
+    },
+    {
+      "slug": "jyotisa-brhat-jataka",
+      "name": "Jyotiṣa — The Bṛhat Jātaka",
+      "description": "The nine grahas and twelve rāśis as taught in Varāhamihira's Bṛhat Jātaka (c",
+      "grammar_type": "astrology",
+      "items": 21,
+      "categories": {
+        "planet": 9,
+        "sign": 12
+      },
+      "provenance": "record",
+      "year_label": "c. 6th c. CE — Varāhamihira, Bṛhat Jātaka · tr. N. Chidambaram Iyer, 1885",
+      "year": 550
+    },
+    {
+      "slug": "mesopotamian-omens",
+      "name": "Mesopotamian Omen-Craft — The Seven Watched Powers",
+      "description": "The seven classical planet-gods of Babylonian and Assyrian celestial divination — Sin, Šamaš, Ištar, Nergal, Marduk, Ninurta, and Nabû — each with a sample omen-form drawn from public-domain 19th/earl",
+      "grammar_type": "astrology",
+      "items": 7,
+      "categories": {
+        "planet": 7
+      },
+      "provenance": "record",
+      "year_label": "c. 8th–7th c. BCE — Neo-Assyrian celestial omen reports (Thompson ed. 1900; Jastrow 1898)",
+      "year": -700
+    },
+    {
+      "slug": "planetary-myths",
+      "name": "Planetary Myths — the same sky, many readings",
+      "description": "One item per classical planet, carrying the myth that grew up around it in three unrelated traditions — Greco-Roman, Vedic (Jyotiṣa), and Babylonian/Mesopotamian — side by side, so the disagreement be",
+      "grammar_type": "custom",
+      "items": 7,
+      "categories": {
+        "planet": 7
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — 2026 research compilation across three traditions (Greco-Roman, Vedic, Babylonian). Not a primary-source translation; per-item confidence and inline source lines carry the sourcing."
+    },
+    {
+      "slug": "proctor-skeptical-astrology",
+      "name": "Proctor's Skeptical Astrology",
+      "description": "A critical examination of astrology based on Richard A",
+      "grammar_type": "astrology",
+      "items": 37,
+      "categories": {
+        "planet": 8,
+        "sign": 12,
+        "house": 12,
+        "aspect": 5
+      },
+      "provenance": "record",
+      "year_label": "1877 — R. A. Proctor, Myths and Marvels of Astronomy (text used: the 1896 'New Edition', Longmans, Green)",
+      "year": 1877
+    },
+    {
+      "slug": "tetrabiblos-ashmand",
+      "name": "Ptolemy's Tetrabiblos",
+      "description": "Classical Western astrology based on Claudius Ptolemy's Tetrabiblos (c",
+      "grammar_type": "astrology",
+      "items": 28,
+      "categories": {
+        "planet": 7,
+        "sign": 12,
+        "house": 4,
+        "aspect": 5
+      },
+      "provenance": "record",
+      "year_label": "c. 150 CE — Ptolemy, Tetrabiblos · tr. J. M. Ashmand, 1822",
+      "year": 150
+    },
+    {
+      "slug": "the-right-size",
+      "name": "The Right Size",
+      "description": "A reading on scale, awe, and the oldest shared calendar — in the spirit of How the Cards Can Work",
+      "grammar_type": "custom",
+      "items": 9,
+      "categories": {
+        "reading": 8,
+        "note": 1
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary reading (essay), built from course/the-right-size.mdx."
+    },
+    {
+      "slug": "three-doors",
+      "name": "Three Doors",
+      "description": "Reading the sky through the Trika — Parā, Parāparā, Aparā",
+      "grammar_type": "custom",
+      "items": 6,
+      "categories": {
+        "reading": 5,
+        "note": 1
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary reading (essay), built from course/three-doors.mdx."
+    },
+    {
+      "slug": "trika-lens",
+      "name": "The Trika Lens — three doors into a chart",
+      "description": "A way of reading the sky through the three goddesses of the Trika — Parā, Parāparā, and Aparā",
+      "grammar_type": "custom",
+      "items": 3,
+      "categories": {
+        "lens": 3
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary synthesis. The Trika triad it draws on is a real structure of non-dual Kashmir Shaivism, but mapping it onto chart-reading is this repo's own lens, not a dated teaching; see _synthesis_note."
+    },
+    {
+      "slug": "western-astrology-canonical",
+      "name": "Western Astrology — Canonical",
+      "description": "A canonical Western astrology grammar covering planets, signs, houses, and aspects with archetypal interpretations",
+      "grammar_type": "astrology",
+      "items": 43,
+      "categories": {
+        "planet": 13,
+        "sign": 12,
+        "house": 12,
+        "aspect": 6
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary community-authored synthesis in the psychological register, adopted as this channel's flagship interpretation set. Not a historical text."
+    },
+    {
+      "slug": "william-lilly-christian-astrology",
+      "name": "William Lilly's Christian Astrology",
+      "description": "The seven classical planets and the twelve zodiac signs as William Lilly (1602–1681) describes them in Christian Astrology (1647), the most influential English-language astrology text of the Renaissan",
+      "grammar_type": "astrology",
+      "items": 19,
+      "categories": {
+        "planet": 7,
+        "sign": 12
+      },
+      "provenance": "record",
+      "year_label": "1647 — William Lilly, Christian Astrology (first edition)",
+      "year": 1647
+    }
+  ],
+  "duplicates": []
+}

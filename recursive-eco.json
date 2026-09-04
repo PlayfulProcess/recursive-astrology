@@ -1,0 +1,26 @@
+{
+  "_note": "Channel manifest for recursive.eco. Makes this repo self-describing: recursive.eco imports it as a channel by reading this file from raw.githubusercontent.com/PlayfulProcess/Recursive-astrology/<default_branch>/recursive-eco.json. Declares the channel identity (rendered as a channel-document, document_data.is_channel=true), where its grammars live (grammars/<slug>/grammar.json), and the slug->UUID map (ids.json). Mirrors recursive-tarot/recursive-eco.json and nara/recursive-eco.json. See recursive-eco/docs/DESIGN-import-channel-from-github.md.",
+  "schema_version": 1,
+  "channel": {
+    "slug": "astrology",
+    "name": "The Recursive Astrology",
+    "type": "repo",
+    "icon": "🌙",
+    "gradient": "from-amber-50 to-indigo-100 dark:from-amber-950 dark:to-indigo-900",
+    "description": "The open library of astrology's history — the eras and stances through which humans have read meaning into the sky, held honestly to the record. Public-domain voice libraries, scholarship-grounded dossiers, and chart-aspect castings. A chart is a mirror and a calendar, never a command.",
+    "landing_url": "https://playfulprocess.github.io/Recursive-astrology/",
+    "hero": {
+      "title": "The Recursive Astrology",
+      "subtitle": "Read the sky to know yourself, not to be told your fate — five thousand years of meaning-making, held to the record.",
+      "body_md": "Every era here speaks in its own terms and is held honestly to the historical record — Babylonian omen-craft to the modern controlled test. The voice libraries are public domain (Ptolemy in the 1822 Ashmand translation, Alan Leo, the Victorian skeptics); every load-bearing claim is cited in the research dossiers.\n\nA chart is a mirror and a calendar, not a command: castings here reflect aspects of your own chart back to you — never a random draw, never a prediction. Built in the open and bound to its GitHub repo — fork it, correct it, or reflect with it."
+    }
+  },
+  "grammars": {
+    "paths": ["grammars/*/grammar.json"],
+    "exclude": [],
+    "_exclude_note": "Nothing excluded yet. The casting-* grammars are spread-grammars (positions, not interpretations) — the app's oracle reads them as castings per recursive-eco/docs/future_plan/DESIGN-oracle-app-spreads-as-grammars.md; they still import as channel members.",
+    "id_map": "ids.json"
+  },
+  "maintainers": ["pp@playfulprocess.com"],
+  "default_branch": "main"
+}

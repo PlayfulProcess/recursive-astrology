@@ -1,0 +1,230 @@
+{
+  "_note": "Slug -> recursive.eco grammar UUID (the deckId) for the astrology channel. Used by recursive.eco to bind repo grammars to their live rows and to build per-grammar links. _public_now lists the slugs that are is_public=true on recursive.eco (only public grammars import as channel members). Keep this updated when new grammars are created. Mirrors nara/ids.json and recursive-tarot/tarot/_eco_ids.json.",
+  "_preview_links": "Every grammar renders with no extra hosting: swap <id> for the UUID from `ids`. This channel's grammar_type param is 'astrology' (the viewer explicitly supports it — see recursive-eco/apps/landing/pages/grammar-viewer.html). Play = https://flow.recursive.eco/play?id=<id> | Edit = https://flow.recursive.eco/create/dashboard/unified/new?id=<id> | Cards = https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=<id> | Study = https://recursive.eco/pages/study-viewer.html?type=astrology&id=<id> | Tree = https://recursive.eco/pages/tree-viewer.html?type=astrology&id=<id> | Thumbnails = Cards + &layout=thumbnails",
+  "_public_now": [
+    "alan-leo",
+    "casting-big-three",
+    "casting-single-aspect",
+    "casting-twelve-houses",
+    "historiographies-of-astrology",
+    "jyotisa-brhat-jataka",
+    "proctor-skeptical-astrology",
+    "tetrabiblos-ashmand",
+    "western-astrology-canonical",
+    "william-lilly-christian-astrology",
+    "trika-lens",
+    "planetary-myths",
+    "three-doors",
+    "mesopotamian-omens",
+    "astro-of-all-astros",
+    "archetypal-pairs",
+    "aspects-commented",
+    "dignities-rulerships"
+  ],
+  "ids": {
+    "alan-leo": "6a50ce87-e54b-47f2-9fc5-70b19c06d179",
+    "casting-big-three": "bbcba06e-0a82-4959-ad69-439ac963bd54",
+    "casting-single-aspect": "d157cb7d-33d4-4cd2-82b8-77fc63c0e34f",
+    "casting-twelve-houses": "90604ab1-c0c1-4e79-abfd-01e784014319",
+    "historiographies-of-astrology": "ddffc0fa-7f05-49d1-82db-f2d636cf178e",
+    "proctor-skeptical-astrology": "7e0a9452-7d34-4ada-a311-229ba13ecbe7",
+    "tetrabiblos-ashmand": "043aae3c-e51b-4822-9828-e3e18ef9229b",
+    "western-astrology-canonical": "a0a21e50-807d-45ff-b2ab-13fbb4ae86be",
+    "trika-lens": "1484e8ef-5f2c-439c-aa73-bc69f56724ad",
+    "planetary-myths": "5d664bbf-309d-451a-8ccc-e123cf5fccd1",
+    "three-doors": "e3d00c5e-3d0e-4a11-9c4f-0d5b6a7c8d9e",
+    "mesopotamian-omens": "a1b2c3d4-2222-4a02-9e02-aa0000000002",
+    "astro-of-all-astros": "a1b2c3d4-4444-4a04-9e04-aa0000000004",
+    "archetypal-pairs": "a1b2c3d4-5555-4a05-9e05-aa0000000005",
+    "aspects-commented": "dee46a22-3848-433e-a793-8c7a2206e8cb",
+    "dignities-rulerships": "1ab72d9f-f283-475e-951a-1841215e1274",
+    "jyotisa-brhat-jataka": "64d62441-2cf3-4824-94b8-787d3e333ed4",
+    "william-lilly-christian-astrology": "54622c06-0a8d-4268-b020-3490ad5c5201",
+    "dwarf-planets": "c9057941-2073-4965-9e8d-b4315a0adf1d"
+  },
+  "preview_links": {
+    "_note": "Additive, per-slug mirror of the `_preview_links` template above (recursive-astrology/eco/landing-previews, Jul 6 2026) — one entry per grammar in grammars/*/grammar.json, kept in sync with index.html's 'Browse every grammar' gallery. Completed to full coverage in the Jul 2026 dating audit (it had drifted to 11 of 19 real grammars). `raw` always resolves (no UUID needed); `cards`/`study`/`tree`/`play` are null until the slug gets a UUID in `ids` above, at which point they can be filled in by substituting <id> into the `_preview_links` template. `casting` marks the three spread-grammars (positions, not interpretations — grouped separately on the landing page).",
+    "alan-leo": {
+      "raw": "grammars/alan-leo/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=6a50ce87-e54b-47f2-9fc5-70b19c06d179",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=6a50ce87-e54b-47f2-9fc5-70b19c06d179",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=6a50ce87-e54b-47f2-9fc5-70b19c06d179",
+      "play": "https://flow.recursive.eco/play?id=6a50ce87-e54b-47f2-9fc5-70b19c06d179",
+      "casting": false
+    },
+    "archetypal-pairs": {
+      "raw": "grammars/archetypal-pairs/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=a1b2c3d4-5555-4a05-9e05-aa0000000005",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=a1b2c3d4-5555-4a05-9e05-aa0000000005",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=a1b2c3d4-5555-4a05-9e05-aa0000000005",
+      "play": "https://flow.recursive.eco/play?id=a1b2c3d4-5555-4a05-9e05-aa0000000005",
+      "casting": false
+    },
+    "aspects-commented": {
+      "raw": "grammars/aspects-commented/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=dee46a22-3848-433e-a793-8c7a2206e8cb",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=dee46a22-3848-433e-a793-8c7a2206e8cb",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=dee46a22-3848-433e-a793-8c7a2206e8cb",
+      "play": "https://flow.recursive.eco/play?id=dee46a22-3848-433e-a793-8c7a2206e8cb",
+      "casting": false
+    },
+    "astro-of-all-astros": {
+      "raw": "grammars/astro-of-all-astros/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=a1b2c3d4-4444-4a04-9e04-aa0000000004",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=a1b2c3d4-4444-4a04-9e04-aa0000000004",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=a1b2c3d4-4444-4a04-9e04-aa0000000004",
+      "play": "https://flow.recursive.eco/play?id=a1b2c3d4-4444-4a04-9e04-aa0000000004",
+      "casting": false
+    },
+    "casting-big-three": {
+      "raw": "grammars/casting-big-three/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=bbcba06e-0a82-4959-ad69-439ac963bd54",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=bbcba06e-0a82-4959-ad69-439ac963bd54",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=bbcba06e-0a82-4959-ad69-439ac963bd54",
+      "play": "https://flow.recursive.eco/play?id=bbcba06e-0a82-4959-ad69-439ac963bd54",
+      "casting": true
+    },
+    "casting-single-aspect": {
+      "raw": "grammars/casting-single-aspect/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=d157cb7d-33d4-4cd2-82b8-77fc63c0e34f",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=d157cb7d-33d4-4cd2-82b8-77fc63c0e34f",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=d157cb7d-33d4-4cd2-82b8-77fc63c0e34f",
+      "play": "https://flow.recursive.eco/play?id=d157cb7d-33d4-4cd2-82b8-77fc63c0e34f",
+      "casting": true
+    },
+    "casting-twelve-houses": {
+      "raw": "grammars/casting-twelve-houses/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=90604ab1-c0c1-4e79-abfd-01e784014319",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=90604ab1-c0c1-4e79-abfd-01e784014319",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=90604ab1-c0c1-4e79-abfd-01e784014319",
+      "play": "https://flow.recursive.eco/play?id=90604ab1-c0c1-4e79-abfd-01e784014319",
+      "casting": true
+    },
+    "dignities-rulerships": {
+      "raw": "grammars/dignities-rulerships/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=1ab72d9f-f283-475e-951a-1841215e1274",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=1ab72d9f-f283-475e-951a-1841215e1274",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=1ab72d9f-f283-475e-951a-1841215e1274",
+      "play": "https://flow.recursive.eco/play?id=1ab72d9f-f283-475e-951a-1841215e1274",
+      "casting": false
+    },
+    "dwarf-planets": {
+      "raw": "grammars/dwarf-planets/grammar.json",
+      "cards": null,
+      "study": null,
+      "tree": null,
+      "play": null,
+      "casting": false
+    },
+    "historiographies-of-astrology": {
+      "raw": "grammars/historiographies-of-astrology/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=ddffc0fa-7f05-49d1-82db-f2d636cf178e",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=ddffc0fa-7f05-49d1-82db-f2d636cf178e",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=ddffc0fa-7f05-49d1-82db-f2d636cf178e",
+      "play": "https://flow.recursive.eco/play?id=ddffc0fa-7f05-49d1-82db-f2d636cf178e",
+      "casting": false
+    },
+    "jyotisa-brhat-jataka": {
+      "raw": "grammars/jyotisa-brhat-jataka/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=64d62441-2cf3-4824-94b8-787d3e333ed4",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=64d62441-2cf3-4824-94b8-787d3e333ed4",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=64d62441-2cf3-4824-94b8-787d3e333ed4",
+      "play": "https://flow.recursive.eco/play?id=64d62441-2cf3-4824-94b8-787d3e333ed4",
+      "casting": false
+    },
+    "mesopotamian-omens": {
+      "raw": "grammars/mesopotamian-omens/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=a1b2c3d4-2222-4a02-9e02-aa0000000002",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=a1b2c3d4-2222-4a02-9e02-aa0000000002",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=a1b2c3d4-2222-4a02-9e02-aa0000000002",
+      "play": "https://flow.recursive.eco/play?id=a1b2c3d4-2222-4a02-9e02-aa0000000002",
+      "casting": false
+    },
+    "planetary-myths": {
+      "raw": "grammars/planetary-myths/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=5d664bbf-309d-451a-8ccc-e123cf5fccd1",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=5d664bbf-309d-451a-8ccc-e123cf5fccd1",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=5d664bbf-309d-451a-8ccc-e123cf5fccd1",
+      "play": "https://flow.recursive.eco/play?id=5d664bbf-309d-451a-8ccc-e123cf5fccd1",
+      "casting": false
+    },
+    "proctor-skeptical-astrology": {
+      "raw": "grammars/proctor-skeptical-astrology/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=7e0a9452-7d34-4ada-a311-229ba13ecbe7",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=7e0a9452-7d34-4ada-a311-229ba13ecbe7",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=7e0a9452-7d34-4ada-a311-229ba13ecbe7",
+      "play": "https://flow.recursive.eco/play?id=7e0a9452-7d34-4ada-a311-229ba13ecbe7",
+      "casting": false
+    },
+    "tetrabiblos-ashmand": {
+      "raw": "grammars/tetrabiblos-ashmand/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=043aae3c-e51b-4822-9828-e3e18ef9229b",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=043aae3c-e51b-4822-9828-e3e18ef9229b",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=043aae3c-e51b-4822-9828-e3e18ef9229b",
+      "play": "https://flow.recursive.eco/play?id=043aae3c-e51b-4822-9828-e3e18ef9229b",
+      "casting": false
+    },
+    "the-right-size": {
+      "raw": "grammars/the-right-size/grammar.json",
+      "cards": null,
+      "study": null,
+      "tree": null,
+      "play": null,
+      "casting": false
+    },
+    "three-doors": {
+      "raw": "grammars/three-doors/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=e3d00c5e-3d0e-4a11-9c4f-0d5b6a7c8d9e",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=e3d00c5e-3d0e-4a11-9c4f-0d5b6a7c8d9e",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=e3d00c5e-3d0e-4a11-9c4f-0d5b6a7c8d9e",
+      "play": "https://flow.recursive.eco/play?id=e3d00c5e-3d0e-4a11-9c4f-0d5b6a7c8d9e",
+      "casting": false
+    },
+    "trika-lens": {
+      "raw": "grammars/trika-lens/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=1484e8ef-5f2c-439c-aa73-bc69f56724ad",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=1484e8ef-5f2c-439c-aa73-bc69f56724ad",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=1484e8ef-5f2c-439c-aa73-bc69f56724ad",
+      "play": "https://flow.recursive.eco/play?id=1484e8ef-5f2c-439c-aa73-bc69f56724ad",
+      "casting": false
+    },
+    "western-astrology-canonical": {
+      "raw": "grammars/western-astrology-canonical/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=a0a21e50-807d-45ff-b2ab-13fbb4ae86be",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=a0a21e50-807d-45ff-b2ab-13fbb4ae86be",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=a0a21e50-807d-45ff-b2ab-13fbb4ae86be",
+      "play": "https://flow.recursive.eco/play?id=a0a21e50-807d-45ff-b2ab-13fbb4ae86be",
+      "casting": false
+    },
+    "william-lilly-christian-astrology": {
+      "raw": "grammars/william-lilly-christian-astrology/grammar.json",
+      "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=54622c06-0a8d-4268-b020-3490ad5c5201",
+      "study": "https://recursive.eco/pages/study-viewer.html?type=astrology&id=54622c06-0a8d-4268-b020-3490ad5c5201",
+      "tree": "https://recursive.eco/pages/tree-viewer.html?type=astrology&id=54622c06-0a8d-4268-b020-3490ad5c5201",
+      "play": "https://flow.recursive.eco/play?id=54622c06-0a8d-4268-b020-3490ad5c5201",
+      "casting": false
+    }
+  },
+  "_retired_ids": {
+    "_note": "Graveyard record only — NOT an index. These directories were byte-level duplicates of a survivor (same item ids, same section text, same order; the only fields they carried that the survivor lacked were the exporter artifacts `number` and `section_labels`, both derivable from the survivor's array order and its own section keys). The directories were deleted on 2026-07-26 and every live reference to them was purged from `ids`, `_public_now`, `preview_links`, both _collection.json files, and scripts/. Their recursive.eco rows still exist and should be deleted there; the UUIDs are kept here ONLY so that cleanup is possible. Nothing may read this block as a slug index."
+  },
+  "_missing_ids": {
+    "_note": "On disk and in the collection, but with no recursive.eco UUID yet — no UUID is invented here. Add the real one when the grammar is created on recursive.eco.",
+    "slugs": [
+      "dwarf-planets",
+      "the-right-size"
+    ]
+  },
+  "_retired_app_rows": {
+    "archetypal-astrology-tarnas": {
+      "uuid": "05d27e85-61f3-44f8-86f1-a3e101a74b1b",
+      "why": "Byte-identical duplicate of the survivor; folder deleted from this repo Jul 26 2026. The app re-imported it and wrote this mapping back — the row should be deleted app-side.",
+      "survivor": "archetypal-pairs"
+    },
+    "mesopotamian-omen-craft": {
+      "uuid": "cfb7aafb-14e3-4aee-a906-8c10b87c8d8f",
+      "why": "Byte-identical duplicate of the survivor; folder deleted from this repo Jul 26 2026. The app re-imported it and wrote this mapping back — the row should be deleted app-side.",
+      "survivor": "mesopotamian-omens"
+    }
+  }
+}
