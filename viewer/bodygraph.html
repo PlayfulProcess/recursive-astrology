@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bodygraph — The Recursive Astrology</title>
+<meta name="description" content="The Human Design bodygraph, drawn large and clean from one exported renderer. Light a gate, a channel or a centre and export the drawing as SVG or PNG.">
+<link rel="icon" href="/viewer/favicon.png">
+<!--
+  viewer/bodygraph.html — the bodygraph on its own, from the module.
+  ============================================================================
+  Everything drawn here comes out of viewer/hd-render.js, the same file the
+  live chart in astrology-viewer.html draws with and the same file
+  scripts/export-glyphs.js writes the sixty-four gate glyphs from. This page
+  holds no tables, no geometry and no colours of its own: the palette below is
+  asked of the module (HDRender.paletteCSS) rather than restated, because a
+  restated palette is a palette that drifts.
+
+  THE URL IS THE STATE
+
+    ?gates=29             light gate 29
+    ?gates=29,41,30       light several
+    ?mode=gate            (default) the values are gate numbers
+    ?mode=channel         the values are channel ids — ?gates=20-34&mode=channel
+    ?mode=center          the values are centre ids — ?gates=sacral&mode=center
+    &design=20,34         light these from the Design side (red); a gate named
+                          in both lists reads as "both" (gold), exactly as in a
+                          real chart
+    &reading=activation   colour lit gates by the side that lit them (default)
+    &reading=center       drop that hue and read the board as nine centres
+    &legend=0             drop the legend strip and shorten the board
+    &theme=light|dark     pin a theme; omitted follows the reader's system
+
+  Every one of those is read in ONE place — readState() — and turned into the
+  module's two arguments in ONE place — activationsFromState() / optsFromState().
+  A later ?planets=… (the mandala's planetary overlay, which the viewer already
+  computes) is a third line in each: the page's shape does not have to change.
+-->
+<style>
+  /* Page chrome only. Every colour the DRAWING uses arrives from the module,
+     injected into #hd-palette at boot. */
+  :root{
+    --page:#faf7f0; --panel:#ffffff; --ink:#221f1a; --ink-soft:#4a4439;
+    --mut:#6b6457; --rule:#e7e1d6; --accent:#2f5d8a; --shadow:rgba(60,50,30,.09);
+  }
+  :root[data-page-theme="dark"]{
+    --page:#12111a; --panel:#1a1922; --ink:#e9e6f0; --ink-soft:#b9b4c6;
+    --mut:#9a95ab; --rule:#2b2a36; --accent:#6f9fd8; --shadow:rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--page); color:var(--ink); line-height:1.55;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:22px 16px 64px}
+  header.top{display:flex;align-items:flex-start;gap:12px;margin-bottom:6px}
+  .mark{flex:0 0 auto;color:var(--accent);margin-top:2px}
+  h1{font-size:1.3rem;line-height:1.25;margin:0;font-weight:650;letter-spacing:-.01em}
+  .sub{color:var(--mut);font-size:.86rem;margin:.35rem 0 0;max-width:62ch}
+  .sub a{color:var(--accent)}
+
+  .bar{
+    display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;
+    margin:20px 0 14px;padding:14px;border:1px solid var(--rule);
+    border-radius:14px;background:var(--panel);
+  }
+  .field{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .field label{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--mut)}
+  input[type=text],select{
+    font:inherit;font-size:.9rem;color:var(--ink);background:var(--page);
+    border:1px solid var(--rule);border-radius:9px;padding:7px 9px;min-width:0;
+  }
+  input[type=text]{width:15ch}
+  input[type=text]:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .grow{flex:1 1 120px}
+  .btns{display:flex;flex-wrap:wrap;gap:8px;margin-left:auto}
+  button{
+    font:inherit;font-size:.85rem;font-weight:550;color:var(--ink);
+    background:var(--panel);border:1px solid var(--rule);border-radius:9px;
+    padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;
+  }
+  button:hover{border-color:var(--accent);color:var(--accent)}
+  button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  button svg{flex:0 0 auto}
+
+  .stage{
+    border:1px solid var(--rule);border-radius:18px;background:var(--panel);
+    box-shadow:0 8px 30px var(--shadow);padding:14px 10px;
+    display:flex;justify-content:center;
+  }
+  .stage > svg{width:100%;max-width:520px;height:auto;display:block}
+  /* The drawing's second legend row explains the SELECTION layer — which gate
+     the reader has tapped. Nothing on this page is selectable, so the row would
+     be a legend for a thing that never happens. (In the calculator the same
+     rule hangs off .hd-focus; here it is simply always off.) */
+  .hd-legend-sel{display:none}
+  .caption{color:var(--mut);font-size:.8rem;margin:12px 2px 0}
+  .caption b{color:var(--ink-soft);font-weight:600}
+  .err{color:#c62f2d;font-size:.85rem;margin:10px 2px 0}
+  .foot{margin-top:26px;padding-top:14px;border-top:1px solid var(--rule);
+    color:var(--mut);font-size:.78rem}
+  .foot a{color:var(--accent)}
+  .foot code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95em}
+
+  @media (max-width:520px){
+    .wrap{padding:16px 12px 48px}
+    h1{font-size:1.15rem}
+    .btns{margin-left:0;width:100%}
+    .btns button{flex:1 1 auto;justify-content:center}
+    input[type=text]{width:100%}
+    .field.grow{flex:1 1 100%}
+  }
+  @media print{ .bar,.foot{display:none} .stage{border:0;box-shadow:none} }
+</style>
+<style id="hd-palette"></style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <span class="mark" aria-hidden="true">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 4a7 7 0 1 0 3 11 5.6 5.6 0 0 1-3-11z"/>
+        <path d="M8.5 4.5l.6 1.7 1.7.6-1.7.6-.6 1.7-.6-1.7-1.7-.6 1.7-.6z"/>
+      </svg>
+    </span>
+    <div>
+      <h1>Bodygraph</h1>
+      <p class="sub">Nine centres, thirty-six channels, sixty-four gates — drawn by
+        <a href="/viewer/hd-render.js">hd-render.js</a>, the same renderer the
+        <a href="/viewer/astrology-viewer.html">chart calculator</a> uses. Light a gate, a channel
+        or a centre, and take the drawing away as SVG or PNG.</p>
+    </div>
+  </header>
+
+  <div class="bar">
+    <div class="field grow">
+      <label for="keys">Light up</label>
+      <input type="text" id="keys" inputmode="text" autocomplete="off"
+             placeholder="29 or 29,41,30" aria-describedby="caption">
+    </div>
+    <div class="field">
+      <label for="mode">Read as</label>
+      <select id="mode">
+        <option value="gate">Gates</option>
+        <option value="channel">Channels</option>
+        <option value="center">Centres</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="reading">Colour</label>
+      <select id="reading">
+        <option value="activation">By activation</option>
+        <option value="center">By centre</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="theme">Theme</label>
+      <select id="theme">
+        <option value="">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+    <div class="btns">
+      <button type="button" id="dl-svg">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 4v11"/><path d="M8 11l4 4 4-4"/><path d="M5 19h14"/>
+        </svg>
+        Export SVG
+      </button>
+      <button type="button" id="dl-png">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/>
+          <circle cx="9" cy="10" r="1.6"/><path d="M4.5 17l4.5-4.5 3.5 3.5 3-2.5 4 3.5"/>
+        </svg>
+        Export PNG
+      </button>
+    </div>
+  </div>
+
+  <div class="stage" id="stage" role="img" aria-label="Human Design bodygraph"></div>
+  <p class="caption" id="caption"></p>
+  <p class="err" id="err" hidden></p>
+
+  <p class="foot">
+    The URL is the state: <code>?gates=29</code>, <code>?gates=20-34&amp;mode=channel</code>,
+    <code>?gates=sacral&amp;mode=center</code>, plus <code>&amp;design=</code>,
+    <code>&amp;reading=center</code>, <code>&amp;legend=0</code>, <code>&amp;theme=dark</code>.
+    The contract is written down in <a href="/docs/HD-RENDER.md">docs/HD-RENDER.md</a>.
+  </p>
+</div>
+
+<script src="/viewer/hd-render.js"></script>
+<script>
+(function () {
+  'use strict';
+  var T = HDRender.tables;
+  var $ = function (id) { return document.getElementById(id); };
+  var stage = $('stage'), caption = $('caption'), err = $('err');
+
+  // ---- state, in one place -------------------------------------------------
+  // A later ?planets= is one more line here and one more in optsFromState().
+  function readState() {
+    var q = new URLSearchParams(location.search);
+    var list = function (v) {
+      return (v || '').split(/[,\s]+/).map(function (s) { return s.trim(); }).filter(Boolean);
+    };
+    return {
+      keys: list(q.get('gates') || q.get('keys')),
+      design: list(q.get('design')),
+      mode: ({ gate: 1, channel: 1, center: 1 })[q.get('mode')] ? q.get('mode') : 'gate',
+      reading: q.get('reading') === 'center' ? 'center' : 'activation',
+      legend: q.get('legend') !== '0',
+      theme: (q.get('theme') === 'light' || q.get('theme') === 'dark') ? q.get('theme') : ''
+    };
+  }
+
+  // A key list plus a mode becomes a set of gate numbers. The expansion reads
+  // the module's own tables, so "the Sacral's gates" and "channel 20-34's gates"
+  // mean here exactly what they mean in the chart.
+  function gatesFor(keys, mode) {
+    var out = [], bad = [];
+    keys.forEach(function (k) {
+      if (mode === 'channel') {
+        var id = k.split('-').map(Number).sort(function (a, b) { return a - b; }).join('-');
+        if (!T.HD_CHANNELS[id]) { bad.push(k); return; }
+        id.split('-').forEach(function (g) { out.push(Number(g)); });
+      } else if (mode === 'center') {
+        var c = T.HD_CENTERS[String(k).toLowerCase()];
+        if (!c) { bad.push(k); return; }
+        c.gates.forEach(function (g) { out.push(g); });
+      } else {
+        var n = Number(k);
+        if (!(n >= 1 && n <= 64)) { bad.push(k); return; }
+        out.push(n);
+      }
+    });
+    return { gates: out, bad: bad };
+  }
+
+  // ---- the module's two arguments ------------------------------------------
+  function activationsFromState(s) {
+    var lit = gatesFor(s.keys, s.mode);
+    var des = gatesFor(s.design, s.mode);
+    var gates = {};
+    lit.gates.forEach(function (g) { gates[g] = { personality: true, design: false }; });
+    des.gates.forEach(function (g) {
+      gates[g] = { personality: !!(gates[g] && gates[g].personality), design: true };
+    });
+    // channels and centres are left out on purpose: the module derives them by
+    // the same rule the chart uses, which is the point of having one renderer.
+    return { activations: { gates: gates }, bad: lit.bad.concat(des.bad) };
+  }
+
+  function optsFromState(s, forExport) {
+    return {
+      interactive: false,          // nothing on this page to call back into
+      legend: s.legend,
+      legendMode: s.reading,
+      embedStyle: !!forExport,     // an exported file carries its own colours
+      theme: forExport ? resolvedTheme(s) : 'auto'
+    };
+  }
+
+  function resolvedTheme(s) {
+    if (s.theme) return s.theme;
+    return (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches)
+      ? 'dark' : 'light';
+  }
+
+  // ---- paint ---------------------------------------------------------------
+  var state = readState();
+
+  function paint() {
+    var theme = resolvedTheme(state);
+    // The DRAWING's palette comes from the module, never restated here.
+    $('hd-palette').textContent = HDRender.paletteCSS(theme);
+    document.documentElement.setAttribute('data-page-theme', theme);
+
+    var built = activationsFromState(state);
+    stage.innerHTML = HDRender.renderBodygraph(built.activations, optsFromState(state, false));
+
+    var A = HDRender.normalize(built.activations);
+    var n = A.gates.size;
+    caption.innerHTML = n
+      ? '<b>' + n + '</b> gate' + (n === 1 ? '' : 's') + ' lit · <b>' + A.channels.size +
+        '</b> channel' + (A.channels.size === 1 ? '' : 's') + ' defined · <b>' + A.centers.size +
+        '</b> centre' + (A.centers.size === 1 ? '' : 's') + ' defined'
+      : 'Nothing lit — the bare framework: nine centres, thirty-six channels, sixty-four gates.';
+    if (built.bad.length) {
+      err.hidden = false;
+      err.textContent = 'Not in the framework, ignored: ' + built.bad.join(', ');
+    } else { err.hidden = true; err.textContent = ''; }
+
+    // keep the URL honest so the page can be shared as it stands
+    var q = new URLSearchParams();
+    if (state.keys.length) q.set('gates', state.keys.join(','));
+    if (state.design.length) q.set('design', state.design.join(','));
+    if (state.mode !== 'gate') q.set('mode', state.mode);
+    if (state.reading !== 'activation') q.set('reading', state.reading);
+    if (!state.legend) q.set('legend', '0');
+    if (state.theme) q.set('theme', state.theme);
+    var qs = q.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+  }
+
+  // ---- controls ------------------------------------------------------------
+  $('keys').value = state.keys.join(',');
+  $('mode').value = state.mode;
+  $('reading').value = state.reading;
+  $('theme').value = state.theme;
+
+  var reKey = null;
+  $('keys').addEventListener('input', function (e) {
+    var v = e.target.value;
+    clearTimeout(reKey);
+    reKey = setTimeout(function () {
+      state.keys = v.split(/[,\s]+/).map(function (s) { return s.trim(); }).filter(Boolean);
+      paint();
+    }, 220);
+  });
+  $('mode').addEventListener('change', function (e) { state.mode = e.target.value; paint(); });
+  $('reading').addEventListener('change', function (e) { state.reading = e.target.value; paint(); });
+  $('theme').addEventListener('change', function (e) { state.theme = e.target.value; paint(); });
+  if (window.matchMedia) {
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+      if (!state.theme) paint();
+    });
+  }
+
+  // ---- export -------------------------------------------------------------
+  // Both exports re-render with embedStyle, because a file that leaves this
+  // page has no stylesheet to inherit --bgc-* from.
+  function exportSVG() {
+    return HDRender.renderBodygraph(
+      activationsFromState(state).activations, optsFromState(state, true));
+  }
+  function filename(ext) {
+    var bits = state.keys.length ? state.keys.join('-') : 'framework';
+    return 'bodygraph-' + state.mode + '-' + bits + '.' + ext;
+  }
+  function save(blob, name) {
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+  }
+  $('dl-svg').addEventListener('click', function () {
+    save(new Blob([exportSVG()], { type: 'image/svg+xml;charset=utf-8' }), filename('svg'));
+  });
+  $('dl-png').addEventListener('click', function () {
+    // A 400-wide board at 3x is legible at print size without being enormous.
+    var scale = 3, vb = state.legend ? { w: 400, h: 692 } : { w: 400, h: 638 };
+    var svg = exportSVG();
+    var img = new Image();
+    img.onload = function () {
+      var c = document.createElement('canvas');
+      c.width = vb.w * scale; c.height = vb.h * scale;
+      var ctx = c.getContext('2d');
+      // the drawing is transparent by design; give the raster the page's own
+      // plate so a PNG dropped on a white slide still reads in dark mode
+      ctx.fillStyle = HDRender.PALETTE[resolvedTheme(state)]['--bgc-plate'];
+      ctx.fillRect(0, 0, c.width, c.height);
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+      c.toBlob(function (b) { if (b) save(b, filename('png')); }, 'image/png');
+    };
+    img.onerror = function () {
+      err.hidden = false;
+      err.textContent = 'The browser would not rasterise the drawing — Export SVG still works.';
+    };
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  });
+
+  paint();
+})();
+</script>
+</body>
+</html>

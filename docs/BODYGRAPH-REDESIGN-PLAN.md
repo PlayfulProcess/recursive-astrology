@@ -1,5 +1,13 @@
 # Bodygraph redesign — plan (approve before building)
 
+> **Closed, 6 September 2026.** The redesign shipped; the harmony renderer now derives gate
+> positions from the centre shapes rather than from a `GATE_POSITIONS` table, so that table no
+> longer exists. `viewer/bodygraph-mockup.html` — which step 1 below asked to retire, and which was
+> carrying the repo's last copies of `GATE_POSITIONS` and `HD_CHANNELS` — has been **deleted**. The
+> framework and both drawings live in `viewer/hd-render.js`, one copy, exported; the standalone
+> preview this plan wanted is `viewer/bodygraph.html`, driven by that module. See
+> [`HD-RENDER.md`](HD-RENDER.md). Kept below as the record of how the redesign was decided.
+
 The builder's verdict on the first mockup: **ugly, and the channels don't follow the right
 framework.** Both true. This plan says why, and what to actually do.
 
