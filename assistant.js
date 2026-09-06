@@ -22,6 +22,13 @@
   s.onload = function () {
     if (!window.RecursiveAssistant) return;
     window.RecursiveAssistant.init({
+      // Declare explicitly rather than relying on the launcher's auto-detection:
+      // this site is light-only by policy (CLAUDE.md), so there is nothing to
+      // detect. Without this, the launcher falls through to the VISITOR's
+      // `prefers-color-scheme`, and anyone whose phone is in dark mode got a
+      // dark assistant panel on a light-only page (reported Sep 6 2026 from a
+      // phone). Same declaration recursive-tarot has carried since Aug 2026.
+      theme: 'light',
       buildSrc: function () {
         var params = new URLSearchParams(location.search);
         var grammarId = params.get('grammar_id') || params.get('id') || '';

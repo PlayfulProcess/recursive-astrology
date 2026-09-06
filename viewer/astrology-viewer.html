@@ -11,6 +11,32 @@
          for a postMessage from the parent frame so a live theme toggle in Journal
          re-themes this iframe without a reload. -->
     <script>
+        // ── Serve the calculator only from the origin that HAS the calculator ──
+        // This one file is published twice from this repo: on Vercel
+        // (chart.recursive.eco), which runs api/calculate_chart.py and answers
+        // POST /api/calculate-chart; and on GitHub Pages (astro.recursive.eco),
+        // which is static and answers 405 to any POST. CHART_API_URL below is
+        // RELATIVE, so on Pages the form silently fails — reported Sep 6 2026
+        // from a phone, and reproducible: POST /api/calculate-chart returns 405
+        // on astro.recursive.eco and 400 (the function parsing an empty body) on
+        // chart.recursive.eco.
+        //
+        // Rather than teach the page to call across origins (which would need
+        // CORS on the Python function and a credentialed cross-origin POST), the
+        // Pages copy hands the visitor to the working copy, carrying the query
+        // string and hash so a shared ?chartId= link still lands where it meant
+        // to. Same-origin embedding is unaffected: flow iframes the Vercel copy.
+        (function () {
+            var API_HOSTS = ['chart.recursive.eco', 'localhost', '127.0.0.1'];
+            var h = location.hostname;
+            if (API_HOSTS.indexOf(h) !== -1) return;              // already on the real one
+            if (h.indexOf('vercel.app') !== -1) return;           // preview deployments have the API too
+            if (h !== 'astro.recursive.eco') return;              // unknown host: leave it alone
+            location.replace('https://chart.recursive.eco' + location.pathname + location.search + location.hash);
+        })();
+    </script>
+
+    <script>
         (function () {
             function resolveTheme() {
                 try {
