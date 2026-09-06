@@ -1,5 +1,43 @@
 # Changelog — The Recursive Astrology
 
+## September 6, 2026 — One bodygraph renderer, exported, so copies cannot drift
+
+The bodygraph and the mandala lived inline in `viewer/astrology-viewer.html`, eleven thousand lines
+down, with the framework tables beside them. The sibling I Ching site wanted sixty-four "gate N lit"
+glyphs, could not import anything out of an HTML file, and so **copied the tables out and redrew the
+board**. The copy drifted — its centres and its channel routing stopped being the ones here, which
+took a long time to get right.
+
+The fix is structural, not a patch: **one renderer, exported, and everything consumes it.**
+
+- **`viewer/hd-render.js`** — the framework (`HD_GATE_ORDER`, `HD_GATE_SEQUENCE`, `HD_CENTERS`,
+  `HD_GATE_TO_CENTER`, `HD_CHANNELS`, `HD_GATE_MEANINGS`) and both drawings, as pure functions:
+  `renderBodygraph(activations, opts)` and `renderMandala(activations, opts)`, each returning an
+  SVG string. No `document`, no `window`, no module-scope chart state — Node can `require` it. A
+  UMD footer means the same file works as a plain `<script>` and under Node.
+- **The viewer uses the module.** `renderHDBodygraph()` and `renderHDMandala()` keep their names
+  and every call site; their bodies are now four lines that hand the module the chart plus the
+  presentation state the page holds. The tables in the HTML became aliases — there is **exactly one
+  copy of every table in the repo**, and `grep` says so.
+- **`viewer/bodygraph.html`** — the board on its own, large and clean, light and dark, down to
+  375px. `?gates=29`, `?gates=20-34&mode=channel`, `?gates=sacral&mode=center`, `&design=`,
+  `&reading=center`, `&legend=0`, `&theme=`. **Export SVG** and **Export PNG**. The URL is the
+  state, read in one place, so a later `?planets=` is one more line and not a new page.
+- **`scripts/export-glyphs.js`** — no dependencies; writes `img/hd/gate-01.svg` … `gate-64.svg`
+  from the same module. The I Ching repo consumes those and deletes its own generator.
+- **`docs/HD-RENDER.md`** — the contract written down for the repos that consume it.
+
+**The drawing did not change.** Before touching anything, the inline functions were run in Node
+against a fixed sample chart and their output saved; afterwards the module was run against the same
+sample. Five renders — bodygraph in both legend readings, mandala bare, with planets, and sidereal —
+came back **byte-for-byte identical**, and the module's derivation of defined channels and centres
+matches the chart's own. Silent drift is the thing this work exists to prevent, so it was not going
+to be introduced by the work itself.
+
+Two dead things went with it: `calculateGatePositions()`, a second and disagreeing gate layout that
+nothing had called in months, and `viewer/bodygraph-mockup.html`, an approval mockup carrying the
+repo's last copies of `GATE_POSITIONS` and `HD_CHANNELS` — which its own plan had asked to retire.
+
 ## August 6, 2026 — Two layers, and only two, on the bodygraph
 
 Tapping a gate turned the rest of the board into a scatter of coloured smudges. Red, gold and
