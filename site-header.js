@@ -3,7 +3,7 @@
  * isolated via Shadow DOM so each page's own CSS can't override it. Path-aware so
  * links resolve from any nesting depth.
  *
- * Usage:  <script src="<path-to>site-header.js?v=46"></script>
+ * Usage:  <script src="<path-to>site-header.js?v=48"></script>
  *         <site-header active="cards"></site-header>
  * The `active` attribute highlights the matching tab; if omitted it is
  * auto-detected from the filename.
@@ -60,7 +60,17 @@
   // Path back to the repo root — depth-aware so it works at any nesting
   // (root, /viewer/, /viewers/, /pages/).
   const _segs = location.pathname.split('/').filter(Boolean);
-  const PFX = '../'.repeat(Math.max(0, _segs.length - 1));
+  // Sep 7 2026: the chart calculator is served from a SECOND origin
+  // (chart.recursive.eco, Vercel) that carries only viewer/ + api/ — none of the
+  // library files this header links to or fetches (index.html, icons.js,
+  // grammars/_collection.json). Relative paths there 404 silently, which is why
+  // the chart page had no header at all once the library began linking straight
+  // to it. Off the library origin, every path resolves absolutely to the library
+  // instead; GitHub Pages answers with `Access-Control-Allow-Origin: *`, so the
+  // collection fetch works cross-origin too.
+  const LIBRARY_ORIGIN = 'https://astro.recursive.eco/';
+  const _onLibrary = /(^|\.)astro\.recursive\.eco$|^localhost$|^127\.0\.0\.1$|github\.io$/.test(location.hostname);
+  const PFX = _onLibrary ? '../'.repeat(Math.max(0, _segs.length - 1)) : LIBRARY_ORIGIN;
 
   // Figure-capture mode (?fig=1): hide a viewer's own control toolbars so headless
   // screenshots become clean static plates. Only when explicitly asked.

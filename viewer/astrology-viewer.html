@@ -1946,17 +1946,26 @@
     <script>
         // The calculator deploys standalone on Vercel (chart.recursive.eco)
         // WITHOUT the library files — ../site-header.js and ../assistant.js
-        // exist only on the Pages library origin (astro.recursive.eco). Loading
-        // them unconditionally 404'd in the console on every flow embed
-        // (Jul 23 2026). Load the site shell only where the library serves it;
-        // embed mode hides <site-header> via CSS anyway.
+        // exist only on the Pages library origin (astro.recursive.eco). Until
+        // Sep 7 2026 the shell was simply skipped off the library origin, which
+        // was fine while nobody landed on chart.recursive.eco directly; once the
+        // library started linking straight to the calculator (commit 6834836,
+        // because the Pages copy cannot calculate) the chart page lost its header
+        // — no way back to Home / Views / Grammars. Now the header loads from the
+        // library origin by absolute URL wherever this page is served, and
+        // site-header.js v48 resolves its own links absolutely off-library.
+        // Embed mode hides <site-header> via CSS anyway. The assistant launcher
+        // stays library-only: it is a second script with its own network calls
+        // and nobody asked for it on the calculator.
         (function () {
             var isEmbed = new URLSearchParams(location.search).get('embed') === 'true';
+            if (isEmbed) return;
             var hasLibraryShell = /(^|\.)astro\.recursive\.eco$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
-            if (isEmbed || !hasLibraryShell) return;
+            var base = hasLibraryShell ? '../' : 'https://astro.recursive.eco/';
             var sh = document.createElement('script');
-            sh.src = '../site-header.js?v=47';
+            sh.src = base + 'site-header.js?v=48';
             document.head.appendChild(sh);
+            if (!hasLibraryShell) return;
             var as = document.createElement('script');
             as.src = '../assistant.js';
             as.defer = true;
