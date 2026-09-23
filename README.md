@@ -153,13 +153,15 @@ This repo is dual-licensed, deliberately:
 
 | What | License |
 |------|---------|
-| **Code** — `viewer/`, `viewers/`, `api/`, `scripts/`, `course/`, any HTML/CSS/JS/Python | **MIT** — see [`LICENSE`](LICENSE) |
-| **Content** — `grammars/`, `research/`, `docs/`, `plan/`, `voices.json`, and the prose in the Markdown files | **CC-BY-SA-4.0** — see [`LICENSE-CONTENT.txt`](LICENSE-CONTENT.txt) |
+| **Code** — `viewer/`, `viewers/`, `api/`, `scripts/`, `tests/`, `course/*.js`, any HTML/CSS/JS/Python, and the format spec `GRAMMAR_FORMAT.md` | **Apache-2.0** — see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) |
+| **Content** — `grammars/`, `research/`, `docs/`, `plan/`, `voices.json`, the course text (`course/*.mdx`), and the prose in the Markdown files | **CC-BY-SA-4.0** — see [`LICENSE-CONTENT.txt`](LICENSE-CONTENT.txt) |
+| **The names** "recursive.eco" and "Recursive", and the spiral logo | Not licensed — see [`TRADEMARKS.md`](TRADEMARKS.md) |
 
-MIT on the code because the calculation engine is the part worth passing on freely: it is built on
+Apache-2.0 on the code because the calculation engine is the part worth passing on freely: it is built on
 [Skyfield](https://rhodesmill.org/skyfield/) and JPL's DE421 rather than the Swiss Ephemeris, so it
 carries no copyleft obligation inherited from a dependency — a rare thing in open astrology
-software, and more useful to everyone unencumbered. CC-BY-SA on the content because a commons of
+software, and more useful to everyone unencumbered. (The code was MIT until September 2026; copies
+taken before then keep that licence.) CC-BY-SA on the content because a commons of
 readings should stay a commons: reuse it, adapt it, keep it open, and keep the attribution.
 
 One third-party library is vendored into the code: **AstroChart** (AstroDraw/AstroChart 3.0.2,

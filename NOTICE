@@ -1,0 +1,17 @@
+recursive.eco Astrology (recursive-astrology)
+Copyright 2026 PlayfulProcess
+
+The code in this repository is licensed under the Apache License, Version 2.0
+(see LICENSE). The content is not: the grammars, the research dossiers, the
+docs, the plans and the course text are licensed under CC-BY-SA-4.0 (see
+LICENSE-CONTENT.txt), and public-domain source texts and illustrations stay
+public domain. The README "Licensing" section says which files fall on which
+side of the split.
+
+The names "recursive.eco" and "Recursive" and the recursive.eco spiral logo
+are used as trademarks and are not licensed. See TRADEMARKS.md.
+
+This repository includes third-party software:
+- AstroChart (AstroDraw/AstroChart 3.0.2), viewer/assets/js/vendor/astrochart.js,
+  Copyright (c) 2015-2025 Arthur Fücher, MIT License. Its licence text ships
+  beside it at viewer/assets/js/vendor/astrochart.LICENSE.txt.
