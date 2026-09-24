@@ -182,6 +182,8 @@ Third-party material referenced by the grammars carries its own status: the sour
 (Ashmand's Ptolemy, Alan Leo, Proctor) and the illustrations are **public domain**, each recorded
 with its provenance in the item that uses it. Astronomical data comes from JPL's DE421 ephemeris.
 Human Design terminology describes a system originated by Ra Uru Hu; the calculations here are our
-own and the prose is being rewritten in our own words.
+own, and since August 2026 every gate, channel, centre and type description is our own writing (see
+the August 5 2026 CHANGELOG entry). Jovian Archive holds trademarks in Human Design names (among them
+Rave BodyGraph and Rave Mandala); this project is not affiliated with or endorsed by it. See `NOTICE`.
 
 Author: **PlayfulProcess**. Built with [Claude](https://claude.com/claude-code) for recursive.eco.

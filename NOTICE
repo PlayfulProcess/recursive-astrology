@@ -11,6 +11,16 @@ side of the split.
 The names "recursive.eco" and "Recursive" and the recursive.eco spiral logo
 are used as trademarks and are not licensed. See TRADEMARKS.md.
 
+Third-party names: "Human Design" names a system originated by Ra Uru Hu.
+Jovian Archive Media Pte. Ltd. claims trademarks in it: it holds a US
+registration for JOVIAN ARCHIVE HUMAN DESIGN and describes Rave BodyGraph
+and Rave Mandala as its registered trademarks. This project is not
+affiliated with or endorsed by Jovian Archive. The name is used only to say
+which system the calculations refer to. The gate, channel, centre and type
+descriptions are this project's own writing, and no Human Design
+publication is reproduced. The bodygraph and mandala drawings are drawn by
+this project's own renderer (viewer/hd-render.js).
+
 This repository includes third-party software:
 - AstroChart (AstroDraw/AstroChart 3.0.2), viewer/assets/js/vendor/astrochart.js,
   Copyright (c) 2015-2025 Arthur Fücher, MIT License. Its licence text ships
