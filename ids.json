@@ -172,6 +172,14 @@
       "play": null,
       "casting": false
     },
+    "the-structure-of-the-sky": {
+      "raw": "grammars/the-structure-of-the-sky/grammar.json",
+      "cards": null,
+      "study": null,
+      "tree": null,
+      "play": null,
+      "casting": false
+    },
     "three-doors": {
       "raw": "grammars/three-doors/grammar.json",
       "cards": "https://recursive.eco/pages/grammar-viewer.html?type=astrology&id=e3d00c5e-3d0e-4a11-9c4f-0d5b6a7c8d9e",
@@ -212,7 +220,8 @@
     "_note": "On disk and in the collection, but with no recursive.eco UUID yet — no UUID is invented here. Add the real one when the grammar is created on recursive.eco.",
     "slugs": [
       "dwarf-planets",
-      "the-right-size"
+      "the-right-size",
+      "the-structure-of-the-sky"
     ]
   },
   "_retired_app_rows": {

@@ -34,6 +34,7 @@
         "dwarf-planets",
         "historiographies-of-astrology",
         "planetary-myths",
+        "the-structure-of-the-sky",
         "trika-lens",
         "western-astrology-canonical"
       ]
@@ -290,6 +291,20 @@
       "path": "grammars/the-right-size/grammar.json",
       "provenance": "contemporary",
       "year_label": "Undated — contemporary reading (essay), built from course/the-right-size.mdx."
+    },
+    {
+      "slug": "the-structure-of-the-sky",
+      "name": "The Structure of the Sky — elements, modalities, signs, houses and aspects",
+      "type": "astrology",
+      "branch": "synthesis",
+      "is_meta": false,
+      "default_preview": "tree",
+      "items": 77,
+      "cover_image_url": null,
+      "blurb": "The skeleton the voices hang on, as plain data: not a voice, not an interpretation. Leaves: the four elements, three modalities, two polarities, ten planets (seven classical; Uranus, Neptune and Pluto…",
+      "path": "grammars/the-structure-of-the-sky/grammar.json",
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary reference compilation, 2026. The schemes it tabulates are dated item by item in their 'Traditions' sections (Ptolemy c. 150 CE; the Bṛhat Jātaka c. 6th c. CE; Lilly 1647; Alan Leo 1899–1903)."
     },
     {
       "slug": "three-doors",

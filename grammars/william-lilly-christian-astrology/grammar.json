@@ -57,7 +57,10 @@
           "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
           "edition_note": "Both are page-scan OCR of the 1647 first edition, not the modern re-typed Houlding/Ascella edition hosted at skyscript.co.uk (which is explicitly marked not public domain and was not quoted from). Long-s (ſ→s) and period ligatures silently modernized by this session's editor; any word illegible or inconsistent across both scans is marked … rather than guessed — see the Saturn item for the one example (a Saturn epithet between 'Chronos' and 'Falcifer') and the Jupiter item for a partially-legible epithet ('Zeus') reconstructed only because both independent OCR runs converged on it.",
           "chapter": "Book I, 'Of the Planet Saturn, and his Signification.'"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-saturn",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "What Lilly reads",
@@ -94,7 +97,10 @@
           "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
           "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
           "chapter": "Book I, 'Of the Planet Jupiter, and his Signification.'"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-jupiter",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "What Lilly reads",
@@ -131,7 +137,10 @@
           "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
           "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
           "chapter": "Book I, 'Of the Planet Mars, and his Several Significations.'"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mars",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "What Lilly reads",
@@ -168,7 +177,10 @@
           "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
           "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
           "chapter": "Book I, 'Of the Sun, His General and Particular Significations.'"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-sun",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "What Lilly reads",
@@ -205,7 +217,10 @@
           "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
           "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
           "chapter": "Book I, 'Of the Planet Venus, and her Several Significations.'"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-venus",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "What Lilly reads",
@@ -242,7 +257,10 @@
           "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
           "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
           "chapter": "Book I, 'Of Mercury, His Signification, Nature and Property.'"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mercury",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "What Lilly reads",
@@ -279,7 +297,10 @@
           "source_site": "https://archive.org/details/b30338724 (Wellcome Library copy of the 1647 first edition, ABBYY-OCR djvu.txt fetched directly this session) cross-checked against https://archive.org/details/ChristianAstrologyByWilliamLilly (a second independently scanned 1647-edition copy, also fetched this session)",
           "edition_note": "Same two 1647-edition archive.org scans as the Saturn item (see that item's metadata.source for the full editorial note on spelling modernization).",
           "chapter": "Book I, 'Of the Moon, Her Properties and Significations.'"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-moon",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "What Lilly reads",
@@ -329,7 +350,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aries",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -379,7 +403,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-taurus",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -429,7 +456,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-gemini",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -479,7 +509,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-cancer",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -530,7 +563,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-leo",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -580,7 +616,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-virgo",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -630,7 +669,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-libra",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -680,7 +722,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-scorpio",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -730,7 +775,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-sagittarius",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -780,7 +828,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-capricorn",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -830,7 +881,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aquarius",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",
@@ -880,7 +934,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Printed 1549/1560, Fabricius died 1571; Commons file page states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-pisces",
+        "deck": "The Structure of the Sky"
       },
       "section_labels": [
         "In the text",

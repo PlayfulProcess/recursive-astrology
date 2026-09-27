@@ -42,7 +42,10 @@
         "nature": "neutral",
         "orb": 8,
         "confidence": "high",
-        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD, Gutenberg #70850), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), paraphrased"
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD, Gutenberg #70850), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), paraphrased",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-conjunction",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -70,7 +73,10 @@
         "nature": "soft",
         "orb": 6,
         "confidence": "medium",
-        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrases via secondary reproduction"
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrases via secondary reproduction",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-sextile",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -98,7 +104,10 @@
         "nature": "hard",
         "orb": 7,
         "confidence": "medium",
-        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrase via secondary reproduction"
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrase via secondary reproduction",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-square",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -126,7 +135,10 @@
         "nature": "soft",
         "orb": 8,
         "confidence": "medium",
-        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrases via secondary reproduction"
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrases via secondary reproduction",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-trine",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -154,7 +166,10 @@
         "nature": "hard",
         "orb": 8,
         "confidence": "medium",
-        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrase via secondary reproduction"
+        "_source": "Ptolemy, Tetrabiblos (Ashmand tr. 1822, PD), quotes via grammars/tetrabiblos-ashmand; Lilly, Christian Astrology (1647, PD), phrase via secondary reproduction",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-opposition",
+        "deck": "The Structure of the Sky"
       }
     }
   ],

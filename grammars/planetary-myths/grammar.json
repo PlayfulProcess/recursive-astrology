@@ -43,7 +43,10 @@
         "vedic_graha": "Sūrya",
         "babylonian_deity": "Shamash / Utu",
         "confidence": "medium",
-        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-sun",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -72,7 +75,10 @@
         "vedic_graha": "Chandra (Soma)",
         "babylonian_deity": "Nanna / Sin",
         "confidence": "medium",
-        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-moon",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -110,7 +116,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Ancient sculpture; Commons file page states public domain",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mercury",
+        "deck": "The Structure of the Sky"
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_Hermes_Chiaramonti.jpg?width=800"
     },
@@ -149,7 +158,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Ancient sculpture; Commons file page states public domain",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-venus",
+        "deck": "The Structure of the Sky"
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venus_de_Milo_Louvre_Ma399.jpg?width=800"
     },
@@ -177,7 +189,10 @@
         "vedic_graha": "Mangala (Aṅgāraka)",
         "babylonian_deity": "Nergal",
         "confidence": "medium",
-        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mars",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -204,7 +219,10 @@
         "vedic_graha": "Bṛhaspati (Guru)",
         "babylonian_deity": "Marduk",
         "confidence": "medium",
-        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations."
+        "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-jupiter",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -241,7 +259,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Goya died 1828; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-saturn",
+        "deck": "The Structure of the Sky"
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg?width=800"
     }

@@ -66,6 +66,13 @@ history is the record of humans reading meaning *into* the sky; that history is 
   linking `theme.css`.
 - **A leaf** is an item with `sections`. **A pattern** is an item with `composite_of: [ids]` — that's
   how the historiographical structure emerges without a database.
+- **The one cross-link pattern** (the same as recursive-tarot's): an item links to an item in
+  another grammar with `metadata.source_deck` (the target's slug), `metadata.source_item_id` (the
+  target item's id) and `metadata.deck` (a human label). `viewers/cards.html` renders it as an
+  "Open in …" pill. Don't invent another link field. (`metadata.source_grammars` is provenance for
+  copied content, not navigation.) Since Sep 27 2026 every sign, planet, house and aspect item in
+  the voice grammars links this way to `grammars/the-structure-of-the-sky`; a new voice grammar
+  should do the same.
 
 ## Before you commit
 

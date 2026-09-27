@@ -1,0 +1,2556 @@
+{
+  "name": "The Structure of the Sky — elements, modalities, signs, houses and aspects",
+  "description": "The skeleton the voices hang on, as plain data: not a voice, not an interpretation. Leaves: the four elements, three modalities, two polarities, ten planets (seven classical; Uranus, Neptune and Pluto marked modern), twelve houses and the aspects. Emergences, by composite_of: every sign is its element + modality + polarity; the triplicities and the modality groups are their signs; the houses group as angular / succedent / cadent, as six axes, four quadrants and four halves. Relations that are not 'made of' — rulers, exaltation, detriment, fall, triplicity rulers, opposites — sit in metadata. Each item's 'Traditions' section says which traditions use it, cited to a public-domain text already in this repo (Ptolemy tr. Ashmand 1822, Lilly 1647, Alan Leo, the Bṛhat Jātaka tr. Iyer 1885) or to research/bibliography.bib; where no citation was found, the claim was left out. ASPECTS ARE RELATIONSHIPS BETWEEN PLACEMENTS: a chart's aspects are computed from where its planets stand, never stored — the aspect items here define the relationship, they do not belong to any chart. CROSS-LINKS: every sign, planet, house and aspect item in the voice grammars carries metadata.source_deck = 'the-structure-of-the-sky', metadata.source_item_id = the id here, metadata.deck = 'The Structure of the Sky' — the one cross-link pattern, which the cards viewer renders as an 'Open in …' pill. How an AI reads with this grammar: CLAUDE-AI-INSTRUCTIONS.md. Under the creed: a chart is a mirror and a calendar, never a command — structure describes where things stand; it predicts nothing.",
+  "grammar_type": "astrology",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "default_preview": "tree",
+  "tags": [
+    "astrology",
+    "structure",
+    "elements",
+    "modalities",
+    "triplicities",
+    "houses",
+    "aspects",
+    "dignities",
+    "reference",
+    "recursive-eco"
+  ],
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — contemporary reference compilation, 2026. The schemes it tabulates are dated item by item in their 'Traditions' sections (Ptolemy c. 150 CE; the Bṛhat Jātaka c. 6th c. CE; Lilly 1647; Alan Leo 1899–1903)."
+  },
+  "_category_roles": {
+    "element": "modifier",
+    "modality": "modifier",
+    "polarity": "modifier",
+    "triplicity": "emergence",
+    "quadruplicity": "emergence",
+    "house-group": "emergence",
+    "axis": "emergence",
+    "quadrant": "emergence",
+    "hemisphere": "emergence",
+    "zodiac": "emergence",
+    "house-system": "emergence",
+    "planet-group": "emergence"
+  },
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Claudius Ptolemy, Tetrabiblos, trans. J. M. Ashmand (1822)",
+        "role": "source text (public domain) — Book I chs. 6-7, 12-16, 19-22 read in full from Project Gutenberg #70850 on 2026-09-27",
+        "link": "https://www.gutenberg.org/ebooks/70850"
+      },
+      {
+        "name": "William Lilly, Christian Astrology (1647)",
+        "role": "source text (public domain) — house division, sign classes, triplicity table and aspect definitions read from the archive.org OCR scan on 2026-09-27; sign sentences via grammars/william-lilly-christian-astrology",
+        "link": "https://archive.org/details/ChristianAstrologyByWilliamLilly"
+      },
+      {
+        "name": "Alan Leo, Astrology for All (1899) and How to Judge a Nativity (1903)",
+        "role": "source texts (public domain; author d. 1917) — via grammars/alan-leo and its archive.org scans",
+        "link": "https://archive.org/details/astrologyforall00leogoog"
+      },
+      {
+        "name": "Varāhamihira, Bṛhat Jātaka, trans. N. Chidambaram Iyer (1885)",
+        "role": "source text (public domain) — via grammars/jyotisa-brhat-jataka",
+        "link": "https://archive.org/details/wg1079"
+      },
+      {
+        "name": "PlayfulProcess",
+        "role": "compiled as a structure grammar for The Recursive Astrology, Sep 2026",
+        "link": "https://recursive.eco"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "the-zodiac",
+      "name": "The zodiac",
+      "category": "zodiac",
+      "level": 4,
+      "sort_order": 0,
+      "composite_of": [
+        "triplicity-fire",
+        "triplicity-earth",
+        "triplicity-air",
+        "triplicity-water"
+      ],
+      "keywords": [
+        "zodiac",
+        "tropical",
+        "sidereal",
+        "signs"
+      ],
+      "sections": {
+        "Structure": "Twelve signs of 30° each around the ecliptic, the Sun's yearly path. Each sign is one element, one modality and one polarity; the four triplicities hold all twelve, and so do the three modality groups — two ways of cutting the same circle.",
+        "Traditions": "- Tropical: Ptolemy takes 'the sign of Aries, which commences at the vernal equinox' as the beginning of the circle, so the signs follow the seasons — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 12. Ashmand's note 42 adds that the stars have moved while the signs have not.\n- Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "zodiacs": [
+          "tropical",
+          "sidereal"
+        ]
+      }
+    },
+    {
+      "id": "element-fire",
+      "name": "Fire",
+      "category": "element",
+      "level": 1,
+      "sort_order": 1,
+      "keywords": [
+        "fire",
+        "element",
+        "triplicity"
+      ],
+      "sections": {
+        "Structure": "Fire is one of the four elements. Three signs carry it — Aries, Leo, Sagittarius — each four signs (120°) from the next, so the three draw an equilateral triangle on the circle: that triangle is the fire triplicity (see the item 'Fire triplicity'). All three fire signs are masculine. Signs of one element meet by trine; fire and air signs meet by sextile and opposition.",
+        "Traditions": "- Lilly names this triangle the 'Fiery Triplicity', and gives its signs the qualities hot and dry — William Lilly, *Christian Astrology* (1647) [@lilly1647]; wording as quoted sign by sign in grammars/william-lilly-christian-astrology.\n- Alan Leo uses the same element names for the triplicities — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Ptolemy groups the same three signs as his first triplicity, but names it by number, by sex and by wind, not by element — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21."
+      },
+      "metadata": {
+        "element": "Fire",
+        "signs": [
+          "Aries",
+          "Leo",
+          "Sagittarius"
+        ],
+        "polarity": "masculine",
+        "qualities_lilly": "hot and dry"
+      }
+    },
+    {
+      "id": "element-earth",
+      "name": "Earth",
+      "category": "element",
+      "level": 1,
+      "sort_order": 2,
+      "keywords": [
+        "earth",
+        "element",
+        "triplicity"
+      ],
+      "sections": {
+        "Structure": "Earth is one of the four elements. Three signs carry it — Taurus, Virgo, Capricorn — each four signs (120°) from the next, so the three draw an equilateral triangle on the circle: that triangle is the earth triplicity (see the item 'Earth triplicity'). All three earth signs are feminine. Signs of one element meet by trine; earth and water signs meet by sextile and opposition.",
+        "Traditions": "- Lilly names this triangle the 'Earthly Triplicity', and gives its signs the qualities cold and dry — William Lilly, *Christian Astrology* (1647) [@lilly1647]; wording as quoted sign by sign in grammars/william-lilly-christian-astrology.\n- Alan Leo uses the same element names for the triplicities — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Ptolemy groups the same three signs as his second triplicity, but names it by number, by sex and by wind, not by element — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21."
+      },
+      "metadata": {
+        "element": "Earth",
+        "signs": [
+          "Taurus",
+          "Virgo",
+          "Capricorn"
+        ],
+        "polarity": "feminine",
+        "qualities_lilly": "cold and dry"
+      }
+    },
+    {
+      "id": "element-air",
+      "name": "Air",
+      "category": "element",
+      "level": 1,
+      "sort_order": 3,
+      "keywords": [
+        "air",
+        "element",
+        "triplicity"
+      ],
+      "sections": {
+        "Structure": "Air is one of the four elements. Three signs carry it — Gemini, Libra, Aquarius — each four signs (120°) from the next, so the three draw an equilateral triangle on the circle: that triangle is the air triplicity (see the item 'Air triplicity'). All three air signs are masculine. Signs of one element meet by trine; air and fire signs meet by sextile and opposition.",
+        "Traditions": "- Lilly names this triangle the 'Airy (aery) Triplicity', and gives its signs the qualities hot and moist — William Lilly, *Christian Astrology* (1647) [@lilly1647]; wording as quoted sign by sign in grammars/william-lilly-christian-astrology.\n- Alan Leo uses the same element names for the triplicities — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Ptolemy groups the same three signs as his third triplicity, but names it by number, by sex and by wind, not by element — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21."
+      },
+      "metadata": {
+        "element": "Air",
+        "signs": [
+          "Gemini",
+          "Libra",
+          "Aquarius"
+        ],
+        "polarity": "masculine",
+        "qualities_lilly": "hot and moist"
+      }
+    },
+    {
+      "id": "element-water",
+      "name": "Water",
+      "category": "element",
+      "level": 1,
+      "sort_order": 4,
+      "keywords": [
+        "water",
+        "element",
+        "triplicity"
+      ],
+      "sections": {
+        "Structure": "Water is one of the four elements. Three signs carry it — Cancer, Scorpio, Pisces — each four signs (120°) from the next, so the three draw an equilateral triangle on the circle: that triangle is the water triplicity (see the item 'Water triplicity'). All three water signs are feminine. Signs of one element meet by trine; water and earth signs meet by sextile and opposition.",
+        "Traditions": "- Lilly names this triangle the 'Watry Triplicity', and gives its signs the qualities cold and moist — William Lilly, *Christian Astrology* (1647) [@lilly1647]; wording as quoted sign by sign in grammars/william-lilly-christian-astrology.\n- Alan Leo uses the same element names for the triplicities — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Ptolemy groups the same three signs as his fourth triplicity, but names it by number, by sex and by wind, not by element — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21."
+      },
+      "metadata": {
+        "element": "Water",
+        "signs": [
+          "Cancer",
+          "Scorpio",
+          "Pisces"
+        ],
+        "polarity": "feminine",
+        "qualities_lilly": "cold and moist"
+      }
+    },
+    {
+      "id": "modality-cardinal",
+      "name": "Cardinal",
+      "category": "modality",
+      "level": 1,
+      "sort_order": 5,
+      "keywords": [
+        "cardinal",
+        "modality",
+        "quadruplicity",
+        "quality"
+      ],
+      "sections": {
+        "Structure": "The cardinal signs are the four whose first degree the Sun reaches at an equinox or a solstice — Aries, Cancer, Libra, Capricorn — so each opens a season. The four are each three signs (90°) apart, so they form a square on the circle: every sign of one modality meets the others by square or by opposition, one of each element.",
+        "Traditions": "- Ptolemy splits this group in two: Cancer and Capricorn are *tropical* (the Sun 'seems to turn' there, at the solstices), Aries and Libra *equinoctial* (day and night equal) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 14.\n- Lilly: 'moveable' and 'cardinal', because the Sun's entry into them opens the quarters of the year — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the signs.\n- Bṛhat Jātaka: 'Aries, Cancer, Libra and Capricorn are movable signs' (cara) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 11.\n- Alan Leo calls the three groups cardinal, fixed and mutable — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo."
+      },
+      "metadata": {
+        "modality": "Cardinal",
+        "signs": [
+          "Aries",
+          "Cancer",
+          "Libra",
+          "Capricorn"
+        ],
+        "names": {
+          "ptolemy_1822": "tropical + equinoctial",
+          "lilly_1647": "moveable (also cardinal)",
+          "brhat_jataka": "movable (cara)",
+          "alan_leo": "cardinal"
+        }
+      }
+    },
+    {
+      "id": "modality-fixed",
+      "name": "Fixed",
+      "category": "modality",
+      "level": 1,
+      "sort_order": 6,
+      "keywords": [
+        "fixed",
+        "modality",
+        "quadruplicity",
+        "quality"
+      ],
+      "sections": {
+        "Structure": "The fixed signs are the four that follow the cardinal ones — Taurus, Leo, Scorpio, Aquarius — the middle month of each season. The four are each three signs (90°) apart, so they form a square on the circle: every sign of one modality meets the others by square or by opposition, one of each element.",
+        "Traditions": "- Ptolemy: *fixed*, because while the Sun is in them the season begun in the sign before 'is then more firmly established' — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 14.\n- Lilly: 'fixed', the season being then fixed and plainly felt — William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Bṛhat Jātaka: 'Taurus, Leo, Scorpio and Aquarius are fixed signs' (sthira) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 11.\n- Alan Leo calls the three groups cardinal, fixed and mutable — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo."
+      },
+      "metadata": {
+        "modality": "Fixed",
+        "signs": [
+          "Taurus",
+          "Leo",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "names": {
+          "ptolemy_1822": "fixed",
+          "lilly_1647": "fixed",
+          "brhat_jataka": "fixed (sthira)",
+          "alan_leo": "fixed"
+        }
+      }
+    },
+    {
+      "id": "modality-mutable",
+      "name": "Mutable",
+      "category": "modality",
+      "level": 1,
+      "sort_order": 7,
+      "keywords": [
+        "mutable",
+        "modality",
+        "quadruplicity",
+        "quality"
+      ],
+      "sections": {
+        "Structure": "The mutable signs are the four that close each season — Gemini, Virgo, Sagittarius, Pisces — lying between a fixed sign and the next cardinal one. The four are each three signs (90°) apart, so they form a square on the circle: every sign of one modality meets the others by square or by opposition, one of each element.",
+        "Traditions": "- Ptolemy: *bicorporeal*, placed between the fixed and the tropical signs and sharing the properties of both — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 14.\n- Lilly: 'common', also 'by-corporal or double-bodied' — William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Bṛhat Jātaka: 'common signs' (dvisvabhāva), said to be 'both movable and fixed' — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 11.\n- Alan Leo calls the three groups cardinal, fixed and mutable — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo."
+      },
+      "metadata": {
+        "modality": "Mutable",
+        "signs": [
+          "Gemini",
+          "Virgo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "names": {
+          "ptolemy_1822": "bicorporeal",
+          "lilly_1647": "common (bi-corporal, double-bodied)",
+          "brhat_jataka": "common, or dual (dvisvabhāva)",
+          "alan_leo": "mutable"
+        }
+      }
+    },
+    {
+      "id": "polarity-masculine",
+      "name": "Masculine (diurnal)",
+      "category": "polarity",
+      "level": 1,
+      "sort_order": 8,
+      "keywords": [
+        "masculine",
+        "polarity",
+        "diurnal",
+        "odd"
+      ],
+      "sections": {
+        "Structure": "The twelve signs alternate, one masculine, one feminine, starting with Aries as masculine. The masculine signs are the odd-numbered ones — Aries, Gemini, Leo, Libra, Sagittarius, Aquarius — which are the fire and air signs. The traditional words are kept here as the sources' own terms.",
+        "Traditions": "- Ptolemy: 'six are called masculine and diurnal, and six feminine and nocturnal', 'arranged in alternate order … as the day is followed by the night'. He also reports a minority practice that starts the count from the rising sign instead of from Aries — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 15.\n- Lilly keeps the pairing: masculine and diurnal signs — William Lilly, *Christian Astrology* (1647) [@lilly1647]; see the sign chapters quoted in grammars/william-lilly-christian-astrology.\n- Bṛhat Jātaka: 'the odd signs are all malefic and masculine', the even signs 'benefic and feminine' — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 11."
+      },
+      "metadata": {
+        "polarity": "masculine",
+        "also_called": "diurnal",
+        "parity": "odd",
+        "signs": [
+          "Aries",
+          "Gemini",
+          "Leo",
+          "Libra",
+          "Sagittarius",
+          "Aquarius"
+        ]
+      }
+    },
+    {
+      "id": "polarity-feminine",
+      "name": "Feminine (nocturnal)",
+      "category": "polarity",
+      "level": 1,
+      "sort_order": 9,
+      "keywords": [
+        "feminine",
+        "polarity",
+        "nocturnal",
+        "even"
+      ],
+      "sections": {
+        "Structure": "The twelve signs alternate, one feminine, one masculine, starting with Aries as masculine. The feminine signs are the even-numbered ones — Taurus, Cancer, Virgo, Scorpio, Capricorn, Pisces — which are the earth and water signs. The traditional words are kept here as the sources' own terms.",
+        "Traditions": "- Ptolemy: 'six are called masculine and diurnal, and six feminine and nocturnal', 'arranged in alternate order … as the day is followed by the night'. He also reports a minority practice that starts the count from the rising sign instead of from Aries — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 15.\n- Lilly keeps the pairing: feminine and nocturnal signs — William Lilly, *Christian Astrology* (1647) [@lilly1647]; see the sign chapters quoted in grammars/william-lilly-christian-astrology.\n- Bṛhat Jātaka: 'the odd signs are all malefic and masculine', the even signs 'benefic and feminine' — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 11."
+      },
+      "metadata": {
+        "polarity": "feminine",
+        "also_called": "nocturnal",
+        "parity": "even",
+        "signs": [
+          "Taurus",
+          "Cancer",
+          "Virgo",
+          "Scorpio",
+          "Capricorn",
+          "Pisces"
+        ]
+      }
+    },
+    {
+      "id": "sign-aries",
+      "name": "Aries",
+      "symbol": "♈",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 10,
+      "composite_of": [
+        "element-fire",
+        "modality-cardinal",
+        "polarity-masculine"
+      ],
+      "keywords": [
+        "aries",
+        "sign",
+        "fire",
+        "cardinal",
+        "masculine"
+      ],
+      "sections": {
+        "Structure": "Aries is the 1st sign: **fire** + **cardinal** + **masculine** — the only sign with that element and that modality. It shares its element with Leo and Sagittarius (trine), its modality with Cancer and Capricorn (square) and Libra (opposition). Libra, its opposite, has the same modality and polarity and the paired element (air).",
+        "Relations": "- Ruler: Mars (classical); modern practice unchanged\n- Exaltation: Sun\n- Detriment: Venus\n- Fall: Saturn\n- Triplicity rulers — Ptolemy: Sun by day, Jupiter by night; Lilly: Sun by day, Jupiter by night\n- Opposite sign: Libra",
+        "Traditions": "- Ptolemy: an *equinoctial* sign (Book I ch. 14), masculine and diurnal (ch. 15), of his first triplicity (ch. 21), the house of Mars (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Ptolemy starts the zodiac here, 'the sign of Aries, which commences at the vernal equinox' — the tropical zodiac, tied to the seasons rather than the stars — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 12.\n- Lilly: moveable, masculine, diurnal, of the fiery triplicity and the East — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-aries).\n- Alan Leo: 'This sign governs the head and face, hence the consciousness making the character of the Aries individual will always express itself through the head; this sign is the head of the fiery triplicity, and belongs to the cardinal signs' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Meṣa, lord Mars; a movable sign, odd and masculine, its trigon read to the East — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Aries",
+        "number": 1,
+        "element": "Fire",
+        "modality": "Cardinal",
+        "polarity": "masculine",
+        "ruler": "Mars",
+        "exaltation": "Sun",
+        "detriment": "Venus",
+        "fall": "Saturn",
+        "triplicity_rulers_ptolemy": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "opposite": "Libra",
+        "rasi": "Meṣa",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-taurus",
+      "name": "Taurus",
+      "symbol": "♉",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 11,
+      "composite_of": [
+        "element-earth",
+        "modality-fixed",
+        "polarity-feminine"
+      ],
+      "keywords": [
+        "taurus",
+        "sign",
+        "earth",
+        "fixed",
+        "feminine"
+      ],
+      "sections": {
+        "Structure": "Taurus is the 2nd sign: **earth** + **fixed** + **feminine** — the only sign with that element and that modality. It shares its element with Virgo and Capricorn (trine), its modality with Leo and Aquarius (square) and Scorpio (opposition). Scorpio, its opposite, has the same modality and polarity and the paired element (water).",
+        "Relations": "- Ruler: Venus (classical); modern practice unchanged\n- Exaltation: Moon\n- Detriment: Mars\n- Fall: none in the classical table\n- Triplicity rulers — Ptolemy: Venus by day, Moon by night; Lilly: Venus by day, Moon by night\n- Opposite sign: Scorpio",
+        "Traditions": "- Ptolemy: a *fixed* sign (Book I ch. 14), feminine and nocturnal (ch. 15), of his second triplicity (ch. 21), the house of Venus (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: fixed, feminine, nocturnal, of the earthly triplicity and the South — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-taurus).\n- Alan Leo: 'This sign is the first of the earthy triplicity and the first of the fixed signs, and in this sign is concealed will and desire, both of which express themselves, more or less, in the character of the Taureans' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Vṛṣabha, lord Venus; a fixed sign, even and feminine, its trigon read to the South — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Taurus",
+        "number": 2,
+        "element": "Earth",
+        "modality": "Fixed",
+        "polarity": "feminine",
+        "ruler": "Venus",
+        "exaltation": "Moon",
+        "detriment": "Mars",
+        "fall": null,
+        "triplicity_rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "opposite": "Scorpio",
+        "rasi": "Vṛṣabha",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-gemini",
+      "name": "Gemini",
+      "symbol": "♊",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 12,
+      "composite_of": [
+        "element-air",
+        "modality-mutable",
+        "polarity-masculine"
+      ],
+      "keywords": [
+        "gemini",
+        "sign",
+        "air",
+        "mutable",
+        "masculine"
+      ],
+      "sections": {
+        "Structure": "Gemini is the 3rd sign: **air** + **mutable** + **masculine** — the only sign with that element and that modality. It shares its element with Libra and Aquarius (trine), its modality with Virgo and Pisces (square) and Sagittarius (opposition). Sagittarius, its opposite, has the same modality and polarity and the paired element (fire).",
+        "Relations": "- Ruler: Mercury (classical); modern practice unchanged\n- Exaltation: none in the classical table\n- Detriment: Jupiter\n- Fall: none in the classical table\n- Triplicity rulers — Ptolemy: Saturn by day, Mercury by night; Lilly: Saturn by day, Mercury by night\n- Opposite sign: Sagittarius",
+        "Traditions": "- Ptolemy: a *bicorporeal* sign (Book I ch. 14), masculine and diurnal (ch. 15), of his third triplicity (ch. 21), the house of Mercury (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: common, masculine, diurnal, of the airy triplicity and the West — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-gemini).\n- Alan Leo: 'This is the first sign of the airy triplicity, also the first of the mutable signs' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Mithuna, lord Mercury; a common sign, odd and masculine, its trigon read to the West — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Gemini",
+        "number": 3,
+        "element": "Air",
+        "modality": "Mutable",
+        "polarity": "masculine",
+        "ruler": "Mercury",
+        "exaltation": null,
+        "detriment": "Jupiter",
+        "fall": null,
+        "triplicity_rulers_ptolemy": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "opposite": "Sagittarius",
+        "rasi": "Mithuna",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-cancer",
+      "name": "Cancer",
+      "symbol": "♋",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 13,
+      "composite_of": [
+        "element-water",
+        "modality-cardinal",
+        "polarity-feminine"
+      ],
+      "keywords": [
+        "cancer",
+        "sign",
+        "water",
+        "cardinal",
+        "feminine"
+      ],
+      "sections": {
+        "Structure": "Cancer is the 4th sign: **water** + **cardinal** + **feminine** — the only sign with that element and that modality. It shares its element with Scorpio and Pisces (trine), its modality with Aries and Libra (square) and Capricorn (opposition). Capricorn, its opposite, has the same modality and polarity and the paired element (earth).",
+        "Relations": "- Ruler: Moon (classical); modern practice unchanged\n- Exaltation: Jupiter\n- Detriment: Saturn\n- Fall: Mars\n- Triplicity rulers — Ptolemy: Venus by day, Moon by night, with Mars; Lilly: Mars by day and night\n- Opposite sign: Capricorn",
+        "Traditions": "- Ptolemy: a *tropical* sign (Book I ch. 14), feminine and nocturnal (ch. 15), of his fourth triplicity (ch. 21), the house of Moon (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: moveable, feminine, nocturnal, of the watry triplicity and the North — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-cancer).\n- Alan Leo: 'It is the first of the watery triplicity and the second of the cardinal signs' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Karka, lord Moon; a movable sign, even and feminine, its trigon read to the North — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Cancer",
+        "number": 4,
+        "element": "Water",
+        "modality": "Cardinal",
+        "polarity": "feminine",
+        "ruler": "Moon",
+        "exaltation": "Jupiter",
+        "detriment": "Saturn",
+        "fall": "Mars",
+        "triplicity_rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon",
+          "with": "Mars"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Mars",
+          "night": "Mars"
+        },
+        "opposite": "Capricorn",
+        "rasi": "Karka",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-leo",
+      "name": "Leo",
+      "symbol": "♌",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 14,
+      "composite_of": [
+        "element-fire",
+        "modality-fixed",
+        "polarity-masculine"
+      ],
+      "keywords": [
+        "leo",
+        "sign",
+        "fire",
+        "fixed",
+        "masculine"
+      ],
+      "sections": {
+        "Structure": "Leo is the 5th sign: **fire** + **fixed** + **masculine** — the only sign with that element and that modality. It shares its element with Aries and Sagittarius (trine), its modality with Taurus and Scorpio (square) and Aquarius (opposition). Aquarius, its opposite, has the same modality and polarity and the paired element (air).",
+        "Relations": "- Ruler: Sun (classical); modern practice unchanged\n- Exaltation: none in the classical table\n- Detriment: Saturn\n- Fall: none in the classical table\n- Triplicity rulers — Ptolemy: Sun by day, Jupiter by night; Lilly: Sun by day, Jupiter by night\n- Opposite sign: Aquarius",
+        "Traditions": "- Ptolemy: a *fixed* sign (Book I ch. 14), masculine and diurnal (ch. 15), of his first triplicity (ch. 21), the house of Sun (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: fixed, masculine, diurnal, of the fiery triplicity and the East — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-leo).\n- Alan Leo: 'Leo is the middle sign of the maternal trinity, the second of the fiery triplicity, and also the second of the fixed signs, therefore it may be said to hold the central point in the zodiac' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Siṃha, lord Sun; a fixed sign, odd and masculine, its trigon read to the East — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Leo",
+        "number": 5,
+        "element": "Fire",
+        "modality": "Fixed",
+        "polarity": "masculine",
+        "ruler": "Sun",
+        "exaltation": null,
+        "detriment": "Saturn",
+        "fall": null,
+        "triplicity_rulers_ptolemy": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "opposite": "Aquarius",
+        "rasi": "Siṃha",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-virgo",
+      "name": "Virgo",
+      "symbol": "♍",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 15,
+      "composite_of": [
+        "element-earth",
+        "modality-mutable",
+        "polarity-feminine"
+      ],
+      "keywords": [
+        "virgo",
+        "sign",
+        "earth",
+        "mutable",
+        "feminine"
+      ],
+      "sections": {
+        "Structure": "Virgo is the 6th sign: **earth** + **mutable** + **feminine** — the only sign with that element and that modality. It shares its element with Taurus and Capricorn (trine), its modality with Gemini and Sagittarius (square) and Pisces (opposition). Pisces, its opposite, has the same modality and polarity and the paired element (water).",
+        "Relations": "- Ruler: Mercury (classical); modern practice unchanged\n- Exaltation: Mercury\n- Detriment: Jupiter\n- Fall: Venus\n- Triplicity rulers — Ptolemy: Venus by day, Moon by night; Lilly: Venus by day, Moon by night\n- Opposite sign: Pisces",
+        "Traditions": "- Ptolemy: a *bicorporeal* sign (Book I ch. 14), feminine and nocturnal (ch. 15), of his second triplicity (ch. 21), the house of Mercury (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: common, feminine, nocturnal, of the earthly triplicity and the South — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-virgo).\n- Alan Leo: 'The sign Virgo is the second of the earthy triplicity, the second of the mutable signs, and the turning-point from the northern to the southern signs' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Kanyā, lord Mercury; a common sign, even and feminine, its trigon read to the South — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Virgo",
+        "number": 6,
+        "element": "Earth",
+        "modality": "Mutable",
+        "polarity": "feminine",
+        "ruler": "Mercury",
+        "exaltation": "Mercury",
+        "detriment": "Jupiter",
+        "fall": "Venus",
+        "triplicity_rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "opposite": "Pisces",
+        "rasi": "Kanyā",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-libra",
+      "name": "Libra",
+      "symbol": "♎",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 16,
+      "composite_of": [
+        "element-air",
+        "modality-cardinal",
+        "polarity-masculine"
+      ],
+      "keywords": [
+        "libra",
+        "sign",
+        "air",
+        "cardinal",
+        "masculine"
+      ],
+      "sections": {
+        "Structure": "Libra is the 7th sign: **air** + **cardinal** + **masculine** — the only sign with that element and that modality. It shares its element with Gemini and Aquarius (trine), its modality with Cancer and Capricorn (square) and Aries (opposition). Aries, its opposite, has the same modality and polarity and the paired element (fire).",
+        "Relations": "- Ruler: Venus (classical); modern practice unchanged\n- Exaltation: Saturn\n- Detriment: Mars\n- Fall: Sun\n- Triplicity rulers — Ptolemy: Saturn by day, Mercury by night; Lilly: Saturn by day, Mercury by night\n- Opposite sign: Aries",
+        "Traditions": "- Ptolemy: an *equinoctial* sign (Book I ch. 14), masculine and diurnal (ch. 15), of his third triplicity (ch. 21), the house of Venus (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: moveable, masculine, diurnal, of the airy triplicity and the West — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-libra).\n- Alan Leo: 'Libra, the sign of the balance, the equalising sign of the zodiac, is the second of the airy triplicity, and the third of the cardinal signs' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Tulā, lord Venus; a movable sign, odd and masculine, its trigon read to the West — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Libra",
+        "number": 7,
+        "element": "Air",
+        "modality": "Cardinal",
+        "polarity": "masculine",
+        "ruler": "Venus",
+        "exaltation": "Saturn",
+        "detriment": "Mars",
+        "fall": "Sun",
+        "triplicity_rulers_ptolemy": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "opposite": "Aries",
+        "rasi": "Tulā",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-scorpio",
+      "name": "Scorpio",
+      "symbol": "♏",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 17,
+      "composite_of": [
+        "element-water",
+        "modality-fixed",
+        "polarity-feminine"
+      ],
+      "keywords": [
+        "scorpio",
+        "sign",
+        "water",
+        "fixed",
+        "feminine"
+      ],
+      "sections": {
+        "Structure": "Scorpio is the 8th sign: **water** + **fixed** + **feminine** — the only sign with that element and that modality. It shares its element with Cancer and Pisces (trine), its modality with Leo and Aquarius (square) and Taurus (opposition). Taurus, its opposite, has the same modality and polarity and the paired element (earth).",
+        "Relations": "- Ruler: Mars (classical); modern practice adds Pluto\n- Exaltation: none in the classical table\n- Detriment: Venus\n- Fall: Moon\n- Triplicity rulers — Ptolemy: Venus by day, Moon by night, with Mars; Lilly: Mars by day and night\n- Opposite sign: Taurus",
+        "Traditions": "- Ptolemy: a *fixed* sign (Book I ch. 14), feminine and nocturnal (ch. 15), of his fourth triplicity (ch. 21), the house of Mars (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: fixed, feminine, nocturnal, of the watry triplicity and the North — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-scorpio).\n- Alan Leo: 'Scorpio is the third of the fixed signs and the second or middle of the watery triplicity' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Vṛścika, lord Mars; a fixed sign, even and feminine, its trigon read to the North — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Scorpio",
+        "number": 8,
+        "element": "Water",
+        "modality": "Fixed",
+        "polarity": "feminine",
+        "ruler": "Mars",
+        "ruler_modern": "Pluto",
+        "exaltation": null,
+        "detriment": "Venus",
+        "fall": "Moon",
+        "triplicity_rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon",
+          "with": "Mars"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Mars",
+          "night": "Mars"
+        },
+        "opposite": "Taurus",
+        "rasi": "Vṛścika",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-sagittarius",
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 18,
+      "composite_of": [
+        "element-fire",
+        "modality-mutable",
+        "polarity-masculine"
+      ],
+      "keywords": [
+        "sagittarius",
+        "sign",
+        "fire",
+        "mutable",
+        "masculine"
+      ],
+      "sections": {
+        "Structure": "Sagittarius is the 9th sign: **fire** + **mutable** + **masculine** — the only sign with that element and that modality. It shares its element with Aries and Leo (trine), its modality with Virgo and Pisces (square) and Gemini (opposition). Gemini, its opposite, has the same modality and polarity and the paired element (air).",
+        "Relations": "- Ruler: Jupiter (classical); modern practice unchanged\n- Exaltation: none in the classical table\n- Detriment: Mercury\n- Fall: none in the classical table\n- Triplicity rulers — Ptolemy: Sun by day, Jupiter by night; Lilly: Sun by day, Jupiter by night\n- Opposite sign: Gemini",
+        "Traditions": "- Ptolemy: a *bicorporeal* sign (Book I ch. 14), masculine and diurnal (ch. 15), of his first triplicity (ch. 21), the house of Jupiter (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: common, masculine, diurnal, of the fiery triplicity and the East — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-sagittarius).\n- Alan Leo: 'Sagittarius is the last of the fiery triplicity and the third of the mutable signs; it therefore represents the union of qualities of the head and heart, now sent upward in devotion to the Heart of all things' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Dhanu, lord Jupiter; a common sign, odd and masculine, its trigon read to the East — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Sagittarius",
+        "number": 9,
+        "element": "Fire",
+        "modality": "Mutable",
+        "polarity": "masculine",
+        "ruler": "Jupiter",
+        "exaltation": null,
+        "detriment": "Mercury",
+        "fall": null,
+        "triplicity_rulers_ptolemy": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "opposite": "Gemini",
+        "rasi": "Dhanu",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-capricorn",
+      "name": "Capricorn",
+      "symbol": "♑",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 19,
+      "composite_of": [
+        "element-earth",
+        "modality-cardinal",
+        "polarity-feminine"
+      ],
+      "keywords": [
+        "capricorn",
+        "sign",
+        "earth",
+        "cardinal",
+        "feminine"
+      ],
+      "sections": {
+        "Structure": "Capricorn is the 10th sign: **earth** + **cardinal** + **feminine** — the only sign with that element and that modality. It shares its element with Taurus and Virgo (trine), its modality with Aries and Libra (square) and Cancer (opposition). Cancer, its opposite, has the same modality and polarity and the paired element (water).",
+        "Relations": "- Ruler: Saturn (classical); modern practice unchanged\n- Exaltation: Mars\n- Detriment: Moon\n- Fall: Jupiter\n- Triplicity rulers — Ptolemy: Venus by day, Moon by night; Lilly: Venus by day, Moon by night\n- Opposite sign: Cancer",
+        "Traditions": "- Ptolemy: a *tropical* sign (Book I ch. 14), feminine and nocturnal (ch. 15), of his second triplicity (ch. 21), the house of Saturn (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: moveable, feminine, nocturnal, of the earthly triplicity and the South — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-capricorn).\n- Alan Leo: 'Capricorn is the last of the cardinal signs, and also the last of the earthy triplicity and the first of what is well termed the serving trinity' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Makara, lord Saturn; a movable sign, even and feminine, its trigon read to the South — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Capricorn",
+        "number": 10,
+        "element": "Earth",
+        "modality": "Cardinal",
+        "polarity": "feminine",
+        "ruler": "Saturn",
+        "exaltation": "Mars",
+        "detriment": "Moon",
+        "fall": "Jupiter",
+        "triplicity_rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "opposite": "Cancer",
+        "rasi": "Makara",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-aquarius",
+      "name": "Aquarius",
+      "symbol": "♒",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 20,
+      "composite_of": [
+        "element-air",
+        "modality-fixed",
+        "polarity-masculine"
+      ],
+      "keywords": [
+        "aquarius",
+        "sign",
+        "air",
+        "fixed",
+        "masculine"
+      ],
+      "sections": {
+        "Structure": "Aquarius is the 11th sign: **air** + **fixed** + **masculine** — the only sign with that element and that modality. It shares its element with Gemini and Libra (trine), its modality with Taurus and Scorpio (square) and Leo (opposition). Leo, its opposite, has the same modality and polarity and the paired element (fire).",
+        "Relations": "- Ruler: Saturn (classical); modern practice adds Uranus\n- Exaltation: none in the classical table\n- Detriment: Sun\n- Fall: none in the classical table\n- Triplicity rulers — Ptolemy: Saturn by day, Mercury by night; Lilly: Saturn by day, Mercury by night\n- Opposite sign: Leo",
+        "Traditions": "- Ptolemy: a *fixed* sign (Book I ch. 14), masculine and diurnal (ch. 15), of his third triplicity (ch. 21), the house of Saturn (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: fixed, masculine, diurnal, of the airy triplicity and the West — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-aquarius).\n- Alan Leo: 'Aquarius is the last of the airy triplicity, also the last of the fixed signs and the centre of the serving trinity' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Kumbha, lord Saturn; a fixed sign, odd and masculine, its trigon read to the West — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Aquarius",
+        "number": 11,
+        "element": "Air",
+        "modality": "Fixed",
+        "polarity": "masculine",
+        "ruler": "Saturn",
+        "ruler_modern": "Uranus",
+        "exaltation": null,
+        "detriment": "Sun",
+        "fall": null,
+        "triplicity_rulers_ptolemy": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "opposite": "Leo",
+        "rasi": "Kumbha",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "sign-pisces",
+      "name": "Pisces",
+      "symbol": "♓",
+      "category": "sign",
+      "level": 2,
+      "sort_order": 21,
+      "composite_of": [
+        "element-water",
+        "modality-mutable",
+        "polarity-feminine"
+      ],
+      "keywords": [
+        "pisces",
+        "sign",
+        "water",
+        "mutable",
+        "feminine"
+      ],
+      "sections": {
+        "Structure": "Pisces is the 12th sign: **water** + **mutable** + **feminine** — the only sign with that element and that modality. It shares its element with Cancer and Scorpio (trine), its modality with Gemini and Sagittarius (square) and Virgo (opposition). Virgo, its opposite, has the same modality and polarity and the paired element (earth).",
+        "Relations": "- Ruler: Jupiter (classical); modern practice adds Neptune\n- Exaltation: Venus\n- Detriment: Mercury\n- Fall: Mercury\n- Triplicity rulers — Ptolemy: Venus by day, Moon by night, with Mars; Lilly: Mars by day and night\n- Opposite sign: Virgo",
+        "Traditions": "- Ptolemy: a *bicorporeal* sign (Book I ch. 14), feminine and nocturnal (ch. 15), of his fourth triplicity (ch. 21), the house of Jupiter (ch. 20) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822].\n- Lilly: common, feminine, nocturnal, of the watry triplicity and the North — William Lilly, *Christian Astrology* (1647) [@lilly1647]; his own sentence is quoted in grammars/william-lilly-christian-astrology (item sign-pisces).\n- Alan Leo: 'It is the last of the watery and mutable signs' — Alan Leo, *Astrology for All* (1899), as quoted in grammars/alan-leo.\n- Jyotiṣa: Mīna, lord Jupiter; a common sign, even and feminine, its trigon read to the North — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I st. 6, 11. Jyotiṣa counts its rāśis in a **sidereal** zodiac, measured from the fixed stars, where Ptolemy's zodiac begins at the vernal equinox; the two circles now sit roughly 24° apart, so a sidereal sign of the same name is not the same stretch of sky (research/views/jyotisa.md [@pingree1997; @campion2008]; grammars/jyotisa-brhat-jataka description)."
+      },
+      "metadata": {
+        "sign": "Pisces",
+        "number": 12,
+        "element": "Water",
+        "modality": "Mutable",
+        "polarity": "feminine",
+        "ruler": "Jupiter",
+        "ruler_modern": "Neptune",
+        "exaltation": "Venus",
+        "detriment": "Mercury",
+        "fall": "Mercury",
+        "triplicity_rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon",
+          "with": "Mars"
+        },
+        "triplicity_rulers_lilly": {
+          "day": "Mars",
+          "night": "Mars"
+        },
+        "opposite": "Virgo",
+        "rasi": "Mīna",
+        "_source": "Element/modality/polarity: Ptolemy Tetrabiblos I.14-15, I.21 (Ashmand 1822, Gutenberg #70850, read 2026-09-27) and Lilly 1647. Ruler/exaltation/detriment/fall: cross-checked against grammars/dignities-rulerships at build time. Triplicity rulers: Ptolemy I.21; Lilly 1647 table (archive.org OCR, read 2026-09-27). Rasi name and lord: grammars/jyotisa-brhat-jataka."
+      }
+    },
+    {
+      "id": "triplicity-fire",
+      "name": "Fire triplicity",
+      "category": "triplicity",
+      "level": 3,
+      "sort_order": 22,
+      "composite_of": [
+        "sign-aries",
+        "sign-leo",
+        "sign-sagittarius"
+      ],
+      "keywords": [
+        "fire",
+        "triplicity",
+        "trigon",
+        "trine"
+      ],
+      "sections": {
+        "Structure": "The three fire signs, Aries, Leo, Sagittarius, in zodiac order — one cardinal, one fixed, one mutable, all masculine. Each is trine the other two.",
+        "Traditions": "- Ptolemy's first triplicity: ruled by Sun by day and Jupiter by night; he orients it principally northern, and also north-west — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21.\n- Lilly's fiery triplicity: Sun by day, Jupiter by night; his sign chapters place these signs in the East — William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Bṛhat Jātaka: the trigon of these signs is read to the East — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I."
+      },
+      "metadata": {
+        "element": "Fire",
+        "rulers_ptolemy": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "rulers_lilly": {
+          "day": "Sun",
+          "night": "Jupiter"
+        },
+        "quarter_lilly": "East",
+        "quarter_brhat_jataka": "East"
+      }
+    },
+    {
+      "id": "triplicity-earth",
+      "name": "Earth triplicity",
+      "category": "triplicity",
+      "level": 3,
+      "sort_order": 23,
+      "composite_of": [
+        "sign-taurus",
+        "sign-virgo",
+        "sign-capricorn"
+      ],
+      "keywords": [
+        "earth",
+        "triplicity",
+        "trigon",
+        "trine"
+      ],
+      "sections": {
+        "Structure": "The three earth signs, Taurus, Virgo, Capricorn, in zodiac order — one cardinal, one fixed, one mutable, all feminine. Each is trine the other two.",
+        "Traditions": "- Ptolemy's second triplicity: ruled by Venus by day and Moon by night; he orients it southern, with a mixture of the east — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21.\n- Lilly's earthly triplicity: Venus by day, Moon by night; his sign chapters place these signs in the South — William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Bṛhat Jātaka: the trigon of these signs is read to the South — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I."
+      },
+      "metadata": {
+        "element": "Earth",
+        "rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "rulers_lilly": {
+          "day": "Venus",
+          "night": "Moon"
+        },
+        "quarter_lilly": "South",
+        "quarter_brhat_jataka": "South"
+      }
+    },
+    {
+      "id": "triplicity-air",
+      "name": "Air triplicity",
+      "category": "triplicity",
+      "level": 3,
+      "sort_order": 24,
+      "composite_of": [
+        "sign-gemini",
+        "sign-libra",
+        "sign-aquarius"
+      ],
+      "keywords": [
+        "air",
+        "triplicity",
+        "trigon",
+        "trine"
+      ],
+      "sections": {
+        "Structure": "The three air signs, Gemini, Libra, Aquarius, in zodiac order — one cardinal, one fixed, one mutable, all masculine. Each is trine the other two.",
+        "Traditions": "- Ptolemy's third triplicity: ruled by Saturn by day and Mercury by night; he orients it principally eastern, becoming north-east — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21.\n- Lilly's airy triplicity: Saturn by day, Mercury by night; his sign chapters place these signs in the West — William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Bṛhat Jātaka: the trigon of these signs is read to the West — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I."
+      },
+      "metadata": {
+        "element": "Air",
+        "rulers_ptolemy": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "rulers_lilly": {
+          "day": "Saturn",
+          "night": "Mercury"
+        },
+        "quarter_lilly": "West",
+        "quarter_brhat_jataka": "West"
+      }
+    },
+    {
+      "id": "triplicity-water",
+      "name": "Water triplicity",
+      "category": "triplicity",
+      "level": 3,
+      "sort_order": 25,
+      "composite_of": [
+        "sign-cancer",
+        "sign-scorpio",
+        "sign-pisces"
+      ],
+      "keywords": [
+        "water",
+        "triplicity",
+        "trigon",
+        "trine"
+      ],
+      "sections": {
+        "Structure": "The three water signs, Cancer, Scorpio, Pisces, in zodiac order — one cardinal, one fixed, one mutable, all feminine. Each is trine the other two.",
+        "Traditions": "- Ptolemy's fourth triplicity: ruled by Venus by day and Moon by night, with Mars sharing in it; he orients it western, blended with the south, so south-west — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 21.\n- Lilly's watry triplicity: Mars rules it day and night; his sign chapters place these signs in the North — William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Bṛhat Jātaka: the trigon of these signs is read to the North — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka, ch. I.\n- Where Ptolemy and Lilly differ is the water triplicity: Ptolemy gives it to Venus by day and the Moon by night with Mars, Lilly to Mars alone. Both are kept, each under its own name."
+      },
+      "metadata": {
+        "element": "Water",
+        "rulers_ptolemy": {
+          "day": "Venus",
+          "night": "Moon",
+          "with": "Mars"
+        },
+        "rulers_lilly": {
+          "day": "Mars",
+          "night": "Mars"
+        },
+        "quarter_lilly": "North",
+        "quarter_brhat_jataka": "North"
+      }
+    },
+    {
+      "id": "quadruplicity-cardinal",
+      "name": "Cardinal signs",
+      "category": "quadruplicity",
+      "level": 3,
+      "sort_order": 26,
+      "composite_of": [
+        "sign-aries",
+        "sign-cancer",
+        "sign-libra",
+        "sign-capricorn"
+      ],
+      "keywords": [
+        "cardinal",
+        "quadruplicity",
+        "square",
+        "cross"
+      ],
+      "sections": {
+        "Structure": "The four cardinal signs, Aries, Cancer, Libra, Capricorn, in zodiac order — one of each element, alternating masculine and feminine. Neighbours in this list are square; the first and third, and the second and fourth, are opposite."
+      },
+      "metadata": {
+        "modality": "Cardinal"
+      }
+    },
+    {
+      "id": "quadruplicity-fixed",
+      "name": "Fixed signs",
+      "category": "quadruplicity",
+      "level": 3,
+      "sort_order": 27,
+      "composite_of": [
+        "sign-taurus",
+        "sign-leo",
+        "sign-scorpio",
+        "sign-aquarius"
+      ],
+      "keywords": [
+        "fixed",
+        "quadruplicity",
+        "square",
+        "cross"
+      ],
+      "sections": {
+        "Structure": "The four fixed signs, Taurus, Leo, Scorpio, Aquarius, in zodiac order — one of each element, alternating masculine and feminine. Neighbours in this list are square; the first and third, and the second and fourth, are opposite."
+      },
+      "metadata": {
+        "modality": "Fixed"
+      }
+    },
+    {
+      "id": "quadruplicity-mutable",
+      "name": "Mutable signs",
+      "category": "quadruplicity",
+      "level": 3,
+      "sort_order": 28,
+      "composite_of": [
+        "sign-gemini",
+        "sign-virgo",
+        "sign-sagittarius",
+        "sign-pisces"
+      ],
+      "keywords": [
+        "mutable",
+        "quadruplicity",
+        "square",
+        "cross"
+      ],
+      "sections": {
+        "Structure": "The four mutable signs, Gemini, Virgo, Sagittarius, Pisces, in zodiac order — one of each element, alternating masculine and feminine. Neighbours in this list are square; the first and third, and the second and fourth, are opposite."
+      },
+      "metadata": {
+        "modality": "Mutable"
+      }
+    },
+    {
+      "id": "planets-classical",
+      "name": "The seven classical planets",
+      "category": "planet-group",
+      "level": 2,
+      "sort_order": 29,
+      "composite_of": [
+        "planet-sun",
+        "planet-moon",
+        "planet-mercury",
+        "planet-venus",
+        "planet-mars",
+        "planet-jupiter",
+        "planet-saturn"
+      ],
+      "keywords": [
+        "planets",
+        "classical",
+        "seven"
+      ],
+      "sections": {
+        "Structure": "Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn — the bodies visible without a telescope, and the only planets in Ptolemy, Lilly and the Bṛhat Jātaka. Every sign has one of them as its classical ruler: the Sun and Moon one sign each, the other five two each."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "planets-modern",
+      "name": "The modern planets",
+      "category": "planet-group",
+      "level": 2,
+      "sort_order": 30,
+      "composite_of": [
+        "planet-uranus",
+        "planet-neptune",
+        "planet-pluto"
+      ],
+      "keywords": [
+        "planets",
+        "modern",
+        "outer"
+      ],
+      "sections": {
+        "Structure": "Uranus (1781), Neptune (1846), Pluto (1930): found with telescopes, so absent from every text before them. Modern astrology uses them; the historical voices in this library do not, except Alan Leo for the first two."
+      },
+      "metadata": {
+        "modern": true
+      }
+    },
+    {
+      "id": "planet-sun",
+      "name": "Sun",
+      "symbol": "☉",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 31,
+      "keywords": [
+        "sun",
+        "planet",
+        "classical"
+      ],
+      "sections": {
+        "Structure": "Sun is one of the seven classical planets — the bodies visible to the naked eye that every historical voice in this library counts. It rules Leo; it is exalted in Aries; it is in detriment in Aquarius (the sign opposite its own) and in fall in Libra (the sign opposite its exaltation). Where Sun stands in a chart is a placement: a sign, a house, and the aspects it makes to the other placements. Those three things are read from the rest of this grammar.",
+        "Relations": "- Domicile (rulership): Leo\n- Exaltation: Aries (Western tables give 19°; the Bṛhat Jātaka gives 10°)\n- Detriment: Aquarius\n- Fall: Libra\n- Triplicity rule, Ptolemy: Fire (by day)\n- Triplicity rule, Lilly: Fire (by day)\n- Ptolemy's sect: diurnal; his gender: masculine",
+        "Traditions": "- Ptolemy gives Sun its houses (Book I ch. 20), its exaltation and fall (ch. 22), its share of the triplicities (ch. 21), and calls it masculine (ch. 6) and diurnal (ch. 7) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]. He tables exaltation signs, not degrees.\n- Lilly's table of essential dignities lists detriment — the sign opposite a planet's house — beside house, exaltation and fall, and scores them — William Lilly, *Christian Astrology* (1647) [@lilly1647]; tabled in grammars/dignities-rulerships.\n- Jyotiṣa: Sūrya / Ravi, one of nine grahas (the seven planets plus the lunar nodes Rāhu and Ketu). The Bṛhat Jātaka names the same own signs (ch. I st. 6) and the same exaltation sign, Aries, at the 10th degree (st. 13) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka."
+      },
+      "metadata": {
+        "planet": "Sun",
+        "classical": true,
+        "modern": false,
+        "domicile": [
+          "Leo"
+        ],
+        "exaltation": "Aries",
+        "exaltation_degree_western": 19,
+        "exaltation_degree_brhat_jataka": 10,
+        "detriment": [
+          "Aquarius"
+        ],
+        "fall": "Libra",
+        "triplicity_ptolemy": [
+          "Fire (by day)"
+        ],
+        "triplicity_lilly": [
+          "Fire (by day)"
+        ],
+        "sect_ptolemy": "diurnal",
+        "gender_ptolemy": "masculine",
+        "graha": "Sūrya / Ravi",
+        "_source": "Ptolemy, Tetrabiblos I.6-7, I.20-22 (Ashmand 1822, read in full from Project Gutenberg #70850 on 2026-09-27); Lilly 1647 via grammars/dignities-rulerships; Brhat Jataka ch. I st. 6, 13 via grammars/jyotisa-brhat-jataka. Western exaltation degrees as cross-checked in grammars/dignities-rulerships."
+      }
+    },
+    {
+      "id": "planet-moon",
+      "name": "Moon",
+      "symbol": "☽",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 32,
+      "keywords": [
+        "moon",
+        "planet",
+        "classical"
+      ],
+      "sections": {
+        "Structure": "Moon is one of the seven classical planets — the bodies visible to the naked eye that every historical voice in this library counts. It rules Cancer; it is exalted in Taurus; it is in detriment in Capricorn (the sign opposite its own) and in fall in Scorpio (the sign opposite its exaltation). Where Moon stands in a chart is a placement: a sign, a house, and the aspects it makes to the other placements. Those three things are read from the rest of this grammar.",
+        "Relations": "- Domicile (rulership): Cancer\n- Exaltation: Taurus (Western tables give 3°; the Bṛhat Jātaka gives 3°)\n- Detriment: Capricorn\n- Fall: Scorpio\n- Triplicity rule, Ptolemy: Earth (by night), Water (by night)\n- Triplicity rule, Lilly: Earth (by night)\n- Ptolemy's sect: nocturnal; his gender: feminine",
+        "Traditions": "- Ptolemy gives Moon its houses (Book I ch. 20), its exaltation and fall (ch. 22), its share of the triplicities (ch. 21), and calls it feminine (ch. 6) and nocturnal (ch. 7) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]. He tables exaltation signs, not degrees.\n- Lilly's table of essential dignities lists detriment — the sign opposite a planet's house — beside house, exaltation and fall, and scores them — William Lilly, *Christian Astrology* (1647) [@lilly1647]; tabled in grammars/dignities-rulerships.\n- Jyotiṣa: Candra / Soma, one of nine grahas (the seven planets plus the lunar nodes Rāhu and Ketu). The Bṛhat Jātaka names the same own signs (ch. I st. 6) and the same exaltation sign, Taurus, at the 3th degree (st. 13) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka."
+      },
+      "metadata": {
+        "planet": "Moon",
+        "classical": true,
+        "modern": false,
+        "domicile": [
+          "Cancer"
+        ],
+        "exaltation": "Taurus",
+        "exaltation_degree_western": 3,
+        "exaltation_degree_brhat_jataka": 3,
+        "detriment": [
+          "Capricorn"
+        ],
+        "fall": "Scorpio",
+        "triplicity_ptolemy": [
+          "Earth (by night)",
+          "Water (by night)"
+        ],
+        "triplicity_lilly": [
+          "Earth (by night)"
+        ],
+        "sect_ptolemy": "nocturnal",
+        "gender_ptolemy": "feminine",
+        "graha": "Candra / Soma",
+        "_source": "Ptolemy, Tetrabiblos I.6-7, I.20-22 (Ashmand 1822, read in full from Project Gutenberg #70850 on 2026-09-27); Lilly 1647 via grammars/dignities-rulerships; Brhat Jataka ch. I st. 6, 13 via grammars/jyotisa-brhat-jataka. Western exaltation degrees as cross-checked in grammars/dignities-rulerships."
+      }
+    },
+    {
+      "id": "planet-mercury",
+      "name": "Mercury",
+      "symbol": "☿",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 33,
+      "keywords": [
+        "mercury",
+        "planet",
+        "classical"
+      ],
+      "sections": {
+        "Structure": "Mercury is one of the seven classical planets — the bodies visible to the naked eye that every historical voice in this library counts. It rules Gemini and Virgo; it is exalted in Virgo; it is in detriment in Sagittarius and Pisces (the signs opposite its own) and in fall in Pisces (the sign opposite its exaltation). Where Mercury stands in a chart is a placement: a sign, a house, and the aspects it makes to the other placements. Those three things are read from the rest of this grammar.",
+        "Relations": "- Domicile (rulership): Gemini, Virgo\n- Exaltation: Virgo (Western tables give 15°; the Bṛhat Jātaka gives 15°)\n- Detriment: Sagittarius, Pisces\n- Fall: Pisces\n- Triplicity rule, Ptolemy: Air (by night)\n- Triplicity rule, Lilly: Air (by night)\n- Ptolemy's sect: common (diurnal as morning star, nocturnal as evening star); his gender: common",
+        "Traditions": "- Ptolemy gives Mercury its houses (Book I ch. 20), its exaltation and fall (ch. 22), its share of the triplicities (ch. 21), and calls it common (ch. 6) and common (ch. 7) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]. He tables exaltation signs, not degrees.\n- Lilly's table of essential dignities lists detriment — the sign opposite a planet's house — beside house, exaltation and fall, and scores them — William Lilly, *Christian Astrology* (1647) [@lilly1647]; tabled in grammars/dignities-rulerships.\n- Jyotiṣa: Budha, one of nine grahas (the seven planets plus the lunar nodes Rāhu and Ketu). The Bṛhat Jātaka names the same own signs (ch. I st. 6) and the same exaltation sign, Virgo, at the 15th degree (st. 13) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka."
+      },
+      "metadata": {
+        "planet": "Mercury",
+        "classical": true,
+        "modern": false,
+        "domicile": [
+          "Gemini",
+          "Virgo"
+        ],
+        "exaltation": "Virgo",
+        "exaltation_degree_western": 15,
+        "exaltation_degree_brhat_jataka": 15,
+        "detriment": [
+          "Sagittarius",
+          "Pisces"
+        ],
+        "fall": "Pisces",
+        "triplicity_ptolemy": [
+          "Air (by night)"
+        ],
+        "triplicity_lilly": [
+          "Air (by night)"
+        ],
+        "sect_ptolemy": "common (diurnal as morning star, nocturnal as evening star)",
+        "gender_ptolemy": "common",
+        "graha": "Budha",
+        "_source": "Ptolemy, Tetrabiblos I.6-7, I.20-22 (Ashmand 1822, read in full from Project Gutenberg #70850 on 2026-09-27); Lilly 1647 via grammars/dignities-rulerships; Brhat Jataka ch. I st. 6, 13 via grammars/jyotisa-brhat-jataka. Western exaltation degrees as cross-checked in grammars/dignities-rulerships."
+      }
+    },
+    {
+      "id": "planet-venus",
+      "name": "Venus",
+      "symbol": "♀",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 34,
+      "keywords": [
+        "venus",
+        "planet",
+        "classical"
+      ],
+      "sections": {
+        "Structure": "Venus is one of the seven classical planets — the bodies visible to the naked eye that every historical voice in this library counts. It rules Taurus and Libra; it is exalted in Pisces; it is in detriment in Scorpio and Aries (the signs opposite its own) and in fall in Virgo (the sign opposite its exaltation). Where Venus stands in a chart is a placement: a sign, a house, and the aspects it makes to the other placements. Those three things are read from the rest of this grammar.",
+        "Relations": "- Domicile (rulership): Taurus, Libra\n- Exaltation: Pisces (Western tables give 27°; the Bṛhat Jātaka gives 27°)\n- Detriment: Scorpio, Aries\n- Fall: Virgo\n- Triplicity rule, Ptolemy: Earth (by day), Water (by day)\n- Triplicity rule, Lilly: Earth (by day)\n- Ptolemy's sect: nocturnal; his gender: feminine",
+        "Traditions": "- Ptolemy gives Venus its houses (Book I ch. 20), its exaltation and fall (ch. 22), its share of the triplicities (ch. 21), and calls it feminine (ch. 6) and nocturnal (ch. 7) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]. He tables exaltation signs, not degrees.\n- Lilly's table of essential dignities lists detriment — the sign opposite a planet's house — beside house, exaltation and fall, and scores them — William Lilly, *Christian Astrology* (1647) [@lilly1647]; tabled in grammars/dignities-rulerships.\n- Jyotiṣa: Śukra, one of nine grahas (the seven planets plus the lunar nodes Rāhu and Ketu). The Bṛhat Jātaka names the same own signs (ch. I st. 6) and the same exaltation sign, Pisces, at the 27th degree (st. 13) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka."
+      },
+      "metadata": {
+        "planet": "Venus",
+        "classical": true,
+        "modern": false,
+        "domicile": [
+          "Taurus",
+          "Libra"
+        ],
+        "exaltation": "Pisces",
+        "exaltation_degree_western": 27,
+        "exaltation_degree_brhat_jataka": 27,
+        "detriment": [
+          "Scorpio",
+          "Aries"
+        ],
+        "fall": "Virgo",
+        "triplicity_ptolemy": [
+          "Earth (by day)",
+          "Water (by day)"
+        ],
+        "triplicity_lilly": [
+          "Earth (by day)"
+        ],
+        "sect_ptolemy": "nocturnal",
+        "gender_ptolemy": "feminine",
+        "graha": "Śukra",
+        "_source": "Ptolemy, Tetrabiblos I.6-7, I.20-22 (Ashmand 1822, read in full from Project Gutenberg #70850 on 2026-09-27); Lilly 1647 via grammars/dignities-rulerships; Brhat Jataka ch. I st. 6, 13 via grammars/jyotisa-brhat-jataka. Western exaltation degrees as cross-checked in grammars/dignities-rulerships."
+      }
+    },
+    {
+      "id": "planet-mars",
+      "name": "Mars",
+      "symbol": "♂",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 35,
+      "keywords": [
+        "mars",
+        "planet",
+        "classical"
+      ],
+      "sections": {
+        "Structure": "Mars is one of the seven classical planets — the bodies visible to the naked eye that every historical voice in this library counts. It rules Aries and Scorpio; it is exalted in Capricorn; it is in detriment in Libra and Taurus (the signs opposite its own) and in fall in Cancer (the sign opposite its exaltation). Where Mars stands in a chart is a placement: a sign, a house, and the aspects it makes to the other placements. Those three things are read from the rest of this grammar.",
+        "Relations": "- Domicile (rulership): Aries, Scorpio\n- Exaltation: Capricorn (Western tables give 28°; the Bṛhat Jātaka gives 28°)\n- Detriment: Libra, Taurus\n- Fall: Cancer\n- Triplicity rule, Ptolemy: Water (jointly)\n- Triplicity rule, Lilly: Water (day and night)\n- Ptolemy's sect: nocturnal; his gender: masculine",
+        "Traditions": "- Ptolemy gives Mars its houses (Book I ch. 20), its exaltation and fall (ch. 22), its share of the triplicities (ch. 21), and calls it masculine (ch. 6) and nocturnal (ch. 7) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]. He tables exaltation signs, not degrees.\n- Lilly's table of essential dignities lists detriment — the sign opposite a planet's house — beside house, exaltation and fall, and scores them — William Lilly, *Christian Astrology* (1647) [@lilly1647]; tabled in grammars/dignities-rulerships.\n- Jyotiṣa: Kuja / Aṅgāraka / Maṅgala, one of nine grahas (the seven planets plus the lunar nodes Rāhu and Ketu). The Bṛhat Jātaka names the same own signs (ch. I st. 6) and the same exaltation sign, Capricorn, at the 28th degree (st. 13) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka."
+      },
+      "metadata": {
+        "planet": "Mars",
+        "classical": true,
+        "modern": false,
+        "domicile": [
+          "Aries",
+          "Scorpio"
+        ],
+        "exaltation": "Capricorn",
+        "exaltation_degree_western": 28,
+        "exaltation_degree_brhat_jataka": 28,
+        "detriment": [
+          "Libra",
+          "Taurus"
+        ],
+        "fall": "Cancer",
+        "triplicity_ptolemy": [
+          "Water (jointly)"
+        ],
+        "triplicity_lilly": [
+          "Water (day and night)"
+        ],
+        "sect_ptolemy": "nocturnal",
+        "gender_ptolemy": "masculine",
+        "graha": "Kuja / Aṅgāraka / Maṅgala",
+        "_source": "Ptolemy, Tetrabiblos I.6-7, I.20-22 (Ashmand 1822, read in full from Project Gutenberg #70850 on 2026-09-27); Lilly 1647 via grammars/dignities-rulerships; Brhat Jataka ch. I st. 6, 13 via grammars/jyotisa-brhat-jataka. Western exaltation degrees as cross-checked in grammars/dignities-rulerships."
+      }
+    },
+    {
+      "id": "planet-jupiter",
+      "name": "Jupiter",
+      "symbol": "♃",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 36,
+      "keywords": [
+        "jupiter",
+        "planet",
+        "classical"
+      ],
+      "sections": {
+        "Structure": "Jupiter is one of the seven classical planets — the bodies visible to the naked eye that every historical voice in this library counts. It rules Sagittarius and Pisces; it is exalted in Cancer; it is in detriment in Gemini and Virgo (the signs opposite its own) and in fall in Capricorn (the sign opposite its exaltation). Where Jupiter stands in a chart is a placement: a sign, a house, and the aspects it makes to the other placements. Those three things are read from the rest of this grammar.",
+        "Relations": "- Domicile (rulership): Sagittarius, Pisces\n- Exaltation: Cancer (Western tables give 15°; the Bṛhat Jātaka gives 5°)\n- Detriment: Gemini, Virgo\n- Fall: Capricorn\n- Triplicity rule, Ptolemy: Fire (by night)\n- Triplicity rule, Lilly: Fire (by night)\n- Ptolemy's sect: diurnal; his gender: masculine",
+        "Traditions": "- Ptolemy gives Jupiter its houses (Book I ch. 20), its exaltation and fall (ch. 22), its share of the triplicities (ch. 21), and calls it masculine (ch. 6) and diurnal (ch. 7) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]. He tables exaltation signs, not degrees.\n- Lilly's table of essential dignities lists detriment — the sign opposite a planet's house — beside house, exaltation and fall, and scores them — William Lilly, *Christian Astrology* (1647) [@lilly1647]; tabled in grammars/dignities-rulerships.\n- Jyotiṣa: Guru / Bṛhaspati / Jīva, one of nine grahas (the seven planets plus the lunar nodes Rāhu and Ketu). The Bṛhat Jātaka names the same own signs (ch. I st. 6) and the same exaltation sign, Cancer, at the 5th degree (st. 13) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka."
+      },
+      "metadata": {
+        "planet": "Jupiter",
+        "classical": true,
+        "modern": false,
+        "domicile": [
+          "Sagittarius",
+          "Pisces"
+        ],
+        "exaltation": "Cancer",
+        "exaltation_degree_western": 15,
+        "exaltation_degree_brhat_jataka": 5,
+        "detriment": [
+          "Gemini",
+          "Virgo"
+        ],
+        "fall": "Capricorn",
+        "triplicity_ptolemy": [
+          "Fire (by night)"
+        ],
+        "triplicity_lilly": [
+          "Fire (by night)"
+        ],
+        "sect_ptolemy": "diurnal",
+        "gender_ptolemy": "masculine",
+        "graha": "Guru / Bṛhaspati / Jīva",
+        "_source": "Ptolemy, Tetrabiblos I.6-7, I.20-22 (Ashmand 1822, read in full from Project Gutenberg #70850 on 2026-09-27); Lilly 1647 via grammars/dignities-rulerships; Brhat Jataka ch. I st. 6, 13 via grammars/jyotisa-brhat-jataka. Western exaltation degrees as cross-checked in grammars/dignities-rulerships."
+      }
+    },
+    {
+      "id": "planet-saturn",
+      "name": "Saturn",
+      "symbol": "♄",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 37,
+      "keywords": [
+        "saturn",
+        "planet",
+        "classical"
+      ],
+      "sections": {
+        "Structure": "Saturn is one of the seven classical planets — the bodies visible to the naked eye that every historical voice in this library counts. It rules Capricorn and Aquarius; it is exalted in Libra; it is in detriment in Cancer and Leo (the signs opposite its own) and in fall in Aries (the sign opposite its exaltation). Where Saturn stands in a chart is a placement: a sign, a house, and the aspects it makes to the other placements. Those three things are read from the rest of this grammar.",
+        "Relations": "- Domicile (rulership): Capricorn, Aquarius\n- Exaltation: Libra (Western tables give 21°; the Bṛhat Jātaka gives 20°)\n- Detriment: Cancer, Leo\n- Fall: Aries\n- Triplicity rule, Ptolemy: Air (by day)\n- Triplicity rule, Lilly: Air (by day)\n- Ptolemy's sect: diurnal; his gender: masculine",
+        "Traditions": "- Ptolemy gives Saturn its houses (Book I ch. 20), its exaltation and fall (ch. 22), its share of the triplicities (ch. 21), and calls it masculine (ch. 6) and diurnal (ch. 7) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]. He tables exaltation signs, not degrees.\n- Lilly's table of essential dignities lists detriment — the sign opposite a planet's house — beside house, exaltation and fall, and scores them — William Lilly, *Christian Astrology* (1647) [@lilly1647]; tabled in grammars/dignities-rulerships.\n- Jyotiṣa: Śani / Manda, one of nine grahas (the seven planets plus the lunar nodes Rāhu and Ketu). The Bṛhat Jātaka names the same own signs (ch. I st. 6) and the same exaltation sign, Libra, at the 20th degree (st. 13) — Varāhamihira, *Bṛhat Jātaka*, tr. N. Chidambaram Iyer (1885), as quoted in grammars/jyotisa-brhat-jataka."
+      },
+      "metadata": {
+        "planet": "Saturn",
+        "classical": true,
+        "modern": false,
+        "domicile": [
+          "Capricorn",
+          "Aquarius"
+        ],
+        "exaltation": "Libra",
+        "exaltation_degree_western": 21,
+        "exaltation_degree_brhat_jataka": 20,
+        "detriment": [
+          "Cancer",
+          "Leo"
+        ],
+        "fall": "Aries",
+        "triplicity_ptolemy": [
+          "Air (by day)"
+        ],
+        "triplicity_lilly": [
+          "Air (by day)"
+        ],
+        "sect_ptolemy": "diurnal",
+        "gender_ptolemy": "masculine",
+        "graha": "Śani / Manda",
+        "_source": "Ptolemy, Tetrabiblos I.6-7, I.20-22 (Ashmand 1822, read in full from Project Gutenberg #70850 on 2026-09-27); Lilly 1647 via grammars/dignities-rulerships; Brhat Jataka ch. I st. 6, 13 via grammars/jyotisa-brhat-jataka. Western exaltation degrees as cross-checked in grammars/dignities-rulerships."
+      }
+    },
+    {
+      "id": "planet-uranus",
+      "name": "Uranus",
+      "symbol": "♅",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 38,
+      "keywords": [
+        "uranus",
+        "planet",
+        "modern",
+        "outer planet"
+      ],
+      "sections": {
+        "Structure": "Uranus was found with a telescope in 1781, so it is absent from every text written before then. It is marked **modern**: it belongs to astrology after its discovery only. Modern practice gives it Aquarius as a sign to rule, beside that sign's classical ruler, Saturn; the traditional dignity table has no place for it.",
+        "Traditions": "- Not among Ptolemy's or Lilly's planets: both count seven — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]; William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Alan Leo's *Astrology for All* describes it astronomically ('commonly called Herschel after its re-discoverer') [@web_leo_astrologyforall], and his *How to Judge a Nativity* (quoted from the archive.org scan of the 1928 printing) says 'Uranus has a natural sympathy with Scorpio' [@web_leo_howtojudge] — an early modern view that differs from the later Aquarius convention.\n- Not a graha of the Bṛhat Jātaka, which counts nine: the seven planets and the two lunar nodes — grammars/jyotisa-brhat-jataka.\n- The modern rulership (Uranus–Aquarius) is carried here as it is carried in grammars/dignities-rulerships (`modern_co_ruler`), where it is marked a modern addition; no public-domain source in this repo states it as settled."
+      },
+      "metadata": {
+        "planet": "Uranus",
+        "classical": false,
+        "modern": true,
+        "discovered": 1781,
+        "modern_rulership": "Aquarius",
+        "classical_ruler_of_that_sign": "Saturn",
+        "confidence": "medium",
+        "_source": "Discovery years as carried in grammars/dignities-rulerships (1781, 1846) and grammars/dwarf-planets (1930). Alan Leo quotes read 2026-09-27 from the archive.org scans astrologyforall00leogoog and howtojudgenativi00leoa (the scans grammars/alan-leo cites); bib keys web_leo_astrologyforall, web_leo_howtojudge. Modern rulership: grammars/dignities-rulerships modern_co_ruler (a contemporary convention, not a PD source)."
+      }
+    },
+    {
+      "id": "planet-neptune",
+      "name": "Neptune",
+      "symbol": "♆",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 39,
+      "keywords": [
+        "neptune",
+        "planet",
+        "modern",
+        "outer planet"
+      ],
+      "sections": {
+        "Structure": "Neptune was found in 1846, so it is absent from every older text. It is marked **modern**: it belongs to astrology after its discovery only. Modern practice gives it Pisces as a sign to rule, beside that sign's classical ruler, Jupiter; the traditional dignity table has no place for it.",
+        "Traditions": "- Not among Ptolemy's or Lilly's planets — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]; William Lilly, *Christian Astrology* (1647) [@lilly1647].\n- Alan Leo's *Astrology for All* calls it 'the most distant planet as yet discovered' and records it as 'supposed to govern Pisces to a considerable extent' — the modern rulership still held tentatively [@web_leo_astrologyforall].\n- Not a graha of the Bṛhat Jātaka — grammars/jyotisa-brhat-jataka.\n- The modern rulership (Neptune–Pisces) is carried here as it is carried in grammars/dignities-rulerships (`modern_co_ruler`), where it is marked a modern addition; no public-domain source in this repo states it as settled."
+      },
+      "metadata": {
+        "planet": "Neptune",
+        "classical": false,
+        "modern": true,
+        "discovered": 1846,
+        "modern_rulership": "Pisces",
+        "classical_ruler_of_that_sign": "Jupiter",
+        "confidence": "medium",
+        "_source": "Discovery years as carried in grammars/dignities-rulerships (1781, 1846) and grammars/dwarf-planets (1930). Alan Leo quotes read 2026-09-27 from the archive.org scans astrologyforall00leogoog and howtojudgenativi00leoa (the scans grammars/alan-leo cites); bib keys web_leo_astrologyforall, web_leo_howtojudge. Modern rulership: grammars/dignities-rulerships modern_co_ruler (a contemporary convention, not a PD source)."
+      }
+    },
+    {
+      "id": "planet-pluto",
+      "name": "Pluto",
+      "symbol": "♇",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 40,
+      "keywords": [
+        "pluto",
+        "planet",
+        "modern",
+        "outer planet"
+      ],
+      "sections": {
+        "Structure": "Pluto was found in 1930 and reclassified by the IAU as a dwarf planet in 2006; astrology kept it (see grammars/dwarf-planets, which records the discovery and the reclassification from NASA and Wikipedia pages fetched in July 2026). It is marked **modern**: it belongs to astrology after its discovery only. Modern practice gives it Scorpio as a sign to rule, beside that sign's classical ruler, Mars; the traditional dignity table has no place for it.",
+        "Traditions": "- Not in Ptolemy, Lilly, or Alan Leo (who died in 1917, before its discovery) — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822]; William Lilly, *Christian Astrology* (1647) [@lilly1647]; grammars/alan-leo.\n- Not a graha of the Bṛhat Jātaka — grammars/jyotisa-brhat-jataka.\n- Its astrological use is therefore under a century old; grammars/dwarf-planets holds the question of what a reclassified body means to a reader.\n- The modern rulership (Pluto–Scorpio) is carried here as it is carried in grammars/dignities-rulerships (`modern_co_ruler`), where it is marked a modern addition; no public-domain source in this repo states it as settled."
+      },
+      "metadata": {
+        "planet": "Pluto",
+        "classical": false,
+        "modern": true,
+        "discovered": 1930,
+        "modern_rulership": "Scorpio",
+        "classical_ruler_of_that_sign": "Mars",
+        "confidence": "medium",
+        "_source": "Discovery years as carried in grammars/dignities-rulerships (1781, 1846) and grammars/dwarf-planets (1930). Alan Leo quotes read 2026-09-27 from the archive.org scans astrologyforall00leogoog and howtojudgenativi00leoa (the scans grammars/alan-leo cites); bib keys web_leo_astrologyforall, web_leo_howtojudge. Modern rulership: grammars/dignities-rulerships modern_co_ruler (a contemporary convention, not a PD source)."
+      }
+    },
+    {
+      "id": "the-houses",
+      "name": "The twelve houses",
+      "category": "house-system",
+      "level": 3,
+      "sort_order": 41,
+      "composite_of": [
+        "houses-angular",
+        "houses-succedent",
+        "houses-cadent"
+      ],
+      "keywords": [
+        "houses",
+        "house systems",
+        "whole sign"
+      ],
+      "sections": {
+        "Structure": "Twelve places counted from the rising point of the eastern horizon. They are fixed to the horizon and meridian of one time and place, where the signs are fixed to the sky: the same planet has a sign from the date, a house from the date, the hour and the place.",
+        "Traditions": "- Whole-sign houses: Brennan argues that Hellenistic astrologers counted each whole sign as one house, starting from the rising sign, and the method has been revived since the 1990s (research/views/contemporary-resurgence.md [@brennan2017]). Confidence: medium — one scholar-practitioner's reconstruction.\n- Quadrant houses: Lilly divides the sky 'into four equal arcs by the Meridian and Horizon', and each quadrant into three, beginning from the East — William Lilly, *Christian Astrology* (1647) [@lilly1647] (OCR scan). This repo's chart viewer computes its own house cusps; how is out of scope here."
+      },
+      "metadata": {}
+    },
+    {
+      "id": "house-1",
+      "name": "First House",
+      "symbol": "I",
+      "category": "house",
+      "level": 1,
+      "sort_order": 42,
+      "keywords": [
+        "house",
+        "1",
+        "angular"
+      ],
+      "sections": {
+        "Structure": "The 1st house is angular — one of the four angles, where the horizon and the meridian cross the circle. It sits below the horizon, in the eastern half of the chart, in Lilly's fourth quadrant. Its opposite is the 7th house: together they make the 1–7 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Ptolemy treats the four angles as the cardinal points of the horizon: this is 'the eastern point, or angle of the ascendant', which he calls chiefly dry in nature — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 13.\n- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is angular — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 1,
+        "group": "angular",
+        "opposite_house": 7,
+        "axis": "axis-1-7",
+        "quadrant_lilly": 4,
+        "above_horizon": false,
+        "half": "east"
+      }
+    },
+    {
+      "id": "house-2",
+      "name": "Second House",
+      "symbol": "II",
+      "category": "house",
+      "level": 1,
+      "sort_order": 43,
+      "keywords": [
+        "house",
+        "2",
+        "succedent"
+      ],
+      "sections": {
+        "Structure": "The 2nd house is succedent — it follows an angle. It sits below the horizon, in the eastern half of the chart, in Lilly's fourth quadrant. Its opposite is the 8th house: together they make the 2–8 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is succedent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 2,
+        "group": "succedent",
+        "opposite_house": 8,
+        "axis": "axis-2-8",
+        "quadrant_lilly": 4,
+        "above_horizon": false,
+        "half": "east"
+      }
+    },
+    {
+      "id": "house-3",
+      "name": "Third House",
+      "symbol": "III",
+      "category": "house",
+      "level": 1,
+      "sort_order": 44,
+      "keywords": [
+        "house",
+        "3",
+        "cadent"
+      ],
+      "sections": {
+        "Structure": "The 3rd house is cadent — it falls away from an angle, before the next one. It sits below the horizon, in the eastern half of the chart, in Lilly's fourth quadrant. Its opposite is the 9th house: together they make the 3–9 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is cadent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 3,
+        "group": "cadent",
+        "opposite_house": 9,
+        "axis": "axis-3-9",
+        "quadrant_lilly": 4,
+        "above_horizon": false,
+        "half": "east"
+      }
+    },
+    {
+      "id": "house-4",
+      "name": "Fourth House",
+      "symbol": "IV",
+      "category": "house",
+      "level": 1,
+      "sort_order": 45,
+      "keywords": [
+        "house",
+        "4",
+        "angular"
+      ],
+      "sections": {
+        "Structure": "The 4th house is angular — one of the four angles, where the horizon and the meridian cross the circle. It sits below the horizon, in the western half of the chart, in Lilly's third quadrant. Its opposite is the 10th house: together they make the 4–10 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Ptolemy treats the four angles as the cardinal points of the horizon: this is 'the northern point, or angle of the lower heaven', which he calls the most cold in nature — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 13.\n- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is angular — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 4,
+        "group": "angular",
+        "opposite_house": 10,
+        "axis": "axis-4-10",
+        "quadrant_lilly": 3,
+        "above_horizon": false,
+        "half": "west"
+      }
+    },
+    {
+      "id": "house-5",
+      "name": "Fifth House",
+      "symbol": "V",
+      "category": "house",
+      "level": 1,
+      "sort_order": 46,
+      "keywords": [
+        "house",
+        "5",
+        "succedent"
+      ],
+      "sections": {
+        "Structure": "The 5th house is succedent — it follows an angle. It sits below the horizon, in the western half of the chart, in Lilly's third quadrant. Its opposite is the 11th house: together they make the 5–11 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is succedent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 5,
+        "group": "succedent",
+        "opposite_house": 11,
+        "axis": "axis-5-11",
+        "quadrant_lilly": 3,
+        "above_horizon": false,
+        "half": "west"
+      }
+    },
+    {
+      "id": "house-6",
+      "name": "Sixth House",
+      "symbol": "VI",
+      "category": "house",
+      "level": 1,
+      "sort_order": 47,
+      "keywords": [
+        "house",
+        "6",
+        "cadent"
+      ],
+      "sections": {
+        "Structure": "The 6th house is cadent — it falls away from an angle, before the next one. It sits below the horizon, in the western half of the chart, in Lilly's third quadrant. Its opposite is the 12th house: together they make the 6–12 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is cadent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 6,
+        "group": "cadent",
+        "opposite_house": 12,
+        "axis": "axis-6-12",
+        "quadrant_lilly": 3,
+        "above_horizon": false,
+        "half": "west"
+      }
+    },
+    {
+      "id": "house-7",
+      "name": "Seventh House",
+      "symbol": "VII",
+      "category": "house",
+      "level": 1,
+      "sort_order": 48,
+      "keywords": [
+        "house",
+        "7",
+        "angular"
+      ],
+      "sections": {
+        "Structure": "The 7th house is angular — one of the four angles, where the horizon and the meridian cross the circle. It sits above the horizon, in the western half of the chart, in Lilly's second quadrant. Its opposite is the 1st house: together they make the 1–7 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Ptolemy treats the four angles as the cardinal points of the horizon: this is 'the western point, or occidental angle', which he calls moist in nature — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 13.\n- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is angular — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 7,
+        "group": "angular",
+        "opposite_house": 1,
+        "axis": "axis-1-7",
+        "quadrant_lilly": 2,
+        "above_horizon": true,
+        "half": "west"
+      }
+    },
+    {
+      "id": "house-8",
+      "name": "Eighth House",
+      "symbol": "VIII",
+      "category": "house",
+      "level": 1,
+      "sort_order": 49,
+      "keywords": [
+        "house",
+        "8",
+        "succedent"
+      ],
+      "sections": {
+        "Structure": "The 8th house is succedent — it follows an angle. It sits above the horizon, in the western half of the chart, in Lilly's second quadrant. Its opposite is the 2nd house: together they make the 2–8 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is succedent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 8,
+        "group": "succedent",
+        "opposite_house": 2,
+        "axis": "axis-2-8",
+        "quadrant_lilly": 2,
+        "above_horizon": true,
+        "half": "west"
+      }
+    },
+    {
+      "id": "house-9",
+      "name": "Ninth House",
+      "symbol": "IX",
+      "category": "house",
+      "level": 1,
+      "sort_order": 50,
+      "keywords": [
+        "house",
+        "9",
+        "cadent"
+      ],
+      "sections": {
+        "Structure": "The 9th house is cadent — it falls away from an angle, before the next one. It sits above the horizon, in the western half of the chart, in Lilly's second quadrant. Its opposite is the 3rd house: together they make the 3–9 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is cadent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 9,
+        "group": "cadent",
+        "opposite_house": 3,
+        "axis": "axis-3-9",
+        "quadrant_lilly": 2,
+        "above_horizon": true,
+        "half": "west"
+      }
+    },
+    {
+      "id": "house-10",
+      "name": "Tenth House",
+      "symbol": "X",
+      "category": "house",
+      "level": 1,
+      "sort_order": 51,
+      "keywords": [
+        "house",
+        "10",
+        "angular"
+      ],
+      "sections": {
+        "Structure": "The 10th house is angular — one of the four angles, where the horizon and the meridian cross the circle. It sits above the horizon, in the eastern half of the chart, in Lilly's first quadrant. Its opposite is the 4th house: together they make the 4–10 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Ptolemy treats the four angles as the cardinal points of the horizon: this is 'the southern point, or angle of the mid-heaven', which he calls the most hot in nature — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 13.\n- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is angular — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 10,
+        "group": "angular",
+        "opposite_house": 4,
+        "axis": "axis-4-10",
+        "quadrant_lilly": 1,
+        "above_horizon": true,
+        "half": "east"
+      }
+    },
+    {
+      "id": "house-11",
+      "name": "Eleventh House",
+      "symbol": "XI",
+      "category": "house",
+      "level": 1,
+      "sort_order": 52,
+      "keywords": [
+        "house",
+        "11",
+        "succedent"
+      ],
+      "sections": {
+        "Structure": "The 11th house is succedent — it follows an angle. It sits above the horizon, in the eastern half of the chart, in Lilly's first quadrant. Its opposite is the 5th house: together they make the 5–11 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is succedent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 11,
+        "group": "succedent",
+        "opposite_house": 5,
+        "axis": "axis-5-11",
+        "quadrant_lilly": 1,
+        "above_horizon": true,
+        "half": "east"
+      }
+    },
+    {
+      "id": "house-12",
+      "name": "Twelfth House",
+      "symbol": "XII",
+      "category": "house",
+      "level": 1,
+      "sort_order": 53,
+      "keywords": [
+        "house",
+        "12",
+        "cadent"
+      ],
+      "sections": {
+        "Structure": "The 12th house is cadent — it falls away from an angle, before the next one. It sits above the horizon, in the eastern half of the chart, in Lilly's first quadrant. Its opposite is the 6th house: together they make the 6–12 axis. A house is a place in the turning sky at one moment and place on earth; which sign falls on it depends on that moment.",
+        "Traditions": "- Lilly counts the houses from the East, dividing each quadrant made by the meridian and the horizon into three, and ranks them: angles 'most powerful', succedents next, cadents 'of little efficacy'; this house is cadent — William Lilly, *Christian Astrology* (1647) [@lilly1647], the chapter on the division of the heavens (read from the archive.org OCR scan; wording paraphrased)."
+      },
+      "metadata": {
+        "house": 12,
+        "group": "cadent",
+        "opposite_house": 6,
+        "axis": "axis-6-12",
+        "quadrant_lilly": 1,
+        "above_horizon": true,
+        "half": "east"
+      }
+    },
+    {
+      "id": "houses-angular",
+      "name": "Angular houses",
+      "category": "house-group",
+      "level": 2,
+      "sort_order": 54,
+      "composite_of": [
+        "house-1",
+        "house-4",
+        "house-7",
+        "house-10"
+      ],
+      "keywords": [
+        "angular",
+        "houses"
+      ],
+      "sections": {
+        "Structure": "Houses 1, 4, 7, 10: the four angles, where the horizon (1–7) and the meridian (4–10) meet the circle.",
+        "Traditions": "- Lilly names the first, tenth, seventh and fourth houses the angles; 'the eleventh, second, eighth and fifth are called Succedants, the third, twelfth, ninth and sixth are termed Cadents'; 'the Angles are most powerful, the Succedants are next in virtue, the Cadents poor, and of little efficacy' — William Lilly, *Christian Astrology* (1647) [@lilly1647] (archive.org OCR scan; spelling modernised)."
+      },
+      "metadata": {
+        "group": "angular",
+        "houses": [
+          1,
+          4,
+          7,
+          10
+        ]
+      }
+    },
+    {
+      "id": "houses-succedent",
+      "name": "Succedent houses",
+      "category": "house-group",
+      "level": 2,
+      "sort_order": 55,
+      "composite_of": [
+        "house-2",
+        "house-5",
+        "house-8",
+        "house-11"
+      ],
+      "keywords": [
+        "succedent",
+        "houses"
+      ],
+      "sections": {
+        "Structure": "Houses 2, 5, 8, 11: each follows ('succeeds') an angle.",
+        "Traditions": "- Lilly names the first, tenth, seventh and fourth houses the angles; 'the eleventh, second, eighth and fifth are called Succedants, the third, twelfth, ninth and sixth are termed Cadents'; 'the Angles are most powerful, the Succedants are next in virtue, the Cadents poor, and of little efficacy' — William Lilly, *Christian Astrology* (1647) [@lilly1647] (archive.org OCR scan; spelling modernised)."
+      },
+      "metadata": {
+        "group": "succedent",
+        "houses": [
+          2,
+          5,
+          8,
+          11
+        ]
+      }
+    },
+    {
+      "id": "houses-cadent",
+      "name": "Cadent houses",
+      "category": "house-group",
+      "level": 2,
+      "sort_order": 56,
+      "composite_of": [
+        "house-3",
+        "house-6",
+        "house-9",
+        "house-12"
+      ],
+      "keywords": [
+        "cadent",
+        "houses"
+      ],
+      "sections": {
+        "Structure": "Houses 3, 6, 9, 12: each falls away ('cadent', falling) from an angle toward the next.",
+        "Traditions": "- Lilly names the first, tenth, seventh and fourth houses the angles; 'the eleventh, second, eighth and fifth are called Succedants, the third, twelfth, ninth and sixth are termed Cadents'; 'the Angles are most powerful, the Succedants are next in virtue, the Cadents poor, and of little efficacy' — William Lilly, *Christian Astrology* (1647) [@lilly1647] (archive.org OCR scan; spelling modernised)."
+      },
+      "metadata": {
+        "group": "cadent",
+        "houses": [
+          3,
+          6,
+          9,
+          12
+        ]
+      }
+    },
+    {
+      "id": "axis-1-7",
+      "name": "1st–7th house axis",
+      "category": "axis",
+      "level": 2,
+      "sort_order": 57,
+      "composite_of": [
+        "house-1",
+        "house-7"
+      ],
+      "keywords": [
+        "axis",
+        "1",
+        "7"
+      ],
+      "sections": {
+        "Structure": "Houses 1 and 7 face each other across the chart. This is the horizon: the ascendant (1) rising in the east, the descendant (7) setting in the west.",
+        "Traditions": "- Lilly: 'the twelve Houses also are opposite each to other … the tenth house is opposite to the fourth … the eleventh to the fifth' — William Lilly, *Christian Astrology* (1647) [@lilly1647], in the instructions for erecting a figure (OCR scan)."
+      },
+      "metadata": {
+        "houses": [
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "id": "axis-4-10",
+      "name": "4th–10th house axis",
+      "category": "axis",
+      "level": 2,
+      "sort_order": 58,
+      "composite_of": [
+        "house-4",
+        "house-10"
+      ],
+      "keywords": [
+        "axis",
+        "4",
+        "10"
+      ],
+      "sections": {
+        "Structure": "Houses 4 and 10 face each other across the chart. This is the meridian: the mid-heaven (10) above, the lower heaven (4) below.",
+        "Traditions": "- Lilly: 'the twelve Houses also are opposite each to other … the tenth house is opposite to the fourth … the eleventh to the fifth' — William Lilly, *Christian Astrology* (1647) [@lilly1647], in the instructions for erecting a figure (OCR scan)."
+      },
+      "metadata": {
+        "houses": [
+          4,
+          10
+        ]
+      }
+    },
+    {
+      "id": "axis-2-8",
+      "name": "2nd–8th house axis",
+      "category": "axis",
+      "level": 2,
+      "sort_order": 59,
+      "composite_of": [
+        "house-2",
+        "house-8"
+      ],
+      "keywords": [
+        "axis",
+        "2",
+        "8"
+      ],
+      "sections": {
+        "Structure": "Houses 2 and 8 face each other across the chart. Both are succedent.",
+        "Traditions": "- Lilly: 'the twelve Houses also are opposite each to other … the tenth house is opposite to the fourth … the eleventh to the fifth' — William Lilly, *Christian Astrology* (1647) [@lilly1647], in the instructions for erecting a figure (OCR scan)."
+      },
+      "metadata": {
+        "houses": [
+          2,
+          8
+        ]
+      }
+    },
+    {
+      "id": "axis-3-9",
+      "name": "3rd–9th house axis",
+      "category": "axis",
+      "level": 2,
+      "sort_order": 60,
+      "composite_of": [
+        "house-3",
+        "house-9"
+      ],
+      "keywords": [
+        "axis",
+        "3",
+        "9"
+      ],
+      "sections": {
+        "Structure": "Houses 3 and 9 face each other across the chart. Both are cadent.",
+        "Traditions": "- Lilly: 'the twelve Houses also are opposite each to other … the tenth house is opposite to the fourth … the eleventh to the fifth' — William Lilly, *Christian Astrology* (1647) [@lilly1647], in the instructions for erecting a figure (OCR scan)."
+      },
+      "metadata": {
+        "houses": [
+          3,
+          9
+        ]
+      }
+    },
+    {
+      "id": "axis-5-11",
+      "name": "5th–11th house axis",
+      "category": "axis",
+      "level": 2,
+      "sort_order": 61,
+      "composite_of": [
+        "house-5",
+        "house-11"
+      ],
+      "keywords": [
+        "axis",
+        "5",
+        "11"
+      ],
+      "sections": {
+        "Structure": "Houses 5 and 11 face each other across the chart. Both are succedent.",
+        "Traditions": "- Lilly: 'the twelve Houses also are opposite each to other … the tenth house is opposite to the fourth … the eleventh to the fifth' — William Lilly, *Christian Astrology* (1647) [@lilly1647], in the instructions for erecting a figure (OCR scan)."
+      },
+      "metadata": {
+        "houses": [
+          5,
+          11
+        ]
+      }
+    },
+    {
+      "id": "axis-6-12",
+      "name": "6th–12th house axis",
+      "category": "axis",
+      "level": 2,
+      "sort_order": 62,
+      "composite_of": [
+        "house-6",
+        "house-12"
+      ],
+      "keywords": [
+        "axis",
+        "6",
+        "12"
+      ],
+      "sections": {
+        "Structure": "Houses 6 and 12 face each other across the chart. Both are cadent.",
+        "Traditions": "- Lilly: 'the twelve Houses also are opposite each to other … the tenth house is opposite to the fourth … the eleventh to the fifth' — William Lilly, *Christian Astrology* (1647) [@lilly1647], in the instructions for erecting a figure (OCR scan)."
+      },
+      "metadata": {
+        "houses": [
+          6,
+          12
+        ]
+      }
+    },
+    {
+      "id": "quadrant-1",
+      "name": "Quadrant 1 (houses 10–12)",
+      "category": "quadrant",
+      "level": 2,
+      "sort_order": 63,
+      "composite_of": [
+        "house-10",
+        "house-11",
+        "house-12"
+      ],
+      "keywords": [
+        "quadrant",
+        "1"
+      ],
+      "sections": {
+        "Structure": "The horizon and the meridian cut the chart into four quarters of three houses each. This is Lilly's first quadrant: houses 10, 11, 12.",
+        "Traditions": "- Lilly: from the ascendant up to the mid-heaven: oriental, vernal, masculine, sanguine, of infancy — William Lilly, *Christian Astrology* (1647) [@lilly1647] (archive.org OCR scan; epithets read through OCR noise, confidence medium).\n- Ptolemy reports that some astrologers call the quadrants from the ascendant to the mid-heaven and from the descendant to the lower heaven 'oriental and masculine', the other two 'occidental and feminine' — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 15."
+      },
+      "metadata": {
+        "quadrant": 1,
+        "houses": [
+          10,
+          11,
+          12
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "quadrant-2",
+      "name": "Quadrant 2 (houses 7–9)",
+      "category": "quadrant",
+      "level": 2,
+      "sort_order": 64,
+      "composite_of": [
+        "house-7",
+        "house-8",
+        "house-9"
+      ],
+      "keywords": [
+        "quadrant",
+        "2"
+      ],
+      "sections": {
+        "Structure": "The horizon and the meridian cut the chart into four quarters of three houses each. This is Lilly's second quadrant: houses 7, 8, 9.",
+        "Traditions": "- Lilly: from the mid-heaven down to the descendant: meridian, estival (summer), feminine, youthful, choleric — William Lilly, *Christian Astrology* (1647) [@lilly1647] (archive.org OCR scan; epithets read through OCR noise, confidence medium).\n- Ptolemy reports that some astrologers call the quadrants from the ascendant to the mid-heaven and from the descendant to the lower heaven 'oriental and masculine', the other two 'occidental and feminine' — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 15."
+      },
+      "metadata": {
+        "quadrant": 2,
+        "houses": [
+          7,
+          8,
+          9
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "quadrant-3",
+      "name": "Quadrant 3 (houses 4–6)",
+      "category": "quadrant",
+      "level": 2,
+      "sort_order": 65,
+      "composite_of": [
+        "house-4",
+        "house-5",
+        "house-6"
+      ],
+      "keywords": [
+        "quadrant",
+        "3"
+      ],
+      "sections": {
+        "Structure": "The horizon and the meridian cut the chart into four quarters of three houses each. This is Lilly's third quadrant: houses 4, 5, 6.",
+        "Traditions": "- Lilly: from the descendant down to the lower heaven: occidental, autumnal, masculine, melancholic, of manhood — William Lilly, *Christian Astrology* (1647) [@lilly1647] (archive.org OCR scan; epithets read through OCR noise, confidence medium).\n- Ptolemy reports that some astrologers call the quadrants from the ascendant to the mid-heaven and from the descendant to the lower heaven 'oriental and masculine', the other two 'occidental and feminine' — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 15."
+      },
+      "metadata": {
+        "quadrant": 3,
+        "houses": [
+          4,
+          5,
+          6
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "quadrant-4",
+      "name": "Quadrant 4 (houses 1–3)",
+      "category": "quadrant",
+      "level": 2,
+      "sort_order": 66,
+      "composite_of": [
+        "house-1",
+        "house-2",
+        "house-3"
+      ],
+      "keywords": [
+        "quadrant",
+        "4"
+      ],
+      "sections": {
+        "Structure": "The horizon and the meridian cut the chart into four quarters of three houses each. This is Lilly's fourth quadrant: houses 1, 2, 3.",
+        "Traditions": "- Lilly: from the lower heaven up to the ascendant: northern, feminine, of old age and of winter, phlegmatic — William Lilly, *Christian Astrology* (1647) [@lilly1647] (archive.org OCR scan; epithets read through OCR noise, confidence medium).\n- Ptolemy reports that some astrologers call the quadrants from the ascendant to the mid-heaven and from the descendant to the lower heaven 'oriental and masculine', the other two 'occidental and feminine' — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 15."
+      },
+      "metadata": {
+        "quadrant": 4,
+        "houses": [
+          1,
+          2,
+          3
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "id": "hemisphere-above",
+      "name": "Above the horizon (houses 7–12)",
+      "category": "hemisphere",
+      "level": 3,
+      "sort_order": 67,
+      "composite_of": [
+        "quadrant-1",
+        "quadrant-2"
+      ],
+      "keywords": [
+        "hemisphere",
+        "above"
+      ],
+      "sections": {
+        "Structure": "The half of the chart above the horizon: Lilly's first and second quadrants. A planet's hemisphere is a fact of the moment: it follows from the time and place, as the houses do."
+      },
+      "metadata": {
+        "hemisphere": "above",
+        "quadrants": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "hemisphere-below",
+      "name": "Below the horizon (houses 1–6)",
+      "category": "hemisphere",
+      "level": 3,
+      "sort_order": 68,
+      "composite_of": [
+        "quadrant-3",
+        "quadrant-4"
+      ],
+      "keywords": [
+        "hemisphere",
+        "below"
+      ],
+      "sections": {
+        "Structure": "The half of the chart below the horizon: Lilly's third and fourth quadrants. A planet's hemisphere is a fact of the moment: it follows from the time and place, as the houses do."
+      },
+      "metadata": {
+        "hemisphere": "below",
+        "quadrants": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "hemisphere-east",
+      "name": "Eastern half (houses 10–3)",
+      "category": "hemisphere",
+      "level": 3,
+      "sort_order": 69,
+      "composite_of": [
+        "quadrant-1",
+        "quadrant-4"
+      ],
+      "keywords": [
+        "hemisphere",
+        "east"
+      ],
+      "sections": {
+        "Structure": "The half of the chart east of the meridian, around the ascendant: Lilly's first and fourth quadrants. A planet's hemisphere is a fact of the moment: it follows from the time and place, as the houses do."
+      },
+      "metadata": {
+        "hemisphere": "east",
+        "quadrants": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "hemisphere-west",
+      "name": "Western half (houses 4–9)",
+      "category": "hemisphere",
+      "level": 3,
+      "sort_order": 70,
+      "composite_of": [
+        "quadrant-2",
+        "quadrant-3"
+      ],
+      "keywords": [
+        "hemisphere",
+        "west"
+      ],
+      "sections": {
+        "Structure": "The half of the chart west of the meridian, around the descendant: Lilly's second and third quadrants. A planet's hemisphere is a fact of the moment: it follows from the time and place, as the houses do."
+      },
+      "metadata": {
+        "hemisphere": "west",
+        "quadrants": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "aspect-conjunction",
+      "name": "Conjunction",
+      "symbol": "☌",
+      "category": "aspect",
+      "level": 1,
+      "sort_order": 71,
+      "keywords": [
+        "conjunction",
+        "aspect",
+        "0°"
+      ],
+      "sections": {
+        "Structure": "Two placements in the same sign (0°). Sign-by-sign they share everything: element, modality, polarity. Strictly it is not a configuration between two parts of the zodiac but one part. An aspect is a relationship between two placements, not a thing a chart owns: a chart's aspects are computed from where its planets stand, never stored.",
+        "Traditions": "- Ptolemy's chapter on configurations leaves the conjunction out; Ashmand's note explains that it treats only parts configured *with each other*, while he uses the conjunction elsewhere — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 16 and note 44.\n- Lilly: 'we use to call the Conjunction an Aspect, but very improperly' — William Lilly, *Christian Astrology* (1647) [@lilly1647] (read from the archive.org OCR scan; spelling modernised)."
+      },
+      "metadata": {
+        "aspect": "Conjunction",
+        "angle": 0,
+        "signs_apart": 0,
+        "same_element": true,
+        "same_modality": true,
+        "same_polarity": true,
+        "ptolemaic": true,
+        "ptolemy_calls_it": "not a configuration (Ashmand note 44)",
+        "computed_not_stored": true
+      }
+    },
+    {
+      "id": "aspect-sextile",
+      "name": "Sextile",
+      "symbol": "⚹",
+      "category": "aspect",
+      "level": 1,
+      "sort_order": 72,
+      "keywords": [
+        "sextile",
+        "aspect",
+        "60°"
+      ],
+      "sections": {
+        "Structure": "Two signs apart (60°, a sixth of the circle). The signs share polarity but not element or modality: a sextile always joins fire with air, or earth with water. An aspect is a relationship between two placements, not a thing a chart owns: a chart's aspects are computed from where its planets stand, never stored.",
+        "Traditions": "- Ptolemy: the hexagonal distance, 'two signs, or sixty degrees'; with the trine it is 'harmonious, because they are constituted between signs of the same kind; being formed between either all feminine or all masculine signs' — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 16.\n- Lilly: 'the sixth part of the Zodiack' — William Lilly, *Christian Astrology* (1647) [@lilly1647]."
+      },
+      "metadata": {
+        "aspect": "Sextile",
+        "angle": 60,
+        "signs_apart": 2,
+        "same_element": false,
+        "same_modality": false,
+        "same_polarity": true,
+        "ptolemaic": true,
+        "ptolemy_calls_it": "harmonious",
+        "computed_not_stored": true
+      }
+    },
+    {
+      "id": "aspect-square",
+      "name": "Square",
+      "symbol": "□",
+      "category": "aspect",
+      "level": 1,
+      "sort_order": 73,
+      "keywords": [
+        "square",
+        "aspect",
+        "90°"
+      ],
+      "sections": {
+        "Structure": "Three signs apart (90°, a quarter). The signs share modality — both cardinal, both fixed or both mutable — but not polarity, and never element. An aspect is a relationship between two placements, not a thing a chart owns: a chart's aspects are computed from where its planets stand, never stored.",
+        "Traditions": "- Ptolemy: the quadrate distance, 'three signs, or ninety degrees'; with the opposition 'considered to be discordant, because they are configurations made between signs not of the same kind, but of different natures and sexes' — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 16.\n- Lilly: the 'Quadrate' or 'Tetragonall' aspect, 'a fourth part of the Circle' — William Lilly, *Christian Astrology* (1647) [@lilly1647]."
+      },
+      "metadata": {
+        "aspect": "Square",
+        "angle": 90,
+        "signs_apart": 3,
+        "same_element": false,
+        "same_modality": true,
+        "same_polarity": false,
+        "ptolemaic": true,
+        "ptolemy_calls_it": "discordant",
+        "computed_not_stored": true
+      }
+    },
+    {
+      "id": "aspect-trine",
+      "name": "Trine",
+      "symbol": "△",
+      "category": "aspect",
+      "level": 1,
+      "sort_order": 74,
+      "keywords": [
+        "trine",
+        "aspect",
+        "120°"
+      ],
+      "sections": {
+        "Structure": "Four signs apart (120°, a third). The signs share element — they are two corners of one triplicity — and therefore polarity, but not modality. An aspect is a relationship between two placements, not a thing a chart owns: a chart's aspects are computed from where its planets stand, never stored.",
+        "Traditions": "- Ptolemy: the triangular distance, 'four signs, or a hundred and twenty degrees'; harmonious, between signs of the same kind — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 16. His triplicities (ch. 21) are the same triangles.\n- Lilly: 'a third part of the Circle', also called 'Trigonall'; 'three Signs make one Trygon or Triplicity' — William Lilly, *Christian Astrology* (1647) [@lilly1647] (OCR scan; spelling modernised).\n- Alan Leo: 'the trine, 120°, is a third of the circle' — *How to Judge a Nativity*, as quoted in grammars/alan-leo."
+      },
+      "metadata": {
+        "aspect": "Trine",
+        "angle": 120,
+        "signs_apart": 4,
+        "same_element": true,
+        "same_modality": false,
+        "same_polarity": true,
+        "ptolemaic": true,
+        "ptolemy_calls_it": "harmonious",
+        "computed_not_stored": true
+      }
+    },
+    {
+      "id": "aspect-opposition",
+      "name": "Opposition",
+      "symbol": "☍",
+      "category": "aspect",
+      "level": 1,
+      "sort_order": 75,
+      "keywords": [
+        "opposition",
+        "aspect",
+        "180°"
+      ],
+      "sections": {
+        "Structure": "Six signs apart (180°, half). Opposite signs share modality and polarity; their elements differ but pair across the circle the way a sextile pairs them: fire with air, earth with water. Each sign has exactly one opposite. An aspect is a relationship between two placements, not a thing a chart owns: a chart's aspects are computed from where its planets stand, never stored.",
+        "Traditions": "- Ptolemy: the diametrical distance, 'six signs, or a hundred and eighty degrees'; discordant, with the square — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 16. Read against his own ch. 15, opposite signs are of the same sex (Aries and Libra are both 'masculine and diurnal'), so the sex difference he names fits the square, not the opposition. The tension is in the text as translated and is left standing here.\n- Lilly: 'Opposition or Diametral Radiation', planets '180 degrees, or half the Circle' apart — William Lilly, *Christian Astrology* (1647) [@lilly1647]. He also pairs the signs and the houses as opposites for erecting a figure: 'the tenth house is opposite to the fourth'."
+      },
+      "metadata": {
+        "aspect": "Opposition",
+        "angle": 180,
+        "signs_apart": 6,
+        "same_element": false,
+        "same_modality": true,
+        "same_polarity": true,
+        "ptolemaic": true,
+        "ptolemy_calls_it": "discordant",
+        "computed_not_stored": true
+      }
+    },
+    {
+      "id": "aspect-quincunx",
+      "name": "Quincunx (inconjunct)",
+      "symbol": "⚻",
+      "category": "aspect",
+      "level": 1,
+      "sort_order": 76,
+      "keywords": [
+        "quincunx",
+        "aspect",
+        "150°"
+      ],
+      "sections": {
+        "Structure": "Five signs apart (150°). The two signs share nothing — not element, not modality, not polarity. Not one of the classical (Ptolemaic) aspects. An aspect is a relationship between two placements, not a thing a chart owns: a chart's aspects are computed from where its planets stand, never stored.",
+        "Traditions": "- Ptolemy: signs five apart (and signs one apart) are *inconjunct* — 'they divide the whole circle into unequal parts' and share in none of the four configurations — Ptolemy, *Tetrabiblos*, tr. J. M. Ashmand (1822) [@ptolemyashmand1822], Book I ch. 19. Ashmand's note records that later aspects (semiquadrate, quintile, sesquiquadrate, biquintile) were added after Ptolemy.\n- Carried in this repo by grammars/western-astrology-canonical, a contemporary synthesis; no public-domain source here says when the 150° aspect entered practice, so this item does not say either."
+      },
+      "metadata": {
+        "aspect": "Quincunx",
+        "angle": 150,
+        "signs_apart": 5,
+        "same_element": false,
+        "same_modality": false,
+        "same_polarity": false,
+        "ptolemaic": false,
+        "ptolemy_calls_it": "inconjunct",
+        "computed_not_stored": true
+      }
+    }
+  ]
+}

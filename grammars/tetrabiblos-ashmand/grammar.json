@@ -59,7 +59,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb10.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-saturn",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 0
     },
@@ -103,7 +106,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb10.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-jupiter",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 1
     },
@@ -147,7 +153,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb10.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mars",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 2
     },
@@ -191,7 +200,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb10.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-sun",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 3
     },
@@ -235,7 +247,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb10.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-venus",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 4
     },
@@ -279,7 +294,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb10.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mercury",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 5
     },
@@ -323,7 +341,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb10.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-moon",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 6
     },
@@ -368,7 +389,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aries",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 10
     },
@@ -412,7 +436,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-taurus",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 11
     },
@@ -455,7 +482,10 @@
             "https://sacred-texts.com/astro/ptb/ptb17.htm",
             "https://sacred-texts.com/astro/ptb/ptb23.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-gemini",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 12
     },
@@ -499,7 +529,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-cancer",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 13
     },
@@ -542,7 +575,10 @@
             "https://sacred-texts.com/astro/ptb/ptb17.htm",
             "https://sacred-texts.com/astro/ptb/ptb23.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-leo",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 14
     },
@@ -586,7 +622,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-virgo",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 15
     },
@@ -631,7 +670,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-libra",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 16
     },
@@ -674,7 +716,10 @@
             "https://sacred-texts.com/astro/ptb/ptb17.htm",
             "https://sacred-texts.com/astro/ptb/ptb23.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-scorpio",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 17
     },
@@ -718,7 +763,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-sagittarius",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 18
     },
@@ -762,7 +810,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-capricorn",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 19
     },
@@ -805,7 +856,10 @@
             "https://sacred-texts.com/astro/ptb/ptb17.htm",
             "https://sacred-texts.com/astro/ptb/ptb23.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aquarius",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 20
     },
@@ -849,7 +903,10 @@
             "https://sacred-texts.com/astro/ptb/ptb23.htm",
             "https://sacred-texts.com/astro/ptb/ptb25.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-pisces",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 21
     },
@@ -893,7 +950,10 @@
             "https://sacred-texts.com/astro/ptb/ptb18.htm",
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-1",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 30
     },
@@ -935,7 +995,10 @@
             "https://sacred-texts.com/astro/ptb/ptb16.htm",
             "https://sacred-texts.com/astro/ptb/ptb09.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-4",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 33
     },
@@ -977,7 +1040,10 @@
             "https://sacred-texts.com/astro/ptb/ptb16.htm",
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-7",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 36
     },
@@ -1020,7 +1086,10 @@
             "https://sacred-texts.com/astro/ptb/ptb09.htm",
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-10",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 39
     },
@@ -1060,7 +1129,10 @@
           "source_urls": [
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-conjunction",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 50
     },
@@ -1100,7 +1172,10 @@
           "source_urls": [
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-sextile",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 51
     },
@@ -1140,7 +1215,10 @@
           "source_urls": [
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-square",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 52
     },
@@ -1180,7 +1258,10 @@
           "source_urls": [
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-trine",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 53
     },
@@ -1220,7 +1301,10 @@
           "source_urls": [
             "https://sacred-texts.com/astro/ptb/ptb19.htm"
           ]
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-opposition",
+        "deck": "The Structure of the Sky"
       },
       "sort_order": 54
     }

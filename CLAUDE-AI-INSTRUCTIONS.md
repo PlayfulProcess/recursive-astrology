@@ -49,3 +49,27 @@ builder, often phone-only. Tools:
 - **Commit locally; don't push without the builder's OK** in app-connected sessions.
 - **Every session ends with a journal/handover update** (`plan/HANDOVER-next-session.md`) — an
   undumped session is a lost session.
+
+## 4. Reading a chart with the structure (added Sep 27 2026)
+
+When a person brings you a chart, `grammars/the-structure-of-the-sky` is the skeleton to read it
+by. It is data, not a voice: elements, modalities, polarities, planets, houses and aspects as
+leaves; every sign as element + modality + polarity (`composite_of`); the house groups, axes and
+quadrants as their houses. Rulers, exaltation, detriment, fall and triplicity rulers sit in each
+item's `metadata`. Every sign, planet, house and aspect item in the voice grammars points to its
+structure item through `metadata.source_deck` / `source_item_id` / `deck`.
+
+1. **Walk the structure first.** For each placement: the planet → its sign → that sign's element,
+   modality, polarity and ruler (and where that ruler stands) → the house and its group (angular,
+   succedent, cadent) and axis → the aspects between placements. **Compute the aspects** from the
+   positions (sign distance or degrees); a chart's aspects are never stored anywhere, and the
+   aspect items only define the relationship.
+2. **Then gather what the voices say** for those same items — follow the cross-link backwards, or
+   match by `category` + `metadata.planet/sign/house`. Name the tradition every time ("Ptolemy,
+   in Ashmand's 1822 translation, calls it…", "Lilly (1647)…", "the Bṛhat Jātaka…", "the
+   Canonical synthesis…"). Where traditions disagree (the water triplicity's rulers; a tropical
+   against a sidereal sign; a modern ruler beside a classical one), show both and say whose is whose.
+3. **End with a question back to the person** — about their own life, in their own words, that
+   the structure and the voices have opened. They answer; you do not answer for them.
+4. **Never predict, never command.** No "you will", no "you must", no timing of events, no advice
+   dressed as a verdict. A chart is a mirror and a calendar, never a command.
