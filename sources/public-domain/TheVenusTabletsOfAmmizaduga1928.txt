@@ -1,0 +1,894 @@
+THE VENUS TABLETS OF 
+AMM1ZAD VGA 
+
+A SOLUTION OF BABYLONIAN 
+CHRONOLOGY BY MEANS OF 
+THE VENUS OBSERVATIONS 
+OF THE FIRST DYNASTY . 
+
+By S. LANGDON, M.A., and 
+J. K. FOTHERINGHAM, M.A. 
+
+D.LITT. 
+
+With Tables for Computation by 
+CARL SCHOCH 
+
+
+
+OXFORD UNIVERSITY PRESS 
+LONDON : HUMPHREY MILFORD 
+
+1928 f 
+
+
+
+C H APTER V 
+PAST STUDIES OF THE SUBJECT 
+
+AMONG the tablets discovered by Sir Henry Layard in his excavation of the library of 
+J~\. Ashurbanipal at Kuyunjik, the ancient Nineveh, in 1S50 and following years, and deposited 
+in the British Museum, is a document in the Assyrian language (K. 160), the cuneiform text of 
+which was published by Sir Henry Rawlinson and George Smith, Cuneiform Inscriptions of 
+Western Asia, vol. iii (1870), pi. 63, under the title of ' Table of the Movements of the Planet 
+Venus and their influences '. This text, which as we know contained serious errors, was reprinted 
+with interlinear transcription and translation by Sayce, The Astronomy and Astrology of the 
+Babylonians, with Translations of the Tablets relating to these Subjects, TSBA. iii (1874), pp. 316— 
+39. The translation is fairly successful as a rendering of the astronomical contents, but it 
+expresses the different phenomena categorically, instead of hypothetically, and the duration of 
+invisibility of Venus is in each case given as the date of reappearance measured from the date 
+of disappearance. This latter error is of purely grammatical importance. It is not surprising 
+that the eighth line, which contains the year-formula of the eighth year of the reign of Ammi- 
+zaduga, expressed as usual in the Sumerian language, should have been wrongly read and, in 
+consequence, not recognized as a date. The system of dating by year-formulae was first made 
+known by George Smith in his paper Early History of Babylonia, TSBA. i (1872), pp. 45 ff 
+Smith's paper gave translations of many such formulae, but no cuneiform texts. There was, there- 
+fore, nothing to suggest that the words in the eighth line were such a formula. In Sayce's paper 
+the text and translation are not accompanied by any commentary or other attempt at the explana- 
+tion of the tablet, which is briefly described 1 as a long table of the phases of Venus. How 
+completely it could be misconceived is shown by a reference made by Lenormant, La Divina- 
+tion (1875), p. 21, note, who refers to SAYCE'spaper and describes the document as a complete 
+table of the movements of the planet and of auguries from its positions during one year. 
+
+A translation of the text with an astronomical discussion was contributed by Bosanquet and 
+Sayce under the title of The Babylonian Astronomy \ No. 3. The Venus Tablet to MN. 40(1880), 
+pp. 565-78. The translation differs very little from that which Sayce had published six years 
+earlier, and contains substantially the same false interpretation of the line which is now known to 
+contain the year-formula. In this paper Bosanquet and Sayce went far in the way of interpret- 
+ing the tablet. They realized that it consisted of three parts, the first of which contained a 
+series of observations of Venus including last appearance in the east, first appearance in the west, 
+last appearance in the west, first appearance in the east, continued through at least six synodic 
+periods, the day of the month of each phenomenon and the duration of invisibility being recorded. 
+The rest of this part they considered too imperfect for analysis. The second part they found to 
+be different in style and grammar from the rest ; and, though it contained phenomena of Venus 
+similar to those contained in the first part, they noticed that these were made to recur at uniform 
+intervals ; by a not unnatural misunderstanding they concluded that it gave Venus a synodic 
+period six months too long, and decided that it was a fabrication by some person wholly 
+
+1 p. 196. 
+
+
+
+VENUS PHENOMENA 29 
+
+unacquainted with the phenomena. The third part was found to be analogous to the first and to 
+consist of a continuous series of observations. Bosanquet and Sayce were in doubt whether 
+the calendar to which the observations were referred was a lunar calendar or one where each 
+month contained 30 days. They realized that the date of a conjunction of Venus and the Sun 
+with its attendant disappearance and reappearance of the planet recurred at periods of just under 
+eight years, and computed that Venus would return to the same phase at the ^ame date in the 
+sidereal year at the close of a period of 235- 182 sidereal years. They went on to say : 
+
+' It would be quite possible in this way to calculate the dates at which the observations of 
+this tablet could have been made ; but a conjectural element enters into the reconstruction of the 
+calendar of the observations. And as there is nothing to associate these observations with 
+historical dates, there is no possibility of a real contribution to ancient history in this case.' 
+
+The astrological influences of the phases were not discussed in this paper. 
+
+Though unable to date the observations astronomically, they observed that the antique style 
+and the fact of their belonging to the collection supposed to have been made by Sargon of Agade 
+tended to refer them to a period older than 1 700 b. c. 
+
+Bosanquet and Sayce's analysis of the observations maybe made clearer to those who are not 
+astronomers by a little explanation of the successive phenomena of the planet Venus. Venus, 
+moving in an orbit smaller than the Earth's, must always appear to be much in the same direction 
+as the Sun. She may sometimes be to the left of the Sun, sometimes to the right of him, but she is 
+never more than 48 distant from him, and at her greatest distance crosses the meridian between 
+three and four hours before or after him. The result Is that she can only be seen in the morning 
+before sunrise or in the evening after sunset, and if she is very near the Sun she cannot be seen 
+at all, except that very clear-sighted people may sometimes see her near the Sun in broad daylight. 
+We have no mention of any such observation at Babylon. Venus is therefore in succession : 
+
+(1) the evening star, Greek Hesperos and Latin Vesper ; 
+
+(2) invisible ; 
+
+(3) the morning star, Greek Phosphoros, Latin Lucifer ; 
+
+(4) invisible ; 
+
+and then the evening star again. 
+
+The synodic period or mean duration of the four phases is 584 days, while the length of the 
+individual phases is variable. Five of these periods will last 2,920 or, more exacdy, 2,9 19! days ; 
+eight solar years are 2,922 days ; 99 lunar months are 2,923! days. The result is that a 
+particular phase of Venus recurs at the same season of the year and month at intervals of eight 
+years ; only the return is not absolutely exact, for it falls about 2~ days earlier in the solar year 
+and 4 days earlier in the lunar month. From this it follows that if a conjunction of Venus with 
+the Sun falls two days after new moon, it may be expected to fall two days before new moon 
+eight years later, but will not fall near new moon again till 64 years after the first date, when 
+eight intervals of four days will have amounted to a complete month. At this recurrence the 
+conjunction will fall 1 7 days earlier in the solar year, so that if the exact position of the calendar 
+months in the solar year is not fixed, a phase of Venus may recur in the same month and on or 
+near the same day of the month at intervals of 8, 56, 64, and even 112 or 120 years. When 
+Venus at conjunction is between the Eartfyand the Sun, she is said to beat inferior conjunction; 
+when the Sun at conjunction with Venus is between her and the Earth, Venus is said to be at 
+superior conjunction. " 
+
+
+
+30 PAST STUDIES OF THE SUBJECT 
+
+The notice of the tablet by Bezold, Catalogue of the Cuneiform Tablets in the Kouyunjik 
+Collection of the British Museum, vol. i {1889), p. 42, recorded the fact that it is in neat 
+Assyrian characters, but added nothing further to our knowledge. It is there described as 
+' Astrological forecasts '. The second volume of this catalogue, also by Bezold (1891), contains 
+notices of two other tablets which, as we now know, contain some of the same appearances and 
+disappearances of Venus as K. 160. These are K. 2321 +K. 3032 and K. 7072. The first of 
+these is described as ' Babylonian Astrological forecasts, which form, according to the colophon, 
+the 63rd tablet of the Series " When Anu and Enlil ".* The obverse begins " . . ,-na disap- 
+peared in the west, remaining absent in the sky 3 days, and " \ 8 K. 7072 is thus described, 
+' Fragment out of the middle, 2§ in. by i| in. 7+ , . .lines. Fragment of a text containing 
+astrological forecasts for the various months, taken from observations of the Star Nin-sl-an-na'. 3 
+
+In the fourth volume of the catalogue (1896) Bezold deals with three more tablets which are 
+now known to preserve parts of our text. One of these, S. 1 74, is described as ' Fragment out 
+of the middle 1 ^ in. by - in. ; 9 + . . . lines. Part of a text containing astrological forecasts taken 
+from observations of the Sun ', a somewhat misleading description of a text which gave little 
+indication of its character. Another, Rm. 134, is described as ' Left half, upper portion, 2^ in. 
+by 2|in.; 10+ . . . lines. Part of a text containing astrological forecasts similar to those of K. 
+7072 '. Then follow the words in cuneiform with which each paragraph begins. The remaining 
+text, Rm. II 531 is described as ' Fragment of the left half, 2\ in. by if in.; 1 5 + . . . lines ; partly 
+vitrified. Part of a text containing astrological forecasts for the various months, taken from 
+observations of the d *Nin-sI-an-na, 3 and other stars'. As will be seen from Langdon's study, 
+the document is not arranged by months, and is not taken from observations of any star except 
+Ninsianna, i.e. Venus. 
+
+In 1898 Jastrow dealt briefly with K, 160 in his Religion of Babylonia and Assyria, pp. 371, 
+372, and translated select passages from the first and second part of the document. His 
+translation differs in detail from Sayce's and in particular he correctly translates the intervals of 
+disappearance as such ; he recognized the hypothetical form of some of the appearances in the 
+second part of the tablet, but still treats the statements in the first part as categorical ; but his 
+suggestions for the translation of the eighth line were equally unhappy with his predecessors. 
+He also made the suggestion that the document belonged to the series ' Illumination of Bel ', 
+i.e. to the series 'When Anu and Enlil ', a conjecture that was destined to be confirmed by 
+Schiaparelli's identification of this document with that represented by K. 232 1 + K. 3032. On 
+the whole Jastrow, unlike Bosanquet and Sayce, showed more interest in the astrological than 
+in the astronomical significance of the documents. 
+
+In 1899 J- A, Craig published in Assyriologische Bibliothek, xiv, cuneiform texts of the 
+documents belonging to the series known as the ' Illumination (?) of Bel ', so far as he was able 
+to recover them. No. 46 in this volume contains the text of K. 2321 +K. 3032 and of K. 3129, 
+which professes to be the 63rd of that series. It is no discredit to Craig that his text should 
+have been found to contain errors which are corrected by Langdon in this volume. 
+
+So far attention had nowhere been drawn to the partial identity of any of these different 
+texts dealing with Venus phenomena. This was reserved for the Italian astronomer Schiapa- 
+relli, whose * Venusbeobachtungen und Berechnungen der Babylonier', Das Weltall, 6. Jahrg., 
+
+1 Bezold gives the cuneiform text of this phrase. I owe this translation to Langdon. 
+' Langdon's translation. s Printed in cuneiform. 
+
+
+
+SCHIAPARELLI 31 
+
+Heft 23, 7. Jahrg., Heft 2 (1906), constitutes a most important study of the character and interpreta- 
+tion of these texts. He recognized that K. 2321 + K. 303 2 contains fragments of two documents, 
+one of which, on the obverse, is the same as the main document of K. 160, though, since both 
+tablets are imperfect, the greater part of each lies outside the range of the other. This docu- 
+ment, which he called C, he recognized as containing a continuous series of observations of 
+appearances and disappearances of Venus, preserved for 21 consecutive years. He conceived 
+that in its complete state it would have contained three Venus periods or 24 years. The 
+document on the reverse of K. 2321 +K, 3032 which he called B was, he found, a series of 
+actual observations of disappearances and appearances of Venus arranged according to the 
+months in which they occurred, without any mention of the years to which they belonged. Re- 
+lying unduly on the accuracy of the numbers in the published texts, he held that these observa- 
+tions were entirely distinct from those in Document C. The insertion which forms the second 
+part of K. 160, which Schiaparejlli called Document A, was found by him to be a table by 
+means of which, given the time of any reappearance of Venus, the time of the next disappearance 
+and reappearance could be computed, assuming mean intervals between the different pheno- 
+mena. With a mean lunation of 29-5 days, he found that the intervals used implied a synodic 
+period of 577-5 days, about 6-4 days less than the true period of 5839 days. He noticed the 
+close similarity of all these texts in form and character and in terminology, and laid stress on 
+their all using exclusively what he regarded as the rare name Nin-sl-an-na, or, as he wrote it, 
+Nin-dar-an-na, for Venus, from which he inferred that the three documents had their origin in 
+the same astrological school, and therefore, since Document A professes to be copied from a 
+Babylonian original, he inferred that all three documents must be of Babylonian origin. Bezold 
+had already recognized that, while K. 160 is in Assyrian script, K. 2321 +K. 3032 is in Baby- 
+lonian script. Schiaparelli, while exhibiting in full the recorded dates of disappearance and 
+reappearance with the recorded intervals of invisibility, as he found them in the printed cunei- 
+form texts, and in the case of Document C assigning them to their proper year in the series of 
+2 1 years, did not attempt a translation of any of the documents, but illustrated their character 
+with a few examples. Like Sayce, he treated the expressions as categorical, but like J astrow, 
+to whom he does not refer, he translated the references to intervals of invisibility correctly. 
+While realizing that the real value of the record for the Babylonians lay in the astrological omens, 
+he neither collected these nor dealt with them in detail. 
+
+Among the most interesting parts Of Schiaparelli's paper are his astronomical examination 
+of Documents B and C and his attempt to determine the date of the observations contained in 
+the latter document. He assumed that the dates exhibited on the tablets were not all observa- 
+tions in the modern sense, but that in a minority of instances observation had been impossible, 
+and the recorded dates had been deduced by computation from other observations. Neglecting 
+what appeared to be doubtful dates, he found that the intervals of invisibility at inferior con- 
+junction yielded an areus visionu of 5-42°, and with this value he proceeded to determine the series 
+of years which would best agree with the recorded dates of the Venus phenomena. Since the 
+tablets were found at Nineveh, he assumed that the observations must be older than the de- 
+struction of that city, which was then placed in 606 B.C., while an upper limit seemed to be 
+provided by the reference in Document A to a disaster of the umman-man-da or Manda hordes, 
+with which he identified the umman-matti (properly ' army of the land '), which suffers disaster 
+in Documents B and C. Believing that the umman-man-da made their first appearance in 
+
+
+
+32 PAST STUDIES OF THE SUBJECT 
+
+history in the eighth century before Christ, and being impressed by their complete absence from 
+the extensive records of Ashurnasirpal II, Shalmaneser III, and Shamshi-Adad V, whose reigns 
+extend from 882 to 810 b. a, he concluded that his inquiry could be limited to the seventh and 
+eighth centuries before Christ. He found that the solution depended on the assumed position 
+of the Babylonian months in the solar year. With a mean date for the 1st of Nisan 16 days 
+after the spring equinox, he found 657 b. C. as the first of the series of 21 years ; with mean 1st 
+of Nisan 18 days after the equinox he found 665 e. c. ; with mean 1st of Nisan n days before 
+the equinox he found 81 2 b. c, in which case the 1 7th year, with which the defeat of the umman- 
+man-da was connected, fell in the year 796 e.c. and would, so he thought, be the earliest well- 
+attested reference to that people. Finally he found that with the mean 1st of Nisan five or 
+seven days later than the equinox, the data would be satisfied by a series of years beginning 
+in 868 or 876 b.c. respectively. He left it to orientalists to determine whether so early a refer- 
+ence to umman-man-da was possible. He felt, however, that the dates 657, 665, and 812 b.c. 
+were more probable, but that new discoveries and investigations would be necessary to decide 
+the question. As an example of method this work is excellent Unfortunately for these 
+conclusions, the Manda are now known to have been mentioned as far back as the Hittite laws 
+of the seventeenth century b. c. A clue to the date had yet to be discovered. 
+
+In 1908 appeared the two parts Sin and Ishtar of Virolleaud's LAstrologie Chaldeenne, 
+Texte Cuneiforme, the former of which contained those documents believed to belong to the 
+book entitled enuma (Ann) iiv Bel (now read enuma Anu ilu En-lil) which dealt with the Moon 
+and the latter those which dealt with the fixed stars. The frontispiece to Sin is a photograph of 
+K. 160. No. XII in Ishtar is a composite text, in which lines 1-15 are lines 1-15 of the obverse 
+of K. 232 1 -f- K. 3032, lines 16-27 are a conflate text based on lines 16-27 of K. 2321 + K. 3032 
+and lines 1-14 of the obverse of K. 160, and lines 28-43 are lines 15-30 of K. 160, ending where 
+the series of observations is interrupted at the conclusion of the first part of that document. 
+No. XIII is the second part of K. 160. No. XIV is the third and concluding part of K. 160. 
+No. XV is the reverse of K. 2321 + K. 3032. A transcription of these texts was published by 
+Virolleaud in 1909 in & Astrologie Chaldeenne, Transcription, Ishtar. The same editor 
+published in 1 910 a Supplement to his L'Astrologie Chalde'enne, in which he included as No. XLI 
+the cuneiform text and transcription of Rm. 134, and as No. XLI I the cuneiform text and 
+transcription of K. 7072. He also included the cuneiform text of S. 174 in his 'Fragments 
+astrologiques ', published in the same year in Babyloniaca, m. 285. 
+
+1910 is also the date of Father Kugler's Im Bannkreis Babels. In a note on pp. 147-8, 
+he showed that, reckoning the month at a conventional length of 30 days and the year at 
+a conventional length of 360 days, the insertion in K. 160 — Schiaparelli's Document A— - 
+implies a synodic period of 587 days. 
+
+Next in order of time comes Jastrow's German treatise, Die Religion Babyloniens nnd 
+Assyriens, II. Band, II. Halfte, pp. 617-25, which bears on its title-page the date 1912, though 
+the earlier part of the half-volume was in the hands of scholars in time to be used by them in 
+works which appeared in 191 1 and 191 2. In this treatise Jastrow makes use of Virolleaud's 
+■work, but appears to have been ignorant of Schiaparelli's. He gives a translation of the 
+texts of the two documents which Schiaparelli had called B and C, beginning with the 12th 
+line of the obverse of K. 2321 +K. 3032. He regards the two documents as a single text 
+broken by a gap of unknown length. Though he recognizes that the dates on the tablets are 
+
+
+
+JASTROW AND KUGLER 33 
+
+derived from observation, he attempts no astronomical control, and his emendations of dates 
+are in consequence unfortunate. The references to the appearances are recognized as hypotheti- 
+cal throughout. The mysterious phrase in the eighth line of the obverse of K. 160, the twenty- 
+first of the obverse of K. 23 2 1 + K. 3032, once more has a false meaning found for it, but J astrow's 
+interest was mainly in the omens and in their relation to the phenomena. He imagined that 
+he had discovered that a medium interval of invisibility was accompanied by a favourable omen, 
+while an interval which was short or long for its particular phase was accompanied by an un- 
+favourable omen, a somewhat curious result since in the same work he translates in full Sm. 781, 
+col. ii (Virolleaud, Supplement, No. XXXVII), which gives omens in good general agreement 
+with those of K. 2321 -f-K. 3032, but makes them depend entirely on the month in which Venus 
+disappears, giving different omens according as the disappearance is in the morning or in the 
+evening, and taking no notice of the duration of invisibility. Jastrow also translates the inser- 
+tion (Schiaparelli's A) but in view of the schematism ofits intervals of visibility and invisibility, 
+and, as he thinks, of its omens in relation to the season of the year for the different phases, he 
+suspects that it is merely a school exercise. 
+
+In 191 1 Weidner contributed to Memnon, v 29-39, a paper entitled 'Die astronomische 
+Grundlage des Venusjahres \ in which he included a transcription and translation of this insertion, 
+deduced from it the knowledge of a synodic period of Venus amounting to 584 days, and by a 
+somewhat bold argument tried to show that the document in its original form dates from the 
+end of the fifth millennium before Christ. 
+
+In 1912 Kugler produced Teil II, Heft I, of the second book of his Sternkunde uiid Stern- 
+dienst in Babel. Pp, 257—311 of this publication are concerned with the two Venus tablets 
+which had engaged the attention of Schiaparelli and with discussions arising out of them. He 
+writes with full knowledge of the work of his predecessors, but gives neither full text nor full 
+translation of the documents, nor even a full risumd of Schiaparelli's criticism on which he 
+builds. In order, therefore, to follow Kugler in detail it is necessary to refer to the older 
+studies of the documents. He has, also, chosen to rename the documents and in so doing has 
+used Schiaparelli's names in a new sense. Thus Schiaparelli's A is Kugler's B. The text 
+of Schiaparelli's B, found on K. 160, is Kugler's A, and the two texts, B and C in Schia- 
+parelli's notation, found in K. 2321 + K. 3032, are called by Kugler, A 7 . I prefer, with Schia- 
+parelli, to use the letters of the alphabet as names for documents, in preference to Kugler's 
+system, in which the nomenclature is partly by documents and partly by tablets, but in order to 
+avoid the confusion of using a symbol' in a different sense from that in which it has been used 
+by Kugler I will in the present study use the terms L, M, and N, which have not hitherto been 
+used in this connexion. 
+
+L is the document in which the phenomena are arranged in chronological order, and is 
+equivalent to Schiaparelli's B. It is found on K. 160, Obv. 1-29, Rev. 34-45 ; K. 2321, Obv. ; 
+Rm. II, 531 ; W. 1924, 802, Obv. 
+
+M is the document in which the phenomena are arranged in calendarial order, and is equiva- 
+lent to Schiaparelli's C. It is found on K. 2321, Rev.; K. 7072 ; Rm. 134 ; S. 174. 
+
+N is the document containing an artificial series of phenomena, inserted in K. 160, and is 
+equivalent to Schiaparelli's A. It is found on K. 160, Obv. 31-Rev. 33. 
+
+Kugler devotes some space to a more detailed demonstration of the conclusion, which he had 
+drawn from Document N, that its compiler regarded 19 months 17 days or 587 days as the con- 
+
+
+
+34 PAST STUDIES OF THE SUBJECT 
+
+ventional length of the synodic periodof Venus, and replies to Schiaparelli's deduction of a period 
+of 577f days and Weidner's deduction of one of 584 days. Kugler is undoubtedly right, so 
+long as we recognize that the conventional month is not an exact period independent of the 
+calendar month, but is merely the calendar month reckoned inexactly. The writer would not 
+expect the synodic phenomena to recur at a mean interval of 587 days precisely, but at an 
+interval of 19 months 17 days which might be treated for purposes of computation as 587 days, 
+but would not be so treated for purposes of observation. The observer would look for a repetition 
+of the phenomena after 19 calendar months 17 days, ignoring intercalary months. It seems 
+impossible to convert this into an exact number of days, and we must not suppose that the writer 
+imagined that he knew the exact number of days in the synodic period. 
+
+After a few explanatory remarks Kugler proceeds to give a transcription and translation or 
+K. 160, obv. lines 1-14, as a specimen of the character of the text. Like the earlier translators 
+he treats the references to phenomena as categorical. Then follows a tabular presentation of 
+.the phenomena contained in Document L, so far as it is represented by K. 160. This is followed 
+by a discussion of some length in which very little use is made of K. 2321 + K. 3032, and the 
+impression is created that the discussion was written before Kugler was aware that the two 
+tablets represented the same document, and was only imperfectly revised afterwards. The dis- 
+cussion begins with a presentation of late Babylonian material illustrating the length of the 
+synodic period of Venus and the intervals between the different appearances and disappearances. 
+He then proceeds to deduce the intercalary years from the intervals separating the phenomena 
+recorded in K. 160. Here he fails to show his usual arithmetical skill. Using * for a year with 
+second Adar and ** for a year with second UIul, he gives the following as intercalary years. [For 
+convenience I number the years from the beginning of Document L, adding 6 to the number given 
+by Kugler.] (9)* or (io)**, (n)** (14)**, (17)*, (19)**, of which (1 1)** and (19)** are directly 
+attested. If he had reckoned the intervals accurately he would have found (9)* or (10)**, 
+(11)**, (13)** (19)** (20)** or (20)*. 1 Or, accepting his conjectural emendation of the western 
+rising in the 13th year, he should have had (9)* or (io)** } (11)**, (13)* or (14)** (19)**, (20)** 
+or {20)*. These will be discussed later along with the other intercalary years. 3 
+
+Then follows a critical and in large measure successful investigation of errors made by copyists, 
+followed by a very unconvincing attempt to detect and explain errors which appear to go back 
+to the parent document. There remains a residuum of dates which Kugler regards as trust- 
+worthy and which are reserved for an astronomical test when a clue shall have been found to the 
+age of the tablet The dates so selected have at least the merit of not being prima facie 
+incoherent One group among them is affected by textual uncertainty. The others are probably 
+among the best in the series. 
+
+Kugler next endeavours to prove that the constant values used for intervals in Document 
+N are derived from the figures contained in Document L, or in that part of it which is repre- 
+sented by K. 160. The whole argument appears to be a piece of arithmetical jugglery. It is 
+based upon arbitrary assumptions as to the length of mean lunation used by the author of N, now 
+30 days, now 29I days, as suits Kugler's convenience. It is based on arbitrary assumptions 
+
+1 The dates of observations at inferior conjunction in Adar * Kugler is in fact merely repeating an error made by 
+
+of the 17th year and at superior conjunction (Sivan-Wul) Schiapaxzlli, who found that Years 9, ir, 14, 17, and 19 
+
+in the 20th year show that there was only one intercalation were intercalary, 
+between these conjunctions. 
+
+
+
+1 
+
+
+
+THE YEAR-FORMULA 35 
+
+as to his use of intercalary months, and it is based on arbitrary assumptions as to the extent to 
+which the corruptions, existing in K. 160, were in the text used by the author of N. It also 
+assumes what seems very doubtful, that the first five years of the text of L were already missing 
+in the older text from which N is derived, while the sixth year, which is also missing from K. 
+160, is supposed to have been present 
+
+Then Kugler announces his great discovery, that the misunderstood words in line 8 of 
+the obverse of K. 160, line 21 of the obverse of K. 2321 + K. 3032, fare the year-formula 
+of the eighth year of Ammizaduga, and this announcement is followed by a table giving the 
+complete series of dates recorded in Document L. as obtained from a combination of K. 160 
+with the obverse of K. 2321 + K. 3032, such a table as Schiaparelli had previously compiled. 
+Here it is shown that the year-formula in question belongs to the eighth year of the twenty- 
+one years of the document, which, as Kugler rightly concludes, contains the twenty-one years 
+of the reign of Ammizaduga. 
+
+Then comes an expose of the dates on the reverse of K. 2321 + K. 3032 (Document M). 
+Kugler ignores Schiaparelli's recognition of these as a single series of observations arranged 
+according to the months in which they fell, and breaks them up into three series. First he finds 
+a series of four pairs of observations near inferior conjunction arranged in calendarial order, 
+then five pairs near superior conjunction the order of which he does not explain, and finally three 
+pairs of observations consisting of one at inferior, one at superior, and another at inferior conjunc- 
+tion. He supposes that the two first of these three are in chronological order, but infers from the 
+duration of invisibility in the last that it cannot follow chronologically its predecessor on the 
+tablet. On the whole he realizes that these observations are not chronologically continuous with 
+those in Document L, and pays no further attention to them. He also ignores the astrological 
+omens. 
+
+Then he resumes his comparison of the dates of Document L with those of the reign of 
+
+Ammizaduga and points out that the leap-years in the reign of Ammizaduga known to us 
+
+~ through contracts are 4* 10**, and 11**, where, as before, * indicates a year with second Adar 
+
+=£ and ** a year with second Ulul. This, as lie points out, is the only example known to us of a 
+
+*J~ second Ulul being intercalated in two successive "years, 1 and this is supported by the intercala- 
+
+5 lions in Document L, where, as has "been seen, a second Ulul is directly attested in the eleventh 
+
+# year, while the tablets imply either a second Adar in the ninth year or a second Ulul in the tenth 
+
+. year and are therefore consistent with a second Ulul in the tenth year. 
+
+Having established that the observations belong to the reign of Ammizaduga, Kugler next 
+seeks an astronomical verification. He points out that each observation of an appearance or 
+disappearance of Venus, being dated by the lunar month, involves a more or less definite 
+relation between the Sun, Venus, and the Moon. The reference to Ammizaduga limits the 
+inquiry to a few centuries, and he assumes that he need only examine dates falling between 
+2080 and 1740 b.c He does not regard the position of the Babylonian months in relation to 
+the Julian calendar as absolutely fixed, but thinks it safe on a superficial examination of contracts 
+relating to harvest to suppose that Nisan began not earlier than the middle of the Julian March 
+nor later than the middle of the Julian June. In order to avoid elaborate computations he 
+examines in the first instance one pair only of the dates which he had previously found to be 
+
+1 We now know that second Ulul was intercalated in the 39th and 40th years of Hammurabi, and in the 8th and 9th 
+and again in the 16th and 17 th years of Samsuiluna. 
+
+
+
+36 PAST STUDIES OF THE SUBJECT 
+
+trustworthy, the western setting of Venus in the 6th year on Arahsamna 28, followed by her 
+eastern rising on Kislev 1, an interval of three days only, from which he concludes that the 
+inferior conjunction must in that year have been within two or three days of the new moon of 
+Kislev. He then seeks between 2080 and 1 740 b. c. for inferior conjunctions between the middle 
+of November and middle of February of the Julian calendar falling within two or three days of 
+new moon. He finds nine such phenomena, but he has for some reason overlooked the conjunc- 
+tion of -1759 February 1. He then proceeds to narrow the selection further by the assump- 
+tion, which, even if the computed dates of conjunction and new moon were beyond doubt, would 
+not be astronomically justifiable, that the interval between new moon and conjunction must not 
+exceed a day. In this way he has only three solutions left. These would make the first year 
+of Ammizaduga begin in 2041, 1977, and 1857 B.C. respectively. After noticing that of these 
+three dates 1977 B.C. agrees best with the conclusions hitherto attained by Assyriologists and 
+historians, Kugler proceeds to test it by an astronomical computation of the angular depres- 
+sion of the Sun below the horizon at the time of rising or setting of Venus on a series of dates 
+of first or last visibility of that planet, as given in Document L. The test is made almost en- 
+tirely by means of observations near inferior conjunction, only two pairs of observations near 
+superior conjunction being subjected to the test. Altogether Kugler finds two instances 
+where both the dates of evening setting and morning rising are confirmed by computation, four 
+instances where one of the two is confirmed, two instances where both dates would hold good 
+for observations separated by eight or sixteen years from the years implied in the document, 
+and three instances where one observation in each pair would hold good if transferred eight or 
+sixteen years backwards or forwards. He also finds two instances where the date given for 
+evening setting would hold good for morning rising. In the last of these instances, belonging 
+to the 1 3th year of Ammizaduga, he has exhibited no computation, and it would appear that 
+his statement that Venus should be visible on Ayar 5 of that year is even on his own data 
+erroneous, and should be changed to Ayar 7, which is inconsistent with his proposed correction 
+of the reading in the text. From the frequency with which he has succeeded in explaining 
+apparently false dates by transferences of genuine dates by eight or sixteen years Kugler infers 
+that the compiler of our Document L had before him a list of observations in chronological 
+order in which several of the dates were missing or illegible and that these have been restored 
+from a document similar to Document M in which the observations were arranged in calendarial 
+order without any indication of the year to which they belonged. To this it may be replied 
+that, so long as the recorded dates are in the neighbourhood of the computed dates, any con- 
+ceivable discrepancy could be explained by Kugler's method. If a recorded last visibility falls 
+a few days before, or a recorded first visibility a few days after, the computed date, we merely 
+assume that Venus was missed for a few days. .If the difference between observed and com- 
+puted dates is in the opposite direction or is too long to be explained by this method, we merely 
+transfer the observation eight or sixteen years backward's or forwards, for since the phenomena 
+always recur four days earlier in the lunar month at the end of each eight-years period any 
+discrepancy not exceeding eight days can be explained in this way. The combination of these 
+.devices gives a far better result on the assumption that the pair of observations in the 6th year 
+really belongs to that year than on the assumption that it has been transferred eight years. 
+The date 1977 B.c for the first year of Ammizaduga is therefore supposed to be established as 
+against 1985 b.c. 
+
+
+
+BABYLONIAN MONTHS AND EQUINOX 37 
+
+It remains to compare it with a possible 2041 or 1857 B.C. This time the test is no longer 
+strictly astronomical. As has been remarked in our discussion of Bosanquet and Sayce, after 
+the lapse of an eig 1 *--vears period, a conjunction of Venus falls about 2* days earlier in the solar 
+year than it had done*, beginning of that period. In 64 years the date of the phenomenon 
+
+in the solar year is shifted by 19 days, and in 120 years it is shifted by 35 days. Kugler 
+doubted whether an astronomical verification would yield a decisively different result so far as 
+the comparison of computed appearances and disappearances of Venus with the lunar calendar 
+is concerned, but he considered it possible to discover by means of literary evidence at what 
+season the months named on our documents fell, and thus to choose between theories which 
+placed those months at perceptibly different seasons of the natural year. With this end in view 
+he began by computing the date of equinox for each year from the 7th to the 21st of Ammiza- 
+duga on the assumption that his first year began in 1977 B - c *» an ^ tne date °f tne new moon of 
+Nisan for each of these years on the assumption that the months in which the phenomena were 
+recorded had been correctly identified in his astronomical study. This of course included the 
+assumption that his inferences as to the position of intercalary months were correct. As has 
+been seen, he places the beginnings of the 18th, 19th, and 20th years one month too late. 
+When, therefore, he deduces that on the theory in question the mean interval between the 
+equinox and the 1st of Nisan was 35-1 5 days, we must correct this figure by deducting 29-53 x 
+3^5 days, i. e. 5-91 days, so that the mean interval becomes 29*24 days. In view, however, of 
+the fact that the first and last years of this series both began later than the mean date, Kugler 
+thought it wise to include the 6th year, which he assumed to be a leap-year with second Ulul. 
+He overlooked the fact that this assumption would place eleven lunar months approximately 
+between inferior conjunction in the 6th year and superior conjunction in the 8th year, an interval 
+too long by one month. It will be seen, therefore, that he places the beginning of the 6th year 
+one month too early, so that his mean interval between equinox and the new moon of Nisan as 
+determined from the 16 years requires to be reduced by 29-53 x-^ days, i. e. by 3-69 days, or 
+from 34-59 to 30-90 days. Adding 150 days for the mean interval between new moon and the 
+beginning of Nisan, he obtains a mean interval of 36 days between equinox and Nisan 1, and 
+fixes the mean position of the latter at April 26 of the Gregorian calendar. Adopting the above 
+revision of the position of his intercalations, we find that April 22 would have been more correct. 
+He notes that the earliest new moon of Nisan in these 16 years fell 23 days before the mean 
+date, and the latest 16 days after the mean date. Making the corrections mentioned above, the 
+extremes should be 29 days earlier and 26 days later than the mean date. Kugler contrasts 
+this mean date for Nisan 1 with that which he found for the period 358 to 339 B.C., when it was 
+April 4 Gregorian. It will be seen from the table which he published on p. 285 of the study 
+under discussion that if he had chosen to shift his whole chronology by seven Venus periods, or 
+56 years, all the lunar dates would have fallen 18 days earlier in the solar year, and we should 
+have had April 4 for the mean date of Nisan 1 in the years 6-21 of Ammizaduga as well as in 
+the years 35S— 339 B.C. 
+
+Kugler then proceeds to demonstrate to his satisfaction that such a transference of the 
+calendar months by 18 days backwards or forwards is inconsistent with the information supplied 
+by those dated contracts which can be connected with agricultural operations. He cites from 
+modern writers the opinion that the Babylonian harvest season begins about May 10 and closes 
+about the end of that month. These dates probably relate to wheat-harvest, and it will be seen 
+
+
+
+38 PAST STUDIES OF THE SUBJECT 
+
+later that they are far too late for barley-harvest, which was the principal harvest in the time of 
+the first dynasty of Babylon, and that the correct date is from about April 10 to May 15, so that 
+Kugler's er r or in the date of harvest exactly coincides with the difference between a year begin- 
+ning in the-»^. April 4 and one beginning in the mean on April 26. If, therefore, the 
+evidence which Kugler has collected supports his chronology on the assumption that his date 
+for harvest is correct, it would support a chronology falling 56 years later, when the correction 
+just mentioned is applied. 
+
+Kugler then produces a series of contracts from Kohler and Ungnad's Hammurabi's Gesetz. 
+He deals first with contracts to make payments in silver or barley ' at the time of harvest ' and 
+finds that these generally imply that the harvest was later than the eleventh month, while six 
+contracts imply that it fell in the twelfth month at the earliest, and two contracts of the reigns of 
+Sinmuballit and Hammurabi would place it at the earliest in the first month. Then he cites from 
+the same source a series of contracts hiring labourers for the coming harvest. The latest dated 
+of these is on the 30th day of second Adar in the 4th year of Ammizaduga, which Kugler 
+equates with April 30 Gregorian. This he considers fatal to any attempt to throw the chrono- 
+logy 56 or 64 years farther back, which would bring it to May 18 or May 16. Of course, if we 
+threw back the date of harvest 22 days, this contract would tell with equal force against Kugler's 
+own solution. 
+
+Kugler then proceeds to deal with contracts for letting fields. He gives examples from 
+Kohler and Ungnad of such contracts for every month from Arahsamna to Avar, citing 
+altogether 19 from Ayar, 9 from Nisan, 2 from Adar, 1 fromSabat, 1 from Tebit, 1 fromKislev, 
+and 9 from Arahsamna. A reference to Kohler and Ungnad will, however, show that two of 
+the last-named really belong to Tesrit, and Kugler himself treats one of them as belonging to 
+Tesrit in his discussion. He supposes that contracts dated in Nisan and Ayar were made after 
+harvest, while those dated in other months were made before harvest, and infers that Nisan was 
+the proper harvest month. This argument appears to be very precarious. The agricultural 
+operations of the year would not be concluded until the corn was threshed and divided between 
+landlord and tenant. It may be presumed that a contract for the new year was generally made 
+before these operations were concluded, but it seems unsafe to suppose that such contracts were 
+regularly made after harvest. Kugler, however, uses it as a means to prove that the chrono- 
+logy cannot be reduced by 56 years, in which case he remarks that Ayar, not Nisan, would be 
+the harvest month, and the Ayar contracts could not be made to fall after harvest He also 
+supposes that the Arahsamna and Tesrit contracts were made immediately before seed-time, which, 
+according to him, would be in November and December. This he thinks is consistent with the 
+solution which he favours, but inconsistent with one 64 years earlier, which would place these 
+contracts at the end of December. This again appears to be a precarious argument It should 
+be noted that contracts for letting fields are to be found in Kohler and Ungnad in every month 
+of the Babylonian year. Kugler's selection is far more exhaustive in Nisan, Ayar, and Arahsamna 
+than in the other months, and must not be taken as evidence of the actual distribution of let- 
+tings throughout the year. Kugler's final conclusion is that the contracts by which Babylonian 
+. months can be correlated with definite seasons of the year exclude all solutions separated by 56 
+years or more from that which makes the first year of Ammizaduga begin in 1977 B.C., while 
+solutions differing by less than 56 years from this solution are astronomically inadmissible. 
+
+The whole discussion must be regarded as a masterly piece of work, and while it is open to 
+
+
+
+CHRONOLOGY OF FIRST DYNASTY 39 
+
+criticism in detail, the method is excellent. It is to be regretted that Kugler did not attempt 
+a mr - romplete astronomical computation of the recorded phenomena both on his own and on 
+
+^1 native theories, and also that he adopted a questionable date for harvest, and thus weakened 
+
+the effect of the contracts as a means of deciding between rival astronomical theories. 
+
+The discussion is followed by a chapter on the relative positions of the First, Second, and Third 
+Babylonian Dynasties, which lies outside the scope of my share in the present work. 
+
+Kugler's conclusions met with general acceptance, but doubt was expressed in 191 3 by 
+Eduard Meyer, Geschichtc des Altertums, 3 e Aufl. 1. 2, pp. 369-72, who, while provisionally 
+accepting Kugler's chronology, expressed himself unable to check his astronomy or to judge of 
+the correctness of his conjectural emendations of the text. He found the chronology in good 
+agreement with that current in later times in Babylon, but in disagreement with that current in 
+Assyria, and pointed out that it requires us to assume that more than five hundred years {1925 
+to 1 380 e. c.) elapsed without any private documents and with hardly any inscriptions. He there- 
+fore regarded it as not excluded that these dates might hereafter be found untenable. 1 
+
+In the following year Weidner expressed the opinion that Kugler's restoration of the 
+chronology of the First Dynasty of Babylon was extremely problematical. See his Alter und 
+Bedeutung der babylonischen Astronomic, p. 69, where, founding on a neo- Baby Ionian tablet 
+published by King in Cuneiform Texts, xxxiii, and on an unpublished duplicate of the same, 
+according to which the vernal equinox appears to be placed on Nisan 15, he drew the 
+inference that at least since the time of Hammurabi Nisan 15 coincided in the mean with the 
+vernal equinox, a conclusion inconsistent with Kugler's, which appeared to place it 50 days in 
+the mean after the equinox. 
+
+In 1915 King expounded and discussed the new chronology in his History of Babylon, pp. 
+106-18. He mentions Kugler's three astronomical solutions, and decides with Kugler for 
+1977 B.C. as the date of the first year of Ammizaduga on the ground that this agrees with the 
+duration of 368 years which the kings' list assigns to the Second Dynasty, and he finds it sup- 
+ported by both Babylonian and Assyrian statements of a later age. 
+
+In 191 7 there appeared in MVAG. xx, 19 15, 4, a long article by Weidner entitled Studien 
+zur assyrisch-babylonischen Chronologic und Gesckickte auf Grund neuer Funde. On p. 24 of this 
+article Weidner announced that an astronomical examination of the Venus tablets would shortly 
+appear, from which it would be seen that the most probable date for the First Dynasty of Babylon 
+lay 168 years later than Kugler's. This new chronology was brought into connexion with the 
+chronology of Assyria, and Weidner maintained that it agreed with all the statements of a later 
+age except those of Nabuna'id. 
+
+We learn from a later paper by Weidner 2 that the new examination of the Venus tablets was 
+the joint work of himself and Neugebauer and that it involvedsome corrections of the text. In 
+1925 Schnabel 3 published the fact that the manuscript of this study was lost in the German 
+revolution of 191 8. 
+
+In 1920 Hommel, in an appendix to Assyr. Bibl. xxv, Nies, ' Ur Dynasty Tablets', pp. 197-9, 
+expressed the view that the year-formula of Ammizaduga's 8th year was inserted into the Venus 
+tablets by a scribe in the reign of Ashurbanipal, who adopted a system of chronology current 
+
+1 The same criticisms had been expressed by Meyer in gest that Kugler's dates might hereafter be found untenable. 
+Sitzungsberichte d.k.preuss. Akad. d. Wissenschafltn, 191 2, * MVAG. xxvi (192 1), 2 , p. 41. 
+pp. 1063, 1064, except that he did not on that occasion sug- * ZA. xxxvi, p. 113. 
+
+
+
+40 PAST STUDIES OF THE SUBJECT 
+
+from the eighth century n. c. onwards, which placed all early dates about 170 years too high. 
+Hommel wa " : to accept Kugler's identification of the recorded phenomena 
+
+while accepting a historical chronology falling seven years later than Weidner's. This 
+curious suggestion implies that the scribe who inserted the year-formula knew the true 
+interval of time that had elapsed since the Venus observations, but was in error to the extent 
+of 1 70 years in his historical chronology, a most improbable supposition. It also ignores the 
+agreement between the intercalations implied on the tablets and those supplied by the con- 
+tracts of the reign of Ammizaduga. As will be seen, this agreement can be checked throughout 
+the whole reign of Ammizaduga. In 1920 Ungnad, in ZDMG. 74, p. 425, expressed doubt about 
+the reliability of Kugler's chronology on the ground that it placed the delivery of dates too late 
+in the year. In support of this view Ungnad cited VS. xiii 18, which has since appeared as No. 
+1724 in the sixth volume of his Hammurabi's Gesetz (1923). He states that in this document 
+the delivery of dates was fixed for Kislev 1, or, as he thinks, at the same time of year as in late 
+Babylonian times when Nisan 1 fell approximately between the middle of March and the middle 
+of April of the Gregorian calendar. The document selected by Ungnad was certainly unfortu- 
+nately chosen. It asks for payment not on Kislev 1, but merely in Kislev, thus permitting the 
+tenant to postpone payment to the last day of Kislev. The document belongs to the 23rd year 
+of Hammurabi, in which year the last day of Kislev would fall on or about December 25 
+Gregorian according to Kugler's chronology. This is certainly late for a delivery of dates, but, as 
+Langdon has pointed out to me, the contract requires the delivery not only of dates, but of planks 
+of wood, and even of 10 talents of palm branches blown down by the wind, which would hardly 
+be available until the winter storms had begun. It may also be noted that even in the Persian 
+period Kislev was an unusually late season for requiring delivery of dates. In 1921 Ungnad 
+repeated in OL2. 24, 17, his doubt of the trustworthiness of Kugler's conclusion, adducing the 
+difficulty of reconciling it with the Assyrian king list as well as its failure to place the date- 
+harvest at the proper season, and expressed a desire to see the rival examination of the Venus 
+tablets which Weidner had adumbrated. 
+
+So far the strictly astronomical part of Kugler's reconstruction of the chronology had remained 
+unanswered, and his calendarial study had been questioned on very unconvincing evidence, 
+Weidner's argument assuming (1) that the astronomical statements of a neo-Babylonian document 
+represented the state of the calendar under the. First Babylonian Dynasty, and (2) that the fixed 
+Nisan of that document was identical with the mean Nisan of the lunar calendar, while Ukgnad's 
+argument rested on a single date-contract, whose relevancy to the calendarial question was at least 
+doubtful. It may, therefore, seem strange that in 1922 Kugler, in his Von Moses bis Paulus, 
+pp. 497-501, announced his conversion to the late date for this dynasty, mainly because of the 
+arguments which Weidner and Ungnad had adduced. The first objection which he brings against 
+his former conclusion is the well-known one that it is inconsistent with the Assyrian chronological 
+tradition 1 , but he regards this as inconclusive in view of the support" which it receives from the 
+Babylonian chronological tradition. The second objection is based on the dates of autumn lettings. 
+Seed-time according to his information was in November and December, from which he infers 
+that the latter half of October would be the most likely time for autumn lettings. He finds that 
+the contracts of Arahsamna 20 in the 10th year of Ammizaduga and of Tesrit 28 in the 14th 
+
+3 It will be seen from Langdok's reconstruction of the Assyrian and Babylonian chronology that there is no such 
+inconsistency. 
+
+
+
+ASTRONOMICAL DATA 41 
+
+year of Ammizaduga fall on December 14 and December 8 Gregorian respectively, according to 
+the solution which he had propounded, and he regards these as suspiciously late dates. But, as 
+ias been seen, such contracts are distributed throughout the whole year and prove little or nothing. 
+His third objection to his original solution is based on the date-harvest. He argues that the 
+date-harvest must have been in Tesrit, because the division of the crop between landlord and 
+tenants is repeatedly mentioned as due in Arahsamna. He cites one contract for delivery in 
+Arahsamna and one for delivery on Arahsamna 1. He also cites II Raw. 15, 40 c.d., for delivery 
+on Arahsamna 30. He had apparently overlooked Langdon's paper, RA, xiv (1917), 
+pp. 16-19, in which this date is shown to belong to a grammatical exercise and to have no bearing 
+on the delivery of dates. Kugler computes that on his original solution the mean Arahsamna 1 
+would be November 19 of the Gregorian calendar, which he regards as too late for delivery of dates, 
+since according to him the date-harvest falls in September and October. By reducing his chrono- 
+logy 1 20 years he thought he would transfer this date to October 15, and by reducing it 1 76 years 
+he would transfer it to September 28. The argument does not appear to be conclusive, though it 
+suggests that some reduction in the chronology would improve the agreement with date-harvest. 
+
+On these grounds Kuglek. rejected his original solution and imagined that with it the late 
+Babylonian chronological tradition must also be abandoned. If so, he felt that the Assyrian tradi- 
+tion must be adopted, which he thought inconsistent with a reduction by 1 20 years only, and he 
+therefore decided on a reduction by 176 years. This had in his eyes, as in Weidner's, the further 
+merit of bringing the vernal equinox into an approximate coincidence with the mean Nisan 1. 
+He did not review the arguments by which he had previously applied the contracts for payments 
+at the time of harvest nor the contracts for hiring labourers. Thus while the rejection of his 
+original theory was based on the contracts bearing on the seasons of the year, his new solution 
+was only preferred to an intermediate solution on the evidence of a supposed Assyrian chrono- 
+logical tradition and on a very doubtful interpretation of a late astronomical text. It was not 
+supported by a single computation of an appearance or disappearance of Venus, but it was naively 
+assumed that these phenomena would be separated by the same intervals of time from the con- 
+junction of 1796 B.C. December 1 by which those computed for the original solution were separ- 
+ated from the conjunction of 1971 B.C. January 23. 
+
+In 1923 Langdon published the second volume of the Oxford Editions of Cuneiform Texts, 
+including the chronological prism, W. 444. In order to obtain a basis for the reduction of the 
+dates on this prism he requested me to examine the astronomical data on which Kugler had based 
+his two systems of chronology. The time available before the publication of his work was not 
+sufficient to permit a recomputation of all the observations contained on the tablets, much less 
+to permit a discussion of the motion of Venus in the light of all the ancient observations. But 
+it was clear to me that the table in Kugler s Sternkunde und Sterndienst, ii 285, on which both 
+his earlier and his later determination of the date of the 6th year of Ammizaduga depended, 
+suffered from two defects : (1) the dates given for conjunction and new moon depended on tables 
+which did not take account of the latest values for the motion of the Sun and Moon, nor of such 
+corrections to the motions of Venus as seemed to be implied in the acceleration of the Sun which 
+I had evaluated from ancient observations ; (2) the table took no notice of the duration of 
+invisibility of Venus, but only of the date of conjunction. The duration of invisibility was, as has 
+been seen, computed by Kugler for his earlier solution, but for no other solution. Since the 
+duration of invisibility at a given place is dependent on the geocentric latitude of the planet, 
+
+
+
+42 PAST STUDIES OF THE SUBJECT 
+
+which in its turn is mainly dependent on the heliocentric latitude of the planet, which is dependent 
+on the distance of the planet from its node, and since at inferior conjunction the longitude of the 
+planet is always exactly 180 different from the longitude of the Sun, the duration of invisibility 
+will depend on the distance of the Sun from the planet's node, but since the node changes its 
+longitude very slowly the duration of invisibility may be said within a range of a few hundred 
+years to depend entirely on the longitude of the Sun, or in other words on the season of the year. 
+It was therefore to be expected that since Kugler's different solutions placed the conjunction 
+in question at different seasons of the year, they would be accompanied by different geocentric 
+longitudes of Venus and different durations of invisibility. In this way I found that the solutions 
+lying 112 or more years later than Kugler's earlier solution were inconsistent with an invisibility 
+of three days only. I found that a solution 56 years later than Kugler's earlier solution would 
+stand the test of the observations in question, and I found that if the apparent acceleration of 
+the Sun's motion were explained by a change in the length of the day and if a corresponding 
+apparent 'acceleration were assumed in the motion of Venus, Venus would not be visible on the 
+day which Kugler had originally regarded as the 28th of Arahsamna, the day of her last visi- 
+bility in the 6th year of Ammizaduga. I therefore inferred that, if this explanation of the solar 
+acceleration was correct, the 6th year of Ammizaduga must have been 1916-1915 e, c. and the 1st 
+year of Ammizaduga, 1 92 1-1 920 b. c. This conclusion was published by Langdon in the preface 
+to the second volume of Oxford Editions of Cuneiform Texts (1923). 
+
+At that time I was employing Heur Carl Schoch of Berlin on the reduction of certain 
+ancient eclipses, and when he had finished this task I thought the most useful work that I could 
+give him would be the reduction of ancient planetary observations, in order to see whether they 
+afforded evidence of an apparent acceleration. Schoch computed for me the angular distance 
+of the Sun below the horizon at all late Babylonian observations of first or last visibility of 
+Venus, but as soon as I had introduced him to the Venus tablets his mind began to run on a 
+possible restoration of ancient Babylonian chronology and even on a continuous restoration of 
+the Babylonian calendar by means of the recorded intercalary months. He also formed the idea 
+of using references on contracts to the 30th day of a month as a test for the computed interval 
+between two successive first appearances of the lunar crescent, thus providing a new astronomical 
+criterion for deciding between rival restorations of the Babylonian calendar. In the hope of 
+obtaining more information than was given in Kugler's Sternkunde und Sterndienst about con- 
+tracts containing intercalary months he entered into a private correspondence with Kugler, and 
+thus provided that scholar with material which he partly misunderstood and which he used in his 
+Sternkunde und Sterndienst inBadel, Buch II, Teil II, Heft 2 (1924), pp. 622-7. This Heft is a 
+valuable contribution to the chronology of the last nine centuries before Christ, but also contains, 
+on pp. 563-71, a discussion of early Babylonian chronology, which reproduced with small 
+verbal changes the discussion which had already appeared in Von Moses bis Panlus. The 
+earlier parts of the Heft would appear to have been printed off before Kugler had arrived at 
+his new conclusions, and it is only in the concluding pages that notice is taken of my work. 
+The computations, but not the conclusions, contained in those pages are due to Schoch, who 
+had compiled, in 1922, tables for the rapid computation of the phases of the Sun, Moon, and 
+planets, and who had also compiled tables for computing the first visibility of the moon, based 
+on late Babylonian data. He also constructed, in 1924, tables for the rapid conversion of 
+Babylonian dates into dates of the Julian calendar, in which the inequalities in the Moon's 
+
+
+
+SCHOCH'S COMPUTATIONS 43 
+
+motion and the irregularity of Babylonian intercalation are disregarded, but which will in about 
+80% of cases place the beginning of a Babylonian month on the right day, though there is room 
+for an error of one day, and though it may sometimes be necessary to re-identify the months 
+according to the theory that is adopted of their position in the natural year and of Babylonian 
+intercalation. 1 Kugler's study will be noticed in its proper place so far as is necessary for 
+the purposes of the present work. In June 1924 I engaged Schoch to come to Oxford to assist 
+me in a study of the whole problem. Before leaving Germany he had on his own account con- 
+tributed a brief note on the bearing of astronomy on the subject to Astronomiscke Nachrickten, 
+Band 222 (1924), pp. 27, 28, in which he stated that according to his tables a last visibility of 
+Venus on the evening of Arahsamna 28 followed by a reappearance on Kislev 1 was possible 
+only in 19 71 and 191 5 B.C. within the 3,000 years following 3000 B.C. He himself regarded 
+191 5 E.c. as the correct date. 
+
+The present study is largely the result of Schoch's co-operation with me. Almost all the 
+astronomical computations were made by Schoch with the aid of his own tables ; the restoration 
+of the calendar is my own work, and supersedes a restoration which Schoch had attempted with 
+less complete material. The references to 30-day months were collected by Schoch and have 
+been verified and revised by me with Langdon's assistance. The subject was a matter of daily 
+discussion between Schoch and myself while he resided with me from June to December 1924. 
+In October 1924 we learned from Dr., now Professor, Schnabel that he had discovered that 
+K. 7072 and Rm. 134 were fragments of Document M, and he afterwards drew our attention to 
+the value of the fragments contained in Rm, II, 531, and S. 174. 2 With the aid of the two 
+first-named of these tablets together with the omens, which Schiaparelli and Kugler had 
+ignored, he drew the conclusion that M contains the same observations as L, but that, whereas 
+they are arranged in chronological order in L, they are arranged in calendarial order in M. He 
+also emphasized the importance of the omens for the reconstruction of the text. In December 
+1924 M. Thureau-Dangin communicated to Schoch at the joint request of Schoch and Lang- 
+don for use in our work a number of unpublished contracts for division of date-crops belonging 
+to the later years of Hammurabi. We also had the benefit of a revised collation and translation 
+of K. 160 and K. 2321 +K. 3032 by Langdon, and of his translation of K. 7072, Rm. 134, and 
+Rm. II, 531. After returning to Germany Schoch published on his own responsibility a con- 
+densed study of the whole chronological question and concluded in favour of a chronology falling 
+64 years later than that which I had proposed. This work appeared under the title of 
+Ammisaduga, von C. Schoch, Selbstverlag, Berlin-Steglitz, Kuhligkshof 5, 1925. A review 
+of the literature of the subject with a brief announcement of his own views and contributions 
+was published by Schnabel in ZA. xxxvi {1925), pp. 109-22, in which he concluded in favour 
+of the chronology which I had proposed. Schoch came to the same conclusion in a paper entitled 
+' Die erste Dynastie von Babylon \ Klio xx (1925), pp. 107-9. 
+
+Since Schoch's papers consist mainly of work which he had done for me as my assistant and 
+since Schnabel's paper apart from the history of the subject consists mainly of work privately 
+communicated to me which became inseparably united with my own studies, their work will be 
+incorporated in the present study without separate discussion here. 
+
+1 These tables appear in a revised form as an appendix to S. 174 must be a fragment of one of these texts and 
+the present volume. Schkabel had identified it as a fragment of Document M. 
+
+* Wjjidner had informed him that he had recognized that 
+
+
+
+44 PAST STUDIES OF THE SUBJECT 
+
+Meyer published in 1925 a * Nachtrag' to the first volume of his Gcschichte des Altertums 
+under the title Die alterc Chronologic Babyloniens, Assyriens und Agyptens. He acknowledges 
+the force of the arguments in favour of the solution which I had proposed, but in view of the 
+errors which appear to exist in the Venus tablets and of the doubt attaching to any restoration 
+of the chronology where the series of intercalations is not known for certain, and in view of 
+his preference on historical grounds for a shorter system of chronology, he leaves the question 
+undecided between Kugler's solution published in 1922 and mine published in 1923. 
+
+In The Illustrated London News, Oct. 10, 1925, p. 666, Langdon announced that in 1924 a 
+fragment of a clay tablet had been excavated at Kish, completing the text contained on K. 2321. 
+Photographs of the obverse of both tablets were included in his article. 
+
+
+
