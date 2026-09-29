@@ -10,6 +10,18 @@
      mock-data/my-chart.local.json, my-sidereal.local.json, my-transits.local.json, my-readings.local.json
    ?chart=example skips the private files.
 
+   ?from=viewer: a chart handed over by the calculator (viewer/astrology-viewer.html, "Open in Chart
+   Lab"). The calculator sends only positions (planets, angles, house cusps, the ayanamsa it used),
+   never a birth date, time or place, by postMessage to this tab (the two pages live on different
+   origins in production); this page keeps it in sessionStorage for reloads and computes the rest
+   itself: aspects, figures, the sidereal chart, rulers and chains, and, if the chart server answers,
+   90 days of transits (api/transit-timeline, sent the same positions).
+
+   Two ways out, both only on a click: "Interpret with AI" opens the shared recursive.eco assistant
+   (../assistant.js) with a message the reader previews and edits first, and nothing is sent until they
+   tap Send there; "Ask the assistant to build my grammar" does the same with a request for a PRIVATE
+   grammar. There is no direct save from this page.
+
    URL: ?mode=ask|today|lens|book  ?schools=slug,slug (mirrors tarot's ?decks=)  ?rulers=traditional|modern|
    esoteric|colour  ?zodiac=tropical|sidereal  ?sel=planet:mars|figure:0|house:5  ?day=YYYY-MM-DD  ?q=...
 
@@ -129,6 +141,277 @@
       figures: raw.figures || [], ayan: raw.ayanamsa || null, housesNote: raw.housesNote || '', orbsNote: raw.orbs && raw.orbs.note,
     };
   }
+  // ───────────────────────── a chart handed over by the calculator: computed here ─────────────────────────
+  // The rules are the ones the example chart was built with (and they say so in orbs.note): the engine's
+  // own planet orbs, tighter orbs for points, the South Node by conjunction only, Ascendant-Midheaven
+  // left out as the frame. Figures: T-squares, grand crosses, grand trines, kites, yods, mystic
+  // rectangles, and stelliums (3+ of the ten planets in one sign or one house).
+  const HANDOFF_KIND = 'recursive-astrology-chart';
+  const HANDOFF_KEY = 'chart-lab:viewer-chart';
+  const POINT_LIKE = new Set(['chiron', 'northnode', 'southnode', 'ascendant', 'midheaven']);
+  const ORBS_PLANET = { conjunction: 8, opposition: 8, square: 8, trine: 8, sextile: 6 };
+  const ORBS_POINT = { conjunction: 5, opposition: 5, square: 5, trine: 5, sextile: 3 };
+  const ASPECT_DEFS = [['conjunction', 0, 0], ['sextile', 60, 2], ['square', 90, 3], ['trine', 120, 4], ['opposition', 180, 6]];
+  const QUINCUNX_ORB = 3;
+  const FIG_SET = PLANETS.concat(['chiron', 'northnode', 'ascendant', 'midheaven']);
+  const w180 = x => n360(x + 180) - 180;
+  const NAKS = ['Ashwini', 'Bharani', 'Krittika', 'Rohini', 'Mrigashira', 'Ardra', 'Punarvasu', 'Pushya', 'Ashlesha', 'Magha',
+    'Purva Phalguni', 'Uttara Phalguni', 'Hasta', 'Chitra', 'Swati', 'Vishakha', 'Anuradha', 'Jyeshtha', 'Mula', 'Purva Ashadha',
+    'Uttara Ashadha', 'Shravana', 'Dhanishta', 'Shatabhisha', 'Purva Bhadrapada', 'Uttara Bhadrapada', 'Revati'];
+  const NAK_LORDS = ['ketu', 'venus', 'sun', 'moon', 'mars', 'rahu', 'jupiter', 'saturn', 'mercury'];
+  function nakshatra(lon) {
+    const span = 360 / 27, x = n360(lon), i = Math.floor(x / span);
+    return { name: NAKS[i], number: i + 1, pada: Math.floor((x - i * span) / (span / 4)) + 1, lord: NAK_LORDS[i % 9] };
+  }
+  function posText(lon) {
+    const x = n360(lon), d = x % 30, deg = Math.floor(d), min = Math.floor((d - deg) * 60);
+    return `${deg}° ${signAt(x)} ${String(min).padStart(2, '0')}'`;
+  }
+  function aspectBetween(k1, l1, k2, l2) {
+    const orbs = POINT_LIKE.has(k1) || POINT_LIKE.has(k2) ? ORBS_POINT : ORBS_PLANET;
+    const sep = Math.abs(w180(l2 - l1));
+    for (const [name, angle, apart] of ASPECT_DEFS) { const orb = Math.abs(sep - angle); if (orb <= orbs[name]) return { name, angle, orb, apart }; }
+    return null;
+  }
+  function computeAspects(lons, speeds) {
+    const keys = FIG_SET.filter(k => lons[k] != null), rows = [];
+    for (let i = 0; i < keys.length; i++) for (let j = i + 1; j < keys.length; j++) {
+      const a = keys[i], b = keys[j];
+      if ((a === 'ascendant' && b === 'midheaven') || (a === 'midheaven' && b === 'ascendant')) continue;
+      const hit = aspectBetween(a, lons[a], b, lons[b]); if (hit) rows.push([a, b, hit]);
+    }
+    if (lons.southnode != null) for (const a of keys) {
+      if (a === 'northnode') continue;
+      const hit = aspectBetween(a, lons[a], 'southnode', lons.southnode);
+      if (hit && hit.name === 'conjunction') rows.push([a, 'southnode', hit]);
+    }
+    return rows.map(([a, b, h]) => {
+      const va = speeds[a], vb = speeds[b];
+      let applying = null;
+      if (va != null && vb != null) {
+        const diff = w180(lons[b] - lons[a]), sep = Math.abs(diff);
+        const dsep = diff !== 0 ? Math.sign(diff) * (vb - va) : 0;
+        applying = (sep !== h.angle ? Math.sign(sep - h.angle) * dsep : 0) < 0;
+      }
+      let dist = Math.abs(Math.floor(n360(lons[a]) / 30) - Math.floor(n360(lons[b]) / 30)) % 12; dist = Math.min(dist, 12 - dist);
+      return { a, b, aspect: h.name, angle: h.angle, orb: Math.round(h.orb * 100) / 100, applying, outOfSign: dist !== h.apart,
+        involvesPoint: POINT_LIKE.has(a) || POINT_LIKE.has(b) };
+    }).sort((x, y) => x.orb - y.orb);
+  }
+  function combos(arr, k) {
+    const out = [], pick = (s, acc) => { if (acc.length === k) { out.push(acc.slice()); return; } for (let i = s; i < arr.length; i++) { acc.push(arr[i]); pick(i + 1, acc); acc.pop(); } };
+    pick(0, []); return out;
+  }
+  function computeFigures(lons, aspects, houseOfPlanet) {
+    const look = new Map(aspects.map(r => [[r.a, r.b].sort().join('|'), r]));
+    const kind = (a, b) => { const r = look.get([a, b].sort().join('|')); return r ? r.aspect : null; };
+    const orbOf = (a, b) => { const r = look.get([a, b].sort().join('|')); return r ? r.orb : null; };
+    const quinc = (a, b) => Math.abs(Math.abs(w180(lons[a] - lons[b])) - 150) <= QUINCUNX_ORB;
+    const keys = FIG_SET.filter(k => lons[k] != null);
+    const shared = (ms, fn) => { const v = new Set(ms.map(m => fn(signAt(lons[m])))); return v.size === 1 ? [...v][0] : 'mixed'; };
+    const finish = (fig, pairs, q) => {
+      const orbs = pairs.map(([a, b]) => orbOf(a, b)).filter(x => x != null);
+      if (fig.quincunxes) fig.quincunxes.forEach(([a, b]) => orbs.push(Math.round(Math.abs(Math.abs(w180(lons[a] - lons[b])) - 150) * 100) / 100));
+      fig.maxOrb = orbs.length ? Math.max(...orbs) : null;
+      fig.allPlanets = fig.members.every(m => PLANETS.includes(m));
+      if (q) fig.quality = shared(fig.members, q);
+      return fig;
+    };
+    const figs = [];
+    for (const [a, b] of combos(keys, 2)) {
+      if (kind(a, b) !== 'opposition') continue;
+      for (const c of keys) if (c !== a && c !== b && kind(a, c) === 'square' && kind(b, c) === 'square')
+        figs.push(finish({ type: 'T-square', members: [a, b, c], apex: c, opposition: [a, b] }, [[a, b], [a, c], [b, c]], modalityOf));
+    }
+    const crosses = [];
+    for (const q of combos(keys, 4)) {
+      const ks = combos(q, 2).map(([x, y]) => kind(x, y));
+      if (ks.filter(x => x === 'opposition').length === 2 && ks.filter(x => x === 'square').length === 4) {
+        crosses.push(new Set(q)); figs.push(finish({ type: 'grand cross', members: q.slice() }, combos(q, 2), modalityOf));
+      }
+    }
+    figs.forEach(f => { if (f.type === 'T-square' && crosses.some(c => f.members.every(m => c.has(m)))) f.partOfGrandCross = true; });
+    const trines = [];
+    for (const t of combos(keys, 3)) if (combos(t, 2).every(([x, y]) => kind(x, y) === 'trine')) {
+      trines.push(t); figs.push(finish({ type: 'grand trine', members: t.slice() }, combos(t, 2), elementOf));
+    }
+    for (const t of trines) for (const d of keys) {
+      if (t.includes(d)) continue;
+      for (const x of t) {
+        const others = t.filter(y => y !== x);
+        if (kind(d, x) === 'opposition' && others.every(y => kind(d, y) === 'sextile'))
+          figs.push(finish({ type: 'kite', members: t.concat([d]), grandTrine: t.slice(), fourth: d, apex: x }, combos(t, 2).concat([[d, x]], others.map(y => [d, y]))));
+      }
+    }
+    for (const [a, b] of combos(keys, 2)) {
+      if (kind(a, b) !== 'sextile') continue;
+      for (const c of keys) if (c !== a && c !== b && quinc(a, c) && quinc(b, c))
+        figs.push(finish({ type: 'yod', members: [a, b, c], apex: c, sextile: [a, b], quincunxes: [[a, c], [b, c]] }, [[a, b]]));
+    }
+    for (const q of combos(keys, 4)) {
+      const ks = combos(q, 2).map(([x, y]) => kind(x, y));
+      if (ks.filter(x => x === 'opposition').length === 2 && ks.filter(x => x === 'trine').length === 2 && ks.filter(x => x === 'sextile').length === 2)
+        figs.push(finish({ type: 'mystic rectangle', members: q.slice() }, combos(q, 2)));
+    }
+    const bySign = {};
+    for (const p of PLANETS) if (lons[p] != null) (bySign[signAt(lons[p])] = bySign[signAt(lons[p])] || []).push(p);
+    for (const [where, ms] of Object.entries(bySign)) if (ms.length >= 3)
+      figs.push({ type: 'stellium', scope: 'sign', where, members: ms, alsoThere: ['chiron', 'northnode', 'southnode'].filter(k => lons[k] != null && signAt(lons[k]) === where),
+        allPlanets: true, note: '3+ planets; some traditions ask 4+' });
+    const byHouse = {};
+    for (const p of PLANETS) { const h = houseOfPlanet(p); if (h) (byHouse[h] = byHouse[h] || []).push(p); }
+    for (const [h, ms] of Object.entries(byHouse).sort((x, y) => x[0] - y[0])) if (ms.length >= 3)
+      figs.push({ type: 'stellium', scope: 'house', where: +h, members: ms, allPlanets: true, note: '3+ planets; some traditions ask 4+' });
+    return figs;
+  }
+  const ORB_NOTE = "Computed in this page from the positions the calculator handed over. Planet-to-planet orbs are the recursive-astrology engine's own (api/calculate_chart.py): 8° (sextile 6°); when either member is Chiron, a node, the Ascendant or the Midheaven, 5° (sextile 3°). The South Node takes conjunctions only. Ascendant-Midheaven is the frame, not an aspect. Applying or separating is shown only where speeds are known.";
+  // one zodiac's chart, in the shape normChart reads (the same shape as mock-data/example-chart.json)
+  function rawFromLongitudes({ lons, retro, speeds, cusps, zodiac, houseSystem, ayan, housesNote, placidusOf }) {
+    const houseOf = lon => {
+      for (let i = 0; i < 12; i++) { const a = cusps[i], b = cusps[(i + 1) % 12]; if (n360(lon - a) < n360(b - a)) return i + 1; }
+      return 1;
+    };
+    const sid = zodiac === 'sidereal';
+    const order = BODIES.filter(k => lons[k] != null);
+    const points = {};
+    for (const k of order) {
+      points[k] = { key: k, name: NAME[k], longitude: lons[k], sign: signAt(lons[k]), degreeInSign: n360(lons[k]) % 30, position: posText(lons[k]),
+        house: houseOf(lons[k]), retrograde: !!retro[k], speedDegPerDay: speeds[k] != null ? speeds[k] : null };
+      if (sid) { points[k].nakshatra = nakshatra(lons[k]); if (placidusOf) points[k].placidusHouse = placidusOf(k); }
+    }
+    const angle = lon => lon == null ? null : Object.assign({ longitude: lon, sign: signAt(lon), degreeInSign: n360(lon) % 30, position: posText(lon) }, sid ? { nakshatra: nakshatra(lon) } : {});
+    const allLons = Object.assign({}, lons, { ascendant: lons.ascendant, midheaven: lons.midheaven });
+    const aspects = computeAspects(allLons, speeds);
+    const figures = computeFigures(allLons, aspects, p => points[p] && points[p].house);
+    return {
+      zodiac, houseSystem, order, points, angles: { ascendant: angle(lons.ascendant), midheaven: angle(lons.midheaven) },
+      houses: cusps.map((c, i) => ({ house: i + 1, cusp: c, sign: signAt(c), position: posText(c) })),
+      aspects, figures, ayanamsa: ayan || null, housesNote: housesNote || '', orbs: { note: ORB_NOTE },
+    };
+  }
+  // the calculator's hand-over -> { tropical, sidereal } (either zodiac can arrive; the other is derived)
+  function chartsFromHandoff(v) {
+    if (!v || v.kind !== HANDOFF_KIND || !v.points || !v.angles || !Array.isArray(v.cusps) || v.cusps.length !== 12) return null;
+    const ay = v.ayanamsa && typeof v.ayanamsa.degrees === 'number' ? v.ayanamsa.degrees : null;
+    const fromSid = v.zodiac === 'sidereal';
+    if (fromSid && ay == null) return null;
+    const toTrop = x => fromSid ? n360(x + ay) : n360(x);
+    const lonsT = {}, retro = {}, speeds = {};
+    for (const [k0, p] of Object.entries(v.points)) {
+      const k = String(k0).toLowerCase().replace(/[\s_-]/g, '');
+      if (!BODIES.includes(k) || !p || typeof p.longitude !== 'number') continue;
+      lonsT[k] = toTrop(p.longitude); retro[k] = !!p.retrograde; if (typeof p.speed === 'number') speeds[k] = p.speed;
+    }
+    if (!PLANETS.every(k => lonsT[k] != null)) return null;
+    lonsT.ascendant = toTrop(+v.angles.ascendant); lonsT.midheaven = toTrop(+v.angles.midheaven);
+    const cuspsT = v.cusps.map(c => toTrop(+c));
+    const hs = String(v.houseSystem || 'placidus');
+    const tropical = rawFromLongitudes({ lons: lonsT, retro, speeds, cusps: cuspsT, zodiac: 'tropical', houseSystem: hs });
+    let sidereal = null;
+    if (ay != null) {
+      const lonsS = {}; for (const k in lonsT) lonsS[k] = n360(lonsT[k] - ay);
+      const ascSign = Math.floor(lonsS.ascendant / 30);
+      const whole = Array.from({ length: 12 }, (_, i) => ((ascSign + i) % 12) * 30);
+      const label = v.ayanamsa.label || (v.ayanamsa.name ? cap(String(v.ayanamsa.name)) : 'Lahiri');
+      sidereal = rawFromLongitudes({ lons: lonsS, retro, speeds, cusps: whole, zodiac: 'sidereal', houseSystem: 'whole-sign',
+        ayan: { name: v.ayanamsa.name || 'lahiri', label, degrees: ay },
+        housesNote: `Whole-sign houses from the sidereal Ascendant (computed in this page); the ${hs} house of each planet is kept as a note.`,
+        placidusOf: k => tropical.points[k] && tropical.points[k].house });
+    }
+    return { tropical, sidereal };
+  }
+  // the calculator hands the chart to this tab by postMessage; kept in sessionStorage so a reload keeps it
+  const VIEWER_ORIGIN = o => o === location.origin || o === 'https://chart.recursive.eco' || /^https:\/\/recursive-astrology[a-z0-9-]*\.vercel\.app$/.test(o);
+  // (same origin, e.g. localhost: the calculator also leaves it in sessionStorage, which a tab it opens
+  // starts with a copy of). ?h= is the hand-over's one-time nonce: only that hand-over is taken.
+  function receiveHandoff(nonce) {
+    const fits = v => v && v.kind === HANDOFF_KIND && (!nonce || v.nonce === nonce);
+    let v = null;
+    try { v = JSON.parse(sessionStorage.getItem(HANDOFF_KEY) || 'null'); } catch (e) { v = null; }
+    if (fits(v)) return Promise.resolve(v);
+    const op = window.opener;
+    if (!op) return Promise.resolve(null);
+    return new Promise(resolve => {
+      let timer = null;
+      const done = x => { window.removeEventListener('message', on); clearTimeout(timer); resolve(x); };
+      const on = e => {
+        if (e.source !== op || !VIEWER_ORIGIN(e.origin)) return;
+        const d = e.data;
+        if (!d || d.type !== 'chart-lab:chart' || !fits(d.chart)) return;
+        try { sessionStorage.setItem(HANDOFF_KEY, JSON.stringify(d.chart)); } catch (err) { /* private mode: this visit only */ }
+        done(d.chart);
+      };
+      window.addEventListener('message', on);
+      timer = setTimeout(() => done(null), 6000);
+      // the "ready" ping carries nothing, so it may go to any origin; the chart only comes back from an allowed one
+      try { op.postMessage({ type: 'chart-lab:ready' }, '*'); } catch (e) { done(null); }
+    });
+  }
+
+  // ───────────────────────── transits for a handed-over chart (the chart server, on request) ─────────────────────────
+  // POST /api/transit-timeline with the natal POSITIONS only (no birth data): a daily series of the
+  // transiting bodies over 90 days from today, plus the exact hits. Built into the same shape as the
+  // example's transits90d, so Today and the Book's season chapter work unchanged.
+  const TRANSIT_API = () => (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? '' : 'https://chart.recursive.eco') + '/api/transit-timeline';
+  const TR_BODIES = ['sun', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto', 'northnode'];
+  const TR_NATAL = ['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto', 'chiron', 'northnode', 'ascendant', 'midheaven'];
+  async function transitsFor(raw) {
+    const day0 = new Date().toLocaleDateString('en-CA'), N = 90;
+    const addDays = (s, n) => new Date(Date.parse(s + 'T12:00:00Z') + n * 86400000).toISOString().slice(0, 10);
+    const natalLon = {};
+    for (const k of TR_NATAL) { const lon = k === 'ascendant' ? raw.angles.ascendant && raw.angles.ascendant.longitude : k === 'midheaven' ? raw.angles.midheaven && raw.angles.midheaven.longitude : raw.points[k] && raw.points[k].longitude; if (lon != null) natalLon[k] = lon; }
+    let res = null;
+    try {
+      const r = await fetch(TRANSIT_API(), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+        natal: { points: natalLon, houses: raw.houses.map(h => h.cusp), zodiac: 'tropical' }, natalPoints: Object.keys(natalLon),
+        start: day0 + 'T12:00:00Z', end: addDays(day0, N - 1) + 'T12:00:00Z', includeSeries: true, seriesPoints: N, orb: 1,
+        stations: true, signIngresses: true, houseIngresses: false }) });
+      if (!r.ok) return null;
+      res = await r.json();
+    } catch (e) { return null; }
+    const ser = res && res.series && res.series.bodies; if (!ser) return null;
+    const dates = Array.from({ length: N }, (_, i) => addDays(day0, i));
+    const hits = (res.hits || []).filter(h => h.kind === 'aspect' || h.exact);
+    const spans = [], byDay = dates.map(() => []);
+    for (const b of TR_BODIES) {
+      const s = ser[b]; if (!s || !s.longitude) continue;
+      for (const n of Object.keys(natalLon)) for (const [asp, ang] of ASPECT_DEFS.map(x => [x[0], x[1]])) {
+        const orbAt = i => Math.abs(Math.abs(w180(s.longitude[i] - natalLon[n])) - ang);
+        let i = 0;
+        while (i < N) {
+          if (orbAt(i) > 1) { i++; continue; }
+          const a0 = i; while (i < N && orbAt(i) <= 1) i++;
+          const a1 = i - 1;
+          const ex = hits.filter(h => h.transiting === b && h.natal === n && h.aspect === asp && h.exact && h.exact.slice(0, 10) >= addDays(dates[a0], -1) && h.exact.slice(0, 10) <= addDays(dates[a1], 1))
+            .map(h => ({ utc: h.exact.slice(0, 10), local: h.exact.slice(0, 10) }));
+          const label = `${nm(b)} ${asp} natal ${nm(n)}`;
+          const weight = Math.round(((BODYW[b] || 1) * (1 + (a1 - a0 + 1) / 30)) * 10) / 10;
+          spans.push({ transiting: b, natal: n, aspect: asp, label, firstDay: dates[a0], lastDay: dates[a1], exacts: ex, weight });
+          for (let d = a0; d <= a1; d++) {
+            const orb = orbAt(d), next = d + 1 < N ? orbAt(d + 1) : orb;
+            byDay[d].push({ transiting: b, natal: n, aspect: asp, label, orb: Math.round(orb * 100) / 100, applying: next < orb,
+              exactToday: ex.some(e => e.utc === dates[d]), exacts: ex, transitingSign: signAt(s.longitude[d]), lon: s.longitude[d],
+              transitingRetrograde: !!(s.retrograde && s.retrograde[d]), score: Math.round(((BODYW[b] || 1) * (1.5 - orb)) * 100) / 100 });
+          }
+        }
+      }
+    }
+    const evs = dates.map(() => []);
+    const dayIdx = iso => dates.indexOf(String(iso || '').slice(0, 10));
+    for (const ev of (res.stations || []).concat(res.ingresses || [])) {
+      const i = dayIdx(ev.datetime); if (i < 0 || !ev.transiting) continue;
+      evs[i].push({ transiting: ev.transiting, label: ev.label || (ev.kind === 'station' ? `${nm(ev.transiting)} stations ${ev.station || ''}` : `${nm(ev.transiting)} enters ${ev.to || ''}`).trim() });
+    }
+    return {
+      window: { startDate: dates[0], endDate: dates[N - 1], days: N },
+      config: { orb: 1, scoring: { intent: 'slow planets first, then exactness' },
+        note: 'Computed from the chart server (api/transit-timeline), sent this chart\'s positions only. A calendar of geometry, not a forecast.' },
+      spans: spans.sort((a, b) => b.weight - a.weight),
+      days: dates.map((date, i) => ({ date, top3: byDay[i].sort((a, b) => b.score - a.score).slice(0, 6), events: evs[i] })),
+      computed: true,
+    };
+  }
+
   function lonOf(key, ch = CH) {
     if (key === 'ascendant') return ch.asc && ch.asc.lon;
     if (key === 'midheaven') return ch.mc && ch.mc.lon;
@@ -251,6 +534,49 @@
   const SG = s => `<span class="glyph" aria-hidden="true">${SIGN_GLYPH[SIGNS.indexOf(s)] || ''}${VS}</span>`;
   const PN = k => `${G(k)}${esc(NAME[k] || cap(k))}`;
   const pList = keys => keys.map(PN).join(', ');
+
+  // ───────────────────────── naming, in plain text ─────────────────────────
+  const THE = new Set(['sun', 'moon', 'northnode', 'southnode', 'ascendant', 'midheaven', 'earth']);
+  const nm = k => NAME[k] || cap(k);
+  const theNm = k => (THE.has(k) ? 'the ' : '') + nm(k);
+  const andList = a => a.length <= 1 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1];
+  const houseNo = f => +String(f.where).replace(/\D/g, '');
+  // "T-square (Mars opposite Pluto, both square the Sun, apex Sun)": the figure named by its members
+  function figName(f) {
+    const m = f.members || [];
+    switch (f.type) {
+      case 'T-square': {
+        const o = f.opposition && f.opposition.length === 2 ? f.opposition : m.filter(x => x !== f.apex);
+        return `T-square (${theNm(o[0])} opposite ${theNm(o[1])}, both square ${theNm(f.apex)}, apex ${nm(f.apex)})`;
+      }
+      case 'stellium':
+        return f.scope === 'house' ? `stellium in the ${ord(houseNo(f))} house (${andList(m.map(nm))})`
+          : `stellium in ${f.where} (${andList(m.map(nm))})`;
+      case 'grand trine':
+        return `grand trine${f.quality && f.quality !== 'mixed' ? ' in ' + f.quality : ''} (${andList(m.map(theNm))}, each trine the others)`;
+      case 'grand cross': {
+        const pairs = []; const left = m.slice();
+        while (left.length) { const a = left.shift(); const b = left.find(x => CH && CH.aspects.some(y => y.type === 'opposition' && [y.a, y.b].sort().join() === [a, x].sort().join())) || left[0]; left.splice(left.indexOf(b), 1); pairs.push(`${theNm(a)} opposite ${theNm(b)}`); }
+        return `grand cross (${pairs.join(', ')}, all four square)`;
+      }
+      case 'kite':
+        return `kite (the grand trine of ${andList((f.grandTrine || []).map(theNm))}, with ${theNm(f.fourth)} opposite ${theNm(f.apex)}, apex ${nm(f.apex)})`;
+      case 'yod': {
+        const s = f.sextile || m.filter(x => x !== f.apex);
+        return `yod (${theNm(s[0])} sextile ${theNm(s[1])}, both quincunx ${theNm(f.apex)}, apex ${nm(f.apex)})`;
+      }
+      case 'mystic rectangle':
+        return `mystic rectangle (${andList(m.map(theNm))})`;
+      default:
+        return `${f.type} (${andList(m.map(theNm))})`;
+    }
+  }
+  const figShort = f => f.type === 'stellium' ? 'stellium' : f.type;   // for a second mention in the same sentence
+  function figSlug(f) {
+    if (f.type === 'T-square') return 't-square';
+    if (f.type === 'stellium') return f.scope === 'house' ? 'stellium-h' + String(houseNo(f)).padStart(2, '0') : 'stellium-' + String(f.where).toLowerCase();
+    return String(f.type).toLowerCase().replace(/\s+/g, '-');
+  }
 
   // ───────────────────────── the wheel ─────────────────────────
   const NS = 'http://www.w3.org/2000/svg';
@@ -437,7 +763,13 @@
         ? ' · our paraphrase; the ruler table is from Alice A. Bailey, <i>Esoteric Astrology</i> (1951), Tabulation VI' : '';
       return `Source: <a href="${href}" target="_blank" rel="noopener">${esc(p.grammar_name || p.grammar)}</a> (grammar in this library)${bailey}`;
     }
-    if (p.kind === 'book') return `Source: ${esc(p.book)} · <a href="${esc(p.url)}" target="_blank" rel="noopener">archive.org, search inside ↗</a> · ${esc(p.note || 'public-domain OCR')}`;
+    if (p.kind === 'book') {
+      // page links (…/page/n<leaf>/mode/1up) since Sep 29 2026; an old search link (?q=…) often found
+      // nothing, so it is cut back to the book's own page rather than shown
+      const url = String(p.url || '').split('?')[0].split('#')[0];
+      const onPage = /\/page\/n\d+/.test(url);
+      return `Source: ${esc(p.book)} · <a href="${esc(url)}" target="_blank" rel="noopener">archive.org, ${onPage ? 'the scanned page' : 'the book'} ↗</a> · ${esc(p.note || 'public-domain OCR')}`;
+    }
     if (p.kind === 'podcast') return `<span class="lbl">auto-caption</span>Source: ${esc(p.show)}, at ${esc(p.at)} · <a href="${esc(p.url)}" target="_blank" rel="noopener">the moment on YouTube ↗</a>`;
     return '';
   }
@@ -572,9 +904,12 @@
     const priv = S.source === 'local';
     const exLink = priv ? `<a href="${esc(urlWith({ chart: 'example' }))}">show the example instead</a>`
       : (S.hasLocal ? `<a href="${esc(urlWith({ chart: null }))}">your chart</a>` : '');
-    m.innerHTML = priv
-      ? `<b>Your chart</b><span class="pill private">private · local files, never committed</span>${exLink}`
-      : `<b>Example chart</b><span class="pill">invented, not a person</span><span>${esc(S.exampleNote)}</span>${exLink}`;
+    const failed = S.handoffFailed ? '<span class="pill warn">no chart arrived from the calculator: showing the example</span>' : '';
+    m.innerHTML = S.source === 'viewer'
+      ? `<b>A chart from the calculator</b><span class="pill private">this tab only · positions, no birth data</span><a href="${esc(urlWith({ chart: 'example', from: null, h: null }))}">show the example instead</a>`
+      : priv
+        ? `<b>Your chart</b><span class="pill private">private · local files, never committed</span>${exLink}`
+        : `${failed}<b>Example chart</b><span class="pill">invented, not a person</span><span>${esc(S.exampleNote)}</span>${exLink}`;
     const segB = $$('#zodiacSeg button');
     segB.forEach(b => { b.setAttribute('aria-pressed', String(b.dataset.z === S.zodiac)); b.disabled = !S.charts[b.dataset.z]; });
     const zn = $('#zodiacNote');
@@ -752,7 +1087,12 @@
       if (inIt.length) facts.push(`In ${SG(sg)} ${esc(sg)} here: ${pList(inIt)}`);
     }
     for (const n of ents.houses) { const h = houseInfo(n); if (h) facts.push(`House ${n}: built by ${esc(h.builder)}, owned by ${PN(h.owner)}${h.tenants.length ? ', tenants ' + pList(h.tenants) : ', no tenants'}`); }
-    if (ents.concepts.includes('concept-t-square')) CH.figures.forEach(f => { if (f.type === 'T-square') facts.push(`This chart's T-square: apex ${PN(f.apex)}, opposition ${pList(f.opposition || [])}`); });
+    if (ents.concepts.includes('concept-t-square')) {
+      const ts = CH.figures.filter(f => f.type === 'T-square');
+      ts.forEach(f => facts.push(`This chart's ${esc(figName(f))}`));
+      if (!ts.length) facts.push('This chart has no T-square');
+    }
+    if (ents.concepts.includes('concept-stellium')) CH.figures.filter(f => f.type === 'stellium').forEach(f => facts.push(`This chart's ${esc(figName(f))}`));
     if (ents.concepts.includes('concept-final-dispositor') || ents.concepts.includes('concept-dispositor')) {
       const fd = finalDispositor(); facts.push(fd.single ? `Final dispositor (${esc(SHORT[S.rulers])} set): ${PN(fd.single)}` : `No single final dispositor in the ${esc(SHORT[S.rulers])} set`);
     }
@@ -771,7 +1111,8 @@
         <div class="rgrid">${g.items.map(d => card(d.p, { what: esc(keyLabel(d.p.keys)) })).join('')}</div></div>`;
     };
     const top = order.slice(0, 6), rest = order.slice(6);
-    out.innerHTML = (facts.length ? `<div class="facts">${facts.map(f => `<span class="fact">${f}</span>`).join('')}</div>` : '') +
+    S.lastAsk = { q: S.q, facts: facts.map(plainOf), keys };
+    out.innerHTML = (order.length || facts.length ? aiRow('ask') : '') + (facts.length ? `<div class="facts">${facts.map(f => `<span class="fact">${f}</span>`).join('')}</div>` : '') +
       (order.length ? top.map(block).join('') + (rest.length ? `<details class="fold"><summary>${rest.length} more school${rest.length > 1 ? 's' : ''} with something on this</summary>${rest.map(block).join('')}</details>` : '')
         : `<p class="empty">Nothing on the shelf matches that among the ${S.on.size} schools switched on. Try other words, or switch more schools on.</p>`);
     const f = ents.concepts.includes('concept-t-square') ? CH.figures.find(x => x.type === 'T-square') : null;
@@ -795,6 +1136,8 @@
   const dayMs = s => Date.parse(String(s).slice(0, 10) + 'T12:00:00Z');
   const fmtDay = (s, o = { month: 'short', day: 'numeric' }) => new Date(dayMs(s)).toLocaleDateString('en-US', Object.assign({ timeZone: 'UTC' }, o));
   function transitLon(t) {
+    // a computed day carries the transiting longitude itself
+    if (typeof t.lon === 'number') return S.zodiac === 'sidereal' && CH.ayan ? n360(t.lon - (+CH.ayan.degrees || 0)) : t.lon;
     // the file names the transiting sign, not its degree: place it from the natal point and the aspect (approximate)
     const trop = S.charts.tropical, nl = lonOf(t.natal, trop);
     if (nl == null) return null;
@@ -853,7 +1196,12 @@
   }
   function renderToday() {
     const host = $('#modeToday');
-    if (!S.transits || !S.transits.days || !S.transits.days.length) { host.innerHTML = '<h2>Today</h2><p class="empty">No transits file for this chart.</p>'; hl(null, ''); return; }
+    if (!S.transits || !S.transits.days || !S.transits.days.length) {
+      const msg = S.source !== 'viewer' ? 'No transits file for this chart.'
+        : S.transitsPending ? 'Asking the chart server (chart.recursive.eco) for 90 days of transits to this chart’s positions…'
+          : 'The chart server did not answer, so this chart has no transits here. Everything else on the page is computed without it.';
+      host.innerHTML = `<h2>Today</h2><p class="empty">${esc(msg)}</p>`; hl(null, ''); return;
+    }
     const days = S.transits.days, d = days[S.dayIdx], win = S.transits.window || {};
     const top = (d.top3 || []).slice().sort((a, b) => (BODYW[b.transiting] || 0) - (BODYW[a.transiting] || 0) || b.score - a.score).slice(0, 3);
     const key = t => `${t.transiting}|${t.natal}|${t.aspect}`;
@@ -886,9 +1234,9 @@
         <button type="button" id="dNext" aria-label="Next day"${S.dayIdx === days.length - 1 ? ' disabled' : ''}>›</button>
         <span class="dname">${esc(fmtDay(d.date, { weekday: 'long', month: 'long', day: 'numeric' }))}</span>
         ${tIdx >= 0 && tIdx !== S.dayIdx ? '<button type="button" class="minibtn today" id="dToday">today</button>' : ''}</div>
-      ${cards || '<p class="empty">No transit within 1° this day. A quiet sky is also a reading: what would you do with a day nothing asks of you?</p>'}
+      ${cards ? cards + aiRow('today') : '<p class="empty">No transit within 1° this day. A quiet sky is also a reading: what would you do with a day nothing asks of you?</p>'}
       ${minorHtml}${ev}${mo}
-      <p class="rules">How these were chosen: ${esc(cfg.scoring && cfg.scoring.intent || 'slow planets first, then exactness')}; orb ${esc(cfg.orb || 1)}° at local noon; the Moon kept out of the ranking. ${esc(cfg.note || 'A calendar of geometry, not a forecast.')} Window: ${esc(fmtDay(win.startDate || days[0].date))} to ${esc(fmtDay(win.endDate || days[days.length - 1].date))}. Bars show the first and last day in orb; a contact can leave orb and return between them.</p>`;
+      <p class="rules">How these were chosen: ${esc(cfg.scoring && cfg.scoring.intent || 'slow planets first, then exactness')}; orb ${esc(cfg.orb || 1)}° at ${S.transits.computed ? 'noon UTC' : 'local noon'}; the Moon kept out of the ranking. ${esc(cfg.note || 'A calendar of geometry, not a forecast.')} Window: ${esc(fmtDay(win.startDate || days[0].date))} to ${esc(fmtDay(win.endDate || days[days.length - 1].date))}. Bars show the first and last day in orb; a contact can leave orb and return between them.</p>`;
     const go = i => { S.dayIdx = Math.max(0, Math.min(days.length - 1, i)); renderToday(); writeURL(); };
     $('#dPrev').addEventListener('click', () => go(S.dayIdx - 1));
     $('#dNext').addEventListener('click', () => go(S.dayIdx + 1));
@@ -900,16 +1248,14 @@
   }
 
   // ═════════ MODE 3: Lens — everything one planet (or figure, or house) touches ═════════
-  function figLabel(f) {
-    if (f.type === 'T-square') return `T-square (apex ${NAME[f.apex]})`;
-    if (f.type === 'stellium') return f.scope === 'house' ? `Stellium in house ${String(f.where).replace(/\D/g, '')}` : `Stellium in ${f.where}`;
-    return f.type;
-  }
+  // A figure is always named by its members ("the T-square (Mars opposite Pluto, both square the Sun,
+  // apex Sun)"), never "the figure": the reader should not have to look up which shape is meant.
+  function figLabel(f) { return cap(figName(f)); }
   function figAspects(f) {
     const m = f.members || [];
     return CH.aspects.filter(a => m.includes(a.a) && m.includes(a.b));
   }
-  function emptyPoint(f) { return f.type === 'T-square' && CH.pts[f.apex] ? n360(CH.pts[f.apex].lon + 180) : null; }
+  function emptyPoint(f) { const p = f.type === 'T-square' ? positionOf(f.apex) : null; return p ? n360(p.lon + 180) : null; }
   function renderLens() {
     const host = $('#modeLens');
     if (S.sel && S.sel.kind === 'planet' && !CH.pts[S.sel.key]) S.sel = null;
@@ -931,6 +1277,7 @@
     $$('[data-synby]', host).forEach(b => b.addEventListener('click', () => { S.synBy = b.dataset.synby; renderLens(); }));
   }
   function synopsis(rows, mine) {
+    S.lastRows = rows;
     const toggle = `<div class="seg" role="group" aria-label="Arrange"><button type="button" data-synby="link" aria-pressed="${S.synBy === 'link'}">by link</button><button type="button" data-synby="school" aria-pressed="${S.synBy === 'school'}">by school</button></div>`;
     const built = rows.map(r => ({ r, cards: schoolCards(r.keysFor, { whatFor: r.whatFor, n: 260 }) }));
     let html = `<div class="synhead"><h3>Side by side: ${enabledSchools().length} school${enabledSchools().length === 1 ? '' : 's'} on</h3>${toggle}</div>`;
@@ -994,7 +1341,7 @@
       ...asps.map(a => `aspects.${a.a}-${a.type}-${a.b}`), ...asps.map(a => `aspects.${a.b}-${a.type}-${a.a}`)]);
     hl({ planets: [k, ...asps.map(a => other(a, k))], planets2: ch.chain.slice(1).concat(disp), aspectsOf: [k], houses: [p.house], houses2: owns, signs: [p.sign], signs2: rules },
       `Lit: ${esc(NAME[k])}, its aspects and partners, its sign and house; paler: the houses it owns, the signs it rules and its dispositor chain (${esc(SHORT[S.rulers])} set).`);
-    return head + synopsis(rows, mine);
+    return head + aiRow('lens', 'selection') + synopsis(rows, mine);
   }
   function chainText(c) {
     let s = c.chain.map(x => `<span class="link">${PN(x)}</span>`).join(' <span class="arrow">→</span> ');
@@ -1010,39 +1357,44 @@
       empty = emptyPoint(f);
       const es = signAt(empty), eh = houseOfLon(empty);
       const opp = f.opposition || members.filter(m => m !== f.apex);
-      head = `<div class="lens-head"><h2>T-square <small style="color:var(--mut);font-size:14px;font-weight:400">apex ${esc(NAME[f.apex])}${f.quality ? ', ' + esc(f.quality) + ' signs' : ''}</small></h2>
-        <dl class="kv"><dt>Apex</dt><dd>${PN(f.apex)} in ${esc(CH.pts[f.apex].sign)}, house ${CH.pts[f.apex].house}</dd>
-        <dt>Opposition</dt><dd>${pList(opp)}</dd><dt>Widest orb</dt><dd>${esc(f.maxOrb)}°</dd>
+      const ap = positionOf(f.apex);
+      head = `<div class="lens-head"><h2>${esc(figLabel(f))}</h2>
+        <dl class="kv"><dt>Apex</dt><dd>${PN(f.apex)}${ap ? ` in ${esc(ap.sign)}, house ${ap.house}` : ''}</dd>
+        <dt>Opposition</dt><dd>${pList(opp)}</dd>${f.quality ? `<dt>Signs</dt><dd>${esc(f.quality)}</dd>` : ''}<dt>Widest orb</dt><dd>${esc(f.maxOrb)}°</dd>
         <dt>Empty point</dt><dd>${SG(es)} ${esc(es)}${eh ? `, house ${eh}` : ''} <small>(opposite the apex)</small></dd></dl></div>
         <div class="possible">The method names two ways a T-square is often worked with: through the opposition (the two ends learning to share one tension),
           or by living the empty point opposite the apex (here ${esc(es)}${eh ? ', the ' + ord(eh) + ' house' : ''}), where the pressure could find a release.
-          This could mean the apex ${esc(NAME[f.apex])} carries the strain; it could also mean it is where the figure's energy gets things done. What does it mean to you?${TMPL}</div>`;
+          This could mean the apex ${esc(nm(f.apex))} carries the strain of ${esc(theNm(opp[0]))} opposite ${esc(theNm(opp[1]))}; it could also mean it is where that
+          T-square's energy gets things done. What does it mean to you?${TMPL}</div>`;
       rows = [
-        { label: 'the figure', keysFor: ['concept-t-square'] },
+        { label: `the ${esc(figName(f))}`, facts: 'what the schools say of T-squares', keysFor: ['concept-t-square'] },
         { label: `the apex: ${PN(f.apex)}`, keysFor: ['planet-' + f.apex] },
         { label: `the opposition: ${pList(opp)}`, keysFor: ['aspect-opposition', 'pair-' + opp.slice().sort().join('-')] },
         { label: 'the squares to the apex', keysFor: ['aspect-square', ...opp.map(o => 'pair-' + [o, f.apex].sort().join('-'))] },
         { label: `the empty point: ${SG(es)} ${esc(es)}${eh ? `, the ${ord(eh)} house` : ''}`, keysFor: sl => ['sign-' + es.toLowerCase()].concat(eh ? ['house-' + eh] : []), closed: true },
       ];
     } else if (f.type === 'stellium') {
-      const hn = f.scope === 'house' ? +String(f.where).replace(/\D/g, '') : null;
+      const hn = f.scope === 'house' ? houseNo(f) : null;
       head = `<div class="lens-head"><h2>${esc(figLabel(f))}</h2><dl class="kv"><dt>Members</dt><dd>${pList(members)}</dd>
         ${f.alsoThere && f.alsoThere.length ? `<dt>Also there</dt><dd>${pList(f.alsoThere)}</dd>` : ''}<dt>Rule</dt><dd>${esc(f.note || '3 or more planets; some traditions ask for 4 or more')}</dd></dl></div>
-        <div class="possible">This could mean a lot of life gathered in one ${hn ? 'area' : 'sign'}, a strong accent; it could also mean the members crowd each other and take turns. What does it mean to you?${TMPL}</div>`;
+        <div class="possible">This could mean a lot of life gathered in ${hn ? 'the ' + ord(hn) + ' house' : esc(f.where)}: ${esc(andList(members.map(theNm)))}, a strong accent;
+          it could also mean those ${members.length} crowd each other and take turns. What does it mean to you?${TMPL}</div>`;
       rows = [
-        { label: 'the figure', keysFor: ['concept-stellium'] },
+        { label: `the ${esc(figName(f))}`, facts: 'what the schools say of stelliums', keysFor: ['concept-stellium'] },
         hn ? { label: `the ${ord(hn)} house`, keysFor: ['house-' + hn] } : { label: `${SG(f.where)} ${esc(f.where)}`, keysFor: sl => ['sign-' + String(f.where).toLowerCase()] },
         { label: 'the members', facts: members.map(m => NAME[m]).join(', '), keysFor: members.map(m => 'planet-' + m), closed: true },
       ];
     } else {
-      head = `<div class="lens-head"><h2>${esc(f.type)}</h2><p>${pList(members)}</p></div>`;
+      const fa = figAspects(f);
+      head = `<div class="lens-head"><h2>${esc(figLabel(f))}</h2><dl class="kv"><dt>Members</dt><dd>${pList(members)}</dd>
+        ${fa.length ? `<dt>Aspects</dt><dd>${fa.map(a => `${esc(nm(a.a))} <span class="tag ${esc(a.type)}">${esc(a.type)}</span> ${esc(nm(a.b))}`).join(' · ')}</dd>` : ''}
+        ${f.maxOrb != null ? `<dt>Widest orb</dt><dd>${esc(f.maxOrb)}°</dd>` : ''}</dl></div>`;
       rows = members.map(m => ({ label: PN(m), keysFor: ['planet-' + m] }));
     }
-    const slug = f.type === 'T-square' ? 't-square' : f.scope === 'house' ? 'stellium-h' + String(String(f.where).replace(/\D/g, '')).padStart(2, '0') : 'stellium-' + String(f.where).toLowerCase();
     const hlSpec = { planets: members.concat(f.alsoThere || []), aspects: figAspects(f), empty };
-    if (f.type === 'stellium') { if (f.scope === 'house') hlSpec.houses = [+String(f.where).replace(/\D/g, '')]; else hlSpec.signs = [f.where]; }
-    hl(hlSpec, `Lit: the ${esc(figLabel(f))}${empty != null ? ' and its empty point' : ''}.`);
-    return head + synopsis(rows, mineFor(['figures.' + slug]));
+    if (f.type === 'stellium') { if (f.scope === 'house') hlSpec.houses = [houseNo(f)]; else hlSpec.signs = [f.where]; }
+    hl(hlSpec, `Lit: the ${esc(figName(f))}${empty != null ? ' and its empty point' : ''}.`);
+    return head + aiRow('lens', 'selection') + synopsis(rows, mineFor(['figures.' + figSlug(f)]));
   }
   function lensHouse(n) {
     const h = houseInfo(n); if (!h) return '<p class="empty">No such house.</p>';
@@ -1059,10 +1411,44 @@
     if (CH.pts[h.owner]) rows.push({ label: `the owner: ${PN(h.owner)}`, keysFor: ['planet-' + h.owner], closed: true });
     if (h.tenants.length) rows.push({ label: 'the tenants', facts: h.tenants.map(t => NAME[t]).join(', '), keysFor: h.tenants.map(t => 'planet-' + t), closed: true });
     hl({ houses: [n], planets: h.tenants, planets2: CH.pts[h.owner] ? [h.owner] : [], signs: [h.builder] }, `Lit: house ${n}, its tenants, its builder sign; its owner is paler.`);
-    return head + synopsis(rows, mineFor(['houses.h' + String(n).padStart(2, '0')]));
+    return head + aiRow('lens', 'selection') + synopsis(rows, mineFor(['houses.h' + String(n).padStart(2, '0')]));
   }
 
   // ═════════ MODE 4: Book — one document, in the method's order ═════════
+  // each chapter's facts and key sets, for "Interpret this chapter with AI"
+  function bookAI(id) {
+    const P = ptLine;
+    switch (id) {
+      case 'generation': { const g = ['uranus', 'neptune', 'pluto', 'chiron'].filter(k => CH.pts[k]); return { facts: g.map(P), keys: g.map(k => ['planet-' + k]).concat([['concept-generation']]) }; }
+      case 'pillars': {
+        const fb = firstBelowHorizon();
+        const facts = ['sun', 'moon'].filter(k => CH.pts[k]).map(k => `${P(k)}; its sign's ruler (${SHORT[S.rulers]} set): ${nm(rulerOf(CH.pts[k].sign))}`);
+        if (CH.asc) facts.push(`Ascendant: ${CH.asc.pos || CH.asc.sign}; its sign's ruler: ${nm(rulerOf(CH.asc.sign))}`);
+        if (fb) facts.push(`First planet below the horizon: ${P(fb)}`);
+        return { facts, keys: [['planet-sun'], ['planet-moon'], ['concept-ascendant']] };
+      }
+      case 'figures': return { facts: CH.figures.length ? CH.figures.map(f => `The ${figName(f)}${f.maxOrb != null ? `, widest orb ${f.maxOrb}°` : ''}`) : ['No closed figure found.'], keys: [['concept-t-square'], ['concept-stellium']] };
+      case 'chains': {
+        const fd = finalDispositor();
+        return { facts: PLANETS.filter(p => CH.pts[p]).map(p => `${nm(p)}: ${chainLine(p)}`)
+          .concat([fd.single ? `Final dispositor (${SHORT[S.rulers]} set): ${nm(fd.single)}` : `No single final dispositor (${SHORT[S.rulers]} set)${fd.loops.length ? '; loops: ' + fd.loops.map(c => c.map(nm).join(' and ')).join('; ') : ''}`]),
+          keys: [['concept-dispositor', 'concept-final-dispositor']] };
+      }
+      case 'temperament': {
+        const t = tally(), ph = moonPhase(), fmt = o => Object.entries(o).map(([k, v]) => `${k} ${v}`).join(', ');
+        return { facts: [`Element (weighted, of ${t.total}): ${fmt(t.element)}`, `Modality: ${fmt(t.modality)}`, `Polarity: ${fmt(t.polarity)}`].concat(ph ? [`Moon phase at birth: ${ph.name}`] : []),
+          keys: [['concept-temperament', 'concept-elements']] };
+      }
+      case 'planets': return { facts: BODIES.filter(k => CH.pts[k]).map(P), keys: BODIES.filter(k => CH.pts[k]).map(k => ['planet-' + k]) };
+      case 'houses': return { facts: CH.houses.map(h => { const x = houseInfo(h.n); return `House ${h.n}: ${x.builder} on the cusp, owner ${nm(x.owner)}${x.ownerPos ? ` (in ${x.ownerPos.sign}, house ${x.ownerPos.house})` : ''}, tenants ${x.tenants.length ? x.tenants.map(nm).join(', ') : 'none'}`; }), keys: [['concept-rulership']] };
+      case 'aspects': return { facts: CH.aspects.map(aspLine), keys: [...new Set(CH.aspects.map(a => a.type))].map(t => ['aspect-' + t]) };
+      case 'season': {
+        const sp = S.transits && S.transits.spans ? S.transits.spans.slice().sort((a, b) => b.weight - a.weight).slice(0, 5) : [];
+        return { facts: sp.length ? sp.map(x => `${x.label}: in orb ${fmtDay(x.firstDay)} to ${fmtDay(x.lastDay)}${(x.exacts || []).length ? ', exact ' + x.exacts.map(e => fmtDay(e.local || e.utc)).join(' and ') : ''}`) : ['No transits for this chart.'], keys: [['concept-transit']] };
+      }
+      default: return null;
+    }
+  }
   const CHAPTERS = [['generation', 'Generation'], ['pillars', 'The four pillars'], ['figures', 'Figures'], ['chains', 'Chains and the final dispositor'],
     ['temperament', 'Temperament'], ['planets', 'Planets'], ['houses', 'Houses: builder, owner, tenants'], ['aspects', 'Aspects'], ['season', 'The season'], ['method', 'How this was read']];
   function foldSchools(keysFor, opts = {}) {
@@ -1110,17 +1496,20 @@
     }
     // 3 figures
     {
+      const CONCEPT = { 'T-square': 'concept-t-square', stellium: 'concept-stellium' };
       const h = CH.figures.map((f, i) => {
-        const slug = f.type === 'T-square' ? 't-square' : f.scope === 'house' ? 'stellium-h' + String(String(f.where).replace(/\D/g, '')).padStart(2, '0') : 'stellium-' + String(f.where).toLowerCase();
         let extra = '';
-        if (f.type === 'T-square') { const e = emptyPoint(f); extra = `Apex ${PN(f.apex)}; opposition ${pList(f.opposition || [])}; empty point ${esc(signAt(e))}${houseOfLon(e) ? ', house ' + houseOfLon(e) : ''}. Two ways it is often worked with: through the opposition, or by living the empty point.`; }
+        if (f.type === 'T-square') { const e = emptyPoint(f); extra = `Apex ${PN(f.apex)}; opposition ${pList(f.opposition || [])}${e != null ? `; empty point ${esc(signAt(e))}${houseOfLon(e) ? ', house ' + houseOfLon(e) : ''}` : ''}. Two ways a T-square is often worked with: through the opposition, or by living the empty point.`; }
         else extra = `Members: ${pList(f.members || [])}${f.alsoThere && f.alsoThere.length ? '; also there: ' + pList(f.alsoThere) : ''}.`;
         return `<div class="bk-item"><h3>${esc(figLabel(f))} <button type="button" class="minibtn no-print" data-fig="${i}">open in the Lens</button></h3><div class="facts-line">${extra}</div>
-          ${foldSchools([f.type === 'T-square' ? 'concept-t-square' : 'concept-stellium'])}${mine('figures.' + slug)}</div>`;
+          ${CONCEPT[f.type] ? foldSchools([CONCEPT[f.type]]) : foldSchools((f.members || []).map(m => 'planet-' + m))}${mine('figures.' + figSlug(f))}</div>`;
       }).join('') || '<p class="empty">No closed figure: no T-square, grand trine or stellium was found.</p>';
       const all = [...new Set(CH.figures.flatMap(f => f.members || []))];
-      secs.push({ id: 'figures', intro: 'The chart\'s shapes: T-squares, stelliums (grand trines, kites and yods when present).', html: h + leftovers('figures'),
-        spec: { planets: all, aspects: CH.figures.flatMap(figAspects), empty: CH.figures[0] && CH.figures[0].type === 'T-square' ? emptyPoint(CH.figures[0]) : null } });
+      const t0 = CH.figures.find(f => f.type === 'T-square');
+      secs.push({ id: 'figures', intro: CH.figures.length ? `This chart's figures, each named by its members: ${esc(CH.figures.map(f => 'the ' + figName(f)).join('; '))}.`
+          : 'Figures are closed patterns of aspects: T-squares, grand trines, kites, yods, and stelliums (three or more planets in one sign or house).',
+        html: h + leftovers('figures'),
+        spec: { planets: all, aspects: CH.figures.flatMap(figAspects), empty: t0 ? emptyPoint(t0) : null } });
     }
     // 4 chains
     {
@@ -1203,7 +1592,7 @@
       const on = enabledSchools();
       secs.push({ id: 'method', intro: 'What this book was read with, so the choices show.',
         html: `<div class="method"><ul>
-          <li>Chart: ${S.source === 'local' ? 'your own (local files, never committed)' : 'the invented example'}, ${esc(T)} zodiac${CH.ayan ? ' (' + esc(CH.ayan.label || CH.ayan.name) + ')' : ''}, ${esc(CH.houseSystem || '')} houses.</li>
+          <li>Chart: ${S.source === 'local' ? 'your own (local files, never committed)' : S.source === 'viewer' ? 'handed over by the calculator (positions only, no birth data); its aspects, figures, sidereal version and chains computed in this page' : 'the invented example'}, ${esc(T)} zodiac${CH.ayan ? ' (' + esc(CH.ayan.label || CH.ayan.name) + ')' : ''}, ${esc(CH.houseSystem || '')} houses.</li>
           <li>Rulership set: ${esc(setLabel())}.</li>
           <li>Schools switched on (${on.length}): ${on.map(s => esc(s.label)).join('; ') || 'none'}.</li>
           <li>Readings come from the grammars in this library (by the one cross-link key, <code>source_item_id</code>), short windows of public-domain books (archive.org OCR, old spellings kept) and podcast auto-captions (20 words at most, linked to the moment). Each school reads the zodiac it was written for. The Bailey school appears only as our paraphrase plus the attributed ruler table: its text is under copyright and is not stored here.</li>
@@ -1211,10 +1600,12 @@
           ${CH.orbsNote ? `<li>Orbs: ${esc(CH.orbsNote)}</li>` : ''}</ul></div>`, spec: null });
     }
     const title = {}; CHAPTERS.forEach(([id, t]) => { title[id] = t; });
+    secs.forEach(s => { s.title = title[s.id]; s.ai = bookAI(s.id); });
+    S.bookSecs = secs;
     host.innerHTML = `<h2>Book</h2><p class="sub">One document in the method's order. Each chapter's small wheel lights what it discusses; scrolling lights the big wheel too.</p>
       <nav class="toc" aria-label="Contents"><div class="tools"><b>Contents</b><button type="button" class="minibtn" id="bkPrint">Print</button></div>
       <ol>${secs.map(s => `<li><a href="#bk-${s.id}">${esc(title[s.id])}</a></li>`).join('')}</ol></nav>` +
-      secs.map((s, i) => `<section class="bk-sec" id="bk-${s.id}" data-i="${i}"><header>${s.spec ? `<div class="bk-mini" aria-hidden="true"></div>` : ''}<div><h2><span class="num">${i + 1}</span>${esc(title[s.id])}</h2><p class="intro">${s.intro}</p></div></header>${s.html}</section>`).join('');
+      secs.map((s, i) => `<section class="bk-sec" id="bk-${s.id}" data-i="${i}"><header>${s.spec ? `<div class="bk-mini" aria-hidden="true"></div>` : ''}<div><h2><span class="num">${i + 1}</span>${esc(title[s.id])}</h2><p class="intro">${s.intro}</p>${s.ai ? `<button type="button" class="aibtn sm no-print" data-ai="book:${s.id}" title="${esc(AI_TIP)}">Interpret this chapter with AI</button>` : ''}</div></header>${s.html}</section>`).join('');
     // mini wheels
     secs.forEach((s, i) => {
       if (!s.spec) return;
@@ -1243,6 +1634,194 @@
     const onScroll = () => { if (!timer) timer = setTimeout(follow, 80); };
     window.addEventListener('scroll', onScroll, { passive: true });
     bookObserver = { disconnect: () => window.removeEventListener('scroll', onScroll) };
+  }
+
+  // ═════════ Interpret with AI, and "build my grammar": the shared recursive.eco assistant ═════════
+  // The route (the interpret research, Sep 29 2026; no recursive-eco change): ../assistant.js loads the
+  // shared launcher; RecursiveAstroAssistant.ask(text, context) reloads its iframe with
+  // ?tab=chat&open=1&ask=<text>, so the assistant opens on Chat with the text typed into its chat box,
+  // and answers the launcher's page-context request with `context`. Nothing is sent until the reader
+  // taps Send in the assistant. The text is shown here first, in an edit box.
+  const CREED = 'Read the sky to know yourself, not to be told your fate. A chart is a mirror and a calendar, not a command. Relate to the symbol; never obey it.';
+  const FRAME = 'Offer possibilities, not predictions; ask me what fits.';
+  const AI_MAX = 6000;   // the text travels in the assistant's URL; flow.recursive.eco answered 414 from about 40,000 characters
+  const AI_TIP = 'Sends the chart facts you chose (this selection, no birth date, time or place) to the recursive.eco assistant. You see and can edit the text first, and nothing is sent until you tap Send in the assistant.';
+  const GR_TIP = 'Asks the recursive.eco assistant to build a PRIVATE grammar from these chart facts (no birth date, time or place). You see and can edit the request first; the assistant asks before it writes anything.';
+  const aiRow = (ctx, grammar) => `<div class="airow no-print"><button type="button" class="aibtn" data-ai="${esc(ctx)}" title="${esc(AI_TIP)}">Interpret with AI</button>${grammar ? `<button type="button" class="minibtn" data-grammar="${esc(grammar)}" title="${esc(GR_TIP)}">Ask the assistant to make this a grammar</button>` : ''}</div>`;
+  // plain text from the page's own html (glyph spans dropped)
+  function plainOf(html) {
+    const d = document.createElement('div'); d.innerHTML = html;
+    $$('.glyph', d).forEach(g => g.remove());
+    return d.textContent.replace(/\s+/g, ' ').trim();
+  }
+  const chartKind = () => S.source === 'local' ? 'my own chart' : S.source === 'viewer' ? 'a chart from the recursive.eco calculator' : 'an invented example chart (not a person)';
+  function settingsLine() {
+    return `Chart settings: ${S.zodiac} zodiac${S.zodiac === 'sidereal' && CH.ayan ? ` (${CH.ayan.label || CH.ayan.name})` : ''}, ${CH.houseSystem || 'placidus'} houses, rulership set: ${setLabel()}.`;
+  }
+  function ptLine(k, pre) {
+    const who = pre ? cap(`${pre} ${nm(k)}`) : cap(theNm(k));
+    const p = positionOf(k); if (!p) return `${who}: not computed here`;
+    const dig = PLANETS.includes(k) ? dignityOf(k, p.sign) : null;
+    return `${who}: ${p.pos || p.sign}${p.house ? `, house ${p.house}` : ''}${p.retro && !/node/.test(k) ? ', retrograde' : ''}${dig ? `, ${dig.split(' ')[0]} (traditional table)` : ''}`;
+  }
+  const aspLine = a => `${cap(theNm(a.a))} ${a.type} ${theNm(a.b)} (orb ${(+a.orb).toFixed(1)}°)`;
+  const chainLine = k => { const c = chainFrom(k); return c.chain.map(nm).join(' -> ') + (c.end === 'domicile' ? ' (rests: in its own sign)' : c.end === 'loop' ? ' (a loop)' : c.end === 'uncomputed' ? ' (pauses: no position)' : ''); };
+  // the switched-on schools' readings for a list of key sets, first match per school, short
+  function schoolLines(keyLists, max = 8, n = 230) {
+    const out = [];
+    for (const s of enabledSchools()) {
+      let hit = null;
+      for (const keys of keyLists) {
+        const ks = typeof keys === 'function' ? keys(s.slug) : keys;
+        if (!ks || !ks.length) continue;
+        const ps = passFor(ks, s.slug); if (ps.length) { hit = ps[0]; break; }
+      }
+      if (!hit) continue;
+      let text, src;
+      if (hit.kind === 'grammar') { const [k, v] = firstSection(hit.sections); text = trim(v, n); src = `grammar "${hit.grammar_name || hit.grammar}"${k ? ', ' + k : ''}`; }
+      else if (hit.kind === 'book') { text = trim(hit.text.replace(/…/g, ' '), n); src = `${hit.book}, public-domain OCR`; }
+      else { text = trim(hit.text, n); src = `${hit.show}, auto-caption`; }
+      out.push(`${s.label}${s.slug === 'esoteric-bailey' ? ' (our paraphrase)' : ''}: ${text} [${src}]`);
+      if (out.length >= max) break;
+    }
+    return out;
+  }
+  // what is selected, as { title, facts[], keyLists[] }
+  function selectionFor(ctx) {
+    const [kind, arg] = String(ctx).split(':');
+    if (kind === 'lens') {
+      const sel = S.sel || {};
+      const keyLists = (S.lastRows || []).map(r => r.keysFor);
+      if (sel.kind === 'figure' && CH.figures[sel.i]) {
+        const f = CH.figures[sel.i], facts = [`The ${figName(f)}${f.quality && f.quality !== 'mixed' ? `, in ${f.quality} signs` : ''}${f.maxOrb != null ? `, widest orb ${f.maxOrb}°` : ''}`];
+        (f.members || []).forEach(m => facts.push(ptLine(m)));
+        figAspects(f).forEach(a => facts.push(aspLine(a)));
+        const e = emptyPoint(f); if (e != null) facts.push(`Empty point (opposite the apex): ${signAt(e)}${houseOfLon(e) ? ', house ' + houseOfLon(e) : ''}`);
+        return { title: `the ${figName(f)}`, facts, keyLists };
+      }
+      if (sel.kind === 'house') {
+        const h = houseInfo(sel.n); if (!h) return null;
+        return { title: `house ${sel.n} (${AREA[sel.n - 1]})`, keyLists, facts: [`House ${sel.n}: built by ${h.builder} on the cusp (${h.pos || ''}); owner ${nm(h.owner)}${h.ownerPos ? ` in ${h.ownerPos.sign}, house ${h.ownerPos.house}` : ' (not computed)'}; tenants: ${h.tenants.length ? andList(h.tenants.map(nm)) : 'none'}`]
+          .concat(h.tenants.map(ptLine)) };
+      }
+      const k = sel.key || 'sun'; if (!CH.pts[k]) return null;
+      const facts = [ptLine(k)].concat(aspectsOf(k).map(aspLine));
+      const figs = figuresOf(k).map(([f]) => 'Part of the ' + figName(f)); facts.push(...figs);
+      facts.push(`Dispositor chain (${SHORT[S.rulers]} set): ${chainLine(k)}`);
+      const owns = ownsHouses(k); if (owns.length) facts.push(`Owns house ${owns.join(', ')}`);
+      return { title: `${theNm(k)} in ${CH.pts[k].sign}, house ${CH.pts[k].house}`, facts, keyLists };
+    }
+    if (kind === 'today') {
+      const d = S.transits && S.transits.days[S.dayIdx]; if (!d) return null;
+      const top = (d.top3 || []).slice().sort((a, b) => (BODYW[b.transiting] || 0) - (BODYW[a.transiting] || 0) || b.score - a.score).slice(0, 3);
+      const facts = top.map(t => { const sp = spanOf(t);
+        return `Transiting ${nm(t.transiting)}${t.transitingRetrograde ? ' (retrograde)' : ''} in ${t.transitingSign} ${t.aspect} natal ${nm(t.natal)}: orb ${(+t.orb).toFixed(2)}°, ${t.applying ? 'applying' : 'separating'}${sp ? `; in orb ${fmtDay(sp.firstDay)} to ${fmtDay(sp.lastDay)}` : ''}${(t.exacts || []).length ? '; exact ' + t.exacts.map(e => fmtDay(e.local || e.utc)).join(' and ') : ''}`; });
+      [...new Set(top.map(t => t.natal))].forEach(k => facts.push(ptLine(k, 'natal')));
+      const keyLists = top.flatMap(t => [['planet-' + t.transiting], ['planet-' + t.natal], ['aspect-' + t.aspect]]).concat([['concept-transit']]);
+      return { title: `the transits of ${fmtDay(d.date, { month: 'long', day: 'numeric', year: 'numeric' })}`, facts: facts.length ? facts : ['No transit within 1° this day.'], keyLists };
+    }
+    if (kind === 'ask') {
+      const a = S.lastAsk; if (!a) return null;
+      return { title: 'my question', ask: a.q, facts: a.facts.length ? a.facts : ['The question names no chart point.'], keyLists: [a.keys] };
+    }
+    if (kind === 'book') {
+      const sec = (S.bookSecs || []).find(s => s.id === arg); if (!sec) return null;
+      return { title: `the "${sec.title}" chapter of my chart's book`, facts: sec.ai.facts, keyLists: sec.ai.keys };
+    }
+    return null;
+  }
+  function interpretText(sel) {
+    const L = [`I'm reading ${chartKind()} in Chart Lab on The Recursive Astrology (astro.recursive.eco), one chart read through many schools of astrology.`,
+      `Please interpret ${sel.title}.`];
+    if (sel.ask) L.push(`My question: ${sel.ask}`);
+    L.push('', 'What is selected:', ...sel.facts.map(f => '- ' + f), '- ' + settingsLine());
+    const rs = schoolLines(sel.keyLists || []);
+    if (rs.length) L.push('', 'What the schools I switched on say (short excerpts from this site\'s grammars and public-domain books; each speaks in its own voice):', ...rs.map(r => '- ' + r));
+    L.push('', `How to answer: ${FRAME} Say "this could mean ..., it could also mean ...", keep each school in its own voice and name it, and never state the chart as fate or as something to obey.`,
+      `The site's creed: "${CREED}"`);
+    return L.join('\n');
+  }
+  function wholeChartFacts() {
+    const f = [];
+    BODIES.filter(k => CH.pts[k]).forEach(k => f.push(ptLine(k)));
+    if (CH.asc) f.push(`Ascendant: ${CH.asc.pos || CH.asc.sign}`);
+    if (CH.mc) f.push(`Midheaven: ${CH.mc.pos || CH.mc.sign}`);
+    CH.figures.forEach(x => f.push(`Figure: the ${figName(x)}`));
+    f.push('Aspects: ' + CH.aspects.map(a => `${nm(a.a)} ${a.type} ${nm(a.b)} ${(+a.orb).toFixed(1)}°`).join('; '));
+    const fd = finalDispositor(); f.push(fd.single ? `Final dispositor (${SHORT[S.rulers]} set): ${nm(fd.single)}` : `No single final dispositor (${SHORT[S.rulers]} set)`);
+    return f;
+  }
+  function grammarText(scope) {
+    const sel = scope === 'chart' ? { title: 'this whole chart', facts: wholeChartFacts() } : selectionFor('lens');
+    if (!sel) return '';
+    const L = [`Please make a PRIVATE grammar for me on recursive.eco from ${sel.title}${scope === 'chart' ? '' : ' in ' + chartKind()}.`,
+      '- Make it private: not public, and not offered to any channel.',
+      '- Before you create anything, tell me the grammar name and the items you will make, and wait for my yes.',
+      '- One item per placement (planet in sign and house), one per aspect, and one per figure; name each figure by its members, never just "the figure".',
+      '- In each item, give a short reading phrased as possibilities, not predictions, and end with one question for me. Do not invent quotations or sources.',
+      `- Put this creed in the grammar's description: "${CREED}"`,
+      '', 'Chart facts I chose to share (no birth date, time or place):', ...sel.facts.map(x => '- ' + x), '- ' + settingsLine(),
+      `- Schools I read with: ${enabledSchools().map(s => s.label).join('; ') || 'none switched on'}.`];
+    return L.join('\n');
+  }
+  const pageSummary = () => `Chart Lab on The Recursive Astrology: one chart read through many schools, in four modes. The chart on screen is ${chartKind()}. Chart facts reach the assistant only in a message the reader previews, edits and sends. ${FRAME} Creed: ${CREED}`;
+  // what the shared assistant reads as "the page": never the page's own text (it may be a private chart)
+  window.recursiveAstroPageText = pageSummary;
+  const offRecursive = () => !/(^|\.)recursive\.eco$/.test(location.hostname);
+  function openAI(mode, arg) {
+    const dlg = $('#aiDlg'); if (!dlg) return;
+    let text = '', what = '', note = '';
+    if (mode === 'grammar') {
+      text = grammarText(arg);
+      $('#aiTitle').textContent = 'Ask the assistant to build my grammar';
+      what = arg === 'chart' ? 'The whole chart on screen: every placement, the figures by name, the aspects.' : 'The selection in the Lens.';
+      note = `<b>Which route:</b> the recursive.eco assistant, the same way as "Interpret with AI". This page cannot save a grammar itself, and recursive.eco has no one-step "save this chart as a grammar" message a page like this could send (that would need a change on recursive.eco). When you are signed in, the assistant has its own tools to create a grammar; the request asks it to make the grammar private and to tell you what it will create and wait for your yes. Nothing is sent until you tap Send in the assistant.`;
+    } else {
+      const sel = selectionFor(arg);
+      if (!sel) return;
+      text = interpretText(sel);
+      $('#aiTitle').textContent = 'Interpret with AI';
+      what = `Selected: ${sel.title}.`;
+      note = '<b>Which route:</b> the shared recursive.eco assistant (the star in the corner). This opens it on Chat with the text below typed into its chat box. Nothing is sent until you tap Send there.';
+    }
+    note += ' The text carries only the chart facts shown in it, never a birth date, time or place. A chat may use recursive.eco credits.';
+    if (offRecursive()) note += ' On this host the assistant runs signed out (sign-in carries only on recursive.eco pages): it can chat, but cannot save or create anything.';
+    $('#aiWhat').textContent = what;
+    $('#aiNote').innerHTML = note;
+    $('#aiStatus').textContent = '';
+    const ta = $('#aiText'); ta.value = text; aiCount();
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+    ta.focus(); ta.setSelectionRange(0, 0); ta.scrollTop = 0;
+  }
+  function aiCount() {
+    const n = $('#aiText').value.length, over = n > AI_MAX;
+    $('#aiCount').textContent = `${n.toLocaleString('en-US')} characters${over ? ` — over the ${AI_MAX.toLocaleString('en-US')} that fit in the link to the assistant; shorten it, or copy it instead` : ''}`;
+    $('#aiCount').classList.toggle('over', over);
+    $('#aiGo').disabled = over || !n;
+  }
+  async function aiCopy(text) {
+    try { await navigator.clipboard.writeText(text); return true; } catch (e) {
+      const ta = $('#aiText'); ta.focus(); ta.select();
+      try { return document.execCommand('copy'); } catch (e2) { return false; }
+    }
+  }
+  function closeAI() { const d = $('#aiDlg'); if (d.close) d.close(); else d.removeAttribute('open'); }
+  function wireAI() {
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-ai], [data-grammar]'); if (!b) return;
+      if (b.dataset.ai) openAI('interpret', b.dataset.ai); else openAI('grammar', b.dataset.grammar);
+    });
+    $('#aiText').addEventListener('input', aiCount);
+    $('#aiCancel').addEventListener('click', closeAI);
+    $('#aiCopy').addEventListener('click', async () => { $('#aiStatus').textContent = (await aiCopy($('#aiText').value)) ? 'Copied.' : 'Could not copy: select the text and copy it.'; });
+    $('#aiGo').addEventListener('click', async () => {
+      const text = $('#aiText').value.trim(); if (!text) return;
+      const A = window.RecursiveAstroAssistant;
+      const ok = !!(A && A.ask(text, pageSummary()));
+      if (ok) { closeAI(); return; }
+      const copied = await aiCopy(text);
+      $('#aiStatus').textContent = `The assistant is not available on this page right now (it loads from recursive.eco, and is left out inside embeds).${copied ? ' The text is copied: paste it into the assistant on any recursive.eco page.' : ''}`;
+    });
   }
 
   // ───────────────────────── boot ─────────────────────────
@@ -1280,7 +1859,15 @@
     for (const p of S.passages) for (const k of (p.keys || [])) { if (!S.byKey.has(k)) S.byKey.set(k, []); S.byKey.get(k).push(p); }
     // the chart: her private files on localhost, else the invented example
     let trop = null, sid = null, tr = null, rd = null;
-    if (onLocalhost && !forceExample) {
+    // a chart the calculator handed over (?from=viewer): computed here, from positions only
+    if (P.get('from') === 'viewer' && !forceExample) {
+      $('#chartMeta').textContent = 'Waiting for the chart from the calculator…';
+      const v = await receiveHandoff(P.get('h'));
+      const both = chartsFromHandoff(v);
+      if (both) { trop = both.tropical; sid = both.sidereal; S.source = 'viewer'; }
+      else S.handoffFailed = true;
+    }
+    if (!trop && onLocalhost && !forceExample && !S.handoffFailed) {
       trop = await getJSON('../mock-data/my-chart.local.json');
       if (trop) { [sid, tr, rd] = await Promise.all(['my-sidereal', 'my-transits', 'my-readings'].map(f => getJSON(`../mock-data/${f}.local.json`))); S.source = 'local'; }
     }
@@ -1292,6 +1879,7 @@
       S.exampleNote = ex.birth ? `${ex.birth.date} ${ex.birth.time} ${ex.birth.zone || ''}, ${ex.birth.place || ''}` : '';
     }
     S.charts.tropical = normChart(trop); S.charts.sidereal = normChart(sid); S.transits = tr && tr.days ? tr : null;
+    if (S.source === 'viewer') S.transitsPending = transitsFor(trop).then(t => { S.transitsPending = null; S.transits = t; S.transitsTried = true; if (t) { const i = t.days.findIndex(d => d.date === (P.get('day') || '')); S.dayIdx = i >= 0 ? i : 0; } if (S.mode === 'today' || S.mode === 'book') rerender(); });
     S.readings = normReadings(rd); if (S.readings) S.readings.forEach(it => S.readById.set(it.id, it));
     // state from the URL (?schools= mirrors tarot's ?decks=)
     const sp = P.get('schools');
@@ -1332,6 +1920,7 @@
       WHEEL.render(CH); rerender();
     }));
     $$('.modes button').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+    wireAI();
     // print = the Book, with every fold open
     let reopened = [];
     window.addEventListener('beforeprint', () => {

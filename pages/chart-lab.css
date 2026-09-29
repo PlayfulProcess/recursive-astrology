@@ -267,6 +267,34 @@ button, select, input { font-family: inherit; }
 .method { font-size: 13px; color: var(--ink-soft); }
 .method ul { padding-left: 18px; }
 
+/* ── Interpret with AI / build my grammar (the shared recursive.eco assistant) ── */
+.airow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0 10px; }
+.aibtn { font-size: 12.5px; font-weight: 600; padding: 5px 13px; border-radius: 999px; border: 1px solid var(--accent);
+  background: var(--chip); color: var(--accent); cursor: pointer; }
+.aibtn:hover { background: var(--surface); }
+.aibtn.sm { font-size: 11.5px; padding: 2px 10px; margin-top: 6px; font-weight: 500; }
+.wheel-actions { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
+.wheel-actions .wa-note { font-size: 11px; color: var(--faint); }
+.chart-meta .pill.warn { border-color: var(--bad); color: var(--bad); }
+.ai-dlg { width: min(680px, calc(100vw - 24px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--line);
+  border-radius: 14px; background: var(--surface); color: var(--ink); box-sizing: border-box; box-shadow: var(--shadow-lift); }
+.ai-dlg::backdrop { background: var(--ink); opacity: .35; }
+.ai-in { padding: 16px 18px 12px; display: flex; flex-direction: column; gap: 6px; }
+.ai-in h2 { font-family: var(--serif-display); font-weight: 600; font-size: 20px; margin: 0; }
+.ai-what { font-size: 13px; color: var(--ink-soft); margin: 0; overflow-wrap: anywhere; }
+.ai-lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--mut); margin-top: 4px; }
+#aiText { width: 100%; min-height: 220px; height: 42vh; resize: vertical; font-family: var(--sans); font-size: 13px; line-height: 1.5;
+  padding: 9px 11px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel2); color: var(--ink); box-sizing: border-box; }
+#aiText:focus { outline: 2px solid var(--chip); border-color: var(--accent); }
+.ai-count { font-size: 11.5px; color: var(--mut); }
+.ai-count.over { color: var(--bad); }
+.ai-note { font-size: 12px; color: var(--ink-soft); margin: 2px 0; }
+.ai-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; align-items: center; }
+.aigo { font-size: 13.5px; font-weight: 600; padding: 8px 16px; border: 0; border-radius: 10px; background: var(--accent); color: #fff; cursor: pointer; }
+.aigo:disabled { opacity: .45; cursor: not-allowed; }
+.ai-status { font-size: 12px; color: var(--ink-soft); margin: 0; min-height: 1em; }
+.pbtn.fig { white-space: normal; text-align: left; max-width: 100%; }
+
 /* ── more ideas ────────────────────────────────────────── */
 .more-ideas { margin: 26px 0 0; border-top: 1px solid var(--line); padding-top: 14px; font-size: 13.5px; color: var(--ink-soft); }
 .more-ideas h2 { font-family: var(--serif-display); font-size: 18px; margin: 0 0 6px; font-weight: 600; }
@@ -289,7 +317,7 @@ button, select, input { font-family: inherit; }
 
 /* ── print: the Book, nothing else ─────────────────────── */
 @media print {
-  site-header, site-footer, .wheel-col, .controls, .modes, .more-ideas, .lab-hero .lede,
+  site-header, site-footer, .wheel-col, .controls, .modes, .more-ideas, .lab-hero .lede, .ai-dlg,
   #modeAsk, #modeToday, #modeLens, .toc .tools, .no-print { display: none !important; }
   #modeBook, #modeBook[hidden] { display: block !important; }
   html, body { background: #fff; }

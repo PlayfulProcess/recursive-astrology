@@ -8,8 +8,10 @@ Writes mock-data/passages.json: short passages the chart lab's Ask mode ranks cl
            for the nodes and Chiron; archetypal-pairs L2 items keyed by their planet pair;
            aspects-commented split into its three school sections. Sections trimmed.
   book     short windows (<= 60 words) from the public-domain books in sources/public-domain,
-           found through the keyword side of their search index (FTS5 bm25), each with an
-           archive.org search-inside link. One window per term per book.
+           found through the keyword side of their search index (FTS5 bm25), each linked to its
+           scanned PAGE on archive.org (/details/<id>/page/n<leaf>/mode/1up). One window per term
+           per book. (Until Sep 29 2026 these were search-inside links, ?q="first eight words";
+           archive.org's search often found nothing for a long OCR phrase, so they failed.)
   podcast  auto-caption snippets (<= 20 words) from a podcast transcript index, each linked to
            its YouTube moment and labelled auto-caption. Episode titles are NOT kept, and any
            snippet with a capitalised word outside a small astrology vocabulary is dropped, so
@@ -22,7 +24,17 @@ Tabulation VI ruler table). No chart, no birth data, nothing personal: this file
 The two search indexes are local SQLite files (same schema: passages + passages_fts), so their
 paths are arguments, not defaults:
 
-  python scripts/build_chart_lab_passages.py --books-db PATH --podcasts-db PATH
+  python scripts/build_chart_lab_passages.py --books-db PATH --podcasts-db PATH --pages-lib DIR
+
+Page links come from page_url(book_id, chunk_index, at=...) in astro_texts_pages.py, a local
+research module (it maps each indexed passage to its scanned page from the books' djvu.xml). Its
+folder is an argument too (--pages-lib, or the ASTRO_PAGES_LIB environment variable). Without it,
+or when a page is unknown, a book passage links to the book's details page on archive.org: never
+to a search.
+
+To swap only the book links in an existing mock-data/passages.json (nothing else changes):
+
+  python scripts/build_chart_lab_passages.py --relink --books-db PATH --pages-lib DIR
 """
 import argparse
 import datetime
@@ -239,6 +251,67 @@ def junk_ratio(s):
     return bad / max(1, len(toks))
 
 
+PAGE_URL = None   # astro_texts_pages.page_url, when --pages-lib (or ASTRO_PAGES_LIB) is given
+
+
+def load_page_url(lib):
+    """Import page_url from the local research module; None when it is not available."""
+    global PAGE_URL
+    lib = lib or os.environ.get('ASTRO_PAGES_LIB')
+    if not lib:
+        return None
+    import sys
+    sys.path.insert(0, lib)
+    try:
+        from astro_texts_pages import page_url
+    except ImportError as e:
+        print('page links unavailable, using details pages:', e)
+        return None
+    PAGE_URL = page_url
+    return page_url
+
+
+def book_page_url(ident, start, at):
+    """The scanned page where this window starts; the book's details page when unknown."""
+    details = f'https://archive.org/details/{urllib.parse.quote(ident)}'
+    if PAGE_URL is None:
+        return details
+    try:
+        url = PAGE_URL(ident, int(start), at=at)
+    except Exception as e:  # noqa: BLE001
+        print('page link failed for', ident, start, e)
+        return details
+    return url if isinstance(url, str) and url.startswith('https://archive.org/details/') and '?q=' not in url else details
+
+
+def relink(books_db):
+    """Swap only the book links of the existing shelf for page links; nothing else changes."""
+    data = json.load(open(OUT, encoding='utf-8'))
+    conn = sqlite3.connect(books_db)
+    n = pages = 0
+    for x in data['passages']:
+        if x.get('kind') != 'book':
+            continue
+        _, ident, pid = x['id'].split(':', 2)
+        row = conn.execute('SELECT start FROM passages WHERE id = ? AND video_id = ?', (int(pid), ident)).fetchone()
+        words = x['text'].replace('…', ' ').split()
+        x['url'] = book_page_url(ident, row[0], ' '.join(words[:12])) if row else f'https://archive.org/details/{ident}'
+        n += 1
+        pages += '/page/n' in x['url']
+    data['_about'] = ABOUT
+    with open(OUT, 'w', encoding='utf-8', newline='\n') as f:
+        json.dump(data, f, ensure_ascii=False, separators=(',', ':'))
+    print(f'relinked {n} book passages: {pages} to a page, {n - pages} to the book\'s details page')
+
+
+ABOUT = ('The retrieval shelf for pages/chart-lab.html (a mock-up). Built by '
+         'scripts/build_chart_lab_passages.py from the school grammars in grammars/, short '
+         'windows of the public-domain books in sources/public-domain (<= 60 words, each linked to its '
+         'scanned page on archive.org) and podcast auto-caption snippets (<= 20 words, linked to the '
+         'YouTube moment, no episode titles). No chart and no personal data. No text of Bailey\'s '
+         'Esoteric Astrology: that school is our own paraphrase grammar.')
+
+
 def book_passages(db):
     conn = sqlite3.connect(db)
     out, seen = [], set()
@@ -262,10 +335,9 @@ def book_passages(db):
                 if junk_ratio(s) > 0.06 or (ident, pid) in seen:
                     continue
                 seen.add((ident, pid))
-                first8 = ' '.join(w[1][:8])
                 out.append({'id': f'b:{ident}:{pid}', 'kind': 'book', 'school': school, 'book': label,
                             'keys': [key], 'text': ('… ' if w[0] > 0 else '') + s + ' …',
-                            'url': f'https://archive.org/details/{ident}?q=' + urllib.parse.quote(f'"{first8}"'),
+                            'url': book_page_url(ident, start, ' '.join(w[1][:12])),
                             'note': 'public-domain OCR; old spellings and scan errors remain'})
                 got_for.add(school)
                 break
@@ -330,8 +402,18 @@ def podcast_passages(db, per_term=2):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--books-db', required=True, help='SQLite index of the public-domain books')
-    ap.add_argument('--podcasts-db', required=True, help='SQLite index of the podcast transcripts')
+    ap.add_argument('--podcasts-db', help='SQLite index of the podcast transcripts (not needed with --relink)')
+    ap.add_argument('--pages-lib', help='folder holding astro_texts_pages.py (page links); '
+                                        'default: the ASTRO_PAGES_LIB environment variable')
+    ap.add_argument('--relink', action='store_true',
+                    help='only swap the book links of the existing mock-data/passages.json')
     a = ap.parse_args()
+    load_page_url(a.pages_lib)
+    if a.relink:
+        relink(a.books_db)
+        return
+    if not a.podcasts_db:
+        ap.error('--podcasts-db is required unless --relink')
     schools = slug_schools()
     g = grammar_passages(schools)
     b = book_passages(a.books_db)
@@ -342,12 +424,7 @@ def main():
         assert n <= lim, (x['id'], n)
         assert 'bailey' not in x.get('book', '').lower()
     data = {
-        '_about': ('The retrieval shelf for pages/chart-lab.html (a mock-up). Built by '
-                   'scripts/build_chart_lab_passages.py from the school grammars in grammars/, short '
-                   'windows of the public-domain books in sources/public-domain (<= 60 words, archive.org '
-                   'search-inside links) and podcast auto-caption snippets (<= 20 words, linked to the '
-                   'YouTube moment, no episode titles). No chart and no personal data. No text of Bailey\'s '
-                   'Esoteric Astrology: that school is our own paraphrase grammar.'),
+        '_about': ABOUT,
         '_built': datetime.date.today().isoformat(),
         'extra_groups': [{'slug': 'podcasts', 'label': 'Contemporary talk (podcast auto-captions)',
                           'family_label': 'Contemporary practice', 'default_on': True, 'zodiac': 'none'}],

@@ -21,7 +21,9 @@
       not a command. Relate to the symbol; never obey it.</p>
     <p class="lede">Every reading here is a possibility: this could mean one thing; it could also mean another;
       what does it mean to you? Each school speaks in its own voice (old books speak in certainties) and carries its
-      label and its source. This page reads only this site's own files: no server, no assistant, no account.</p>
+      label and its source. The readings come from this site's own files. Two things reach out, and only when you ask:
+      <b>Interpret with AI</b> opens the recursive.eco assistant with a message you see and edit first, and a chart
+      opened from the calculator asks the chart server for its transits (positions only, never birth data).</p>
   </header>
 
   <div class="lab-grid">
@@ -43,6 +45,10 @@
           <span><i style="border-color:var(--mut);border-top-style:dashed"></i>to a point</span>
         </div>
         <div class="wheel-note" id="wheelNote" aria-live="polite"></div>
+        <div class="wheel-actions no-print">
+          <button type="button" class="minibtn" data-grammar="chart" title="Asks the recursive.eco assistant to build a PRIVATE grammar from this whole chart (its positions, figures and aspects; no birth date, time or place). You see and can edit the request first; the assistant asks before it writes anything.">Ask the assistant to build my grammar</button>
+          <span class="wa-note">through the recursive.eco assistant; nothing is saved from this page</span>
+        </div>
       </div>
     </aside>
 
@@ -91,8 +97,26 @@
   </section>
 </main>
 
+<dialog id="aiDlg" class="ai-dlg" aria-labelledby="aiTitle">
+  <div class="ai-in">
+    <h2 id="aiTitle">Interpret with AI</h2>
+    <p class="ai-what" id="aiWhat"></p>
+    <label class="ai-lbl" for="aiText">What will be sent (edit it freely)</label>
+    <textarea id="aiText" spellcheck="true"></textarea>
+    <div class="ai-count" id="aiCount" aria-live="polite"></div>
+    <p class="ai-note" id="aiNote"></p>
+    <div class="ai-actions">
+      <button type="button" class="minibtn" id="aiCancel">Cancel</button>
+      <button type="button" class="minibtn" id="aiCopy">Copy the text</button>
+      <button type="button" class="aigo" id="aiGo">Open the assistant with this</button>
+    </div>
+    <p class="ai-status" id="aiStatus" aria-live="polite"></p>
+  </div>
+</dialog>
+
 <script src="../site-footer.js?v=1"></script>
 <site-footer base="../"></site-footer>
-<script src="chart-lab.js?v=2"></script>
+<script src="chart-lab.js?v=3"></script>
+<script src="../assistant.js?v=2" defer></script>
 </body>
 </html>
