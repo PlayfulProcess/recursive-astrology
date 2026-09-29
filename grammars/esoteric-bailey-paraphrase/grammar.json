@@ -1,0 +1,812 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0 for our paraphrase. The ruler table (Tabulation VI) and the membership of the three crosses are given as facts with attribution; no sentence of the book is reproduced.",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "Alice A. Bailey (1880–1949), Esoteric Astrology",
+        "date": "1951",
+        "role": "the school this grammar paraphrases. Vol. III of A Treatise on the Seven Rays, Lucis Publishing Company, New York, 1951. Copyright © 1951 Lucis Trust, renewed 1979; under US copyright through 2046.",
+        "link": "https://www.lucistrust.org/online_books/esoteric_astrology_obooks"
+      },
+      {
+        "name": "PlayfulProcess",
+        "date": "2026",
+        "role": "paraphrase, invitations and structure (draft wording, open to carving)"
+      }
+    ]
+  },
+  "name": "Esoteric Astrology — the Bailey school, paraphrased",
+  "description": "One school's teaching, paraphrased: the soul-centred ('esoteric') astrology set out in Alice A. Bailey's Esoteric Astrology (1951). These are our words, not the book's.\n\nCOPYRIGHT. The book is © 1951 Lucis Trust, renewed 1979, so it is under US copyright through 2046. Lucis Trust's terms do not allow its text to be stored in a database or retrieval system, or used to train AI, without written permission. This grammar therefore holds no sentence of the book: only our own paraphrase, plus the book's table of sign rulers (Tabulation VI, print p. 68) and the membership of its three crosses, given as facts with attribution. Read the book itself at the Lucis Trust online edition.\n\nWHAT THE SCHOOL ADDS. Each sign has three rulers: the orthodox one most astrologers use, an esoteric one (the book's 'disciple' column) and a hierarchical one (the book assigns this column to what it calls the Creative Hierarchies; later writers often read it as the initiate's rulers, which the book does not say in the passages checked). Among the rulers are Vulcan, a planet astronomers looked for and never found, and the Earth itself; Pluto rules Pisces here, not Scorpio. The school pictures two directions round the wheel: the ordinary one runs backward through the signs (Aries, Pisces, Aquarius...), and the soul-centred one runs forward in the order textbooks use. It groups the signs into three crosses. Notes about planets 'veiled' by the Sun or the Moon come from scattered passages that disagree with one another, and each sign item labels them so.\n\nHOW TO USE IT HERE. The school ranks people: it ties each ruler set to a kind of person. This library reports that as the school's own teaching and never applies it to a reader. You choose which ruler set to look through; nothing here assigns anyone a level. It is off by default in the schools filter (grammars/astrology-schools). Read the sky to know yourself, not to be told your fate: each item ends with a question, not a verdict.\n\nEvery sign, cross and Pluto item links to its item in grammars/the-structure-of-the-sky (metadata.source_deck / source_item_id). Vulcan and the Earth have no structure item.",
+  "grammar_type": "astrology",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "tags": [
+    "astrology",
+    "esoteric",
+    "soul-centred",
+    "theosophical",
+    "bailey",
+    "rulerships",
+    "vulcan",
+    "paraphrase"
+  ],
+  "default_preview": "cards",
+  "provenance": "contemporary",
+  "dating": {
+    "label": "Undated — present-day paraphrase (2026) of one school's teaching, first published in Alice A. Bailey's Esoteric Astrology (1951). Not a translation or an excerpt: nothing of the book's text is reproduced."
+  },
+  "is_published": false,
+  "_paraphrase_note": "All prose is our paraphrase. The keynotes for the form path and the soul path are our own readings of the school's two paths, not the book's keynotes. Never index or quote the book itself alongside this grammar (Lucis Trust terms).",
+  "_page_numbers_note": "Print-page numbers are the bracketed print-page markers of the Lucis Trust online edition, checked on 2026-09-28; not checked against a physical copy. The archive.org PDF uses a different pagination and should not be cited.",
+  "items": [
+    {
+      "id": "esoteric-aries",
+      "name": "Aries",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 0,
+      "symbol": "♈",
+      "keywords": [
+        "aries",
+        "bailey",
+        "esoteric",
+        "mars",
+        "mercury",
+        "sign",
+        "uranus"
+      ],
+      "metadata": {
+        "sign": "Aries",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aries",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Mars",
+        "ruler_esoteric": "Mercury",
+        "ruler_hierarchical": "Uranus",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "cardinal",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Mars. Esoteric (the book's 'disciple' column): Mercury. Hierarchical: Uranus.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other.",
+        "Cross": "The Cardinal Cross, with Cancer, Libra and Capricorn. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Starting things for the thrill of starting: the push to have, to win, to be first.",
+        "Along the soul path (our paraphrase)": "Beginning from purpose rather than impulse: an idea held steadily enough to be carried out.",
+        "An invitation": "What are you beginning, and what would it look like to begin it on purpose?"
+      }
+    },
+    {
+      "id": "esoteric-taurus",
+      "name": "Taurus",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 1,
+      "symbol": "♉",
+      "keywords": [
+        "bailey",
+        "esoteric",
+        "sign",
+        "taurus",
+        "venus",
+        "vulcan"
+      ],
+      "metadata": {
+        "sign": "Taurus",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-taurus",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Venus",
+        "ruler_esoteric": "Vulcan",
+        "ruler_hierarchical": "Vulcan",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "fixed",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "Vulcan, the esoteric and hierarchical ruler here, is tied closely to the Sun in the book: in one place hidden behind it, in another standing for it (print p. 393). So some readers look at Vulcan through the Sun. The book does not settle one method.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Venus. Esoteric (the book's 'disciple' column): Vulcan. Hierarchical: Vulcan.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "Vulcan, the esoteric and hierarchical ruler here, is tied closely to the Sun in the book: in one place hidden behind it, in another standing for it (print p. 393). So some readers look at Vulcan through the Sun. The book does not settle one method.",
+        "Cross": "The Fixed Cross, with Leo, Scorpio and Aquarius. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Wanting and holding: comfort, possessions, the pleasure of what can be touched.",
+        "Along the soul path (our paraphrase)": "Desire slowly reworked, as a smith reworks metal, into something useful and beautiful.",
+        "An invitation": "What do you hold on to, and what might it become if you worked it rather than kept it?"
+      }
+    },
+    {
+      "id": "esoteric-gemini",
+      "name": "Gemini",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 2,
+      "symbol": "♊",
+      "keywords": [
+        "bailey",
+        "earth",
+        "esoteric",
+        "gemini",
+        "mercury",
+        "sign",
+        "venus"
+      ],
+      "metadata": {
+        "sign": "Gemini",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-gemini",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Mercury",
+        "ruler_esoteric": "Venus",
+        "ruler_hierarchical": "Earth",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "mutable",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. The Earth, its hierarchical ruler, carries no such note.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Mercury. Esoteric (the book's 'disciple' column): Venus. Hierarchical: Earth.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. The Earth, its hierarchical ruler, carries no such note.",
+        "Cross": "The Mutable Cross, with Virgo, Sagittarius and Pisces. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Restless contact: talk, trade, curiosity pulled two ways at once.",
+        "Along the soul path (our paraphrase)": "The pull between opposites turned into a relationship: two sides learning they belong to each other.",
+        "An invitation": "Which two parts of you argue most, and what might each have to teach the other?"
+      }
+    },
+    {
+      "id": "esoteric-cancer",
+      "name": "Cancer",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 3,
+      "symbol": "♋",
+      "keywords": [
+        "bailey",
+        "cancer",
+        "esoteric",
+        "moon",
+        "neptune",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Cancer",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-cancer",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Moon",
+        "ruler_esoteric": "Neptune",
+        "ruler_hierarchical": "Neptune",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "cardinal",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "The book says the Moon here stands in for Neptune (print p. 322). Elsewhere it says the Moon may stand in for Vulcan, Neptune or Uranus, and leaves the choice to the astrologer's intuition (print p. 219).",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Moon. Esoteric (the book's 'disciple' column): Neptune. Hierarchical: Neptune.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "The book says the Moon here stands in for Neptune (print p. 322). Elsewhere it says the Moon may stand in for Vulcan, Neptune or Uranus, and leaves the choice to the astrologer's intuition (print p. 219).",
+        "Cross": "The Cardinal Cross, with Aries, Libra and Capricorn. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Shelter and belonging: the home, the family, the instinct to protect one's own.",
+        "Along the soul path (our paraphrase)": "The circle of care widened: a home that opens outward to people beyond one's own.",
+        "An invitation": "Who is inside your circle of care, and who might it include?"
+      }
+    },
+    {
+      "id": "esoteric-leo",
+      "name": "Leo",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 4,
+      "symbol": "♌",
+      "keywords": [
+        "bailey",
+        "esoteric",
+        "leo",
+        "sign",
+        "sun"
+      ],
+      "metadata": {
+        "sign": "Leo",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-leo",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Sun",
+        "ruler_esoteric": "Sun",
+        "ruler_hierarchical": "Sun",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "fixed",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "The book describes the Sun in Leo as focusing both Neptune and Uranus (print p. 296). Later summaries tidy this into 'Sun veiling Neptune' for the esoteric column and 'Sun veiling Uranus' for the hierarchical one; those tidy forms are not in the table.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Sun. Esoteric (the book's 'disciple' column): Sun. Hierarchical: Sun.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "The book describes the Sun in Leo as focusing both Neptune and Uranus (print p. 296). Later summaries tidy this into 'Sun veiling Neptune' for the esoteric column and 'Sun veiling Uranus' for the hierarchical one; those tidy forms are not in the table.",
+        "Cross": "The Fixed Cross, with Taurus, Scorpio and Aquarius. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Being seen: self-expression, pride, the wish to be at the centre.",
+        "Along the soul path (our paraphrase)": "A self that knows itself well enough to stop needing the centre, and lends its warmth outward.",
+        "An invitation": "When do you shine to be seen, and when for what your warmth makes possible?"
+      }
+    },
+    {
+      "id": "esoteric-virgo",
+      "name": "Virgo",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 5,
+      "symbol": "♍",
+      "keywords": [
+        "bailey",
+        "esoteric",
+        "jupiter",
+        "mercury",
+        "moon",
+        "sign",
+        "virgo"
+      ],
+      "metadata": {
+        "sign": "Virgo",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-virgo",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Mercury",
+        "ruler_esoteric": "Moon",
+        "ruler_hierarchical": "Jupiter",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "mutable",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "The book says the Moon in Virgo stands in for both Vulcan and Neptune (print p. 273). Later summaries often shorten this to 'Moon veiling Vulcan'.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Mercury. Esoteric (the book's 'disciple' column): Moon. Hierarchical: Jupiter.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "The book says the Moon in Virgo stands in for both Vulcan and Neptune (print p. 273). Later summaries often shorten this to 'Moon veiling Vulcan'.",
+        "Cross": "The Mutable Cross, with Gemini, Sagittarius and Pisces. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Sorting, tending, perfecting: care given through detail and work.",
+        "Along the soul path (our paraphrase)": "Patient care for something hidden and still growing, not yet ready to be born.",
+        "An invitation": "What small, hidden thing are you tending, and how would you like to tend it?"
+      }
+    },
+    {
+      "id": "esoteric-libra",
+      "name": "Libra",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 6,
+      "symbol": "♎",
+      "keywords": [
+        "bailey",
+        "esoteric",
+        "libra",
+        "saturn",
+        "sign",
+        "uranus",
+        "venus"
+      ],
+      "metadata": {
+        "sign": "Libra",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-libra",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Venus",
+        "ruler_esoteric": "Uranus",
+        "ruler_hierarchical": "Saturn",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "cardinal",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Venus. Esoteric (the book's 'disciple' column): Uranus. Hierarchical: Saturn.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other.",
+        "Cross": "The Cardinal Cross, with Aries, Cancer and Capricorn. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Weighing and pairing: relationships, fairness, the search for the right partner or the right deal.",
+        "Along the soul path (our paraphrase)": "Balance as a practice: weighing what serves both sides and the bond between them.",
+        "An invitation": "Where are you weighing two things right now, and what would fairness to both look like?"
+      }
+    },
+    {
+      "id": "esoteric-scorpio",
+      "name": "Scorpio",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 7,
+      "symbol": "♏",
+      "keywords": [
+        "bailey",
+        "esoteric",
+        "mars",
+        "mercury",
+        "scorpio",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Scorpio",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-scorpio",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Mars",
+        "ruler_esoteric": "Mars",
+        "ruler_hierarchical": "Mercury",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "fixed",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. A different inconsistency sits here: the table gives Mars in both the orthodox and the esoteric column, while another passage names Pluto as Scorpio's ruler and calls Mars Pluto's other self (print p. 507).",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Mars. Esoteric (the book's 'disciple' column): Mars. Hierarchical: Mercury.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. A different inconsistency sits here: the table gives Mars in both the orthodox and the esoteric column, while another passage names Pluto as Scorpio's ruler and calls Mars Pluto's other self (print p. 507).",
+        "Cross": "The Fixed Cross, with Taurus, Leo and Aquarius. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Intensity and struggle: desire, power, what is hidden and what is feared.",
+        "Along the soul path (our paraphrase)": "The ordeal as a turning point: what is buried is faced, and some strength comes back up with it.",
+        "An invitation": "What have you been struggling with underneath, and what might it be making of you?"
+      }
+    },
+    {
+      "id": "esoteric-sagittarius",
+      "name": "Sagittarius",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 8,
+      "symbol": "♐",
+      "keywords": [
+        "bailey",
+        "earth",
+        "esoteric",
+        "jupiter",
+        "mars",
+        "sagittarius",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Sagittarius",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-sagittarius",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Jupiter",
+        "ruler_esoteric": "Earth",
+        "ruler_hierarchical": "Mars",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "mutable",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. The Earth, its esoteric ruler, carries no such note.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Jupiter. Esoteric (the book's 'disciple' column): Earth. Hierarchical: Mars.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. The Earth, its esoteric ruler, carries no such note.",
+        "Cross": "The Mutable Cross, with Gemini, Virgo and Pisces. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "The chase: many goals, one after another, and the pleasure of the aim.",
+        "Along the soul path (our paraphrase)": "Aim narrowed to what matters: fewer targets, followed with the whole of oneself.",
+        "An invitation": "Among all the things you aim at, which one would you keep if you could keep only one?"
+      }
+    },
+    {
+      "id": "esoteric-capricorn",
+      "name": "Capricorn",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 9,
+      "symbol": "♑",
+      "keywords": [
+        "bailey",
+        "capricorn",
+        "esoteric",
+        "saturn",
+        "sign",
+        "venus"
+      ],
+      "metadata": {
+        "sign": "Capricorn",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-capricorn",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Saturn",
+        "ruler_esoteric": "Saturn",
+        "ruler_hierarchical": "Venus",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "cardinal",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Saturn. Esoteric (the book's 'disciple' column): Saturn. Hierarchical: Venus.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other.",
+        "Cross": "The Cardinal Cross, with Aries, Cancer and Libra. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "The climb: ambition, structure, the mountain as achievement.",
+        "Along the soul path (our paraphrase)": "The climb for the view rather than the height: effort that ends in clarity instead of status.",
+        "An invitation": "What are you climbing toward, and what would you want to see from the top?"
+      }
+    },
+    {
+      "id": "esoteric-aquarius",
+      "name": "Aquarius",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 10,
+      "symbol": "♒",
+      "keywords": [
+        "aquarius",
+        "bailey",
+        "esoteric",
+        "jupiter",
+        "moon",
+        "sign",
+        "uranus"
+      ],
+      "metadata": {
+        "sign": "Aquarius",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aquarius",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Uranus",
+        "ruler_esoteric": "Jupiter",
+        "ruler_hierarchical": "Moon",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "fixed",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "The Moon, the hierarchical ruler here, is said in one passage to stand in for Uranus (print p. 138) and in another for Vulcan (print p. 395). Later summaries give 'Moon veiling Uranus'. Note too that the orthodox column gives Uranus alone, not Saturn, unlike the traditional table.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Uranus. Esoteric (the book's 'disciple' column): Jupiter. Hierarchical: Moon.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "The Moon, the hierarchical ruler here, is said in one passage to stand in for Uranus (print p. 138) and in another for Vulcan (print p. 395). Later summaries give 'Moon veiling Uranus'. Note too that the orthodox column gives Uranus alone, not Saturn, unlike the traditional table.",
+        "Cross": "The Fixed Cross, with Taurus, Leo and Scorpio. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Ideas and groups: belonging to a cause, a network, a future.",
+        "Along the soul path (our paraphrase)": "Serving the whole: gifts shared with the group without asking what comes back.",
+        "An invitation": "What do you have to give to the groups you belong to, and what would you give freely?"
+      }
+    },
+    {
+      "id": "esoteric-pisces",
+      "name": "Pisces",
+      "category": "sign",
+      "level": 1,
+      "sort_order": 11,
+      "symbol": "♓",
+      "keywords": [
+        "bailey",
+        "esoteric",
+        "jupiter",
+        "pisces",
+        "pluto",
+        "sign"
+      ],
+      "metadata": {
+        "sign": "Pisces",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-pisces",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "ruler_orthodox": "Jupiter",
+        "ruler_esoteric": "Pluto",
+        "ruler_hierarchical": "Pluto",
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68 (columns headed Orthodox / Disciple / Hierarchies). Given as facts with attribution.",
+        "cross": "mutable",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "veil_note": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. Note that the esoteric and hierarchical ruler is Pluto, which most modern astrology gives to Scorpio, and that the orthodox column gives Jupiter alone, not Neptune.",
+        "veil_note_status": "text-derived and inconsistent: gathered from scattered passages of the book, which disagree with one another; not part of Tabulation VI",
+        "keynotes_status": "Our paraphrase of the school's two paths for this sign, not the book's keynotes. Draft wording, open to carving.",
+        "zodiac": "tropical",
+        "zodiac_basis": "inference: the book keeps the sign names and, discussing precession, treats 'the Sun in Aries' as a symbolic rather than a physical fact; in practice its signs are the tropical ones",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "Rulers (Tabulation VI)": "Orthodox: Jupiter. Esoteric (the book's 'disciple' column): Pluto. Hierarchical: Pluto.\n\nSource: Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68.",
+        "Veil note (text-derived, inconsistent)": "None of this sign's three rulers is the Sun or the Moon, so the school's notes about planets hidden behind the Sun or the Moon do not touch it directly (our inference). Those notes come from scattered passages that do not agree with each other. Note that the esoteric and hierarchical ruler is Pluto, which most modern astrology gives to Scorpio, and that the orthodox column gives Jupiter alone, not Neptune.",
+        "Cross": "The Mutable Cross, with Gemini, Virgo and Sagittarius. See the cross item for what the school means by it.",
+        "Along the form path (our paraphrase)": "Dissolving boundaries: sensitivity, dreams, being carried along by other people's feelings.",
+        "Along the soul path (our paraphrase)": "Sensitivity turned into compassion that acts: feeling another's pain and going toward it to help.",
+        "An invitation": "Whose feelings do you carry, and how would you like to carry them?"
+      }
+    },
+    {
+      "id": "cross-cardinal",
+      "name": "Cardinal Cross",
+      "category": "cross",
+      "level": 2,
+      "sort_order": 20,
+      "composite_of": [
+        "esoteric-aries",
+        "esoteric-cancer",
+        "esoteric-libra",
+        "esoteric-capricorn"
+      ],
+      "relationship_type": "emergence",
+      "emergence_kind": "structural",
+      "keywords": [
+        "cross",
+        "cardinal",
+        "esoteric",
+        "bailey"
+      ],
+      "metadata": {
+        "cross": "cardinal",
+        "signs": [
+          "Aries",
+          "Cancer",
+          "Libra",
+          "Capricorn"
+        ],
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "quadruplicity-cardinal",
+        "deck": "The Structure of the Sky",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "paraphrase": true
+      },
+      "sections": {
+        "What it is": "The school groups the four cardinal signs as a cross and ties it to beginnings of the largest kind; the crisis it names for this cross is initiation. Other schools call the same four signs the cardinal modality. Signs: Aries, Cancer, Libra, Capricorn.",
+        "How the school uses it (the record)": "The book ties each cross to a stage on its path, from ordinary experience (Mutable) through discipleship (Fixed) to initiation (Cardinal), and says the arms of the crosses will one day matter more than the houses in the soul's chart. This library gives that as the school's own teaching, never as a measure of anyone. Most charts have planets on more than one cross.",
+        "An invitation": "Where in your life does something new keep wanting to begin?"
+      }
+    },
+    {
+      "id": "cross-fixed",
+      "name": "Fixed Cross",
+      "category": "cross",
+      "level": 2,
+      "sort_order": 21,
+      "composite_of": [
+        "esoteric-taurus",
+        "esoteric-leo",
+        "esoteric-scorpio",
+        "esoteric-aquarius"
+      ],
+      "relationship_type": "emergence",
+      "emergence_kind": "structural",
+      "keywords": [
+        "cross",
+        "fixed",
+        "esoteric",
+        "bailey"
+      ],
+      "metadata": {
+        "cross": "fixed",
+        "signs": [
+          "Taurus",
+          "Leo",
+          "Scorpio",
+          "Aquarius"
+        ],
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "quadruplicity-fixed",
+        "deck": "The Structure of the Sky",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "paraphrase": true
+      },
+      "sections": {
+        "What it is": "The school groups the four fixed signs as a cross and ties it to turning round: the crisis it names here is reorientation, a change of direction held steadily. Other schools call the same four signs the fixed modality. Signs: Taurus, Leo, Scorpio, Aquarius.",
+        "How the school uses it (the record)": "The book ties each cross to a stage on its path, from ordinary experience (Mutable) through discipleship (Fixed) to initiation (Cardinal), and says the arms of the crosses will one day matter more than the houses in the soul's chart. This library gives that as the school's own teaching, never as a measure of anyone. Most charts have planets on more than one cross.",
+        "An invitation": "What are you holding steady, and what would it mean to turn it round?"
+      }
+    },
+    {
+      "id": "cross-mutable",
+      "name": "Mutable Cross",
+      "category": "cross",
+      "level": 2,
+      "sort_order": 22,
+      "composite_of": [
+        "esoteric-gemini",
+        "esoteric-virgo",
+        "esoteric-sagittarius",
+        "esoteric-pisces"
+      ],
+      "relationship_type": "emergence",
+      "emergence_kind": "structural",
+      "keywords": [
+        "cross",
+        "mutable",
+        "esoteric",
+        "bailey"
+      ],
+      "metadata": {
+        "cross": "mutable",
+        "signs": [
+          "Gemini",
+          "Virgo",
+          "Sagittarius",
+          "Pisces"
+        ],
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "quadruplicity-mutable",
+        "deck": "The Structure of the Sky",
+        "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
+        "paraphrase": true
+      },
+      "sections": {
+        "What it is": "The school groups the four mutable signs as a cross and pictures it as the cross of changing experience, the crisis of coming into a life. Other schools call the same four signs the mutable modality. Signs: Gemini, Virgo, Sagittarius, Pisces.",
+        "How the school uses it (the record)": "The book ties each cross to a stage on its path, from ordinary experience (Mutable) through discipleship (Fixed) to initiation (Cardinal), and says the arms of the crosses will one day matter more than the houses in the soul's chart. This library gives that as the school's own teaching, never as a measure of anyone. Most charts have planets on more than one cross.",
+        "An invitation": "What is changing for you, and what is it teaching you?"
+      }
+    },
+    {
+      "id": "esoteric-vulcan",
+      "name": "Vulcan (hypothetical)",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 30,
+      "keywords": [
+        "vulcan",
+        "hypothetical",
+        "esoteric",
+        "bailey",
+        "taurus",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Vulcan",
+        "school": "esoteric-bailey",
+        "hypothetical": true,
+        "observed": false,
+        "computable": false,
+        "position_note": "No position exists. This library never places Vulcan on a wheel and never uses a made-up ephemeris for it.",
+        "rules_esoteric": [
+          "Taurus"
+        ],
+        "rules_hierarchical": [
+          "Taurus"
+        ],
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68",
+        "structure_link": "none: the-structure-of-the-sky has no Vulcan item, because it holds only bodies that exist",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "In this school (our paraphrase)": "Vulcan rules Taurus in the esoteric and the hierarchical columns. The book pictures it as a smith at the forge, working in the densest material, going down into the depths to shape something useful and beautiful: an energy that starts things and also breaks old forms. It links Vulcan closely with the Sun, sometimes hidden behind it, sometimes standing for it.",
+        "In the sky": "No such planet has been found. In 1859 the astronomer Urbain Le Verrier proposed a planet inside Mercury's orbit to explain an unexplained drift in Mercury's path. Claimed sightings were never confirmed, and general relativity (1915) explained the drift without it. Vulcan is a symbol with no position.",
+        "How to look through it here": "As a ruler only. Readers of this school sometimes look at Vulcan through the Sun (the link above) or through the Moon (another passage of the book). Some software offers a 20th-century hypothetical ephemeris for it; that is a guess, not an observation, and this library does not use it.",
+        "An invitation": "What in you works slowly out of sight, shaping something that is not ready to be seen yet?"
+      }
+    },
+    {
+      "id": "esoteric-earth",
+      "name": "The Earth (as a ruler)",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 31,
+      "symbol": "⊕",
+      "keywords": [
+        "earth",
+        "esoteric",
+        "bailey",
+        "sagittarius",
+        "gemini",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Earth",
+        "school": "esoteric-bailey",
+        "hypothetical": false,
+        "computable": "by convention: the point opposite the Sun (the Sun's longitude + 180°)",
+        "rules_esoteric": [
+          "Sagittarius"
+        ],
+        "rules_hierarchical": [
+          "Gemini"
+        ],
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68",
+        "structure_link": "none: the-structure-of-the-sky has no Earth item",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "In this school (our paraphrase)": "The Earth rules Sagittarius in the esoteric column and Gemini in the hierarchical one. The book counts it among the planets it does not call sacred. Few other schools give the Earth a sign at all.",
+        "In the sky": "Real, and underfoot. A chart is drawn from the Earth, so the Earth has no place of its own on it; practitioners who use it put it exactly opposite the Sun. That is a convention, not an observation.",
+        "An invitation": "If the ground you stand on had something to say about where you are aiming, what would it say?"
+      }
+    },
+    {
+      "id": "esoteric-pluto",
+      "name": "Pluto (ruler of Pisces here)",
+      "category": "planet",
+      "level": 1,
+      "sort_order": 32,
+      "symbol": "♇",
+      "keywords": [
+        "pluto",
+        "esoteric",
+        "bailey",
+        "pisces",
+        "scorpio",
+        "planet"
+      ],
+      "metadata": {
+        "planet": "Pluto",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-pluto",
+        "deck": "The Structure of the Sky",
+        "school": "esoteric-bailey",
+        "rules_esoteric": [
+          "Pisces"
+        ],
+        "rules_hierarchical": [
+          "Pisces"
+        ],
+        "rulers_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), Tabulation VI 'Planetary Rulers in 3 Tabulations', print p. 68",
+        "table_note": "The table gives Scorpio to Mars; another passage names Pluto as Scorpio's ruler and calls Mars Pluto's other self (print p. 507). The book disagrees with itself here.",
+        "paraphrase": true,
+        "confidence": "medium"
+      },
+      "sections": {
+        "In this school (our paraphrase)": "Most modern astrology gives Pluto to Scorpio. In this school's table Pluto rules Pisces, in the esoteric and the hierarchical columns, and Scorpio keeps Mars. The book is not consistent about it: another passage gives Pluto to Scorpio and calls Mars Pluto's other self.",
+        "Reading it": "Many schools read Pluto as endings and renewal. Set beside Pisces, the last sign of the wheel, this could mean the close of a cycle. It could also mean a sensitivity that has been through something and come out changed. What does it mean to you?",
+        "An invitation": "What is ending for you, and what might it be clearing room for?"
+      }
+    }
+  ]
+}

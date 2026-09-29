@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Moon conjunction Neptune" color="#4a4439">
+<title>Moon conjunction Neptune</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c8932f" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c8932f" stroke-width="3" stroke-linecap="round"/>
+<circle cx="124" cy="97" r="9" fill="none" stroke="#c8932f" stroke-width="3.2"/>
+<line x1="130.36" y1="90.64" x2="141.68" y2="79.32" stroke="#c8932f" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(15.67 114.63) scale(0.03027 -0.03027)" d="M894 1495Q1289 1495 1561 1118Q1667 945 1667 747Q1667 355 1271 98Q1092 0 916 0H867Q820 0 739 15V21Q1016 100 1141 277Q1296 479 1296 747Q1296 1147 962 1371Q826 1451 733 1467V1470Q733 1481 882 1495ZM922 1433V1430Q1379 1233 1379 741Q1379 339 1042 107L999 83V79H1005Q1091 79 1249 162Q1482 314 1564 558Q1593 651 1593 744V753Q1593 1070 1246 1331Q1083 1433 925 1433Z"/>
+<path fill="currentColor" transform="translate(176.22 114.64) scale(0.03027 -0.03027)" d="M994 187V0H843V187H667V338H843V477Q678 499 556 621Q406 771 405 986V1070L261 928L260 1068L405 1221H557L701 1068V928L557 1070V986H559V984H557Q558 833 662 729Q740 650 843 630V1344L698 1203L697 1342L843 1496H994L1139 1342V1203L994 1344V631Q1095 651 1172 729Q1278 835 1278 985V986H1279V1075L1135 933L1134 1073L1279 1226H1431L1575 1073V933L1431 1075V986H1432V982Q1431 771 1281 621Q1159 500 994 477V338H1169V187Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#221f1a">Moon conjunction Neptune</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  0°</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Chiron opposition North Node" color="#4a4439">
+<title>Chiron opposition North Node</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="119.51" cy="100.49" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<circle cx="136.49" cy="83.51" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<line x1="123.47" y1="96.53" x2="132.53" y2="87.47" stroke="#c0473b" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(27.54 110.81) scale(0.03027 -0.03027)" d="M608.5 280.0Q550 221 550.0 138.0Q550 55 608.5 -3.5Q667 -62 750.0 -62.0Q833 -62 891.5 -3.5Q950 55 950.0 138.0Q950 221 891.5 280.0Q833 339 750.0 339.0Q667 339 608.5 280.0ZM502 388Q574 459 667 481V1455H839V1149L1132 1322L1218 1174L859 965L1218 755L1132 607L839 781V479Q928 457 998 388Q1102 285 1102.0 139.5Q1102 -6 998.5 -109.0Q895 -212 750.0 -212.0Q605 -212 501.5 -109.0Q398 -6 398.0 139.5Q398 285 502 388Z"/>
+<path fill="currentColor" transform="translate(176.45 114.54) scale(0.03027 -0.03027)" d="M1206 312Q1206 239 1257.5 187.5Q1309 136 1383 136Q1456 136 1508.0 187.5Q1560 239 1560 312Q1560 386 1508.5 437.5Q1457 489 1383.0 489.0Q1309 489 1257.5 437.5Q1206 386 1206 312ZM436 489Q363 489 311.0 437.5Q259 386 259 312Q259 239 311.0 187.0Q363 135 436 135Q510 135 561.5 187.0Q613 239 613 312Q613 386 561.5 437.5Q510 489 436 489ZM1557 574Q1582 557 1604 535Q1695 443 1695 313Q1695 184 1604.0 92.5Q1513 1 1383 1Q1254 1 1163.0 92.5Q1072 184 1072 313Q1072 443 1162 535Q1243 616 1354 625Q1475 740 1475 893Q1475 1073 1307.5 1199.5Q1140 1326 900.0 1326.0Q660 1326 492.5 1199.5Q325 1073 325 893Q325 740 446 626Q571 622 658 535Q748 443 748.0 313.0Q748 183 657.0 91.5Q566 0 436 0Q308 0 216.5 91.5Q125 183 125.0 313.0Q125 443 216 535Q234 552 253 567Q131 709 131 891Q131 1139 355.0 1314.0Q579 1489 900 1489Q1224 1489 1448.0 1314.0Q1672 1139 1672 891Q1672 714 1557 574Z"/>
+<text x="128" y="181" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#221f1a">Chiron opposition</text>
+<text x="128" y="205" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#221f1a">North Node</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  180°</text>
+</svg>

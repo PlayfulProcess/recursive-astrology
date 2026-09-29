@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Saturn trine Neptune" color="#4a4439">
+<title>Saturn trine Neptune</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<polygon points="128,78 114.14,102 141.86,102" fill="none" stroke="#3f7a5c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(24.24 114.64) scale(0.03027 -0.03027)" d="M554 1165H448V1316H554V1496H706V1316H884V1165H706V778Q817 887 969 887Q1147 887 1266.5 758.0Q1386 629 1386 442Q1386 352 1316.0 237.5Q1246 123 1246 2V0H1095Q1095 132 1165.5 251.0Q1236 370 1236 442Q1236 565 1158.5 649.5Q1081 734 970 734Q860 734 783.0 649.0Q706 564 706 442V0H554Z"/>
+<path fill="currentColor" transform="translate(176.22 114.64) scale(0.03027 -0.03027)" d="M994 187V0H843V187H667V338H843V477Q678 499 556 621Q406 771 405 986V1070L261 928L260 1068L405 1221H557L701 1068V928L557 1070V986H559V984H557Q558 833 662 729Q740 650 843 630V1344L698 1203L697 1342L843 1496H994L1139 1342V1203L994 1344V631Q1095 651 1172 729Q1278 835 1278 985V986H1279V1075L1135 933L1134 1073L1279 1226H1431L1575 1073V933L1431 1075V986H1432V982Q1431 771 1281 621Q1159 500 994 477V338H1169V187Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Saturn trine Neptune</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  120°</text>
+</svg>

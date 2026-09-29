@@ -60,6 +60,24 @@
       "year_label": "Undated — generated meta-voice projection over the voice grammars in this repo. The voices it stacks are dated individually (Ptolemy c. 150 CE, Lilly 1647, Bṛhat Jātaka c. 6th c. CE, Alan Leo 1899–1903); the projection itself is present-day and rebuilt on every run."
     },
     {
+      "slug": "astrology-schools",
+      "name": "The Schools of the Sky — a grammar of astrology's schools",
+      "description": "A grammar of grammars: one item per astrology school in this library, grouped by family, zodiac, era, source type and rulership set, so a reader can switch schools in and out",
+      "grammar_type": "astrology",
+      "items": 38,
+      "categories": {
+        "school": 11,
+        "family": 7,
+        "zodiac": 3,
+        "era": 5,
+        "source-type": 3,
+        "rulership-set": 4,
+        "axis": 5
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — generated index of the schools in this repo. Each school is dated in its own grammar; the index itself is present-day and rebuilt on every run."
+    },
+    {
       "slug": "casting-big-three",
       "name": "The Big Three — a reflection casting",
       "description": "A three-position casting that mirrors the tarot three-card spread so it works in the oracle from day one — but nothing here is drawn at random: every position resolves to an aspect of YOUR OWN chart (",
@@ -120,6 +138,20 @@
       },
       "provenance": "contemporary",
       "year_label": "Undated — contemporary synthesis, written 2026, about the IAU's 2006 reclassification and the astrological writing that has appeared since. The astronomy it reports is dated and sourced per item; the symbolism is a literature still forming, so the grammar carries no source year rather than pretending to one."
+    },
+    {
+      "slug": "esoteric-bailey-paraphrase",
+      "name": "Esoteric Astrology — the Bailey school, paraphrased",
+      "description": "One school's teaching, paraphrased: the soul-centred ('esoteric') astrology set out in Alice A",
+      "grammar_type": "astrology",
+      "items": 18,
+      "categories": {
+        "sign": 12,
+        "cross": 3,
+        "planet": 3
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — present-day paraphrase (2026) of one school's teaching, first published in Alice A. Bailey's Esoteric Astrology (1951). Not a translation or an excerpt: nothing of the book's text is reproduced."
     },
     {
       "slug": "historiographies-of-astrology",

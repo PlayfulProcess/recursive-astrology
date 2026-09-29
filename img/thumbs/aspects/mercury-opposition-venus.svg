@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Mercury opposition Venus" color="#4a4439">
+<title>Mercury opposition Venus</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="119.51" cy="100.49" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<circle cx="136.49" cy="83.51" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<line x1="123.47" y1="96.53" x2="132.53" y2="87.47" stroke="#c0473b" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(32.97 111.54) scale(0.03027 -0.03027)" d="M873 1110Q913 1084 949 1048Q1082 917 1082 728Q1082 540 950 416Q842 316 699 302V93L915 95V-5L695 -6L696 -208H567L566 -5H364V93H566L564 302Q417 315 308 416Q175 540 175 728Q175 917 308 1048Q344 1084 384 1110Q344 1135 308 1172Q175 1303 175 1491V1499H317V1489Q317 1359 408 1269Q493 1186 610 1179H648Q764 1186 849 1269Q940 1359 940 1489V1499H1082V1491Q1082 1303 949 1172Q913 1135 873 1110ZM648 1040H610Q493 1034 408 950Q317 861 317.0 731.0Q317 601 408.5 516.0Q500 431 630 431Q757 431 848.5 516.0Q940 601 940.0 731.0Q940 861 849 950Q764 1034 648 1040Z"/>
+<path fill="currentColor" transform="translate(181.29 110.78) scale(0.03027 -0.03027)" d="M750 1319Q586 1319 470.5 1205.0Q355 1091 355 927Q355 764 470.5 656.0Q586 548 750 548Q911 548 1028.0 656.0Q1145 764 1145 927Q1145 1091 1028.0 1205.0Q911 1319 750 1319ZM344 532Q175 689 175 927Q175 1166 343.0 1332.0Q511 1498 750 1498Q986 1498 1155.5 1332.0Q1325 1166 1325.0 927.0Q1325 688 1156 532Q1020 406 840 388V124H1112V0H840V-257H660V0H388V124H660V389Q479 406 344 532Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="19" font-weight="600" fill="#221f1a">Mercury opposition Venus</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  180°</text>
+</svg>

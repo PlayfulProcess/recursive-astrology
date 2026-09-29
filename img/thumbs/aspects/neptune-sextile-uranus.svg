@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Uranus sextile Neptune" color="#4a4439">
+<title>Uranus sextile Neptune</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#5b7fc0" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#5b7fc0" stroke-width="3" stroke-linecap="round"/>
+<line x1="128" y1="76" x2="128" y2="108" stroke="#5b7fc0" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="141.86" y1="84" x2="114.14" y2="100" stroke="#5b7fc0" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="114.14" y1="84" x2="141.86" y2="100" stroke="#5b7fc0" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(24.24 114.64) scale(0.03027 -0.03027)" d="M782 262Q782 205 821.5 166.0Q861 127 917 127Q972 127 1011.5 166.0Q1051 205 1051 262Q1051 317 1012.0 356.5Q973 396 917.0 396.0Q861 396 821.5 356.5Q782 317 782 262ZM993 511Q1054 493 1102 445Q1178 369 1178.0 261.0Q1178 153 1102.0 76.5Q1026 0 917 0Q810 0 733.5 76.5Q657 153 657.0 261.0Q657 369 733 445Q780 494 842 511V907H554V470H248V621H403V1344H248V1496H554V1058H842V1496H993V1058H1281V1496H1586V1344H1433V621H1586V470H1281V907H993Z"/>
+<path fill="currentColor" transform="translate(176.22 114.64) scale(0.03027 -0.03027)" d="M994 187V0H843V187H667V338H843V477Q678 499 556 621Q406 771 405 986V1070L261 928L260 1068L405 1221H557L701 1068V928L557 1070V986H559V984H557Q558 833 662 729Q740 650 843 630V1344L698 1203L697 1342L843 1496H994L1139 1342V1203L994 1344V631Q1095 651 1172 729Q1278 835 1278 985V986H1279V1075L1135 933L1134 1073L1279 1226H1431L1575 1073V933L1431 1075V986H1432V982Q1431 771 1281 621Q1159 500 994 477V338H1169V187Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Uranus sextile Neptune</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  60°</text>
+</svg>

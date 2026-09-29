@@ -73,6 +73,8 @@ BRANCH_OF = {
     "dignities-rulerships":            "synthesis",  # lens compilation of the traditional dignities table
     "dwarf-planets":                   "synthesis",  # contemporary synthesis on the IAU 2006 reclassification — an interpretation set, not a single source
     "the-structure-of-the-sky":        "synthesis",  # the structure every voice hangs on (elements, modalities, signs as composites, house groups, aspects) — reference data, not a voice
+    "astrology-schools":               "synthesis",  # generated grammar of schools (families, zodiacs, eras, source types, rulership sets) — see scripts/build_meta_schools.py
+    "esoteric-bailey-paraphrase":      "synthesis",  # our paraphrase of one school (Bailey, 1951, under copyright): not a translation, so not primary-sources
 }
 
 VALID_PROVENANCE = {"record", "contemporary", "casting"}

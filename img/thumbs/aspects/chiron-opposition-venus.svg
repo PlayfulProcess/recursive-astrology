@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Venus opposition Chiron" color="#4a4439">
+<title>Venus opposition Chiron</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="119.51" cy="100.49" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<circle cx="136.49" cy="83.51" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<line x1="123.47" y1="96.53" x2="132.53" y2="87.47" stroke="#c0473b" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(29.29 110.78) scale(0.03027 -0.03027)" d="M750 1319Q586 1319 470.5 1205.0Q355 1091 355 927Q355 764 470.5 656.0Q586 548 750 548Q911 548 1028.0 656.0Q1145 764 1145 927Q1145 1091 1028.0 1205.0Q911 1319 750 1319ZM344 532Q175 689 175 927Q175 1166 343.0 1332.0Q511 1498 750 1498Q986 1498 1155.5 1332.0Q1325 1166 1325.0 927.0Q1325 688 1156 532Q1020 406 840 388V124H1112V0H840V-257H660V0H388V124H660V389Q479 406 344 532Z"/>
+<path fill="currentColor" transform="translate(179.54 110.81) scale(0.03027 -0.03027)" d="M608.5 280.0Q550 221 550.0 138.0Q550 55 608.5 -3.5Q667 -62 750.0 -62.0Q833 -62 891.5 -3.5Q950 55 950.0 138.0Q950 221 891.5 280.0Q833 339 750.0 339.0Q667 339 608.5 280.0ZM502 388Q574 459 667 481V1455H839V1149L1132 1322L1218 1174L859 965L1218 755L1132 607L839 781V479Q928 457 998 388Q1102 285 1102.0 139.5Q1102 -6 998.5 -109.0Q895 -212 750.0 -212.0Q605 -212 501.5 -109.0Q398 -6 398.0 139.5Q398 285 502 388Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#221f1a">Venus opposition Chiron</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  180°</text>
+</svg>

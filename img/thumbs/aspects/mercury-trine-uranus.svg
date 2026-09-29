@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Mercury trine Uranus" color="#4a4439">
+<title>Mercury trine Uranus</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<polygon points="128,78 114.14,102 141.86,102" fill="none" stroke="#3f7a5c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(32.97 111.54) scale(0.03027 -0.03027)" d="M873 1110Q913 1084 949 1048Q1082 917 1082 728Q1082 540 950 416Q842 316 699 302V93L915 95V-5L695 -6L696 -208H567L566 -5H364V93H566L564 302Q417 315 308 416Q175 540 175 728Q175 917 308 1048Q344 1084 384 1110Q344 1135 308 1172Q175 1303 175 1491V1499H317V1489Q317 1359 408 1269Q493 1186 610 1179H648Q764 1186 849 1269Q940 1359 940 1489V1499H1082V1491Q1082 1303 949 1172Q913 1135 873 1110ZM648 1040H610Q493 1034 408 950Q317 861 317.0 731.0Q317 601 408.5 516.0Q500 431 630 431Q757 431 848.5 516.0Q940 601 940.0 731.0Q940 861 849 950Q764 1034 648 1040Z"/>
+<path fill="currentColor" transform="translate(176.24 114.64) scale(0.03027 -0.03027)" d="M782 262Q782 205 821.5 166.0Q861 127 917 127Q972 127 1011.5 166.0Q1051 205 1051 262Q1051 317 1012.0 356.5Q973 396 917.0 396.0Q861 396 821.5 356.5Q782 317 782 262ZM993 511Q1054 493 1102 445Q1178 369 1178.0 261.0Q1178 153 1102.0 76.5Q1026 0 917 0Q810 0 733.5 76.5Q657 153 657.0 261.0Q657 369 733 445Q780 494 842 511V907H554V470H248V621H403V1344H248V1496H554V1058H842V1496H993V1058H1281V1496H1586V1344H1433V621H1586V470H1281V907H993Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Mercury trine Uranus</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  120°</text>
+</svg>

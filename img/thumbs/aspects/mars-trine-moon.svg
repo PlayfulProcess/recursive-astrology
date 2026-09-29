@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Moon trine Mars" color="#4a4439">
+<title>Moon trine Mars</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<polygon points="128,78 114.14,102 141.86,102" fill="none" stroke="#3f7a5c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(15.67 114.63) scale(0.03027 -0.03027)" d="M894 1495Q1289 1495 1561 1118Q1667 945 1667 747Q1667 355 1271 98Q1092 0 916 0H867Q820 0 739 15V21Q1016 100 1141 277Q1296 479 1296 747Q1296 1147 962 1371Q826 1451 733 1467V1470Q733 1481 882 1495ZM922 1433V1430Q1379 1233 1379 741Q1379 339 1042 107L999 83V79H1005Q1091 79 1249 162Q1482 314 1564 558Q1593 651 1593 744V753Q1593 1070 1246 1331Q1083 1433 925 1433Z"/>
+<path fill="currentColor" transform="translate(175.8 113.89) scale(0.03027 -0.03027)" d="M737 918Q573 918 457.5 804.0Q342 690 342.0 526.0Q342 362 457.5 254.0Q573 146 737 146Q898 146 1015.0 254.0Q1132 362 1132.0 526.0Q1132 690 1015.0 804.0Q898 918 737 918ZM1149 135Q981 -29 737 -29Q502 -29 332.0 129.5Q162 288 162.0 526.0Q162 764 334.5 934.5Q507 1105 737 1096Q965 1088 1077 985L1438 1333H1067L1207 1475H1701V983L1558 840V1213L1200 865Q1312 719 1312 526Q1312 294 1149 135Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Moon trine Mars</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  120°</text>
+</svg>

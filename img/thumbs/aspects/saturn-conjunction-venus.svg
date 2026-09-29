@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Venus conjunction Saturn" color="#4a4439">
+<title>Venus conjunction Saturn</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c8932f" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c8932f" stroke-width="3" stroke-linecap="round"/>
+<circle cx="124" cy="97" r="9" fill="none" stroke="#c8932f" stroke-width="3.2"/>
+<line x1="130.36" y1="90.64" x2="141.68" y2="79.32" stroke="#c8932f" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(29.29 110.78) scale(0.03027 -0.03027)" d="M750 1319Q586 1319 470.5 1205.0Q355 1091 355 927Q355 764 470.5 656.0Q586 548 750 548Q911 548 1028.0 656.0Q1145 764 1145 927Q1145 1091 1028.0 1205.0Q911 1319 750 1319ZM344 532Q175 689 175 927Q175 1166 343.0 1332.0Q511 1498 750 1498Q986 1498 1155.5 1332.0Q1325 1166 1325.0 927.0Q1325 688 1156 532Q1020 406 840 388V124H1112V0H840V-257H660V0H388V124H660V389Q479 406 344 532Z"/>
+<path fill="currentColor" transform="translate(176.24 114.64) scale(0.03027 -0.03027)" d="M554 1165H448V1316H554V1496H706V1316H884V1165H706V778Q817 887 969 887Q1147 887 1266.5 758.0Q1386 629 1386 442Q1386 352 1316.0 237.5Q1246 123 1246 2V0H1095Q1095 132 1165.5 251.0Q1236 370 1236 442Q1236 565 1158.5 649.5Q1081 734 970 734Q860 734 783.0 649.0Q706 564 706 442V0H554Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="19" font-weight="600" fill="#221f1a">Venus conjunction Saturn</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  0°</text>
+</svg>

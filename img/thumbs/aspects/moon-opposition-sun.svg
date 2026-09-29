@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sun opposition Moon" color="#4a4439">
+<title>Sun opposition Moon</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<circle cx="119.51" cy="100.49" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<circle cx="136.49" cy="83.51" r="5.6" fill="none" stroke="#c0473b" stroke-width="3.2"/>
+<line x1="123.47" y1="96.53" x2="132.53" y2="87.47" stroke="#c0473b" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(24.21 114.64) scale(0.03027 -0.03027)" d="M1666 748Q1666 437 1447.0 218.5Q1228 0 917 0Q608 0 389.0 218.5Q170 437 170 748Q170 942 270.5 1122.5Q371 1303 551.0 1399.5Q731 1496 917 1496Q1106 1496 1286.0 1399.5Q1466 1303 1566.0 1123.5Q1666 944 1666 748ZM243 748Q243 468 440.0 271.5Q637 75 917.0 75.0Q1197 75 1394.0 271.5Q1591 468 1591 748Q1591 925 1501.0 1086.0Q1411 1247 1249.0 1334.0Q1087 1421 917.0 1421.0Q747 1421 585.0 1334.0Q423 1247 333.0 1086.0Q243 925 243 748ZM1105 748Q1105 670 1050.5 615.5Q996 561 918 561Q841 561 786.0 615.5Q731 670 731 748Q731 797 756.0 842.0Q781 887 826.0 911.0Q871 935 918.0 935.0Q965 935 1010.0 911.0Q1055 887 1080.0 842.0Q1105 797 1105 748Z"/>
+<path fill="currentColor" transform="translate(167.67 114.63) scale(0.03027 -0.03027)" d="M894 1495Q1289 1495 1561 1118Q1667 945 1667 747Q1667 355 1271 98Q1092 0 916 0H867Q820 0 739 15V21Q1016 100 1141 277Q1296 479 1296 747Q1296 1147 962 1371Q826 1451 733 1467V1470Q733 1481 882 1495ZM922 1433V1430Q1379 1233 1379 741Q1379 339 1042 107L999 83V79H1005Q1091 79 1249 162Q1482 314 1564 558Q1593 651 1593 744V753Q1593 1070 1246 1331Q1083 1433 925 1433Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Sun opposition Moon</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  180°</text>
+</svg>
