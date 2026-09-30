@@ -115,10 +115,9 @@ ENTRIES = [
          date='2026-07-16', place='Brooklyn, New York City', lat=40.7042, lon=-73.9867,
          place_basis='convention', rating=None,
          source_url='https://huggingface.co/blog/security-incident-july-2026',
-         note='The first public report: Hugging Face\'s "Security incident disclosure - July 2026", '
-              'published July 16, 2026 (the same date is given in the Ezra Klein Show, Aug 18 2026, and '
-              'in the Dwarkesh Podcast with Ajeya Cotra, Sep 1 2026). No time is documented: a noon chart '
-              'for New York City, where Hugging Face is based.'),
+         note='The first public report: Hugging Face\'s security incident disclosure for July 2026, '
+              'published July 16, 2026. No time is documented: a noon chart for New York City, where '
+              'Hugging Face is based.'),
     dict(id='eu-ai-act-in-force', group='event', label='The EU AI Act enters into force',
          date='2024-08-01', place='Brussels, Belgium', lat=50.8503, lon=4.3517,
          place_basis='convention', rating=None,
@@ -131,9 +130,8 @@ ENTRIES = [
          date='1946-06-14', local='10:54', zone=-4, place='Jamaica Hospital, Queens, New York',
          lat=40.7, lon=-73.8164, place_basis='documented', rating='AA',
          source_url='https://www.astro.com/astro-databank/Trump,_Donald',
-         note='Astro-Databank: 10:54 EDT, rated AA (birth certificate). Its notes advise some caution, '
-              'since the certificate was posted online by Trump himself, though there is no evidence it '
-              "was altered. The Ascendant falls on the Leo-Virgo line: Astro-Databank gives 29°58' Leo, this "
+         note='Astro-Databank: 10:54 EDT, rated AA (birth certificate). '
+              "The Ascendant falls on the Leo-Virgo line: Astro-Databank gives 29°58' Leo, this "
               "engine 0°00' Virgo, so at this precision the rising sign is uncertain."),
     dict(id='elon-musk', group='public-figure', label='Elon Musk',
          date='1971-06-28', local='07:30', zone=2, place='Pretoria, South Africa',
@@ -170,8 +168,8 @@ ENTRIES = [
          date='1963-02-17', place='Taipei, Taiwan', lat=25.0330, lon=121.5654,
          place_basis='documented', rating=None,
          source_url='https://en.wikipedia.org/wiki/Jensen_Huang',
-         note='Date and place from Wikipedia (citing Witt 2025 and Kim 2024; he moved to Tainan as a '
-              'child). No Astro-Databank entry was found and no birth time is documented.'),
+         note='Date and place from Wikipedia (he moved to Tainan as a child). No Astro-Databank entry '
+              'was found and no birth time is documented.'),
 ]
 
 # Asked for, and deliberately not charted (reported by the build, not written to the file).

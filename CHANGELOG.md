@@ -20,6 +20,11 @@
   person; nothing on this page predicts anything about anyone"; for an event, "The sky at this event,
   read as the schools would read any moment", each with its date, place, source link and note. Today
   and the Book's season are left out for public charts, and say why.
+- **An order that ranks no one**: the menu lists AI events by date and public figures by surname. A
+  person with no Astro-Databank entry says so ("no Rodden rating", and where the date came from)
+  instead of showing no rating. Three data notes were trimmed to their sources: the Hugging Face
+  note cites only the disclosure itself, one person's note keeps only the rating's basis and the
+  Ascendant caveat, and another's drops two secondary citations.
 - **Time unknown**: no houses, Ascendant or Midheaven on the wheel, and every house-based reading is
   left out (house tenancy and ownership, the house picker, the houses chapter, the first planet below
   the horizon), with a note saying why. The Moon is marked approximate, with its span over the day.

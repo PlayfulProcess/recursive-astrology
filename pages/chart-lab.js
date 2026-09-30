@@ -438,10 +438,14 @@
     integrity: 'sha384-WgXwGL6fUsYJWNaKJgVbrJKGRQwc1vieh2oy4kw9nXqpNDz3tdSsqEYUgeHD/NuF' };
   // Astro-Databank's Rodden ratings, in a few words
   const RATING = { AA: 'a birth record', A: 'from memory', B: 'a biography', C: 'no source given', DD: 'conflicting sources', X: 'no time recorded', XX: 'date in question' };
-  const ratingText = c => c.rating ? `Astro-Databank rating ${c.rating}${RATING[c.rating] ? ': ' + RATING[c.rating] : ''}` : 'no Astro-Databank rating';
-  const ratingShort = c => c.rating ? `Astro-Databank ${c.rating}` : 'no Astro-Databank rating';
+  // a person with no Astro-Databank entry says so, and where the date came from, rather than showing no rating at all
+  const ratingText = c => c.rating ? `Astro-Databank rating ${c.rating}${RATING[c.rating] ? ': ' + RATING[c.rating] : ''}`
+    : `no Astro-Databank entry, so no Rodden rating; date and place from ${hostOf(c.source_url)}${c.time_known ? '' : ', no birth time'}`;
+  const ratingShort = c => c.rating ? `Astro-Databank ${c.rating}` : 'no Rodden rating';
   const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'source'; } };
   const yearOf = c => (/\b(\d{4})\b/.exec(c.date_label || '') || [])[1] || '';
+  const dayOf = c => { const m = /(\d{1,2}) ([A-Za-z]+) (\d{4})/.exec(c.date_label || ''); const t = m ? Date.parse(`${m[2]} ${m[1]}, ${m[3]} UTC`) : NaN; return isNaN(t) ? Infinity : t; };
+  const surname = c => String(c.label || '').trim().split(/\s+/).pop();
   const pubLabel = c => c.group === 'event' ? `${c.label} (${yearOf(c)}${c.time_known ? '' : ', time unknown'})` : `${c.label}${c.time_known ? '' : ' (no birth time)'}`;
   const isEvent = () => !!(S.pub && S.pub.group === 'event');
   const momentWord = () => isEvent() ? 'at this moment' : 'at birth';
@@ -587,7 +591,9 @@
       groups.push(`<optgroup label="Your saved charts${a.stub ? ' (stub: invented rows)' : ''}">${inner}</optgroup>`);
     }
     const pub = S.publicCharts || [];
-    const ev = pub.filter(c => c.group === 'event'), pf = pub.filter(c => c.group === 'public-figure');
+    // events by date, people by surname: an order that ranks no one
+    const ev = pub.filter(c => c.group === 'event').sort((a, b) => dayOf(a) - dayOf(b));
+    const pf = pub.filter(c => c.group === 'public-figure').sort((a, b) => surname(a).localeCompare(surname(b)) || a.label.localeCompare(b.label));
     if (ev.length) groups.push(`<optgroup label="AI events">${ev.map(c => opt('public:' + c.id, pubLabel(c))).join('')}</optgroup>`);
     if (pf.length) groups.push(`<optgroup label="Public figures">${pf.map(c => opt('public:' + c.id, pubLabel(c))).join('')}</optgroup>`);
     groups.push(`<optgroup label="Example (invented)">${opt('example', 'An invented example chart (not a person)')}</optgroup>`);
