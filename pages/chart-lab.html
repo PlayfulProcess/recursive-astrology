@@ -17,19 +17,33 @@
   <header class="lab-hero">
     <div class="kicker">Chart lab <span class="mock">a mock-up</span></div>
     <h1>A chart, through the schools</h1>
+    <!-- The chart dropdown (Sep 30 2026): your saved charts (signed in on recursive.eco), public
+         AI events and public figures (mock-data/public-charts.json), the invented example, and on
+         localhost the owner's local files. The choice lives in the address as ?chart=saved:<id> |
+         public:<id> | example | local; a saved chart travels only as its id (RLS-protected), never
+         as birth data. See chart-lab.js, "the chart dropdown". -->
+    <div class="chart-bar no-print">
+      <label for="chartSel">Chart</label>
+      <select id="chartSel" aria-describedby="chartSelNote"><option>Loading…</option></select>
+      <span class="cb-note" id="chartSelNote" aria-live="polite"></span>
+    </div>
+    <div class="pub-banner" id="pubBanner" role="note" hidden></div>
     <p class="creed">Read the sky to know yourself, not to be told your fate. A chart is a mirror and a calendar,
       not a command. Relate to the symbol; never obey it.</p>
     <p class="lede">Every reading here is a possibility: this could mean one thing; it could also mean another;
       what does it mean to you? Each school speaks in its own voice (old books speak in certainties) and carries its
       label and its source. The readings come from this site's own files. Two things reach out, and only when you ask:
       <b>Interpret with AI</b> opens the recursive.eco assistant with a message you see and edit first, and a chart
-      opened from the calculator asks the chart server for its transits (positions only, never birth data).</p>
+      opened from the calculator asks the chart server for its transits (positions only, never birth data).
+      If you are signed in on recursive.eco in this browser, the chart menu also lists your saved charts from your
+      account; one you pick is recomputed by the same chart server, with only its id in the address, never its birth data.</p>
   </header>
 
   <div class="lab-grid">
     <aside class="wheel-col" aria-label="Chart wheel">
       <div class="wheel-card">
         <div class="chart-meta" id="chartMeta">Loading the chart…</div>
+        <div class="time-note" id="timeNote" hidden></div>
         <div class="zrow">
           <div class="seg" id="zodiacSeg" role="group" aria-label="Zodiac">
             <button type="button" data-z="tropical" aria-pressed="true">Tropical</button>
@@ -116,7 +130,7 @@
 
 <script src="../site-footer.js?v=1"></script>
 <site-footer base="../"></site-footer>
-<script src="chart-lab.js?v=3"></script>
+<script src="chart-lab.js?v=4"></script>
 <script src="../assistant.js?v=2" defer></script>
 </body>
 </html>

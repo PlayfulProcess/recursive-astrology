@@ -1,5 +1,37 @@
 # Changelog — The Recursive Astrology
 
+## September 30, 2026 — Chart Lab: the chart dropdown (saved charts, public charts, the example)
+
+- **A chart menu at the top of `pages/chart-lab.html`**, in four groups: "Your saved charts" (only
+  when signed in on recursive.eco), "AI events" and "Public figures" (from
+  `mock-data/public-charts.json`), and "Example (invented)". On localhost the owner's local files stay
+  as a "This laptop" group. The choice lives in the address as `?chart=saved:<id>`, `public:<id>`,
+  `example` or `local`; a saved chart travels only as its id (RLS-protected), never as birth data.
+- **Saved charts with no recursive-eco change.** The page loads `viewer/config.js` and
+  `viewer/assets/js/auth-init.js` as the calculator does and reads the shared `.recursive.eco`
+  sign-in cookie. With no cookie it stops there (a signed-out visitor never loads supabase-js) and
+  offers a sign-in link. Signed in, it loads supabase-js 2.117.2 from jsdelivr (pinned, with an SRI
+  hash), lists the user's `user_documents` rows (tool_slug `birth-chart`, id and name only), reads the
+  picked row (the user's own only), POSTs its birth data to `chart.recursive.eco/api/calculate-chart`
+  (tropical and sidereal) and its positions to `api/transit-timeline` for Today, then computes
+  aspects, figures and the sidereal chart through the same adapter as "Open in Chart Lab".
+- **Public charts carry a banner** that stays on screen: for a person, "A public figure's birth chart,
+  from a public source (its Astro-Databank rating). The schools here read placements, never the
+  person; nothing on this page predicts anything about anyone"; for an event, "The sky at this event,
+  read as the schools would read any moment", each with its date, place, source link and note. Today
+  and the Book's season are left out for public charts, and say why.
+- **Time unknown**: no houses, Ascendant or Midheaven on the wheel, and every house-based reading is
+  left out (house tenancy and ownership, the house picker, the houses chapter, the first planet below
+  the horizon), with a note saying why. The Moon is marked approximate, with its span over the day.
+- **Calculator** (`viewer/astrology-viewer.html`): picking a saved chart from its menu now sets
+  `currentChartId` (only the `?chartId=` link did), and so does saving one. "Open in Chart Lab" on
+  one of your saved charts opens `astro.recursive.eco/pages/chart-lab.html?chart=saved:<id>` (the id
+  only), while the chart on screen still has that row's birth data; any other chart hands over its
+  positions as before.
+- `?stubauth=1` (localhost only, ignored anywhere else) swaps in a stub Supabase client with invented
+  rows, to exercise the saved-charts path off recursive.eco. The live signed-in path is untested
+  until this is on astro.recursive.eco.
+
 ## September 30, 2026 — Chart Lab: curated public charts for the chart dropdown (data only)
 
 - **`mock-data/public-charts.json`**: 15 public charts for the Chart Lab's coming chart dropdown,

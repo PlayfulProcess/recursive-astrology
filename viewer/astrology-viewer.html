@@ -2249,10 +2249,13 @@
                                     <svg class="w-4 h-4" aria-hidden="true"><use href="/viewer/icons.svg#star"/></svg>
                                     Interpret with AI
                                 </button>
-                                <!-- Open in Chart Lab (Sep 29 2026): hands this chart's positions
-                                     (no birth data) to pages/chart-lab.html in a new tab. See
-                                     openInChartLab(). The glyph is the wheel from ICONS.md. -->
-                                <button type="button" id="open-chart-lab-btn" onclick="openInChartLab()" class="px-3 py-1.5 text-xs rounded-lg bg-gray-900/80 border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 transition-all flex items-center gap-1.5" title="Open this chart in Chart Lab, a new tab that reads it through many schools. Only the positions go (planets, angles, house cusps); never the birth date, time or place.">
+                                <!-- Open in Chart Lab (Sep 29 2026): opens this chart in
+                                     pages/chart-lab.html in a new tab. A saved chart of yours goes by
+                                     its id only (Sep 30 2026: ?chart=saved:<id>, and Chart Lab reads
+                                     it from your account); any other chart hands over its positions
+                                     (no birth data). See openInChartLab(). The glyph is the wheel
+                                     from ICONS.md. -->
+                                <button type="button" id="open-chart-lab-btn" onclick="openInChartLab()" class="px-3 py-1.5 text-xs rounded-lg bg-gray-900/80 border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 transition-all flex items-center gap-1.5" title="Open this chart in Chart Lab, a new tab that reads it through many schools. A saved chart of yours opens by its id only (Chart Lab reads it from your account); any other chart sends only its positions (planets, angles, house cusps). Never the birth date, time or place in the address.">
                                     <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
                                     Open in Chart Lab
                                 </button>
@@ -3076,6 +3079,10 @@
         let selectedTransits = new Map(); // key = "transit-planet-natal-planet", value = transit aspect data
         let selectedTransitPlanets = new Map(); // key = "transit-position-planet", value = planet position data
         let currentChartId = null;
+        // The saved chart on screen (Sep 30 2026), for "Open in Chart Lab": set when one of the
+        // user's rows is loaded or saved; { id, own, birthKey }. The chart on screen is still that
+        // saved chart only while its birth data matches (a new calculation from the form replaces it).
+        let savedChartOnScreen = null;
 
         // Clear all selections on load — start fresh each session
         // Previous behavior restored stale selections from localStorage, but the parent
@@ -7375,6 +7382,9 @@
         // (a tab opened from this one starts with a copy). A one-time nonce in
         // the link ties the lab to this hand-over and no older one. Nothing
         // runs unless the button is pressed.
+        // Sep 30 2026: when the chart on screen is one of the user's saved charts,
+        // the button opens chart-lab.html?chart=saved:<id> instead (the id only;
+        // see openInChartLab below), and the lab reads that row itself.
         function chartLabUrl() {
             const h = location.hostname;
             if (h === 'localhost' || h === '127.0.0.1' || h === '[::1]') {
@@ -7409,7 +7419,31 @@
                 cusps: a.houses.map(h => h.cusp)
             };
         }
+        // A saved chart of the user's own goes by its id only (Sep 30 2026): Chart Lab lists and reads
+        // the user's rows itself, under RLS, on the shared .recursive.eco sign-in, so nothing but the
+        // id travels and the link survives a reload. Only while the chart on screen IS that saved
+        // chart: same birth data (a zodiac or house-system switch keeps it; a new date does not).
+        function birthKeyOf(b) {
+            if (!b) return '';
+            return [String(b.date || ''), String(b.time || ''), (+b.latitude).toFixed(4), (+b.longitude).toFixed(4)].join('|');
+        }
+        function chartLabSavedUrl(id) {
+            const q = 'chart=saved:' + encodeURIComponent(id);
+            const h = location.hostname;
+            if (h === 'localhost' || h === '127.0.0.1' || h === '[::1]') {
+                return new URL('../pages/chart-lab.html?' + q, location.href).href;
+            }
+            return 'https://astro.recursive.eco/pages/chart-lab.html?' + q;
+        }
         function openInChartLab() {
+            const s = savedChartOnScreen;
+            if (s && s.own && currentChart && s.id === currentChartId && s.birthKey === birthKeyOf(currentChart.birthData)) {
+                const url = chartLabSavedUrl(s.id);
+                const w = window.open(url, '_blank');
+                if (w) { try { w.opener = null; } catch (e) { /* cross-origin: nothing to clear */ } }
+                else alert('The browser blocked the new tab. Allow pop-ups for this page and try again.');
+                return;
+            }
             const chart = chartForLab();
             if (!chart) {
                 alert('Calculate a chart, or open one of your saved charts, first.');
@@ -7801,6 +7835,11 @@
             // Close the dropdown
             document.getElementById('saved-charts-menu').classList.remove('open');
 
+            // The picked chart is now the current one (Sep 30 2026). Only the ?chartId= URL path used
+            // to set this, so after a pick from this menu anything reading currentChartId (Open in
+            // Chart Lab, Interpret with AI, the selection store) still pointed at the old chart, or none.
+            currentChartId = chartId;
+
             // Use existing loadChartFromDatabase function
             await loadChartFromDatabase(chartId);
         }
@@ -7872,6 +7911,9 @@
                 // Update URL with chart ID
                 const newUrl = `${window.location.pathname}?chartId=${data.id}`;
                 window.history.pushState({}, '', newUrl);
+                // The new row is now the current chart (Sep 30 2026), as the URL says.
+                currentChartId = data.id;
+                savedChartOnScreen = { id: data.id, own: true, birthKey: birthKeyOf(documentData.birthData) };
 
             } catch (error) {
                 console.error('Save error:', error);
@@ -8167,6 +8209,12 @@
                 } finally {
                     isLoadingFromDatabase = false;
                 }
+                // For "Open in Chart Lab": this saved row is what is on screen now.
+                savedChartOnScreen = {
+                    id: chartId,
+                    own: !!currentUser && data.user_id === currentUser.id,
+                    birthKey: birthKeyOf(docData.birthData)
+                };
 
             } catch (error) {
                 if (error.name === 'AbortError') return; // Aborted by a newer calculation

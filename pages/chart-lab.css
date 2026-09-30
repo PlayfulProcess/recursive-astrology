@@ -22,6 +22,23 @@ button, select, input { font-family: inherit; }
   border-left: 3px solid var(--accent); padding: 2px 0 2px 12px; max-width: 78ch; }
 .lede { font-size: 14px; color: var(--mut); margin: 6px 0 0; max-width: 84ch; }
 
+/* ── the chart dropdown + the public-chart banner ─────── */
+.chart-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 8px 0 10px; }
+.chart-bar label { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--mut); }
+.chart-bar select { font-size: 14px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
+  color: var(--ink); max-width: 100%; min-width: 0; flex: 0 1 420px; }
+.chart-bar select:focus { outline: 2px solid var(--chip); border-color: var(--accent); }
+.cb-note { font-size: 12.5px; color: var(--mut); flex: 1 1 260px; min-width: 0; overflow-wrap: anywhere; }
+.pub-banner { background: var(--panel2); border: 1px solid var(--line); border-left: 4px solid var(--later); border-radius: 0 10px 10px 0;
+  padding: 8px 12px; margin: 0 0 12px; font-size: 13.5px; color: var(--ink-soft); max-width: 96ch; }
+.pub-banner p { margin: 0 0 4px; }
+.pub-banner p:last-child { margin-bottom: 0; }
+.pub-banner .pb-head { color: var(--ink); }
+.pub-banner .pb-src { font-size: 12.5px; color: var(--mut); overflow-wrap: anywhere; }
+.pub-banner .pb-time { font-size: 12.5px; }
+.time-note { font-size: 12px; color: var(--ink-soft); background: var(--panel2); border: 1px dashed var(--line-soft); border-radius: 8px;
+  padding: 5px 9px; margin: 0 0 8px; }
+
 /* ── two-column grid: the wheel stays in view while reading ─ */
 .lab-grid { display: grid; grid-template-columns: minmax(300px, 400px) minmax(0, 1fr); gap: 22px; align-items: start; }
 .wheel-col { position: sticky; top: 70px; }

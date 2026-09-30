@@ -17,6 +17,21 @@
    itself: aspects, figures, the sidereal chart, rulers and chains, and, if the chart server answers,
    90 days of transits (api/transit-timeline, sent the same positions).
 
+   The chart dropdown (Sep 30 2026), reflected in ?chart=:
+     saved:<id>   one of your saved charts on recursive.eco (user_documents, tool_slug birth-chart). Signed
+                  in on the shared .recursive.eco cookie, the page loads supabase-js (pinned), viewer/config.js
+                  and viewer/assets/js/auth-init.js as the calculator does, lists your rows (id and name only),
+                  reads the picked row under RLS, and POSTs its birth data to chart.recursive.eco
+                  api/calculate-chart (tropical and sidereal), then api/transit-timeline (positions only) for
+                  Today. Only the id is ever in the URL. No recursive-eco change.
+     public:<id>  mock-data/public-charts.json: AI events and public figures, each with its source and, for
+                  people, the Astro-Databank rating. A chart with no documented time has no houses, Ascendant
+                  or Midheaven, and the page leaves out every reading that needs them, and says why. Today is
+                  left out for public charts: nothing here forecasts anything about anyone.
+     example      the invented example.   local   (localhost only) the owner's local files, as before.
+   ?stubauth=1 (localhost only, ignored elsewhere): a stub Supabase client with invented rows, to exercise
+   the saved-charts code path off recursive.eco.
+
    Two ways out, both only on a click: "Interpret with AI" opens the shared recursive.eco assistant
    (../assistant.js) with a message the reader previews and edits first, and nothing is sent until they
    tap Send there; "Ask the assistant to build my grammar" does the same with a request for a PRIVATE
@@ -130,7 +145,8 @@
     for (const k of (raw.order || Object.keys(raw.points))) {
       const p = raw.points[k]; if (!p) continue;
       pts[k] = { key: k, name: p.name || NAME[k], lon: +p.longitude, sign: p.sign, deg: p.degreeInSign, pos: p.position, house: p.house,
-        retro: !!p.retrograde, speed: p.speedDegPerDay, nak: p.nakshatra || null, placidusHouse: p.placidusHouse };
+        retro: !!p.retrograde, speed: p.speedDegPerDay, nak: p.nakshatra || null, placidusHouse: p.placidusHouse,
+        approx: !!p.approximate, dayRange: Array.isArray(p.dayRange) ? p.dayRange : null };
     }
     const A = raw.angles || {};
     const ang = a => a ? { lon: +a.longitude, sign: a.sign, pos: a.position, nak: a.nakshatra || null } : null;
@@ -264,7 +280,7 @@
       figs.push({ type: 'stellium', scope: 'house', where: +h, members: ms, allPlanets: true, note: '3+ planets; some traditions ask 4+' });
     return figs;
   }
-  const ORB_NOTE = "Computed in this page from the positions the calculator handed over. Planet-to-planet orbs are the recursive-astrology engine's own (api/calculate_chart.py): 8° (sextile 6°); when either member is Chiron, a node, the Ascendant or the Midheaven, 5° (sextile 3°). The South Node takes conjunctions only. Ascendant-Midheaven is the frame, not an aspect. Applying or separating is shown only where speeds are known.";
+  const ORB_NOTE = "Computed in this page from the chart's positions (handed over by the calculator, or recomputed from a saved chart by the chart server). Planet-to-planet orbs are the recursive-astrology engine's own (api/calculate_chart.py): 8° (sextile 6°); when either member is Chiron, a node, the Ascendant or the Midheaven, 5° (sextile 3°). The South Node takes conjunctions only. Ascendant-Midheaven is the frame, not an aspect. Applying or separating is shown only where speeds are known.";
   // one zodiac's chart, in the shape normChart reads (the same shape as mock-data/example-chart.json)
   function rawFromLongitudes({ lons, retro, speeds, cusps, zodiac, houseSystem, ayan, housesNote, placidusOf }) {
     const houseOf = lon => {
@@ -410,6 +426,202 @@
       days: dates.map((date, i) => ({ date, top3: byDay[i].sort((a, b) => b.score - a.score).slice(0, 6), events: evs[i] })),
       computed: true,
     };
+  }
+
+  // ───────────────────────── the chart dropdown: public charts, your saved charts ─────────────────────────
+  const ON_LOCALHOST = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  const ON_RECURSIVE = /(^|\.)recursive\.eco$/.test(location.hostname);
+  const CHART_API = () => (ON_LOCALHOST ? '' : 'https://chart.recursive.eco') + '/api/calculate-chart';
+  const SIGN_IN_URL = 'https://flow.recursive.eco/?signin=1';
+  // supabase-js, pinned with its SRI hash (the calculator loads @2, which resolved to 2.117.2 on Sep 30 2026)
+  const SUPABASE_JS = { src: 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.min.js',
+    integrity: 'sha384-WgXwGL6fUsYJWNaKJgVbrJKGRQwc1vieh2oy4kw9nXqpNDz3tdSsqEYUgeHD/NuF' };
+  // Astro-Databank's Rodden ratings, in a few words
+  const RATING = { AA: 'a birth record', A: 'from memory', B: 'a biography', C: 'no source given', DD: 'conflicting sources', X: 'no time recorded', XX: 'date in question' };
+  const ratingText = c => c.rating ? `Astro-Databank rating ${c.rating}${RATING[c.rating] ? ': ' + RATING[c.rating] : ''}` : 'no Astro-Databank rating';
+  const ratingShort = c => c.rating ? `Astro-Databank ${c.rating}` : 'no Astro-Databank rating';
+  const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'source'; } };
+  const yearOf = c => (/\b(\d{4})\b/.exec(c.date_label || '') || [])[1] || '';
+  const pubLabel = c => c.group === 'event' ? `${c.label} (${yearOf(c)}${c.time_known ? '' : ', time unknown'})` : `${c.label}${c.time_known ? '' : ' (no birth time)'}`;
+  const isEvent = () => !!(S.pub && S.pub.group === 'event');
+  const momentWord = () => isEvent() ? 'at this moment' : 'at birth';
+  const hasHouses = (ch = CH) => !!(ch && ch.houses && ch.houses.length === 12);
+  const inHouse = p => (p && p.house ? `, house ${p.house}` : '');
+  const hsName = (ch = CH) => String((ch && ch.houseSystem) || 'placidus').replace(/-house$/, '');   // 'equal-house' -> 'equal'
+  // ?chart= : saved:<id> | public:<id> | example | local | viewer
+  function parseChartParam(v) {
+    const s = String(v || ''); let m;
+    if (s === 'example' || s === 'local' || s === 'viewer') return { kind: s };
+    if ((m = /^public:([a-z0-9-]{1,80})$/.exec(s))) return { kind: 'public', id: m[1] };
+    if ((m = /^saved:([0-9a-f-]{8,64})$/i.exec(s))) return { kind: 'saved', id: m[1].toLowerCase() };
+    return { kind: null };
+  }
+  function loadScript(src, attrs = {}) {
+    return new Promise((resolve, reject) => {
+      const s = document.createElement('script'); s.src = src; s.async = false;
+      for (const [k, v] of Object.entries(attrs)) s.setAttribute(k, v);
+      s.onload = () => resolve(); s.onerror = () => reject(new Error('could not load ' + src));
+      document.head.appendChild(s);
+    });
+  }
+  // Sign-in, the calculator's way: viewer/config.js + viewer/assets/js/auth-init.js, whose client keeps its session
+  // in the shared cookie (recursive-eco-auth on .recursive.eco). With no such cookie there is no session, so a
+  // signed-out visitor never loads supabase-js. Resolves to { state: 'in' | 'out' | 'error', client, user }.
+  async function initAuth(stub) {
+    try {
+      await loadScript('../viewer/config.js');
+      await loadScript('../viewer/assets/js/auth-init.js');
+      const RA = window.RecursiveAuth;
+      if (!RA) return { state: 'error' };
+      if (!stub && !RA.readSessionFromCookies()) return { state: 'out' };
+      await loadScript(SUPABASE_JS.src, { integrity: SUPABASE_JS.integrity, crossorigin: 'anonymous' });
+      if (!(window.supabase && window.supabase.createClient)) return { state: 'error' };
+      const client = stub || RA.init();
+      if (!client) return { state: 'error' };
+      const { data } = await client.auth.getSession();
+      const user = data && data.session && data.session.user;
+      return user ? { state: 'in', client, user, stub: !!stub } : { state: 'out' };
+    } catch (e) { return { state: 'error', error: String((e && e.message) || e) }; }
+  }
+  // your charts: the calculator's own query (user_documents, tool_slug birth-chart), id and name only for the list
+  async function listSaved(auth) {
+    const { data, error } = await auth.client.from('user_documents').select('id, name:document_data->>name, created_at')
+      .eq('user_id', auth.user.id).eq('tool_slug', 'birth-chart').order('created_at', { ascending: false });
+    if (error) throw error;
+    return (data || []).map(r => ({ id: String(r.id), name: r.name || 'Unnamed chart' }));
+  }
+  // one chart, under RLS, and only your own (RLS would also show someone else's public chart)
+  async function readSaved(auth, id) {
+    const { data, error } = await auth.client.from('user_documents').select('id, user_id, document_data')
+      .eq('id', id).eq('tool_slug', 'birth-chart').eq('user_id', auth.user.id).maybeSingle();
+    if (error) throw error;
+    return data || null;
+  }
+  const AYANAMSAS = ['lahiri', 'fagan-bradley'];
+  // POST the saved birth data to the chart server, as the calculator does (the body goes in a POST, never a URL)
+  async function calcAt(b, st, zodiac) {
+    const dm = /^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(String(b.date || '')), tm = /^(\d{1,2}):(\d{2})/.exec(String(b.time || ''));
+    if (!dm || !tm) throw new Error('this saved chart has no date or time the chart server can read');
+    const ay = AYANAMSAS.includes(st.ayanamsaUsed) ? st.ayanamsaUsed : AYANAMSAS.includes(st.ayanamsa) ? st.ayanamsa : 'lahiri';
+    const r = await fetch(CHART_API(), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+      year: +dm[1], month: +dm[2], day: +dm[3], hour: +tm[1], minute: +tm[2], latitude: +b.latitude, longitude: +b.longitude,
+      houseSystem: st.houseSystem || 'placidus', zodiac, ayanamsa: ay }) });
+    if (!r.ok) throw new Error('the chart server answered ' + r.status);
+    return r.json();
+  }
+  // a saved row -> { tropical, sidereal }: the engine's tropical positions and the sidereal cast's ayanamsa go through
+  // the same adapter as the calculator's hand-over, so aspects, figures and the sidereal chart come out the same way
+  async function chartsFromSaved(doc) {
+    const b = doc.birthData || {}, st = doc.settings || {};
+    const [T, D] = await Promise.all([calcAt(b, st, 'tropical'), calcAt(b, st, 'sidereal')]);
+    const ts = T.settings || {}, ds = D.settings || {}, A = T.angles || {};
+    const points = {};
+    for (const [k, p] of Object.entries(T.planets || {})) {
+      if (!p || typeof p.longitude !== 'number') continue;
+      points[k] = { longitude: p.longitude, retrograde: !!p.isRetrograde };
+      if (typeof p.speedLongitude === 'number') points[k].speed = p.speedLongitude;
+    }
+    return chartsFromHandoff({ kind: HANDOFF_KIND, v: 1, zodiac: 'tropical', houseSystem: ts.houseSystemActual || ts.houseSystem || st.houseSystem || 'placidus',
+      ayanamsa: typeof ds.ayanamsaDegrees === 'number' ? { name: ds.ayanamsaUsed || 'lahiri', label: ds.ayanamsaLabel || null, degrees: ds.ayanamsaDegrees } : null,
+      points, angles: { ascendant: A.ascendant && A.ascendant.longitude, midheaven: A.midheaven && A.midheaven.longitude },
+      cusps: (T.houses || []).map(h => h.cusp) });
+  }
+  // ?stubauth=1, localhost only (ignored anywhere else): a stand-in for the Supabase client, with invented rows
+  // (never a real person's data), so the saved-charts path (sign-in, list, read, recompute, Today) can be exercised
+  // off recursive.eco. It answers the same calls the real client gets, and filters rows the way RLS would.
+  function stubClient() {
+    const me = { id: '00000000-0000-4000-8000-0000000000aa' };
+    const row = (n, user, name, birthData, settings, extra) => Object.assign({ id: '00000000-0000-4000-8000-00000000000' + n, user_id: user,
+      tool_slug: 'birth-chart', is_public: false, created_at: `2026-09-2${n}T12:00:00Z`, document_data: { name, birthData, settings } }, extra || {});
+    const rows = [
+      row(1, me.id, 'Invented test chart A (Greenwich, noon)', { date: '2000-01-01', time: '12:00', latitude: 51.4779, longitude: -0.0015, location: 'Royal Observatory, Greenwich' },
+        { houseSystem: 'placidus', zodiacSystem: 'tropical', ayanamsa: 'lahiri' }),
+      row(2, me.id, 'Invented test chart B (sidereal, Fagan-Bradley)', { date: '1990-07-15', time: '06:30', latitude: -33.8688, longitude: 151.2093, location: 'Sydney' },
+        { houseSystem: 'equal-house', zodiacSystem: 'sidereal', ayanamsa: 'fagan-bradley' }),
+      row(3, 'someone-else', 'Invented public chart of another account', { date: '1980-03-03', time: '03:03', latitude: 0, longitude: 0, location: 'Null Island' },
+        { houseSystem: 'placidus', zodiacSystem: 'tropical' }, { is_public: true }),
+    ];
+    const project = (r, sel) => {
+      if (sel === '*') return JSON.parse(JSON.stringify(r));
+      const out = {};
+      for (const part of sel.split(',').map(x => x.trim()).filter(Boolean)) {
+        const m = /^(?:(\w+):)?(\w+)(?:->>(\w+))?$/.exec(part); if (!m) continue;
+        out[m[1] || m[3] || m[2]] = m[3] ? (r[m[2]] || {})[m[3]] : r[m[2]];
+      }
+      return JSON.parse(JSON.stringify(out));
+    };
+    const query = () => {
+      const q = { sel: '*', f: [], ord: null };
+      const run = () => {
+        let rs = rows.filter(r => r.user_id === me.id || r.is_public);
+        for (const [c, v] of q.f) rs = rs.filter(r => r[c] === v);
+        if (q.ord) rs.sort((a, b) => (a[q.ord[0]] < b[q.ord[0]] ? -1 : 1) * q.ord[1]);
+        return rs.map(r => project(r, q.sel));
+      };
+      const later = x => new Promise(res => setTimeout(() => res(x), 120));
+      const api = {
+        select(s) { q.sel = s; return api; },
+        eq(c, v) { q.f.push([c, v]); return api; },
+        order(c, o) { q.ord = [c, o && o.ascending === false ? -1 : 1]; return api; },
+        maybeSingle() { const rs = run(); return later(rs.length > 1 ? { data: null, error: { message: 'more than one row' } } : { data: rs[0] || null, error: null }); },
+        then(ok, bad) { return later({ data: run(), error: null }).then(ok, bad); },
+      };
+      return api;
+    };
+    return { stub: true, auth: { getSession: () => Promise.resolve({ data: { session: { user: me } }, error: null }) },
+      from: t => { if (t !== 'user_documents') throw new Error('stub: only user_documents'); return query(); } };
+  }
+  function renderChartPicker() {
+    const sel = $('#chartSel'); if (!sel) return;
+    const cur = S.pickValue || '';
+    const opt = (v, label, extra = '') => `<option value="${esc(v)}"${v === cur ? ' selected' : ''}${extra}>${esc(label)}</option>`;
+    const groups = [];
+    if (S.source === 'viewer') groups.push(`<optgroup label="From the calculator">${opt('viewer', 'The chart handed over (this tab only)')}</optgroup>`);
+    if (S.localAvailable) groups.push(`<optgroup label="This laptop">${opt('local', 'My chart (local files, never committed)')}</optgroup>`);
+    const a = S.auth;
+    if (a && a.state === 'in') {
+      const list = Array.isArray(S.saved) ? S.saved : [];
+      let inner = list.map(r => opt('saved:' + r.id, r.name)).join('');
+      if (cur.startsWith('saved:') && !list.some(r => 'saved:' + r.id === cur)) inner = opt(cur, S.savedName || 'Your saved chart') + inner;
+      if (!inner) inner = opt('', S.savedErr ? 'Could not load your saved charts' : S.saved == null ? 'Loading your saved charts…' : 'No saved charts yet', ' disabled');
+      groups.push(`<optgroup label="Your saved charts${a.stub ? ' (stub: invented rows)' : ''}">${inner}</optgroup>`);
+    }
+    const pub = S.publicCharts || [];
+    const ev = pub.filter(c => c.group === 'event'), pf = pub.filter(c => c.group === 'public-figure');
+    if (ev.length) groups.push(`<optgroup label="AI events">${ev.map(c => opt('public:' + c.id, pubLabel(c))).join('')}</optgroup>`);
+    if (pf.length) groups.push(`<optgroup label="Public figures">${pf.map(c => opt('public:' + c.id, pubLabel(c))).join('')}</optgroup>`);
+    groups.push(`<optgroup label="Example (invented)">${opt('example', 'An invented example chart (not a person)')}</optgroup>`);
+    // until the chart on the wheel is known, say so, rather than let the first option look chosen
+    const known = groups.some(g => g.includes(`value="${esc(cur)}"`));
+    sel.innerHTML = (cur && known ? '' : '<option value="" selected disabled>Loading the chart…</option>') + groups.join('');
+    const note = $('#chartSelNote');
+    if (!a) note.textContent = 'Checking your sign-in on recursive.eco…';
+    else if (a.state === 'in') note.textContent = a.stub ? 'Signed in (stub, localhost only: invented rows, nothing real).' : '';
+    else {
+      const why = a.state === 'error' ? 'Could not check your sign-in. ' : '';
+      const here = ON_RECURSIVE ? '' : ' (sign-in carries only on recursive.eco pages)';
+      note.innerHTML = `${esc(why)}<a href="${esc(SIGN_IN_URL)}" target="_blank" rel="noopener">Sign in on recursive.eco</a> to see your saved charts${esc(here)}.`;
+    }
+  }
+  function renderBanner() {
+    const b = $('#pubBanner'), c = S.pub;
+    if (!b) return;
+    if (!c) { b.hidden = true; b.innerHTML = ''; return; }
+    const head = c.group === 'event'
+      ? '<p class="pb-head"><b>The sky at this event, read as the schools would read any moment.</b></p>'
+      : `<p class="pb-head"><b>A public figure's birth chart, from a public source (${esc(ratingText(c))}).</b> The schools here read placements, never the person; nothing on this page predicts anything about anyone.</p>`;
+    const src = c.source_url ? ` · source: <a href="${esc(c.source_url)}" target="_blank" rel="noopener">${esc(hostOf(c.source_url))} ↗</a>` : '';
+    const time = c.time_known ? '' : `<p class="pb-time"><b>No time is documented</b>, so this chart has no houses, no Ascendant and no Midheaven, and the page leaves out every reading that needs them. The planets are placed at local noon; the Moon is approximate.</p>`;
+    b.innerHTML = `${head}<p class="pb-src">${esc(c.date_label || '')} · ${esc(c.place || '')}${src}. ${esc(c.note || '')}</p>${time}`;
+    b.hidden = false;
+  }
+  function renderTimeNote() {
+    const tn = $('#timeNote'); if (!tn) return;
+    if (hasHouses()) { tn.hidden = true; tn.textContent = ''; return; }
+    const m = CH.pts.moon, signs = m && m.dayRange ? m.dayRange.map(x => SIGNS.find(s => String(x).includes(s))).filter(Boolean) : [];
+    const moonSign = signs.length === 2 && signs[0] !== signs[1] ? ` Over that day the Moon moves from ${signs[0]} into ${signs[1]}, so even its sign is uncertain.` : '';
+    tn.textContent = `${isEvent() ? 'Time' : 'Birth time'} unknown: no houses, no Ascendant or Midheaven, and none of the readings that need them (house placements, house owners, the first planet below the horizon). The planets are placed at local noon. They move little in a day, but the Moon moves 12 to 15 degrees, so its place is approximate.${moonSign}`;
+    tn.hidden = false;
   }
 
   function lonOf(key, ch = CH) {
@@ -669,8 +881,8 @@
           sv('text', { x: gx, y: gy + 1 }, g, gl(it.key));
           if (p.retro && it.key !== 'northnode' && it.key !== 'southnode') sv('text', { x: gx + 11, y: gy + 10, class: 'rx' }, g, 'r');
           g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button');
-          g.setAttribute('aria-label', `${NAME[it.key]}, ${p.pos || p.sign}, house ${p.house}`);
-          sv('title', {}, g, `${NAME[it.key]} · ${p.pos || p.sign} · house ${p.house}${p.retro ? ' · retrograde' : ''}`);
+          g.setAttribute('aria-label', `${NAME[it.key]}, ${p.pos || p.sign}${inHouse(p)}${p.approx ? ', approximate' : ''}`);
+          sv('title', {}, g, `${NAME[it.key]} · ${p.pos || p.sign}${p.house ? ' · house ' + p.house : ''}${p.retro ? ' · retrograde' : ''}${p.approx ? ' · approximate (time unknown)' : ''}`);
           if (this.onPick) {
             g.addEventListener('click', () => this.onPick({ kind: 'planet', key: it.key }));
             g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.onPick({ kind: 'planet', key: it.key }); } });
@@ -861,8 +1073,12 @@
   const TMPL = '<span class="tmpl">(template wording)</span>';
   function planetNote(k, short, ch = CH) {
     const p = ch.pts[k]; if (!p) return '';
-    if (short) return `<div class="possible">This could mean ${esc(FUNC[k] || NAME[k])} working through “${esc(VERB[p.sign] || p.sign)}”, in ${esc(AREA[p.house - 1] || '')};
+    if (short) return `<div class="possible">This could mean ${esc(FUNC[k] || NAME[k])} working through “${esc(VERB[p.sign] || p.sign)}”${p.house ? `, in ${esc(AREA[p.house - 1] || '')}` : ''};
       it could also mean something else. What does it mean to you?${TMPL}</div>`;
+    // no known time: no house to say where
+    if (!p.house) return `<div class="possible">${esc(cap(FUNC[k] || NAME[k]))}, qualified by ${esc(p.sign)} (“${esc(VERB[p.sign] || '')}”). With no known time there is no
+      house to say where. This could mean ${esc(FUNC[k])} working through “${esc(VERB[p.sign] || p.sign)}”; it could also mean something else entirely,
+      and the schools below read it their own ways. What does it mean to you?${TMPL}</div>`;
     return `<div class="possible">${esc(cap(FUNC[k] || NAME[k]))}, qualified by ${esc(p.sign)} (“${esc(VERB[p.sign] || '')}”), lived in the ${ord(p.house)} house
       (${esc(AREA[p.house - 1] || '')}). This could mean ${esc(FUNC[k])} working through “${esc(VERB[p.sign] || p.sign)}” there;
       it could also mean something else entirely, and the schools below read it their own ways. What does it mean to you?${TMPL}</div>`;
@@ -901,20 +1117,26 @@
   }
   function renderMeta() {
     const m = $('#chartMeta');
-    const priv = S.source === 'local';
-    const exLink = priv ? `<a href="${esc(urlWith({ chart: 'example' }))}">show the example instead</a>`
-      : (S.hasLocal ? `<a href="${esc(urlWith({ chart: null }))}">your chart</a>` : '');
-    const failed = S.handoffFailed ? '<span class="pill warn">no chart arrived from the calculator: showing the example</span>' : '';
+    // switching charts is the dropdown's job (at the top); this line says what is on the wheel
+    const failed = S.handoffFailed ? '<span class="pill warn">no chart arrived from the calculator: showing the example</span>'
+      : S.pickFailed ? `<span class="pill warn">${esc(S.pickFailed)}: showing the example</span>` : '';
+    const c = S.pub;
     m.innerHTML = S.source === 'viewer'
-      ? `<b>A chart from the calculator</b><span class="pill private">this tab only · positions, no birth data</span><a href="${esc(urlWith({ chart: 'example', from: null, h: null }))}">show the example instead</a>`
-      : priv
-        ? `<b>Your chart</b><span class="pill private">private · local files, never committed</span>${exLink}`
-        : `${failed}<b>Example chart</b><span class="pill">invented, not a person</span><span>${esc(S.exampleNote)}</span>${exLink}`;
+      ? `<b>A chart from the calculator</b><span class="pill private">this tab only · positions, no birth data</span>`
+      : S.source === 'saved'
+        ? `<b>${esc(S.savedName || 'Your saved chart')}</b><span class="pill private">your saved chart · only its id is in the address</span>`
+        : S.source === 'local'
+          ? `<b>Your chart</b><span class="pill private">private · local files, never committed</span>`
+          : S.source === 'public'
+            ? `<b>${esc(c.label)}</b>${c.group === 'event' ? '<span class="pill">AI event · the sky at a moment</span>'
+              : `<span class="pill">public figure · ${esc(ratingShort(c))}</span><span class="pill">placements, never the person</span>`}${c.time_known ? '' : '<span class="pill warn">time unknown: no houses</span>'}`
+            : `${failed}<b>Example chart</b><span class="pill">invented, not a person</span><span>${esc(S.exampleNote)}</span>`;
+    renderTimeNote();
     const segB = $$('#zodiacSeg button');
     segB.forEach(b => { b.setAttribute('aria-pressed', String(b.dataset.z === S.zodiac)); b.disabled = !S.charts[b.dataset.z]; });
     const zn = $('#zodiacNote');
-    if (S.zodiac === 'sidereal' && CH.ayan) zn.textContent = `${CH.ayan.label || CH.ayan.name}, ${(+CH.ayan.degrees).toFixed(1)}° back · whole-sign houses. Aspects stay; signs move. Each school still reads its own zodiac.`;
-    else zn.textContent = `${cap(CH.houseSystem || 'placidus')} houses. Each school reads its own zodiac (Jyotiṣa sidereal).`;
+    if (S.zodiac === 'sidereal' && CH.ayan) zn.textContent = `${CH.ayan.label || CH.ayan.name}, ${(+CH.ayan.degrees).toFixed(1)}° back · ${hasHouses() ? 'whole-sign houses' : 'no houses (time unknown)'}. Aspects stay; signs move. Each school still reads its own zodiac.`;
+    else zn.textContent = `${hasHouses() ? cap(hsName()) + ' houses' : 'No houses: the time is unknown'}. Each school reads its own zodiac (Jyotiṣa sidereal).`;
   }
 
   // ───────────────────────── URL ─────────────────────────
@@ -1038,7 +1260,7 @@
     const keys = [...ents.planets.map(p => 'planet-' + p), ...ents.signs.map(x => 'sign-' + x.toLowerCase()), ...ents.houses.map(n => 'house-' + n),
       ...ents.aspects.map(a => 'aspect-' + a), ...ents.concepts];
     const ctx = [];
-    for (const p of ents.planets) { const pp = CH.pts[p]; if (pp) { ctx.push('sign-' + pp.sign.toLowerCase(), 'house-' + pp.house); } }
+    for (const p of ents.planets) { const pp = CH.pts[p]; if (pp) { ctx.push('sign-' + pp.sign.toLowerCase()); if (pp.house) ctx.push('house-' + pp.house); } }
     const extra = [];
     if (ents.concepts.includes('concept-rulership')) extra.push('ruler', 'lord', 'domicile');
     if (ents.concepts.includes('concept-night-birth')) extra.push('nocturnal', 'diurnal', 'night', 'day');
@@ -1054,7 +1276,7 @@
       public-domain books, and a few seconds of contemporary talk. Ranking happens here in the page (BM25, a keyword method), grouped by school.</p>
       <form class="askbox" id="askForm" role="search"><input id="askQ" type="search" autocomplete="off" placeholder="Ask about a planet, a sign, a house, a figure…" aria-label="Your question" value="${esc(S.q)}">
       <button type="submit">Ask</button></form>
-      <div class="seeds" aria-label="Questions to start from">${SEEDS.map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join('')}</div>
+      <div class="seeds" aria-label="Questions to start from">${SEEDS.map(q => S.source === 'public' ? q.replace(/\bmy\b/, 'this') : q).map(q => `<button type="button" data-q="${esc(q)}">${esc(q)}</button>`).join('')}</div>
       <div class="notice">On recursive.eco an assistant would compose an answer from these; this mock shows what it would draw on.</div>
       <div id="askOut"></div>`;
     $('#askForm').addEventListener('submit', e => { e.preventDefault(); S.q = $('#askQ').value.trim(); runAsk(); writeURL(); });
@@ -1080,7 +1302,9 @@
     scored.sort((a, b) => b[0] - a[0]);
     // facts from the chart for what the question names
     const facts = [];
-    for (const p of ents.planets) { const pp = CH.pts[p]; if (pp) facts.push(`${PN(p)}: ${esc(pp.pos || pp.sign)}, house ${pp.house}${pp.retro ? ', retrograde' : ''}`); }
+    for (const p of ents.planets) { const pp = CH.pts[p]; if (pp) facts.push(`${PN(p)}: ${esc(pp.pos || pp.sign)}${inHouse(pp)}${pp.retro ? ', retrograde' : ''}${pp.approx ? ', approximate' : ''}`); }
+    if (!hasHouses() && (ents.houses.length || ['concept-ascendant', 'concept-midheaven', 'concept-horizon', 'concept-night-birth'].some(k => ents.concepts.includes(k))))
+      facts.push('No houses, Ascendant or Midheaven here: the time is unknown');
     for (const sg of ents.signs) {
       if (ents.concepts.includes('concept-rulership')) facts.push(`${SG(sg)} ${esc(sg)} is ruled by ${SETS.map(x => `${esc(NAME[rulerOf(sg, x.id)] || rulerOf(sg, x.id))} <small>(${esc(x.short)})</small>`).join(', ')}`);
       const inIt = BODIES.filter(b => CH.pts[b] && CH.pts[b].sign === sg);
@@ -1194,12 +1418,17 @@
     for (const l of labels) if (l.cx != null) s += `<text class="${l.cls}" x="${l.cx.toFixed(1)}" y="${l.prow === 'top' ? 10 : 43}" text-anchor="middle">${esc(l.text)}</text>`;
     return `<span class="p-${esc(span.transiting)}">${s}</svg></span>`;
   }
+  // Today (and the Book's season) lay the day's transits over a chart as a calendar for its owner: left out for public charts
+  const publicNoToday = () => isEvent()
+    ? 'Today lays the day’s transits over a chart as a personal calendar. An event’s chart is read here as the sky of its own moment, so Today is left out for it.'
+    : 'Today lays the day’s transits over a chart as a calendar for its owner. A public figure’s chart is read here for its placements only, so Today is left out: nothing on this page forecasts anything about anyone.';
   function renderToday() {
     const host = $('#modeToday');
     if (!S.transits || !S.transits.days || !S.transits.days.length) {
-      const msg = S.source !== 'viewer' ? 'No transits file for this chart.'
-        : S.transitsPending ? 'Asking the chart server (chart.recursive.eco) for 90 days of transits to this chart’s positions…'
-          : 'The chart server did not answer, so this chart has no transits here. Everything else on the page is computed without it.';
+      const msg = S.source === 'public' ? publicNoToday()
+        : S.source !== 'viewer' && S.source !== 'saved' ? 'No transits file for this chart.'
+          : S.transitsPending ? 'Asking the chart server (chart.recursive.eco) for 90 days of transits to this chart’s positions…'
+            : 'The chart server did not answer, so this chart has no transits here. Everything else on the page is computed without it.';
       host.innerHTML = `<h2>Today</h2><p class="empty">${esc(msg)}</p>`; hl(null, ''); return;
     }
     const days = S.transits.days, d = days[S.dayIdx], win = S.transits.window || {};
@@ -1260,20 +1489,25 @@
     const host = $('#modeLens');
     if (S.sel && S.sel.kind === 'planet' && !CH.pts[S.sel.key]) S.sel = null;
     if (S.sel && S.sel.kind === 'figure' && !CH.figures[S.sel.i]) S.sel = null;
+    if (S.sel && S.sel.kind === 'house' && !houseInfo(S.sel.n)) S.sel = null;
     if (!S.sel) S.sel = CH.figures.length ? { kind: 'figure', i: Math.max(0, CH.figures.findIndex(f => f.type === 'T-square')) } : { kind: 'planet', key: 'sun' };
     const sel = S.sel;
     const pressed = (k, v) => String(sel.kind === k && (sel.key === v || sel.i === v || sel.n === v));
+    // no known time: no houses to pick, and the picker says why
+    const housePick = hasHouses()
+      ? `<select id="houseSel" class="minibtn" aria-label="A house"><option value="">a house…</option>${CH.houses.map(h => `<option value="${h.n}"${sel.kind === 'house' && sel.n === h.n ? ' selected' : ''}>House ${h.n} (${esc(h.sign)})</option>`).join('')}</select>`
+      : '<span class="minibtn" style="cursor:default;color:var(--mut)">no houses: the time is unknown</span>';
     const picker = `<div class="picker" role="group" aria-label="Figures">${CH.figures.map((f, i) => `<button type="button" class="pbtn fig" data-fig="${i}" aria-pressed="${pressed('figure', i)}">${esc(figLabel(f))}</button>`).join('')}
-        <select id="houseSel" class="minibtn" aria-label="A house"><option value="">a house…</option>${CH.houses.map(h => `<option value="${h.n}"${sel.kind === 'house' && sel.n === h.n ? ' selected' : ''}>House ${h.n} (${esc(h.sign)})</option>`).join('')}</select></div>
+        ${housePick}</div>
       <div class="picker" role="group" aria-label="Planets">${BODIES.filter(k => CH.pts[k]).map(k => `<button type="button" class="pbtn p-${k}" data-p="${k}" aria-pressed="${pressed('planet', k)}">${G(k)}<span style="color:var(--ink-soft)">${esc(NAME[k])}</span></button>`).join('')}</div>`;
     let body = '';
     if (sel.kind === 'planet') body = lensPlanet(sel.key);
     else if (sel.kind === 'figure') body = lensFigure(CH.figures[sel.i]);
     else body = lensHouse(sel.n);
-    host.innerHTML = `<h2>Lens</h2><p class="sub">Tap a planet (here or on the wheel), a figure or a house: everything it touches lights up, and each switched-on school's reading of those links sits side by side.</p>${picker}${body}`;
+    host.innerHTML = `<h2>Lens</h2><p class="sub">Tap a planet (here or on the wheel), a figure${hasHouses() ? ' or a house' : ''}: everything it touches lights up, and each switched-on school's reading of those links sits side by side.</p>${picker}${body}`;
     $$('[data-p]', host).forEach(b => b.addEventListener('click', () => { S.sel = { kind: 'planet', key: b.dataset.p }; renderLens(); writeURL(); }));
     $$('[data-fig]', host).forEach(b => b.addEventListener('click', () => { S.sel = { kind: 'figure', i: +b.dataset.fig }; renderLens(); writeURL(); }));
-    $('#houseSel').addEventListener('change', e => { if (e.target.value) { S.sel = { kind: 'house', n: +e.target.value }; renderLens(); writeURL(); } });
+    const hs = $('#houseSel'); if (hs) hs.addEventListener('change', e => { if (e.target.value) { S.sel = { kind: 'house', n: +e.target.value }; renderLens(); writeURL(); } });
     $$('[data-synby]', host).forEach(b => b.addEventListener('click', () => { S.synBy = b.dataset.synby; renderLens(); }));
   }
   function synopsis(rows, mine) {
@@ -1306,21 +1540,23 @@
     const ch = chainFrom(k), figs = figuresOf(k), dig = dignityOf(k, p.sign);
     const w = WEIGHT[k];
     const chainHtml = chainText(ch);
+    const approx = p.approx ? ` · <b>approximate</b>: the time is unknown and the Moon moves 12 to 15° a day${p.dayRange ? ` (over that day, ${esc(p.dayRange[0])} to ${esc(p.dayRange[1])})` : ''}` : '';
     const kv = [
-      ['Sign', `${SG(p.sign)} ${esc(fmtPos(p))} · ${esc(elementOf(p.sign))}, ${esc(modalityOf(p.sign))}, ${esc(polarityOf(p.sign))}${p.retro ? ' · retrograde' : ''}`],
-      ['Tenant of', `the ${ord(p.house)} house (${esc(AREA[p.house - 1])})${S.zodiac === 'sidereal' && p.placidusHouse ? ` · Placidus ${ord(p.placidusHouse)}` : ''}`],
-      ['Owner of', owns.length ? owns.map(n => `house ${n}`).join(', ') + ` <small>(${esc(SHORT[S.rulers])} set)</small>` : `no house cusp <small>(${esc(SHORT[S.rulers])} set)</small>`],
+      ['Sign', `${SG(p.sign)} ${esc(fmtPos(p))} · ${esc(elementOf(p.sign))}, ${esc(modalityOf(p.sign))}, ${esc(polarityOf(p.sign))}${p.retro ? ' · retrograde' : ''}${approx}`],
+      p.house ? ['Tenant of', `the ${ord(p.house)} house (${esc(AREA[p.house - 1])})${S.zodiac === 'sidereal' && p.placidusHouse ? ` · Placidus ${ord(p.placidusHouse)}` : ''}`]
+        : ['House', '<span style="color:var(--mut)">none: with no known time there are no houses, so no tenancy and no house owned</span>'],
+      hasHouses() ? ['Owner of', owns.length ? owns.map(n => `house ${n}`).join(', ') + ` <small>(${esc(SHORT[S.rulers])} set)</small>` : `no house cusp <small>(${esc(SHORT[S.rulers])} set)</small>`] : null,
       ['Rules', rules.length ? rules.map(s => `${SG(s)} ${esc(s)}`).join(', ') : 'no sign in this set'],
       ['Dispositor chain', chainHtml],
       ['Disposes', disp.length ? pList(disp) : 'no planet sits in a sign it rules'],
       ['Dignity', dig ? `${esc(dig)} <small>(traditional table)</small>` : '<span style="color:var(--mut)">none in the traditional table</span>'],
-    ];
+    ].filter(Boolean);
     if (w) kv.push(['Weight', `${w} of 46 in the method's tally`]);
     if (S.zodiac === 'sidereal' && p.nak) kv.push(['Nakṣatra', `${esc(p.nak.name)}, pada ${esc(p.nak.pada)}, lord ${esc(NAME[p.nak.lord] || p.nak.lord)}`]);
     const aspHtml = Object.keys(AKIND).filter(x => byKind[x]).map(x => `<div><small style="color:var(--mut)">${esc(AKIND[x])}</small><br>${byKind[x].map(a =>
       `<span class="tag ${esc(a.type)}">${esc(a.type)}</span> ${PN(other(a, k))} <small>${(+a.orb).toFixed(1)}°</small>`).join(' · ')}</div>`).join('');
     const figBtns = figs.map(([f, i]) => `<button type="button" class="pbtn fig" data-fig="${i}">${esc(figLabel(f))}</button>`).join(' ');
-    const head = `<div class="lens-head"><h2>${G(k)}<span style="color:var(--ink)">${esc(NAME[k])}</span> <small style="color:var(--mut);font-size:14px;font-weight:400">${esc(fmtPos(p))}, house ${p.house}</small></h2>
+    const head = `<div class="lens-head"><h2>${G(k)}<span style="color:var(--ink)">${esc(NAME[k])}</span> <small style="color:var(--mut);font-size:14px;font-weight:400">${esc(fmtPos(p))}${inHouse(p)}${p.approx ? ' (approximate)' : ''}</small></h2>
       <dl class="kv">${kv.map(([a, b]) => `<dt>${a}</dt><dd>${b}</dd>`).join('')}</dl>
       ${asps.length ? `<div style="margin-top:8px;font-size:13px">${aspHtml}</div>` : ''}
       ${figBtns ? `<div class="actrow" style="margin-top:8px">Part of: ${figBtns}</div>` : ''}</div>${planetNote(k)}`;
@@ -1330,17 +1566,18 @@
       { label: `${G(k)} ${esc(NAME[k])}, the planet`, keysFor: ['planet-' + k] },
       { label: `in ${SG(p.sign)} ${esc(p.sign)}, the sign`, keysFor: sl => { const s = signForSchool(k, sl); return s ? ['sign-' + s.toLowerCase()] : []; },
         whatFor: sl => { const s = signForSchool(k, sl); return s && s !== p.sign ? `read on the ${esc(S.schoolBy[sl].zodiac)} sign: ${esc(s)}` : ''; } },
-      { label: `in the ${ord(p.house)} house`, keysFor: ['house-' + p.house] },
+      p.house ? { label: `in the ${ord(p.house)} house`, keysFor: ['house-' + p.house] } : null,
       ...types.map(t => ({ label: `its ${esc(t)}${asps.filter(a => a.type === t).length > 1 ? 's' : ''}`, facts: 'to ' + asps.filter(a => a.type === t).map(a => esc(NAME[other(a, k)])).join(', '), keysFor: ['aspect-' + t] })),
-    ];
+    ].filter(Boolean);
     if (pairs.length) rows.push({ label: 'planet pairs it forms', facts: pairs.map(x => x.slice(5).split('-').map(y => NAME[y]).join('–')).join(', '), keysFor: pairs });
     if (rules.length) rows.push({ label: `the signs it rules (${esc(SHORT[S.rulers])} set)`, facts: rules.join(', '), keysFor: rules.map(s => 'sign-' + s.toLowerCase()), closed: true });
     rows.push({ label: 'dispositors and rulership', keysFor: ['concept-dispositor', 'concept-final-dispositor', 'concept-rulership'], closed: true });
     if (dig) rows.push({ label: `its ${esc(dig.split(' ')[0])}`, keysFor: ['concept-' + dig.split(' ')[0].replace('domicile', 'rulership')], closed: true });
     const mine = mineFor(['planets.' + k, 'pillars.' + k, 'generation.' + k, 'rulers.chain-' + k,
       ...asps.map(a => `aspects.${a.a}-${a.type}-${a.b}`), ...asps.map(a => `aspects.${a.b}-${a.type}-${a.a}`)]);
-    hl({ planets: [k, ...asps.map(a => other(a, k))], planets2: ch.chain.slice(1).concat(disp), aspectsOf: [k], houses: [p.house], houses2: owns, signs: [p.sign], signs2: rules },
-      `Lit: ${esc(NAME[k])}, its aspects and partners, its sign and house; paler: the houses it owns, the signs it rules and its dispositor chain (${esc(SHORT[S.rulers])} set).`);
+    hl({ planets: [k, ...asps.map(a => other(a, k))], planets2: ch.chain.slice(1).concat(disp), aspectsOf: [k], houses: p.house ? [p.house] : [], houses2: owns, signs: [p.sign], signs2: rules },
+      p.house ? `Lit: ${esc(NAME[k])}, its aspects and partners, its sign and house; paler: the houses it owns, the signs it rules and its dispositor chain (${esc(SHORT[S.rulers])} set).`
+        : `Lit: ${esc(NAME[k])}, its aspects and partners, its sign; paler: the signs it rules and its dispositor chain (${esc(SHORT[S.rulers])} set). No houses: the time is unknown.`);
     return head + aiRow('lens', 'selection') + synopsis(rows, mine);
   }
   function chainText(c) {
@@ -1359,7 +1596,7 @@
       const opp = f.opposition || members.filter(m => m !== f.apex);
       const ap = positionOf(f.apex);
       head = `<div class="lens-head"><h2>${esc(figLabel(f))}</h2>
-        <dl class="kv"><dt>Apex</dt><dd>${PN(f.apex)}${ap ? ` in ${esc(ap.sign)}, house ${ap.house}` : ''}</dd>
+        <dl class="kv"><dt>Apex</dt><dd>${PN(f.apex)}${ap ? ` in ${esc(ap.sign)}${inHouse(ap)}` : ''}</dd>
         <dt>Opposition</dt><dd>${pList(opp)}</dd>${f.quality ? `<dt>Signs</dt><dd>${esc(f.quality)}</dd>` : ''}<dt>Widest orb</dt><dd>${esc(f.maxOrb)}°</dd>
         <dt>Empty point</dt><dd>${SG(es)} ${esc(es)}${eh ? `, house ${eh}` : ''} <small>(opposite the apex)</small></dd></dl></div>
         <div class="possible">The method names two ways a T-square is often worked with: through the opposition (the two ends learning to share one tension),
@@ -1436,13 +1673,15 @@
       }
       case 'temperament': {
         const t = tally(), ph = moonPhase(), fmt = o => Object.entries(o).map(([k, v]) => `${k} ${v}`).join(', ');
-        return { facts: [`Element (weighted, of ${t.total}): ${fmt(t.element)}`, `Modality: ${fmt(t.modality)}`, `Polarity: ${fmt(t.polarity)}`].concat(ph ? [`Moon phase at birth: ${ph.name}`] : []),
+        return { facts: [`Element (weighted, of ${t.total}): ${fmt(t.element)}`, `Modality: ${fmt(t.modality)}`, `Polarity: ${fmt(t.polarity)}`].concat(ph ? [`Moon phase ${momentWord()}: ${ph.name}`] : []),
           keys: [['concept-temperament', 'concept-elements']] };
       }
       case 'planets': return { facts: BODIES.filter(k => CH.pts[k]).map(P), keys: BODIES.filter(k => CH.pts[k]).map(k => ['planet-' + k]) };
-      case 'houses': return { facts: CH.houses.map(h => { const x = houseInfo(h.n); return `House ${h.n}: ${x.builder} on the cusp, owner ${nm(x.owner)}${x.ownerPos ? ` (in ${x.ownerPos.sign}, house ${x.ownerPos.house})` : ''}, tenants ${x.tenants.length ? x.tenants.map(nm).join(', ') : 'none'}`; }), keys: [['concept-rulership']] };
+      case 'houses': if (!hasHouses()) return null;   // nothing to interpret: no known time, no houses
+        return { facts: CH.houses.map(h => { const x = houseInfo(h.n); return `House ${h.n}: ${x.builder} on the cusp, owner ${nm(x.owner)}${x.ownerPos ? ` (in ${x.ownerPos.sign}, house ${x.ownerPos.house})` : ''}, tenants ${x.tenants.length ? x.tenants.map(nm).join(', ') : 'none'}`; }), keys: [['concept-rulership']] };
       case 'aspects': return { facts: CH.aspects.map(aspLine), keys: [...new Set(CH.aspects.map(a => a.type))].map(t => ['aspect-' + t]) };
       case 'season': {
+        if (S.source === 'public') return null;   // no transits for public charts (see publicNoToday)
         const sp = S.transits && S.transits.spans ? S.transits.spans.slice().sort((a, b) => b.weight - a.weight).slice(0, 5) : [];
         return { facts: sp.length ? sp.map(x => `${x.label}: in orb ${fmtDay(x.firstDay)} to ${fmtDay(x.lastDay)}${(x.exacts || []).length ? ', exact ' + x.exacts.map(e => fmtDay(e.local || e.utc)).join(' and ') : ''}`) : ['No transits for this chart.'], keys: [['concept-transit']] };
       }
@@ -1472,9 +1711,11 @@
     // 1 generation
     {
       const gen = ['uranus', 'neptune', 'pluto', 'chiron'].filter(k => CH.pts[k]);
-      const items = gen.map(k => `<div class="bk-item"><h3>${PN(k)} <span class="f">in ${esc(CH.pts[k].sign)}, house ${CH.pts[k].house}</span></h3>
+      const items = gen.map(k => `<div class="bk-item"><h3>${PN(k)} <span class="f">in ${esc(CH.pts[k].sign)}${inHouse(CH.pts[k])}</span></h3>
         ${foldSchools(['planet-' + k])}${mine('generation.' + k)}</div>`).join('');
-      secs.push({ id: 'generation', intro: 'The slow planets: shared by everyone born within a few years of this chart. This could mean the mood of a generation more than a trait of one person; it could also mean the way one life takes part in that mood. What does it mean to you?',
+      secs.push({ id: 'generation', intro: isEvent()
+          ? 'The slow planets: shared by every moment within a few years of this one. This could mean the mood of an era more than a trait of one event; it could also mean the way this event takes part in that mood. What does it mean to you?'
+          : 'The slow planets: shared by everyone born within a few years of this chart. This could mean the mood of a generation more than a trait of one person; it could also mean the way one life takes part in that mood. What does it mean to you?',
         html: items + leftovers('generation'), spec: { planets: gen } });
     }
     // 2 pillars
@@ -1483,7 +1724,7 @@
       const one = (id, title, key, sign, house) => {
         const r = rulerOf(sign), rp = positionOf(r);
         return `<div class="bk-item"><h3>${title} <span class="f">${esc(sign)}${house ? ', house ' + house : ''}</span></h3>
-          <div class="facts-line">Its sign's ruler (${esc(SHORT[S.rulers])} set): ${rp ? `${PN(r)}, in ${esc(rp.sign)}, house ${rp.house}` : `${esc(NAME[r] || r)} (${esc(UNCOMPUTED[r] || 'not computed')})`}</div>
+          <div class="facts-line">Its sign's ruler (${esc(SHORT[S.rulers])} set): ${rp ? `${PN(r)}, in ${esc(rp.sign)}${inHouse(rp)}` : `${esc(NAME[r] || r)} (${esc(UNCOMPUTED[r] || 'not computed')})`}</div>
           ${key !== 'ascendant' ? planetNote(key, true) : ''}${foldSchools(key === 'ascendant' ? ['concept-ascendant', 'sign-' + sign.toLowerCase()] : ['planet-' + key, 'sign-' + sign.toLowerCase()])}${mine('pillars.' + id)}</div>`;
       };
       let h = '';
@@ -1491,7 +1732,8 @@
       if (CH.pts.moon) h += one('moon', `${PN('moon')}: needs and instinct`, 'moon', CH.pts.moon.sign, CH.pts.moon.house);
       if (CH.asc) h += one('ascendant', 'The Ascendant: the way in', 'ascendant', CH.asc.sign, null);
       if (fb) h += one('first-below-horizon', `${PN(fb)}: the first planet below the horizon`, fb, CH.pts[fb].sign, CH.pts[fb].house);
-      secs.push({ id: 'pillars', intro: 'Sun, Moon, Ascendant, and the first planet below the horizon (the next to rise). For each: its sign, and where that sign\'s ruler sits.',
+      secs.push({ id: 'pillars', intro: 'Sun, Moon, Ascendant, and the first planet below the horizon (the next to rise). For each: its sign, and where that sign\'s ruler sits.' +
+          (CH.asc ? '' : ' Here only the Sun and the Moon: with no known time there is no Ascendant and no horizon.'),
         html: h + leftovers('pillars'), spec: { planets: ['sun', 'moon', fb, 'ascendant'].filter(Boolean) } });
     }
     // 3 figures
@@ -1529,9 +1771,10 @@
       const grp = (title, obj) => `<div><h4>${esc(title)}</h4>${Object.entries(obj).map(([k, v]) => bar(cap(k), v, k)).join('')}</div>`;
       const topSigns = Object.entries(t.sign).sort((a, b) => b[1] - a[1]).slice(0, 3);
       const domEl = Object.entries(t.element).sort((a, b) => b[1] - a[1])[0][0];
-      secs.push({ id: 'temperament', intro: 'The method\'s weighted tally: Sun 9, Moon 7; Ascendant, Mercury, Venus and Mars 5 each; Jupiter and Saturn 3; Uranus, Neptune, Pluto and Chiron 1 (46 in all).',
+      secs.push({ id: 'temperament', intro: 'The method\'s weighted tally: Sun 9, Moon 7; Ascendant, Mercury, Venus and Mars 5 each; Jupiter and Saturn 3; Uranus, Neptune, Pluto and Chiron 1 (46 in all).' +
+          (CH.asc ? '' : ` Here ${t.total}: with no known time there is no Ascendant to count.`),
         html: `<div class="bars">${grp('Element', t.element)}${grp('Modality', t.modality)}${grp('Polarity', t.polarity)}</div>
-          <div class="facts-line">Heaviest signs: ${topSigns.map(([s, v]) => `${SG(s)} ${esc(s)} (${v})`).join(', ')}.${ph ? ` Moon phase at birth: ${esc(ph.name)} (${Math.round(ph.elong)}° from the Sun).` : ''}</div>
+          <div class="facts-line">Heaviest signs: ${topSigns.map(([s, v]) => `${SG(s)} ${esc(s)} (${v})`).join(', ')}.${ph ? ` Moon phase ${momentWord()}: ${esc(ph.name)} (${Math.round(ph.elong)}° from the Sun).` : ''}</div>
           <div class="possible">This could mean a temperament leaning ${esc(domEl)}; it could also mean the lighter elements are where effort goes. What does it mean to you?${TMPL}</div>
           ${foldSchools(['concept-temperament', 'concept-elements'])}${mine('temperament.tally')}${leftovers('temperament')}`,
         spec: { signs: SIGNS.filter(s => elementOf(s) === domEl) } });
@@ -1540,14 +1783,18 @@
     {
       const h = BODIES.filter(k => CH.pts[k]).map(k => {
         const p = CH.pts[k], dig = dignityOf(k, p.sign), owns = ownsHouses(k), n = aspectsOf(k).length;
-        return `<div class="bk-item"><h3>${PN(k)} <span class="f">${esc(fmtPos(p))}, house ${p.house}${p.retro && k !== 'northnode' && k !== 'southnode' ? ', retrograde' : ''}</span> <button type="button" class="minibtn no-print" data-p="${k}">Lens</button></h3>
-          <div class="facts-line">${dig ? esc(dig) + ' (traditional table) · ' : ''}${owns.length ? 'owns house ' + owns.join(', ') + ' · ' : ''}${n} aspect${n === 1 ? '' : 's'}</div>
+        return `<div class="bk-item"><h3>${PN(k)} <span class="f">${esc(fmtPos(p))}${inHouse(p)}${p.retro && k !== 'northnode' && k !== 'southnode' ? ', retrograde' : ''}${p.approx ? ', approximate' : ''}</span> <button type="button" class="minibtn no-print" data-p="${k}">Lens</button></h3>
+          <div class="facts-line">${dig ? esc(dig) + ' (traditional table) · ' : ''}${owns.length ? 'owns house ' + owns.join(', ') + ' · ' : ''}${n} aspect${n === 1 ? '' : 's'}${p.approx && p.dayRange ? ` · over that day it runs from ${esc(p.dayRange[0])} to ${esc(p.dayRange[1])}` : ''}</div>
           ${planetNote(k, true)}${foldSchools(sl => { const s = signForSchool(k, sl); return ['planet-' + k].concat(s ? ['sign-' + s.toLowerCase()] : []); })}${mine('planets.' + k)}</div>`;
       }).join('') + mine('planets.nodes');
-      secs.push({ id: 'planets', intro: 'The planet is the function, the sign qualifies it, the house says where.', html: h + leftovers('planets'), spec: { planets: BODIES } });
+      secs.push({ id: 'planets', intro: 'The planet is the function, the sign qualifies it, the house says where.' + (hasHouses() ? '' : ' Here there is no house: the time is unknown.'), html: h + leftovers('planets'), spec: { planets: BODIES } });
     }
-    // 7 houses
-    {
+    // 7 houses (none without a known time: the chapter says why and stops)
+    if (!hasHouses()) {
+      secs.push({ id: 'houses', intro: 'Each house has a builder (the sign on its cusp), an owner (that sign\'s ruler) and tenants (the planets inside).',
+        html: `<p class="empty">No houses in this chart: the ${isEvent() ? '' : 'birth '}time is unknown, and houses turn with the hour (the whole circle of cusps goes round once a day), so a noon chart has none to show. Every house-based reading is left out here and elsewhere on the page.</p>`,
+        spec: null });
+    } else {
       const rows = CH.houses.map(hh => { const h = houseInfo(hh.n);
         return `<tr class="click" data-house="${h.n}" tabindex="0"><td><b>${h.n}</b></td><td>${SG(h.builder)} ${esc(h.builder)}</td>
           <td>${h.ownerPos ? `${PN(h.owner)} <small>in ${esc(h.ownerPos.sign)}, h${h.ownerPos.house}</small>` : `${esc(NAME[h.owner] || h.owner)} <small>(not computed)</small>`}</td>
@@ -1572,7 +1819,10 @@
     }
     // 9 season
     {
-      let h = '<p class="empty">No transits file.</p>', spec = null;
+      const pubSeason = isEvent()
+        ? 'Like Today, this chapter lays the coming transits over a chart as a personal calendar. An event’s chart is read here as the sky of its own moment, so the season is left out.'
+        : 'Like Today, this chapter lays the coming transits over a chart as a calendar for its owner. A public figure’s chart is read here for its placements only, so the season is left out: nothing on this page forecasts anything about anyone.';
+      let h = `<p class="empty">${esc(S.source === 'public' ? pubSeason : 'No transits file.')}</p>`, spec = null;
       if (S.transits && S.transits.spans) {
         const w = S.transits.window || {}, dom = [w.startDate || S.transits.days[0].date, w.endDate || S.transits.days[S.transits.days.length - 1].date];
         const today = S.transits.days[S.dayIdx] ? S.transits.days[S.dayIdx].date : null;
@@ -1585,14 +1835,19 @@
         const natal = [...new Set(main.map(s => s.natal))];
         spec = { planets: natal };
       }
-      secs.push({ id: 'season', intro: 'The slowest, heaviest contacts of the 90-day window, each as a bar across the whole window (today marked). A calendar of geometry, not a forecast.', html: h, spec });
+      secs.push({ id: 'season', intro: S.source === 'public' ? 'Transits over the coming 90 days: not for a public chart.'
+        : 'The slowest, heaviest contacts of the 90-day window, each as a bar across the whole window (today marked). A calendar of geometry, not a forecast.', html: h, spec });
     }
     // 10 method
     {
       const on = enabledSchools();
       secs.push({ id: 'method', intro: 'What this book was read with, so the choices show.',
         html: `<div class="method"><ul>
-          <li>Chart: ${S.source === 'local' ? 'your own (local files, never committed)' : S.source === 'viewer' ? 'handed over by the calculator (positions only, no birth data); its aspects, figures, sidereal version and chains computed in this page' : 'the invented example'}, ${esc(T)} zodiac${CH.ayan ? ' (' + esc(CH.ayan.label || CH.ayan.name) + ')' : ''}, ${esc(CH.houseSystem || '')} houses.</li>
+          <li>Chart: ${S.source === 'local' ? 'your own (local files, never committed)'
+            : S.source === 'viewer' ? 'handed over by the calculator (positions only, no birth data); its aspects, figures, sidereal version and chains computed in this page'
+              : S.source === 'saved' ? 'one of your saved charts, read from your recursive.eco account and recomputed by the chart server (api/calculate-chart); its aspects, figures, sidereal version and chains computed in this page'
+                : S.source === 'public' ? `${isEvent() ? 'a public event' : 'a public figure'}, ${esc(S.pub.label)}, from mock-data/public-charts.json (${esc(S.pub.date_label)}; source: <a href="${esc(S.pub.source_url)}">${esc(hostOf(S.pub.source_url))}</a>${isEvent() ? '' : '; ' + esc(ratingText(S.pub))})`
+                  : 'the invented example'}, ${esc(T)} zodiac${CH.ayan ? ' (' + esc(CH.ayan.label || CH.ayan.name) + ')' : ''}, ${hasHouses() ? esc(hsName()) + ' houses' : 'no houses (the time is unknown)'}.</li>
           <li>Rulership set: ${esc(setLabel())}.</li>
           <li>Schools switched on (${on.length}): ${on.map(s => esc(s.label)).join('; ') || 'none'}.</li>
           <li>Readings come from the grammars in this library (by the one cross-link key, <code>source_item_id</code>), short windows of public-domain books (archive.org OCR, old spellings kept) and podcast auto-captions (20 words at most, linked to the moment). Each school reads the zodiac it was written for. The Bailey school appears only as our paraphrase plus the attributed ruler table: its text is under copyright and is not stored here.</li>
@@ -1654,15 +1909,23 @@
     $$('.glyph', d).forEach(g => g.remove());
     return d.textContent.replace(/\s+/g, ' ').trim();
   }
-  const chartKind = () => S.source === 'local' ? 'my own chart' : S.source === 'viewer' ? 'a chart from the recursive.eco calculator' : 'an invented example chart (not a person)';
+  const chartKind = () => S.source === 'local' ? 'my own chart' : S.source === 'viewer' ? 'a chart from the recursive.eco calculator'
+    : S.source === 'saved' ? 'one of my saved charts from recursive.eco'
+      : S.source === 'public' ? (isEvent() ? `the sky at a public event: ${S.pub.label} (${S.pub.date_label})` : `the public birth chart of ${S.pub.label} (${ratingText(S.pub)})`)
+        : 'an invented example chart (not a person)';
+  // for a public chart, what the reading may and may not do, said to the assistant as well
+  const publicLines = () => !S.pub ? [] : [isEvent()
+    ? 'This is the sky at a public event, to be read as the schools would read any moment; predict nothing from it.'
+    : 'This is a public figure\'s chart from a public source: read the placements only, never the person, and predict nothing about anyone.']
+    .concat(S.pub.time_known ? [] : ['The time is unknown: there are no houses, Ascendant or Midheaven, and the Moon is approximate.']);
   function settingsLine() {
-    return `Chart settings: ${S.zodiac} zodiac${S.zodiac === 'sidereal' && CH.ayan ? ` (${CH.ayan.label || CH.ayan.name})` : ''}, ${CH.houseSystem || 'placidus'} houses, rulership set: ${setLabel()}.`;
+    return `Chart settings: ${S.zodiac} zodiac${S.zodiac === 'sidereal' && CH.ayan ? ` (${CH.ayan.label || CH.ayan.name})` : ''}, ${hasHouses() ? hsName() + ' houses' : 'no houses (time unknown)'}, rulership set: ${setLabel()}.`;
   }
   function ptLine(k, pre) {
     const who = pre ? cap(`${pre} ${nm(k)}`) : cap(theNm(k));
     const p = positionOf(k); if (!p) return `${who}: not computed here`;
     const dig = PLANETS.includes(k) ? dignityOf(k, p.sign) : null;
-    return `${who}: ${p.pos || p.sign}${p.house ? `, house ${p.house}` : ''}${p.retro && !/node/.test(k) ? ', retrograde' : ''}${dig ? `, ${dig.split(' ')[0]} (traditional table)` : ''}`;
+    return `${who}: ${p.pos || p.sign}${p.house ? `, house ${p.house}` : ''}${p.retro && !/node/.test(k) ? ', retrograde' : ''}${p.approx ? ', approximate (time unknown)' : ''}${dig ? `, ${dig.split(' ')[0]} (traditional table)` : ''}`;
   }
   const aspLine = a => `${cap(theNm(a.a))} ${a.type} ${theNm(a.b)} (orb ${(+a.orb).toFixed(1)}°)`;
   const chainLine = k => { const c = chainFrom(k); return c.chain.map(nm).join(' -> ') + (c.end === 'domicile' ? ' (rests: in its own sign)' : c.end === 'loop' ? ' (a loop)' : c.end === 'uncomputed' ? ' (pauses: no position)' : ''); };
@@ -1709,7 +1972,7 @@
       const figs = figuresOf(k).map(([f]) => 'Part of the ' + figName(f)); facts.push(...figs);
       facts.push(`Dispositor chain (${SHORT[S.rulers]} set): ${chainLine(k)}`);
       const owns = ownsHouses(k); if (owns.length) facts.push(`Owns house ${owns.join(', ')}`);
-      return { title: `${theNm(k)} in ${CH.pts[k].sign}, house ${CH.pts[k].house}`, facts, keyLists };
+      return { title: `${theNm(k)} in ${CH.pts[k].sign}${inHouse(CH.pts[k])}`, facts, keyLists };
     }
     if (kind === 'today') {
       const d = S.transits && S.transits.days[S.dayIdx]; if (!d) return null;
@@ -1732,7 +1995,7 @@
   }
   function interpretText(sel) {
     const L = [`I'm reading ${chartKind()} in Chart Lab on The Recursive Astrology (astro.recursive.eco), one chart read through many schools of astrology.`,
-      `Please interpret ${sel.title}.`];
+      `Please interpret ${sel.title}.`, ...publicLines()];
     if (sel.ask) L.push(`My question: ${sel.ask}`);
     L.push('', 'What is selected:', ...sel.facts.map(f => '- ' + f), '- ' + settingsLine());
     const rs = schoolLines(sel.keyLists || []);
@@ -1754,7 +2017,8 @@
   function grammarText(scope) {
     const sel = scope === 'chart' ? { title: 'this whole chart', facts: wholeChartFacts() } : selectionFor('lens');
     if (!sel) return '';
-    const L = [`Please make a PRIVATE grammar for me on recursive.eco from ${sel.title}${scope === 'chart' ? '' : ' in ' + chartKind()}.`,
+    const L = [`Please make a PRIVATE grammar for me on recursive.eco from ${sel.title}${scope === 'chart' ? (S.pub ? ', ' + chartKind() : '') : ' in ' + chartKind()}.`,
+      ...publicLines().map(x => '- ' + x),
       '- Make it private: not public, and not offered to any channel.',
       '- Before you create anything, tell me the grammar name and the items you will make, and wait for my yes.',
       '- One item per placement (planet in sign and house), one per aspect, and one per figure; name each figure by its members, never just "the figure".',
@@ -1827,8 +2091,30 @@
   // ───────────────────────── boot ─────────────────────────
   async function boot() {
     const P = new URLSearchParams(location.search);
-    const forceExample = P.get('chart') === 'example';
-    const onLocalhost = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+    const want = parseChartParam(P.get('chart'));
+    const onLocalhost = ON_LOCALHOST;
+    // the dropdown's sources, started now: sign-in (awaited only for a saved chart), the public list, and on
+    // localhost whether the owner's local files are there
+    // what the dropdown shows while the chart loads: what was asked for (corrected once it is on the wheel)
+    S.pickValue = want.kind === 'public' || want.kind === 'saved' ? `${want.kind}:${want.id}` : (want.kind || '');
+    const stub = onLocalhost && P.get('stubauth') === '1' ? stubClient() : null;
+    S.authP = initAuth(stub).then(a => { S.auth = a; renderChartPicker(); return a; });
+    S.authP.then(async a => {
+      if (a.state !== 'in') return;
+      try { S.saved = await listSaved(a); } catch (e) { S.saved = []; S.savedErr = true; }
+      renderChartPicker();
+    });
+    const pubP = getJSON('../mock-data/public-charts.json').then(l => (S.publicCharts = Array.isArray(l) ? l : []));
+    // "This laptop": offered on localhost once her local files have loaded here (a per-browser note, so no
+    // probe request is made for files that may not exist)
+    const LOCAL_SEEN = 'chart-lab:local-files-seen';
+    const localSeen = v => { try { if (v === undefined) return localStorage.getItem(LOCAL_SEEN) === '1'; if (v) localStorage.setItem(LOCAL_SEEN, '1'); else localStorage.removeItem(LOCAL_SEEN); } catch (e) { /* storage off: the group shows only while her chart is on screen */ } return false; };
+    $('#chartSel').addEventListener('change', e => {
+      const v = e.target.value;
+      if (!v || v === 'viewer' || v === S.pickValue) return;
+      // a new chart: a fresh page (its own figures, houses, transits), keeping the mode, schools, rulers and zodiac
+      location.assign(urlWith({ chart: v, from: null, h: null, sel: null, day: null, q: null }));
+    });
     const [schoolsG, structure, bailey, shelf] = await Promise.all([
       getJSON('../grammars/astrology-schools/grammar.json'), getJSON('../grammars/the-structure-of-the-sky/grammar.json'),
       getJSON('../grammars/esoteric-bailey-paraphrase/grammar.json'), getJSON('../mock-data/passages.json')]);
@@ -1857,21 +2143,44 @@
     // the shelf
     S.passages = (shelf && shelf.passages) || [];
     for (const p of S.passages) for (const k of (p.keys || [])) { if (!S.byKey.has(k)) S.byKey.set(k, []); S.byKey.get(k).push(p); }
-    // the chart: her private files on localhost, else the invented example
+    // the chart: the one ?chart= names; else a hand-over from the calculator; else her private files on
+    // localhost; else the invented example
     let trop = null, sid = null, tr = null, rd = null;
     // a chart the calculator handed over (?from=viewer): computed here, from positions only
-    if (P.get('from') === 'viewer' && !forceExample) {
+    if (P.get('from') === 'viewer' && (!want.kind || want.kind === 'viewer')) {
       $('#chartMeta').textContent = 'Waiting for the chart from the calculator…';
       const v = await receiveHandoff(P.get('h'));
       const both = chartsFromHandoff(v);
       if (both) { trop = both.tropical; sid = both.sidereal; S.source = 'viewer'; }
       else S.handoffFailed = true;
+    } else if (want.kind === 'public') {
+      const c = (await pubP).find(x => x.id === want.id);
+      if (c && c.tropical) { trop = c.tropical; sid = c.sidereal || null; S.source = 'public'; S.pub = c; }
+      else S.pickFailed = 'that public chart is not in the list';
+    } else if (want.kind === 'saved') {
+      $('#chartMeta').textContent = 'Checking your sign-in on recursive.eco…';
+      const a = await S.authP;
+      if (a.state !== 'in') S.pickFailed = a.state === 'error' ? 'could not check your sign-in' : 'that saved chart needs you signed in on recursive.eco';
+      else {
+        try {
+          $('#chartMeta').textContent = 'Reading your saved chart…';
+          const row = await readSaved(a, want.id);
+          if (!row) S.pickFailed = 'that chart is not among your saved charts';
+          else {
+            S.savedName = (row.document_data && row.document_data.name) || 'Your saved chart';
+            $('#chartMeta').textContent = 'Recomputing it on the chart server…';
+            const both = await chartsFromSaved(row.document_data || {});
+            if (both) { trop = both.tropical; sid = both.sidereal; S.source = 'saved'; S.savedId = want.id; }
+            else S.pickFailed = 'the chart server gave an incomplete chart';
+          }
+        } catch (e) { S.pickFailed = `could not load that saved chart (${(e && e.message) || e})`; }
+      }
     }
-    if (!trop && onLocalhost && !forceExample && !S.handoffFailed) {
+    if (!trop && onLocalhost && (!want.kind || want.kind === 'local') && !S.handoffFailed && !S.pickFailed) {
       trop = await getJSON('../mock-data/my-chart.local.json');
-      if (trop) { [sid, tr, rd] = await Promise.all(['my-sidereal', 'my-transits', 'my-readings'].map(f => getJSON(`../mock-data/${f}.local.json`))); S.source = 'local'; }
+      if (trop) { [sid, tr, rd] = await Promise.all(['my-sidereal', 'my-transits', 'my-readings'].map(f => getJSON(`../mock-data/${f}.local.json`))); S.source = 'local'; localSeen(true); }
+      else { localSeen(false); if (want.kind === 'local') S.pickFailed = 'no local chart files on this laptop'; }
     }
-    S.hasLocal = S.source === 'local' || (onLocalhost && forceExample);
     if (!trop) {
       const ex = await getJSON('../mock-data/example-chart.json');
       if (!ex) { $('#chartMeta').textContent = 'Could not load mock-data/example-chart.json.'; return; }
@@ -1879,7 +2188,12 @@
       S.exampleNote = ex.birth ? `${ex.birth.date} ${ex.birth.time} ${ex.birth.zone || ''}, ${ex.birth.place || ''}` : '';
     }
     S.charts.tropical = normChart(trop); S.charts.sidereal = normChart(sid); S.transits = tr && tr.days ? tr : null;
-    if (S.source === 'viewer') S.transitsPending = transitsFor(trop).then(t => { S.transitsPending = null; S.transits = t; S.transitsTried = true; if (t) { const i = t.days.findIndex(d => d.date === (P.get('day') || '')); S.dayIdx = i >= 0 ? i : 0; } if (S.mode === 'today' || S.mode === 'book') rerender(); });
+    // the dropdown shows what is on the wheel
+    S.pickValue = S.source === 'viewer' ? 'viewer' : S.source === 'local' ? 'local' : S.source === 'public' ? 'public:' + S.pub.id
+      : S.source === 'saved' ? 'saved:' + S.savedId : 'example';
+    await pubP; S.localAvailable = S.source === 'local' || (onLocalhost && localSeen());
+    renderChartPicker(); renderBanner();
+    if (S.source === 'viewer' || S.source === 'saved') S.transitsPending = transitsFor(trop).then(t => { S.transitsPending = null; S.transits = t; S.transitsTried = true; if (t) { const i = t.days.findIndex(d => d.date === (P.get('day') || '')); S.dayIdx = i >= 0 ? i : 0; } if (S.mode === 'today' || S.mode === 'book') rerender(); });
     S.readings = normReadings(rd); if (S.readings) S.readings.forEach(it => S.readById.set(it.id, it));
     // state from the URL (?schools= mirrors tarot's ?decks=)
     const sp = P.get('schools');
