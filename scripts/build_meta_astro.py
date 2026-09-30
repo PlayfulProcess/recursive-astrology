@@ -47,6 +47,11 @@ SIGNS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra",
          "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
 HOUSES = list(range(1, 13))
 
+# Every entity item links to its structural item (element, modality, ruler, house group…)
+# in grammars/the-structure-of-the-sky — same ids: planet-sun, sign-aries, house-1.
+STRUCTURE_SLUG = "the-structure-of-the-sky"
+STRUCTURE_LABEL = "The Structure of the Sky"
+
 SIGN_ELEMENT = {  # for a bit of first-class metadata parity with western-astrology-canonical
     "Aries": "Fire", "Leo": "Fire", "Sagittarius": "Fire",
     "Taurus": "Earth", "Virgo": "Earth", "Capricorn": "Earth",
@@ -209,6 +214,10 @@ def build():
         if not texts:
             return  # no voice covers this entity — skip rather than ship an empty item
         sections = {label: texts[label] for slug, label in SOURCES if label in texts}
+        # The one cross-link pattern (source_deck / source_item_id / deck), pointing each
+        # placement at its item in the structure grammar, which uses the same ids.
+        metadata = dict(metadata, source_deck=STRUCTURE_SLUG, source_item_id=entity_id,
+                        deck=STRUCTURE_LABEL)
         item = {
             "id": entity_id,
             "name": name,

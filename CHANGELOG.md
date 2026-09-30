@@ -1,5 +1,32 @@
 # Changelog — The Recursive Astrology
 
+## September 27, 2026 — The Structure of the Sky: the skeleton the voices hang on
+
+The library had twenty grammars of voices, each giving its own text for the same signs, planets,
+houses and aspects, and almost no structure: 21 composite items repo-wide. An AI (or a reader)
+had nothing to say *why* Aries and Leo are kin, or which houses are angles, except what each
+voice happened to mention.
+
+- **`grammars/the-structure-of-the-sky`** — 77 items, factual, in no one's voice. 37 leaves (4
+  elements, 3 modalities, 2 polarities, 10 planets with Uranus, Neptune and Pluto marked modern,
+  12 houses, 6 aspects) and 40 emergences: every sign `composite_of` its element + modality +
+  polarity; the four triplicities and three modality groups as their signs; angular / succedent /
+  cadent, the six axes, Lilly's four quadrants and the four halves of the chart; the zodiac, the
+  houses and the two planet groups as roots. Rulers, exaltation, detriment, fall, triplicity
+  rulers (Ptolemy's and Lilly's, which differ on water) and opposites sit in `metadata`, checked
+  at build time against `dignities-rulerships` and `jyotisa-brhat-jataka`. Each item's
+  "Traditions" section says who uses it, cited to Ptolemy (Ashmand 1822, Book I read in full from
+  Gutenberg #70850), Lilly (1647, the archive.org scan), Alan Leo, the Bṛhat Jātaka (Iyer 1885) or
+  `research/bibliography.bib`; what could not be cited was left out. Aspects are defined, never
+  stored: a chart's aspects are computed.
+- **Cross-links** — every sign, planet, house and aspect item in eleven voice grammars and the
+  generated `astro-of-all-astros` (260 items) now carries the one cross-link pattern
+  (`source_deck` / `source_item_id` / `deck`) to its structure item. Nothing else in those items
+  changed. `scripts/build_meta_astro.py` emits the link, so a rebuild keeps it.
+- **`CLAUDE-AI-INSTRUCTIONS.md` §4** — how to read a chart with the structure: walk it first,
+  then the voices by name, end with a question, never predict or command. `CLAUDE.md` now names
+  the cross-link pattern.
+
 ## September 6, 2026 — One bodygraph renderer, exported, so copies cannot drift
 
 The bodygraph and the mandala lived inline in `viewer/astrology-viewer.html`, eleven thousand lines

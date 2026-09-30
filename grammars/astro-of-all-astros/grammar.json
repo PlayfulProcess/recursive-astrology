@@ -70,7 +70,10 @@
       "category": "planet",
       "level": 1,
       "metadata": {
-        "planet": "Sun"
+        "planet": "Sun",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-sun",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The Sun is your core identity — who you are becoming. It represents your conscious will, creative force, and the central organizing principle of your life.\n\n**Light:** Vitality, self-expression, leadership, creative power, confidence, generosity.\n\n**Shadow:** Ego inflation, domination, burnout from over-identification with achievement.\n\n**Archetype:** The King/Queen — sovereign consciousness that gives light and warmth.",
@@ -93,7 +96,10 @@
       "category": "planet",
       "level": 1,
       "metadata": {
-        "planet": "Moon"
+        "planet": "Moon",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-moon",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The Moon is your emotional body — how you feel, what you need, and where you seek comfort. It governs your instinctual responses and your relationship to home, nurturing, and memory.\n\n**Light:** Emotional intelligence, receptivity, nurturing, intuition, responsiveness.\n\n**Shadow:** Moodiness, dependency, emotional overwhelm, clinging to the past.\n\n**Archetype:** The Mother — the container that holds and nourishes life.",
@@ -116,7 +122,10 @@
       "category": "planet",
       "level": 1,
       "metadata": {
-        "planet": "Mercury"
+        "planet": "Mercury",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mercury",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Mercury is the mind in motion — how you think, communicate, and make sense of the world. It governs language, learning, commerce, and the bridges between things.\n\n**Light:** Articulate, curious, adaptable, quick-witted, perceptive.\n\n**Shadow:** Overthinking, trickery, scattered attention, nervousness.\n\n**Archetype:** The Messenger — the one who carries meaning between worlds.",
@@ -139,7 +148,10 @@
       "category": "planet",
       "level": 1,
       "metadata": {
-        "planet": "Venus"
+        "planet": "Venus",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-venus",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Venus is what you love, what you value, and how you attract. She governs beauty, pleasure, relationship, aesthetics, and the principle of harmony.\n\n**Light:** Grace, magnetism, aesthetic sense, diplomacy, devotion.\n\n**Shadow:** Vanity, possessiveness, people-pleasing, overindulgence.\n\n**Archetype:** The Lover — the force that draws things together through beauty.",
@@ -162,7 +174,10 @@
       "category": "planet",
       "level": 1,
       "metadata": {
-        "planet": "Mars"
+        "planet": "Mars",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mars",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Mars is your drive, desire, and fighting spirit. It governs how you assert yourself, pursue what you want, and handle conflict and competition.\n\n**Light:** Courage, initiative, passion, decisiveness, physical vitality.\n\n**Shadow:** Aggression, impatience, recklessness, anger, domination.\n\n**Archetype:** The Warrior — the force that cuts through and takes action.",
@@ -185,7 +200,10 @@
       "category": "planet",
       "level": 1,
       "metadata": {
-        "planet": "Jupiter"
+        "planet": "Jupiter",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-jupiter",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Jupiter is expansion, meaning, and faith. It governs your search for truth, your sense of abundance, and your capacity for growth, wisdom, and joy.\n\n**Light:** Generosity, optimism, wisdom, philosophical depth, good fortune.\n\n**Shadow:** Excess, overconfidence, dogmatism, restlessness, waste.\n\n**Archetype:** The Sage — the one who sees the larger pattern and offers meaning.",
@@ -208,7 +226,10 @@
       "category": "planet",
       "level": 1,
       "metadata": {
-        "planet": "Saturn"
+        "planet": "Saturn",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-saturn",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Saturn is structure, time, and responsibility. It governs your relationship to limits, mastery, maturity, and the hard-won wisdom that comes from endurance.\n\n**Light:** Discipline, integrity, perseverance, mastery, wisdom through experience.\n\n**Shadow:** Rigidity, fear, depression, excessive control, self-denial.\n\n**Archetype:** The Elder — the keeper of boundaries who teaches through limitation.",
@@ -232,7 +253,10 @@
       "level": 1,
       "metadata": {
         "sign": "Aries",
-        "element": "Fire"
+        "element": "Fire",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aries",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Aries is the spark of initiation — the first fire, the impulse to exist. Here energy moves before thought, asserting itself into being.\n\n**Light:** Courage, initiative, authenticity, pioneering spirit, directness.\n\n**Shadow:** Impatience, selfishness, combativeness, recklessness.\n\n**Archetype:** The Pioneer — first to arrive, first to act.",
@@ -255,7 +279,10 @@
       "level": 1,
       "metadata": {
         "sign": "Taurus",
-        "element": "Earth"
+        "element": "Earth",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-taurus",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Taurus is embodiment — the pleasure of having form, of touching earth, of building something that lasts. Here spirit takes root in matter.\n\n**Light:** Stability, sensuality, patience, resourcefulness, loyalty.\n\n**Shadow:** Stubbornness, possessiveness, materialism, resistance to change.\n\n**Archetype:** The Builder — the one who gives form to what matters.",
@@ -278,7 +305,10 @@
       "level": 1,
       "metadata": {
         "sign": "Gemini",
-        "element": "Air"
+        "element": "Air",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-gemini",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Gemini is the dance of duality — the mind that plays with ideas, makes connections, and refuses to be pinned to a single truth. Here reality becomes conversation.\n\n**Light:** Versatility, wit, curiosity, communication, adaptability.\n\n**Shadow:** Superficiality, inconsistency, gossip, restlessness.\n\n**Archetype:** The Storyteller — the one who gives voice to multiplicity.",
@@ -301,7 +331,10 @@
       "level": 1,
       "metadata": {
         "sign": "Cancer",
-        "element": "Water"
+        "element": "Water",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-cancer",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Cancer is the shell and the softness within — the impulse to protect, nourish, and create a container for vulnerability. Here the emotional body becomes home.\n\n**Light:** Nurturing, emotional depth, protectiveness, tenacity, memory.\n\n**Shadow:** Clinginess, moodiness, defensiveness, emotional manipulation.\n\n**Archetype:** The Nurturer — the one who creates sanctuary.",
@@ -324,7 +357,10 @@
       "level": 1,
       "metadata": {
         "sign": "Leo",
-        "element": "Fire"
+        "element": "Fire",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-leo",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Leo is the radiance of the creative self — the heart that shines, performs, and celebrates being alive. Here consciousness becomes an art form.\n\n**Light:** Creativity, generosity, warmth, leadership, self-expression.\n\n**Shadow:** Pride, attention-seeking, drama, stubbornness.\n\n**Archetype:** The Performer — the one whose light calls others to their own.",
@@ -347,7 +383,10 @@
       "level": 1,
       "metadata": {
         "sign": "Virgo",
-        "element": "Earth"
+        "element": "Earth",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-virgo",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Virgo is devotion to craft — the sacred attention to detail, the impulse to refine, heal, and serve. Here consciousness meets the world through care.\n\n**Light:** Discernment, service, practical wisdom, humility, healing.\n\n**Shadow:** Perfectionism, criticism, anxiety, self-doubt.\n\n**Archetype:** The Healer — the one who makes whole through attention.",
@@ -370,7 +409,10 @@
       "level": 1,
       "metadata": {
         "sign": "Libra",
-        "element": "Air"
+        "element": "Air",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-libra",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Libra is the art of relationship — the search for balance, beauty, and justice in the space between self and other. Here consciousness becomes dialogue.\n\n**Light:** Harmony, fairness, aesthetic sense, diplomacy, partnership.\n\n**Shadow:** Indecision, people-pleasing, avoidance of conflict, dependency.\n\n**Archetype:** The Artist — the one who creates beauty in the between.",
@@ -393,7 +435,10 @@
       "level": 1,
       "metadata": {
         "sign": "Scorpio",
-        "element": "Water"
+        "element": "Water",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-scorpio",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Scorpio is the descent — the willingness to go where others won't, to face death, desire, and the raw truth of power. Here consciousness transforms through intensity.\n\n**Light:** Depth, passion, loyalty, psychological insight, regeneration.\n\n**Shadow:** Jealousy, manipulation, obsession, vindictiveness.\n\n**Archetype:** The Shaman — the one who travels between worlds.",
@@ -416,7 +461,10 @@
       "level": 1,
       "metadata": {
         "sign": "Sagittarius",
-        "element": "Fire"
+        "element": "Fire",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-sagittarius",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Sagittarius is the arrow in flight — the search for meaning, truth, and horizons beyond the known. Here consciousness expands through vision and adventure.\n\n**Light:** Optimism, philosophy, adventure, generosity, truthfulness.\n\n**Shadow:** Dogmatism, excess, restlessness, bluntness, irresponsibility.\n\n**Archetype:** The Explorer — the one who follows the arrow of meaning.",
@@ -439,7 +487,10 @@
       "level": 1,
       "metadata": {
         "sign": "Capricorn",
-        "element": "Earth"
+        "element": "Earth",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-capricorn",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Capricorn is the mountain — the slow, determined climb toward mastery and legacy. Here consciousness meets time, structure, and the weight of responsibility.\n\n**Light:** Ambition, discipline, integrity, practical wisdom, authority.\n\n**Shadow:** Coldness, workaholism, pessimism, rigidity, status obsession.\n\n**Archetype:** The Elder — the one who builds what endures.",
@@ -462,7 +513,10 @@
       "level": 1,
       "metadata": {
         "sign": "Aquarius",
-        "element": "Air"
+        "element": "Air",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aquarius",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Aquarius is the vision of what could be — the impulse toward collective evolution, individual freedom, and the future. Here consciousness serves the whole through radical originality.\n\n**Light:** Vision, humanitarianism, originality, intellectual independence.\n\n**Shadow:** Detachment, contrarianism, emotional avoidance, superiority.\n\n**Archetype:** The Visionary — the one who sees the future in the present.",
@@ -485,7 +539,10 @@
       "level": 1,
       "metadata": {
         "sign": "Pisces",
-        "element": "Water"
+        "element": "Water",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-pisces",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** Pisces is the ocean — the dissolution of separate self into the infinite. Here consciousness merges with everything, swimming in compassion, imagination, and the dream of unity.\n\n**Light:** Compassion, imagination, spirituality, artistic sensitivity, transcendence.\n\n**Shadow:** Escapism, victimhood, confusion, boundary dissolution.\n\n**Archetype:** The Dreamer — the one who remembers what the world has forgotten.",
@@ -507,7 +564,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 1
+        "house": 1,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-1",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of self and emergence. How you appear, how you begin, how you enter a room and a life. The mask that becomes the face.\n\n**Light:** Self-awareness, physical vitality, personal initiative.\n\n**Shadow:** Self-absorption, identity crises, over-concern with image.",
@@ -526,7 +586,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 2
+        "house": 2,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-2",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of resources and values. What you possess, what possesses you, and what you consider worth having. Your relationship to material reality.\n\n**Light:** Self-worth, material security, talent, sensory pleasure.\n\n**Shadow:** Greed, insecurity, over-attachment to possessions.",
@@ -544,7 +607,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 3
+        "house": 3,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-3",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of communication and mind. How you speak, write, learn, and connect with your immediate environment. The neighborhood of consciousness.\n\n**Light:** Curiosity, articulation, mental agility, sibling bonds.\n\n**Shadow:** Gossip, scattered thinking, superficial connections.",
@@ -562,7 +628,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 4
+        "house": 4,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-4",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of roots and foundation. Your home, your family of origin, your emotional bedrock. The place you return to when everything else falls away.\n\n**Light:** Emotional security, ancestry, belonging, inner foundation.\n\n**Shadow:** Family wounds, rootlessness, clinging to the past.",
@@ -581,7 +650,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 5
+        "house": 5,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-5",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of creation and play. Where you make things for the joy of making them — children, art, romance, games. The stage where your heart performs.\n\n**Light:** Creative expression, romance, children, joy, risk-taking.\n\n**Shadow:** Drama addiction, gambling, narcissistic expression.",
@@ -599,7 +671,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 6
+        "house": 6,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-6",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of service and daily practice. How you maintain your body, refine your craft, and serve the world through ordinary devotion. The sacred mundane.\n\n**Light:** Service, health awareness, craftsmanship, daily ritual.\n\n**Shadow:** Workaholism, hypochondria, perfectionism, servitude.",
@@ -617,7 +692,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 7
+        "house": 7,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-7",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of the other. Your partnerships, marriages, open enemies, and projections. The mirror in which you see what you cannot see alone.\n\n**Light:** Partnership, commitment, diplomacy, balance through relationship.\n\n**Shadow:** Codependency, projection, loss of self in others.",
@@ -636,7 +714,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 8
+        "house": 8,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-8",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of transformation and shared resources. Where you merge with others — financially, sexually, psychologically. The territory of death, inheritance, and rebirth.\n\n**Light:** Psychological depth, intimacy, shared power, transformation.\n\n**Shadow:** Power struggles, obsession, fear of loss, manipulation.",
@@ -654,7 +735,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 9
+        "house": 9,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-9",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of expansion and meaning. Your philosophy, long journeys, higher education, and relationship to truth. Where you search for the big picture.\n\n**Light:** Wisdom, faith, cross-cultural understanding, philosophical depth.\n\n**Shadow:** Dogmatism, restlessness, spiritual bypassing, arrogance.",
@@ -672,7 +756,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 10
+        "house": 10,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-10",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of vocation and public life. Your career, reputation, and contribution to the world. The peak of the chart — what you are seen to do.\n\n**Light:** Purpose, achievement, public contribution, authority.\n\n**Shadow:** Status obsession, workaholism, empty ambition, fear of failure.",
@@ -691,7 +778,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 11
+        "house": 11,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-11",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of community and vision. Your friends, networks, hopes, and the groups you belong to. Where individual purpose meets collective dreaming.\n\n**Light:** Community, friendship, humanitarian ideals, innovation.\n\n**Shadow:** Conformity, detachment, misplaced idealism, loneliness in crowds.",
@@ -709,7 +799,10 @@
       "category": "house",
       "level": 1,
       "metadata": {
-        "house": 12
+        "house": 12,
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-12",
+        "deck": "The Structure of the Sky"
       },
       "sections": {
         "Canonical": "**Story:** The house of the unseen. Your unconscious, your connection to the collective dream, your hidden strengths and sorrows. The place before birth and after death.\n\n**Light:** Spiritual depth, compassion, artistic vision, surrender, healing.\n\n**Shadow:** Self-undoing, isolation, addiction, martyrdom, hidden enemies.",

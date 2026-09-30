@@ -51,7 +51,10 @@
         "planet": "Moon",
         "deity_names": "Sin (Akkadian) / Nanna (Sumerian)",
         "confidence": "medium",
-        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon, Vol. II (1900), public domain"
+        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon, Vol. II (1900), public domain",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-moon",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -78,7 +81,10 @@
         "planet": "Sun",
         "deity_names": "Šamaš (Akkadian) / Utu (Sumerian)",
         "confidence": "medium",
-        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain"
+        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-sun",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -105,7 +111,10 @@
         "planet": "Venus",
         "deity_names": "Ištar (Akkadian) / Inanna (Sumerian); planetary name Dilbat",
         "confidence": "low",
-        "_source": "Langdon & Fotheringham, The Venus Tablets of Ammizaduga (1928, Oxford, public domain); Jastrow, The Religion of Babylonia and Assyria (1898, public domain)"
+        "_source": "Langdon & Fotheringham, The Venus Tablets of Ammizaduga (1928, Oxford, public domain); Jastrow, The Religion of Babylonia and Assyria (1898, public domain)",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-venus",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -132,7 +141,10 @@
         "planet": "Mars",
         "deity_names": "Nergal",
         "confidence": "medium",
-        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain"
+        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mars",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -159,7 +171,10 @@
         "planet": "Jupiter",
         "deity_names": "Marduk (also Sagmigar, Nibiru, Umun-pa-uddu as phase-names)",
         "confidence": "medium",
-        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain"
+        "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-jupiter",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -185,7 +200,10 @@
         "planet": "Saturn",
         "deity_names": "Ninurta (identification contested/uneven in the record); planetary name Kayamānu",
         "confidence": "low",
-        "_source": "Secondary scholarship on Saturn/Kayamānu naming, search-triangulated this session; no primary omen quotation located — gap stated honestly"
+        "_source": "Secondary scholarship on Saturn/Kayamānu naming, search-triangulated this session; no primary omen quotation located — gap stated honestly",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-saturn",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -212,7 +230,10 @@
         "planet": "Mercury",
         "deity_names": "Nabû",
         "confidence": "low",
-        "_source": "Myth/cult material search-triangulated (cross-referenced with grammars/planetary-myths); no primary omen-report quotation located this session — gap stated honestly"
+        "_source": "Myth/cult material search-triangulated (cross-referenced with grammars/planetary-myths); no primary omen-report quotation located this session — gap stated honestly",
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mercury",
+        "deck": "The Structure of the Sky"
       }
     }
   ],

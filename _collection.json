@@ -219,6 +219,33 @@
       "year_label": "Undated — contemporary reading (essay), built from course/the-right-size.mdx."
     },
     {
+      "slug": "the-structure-of-the-sky",
+      "name": "The Structure of the Sky — elements, modalities, signs, houses and aspects",
+      "description": "The skeleton the voices hang on, as plain data: not a voice, not an interpretation",
+      "grammar_type": "astrology",
+      "items": 77,
+      "categories": {
+        "zodiac": 1,
+        "element": 4,
+        "modality": 3,
+        "polarity": 2,
+        "sign": 12,
+        "triplicity": 4,
+        "quadruplicity": 3,
+        "planet-group": 2,
+        "planet": 10,
+        "house-system": 1,
+        "house": 12,
+        "house-group": 3,
+        "axis": 6,
+        "quadrant": 4,
+        "hemisphere": 4,
+        "aspect": 6
+      },
+      "provenance": "contemporary",
+      "year_label": "Undated — contemporary reference compilation, 2026. The schemes it tabulates are dated item by item in their 'Traditions' sections (Ptolemy c. 150 CE; the Bṛhat Jātaka c. 6th c. CE; Lilly 1647; Alan Leo 1899–1903)."
+    },
+    {
       "slug": "three-doors",
       "name": "Three Doors",
       "description": "Reading the sky through the Trika — Parā, Parāparā, Aparā",

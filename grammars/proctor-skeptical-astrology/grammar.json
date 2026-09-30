@@ -57,7 +57,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-saturn",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -97,7 +100,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-jupiter",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -137,7 +143,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mars",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -176,7 +185,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-sun",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -203,7 +215,12 @@
         "Venus is the protectrice of musicians, embroiderers, perfumers, classic modellers, and all who work in elegant attire or administer to the luxuries of the great.",
         "When she is afflicted, she represents 'the lower orders of the votaries of voluptuousness.'"
       ],
-      "sort_order": 4
+      "sort_order": 4,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-venus",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "mercury",
@@ -230,7 +247,12 @@
         "The persons signified by Mercury are astrologers, philosophers, mathematicians, politicians, merchants, travellers, teachers, poets, artificers, men of science, and all ingenious, clever men.",
         "When he is ill affected, however, he represents pettifoggers, cunning vile persons, thieves, messengers, footmen, and servants."
       ],
-      "sort_order": 5
+      "sort_order": 5,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-mercury",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "moon",
@@ -269,7 +291,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Trouvelot died 1895; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-moon",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -296,7 +321,12 @@
         "He causes the native born under his influence to be of a very eccentric and original disposition, romantic, unsettled, addicted to change, a seeker after novelty.",
         "And in general, let the fair sex remember that Uranus is peculiarly hostile to them, and very evil in love."
       ],
-      "sort_order": 7
+      "sort_order": 7,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "planet-uranus",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "aries",
@@ -336,7 +366,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aries",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -377,7 +410,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-taurus",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -418,7 +454,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-gemini",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -459,7 +498,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-cancer",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -500,7 +542,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-leo",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -541,7 +586,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-virgo",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -582,7 +630,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-libra",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -623,7 +674,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-scorpio",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -664,7 +718,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-sagittarius",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -705,7 +762,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-capricorn",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -746,7 +806,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-aquarius",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -787,7 +850,10 @@
           "license": "Public domain (as stated on the Wikimedia Commons file page)",
           "pd_basis": "Published 1824-25, engraver died 1831; Commons states public domain (PD-old-100)",
           "verified": "2026-07-26"
-        }
+        },
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "sign-pisces",
+        "deck": "The Structure of the Sky"
       }
     },
     {
@@ -815,7 +881,12 @@
         "The houses were not all of equal potency. The angular houses, which are the first, the fourth, the seventh, and the tenth—lying east, north, west, and south—were first in power, whether for good or evil.",
         "Thus planets of good influence in the native's ascendant, or first house, signified generally a prosperous life."
       ],
-      "sort_order": 30
+      "sort_order": 30,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-1",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-2",
@@ -840,7 +911,12 @@
         "The position of the planets in the various houses at some epoch guided the astrologer's opinion as to the fortune of that hour.",
         "It will be easily understood how these houses were dealt with in erecting a scheme of nativity."
       ],
-      "sort_order": 31
+      "sort_order": 31,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-2",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-3",
@@ -866,7 +942,12 @@
         "Thoughts of the asker—the third house reveals the nature of inquiry.",
         "The celestial sphere placed as at the moment of the native's birth was divided into twelve parts by great circles supposed to pass through the point overhead."
       ],
-      "sort_order": 32
+      "sort_order": 32,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-3",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-4",
@@ -892,7 +973,12 @@
         "Money of brethren, children of private enemies, sickness of friends.",
         "The place of the sun at midnight marks the foundation and ending of all things."
       ],
-      "sort_order": 33
+      "sort_order": 33,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-4",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-5",
@@ -918,7 +1004,12 @@
         "These three houses (the fifth, sixth, and seventh) followed in order from the fourth.",
         "All sorts of amusements, theatres, banquets, and merry-making belong to the fifth house."
       ],
-      "sort_order": 34
+      "sort_order": 34,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-5",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-6",
@@ -944,7 +1035,12 @@
         "The sixth house corresponds to the part of the sun's path below the horizon.",
         "Service, labor, and the ailments that come with them fill the sixth house."
       ],
-      "sort_order": 35
+      "sort_order": 35,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-6",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-7",
@@ -971,7 +1067,12 @@
         "But if at the same epoch a planet of malefic influence was in the seventh house, then the native, though on the whole prosperous, would be unfortunate in marriage.",
         "The angular houses were first in power, whether for good or evil."
       ],
-      "sort_order": 36
+      "sort_order": 36,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-7",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-8",
@@ -996,7 +1097,12 @@
         "Dead men's goods, castles, treasure hid, the fate of the corpse in the grave.",
         "The eighth house follows the seventh—what marriage shares includes mortality."
       ],
-      "sort_order": 37
+      "sort_order": 37,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-8",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-9",
@@ -1022,7 +1128,12 @@
         "The remaining four houses were called cadents, and were regarded as weakest in influence.",
         "The wisdom sought before worldly achievement resides in the ninth house."
       ],
-      "sort_order": 38
+      "sort_order": 38,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-9",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-10",
@@ -1049,7 +1160,12 @@
         "The angular houses, which are the first, the fourth, the seventh, and the tenth—lying east, north, west, and south—were first in power.",
         "The peak of worldly achievement lies at the midheaven."
       ],
-      "sort_order": 39
+      "sort_order": 39,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-10",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-11",
@@ -1074,7 +1190,12 @@
         "The allies who gather around our public position fill the eleventh house.",
         "Friends, hopes, and benefactors are signified by planets in the eleventh."
       ],
-      "sort_order": 40
+      "sort_order": 40,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-11",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "house-12",
@@ -1100,7 +1221,12 @@
         "Receiving two shillings and sixpence, contrary to an Act made under and provided by the wise and virtuous King James.",
         "The twelfth house, House of Enemies, had caught up with him."
       ],
-      "sort_order": 41
+      "sort_order": 41,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "house-12",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "conjunction",
@@ -1125,7 +1251,12 @@
         "When planets occupy the same degree, their powers unite.",
         "Whether for good or ill, according to the nature of the stars involved."
       ],
-      "sort_order": 50
+      "sort_order": 50,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-conjunction",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "sextile",
@@ -1150,7 +1281,12 @@
         "Mild benefit flows from the sextile, though not enough to overcome serious affliction.",
         "It was natural that the astrologers of old should regard the planetary influences as depending in the main on the position of the celestial bodies."
       ],
-      "sort_order": 51
+      "sort_order": 51,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-sextile",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "square",
@@ -1175,7 +1311,12 @@
         "Tension that motivates action may arise from the square.",
         "An enemy: a fiend lurks close behind the radiance of thy planet—oh! be warned!"
       ],
-      "sort_order": 52
+      "sort_order": 52,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-square",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "trine",
@@ -1200,7 +1341,12 @@
         "Natural harmony flows when planets stand in trine.",
         "Thus each of these planets, being moderated by this combination, produces a favourable temperament."
       ],
-      "sort_order": 53
+      "sort_order": 53,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-trine",
+        "deck": "The Structure of the Sky"
+      }
     },
     {
       "id": "opposition",
@@ -1225,7 +1371,12 @@
         "A fearful sign stands in the house of life, an enemy: a fiend lurks close behind.",
         "The radiance of thy planet—oh! be warned!"
       ],
-      "sort_order": 54
+      "sort_order": 54,
+      "metadata": {
+        "source_deck": "the-structure-of-the-sky",
+        "source_item_id": "aspect-opposition",
+        "deck": "The Structure of the Sky"
+      }
     }
   ],
   "_grammar_commons": {
