@@ -1,5 +1,21 @@
 # Changelog — The Recursive Astrology
 
+## September 30, 2026 — Chart Lab: curated public charts for the chart dropdown (data only)
+
+- **`mock-data/public-charts.json`**: 15 public charts for the Chart Lab's coming chart dropdown,
+  "events first, people with care". Eight AI events (the Transformer paper on arXiv, OpenAI
+  announced, AlphaGo v. Lee Sedol game 1, ChatGPT, GPT-4, the Bletchley Declaration, the EU AI Act
+  in force, Hugging Face's July 2026 incident disclosure) and seven public figures. Each carries its
+  source URL, a note on where each datum came from, and, for people, the Astro-Databank Rodden
+  rating. A time is used only where a source documents it; otherwise the chart is cast at local noon
+  with no houses, no Ascendant, and the Moon marked approximate with its span over the day. An
+  online event is cast for the publisher's home city and says the place is a convention. Two people
+  asked for are left out: one whose date Astro-Databank rates "in question", one whose date is known
+  only by year.
+- **`scripts/build_public_charts.py`** rebuilds it with this repo's engine (`api/calculate_chart.py`,
+  tropical Placidus and sidereal Lahiri whole-sign), speeds from `api/transit_timeline.py`, Chiron
+  from JPL Horizons, and the page's own aspect and figure rules. The page does not load the file yet.
+
 ## September 29, 2026 — Chart Lab, round 2: page links, named figures, the assistant, any chart
 
 - **Book passages link to their scanned page.** The Chart Lab's 234 public-domain book windows
