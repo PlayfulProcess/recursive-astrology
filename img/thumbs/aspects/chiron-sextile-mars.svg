@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Mars sextile Chiron" color="#4a4439">
+<title>Mars sextile Chiron</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#5b7fc0" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#5b7fc0" stroke-width="3" stroke-linecap="round"/>
+<line x1="128" y1="76" x2="128" y2="108" stroke="#5b7fc0" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="141.86" y1="84" x2="114.14" y2="100" stroke="#5b7fc0" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="114.14" y1="84" x2="141.86" y2="100" stroke="#5b7fc0" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(23.8 113.89) scale(0.03027 -0.03027)" d="M737 918Q573 918 457.5 804.0Q342 690 342.0 526.0Q342 362 457.5 254.0Q573 146 737 146Q898 146 1015.0 254.0Q1132 362 1132.0 526.0Q1132 690 1015.0 804.0Q898 918 737 918ZM1149 135Q981 -29 737 -29Q502 -29 332.0 129.5Q162 288 162.0 526.0Q162 764 334.5 934.5Q507 1105 737 1096Q965 1088 1077 985L1438 1333H1067L1207 1475H1701V983L1558 840V1213L1200 865Q1312 719 1312 526Q1312 294 1149 135Z"/>
+<path fill="currentColor" transform="translate(179.54 110.81) scale(0.03027 -0.03027)" d="M608.5 280.0Q550 221 550.0 138.0Q550 55 608.5 -3.5Q667 -62 750.0 -62.0Q833 -62 891.5 -3.5Q950 55 950.0 138.0Q950 221 891.5 280.0Q833 339 750.0 339.0Q667 339 608.5 280.0ZM502 388Q574 459 667 481V1455H839V1149L1132 1322L1218 1174L859 965L1218 755L1132 607L839 781V479Q928 457 998 388Q1102 285 1102.0 139.5Q1102 -6 998.5 -109.0Q895 -212 750.0 -212.0Q605 -212 501.5 -109.0Q398 -6 398.0 139.5Q398 285 502 388Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Mars sextile Chiron</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  60°</text>
+</svg>

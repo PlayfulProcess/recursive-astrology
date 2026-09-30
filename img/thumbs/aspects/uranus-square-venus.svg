@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Venus square Uranus" color="#4a4439">
+<title>Venus square Uranus</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c0473b" stroke-width="3" stroke-linecap="round"/>
+<polygon points="116.48,80.48 139.52,80.48 139.52,103.52 116.48,103.52" fill="none" stroke="#c0473b" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(29.29 110.78) scale(0.03027 -0.03027)" d="M750 1319Q586 1319 470.5 1205.0Q355 1091 355 927Q355 764 470.5 656.0Q586 548 750 548Q911 548 1028.0 656.0Q1145 764 1145 927Q1145 1091 1028.0 1205.0Q911 1319 750 1319ZM344 532Q175 689 175 927Q175 1166 343.0 1332.0Q511 1498 750 1498Q986 1498 1155.5 1332.0Q1325 1166 1325.0 927.0Q1325 688 1156 532Q1020 406 840 388V124H1112V0H840V-257H660V0H388V124H660V389Q479 406 344 532Z"/>
+<path fill="currentColor" transform="translate(176.24 114.64) scale(0.03027 -0.03027)" d="M782 262Q782 205 821.5 166.0Q861 127 917 127Q972 127 1011.5 166.0Q1051 205 1051 262Q1051 317 1012.0 356.5Q973 396 917.0 396.0Q861 396 821.5 356.5Q782 317 782 262ZM993 511Q1054 493 1102 445Q1178 369 1178.0 261.0Q1178 153 1102.0 76.5Q1026 0 917 0Q810 0 733.5 76.5Q657 153 657.0 261.0Q657 369 733 445Q780 494 842 511V907H554V470H248V621H403V1344H248V1496H554V1058H842V1496H993V1058H1281V1496H1586V1344H1433V621H1586V470H1281V907H993Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Venus square Uranus</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  90°</text>
+</svg>

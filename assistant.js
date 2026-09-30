@@ -16,6 +16,59 @@
   if (window.self !== window.top) return;
   if (new URLSearchParams(location.search).get('embed') === '1') return;
 
+  // What the assistant reads as "the page" (the launcher answers the embed's page-context request
+  // with this). Order: text set by ask() below; a page's own window.recursiveAstroPageText() (Chart
+  // Lab defines one, so a private chart on screen is never read out of the page); a [data-page-text]
+  // block; else the visible text of <main> (the launcher's own default).
+  var askContext = '';
+  function pageText() {
+    if (askContext) return askContext;
+    if (typeof window.recursiveAstroPageText === 'function') {
+      try { return String(window.recursiveAstroPageText() || ''); } catch (e) { return ''; }
+    }
+    var el = document.querySelector('[data-page-text]') || document.querySelector('main') || document.body;
+    return el ? el.innerText : '';
+  }
+  function buildSrc() {
+    var params = new URLSearchParams(location.search);
+    var grammarId = params.get('grammar_id') || params.get('id') || '';
+    var qs = new URLSearchParams();
+    if (grammarId) {
+      // A grammar is on the page: the assistant grounds "this grammar" on it.
+      qs.set('grammar_id', grammarId);
+      qs.set('context', 'astrology');
+    } else {
+      // No grammar: pass page context so "what is this page?" just works.
+      qs.set('page_title', document.title || 'The Recursive Astrology');
+      qs.set('page_url', location.href);
+    }
+    return window.RecursiveAssistant.flowBaseUrl() + '/assistant?' + qs.toString();
+  }
+
+  // RecursiveAstroAssistant.ask(text, context) -- open the shared sidebar on Chat with `text` typed
+  // into its chat box, and ground the chat on `context` (page context). Nothing is sent by itself:
+  // the reader edits and taps Send. Both halves already ship in recursive.eco (the ?ask= prefill the
+  // embed reads when it mounts, and the launcher's page-context handshake), so this needs no change
+  // there (Sep 29 2026; tested on flow and dev.flow). Returns false when the launcher is not mounted
+  // (inside an embed, offline): the caller then offers the text to copy.
+  // The text travels in the iframe URL: flow.recursive.eco answered 200 for a 32,000-character ask
+  // and 414 from 40,000, and non-ASCII letters grow when encoded, so it is capped well below that.
+  window.RecursiveAstroAssistant = {
+    ask: function (text, context) {
+      var RA = window.RecursiveAssistant;
+      var frame = document.querySelector('.rec-assistant-shell iframe');
+      if (!RA || !frame) return false;
+      askContext = String(context || '').slice(0, 20000);
+      var u = new URL(frame.getAttribute('src') || (buildSrc() + '&theme=light'), location.href);
+      u.searchParams.set('tab', 'chat');
+      u.searchParams.set('open', '1');
+      u.searchParams.set('ask', String(text || '').slice(0, 6000));
+      frame.src = u.toString();                   // reloads the embed with the text in its chat box
+      RA.open();                                  // grows the shell into the sidebar
+      return true;
+    }
+  };
+
   var s = document.createElement('script');
   s.src = 'https://recursive.eco/js/assistant-launcher.js';
   s.defer = true;
@@ -29,21 +82,8 @@
       // dark assistant panel on a light-only page (reported Sep 6 2026 from a
       // phone). Same declaration recursive-tarot has carried since Aug 2026.
       theme: 'light',
-      buildSrc: function () {
-        var params = new URLSearchParams(location.search);
-        var grammarId = params.get('grammar_id') || params.get('id') || '';
-        var qs = new URLSearchParams();
-        if (grammarId) {
-          // A grammar is on the page: the assistant grounds "this grammar" on it.
-          qs.set('grammar_id', grammarId);
-          qs.set('context', 'astrology');
-        } else {
-          // No grammar: pass page context so "what is this page?" just works.
-          qs.set('page_title', document.title || 'The Recursive Astrology');
-          qs.set('page_url', location.href);
-        }
-        return window.RecursiveAssistant.flowBaseUrl() + '/assistant?' + qs.toString();
-      }
+      buildSrc: buildSrc,
+      getPageText: pageText
     });
   };
   document.head.appendChild(s);

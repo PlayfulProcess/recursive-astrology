@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Pluto trine North Node" color="#4a4439">
+<title>Pluto trine North Node</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#3f7a5c" stroke-width="3" stroke-linecap="round"/>
+<polygon points="128,78 114.14,102 141.86,102" fill="none" stroke="#3f7a5c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(24.22 114.64) scale(0.03027 -0.03027)" d="M500 1496H909Q1211 1496 1311 1288Q1343 1211 1343 1116Q1343 850 1092 758Q1033 741 979 741H637V146H1271L1279 138V8L1271 0H500L492 8V1487ZM637 1356V880H963Q1093 880 1165 1010Q1181 1036 1189 1116Q1189 1280 1027 1340Q990 1356 909 1356Z"/>
+<path fill="currentColor" transform="translate(176.45 114.54) scale(0.03027 -0.03027)" d="M1206 312Q1206 239 1257.5 187.5Q1309 136 1383 136Q1456 136 1508.0 187.5Q1560 239 1560 312Q1560 386 1508.5 437.5Q1457 489 1383.0 489.0Q1309 489 1257.5 437.5Q1206 386 1206 312ZM436 489Q363 489 311.0 437.5Q259 386 259 312Q259 239 311.0 187.0Q363 135 436 135Q510 135 561.5 187.0Q613 239 613 312Q613 386 561.5 437.5Q510 489 436 489ZM1557 574Q1582 557 1604 535Q1695 443 1695 313Q1695 184 1604.0 92.5Q1513 1 1383 1Q1254 1 1163.0 92.5Q1072 184 1072 313Q1072 443 1162 535Q1243 616 1354 625Q1475 740 1475 893Q1475 1073 1307.5 1199.5Q1140 1326 900.0 1326.0Q660 1326 492.5 1199.5Q325 1073 325 893Q325 740 446 626Q571 622 658 535Q748 443 748.0 313.0Q748 183 657.0 91.5Q566 0 436 0Q308 0 216.5 91.5Q125 183 125.0 313.0Q125 443 216 535Q234 552 253 567Q131 709 131 891Q131 1139 355.0 1314.0Q579 1489 900 1489Q1224 1489 1448.0 1314.0Q1672 1139 1672 891Q1672 714 1557 574Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Pluto trine North Node</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  120°</text>
+</svg>

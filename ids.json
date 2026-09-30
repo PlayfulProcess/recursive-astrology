@@ -219,7 +219,9 @@
   "_missing_ids": {
     "_note": "On disk and in the collection, but with no recursive.eco UUID yet — no UUID is invented here. Add the real one when the grammar is created on recursive.eco.",
     "slugs": [
+      "astrology-schools",
       "dwarf-planets",
+      "esoteric-bailey-paraphrase",
       "the-right-size",
       "the-structure-of-the-sky"
     ]

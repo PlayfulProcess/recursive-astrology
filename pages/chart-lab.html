@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chart Lab (a mock-up) — The Recursive Astrology</title>
+<meta name="description" content="A mock-up: one chart read through many schools, in four modes (ask, today, lens, book). Readings are possibilities, never verdicts.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f5d8a' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 4a7 7 0 1 0 3 11 5.6 5.6 0 0 1-3-11z'/%3E%3Cpath d='M8.5 4.5l.6 1.7 1.7.6-1.7.6-.6 1.7-.6-1.7-1.7-.6 1.7-.6z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="chart-lab.css">
+</head>
+<body>
+<script src="../site-header.js?v=48"></script>
+<site-header active="chart-lab"></site-header>
+
+<main class="lab">
+  <header class="lab-hero">
+    <div class="kicker">Chart lab <span class="mock">a mock-up</span></div>
+    <h1>A chart, through the schools</h1>
+    <p class="creed">Read the sky to know yourself, not to be told your fate. A chart is a mirror and a calendar,
+      not a command. Relate to the symbol; never obey it.</p>
+    <p class="lede">Every reading here is a possibility: this could mean one thing; it could also mean another;
+      what does it mean to you? Each school speaks in its own voice (old books speak in certainties) and carries its
+      label and its source. The readings come from this site's own files. Two things reach out, and only when you ask:
+      <b>Interpret with AI</b> opens the recursive.eco assistant with a message you see and edit first, and a chart
+      opened from the calculator asks the chart server for its transits (positions only, never birth data).</p>
+  </header>
+
+  <div class="lab-grid">
+    <aside class="wheel-col" aria-label="Chart wheel">
+      <div class="wheel-card">
+        <div class="chart-meta" id="chartMeta">Loading the chart…</div>
+        <div class="zrow">
+          <div class="seg" id="zodiacSeg" role="group" aria-label="Zodiac">
+            <button type="button" data-z="tropical" aria-pressed="true">Tropical</button>
+            <button type="button" data-z="sidereal" aria-pressed="false">Sidereal</button>
+          </div>
+          <span class="znote" id="zodiacNote"></span>
+        </div>
+        <div id="wheelHost"></div>
+        <div class="wheel-legend" aria-hidden="true">
+          <span><i style="border-color:var(--bad)"></i>square, opposition</span>
+          <span><i style="border-color:var(--good)"></i>trine</span>
+          <span><i style="border-color:var(--c)"></i>sextile</span>
+          <span><i style="border-color:var(--mut);border-top-style:dashed"></i>to a point</span>
+        </div>
+        <div class="wheel-note" id="wheelNote" aria-live="polite"></div>
+        <div class="wheel-actions no-print">
+          <button type="button" class="minibtn" data-grammar="chart" title="Asks the recursive.eco assistant to build a PRIVATE grammar from this whole chart (its positions, figures and aspects; no birth date, time or place). You see and can edit the request first; the assistant asks before it writes anything.">Ask the assistant to build my grammar</button>
+          <span class="wa-note">through the recursive.eco assistant; nothing is saved from this page</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="read-col">
+      <div class="controls">
+        <details id="schoolsBox">
+          <summary>Schools <span class="count" id="schoolCount"></span></summary>
+          <div class="chiprow" id="schoolChips"></div>
+          <div class="actrow">
+            <button type="button" class="minibtn" data-preset="default">Defaults</button>
+            <button type="button" class="minibtn" data-preset="all">All</button>
+            <button type="button" class="minibtn" data-preset="none">None</button>
+            <span id="schoolsUrlNote">The choice lives in the address as <code>?schools=</code>, so a view can be shared as a link.</span>
+          </div>
+        </details>
+        <div class="rulers">
+          <label for="rulerSel">Rulership set</label>
+          <select id="rulerSel"></select>
+          <span class="taurus-demo" id="taurusDemo"></span>
+          <span class="rnote" id="rulerNote"></span>
+        </div>
+      </div>
+
+      <nav class="modes" role="tablist" aria-label="Modes">
+        <button type="button" role="tab" data-mode="ask" aria-selected="false"><span class="n">1</span>Ask</button>
+        <button type="button" role="tab" data-mode="today" aria-selected="false"><span class="n">2</span>Today</button>
+        <button type="button" role="tab" data-mode="lens" aria-selected="false"><span class="n">3</span>Lens</button>
+        <button type="button" role="tab" data-mode="book" aria-selected="false"><span class="n">4</span>Book</button>
+      </nav>
+
+      <div id="modeAsk" class="mode" role="tabpanel" hidden></div>
+      <div id="modeToday" class="mode" role="tabpanel" hidden></div>
+      <div id="modeLens" class="mode" role="tabpanel" hidden></div>
+      <div id="modeBook" class="mode" role="tabpanel" hidden></div>
+    </section>
+  </div>
+
+  <section class="more-ideas" aria-label="More ideas">
+    <h2>More ideas (not built yet)</h2>
+    <ul>
+      <li><b>Compare two schools on one placement.</b> Pick one placement and two schools; their readings sit face to
+        face, with the points where they part ways marked, so a disagreement is shown rather than smoothed over.</li>
+      <li><b>A question card to journal.</b> One placement, one school's question, a blank space and the date; print it or
+        keep it, and come back to it when the season has turned.</li>
+    </ul>
+  </section>
+</main>
+
+<dialog id="aiDlg" class="ai-dlg" aria-labelledby="aiTitle">
+  <div class="ai-in">
+    <h2 id="aiTitle">Interpret with AI</h2>
+    <p class="ai-what" id="aiWhat"></p>
+    <label class="ai-lbl" for="aiText">What will be sent (edit it freely)</label>
+    <textarea id="aiText" spellcheck="true"></textarea>
+    <div class="ai-count" id="aiCount" aria-live="polite"></div>
+    <p class="ai-note" id="aiNote"></p>
+    <div class="ai-actions">
+      <button type="button" class="minibtn" id="aiCancel">Cancel</button>
+      <button type="button" class="minibtn" id="aiCopy">Copy the text</button>
+      <button type="button" class="aigo" id="aiGo">Open the assistant with this</button>
+    </div>
+    <p class="ai-status" id="aiStatus" aria-live="polite"></p>
+  </div>
+</dialog>
+
+<script src="../site-footer.js?v=1"></script>
+<site-footer base="../"></site-footer>
+<script src="chart-lab.js?v=3"></script>
+<script src="../assistant.js?v=2" defer></script>
+</body>
+</html>

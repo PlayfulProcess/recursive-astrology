@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sun conjunction Uranus" color="#4a4439">
+<title>Sun conjunction Uranus</title>
+<rect width="256" height="256" fill="#faf8f3"/>
+<line x1="84" y1="92" x2="102" y2="92" stroke="#c8932f" stroke-width="3" stroke-linecap="round"/>
+<line x1="154" y1="92" x2="172" y2="92" stroke="#c8932f" stroke-width="3" stroke-linecap="round"/>
+<circle cx="124" cy="97" r="9" fill="none" stroke="#c8932f" stroke-width="3.2"/>
+<line x1="130.36" y1="90.64" x2="141.68" y2="79.32" stroke="#c8932f" stroke-width="3.2" stroke-linecap="round"/>
+<path fill="currentColor" transform="translate(24.21 114.64) scale(0.03027 -0.03027)" d="M1666 748Q1666 437 1447.0 218.5Q1228 0 917 0Q608 0 389.0 218.5Q170 437 170 748Q170 942 270.5 1122.5Q371 1303 551.0 1399.5Q731 1496 917 1496Q1106 1496 1286.0 1399.5Q1466 1303 1566.0 1123.5Q1666 944 1666 748ZM243 748Q243 468 440.0 271.5Q637 75 917.0 75.0Q1197 75 1394.0 271.5Q1591 468 1591 748Q1591 925 1501.0 1086.0Q1411 1247 1249.0 1334.0Q1087 1421 917.0 1421.0Q747 1421 585.0 1334.0Q423 1247 333.0 1086.0Q243 925 243 748ZM1105 748Q1105 670 1050.5 615.5Q996 561 918 561Q841 561 786.0 615.5Q731 670 731 748Q731 797 756.0 842.0Q781 887 826.0 911.0Q871 935 918.0 935.0Q965 935 1010.0 911.0Q1055 887 1080.0 842.0Q1105 797 1105 748Z"/>
+<path fill="currentColor" transform="translate(176.24 114.64) scale(0.03027 -0.03027)" d="M782 262Q782 205 821.5 166.0Q861 127 917 127Q972 127 1011.5 166.0Q1051 205 1051 262Q1051 317 1012.0 356.5Q973 396 917.0 396.0Q861 396 821.5 356.5Q782 317 782 262ZM993 511Q1054 493 1102 445Q1178 369 1178.0 261.0Q1178 153 1102.0 76.5Q1026 0 917 0Q810 0 733.5 76.5Q657 153 657.0 261.0Q657 369 733 445Q780 494 842 511V907H554V470H248V621H403V1344H248V1496H554V1058H842V1496H993V1058H1281V1496H1586V1344H1433V621H1586V470H1281V907H993Z"/>
+<text x="128" y="190" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="21" font-weight="600" fill="#221f1a">Sun conjunction Uranus</text>
+<text x="128" y="234" text-anchor="middle" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif" font-size="12" fill="#6b6457">aspect  ·  0°</text>
+</svg>
