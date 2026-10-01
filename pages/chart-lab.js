@@ -32,10 +32,13 @@
    ?stubauth=1 (localhost only, ignored elsewhere): a stub Supabase client with invented rows, to exercise
    the saved-charts code path off recursive.eco.
 
-   Two ways out, both only on a click: "Interpret with AI" opens the shared recursive.eco assistant
-   (../assistant.js) with a message the reader previews and edits first, and nothing is sent until they
-   tap Send there; "Ask the assistant to build my grammar" does the same with a request for a PRIVATE
-   grammar. There is no direct save from this page.
+   Two ways out, both only on a click: "Interpret with AI" (by the wheel for the whole chart, and on each
+   selection) shows the message in an edit box first, and "Send to the assistant" hands it to the shared
+   recursive.eco assistant (../assistant.js) by postMessage, or, where recursive.eco does not answer
+   that, types it into the assistant's chat box for the reader to send; "Ask the assistant to build my
+   grammar" opens the assistant with a request for a PRIVATE grammar, sent only when they tap Send there.
+   There is no direct save from this page. ../ids.json gives the switched-on schools' public grammar ids
+   to the assistant's page context.
 
    URL: ?mode=ask|today|lens|book  ?schools=slug,slug (mirrors tarot's ?decks=)  ?rulers=traditional|modern|
    esoteric|colour  ?zodiac=tropical|sidereal  ?sel=planet:mars|figure:0|house:5  ?day=YYYY-MM-DD  ?q=...
@@ -130,7 +133,7 @@
     schools: [], schoolBy: {}, families: {}, passages: [], byKey: new Map(),
     RULERS: {}, BAILEY: {}, DIGN: {},
     charts: { tropical: null, sidereal: null }, transits: null, readings: null, readById: new Map(),
-    source: 'example', exampleNote: '',
+    source: 'example', exampleNote: '', gids: {}, gidsPublic: new Set(),
     zodiac: 'tropical', mode: 'lens', on: new Set(), rulers: 'rulers-traditional', sel: null, dayIdx: 0, q: '', synBy: 'link',
   };
   let CH = null;          // the chart on the wheel (tropical or sidereal)
@@ -1898,15 +1901,21 @@
   }
 
   // ═════════ Interpret with AI, and "build my grammar": the shared recursive.eco assistant ═════════
-  // The route (the interpret research, Sep 29 2026; no recursive-eco change): ../assistant.js loads the
-  // shared launcher; RecursiveAstroAssistant.ask(text, context) reloads its iframe with
-  // ?tab=chat&open=1&ask=<text>, so the assistant opens on Chat with the text typed into its chat box,
-  // and answers the launcher's page-context request with `context`. Nothing is sent until the reader
-  // taps Send in the assistant. The text is shown here first, in an edit box.
+  // The text is shown first, in an edit box (the dialog is the consent screen). Two routes:
+  // - "Send to the assistant" (Interpret, Oct 1 2026): the tarot Caster's pattern (recursive-tarot
+  //   docs/ASSISTANT-EMBED-CONTRACT.md) in recursive.eco's own envelope. The page opens the sidebar and posts
+  //   { type: 'recursive-eco:ask', text, send: true, id } to the iframe's own origin (read from its src, never
+  //   '*'); the embed acks { type: 'recursive-eco:ask-ack', id, ok } and sends the text through its own Send
+  //   button's path, so sign-in, the 18+ question and credits all still apply (recursive-eco
+  //   apps/flow/src/lib/assistant/host-messages.ts, branch claude/prayer-for-the-loop, Sep 30 2026).
+  // - the prefill (Sep 29 2026; the fallback when no ack comes, and the grammar request's route):
+  //   RecursiveAstroAssistant.ask(text, context) reloads the iframe with ?tab=chat&open=1&ask=<text>, so
+  //   the assistant opens on Chat with the text typed into its chat box, and the reader taps Send there.
+  // Either way the launcher's page-context request is answered with pageSummary(), never the page's text.
   const CREED = 'Read the sky to know yourself, not to be told your fate. A chart is a mirror and a calendar, not a command. Relate to the symbol; never obey it.';
   const FRAME = 'Offer possibilities, not predictions; ask me what fits.';
-  const AI_MAX = 6000;   // the text travels in the assistant's URL; flow.recursive.eco answered 414 from about 40,000 characters
-  const AI_TIP = 'Sends the chart facts you chose (this selection, no birth date, time or place) to the recursive.eco assistant. You see and can edit the text first, and nothing is sent until you tap Send in the assistant.';
+  const AI_MAX = 6000;   // the prefill carries the text in the assistant's URL (flow.recursive.eco answered 414 from about 40,000 characters); a message may carry 8,000
+  const AI_TIP = 'Sends the chart facts you chose (this selection, no birth date, time or place) to the recursive.eco assistant. You see and can edit the text first; nothing is sent until you press "Send to the assistant".';
   const GR_TIP = 'Asks the recursive.eco assistant to build a PRIVATE grammar from these chart facts (no birth date, time or place). You see and can edit the request first; the assistant asks before it writes anything.';
   const aiRow = (ctx, grammar) => `<div class="airow no-print"><button type="button" class="aibtn" data-ai="${esc(ctx)}" title="${esc(AI_TIP)}">Interpret with AI</button>${grammar ? `<button type="button" class="minibtn" data-grammar="${esc(grammar)}" title="${esc(GR_TIP)}">Ask the assistant to make this a grammar</button>` : ''}</div>`;
   // plain text from the page's own html (glyph spans dropped)
@@ -1935,10 +1944,11 @@
   }
   const aspLine = a => `${cap(theNm(a.a))} ${a.type} ${theNm(a.b)} (orb ${(+a.orb).toFixed(1)}°)`;
   const chainLine = k => { const c = chainFrom(k); return c.chain.map(nm).join(' -> ') + (c.end === 'domicile' ? ' (rests: in its own sign)' : c.end === 'loop' ? ' (a loop)' : c.end === 'uncomputed' ? ' (pauses: no position)' : ''); };
-  // the switched-on schools' readings for a list of key sets, first match per school, short
-  function schoolLines(keyLists, max = 8, n = 230) {
-    const out = [];
-    for (const s of enabledSchools()) {
+  // the switched-on schools' readings for a list of key sets, first match per school, short; `from` starts the
+  // round of schools further along, so the whole-chart text gives each school a turn
+  function schoolLines(keyLists, max = 8, n = 230, from = 0) {
+    const out = [], on = enabledSchools(), at = on.length ? from % on.length : 0;
+    for (const s of on.slice(at).concat(on.slice(0, at))) {
       let hit = null;
       for (const keys of keyLists) {
         const ks = typeof keys === 'function' ? keys(s.slug) : keys;
@@ -2010,13 +2020,15 @@
       `The site's creed: "${CREED}"`);
     return L.join('\n');
   }
-  function wholeChartFacts() {
+  // maxAsp: list only the tightest aspects (the whole-chart interpret text, when a long list would not fit)
+  function wholeChartFacts(maxAsp = Infinity) {
     const f = [];
     BODIES.filter(k => CH.pts[k]).forEach(k => f.push(ptLine(k)));
     if (CH.asc) f.push(`Ascendant: ${CH.asc.pos || CH.asc.sign}`);
     if (CH.mc) f.push(`Midheaven: ${CH.mc.pos || CH.mc.sign}`);
     CH.figures.forEach(x => f.push(`Figure: the ${figName(x)}`));
-    f.push('Aspects: ' + CH.aspects.map(a => `${nm(a.a)} ${a.type} ${nm(a.b)} ${(+a.orb).toFixed(1)}°`).join('; '));
+    const asps = CH.aspects.length > maxAsp ? CH.aspects.slice().sort((a, b) => a.orb - b.orb).slice(0, maxAsp) : CH.aspects;
+    f.push((asps.length < CH.aspects.length ? `Aspects (the ${asps.length} tightest of ${CH.aspects.length}): ` : 'Aspects: ') + asps.map(a => `${nm(a.a)} ${a.type} ${nm(a.b)} ${(+a.orb).toFixed(1)}°`).join('; '));
     const fd = finalDispositor(); f.push(fd.single ? `Final dispositor (${SHORT[S.rulers]} set): ${nm(fd.single)}` : `No single final dispositor (${SHORT[S.rulers]} set)`);
     return f;
   }
@@ -2034,10 +2046,77 @@
       `- Schools I read with: ${enabledSchools().map(s => s.label).join('; ') || 'none switched on'}.`];
     return L.join('\n');
   }
-  const pageSummary = () => `Chart Lab on The Recursive Astrology: one chart read through many schools, in four modes. The chart on screen is ${chartKind()}. Chart facts reach the assistant only in a message the reader previews, edits and sends. ${FRAME} Creed: ${CREED}`;
+  // the whole chart, for the "Interpret with AI" by the wheel: a short prompt; the chart (positions only, and a name
+  // only where chartKind() gives one: a public chart or the example); the schools switched on; then what they say,
+  // topic by topic in priority order (the Sun, the Moon, the Ascendant, the figures, the three tightest aspects,
+  // the other planets), three schools a topic in turn, for as long as the text fits AI_MAX. The key sets are the
+  // Book's (its pillars and figures), so the excerpts are the ones the page shows.
+  const ASK_HOW = ['Please read this chart with me as possibilities, not verdicts.',
+    '- For each thing you pick out, say "this could mean ..., it could also mean ...", then ask me: "what does it mean to you?"',
+    '- Name the school each reading comes from and keep it in that school\'s voice. The old books below speak in certainties: give those as that school\'s view, not as fact.',
+    '- No fate claims, and no predictions about me or anyone.',
+    '- End on one question for me, or one small step I could take.',
+    `The site's creed: "${CREED}"`];
+  function chartTopics() {
+    // title: the heading over the excerpts; short: its name in the note on what was left out
+    const t = [], pillar = (k, p) => ({ title: `${theNm(k)} in ${p.sign}${inHouse(p)}`, short: theNm(k), keyLists: [['planet-' + k, 'sign-' + p.sign.toLowerCase()]] });
+    if (CH.pts.sun) t.push(pillar('sun', CH.pts.sun));
+    if (CH.pts.moon) t.push(pillar('moon', CH.pts.moon));
+    if (CH.asc) t.push({ title: `the Ascendant in ${CH.asc.sign}`, short: 'the Ascendant', keyLists: [['concept-ascendant', 'sign-' + CH.asc.sign.toLowerCase()]] });
+    CH.figures.forEach(f => t.push({ title: `the ${figName(f)}`, short: `the ${figShort(f)}${f.type === 'stellium' ? (f.scope === 'house' ? ` in the ${ord(houseNo(f))} house` : ` in ${f.where}`) : ''}`,
+      keyLists: [f.type === 'T-square' ? ['concept-t-square'] : f.type === 'stellium' ? ['concept-stellium'] : (f.members || []).map(m => 'planet-' + m)] }));
+    CH.aspects.filter(a => !a.pt).sort((a, b) => a.orb - b.orb).slice(0, 3)
+      .forEach(a => t.push({ title: `${theNm(a.a)} ${a.type} ${theNm(a.b)} (orb ${(+a.orb).toFixed(1)}°)`, short: `${theNm(a.a)} ${a.type} ${theNm(a.b)}`, keyLists: [['pair-' + [a.a, a.b].sort().join('-')], ['aspect-' + a.type]] }));
+    PLANETS.filter(k => k !== 'sun' && k !== 'moon' && CH.pts[k]).forEach(k => t.push(pillar(k, CH.pts[k])));
+    return t;
+  }
+  function chartText() {
+    const on = enabledSchools();
+    const headOf = maxAsp => [...ASK_HOW, '',
+      `I'm reading ${chartKind()} in Chart Lab on The Recursive Astrology (astro.recursive.eco), one chart read through many schools of astrology.`, ...publicLines(),
+      '', 'The chart (positions only; no birth date, time or place):', ...wholeChartFacts(maxAsp).map(x => '- ' + x), '- ' + settingsLine(),
+      '', on.length ? `Schools I switched on: ${on.map(s => s.label).join('; ')}.` : 'No school is switched on, so there are no school readings here: read from the placements.'].join('\n');
+    // the chart itself comes first; a long aspect list gives way to its tightest aspects before any of it is lost
+    let out = '';
+    for (const m of [Infinity, 20, 12, 8]) { out = headOf(m); if (out.length <= AI_MAX - 1200) break; }
+    if (!on.length) return out;
+    const blocks = [];
+    chartTopics().forEach((tp, i) => {
+      const rs = schoolLines(tp.keyLists, 3, 150, i * 3);
+      if (rs.length) blocks.push({ short: tp.short, text: '\n\n' + [`On ${tp.title}:`, ...rs.map(r => '- ' + r)].join('\n') });
+    });
+    if (!blocks.length) return out;
+    out += '\n\nWhat the schools say (short excerpts from this site\'s grammars, public-domain books and podcast captions, each in its school\'s own voice, with its source in brackets):';
+    const left = [], room = AI_MAX - 220;   // keeps room for the note on what was left out
+    for (const b of blocks) { if (out.length + b.text.length <= room) out += b.text; else left.push(b.short); }
+    if (left.length) {
+      const note = `\n\n(Left out to fit the length the assistant takes: what the schools say of ${andList(left)}.)`;
+      out += out.length + note.length <= AI_MAX ? note : `\n\n(Left out to fit: what the schools say of ${left.length} more placements, figures and aspects.)`;
+    }
+    return out;
+  }
+  // the switched-on schools' public grammars on recursive.eco (../ids.json), named in the page context so the
+  // assistant can read one whole with its library_grammar_detail tool. The page context is the only channel for
+  // them: the embed takes a grammar_id only from its own URL, at load, and a sent message must not reload it.
+  function schoolGrammars() {
+    const out = [];
+    for (const s of enabledSchools()) for (const g of (s.grammar_slugs || [])) {
+      const id = S.gids[g]; if (!id || !S.gidsPublic.has(g)) continue;
+      const had = out.find(x => x.id === id);
+      if (had) had.schools.push(s.label); else out.push({ id, slug: g, schools: [s.label] });
+    }
+    return out;
+  }
+  const pageSummary = () => {
+    const gs = schoolGrammars();
+    return `Chart Lab on The Recursive Astrology: one chart read through many schools, in four modes. The chart on screen is ${chartKind()}. Chart facts reach the assistant only in a message the reader previews, edits and sends. ${FRAME} Creed: ${CREED}` +
+      (gs.length ? ` The schools switched on have these public grammars on recursive.eco; when the reader asks what a school says beyond the excerpts in a message, read its grammar with library_grammar_detail: ${gs.map(x => `${x.slug} (${x.id}), for ${x.schools.join(' and ')}`).join('; ')}.` : '');
+  };
   // what the shared assistant reads as "the page": never the page's own text (it may be a private chart)
   window.recursiveAstroPageText = pageSummary;
   const offRecursive = () => !/(^|\.)recursive\.eco$/.test(location.hostname);
+  let aiMode = 'interpret';
+  const SEND_NOTE = '<b>Which route:</b> the shared recursive.eco assistant (the star in the corner). "Send to the assistant" opens it and sends the text below as if you had pressed Send there, so sign-in, the age question and credits apply as usual. Where recursive.eco does not take a sent message yet, the text is typed into its chat box instead, and you press Send there.';
   function openAI(mode, arg) {
     const dlg = $('#aiDlg'); if (!dlg) return;
     let text = '', what = '', note = '';
@@ -2045,15 +2124,22 @@
       text = grammarText(arg);
       $('#aiTitle').textContent = 'Ask the assistant to build my grammar';
       what = arg === 'chart' ? 'The whole chart on screen: every placement, the figures by name, the aspects.' : 'The selection in the Lens.';
-      note = `<b>Which route:</b> the recursive.eco assistant, the same way as "Interpret with AI". This page cannot save a grammar itself, and recursive.eco has no one-step "save this chart as a grammar" message a page like this could send (that would need a change on recursive.eco). When you are signed in, the assistant has its own tools to create a grammar; the request asks it to make the grammar private and to tell you what it will create and wait for your yes. Nothing is sent until you tap Send in the assistant.`;
+      note = `<b>Which route:</b> the recursive.eco assistant, opened on Chat with the request typed into its chat box. This page cannot save a grammar itself, and recursive.eco has no one-step "save this chart as a grammar" message a page like this could send (that would need a change on recursive.eco). When you are signed in, the assistant has its own tools to create a grammar; the request asks it to make the grammar private and to tell you what it will create and wait for your yes. Nothing is sent until you tap Send in the assistant.`;
+    } else if (arg === 'chart') {
+      text = chartText();
+      $('#aiTitle').textContent = 'Interpret with AI';
+      what = 'The whole chart on screen: every placement, the figures by name, the aspects, and what the schools you switched on say, as much as fits.';
+      note = SEND_NOTE;
     } else {
       const sel = selectionFor(arg);
       if (!sel) return;
       text = interpretText(sel);
       $('#aiTitle').textContent = 'Interpret with AI';
       what = `Selected: ${sel.title}.`;
-      note = '<b>Which route:</b> the shared recursive.eco assistant (the star in the corner). This opens it on Chat with the text below typed into its chat box. Nothing is sent until you tap Send there.';
+      note = SEND_NOTE;
     }
+    aiMode = mode;
+    $('#aiGo').textContent = mode === 'grammar' ? 'Open the assistant with this' : 'Send to the assistant';
     note += ' The text carries only the chart facts shown in it, never a birth date, time or place. A chat may use recursive.eco credits.';
     if (offRecursive()) note += ' On this host the assistant runs signed out (sign-in carries only on recursive.eco pages): it can chat, but cannot save or create anything.';
     $('#aiWhat').textContent = what;
@@ -2076,6 +2162,51 @@
     }
   }
   function closeAI() { const d = $('#aiDlg'); if (d.close) d.close(); else d.removeAttribute('open'); }
+  // where the outcome is said once the dialog has closed (an open modal dialog keeps the sidebar out of reach)
+  let toastT = null;
+  function toast(msg, ms = 8000) {
+    let t = $('#labToast');
+    if (!t) { t = document.createElement('div'); t.id = 'labToast'; t.className = 'lab-toast no-print'; t.setAttribute('role', 'status'); document.body.appendChild(t); }
+    t.textContent = msg; t.classList.add('on');
+    clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('on'), ms);
+  }
+  // the launcher's iframe, once it has mounted (the launcher loads from recursive.eco after this page)
+  async function assistantFrame() {
+    for (let i = 0; i < 24; i++) {   // about 6 s
+      const f = document.querySelector('.rec-assistant-shell iframe');
+      if (f && window.RecursiveAssistant) return f;
+      await new Promise(r => setTimeout(r, 250));
+    }
+    return null;
+  }
+  // post the text and wait for the ack: 'sent' | 'held' (acked ok:false: a repeat inside a minute, or too soon after
+  // the last ask) | 'no-ack' (an embed without the listener, or no answer in time). The launcher starts the embed
+  // only after this page has settled, or on the first open: when this open starts it, the wait counts from its load.
+  const ACK_MS = 1500, LOAD_MS = 8000;
+  function sendToAssistant(frame, text) {
+    return new Promise(resolve => {
+      const loaded = !!frame.getAttribute('src');
+      window.RecursiveAssistant.open();   // grows the shell into the sidebar, and sets the iframe's src if it had none
+      let origin = '';
+      try { origin = new URL(frame.src, location.href).origin; } catch (e) { /* no src: no ack */ }
+      if (!origin || origin === 'null') { resolve('no-ack'); return; }
+      const id = 'chart-lab-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
+      let done = false, every = null, until = null;
+      const finish = r => { if (done) return; done = true; clearInterval(every); clearTimeout(until); window.removeEventListener('message', onAck); resolve(r); };
+      function onAck(e) {
+        if (e.origin !== origin || e.source !== frame.contentWindow) return;
+        const d = e.data;
+        if (d && d.type === 'recursive-eco:ask-ack' && d.id === id) finish(d.ok ? 'sent' : 'held');
+      }
+      window.addEventListener('message', onAck);
+      // posted again every 300 ms while the embed may still be starting: the embed sends one text once (a repeat
+      // inside a minute is acked ok:false and not sent), and the first ack ends the wait
+      const post = () => { try { frame.contentWindow.postMessage({ type: 'recursive-eco:ask', text, send: true, id }, origin); } catch (e) { /* the frame went away */ } };
+      const start = ms => { clearTimeout(until); post(); every = setInterval(post, 300); until = setTimeout(() => finish('no-ack'), ms); };
+      if (loaded) start(ACK_MS);
+      else { frame.addEventListener('load', () => { if (!done) start(ACK_MS * 2); }, { once: true }); until = setTimeout(() => finish('no-ack'), LOAD_MS); }
+    });
+  }
   function wireAI() {
     document.addEventListener('click', e => {
       const b = e.target.closest('[data-ai], [data-grammar]'); if (!b) return;
@@ -2084,13 +2215,30 @@
     $('#aiText').addEventListener('input', aiCount);
     $('#aiCancel').addEventListener('click', closeAI);
     $('#aiCopy').addEventListener('click', async () => { $('#aiStatus').textContent = (await aiCopy($('#aiText').value)) ? 'Copied.' : 'Could not copy: select the text and copy it.'; });
+    const unavailable = async text => {
+      const copied = await aiCopy(text);
+      $('#aiStatus').textContent = `The assistant is not available on this page right now (it loads from recursive.eco, and is left out inside embeds).${copied ? ' The text is copied: paste it into the assistant on any recursive.eco page.' : ''}`;
+    };
     $('#aiGo').addEventListener('click', async () => {
       const text = $('#aiText').value.trim(); if (!text) return;
       const A = window.RecursiveAstroAssistant;
-      const ok = !!(A && A.ask(text, pageSummary()));
-      if (ok) { closeAI(); return; }
-      const copied = await aiCopy(text);
-      $('#aiStatus').textContent = `The assistant is not available on this page right now (it loads from recursive.eco, and is left out inside embeds).${copied ? ' The text is copied: paste it into the assistant on any recursive.eco page.' : ''}`;
+      if (aiMode === 'grammar') {   // the grammar request keeps the prefill: the reader taps Send in the assistant
+        if (A && A.ask(text, pageSummary())) closeAI(); else await unavailable(text);
+        return;
+      }
+      if (!A) { await unavailable(text); return; }
+      const go = $('#aiGo'); go.disabled = true;
+      $('#aiStatus').textContent = 'Opening the assistant…';
+      const frame = await assistantFrame();
+      go.disabled = false;
+      if (!frame) { await unavailable(text); return; }
+      closeAI();
+      toast('Sending to the assistant…', 15000);
+      const r = await sendToAssistant(frame, text);
+      if (r === 'sent') toast('Sent to the assistant: its answer comes in the sidebar. Sign-in, the age question and credits apply as usual.');
+      else if (r === 'held') toast('The assistant did not send it: it takes the same text once a minute, and one ask every few seconds. Try again in a moment, or copy the text from Interpret with AI.', 10000);
+      else if (A.ask(text, pageSummary())) toast('Placed in the assistant: press Send.', 10000);
+      else toast('The assistant did not answer. Open Interpret with AI again and copy the text.', 10000);
     });
   }
 
@@ -2121,9 +2269,11 @@
       // a new chart: a fresh page (its own figures, houses, transits), keeping the mode, schools, rulers and zodiac
       location.assign(urlWith({ chart: v, from: null, h: null, sel: null, day: null, q: null }));
     });
-    const [schoolsG, structure, bailey, shelf] = await Promise.all([
+    const [schoolsG, structure, bailey, shelf, ids] = await Promise.all([
       getJSON('../grammars/astrology-schools/grammar.json'), getJSON('../grammars/the-structure-of-the-sky/grammar.json'),
-      getJSON('../grammars/esoteric-bailey-paraphrase/grammar.json'), getJSON('../mock-data/passages.json')]);
+      getJSON('../grammars/esoteric-bailey-paraphrase/grammar.json'), getJSON('../mock-data/passages.json'), getJSON('../ids.json')]);
+    // the schools' grammars on recursive.eco, for the assistant's page context (pageSummary)
+    if (ids && ids.ids) { S.gids = ids.ids; S.gidsPublic = new Set(ids._public_now || []); }
     // schools (+ the extra podcast group from the shelf)
     const fams = {}; ((schoolsG && schoolsG._families) || []).forEach(f => { fams[f.id] = f.label; });
     S.schools = ((schoolsG && schoolsG._schools) || []).map(s => Object.assign({}, s, { family_label: fams[s.family] || s.family_label || '' }));
