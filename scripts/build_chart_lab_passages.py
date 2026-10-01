@@ -26,11 +26,10 @@ paths are arguments, not defaults:
 
   python scripts/build_chart_lab_passages.py --books-db PATH --podcasts-db PATH --pages-lib DIR
 
-Page links come from page_url(book_id, chunk_index, at=...) in astro_texts_pages.py, a local
-research module (it maps each indexed passage to its scanned page from the books' djvu.xml). Its
-folder is an argument too (--pages-lib, or the ASTRO_PAGES_LIB environment variable). Without it,
-or when a page is unknown, a book passage links to the book's details page on archive.org: never
-to a search.
+Page links come from page_url(book_id, chunk_index, at=...) in scripts/astro_texts_pages.py, which
+reads sources/public-domain/passage_pages.json (each indexed passage mapped to its scanned page from
+the books' djvu.xml). Another copy can be given with --pages-lib DIR or ASTRO_PAGES_LIB. When a page
+is unknown, a book passage links to the book's details page on archive.org: never to a search.
 
 To swap only the book links in an existing mock-data/passages.json (nothing else changes):
 
@@ -257,7 +256,7 @@ PAGE_URL = None   # astro_texts_pages.page_url, when --pages-lib (or ASTRO_PAGES
 def load_page_url(lib):
     """Import page_url from the local research module; None when it is not available."""
     global PAGE_URL
-    lib = lib or os.environ.get('ASTRO_PAGES_LIB')
+    lib = lib or os.environ.get('ASTRO_PAGES_LIB') or os.path.dirname(os.path.abspath(__file__))
     if not lib:
         return None
     import sys
@@ -404,7 +403,7 @@ def main():
     ap.add_argument('--books-db', required=True, help='SQLite index of the public-domain books')
     ap.add_argument('--podcasts-db', help='SQLite index of the podcast transcripts (not needed with --relink)')
     ap.add_argument('--pages-lib', help='folder holding astro_texts_pages.py (page links); '
-                                        'default: the ASTRO_PAGES_LIB environment variable')
+                                        'default: ASTRO_PAGES_LIB, else this scripts folder')
     ap.add_argument('--relink', action='store_true',
                     help='only swap the book links of the existing mock-data/passages.json')
     a = ap.parse_args()

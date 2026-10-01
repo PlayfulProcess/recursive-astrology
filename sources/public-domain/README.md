@@ -24,4 +24,8 @@ archive.org records for the scanned edition.
 | A manual of astrology, or The book of the stars, by Raphael | Robert Cross Smith | 1828 | [amanualastrolog00smitgoog](https://archive.org/details/amanualastrolog00smitgoog) | `amanualastrolog00smitgoog.txt` |
 
 Search: a hybrid keyword + meaning search over these texts is built by `astro_texts_index.py` in the private
-recursive-transcripts repo (corpus/astrology-texts); each hit links back to archive.org's search-inside.
+recursive-transcripts repo (corpus/astrology-texts).
+
+Page links: `passage_pages.json` maps every indexed passage (150-word chunks) to its scanned page on
+archive.org (`/details/<id>/page/n<leaf>/mode/1up`), made from each book's djvu.xml by
+`scripts/astro_texts_pages.py`. The Chart Lab shelf (`mock-data/passages.json`) takes its book links from it.
