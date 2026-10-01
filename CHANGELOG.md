@@ -1,5 +1,58 @@
 # Changelog — The Recursive Astrology
 
+## September 30, 2026 — Chart Lab: the chart dropdown (saved charts, public charts, the example)
+
+- **A chart menu at the top of `pages/chart-lab.html`**, in four groups: "Your saved charts" (only
+  when signed in on recursive.eco), "AI events" and "Public figures" (from
+  `mock-data/public-charts.json`), and "Example (invented)". On localhost the owner's local files stay
+  as a "This laptop" group. The choice lives in the address as `?chart=saved:<id>`, `public:<id>`,
+  `example` or `local`; a saved chart travels only as its id (RLS-protected), never as birth data.
+- **Saved charts with no recursive-eco change.** The page loads `viewer/config.js` and
+  `viewer/assets/js/auth-init.js` as the calculator does and reads the shared `.recursive.eco`
+  sign-in cookie. With no cookie it stops there (a signed-out visitor never loads supabase-js) and
+  offers a sign-in link. Signed in, it loads supabase-js 2.117.2 from jsdelivr (pinned, with an SRI
+  hash), lists the user's `user_documents` rows (tool_slug `birth-chart`, id and name only), reads the
+  picked row (the user's own only), POSTs its birth data to `chart.recursive.eco/api/calculate-chart`
+  (tropical and sidereal) and its positions to `api/transit-timeline` for Today, then computes
+  aspects, figures and the sidereal chart through the same adapter as "Open in Chart Lab".
+- **Public charts carry a banner** that stays on screen: for a person, "A public figure's birth chart,
+  from a public source (its Astro-Databank rating). The schools here read placements, never the
+  person; nothing on this page predicts anything about anyone"; for an event, "The sky at this event,
+  read as the schools would read any moment", each with its date, place, source link and note. Today
+  and the Book's season are left out for public charts, and say why.
+- **An order that ranks no one**: the menu lists AI events by date and public figures by surname. A
+  person with no Astro-Databank entry says so ("no Rodden rating", and where the date came from)
+  instead of showing no rating. Three data notes were trimmed to their sources: the Hugging Face
+  note cites only the disclosure itself, one person's note keeps only the rating's basis and the
+  Ascendant caveat, and another's drops two secondary citations.
+- **Time unknown**: no houses, Ascendant or Midheaven on the wheel, and every house-based reading is
+  left out (house tenancy and ownership, the house picker, the houses chapter, the first planet below
+  the horizon), with a note saying why. The Moon is marked approximate, with its span over the day.
+- **Calculator** (`viewer/astrology-viewer.html`): picking a saved chart from its menu now sets
+  `currentChartId` (only the `?chartId=` link did), and so does saving one. "Open in Chart Lab" on
+  one of your saved charts opens `astro.recursive.eco/pages/chart-lab.html?chart=saved:<id>` (the id
+  only), while the chart on screen still has that row's birth data; any other chart hands over its
+  positions as before.
+- `?stubauth=1` (localhost only, ignored anywhere else) swaps in a stub Supabase client with invented
+  rows, to exercise the saved-charts path off recursive.eco. The live signed-in path is untested
+  until this is on astro.recursive.eco.
+
+## September 30, 2026 — Chart Lab: curated public charts for the chart dropdown (data only)
+
+- **`mock-data/public-charts.json`**: 15 public charts for the Chart Lab's coming chart dropdown,
+  "events first, people with care". Eight AI events (the Transformer paper on arXiv, OpenAI
+  announced, AlphaGo v. Lee Sedol game 1, ChatGPT, GPT-4, the Bletchley Declaration, the EU AI Act
+  in force, Hugging Face's July 2026 incident disclosure) and seven public figures. Each carries its
+  source URL, a note on where each datum came from, and, for people, the Astro-Databank Rodden
+  rating. A time is used only where a source documents it; otherwise the chart is cast at local noon
+  with no houses, no Ascendant, and the Moon marked approximate with its span over the day. An
+  online event is cast for the publisher's home city and says the place is a convention. Two people
+  asked for are left out: one whose date Astro-Databank rates "in question", one whose date is known
+  only by year.
+- **`scripts/build_public_charts.py`** rebuilds it with this repo's engine (`api/calculate_chart.py`,
+  tropical Placidus and sidereal Lahiri whole-sign), speeds from `api/transit_timeline.py`, Chiron
+  from JPL Horizons, and the page's own aspect and figure rules. The page does not load the file yet.
+
 ## September 29, 2026 — Chart Lab, round 2: page links, named figures, the assistant, any chart
 
 - **Book passages link to their scanned page.** The Chart Lab's 234 public-domain book windows
