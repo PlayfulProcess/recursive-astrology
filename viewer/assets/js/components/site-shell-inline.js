@@ -113,7 +113,7 @@
                                 <div id="library-my-section" class="hidden">
                                     <div class="px-4 py-1.5 text-xs font-semibold text-purple-600 uppercase tracking-wider bg-purple-50">My Library</div>
                                     <a id="library-my-collection" href="https://flow.recursive.eco/library" class="block px-4 py-2.5 hover:bg-purple-50 transition-colors" data-nav>
-                                        <span class="font-medium text-purple-700">Personal Channel</span>
+                                        <span class="font-medium text-purple-700">Profile</span>
                                     </a>
                                     <a href="https://flow.recursive.eco/library?view=mine" class="block px-4 py-2.5 hover:bg-purple-50 transition-colors border-b border-gray-100" data-nav>
                                         <span class="font-medium text-purple-700">My Grammars</span>
@@ -219,7 +219,7 @@
                     <div id="mobile-library-my-section" class="hidden">
                         <div class="pl-6 pr-3 py-1 text-xs font-semibold text-purple-600 uppercase tracking-wider">My Library</div>
                         <a id="mobile-library-my-collection" href="https://flow.recursive.eco/library" class="block pl-8 pr-3 py-2 rounded-md text-base font-medium text-purple-700 hover:bg-purple-50" data-nav>
-                            Personal Channel
+                            Profile
                         </a>
                         <a href="https://flow.recursive.eco/library?view=mine" class="block pl-8 pr-3 py-2 rounded-md text-base font-medium text-purple-700 hover:bg-purple-50" data-nav>
                             My Grammars

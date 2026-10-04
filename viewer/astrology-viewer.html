@@ -9662,7 +9662,7 @@
                             </div>
                         ` : `
                             <div class="pt-3 border-t border-yellow-800/30">
-                                <p class="text-gray-500 text-xs">No I Ching grammars available. Add one from the I Ching altar to see detailed hexagram interpretations.</p>
+                                <p class="text-gray-500 text-xs">No I Ching grammars available. Add one from the I Ching collection to see detailed hexagram interpretations.</p>
                             </div>
                         `}
                     </div>
@@ -9827,7 +9827,9 @@
                     ichingGrammarOptions.push({ name, value, type: 'user', id: d.id });
                 });
                 if (toolDocs) toolDocs.forEach(d => {
-                    const name = (d.tool_data?.name || d.slug) + ' (Altar)';
+                    // "(Altar)" suffix removed Oct 2026 — retired vocabulary (see the
+                    // matching astrology-schema dedup above, which dropped it the same way).
+                    const name = (d.tool_data?.name || d.slug);
                     const value = `tool:${d.id}`;
                     ichingGrammarOptions.push({ name, value, type: 'tool', id: d.id });
                 });

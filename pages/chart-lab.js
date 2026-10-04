@@ -1755,7 +1755,7 @@
     const sel = scope === 'chart' ? { title: 'this whole chart', facts: wholeChartFacts() } : selectionFor('lens');
     if (!sel) return '';
     const L = [`Please make a PRIVATE grammar for me on recursive.eco from ${sel.title}${scope === 'chart' ? '' : ' in ' + chartKind()}.`,
-      '- Make it private: not public, and not offered to any channel.',
+      '- Make it private: not public, and not offered to any collection.',
       '- Before you create anything, tell me the grammar name and the items you will make, and wait for my yes.',
       '- One item per placement (planet in sign and house), one per aspect, and one per figure; name each figure by its members, never just "the figure".',
       '- In each item, give a short reading phrased as possibilities, not predictions, and end with one question for me. Do not invent quotations or sources.',
