@@ -13,7 +13,7 @@
     {
       "src": "/(viewer/.*|)",
       "headers": {
-        "Content-Security-Policy": "frame-ancestors https://*.recursive.eco https://*.vercel.app https://localhost:* http://localhost:* 'self'"
+        "Content-Security-Policy": "frame-ancestors https://recursive.eco https://*.recursive.eco https://*.vercel.app https://localhost:* http://localhost:* 'self'"
       },
       "continue": true
     },
