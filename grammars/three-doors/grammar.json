@@ -18,11 +18,10 @@
   "default_preview": "course",
   "_generated": true,
   "_generated_note": "Built from course/three-doors.mdx.",
-  "items": [
+  "nodes": [
     {
       "id": "chapter-1",
       "name": "A confession before the door",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -35,7 +34,6 @@
     {
       "id": "chapter-2",
       "name": "The first door: the light that looks (Parā)",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -48,7 +46,6 @@
     {
       "id": "chapter-3",
       "name": "The third door: the world that is looked at (Aparā)",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -61,7 +58,6 @@
     {
       "id": "chapter-4",
       "name": "The middle door, which is the whole point (Parāparā)",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -74,7 +70,6 @@
     {
       "id": "chapter-5",
       "name": "Why I needed a third door",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -87,7 +82,6 @@
     {
       "id": "note-honesty",
       "name": "A note on honesty",
-      "level": 1,
       "category": "note",
       "keywords": [],
       "sections": {

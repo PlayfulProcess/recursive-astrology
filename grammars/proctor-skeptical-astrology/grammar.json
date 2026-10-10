@@ -18,7 +18,7 @@
     "source_url": "https://www.gutenberg.org/ebooks/26556",
     "edition_note": "Proctor died in 1888, so the 1896 printing is a posthumous reprint. The earliest edition on record is G. P. Putnam's Sons, 1877 (Online Books Page catalogue, checked Jul 2026); the Gutenberg title page reads 'Longmans, Green, and Co., London, New York, and Bombay, 1896 (New Edition)'."
   },
-  "items": [
+  "nodes": [
     {
       "id": "saturn",
       "name": "Saturn",
@@ -59,7 +59,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-saturn",
+        "source_node_id": "planet-saturn",
         "deck": "The Structure of the Sky"
       }
     },
@@ -102,7 +102,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-jupiter",
+        "source_node_id": "planet-jupiter",
         "deck": "The Structure of the Sky"
       }
     },
@@ -145,7 +145,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mars",
+        "source_node_id": "planet-mars",
         "deck": "The Structure of the Sky"
       }
     },
@@ -187,7 +187,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-sun",
+        "source_node_id": "planet-sun",
         "deck": "The Structure of the Sky"
       }
     },
@@ -218,7 +218,7 @@
       "sort_order": 4,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-venus",
+        "source_node_id": "planet-venus",
         "deck": "The Structure of the Sky"
       }
     },
@@ -250,7 +250,7 @@
       "sort_order": 5,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mercury",
+        "source_node_id": "planet-mercury",
         "deck": "The Structure of the Sky"
       }
     },
@@ -293,7 +293,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-moon",
+        "source_node_id": "planet-moon",
         "deck": "The Structure of the Sky"
       }
     },
@@ -324,7 +324,7 @@
       "sort_order": 7,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-uranus",
+        "source_node_id": "planet-uranus",
         "deck": "The Structure of the Sky"
       }
     },
@@ -368,7 +368,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aries",
+        "source_node_id": "sign-aries",
         "deck": "The Structure of the Sky"
       }
     },
@@ -412,7 +412,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-taurus",
+        "source_node_id": "sign-taurus",
         "deck": "The Structure of the Sky"
       }
     },
@@ -456,7 +456,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-gemini",
+        "source_node_id": "sign-gemini",
         "deck": "The Structure of the Sky"
       }
     },
@@ -500,7 +500,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-cancer",
+        "source_node_id": "sign-cancer",
         "deck": "The Structure of the Sky"
       }
     },
@@ -544,7 +544,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-leo",
+        "source_node_id": "sign-leo",
         "deck": "The Structure of the Sky"
       }
     },
@@ -588,7 +588,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-virgo",
+        "source_node_id": "sign-virgo",
         "deck": "The Structure of the Sky"
       }
     },
@@ -632,7 +632,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-libra",
+        "source_node_id": "sign-libra",
         "deck": "The Structure of the Sky"
       }
     },
@@ -676,7 +676,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-scorpio",
+        "source_node_id": "sign-scorpio",
         "deck": "The Structure of the Sky"
       }
     },
@@ -720,7 +720,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-sagittarius",
+        "source_node_id": "sign-sagittarius",
         "deck": "The Structure of the Sky"
       }
     },
@@ -764,7 +764,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-capricorn",
+        "source_node_id": "sign-capricorn",
         "deck": "The Structure of the Sky"
       }
     },
@@ -808,7 +808,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aquarius",
+        "source_node_id": "sign-aquarius",
         "deck": "The Structure of the Sky"
       }
     },
@@ -852,7 +852,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-pisces",
+        "source_node_id": "sign-pisces",
         "deck": "The Structure of the Sky"
       }
     },
@@ -884,7 +884,7 @@
       "sort_order": 30,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-1",
+        "source_node_id": "house-1",
         "deck": "The Structure of the Sky"
       }
     },
@@ -914,7 +914,7 @@
       "sort_order": 31,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-2",
+        "source_node_id": "house-2",
         "deck": "The Structure of the Sky"
       }
     },
@@ -945,7 +945,7 @@
       "sort_order": 32,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-3",
+        "source_node_id": "house-3",
         "deck": "The Structure of the Sky"
       }
     },
@@ -976,7 +976,7 @@
       "sort_order": 33,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-4",
+        "source_node_id": "house-4",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1007,7 +1007,7 @@
       "sort_order": 34,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-5",
+        "source_node_id": "house-5",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1038,7 +1038,7 @@
       "sort_order": 35,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-6",
+        "source_node_id": "house-6",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1070,7 +1070,7 @@
       "sort_order": 36,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-7",
+        "source_node_id": "house-7",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1100,7 +1100,7 @@
       "sort_order": 37,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-8",
+        "source_node_id": "house-8",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1131,7 +1131,7 @@
       "sort_order": 38,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-9",
+        "source_node_id": "house-9",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1163,7 +1163,7 @@
       "sort_order": 39,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-10",
+        "source_node_id": "house-10",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1193,7 +1193,7 @@
       "sort_order": 40,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-11",
+        "source_node_id": "house-11",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1224,7 +1224,7 @@
       "sort_order": 41,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-12",
+        "source_node_id": "house-12",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1254,7 +1254,7 @@
       "sort_order": 50,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-conjunction",
+        "source_node_id": "aspect-conjunction",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1284,7 +1284,7 @@
       "sort_order": 51,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-sextile",
+        "source_node_id": "aspect-sextile",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1314,7 +1314,7 @@
       "sort_order": 52,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-square",
+        "source_node_id": "aspect-square",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1344,7 +1344,7 @@
       "sort_order": 53,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-trine",
+        "source_node_id": "aspect-trine",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1374,7 +1374,7 @@
       "sort_order": 54,
       "metadata": {
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-opposition",
+        "source_node_id": "aspect-opposition",
         "deck": "The Structure of the Sky"
       }
     }

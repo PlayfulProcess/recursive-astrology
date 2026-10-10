@@ -241,7 +241,7 @@ function togglePlanet(name){
 // ── voice matching — the same cross-grammar approach viewers/lenses.html uses:
 // load the collection index, fetch every public grammar, and read planet items by
 // metadata.planet. A "content-bearing" entry has a real section beyond the thin
-// local resolution stub archetypal-pairs carries for composite_of (see
+// local resolution stub archetypal-pairs carries for parts (see
 // docs/DESIGN-archetypal.md) — inferred from the DATA shape, never from a slug check.
 function contentBearing(item){
   const keys = Object.keys(item.sections || {});
@@ -294,7 +294,7 @@ function extractEra(g, col){
 }
 
 function findPlanetItem(grammar, name){
-  const items = grammar.items || [];
+  const items = grammar.nodes || [];
   const target = name.toLowerCase();
   return items.find(it => (it.category || '') === 'planet' &&
     (((it.metadata || {}).planet || '').toLowerCase() === target || (it.name || '').toLowerCase() === target)) || null;
@@ -302,7 +302,7 @@ function findPlanetItem(grammar, name){
 
 function findPairItem(name1, name2){
   if (!PAIRS) return null;
-  const items = PAIRS.items || [];
+  const items = PAIRS.nodes || [];
   return items.find(it => it.category === 'archetypal-pair' &&
     Array.isArray((it.metadata || {}).planets) &&
     it.metadata.planets.includes(name1) && it.metadata.planets.includes(name2)) || null;
@@ -313,7 +313,7 @@ function findPairItem(name1, name2){
 // pointer to their canonical full entry — see docs/DESIGN-archetypal.md).
 function findTarnasPlanetItem(name){
   if (!PAIRS) return null;
-  const items = PAIRS.items || [];
+  const items = PAIRS.nodes || [];
   return items.find(it => it.category === 'planet' && (it.metadata || {}).planet === name) || null;
 }
 
@@ -434,7 +434,7 @@ async function loadJSON(path){
       catch (e) { return { entry, g: null }; }
     }));
     TRADITIONS = loaded
-      .filter(({ g }) => g && Array.isArray(g.items) && g.items.some(it => it.category === 'planet'))
+      .filter(({ g }) => g && Array.isArray(g.nodes) && g.nodes.some(it => it.category === 'planet'))
       .map(({ entry, g }) => ({ slug: entry.slug, grammar: g, ...extractEra(g, entry) }))
       .sort((x, y) => x.year - y.year || x.voiceLabel.localeCompare(y.voiceLabel));
   } catch (e) { TRADITIONS = []; }

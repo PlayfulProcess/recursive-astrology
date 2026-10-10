@@ -121,8 +121,8 @@ async function main(){
   $('#course-title').textContent = manifest.title;
   $('#course-desc').textContent = manifest.description;
 
-  const chapterItems = grammar.items.filter(it => it.id.startsWith(manifest.chapterIdPrefix));
-  const appendixItems = grammar.items.filter(it => it.id.startsWith(manifest.appendixIdPrefix));
+  const chapterItems = grammar.nodes.filter(it => it.id.startsWith(manifest.chapterIdPrefix));
+  const appendixItems = grammar.nodes.filter(it => it.id.startsWith(manifest.appendixIdPrefix));
 
   const grid = $('#chapters');
   chapterItems.forEach((it, i) => {

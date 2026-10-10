@@ -26,7 +26,7 @@
     "history",
     "recursive-eco"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "omen-sin",
       "name": "Sin (the Moon)",
@@ -53,7 +53,7 @@
         "confidence": "medium",
         "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon, Vol. II (1900), public domain",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-moon",
+        "source_node_id": "planet-moon",
         "deck": "The Structure of the Sky"
       }
     },
@@ -83,7 +83,7 @@
         "confidence": "medium",
         "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-sun",
+        "source_node_id": "planet-sun",
         "deck": "The Structure of the Sky"
       }
     },
@@ -113,7 +113,7 @@
         "confidence": "low",
         "_source": "Langdon & Fotheringham, The Venus Tablets of Ammizaduga (1928, Oxford, public domain); Jastrow, The Religion of Babylonia and Assyria (1898, public domain)",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-venus",
+        "source_node_id": "planet-venus",
         "deck": "The Structure of the Sky"
       }
     },
@@ -143,7 +143,7 @@
         "confidence": "medium",
         "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mars",
+        "source_node_id": "planet-mars",
         "deck": "The Structure of the Sky"
       }
     },
@@ -173,7 +173,7 @@
         "confidence": "medium",
         "_source": "R. Campbell Thompson, Reports of the Magicians and Astrologers of Nineveh and Babylon (1900), public domain",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-jupiter",
+        "source_node_id": "planet-jupiter",
         "deck": "The Structure of the Sky"
       }
     },
@@ -202,7 +202,7 @@
         "confidence": "low",
         "_source": "Secondary scholarship on Saturn/Kayamānu naming, search-triangulated this session; no primary omen quotation located — gap stated honestly",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-saturn",
+        "source_node_id": "planet-saturn",
         "deck": "The Structure of the Sky"
       }
     },
@@ -232,7 +232,7 @@
         "confidence": "low",
         "_source": "Myth/cult material search-triangulated (cross-referenced with grammars/planetary-myths); no primary omen-report quotation located this session — gap stated honestly",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mercury",
+        "source_node_id": "planet-mercury",
         "deck": "The Structure of the Sky"
       }
     }

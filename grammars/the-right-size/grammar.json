@@ -18,11 +18,10 @@
   "default_preview": "course",
   "_generated": true,
   "_generated_note": "Built from course/the-right-size.mdx by the inline builder. Edit the .mdx and rebuild; do not hand-edit this file.",
-  "items": [
+  "nodes": [
     {
       "id": "chapter-1",
       "name": "The problem is not that we are small",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -35,7 +34,6 @@
     {
       "id": "chapter-2",
       "name": "What we cannot know, and do not need to",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -48,7 +46,6 @@
     {
       "id": "chapter-3",
       "name": "The sun does not care, and that is the first lesson",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -61,7 +58,6 @@
     {
       "id": "chapter-4",
       "name": "When we relate to Mars as war, we make war a little more real",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -74,7 +70,6 @@
     {
       "id": "chapter-5",
       "name": "Even the strictest thinkers left the metaphysics alone",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -87,7 +82,6 @@
     {
       "id": "chapter-6",
       "name": "The visible calendar we can all keep",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -100,7 +94,6 @@
     {
       "id": "chapter-7",
       "name": "Is the aliveness only here?",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -113,7 +106,6 @@
     {
       "id": "chapter-8",
       "name": "The sky as an adaptive path",
-      "level": 1,
       "category": "reading",
       "keywords": [],
       "sections": {
@@ -126,7 +118,6 @@
     {
       "id": "note-honesty",
       "name": "A note on honesty",
-      "level": 1,
       "category": "note",
       "keywords": [],
       "sections": {

@@ -33,8 +33,8 @@ history is the record of humans reading meaning *into* the sky; that history is 
   Jung). A stance drawn from living teachers is titled by its tradition and says "inspired by." The
   Skeptical School is named as a *tradition of critique*, not as any one person.
 - **Consolidate, don't multiply.** Prefer turning a new idea into something we already have — a
-  **voice** (`voices.json`), a **view** (an item in the grammar), or a **pattern** (an L2
-  `composite_of` grouping) — over a parallel structure.
+  **voice** (`voices.json`), a **view** (an item in the grammar), or a **pattern** (a node
+  whose `parts` group others) — over a parallel structure.
 
 ## Sources & honesty (hard guardrails)
 
@@ -64,10 +64,10 @@ history is the record of humans reading meaning *into* the sky; that history is 
   `theme.css` once.
 - **`index.html`** reads one grammar and renders it. Add pages the same way — thin, self-contained,
   linking `theme.css`.
-- **A leaf** is an item with `sections`. **A pattern** is an item with `composite_of: [ids]` — that's
+- **A leaf** is a node with `sections`. **A pattern** is a node with `parts: [ids]` — that's
   how the historiographical structure emerges without a database.
 - **The one cross-link pattern** (the same as recursive-tarot's): an item links to an item in
-  another grammar with `metadata.source_deck` (the target's slug), `metadata.source_item_id` (the
+  another grammar with `metadata.source_deck` (the target's slug), `metadata.source_node_id` (the
   target item's id) and `metadata.deck` (a human label). `viewers/cards.html` renders it as an
   "Open in …" pill. Don't invent another link field. (`metadata.source_grammars` is provenance for
   copied content, not navigation.) Since Sep 27 2026 every sign, planet, house and aspect item in

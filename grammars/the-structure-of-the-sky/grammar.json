@@ -67,14 +67,13 @@
       }
     ]
   },
-  "items": [
+  "nodes": [
     {
       "id": "the-zodiac",
       "name": "The zodiac",
       "category": "zodiac",
-      "level": 4,
       "sort_order": 0,
-      "composite_of": [
+      "parts": [
         "triplicity-fire",
         "triplicity-earth",
         "triplicity-air",
@@ -101,7 +100,6 @@
       "id": "element-fire",
       "name": "Fire",
       "category": "element",
-      "level": 1,
       "sort_order": 1,
       "keywords": [
         "fire",
@@ -127,7 +125,6 @@
       "id": "element-earth",
       "name": "Earth",
       "category": "element",
-      "level": 1,
       "sort_order": 2,
       "keywords": [
         "earth",
@@ -153,7 +150,6 @@
       "id": "element-air",
       "name": "Air",
       "category": "element",
-      "level": 1,
       "sort_order": 3,
       "keywords": [
         "air",
@@ -179,7 +175,6 @@
       "id": "element-water",
       "name": "Water",
       "category": "element",
-      "level": 1,
       "sort_order": 4,
       "keywords": [
         "water",
@@ -205,7 +200,6 @@
       "id": "modality-cardinal",
       "name": "Cardinal",
       "category": "modality",
-      "level": 1,
       "sort_order": 5,
       "keywords": [
         "cardinal",
@@ -237,7 +231,6 @@
       "id": "modality-fixed",
       "name": "Fixed",
       "category": "modality",
-      "level": 1,
       "sort_order": 6,
       "keywords": [
         "fixed",
@@ -269,7 +262,6 @@
       "id": "modality-mutable",
       "name": "Mutable",
       "category": "modality",
-      "level": 1,
       "sort_order": 7,
       "keywords": [
         "mutable",
@@ -301,7 +293,6 @@
       "id": "polarity-masculine",
       "name": "Masculine (diurnal)",
       "category": "polarity",
-      "level": 1,
       "sort_order": 8,
       "keywords": [
         "masculine",
@@ -331,7 +322,6 @@
       "id": "polarity-feminine",
       "name": "Feminine (nocturnal)",
       "category": "polarity",
-      "level": 1,
       "sort_order": 9,
       "keywords": [
         "feminine",
@@ -362,9 +352,8 @@
       "name": "Aries",
       "symbol": "♈",
       "category": "sign",
-      "level": 2,
       "sort_order": 10,
-      "composite_of": [
+      "parts": [
         "element-fire",
         "modality-cardinal",
         "polarity-masculine"
@@ -409,9 +398,8 @@
       "name": "Taurus",
       "symbol": "♉",
       "category": "sign",
-      "level": 2,
       "sort_order": 11,
-      "composite_of": [
+      "parts": [
         "element-earth",
         "modality-fixed",
         "polarity-feminine"
@@ -456,9 +444,8 @@
       "name": "Gemini",
       "symbol": "♊",
       "category": "sign",
-      "level": 2,
       "sort_order": 12,
-      "composite_of": [
+      "parts": [
         "element-air",
         "modality-mutable",
         "polarity-masculine"
@@ -503,9 +490,8 @@
       "name": "Cancer",
       "symbol": "♋",
       "category": "sign",
-      "level": 2,
       "sort_order": 13,
-      "composite_of": [
+      "parts": [
         "element-water",
         "modality-cardinal",
         "polarity-feminine"
@@ -551,9 +537,8 @@
       "name": "Leo",
       "symbol": "♌",
       "category": "sign",
-      "level": 2,
       "sort_order": 14,
-      "composite_of": [
+      "parts": [
         "element-fire",
         "modality-fixed",
         "polarity-masculine"
@@ -598,9 +583,8 @@
       "name": "Virgo",
       "symbol": "♍",
       "category": "sign",
-      "level": 2,
       "sort_order": 15,
-      "composite_of": [
+      "parts": [
         "element-earth",
         "modality-mutable",
         "polarity-feminine"
@@ -645,9 +629,8 @@
       "name": "Libra",
       "symbol": "♎",
       "category": "sign",
-      "level": 2,
       "sort_order": 16,
-      "composite_of": [
+      "parts": [
         "element-air",
         "modality-cardinal",
         "polarity-masculine"
@@ -692,9 +675,8 @@
       "name": "Scorpio",
       "symbol": "♏",
       "category": "sign",
-      "level": 2,
       "sort_order": 17,
-      "composite_of": [
+      "parts": [
         "element-water",
         "modality-fixed",
         "polarity-feminine"
@@ -741,9 +723,8 @@
       "name": "Sagittarius",
       "symbol": "♐",
       "category": "sign",
-      "level": 2,
       "sort_order": 18,
-      "composite_of": [
+      "parts": [
         "element-fire",
         "modality-mutable",
         "polarity-masculine"
@@ -788,9 +769,8 @@
       "name": "Capricorn",
       "symbol": "♑",
       "category": "sign",
-      "level": 2,
       "sort_order": 19,
-      "composite_of": [
+      "parts": [
         "element-earth",
         "modality-cardinal",
         "polarity-feminine"
@@ -835,9 +815,8 @@
       "name": "Aquarius",
       "symbol": "♒",
       "category": "sign",
-      "level": 2,
       "sort_order": 20,
-      "composite_of": [
+      "parts": [
         "element-air",
         "modality-fixed",
         "polarity-masculine"
@@ -883,9 +862,8 @@
       "name": "Pisces",
       "symbol": "♓",
       "category": "sign",
-      "level": 2,
       "sort_order": 21,
-      "composite_of": [
+      "parts": [
         "element-water",
         "modality-mutable",
         "polarity-feminine"
@@ -931,9 +909,8 @@
       "id": "triplicity-fire",
       "name": "Fire triplicity",
       "category": "triplicity",
-      "level": 3,
       "sort_order": 22,
-      "composite_of": [
+      "parts": [
         "sign-aries",
         "sign-leo",
         "sign-sagittarius"
@@ -966,9 +943,8 @@
       "id": "triplicity-earth",
       "name": "Earth triplicity",
       "category": "triplicity",
-      "level": 3,
       "sort_order": 23,
-      "composite_of": [
+      "parts": [
         "sign-taurus",
         "sign-virgo",
         "sign-capricorn"
@@ -1001,9 +977,8 @@
       "id": "triplicity-air",
       "name": "Air triplicity",
       "category": "triplicity",
-      "level": 3,
       "sort_order": 24,
-      "composite_of": [
+      "parts": [
         "sign-gemini",
         "sign-libra",
         "sign-aquarius"
@@ -1036,9 +1011,8 @@
       "id": "triplicity-water",
       "name": "Water triplicity",
       "category": "triplicity",
-      "level": 3,
       "sort_order": 25,
-      "composite_of": [
+      "parts": [
         "sign-cancer",
         "sign-scorpio",
         "sign-pisces"
@@ -1072,9 +1046,8 @@
       "id": "quadruplicity-cardinal",
       "name": "Cardinal signs",
       "category": "quadruplicity",
-      "level": 3,
       "sort_order": 26,
-      "composite_of": [
+      "parts": [
         "sign-aries",
         "sign-cancer",
         "sign-libra",
@@ -1097,9 +1070,8 @@
       "id": "quadruplicity-fixed",
       "name": "Fixed signs",
       "category": "quadruplicity",
-      "level": 3,
       "sort_order": 27,
-      "composite_of": [
+      "parts": [
         "sign-taurus",
         "sign-leo",
         "sign-scorpio",
@@ -1122,9 +1094,8 @@
       "id": "quadruplicity-mutable",
       "name": "Mutable signs",
       "category": "quadruplicity",
-      "level": 3,
       "sort_order": 28,
-      "composite_of": [
+      "parts": [
         "sign-gemini",
         "sign-virgo",
         "sign-sagittarius",
@@ -1147,9 +1118,8 @@
       "id": "planets-classical",
       "name": "The seven classical planets",
       "category": "planet-group",
-      "level": 2,
       "sort_order": 29,
-      "composite_of": [
+      "parts": [
         "planet-sun",
         "planet-moon",
         "planet-mercury",
@@ -1172,9 +1142,8 @@
       "id": "planets-modern",
       "name": "The modern planets",
       "category": "planet-group",
-      "level": 2,
       "sort_order": 30,
-      "composite_of": [
+      "parts": [
         "planet-uranus",
         "planet-neptune",
         "planet-pluto"
@@ -1196,7 +1165,6 @@
       "name": "Sun",
       "symbol": "☉",
       "category": "planet",
-      "level": 1,
       "sort_order": 31,
       "keywords": [
         "sun",
@@ -1239,7 +1207,6 @@
       "name": "Moon",
       "symbol": "☽",
       "category": "planet",
-      "level": 1,
       "sort_order": 32,
       "keywords": [
         "moon",
@@ -1283,7 +1250,6 @@
       "name": "Mercury",
       "symbol": "☿",
       "category": "planet",
-      "level": 1,
       "sort_order": 33,
       "keywords": [
         "mercury",
@@ -1328,7 +1294,6 @@
       "name": "Venus",
       "symbol": "♀",
       "category": "planet",
-      "level": 1,
       "sort_order": 34,
       "keywords": [
         "venus",
@@ -1374,7 +1339,6 @@
       "name": "Mars",
       "symbol": "♂",
       "category": "planet",
-      "level": 1,
       "sort_order": 35,
       "keywords": [
         "mars",
@@ -1419,7 +1383,6 @@
       "name": "Jupiter",
       "symbol": "♃",
       "category": "planet",
-      "level": 1,
       "sort_order": 36,
       "keywords": [
         "jupiter",
@@ -1464,7 +1427,6 @@
       "name": "Saturn",
       "symbol": "♄",
       "category": "planet",
-      "level": 1,
       "sort_order": 37,
       "keywords": [
         "saturn",
@@ -1509,7 +1471,6 @@
       "name": "Uranus",
       "symbol": "♅",
       "category": "planet",
-      "level": 1,
       "sort_order": 38,
       "keywords": [
         "uranus",
@@ -1537,7 +1498,6 @@
       "name": "Neptune",
       "symbol": "♆",
       "category": "planet",
-      "level": 1,
       "sort_order": 39,
       "keywords": [
         "neptune",
@@ -1565,7 +1525,6 @@
       "name": "Pluto",
       "symbol": "♇",
       "category": "planet",
-      "level": 1,
       "sort_order": 40,
       "keywords": [
         "pluto",
@@ -1592,9 +1551,8 @@
       "id": "the-houses",
       "name": "The twelve houses",
       "category": "house-system",
-      "level": 3,
       "sort_order": 41,
-      "composite_of": [
+      "parts": [
         "houses-angular",
         "houses-succedent",
         "houses-cadent"
@@ -1615,7 +1573,6 @@
       "name": "First House",
       "symbol": "I",
       "category": "house",
-      "level": 1,
       "sort_order": 42,
       "keywords": [
         "house",
@@ -1641,7 +1598,6 @@
       "name": "Second House",
       "symbol": "II",
       "category": "house",
-      "level": 1,
       "sort_order": 43,
       "keywords": [
         "house",
@@ -1667,7 +1623,6 @@
       "name": "Third House",
       "symbol": "III",
       "category": "house",
-      "level": 1,
       "sort_order": 44,
       "keywords": [
         "house",
@@ -1693,7 +1648,6 @@
       "name": "Fourth House",
       "symbol": "IV",
       "category": "house",
-      "level": 1,
       "sort_order": 45,
       "keywords": [
         "house",
@@ -1719,7 +1673,6 @@
       "name": "Fifth House",
       "symbol": "V",
       "category": "house",
-      "level": 1,
       "sort_order": 46,
       "keywords": [
         "house",
@@ -1745,7 +1698,6 @@
       "name": "Sixth House",
       "symbol": "VI",
       "category": "house",
-      "level": 1,
       "sort_order": 47,
       "keywords": [
         "house",
@@ -1771,7 +1723,6 @@
       "name": "Seventh House",
       "symbol": "VII",
       "category": "house",
-      "level": 1,
       "sort_order": 48,
       "keywords": [
         "house",
@@ -1797,7 +1748,6 @@
       "name": "Eighth House",
       "symbol": "VIII",
       "category": "house",
-      "level": 1,
       "sort_order": 49,
       "keywords": [
         "house",
@@ -1823,7 +1773,6 @@
       "name": "Ninth House",
       "symbol": "IX",
       "category": "house",
-      "level": 1,
       "sort_order": 50,
       "keywords": [
         "house",
@@ -1849,7 +1798,6 @@
       "name": "Tenth House",
       "symbol": "X",
       "category": "house",
-      "level": 1,
       "sort_order": 51,
       "keywords": [
         "house",
@@ -1875,7 +1823,6 @@
       "name": "Eleventh House",
       "symbol": "XI",
       "category": "house",
-      "level": 1,
       "sort_order": 52,
       "keywords": [
         "house",
@@ -1901,7 +1848,6 @@
       "name": "Twelfth House",
       "symbol": "XII",
       "category": "house",
-      "level": 1,
       "sort_order": 53,
       "keywords": [
         "house",
@@ -1926,9 +1872,8 @@
       "id": "houses-angular",
       "name": "Angular houses",
       "category": "house-group",
-      "level": 2,
       "sort_order": 54,
-      "composite_of": [
+      "parts": [
         "house-1",
         "house-4",
         "house-7",
@@ -1956,9 +1901,8 @@
       "id": "houses-succedent",
       "name": "Succedent houses",
       "category": "house-group",
-      "level": 2,
       "sort_order": 55,
-      "composite_of": [
+      "parts": [
         "house-2",
         "house-5",
         "house-8",
@@ -1986,9 +1930,8 @@
       "id": "houses-cadent",
       "name": "Cadent houses",
       "category": "house-group",
-      "level": 2,
       "sort_order": 56,
-      "composite_of": [
+      "parts": [
         "house-3",
         "house-6",
         "house-9",
@@ -2016,9 +1959,8 @@
       "id": "axis-1-7",
       "name": "1st–7th house axis",
       "category": "axis",
-      "level": 2,
       "sort_order": 57,
-      "composite_of": [
+      "parts": [
         "house-1",
         "house-7"
       ],
@@ -2042,9 +1984,8 @@
       "id": "axis-4-10",
       "name": "4th–10th house axis",
       "category": "axis",
-      "level": 2,
       "sort_order": 58,
-      "composite_of": [
+      "parts": [
         "house-4",
         "house-10"
       ],
@@ -2068,9 +2009,8 @@
       "id": "axis-2-8",
       "name": "2nd–8th house axis",
       "category": "axis",
-      "level": 2,
       "sort_order": 59,
-      "composite_of": [
+      "parts": [
         "house-2",
         "house-8"
       ],
@@ -2094,9 +2034,8 @@
       "id": "axis-3-9",
       "name": "3rd–9th house axis",
       "category": "axis",
-      "level": 2,
       "sort_order": 60,
-      "composite_of": [
+      "parts": [
         "house-3",
         "house-9"
       ],
@@ -2120,9 +2059,8 @@
       "id": "axis-5-11",
       "name": "5th–11th house axis",
       "category": "axis",
-      "level": 2,
       "sort_order": 61,
-      "composite_of": [
+      "parts": [
         "house-5",
         "house-11"
       ],
@@ -2146,9 +2084,8 @@
       "id": "axis-6-12",
       "name": "6th–12th house axis",
       "category": "axis",
-      "level": 2,
       "sort_order": 62,
-      "composite_of": [
+      "parts": [
         "house-6",
         "house-12"
       ],
@@ -2172,9 +2109,8 @@
       "id": "quadrant-1",
       "name": "Quadrant 1 (houses 10–12)",
       "category": "quadrant",
-      "level": 2,
       "sort_order": 63,
-      "composite_of": [
+      "parts": [
         "house-10",
         "house-11",
         "house-12"
@@ -2201,9 +2137,8 @@
       "id": "quadrant-2",
       "name": "Quadrant 2 (houses 7–9)",
       "category": "quadrant",
-      "level": 2,
       "sort_order": 64,
-      "composite_of": [
+      "parts": [
         "house-7",
         "house-8",
         "house-9"
@@ -2230,9 +2165,8 @@
       "id": "quadrant-3",
       "name": "Quadrant 3 (houses 4–6)",
       "category": "quadrant",
-      "level": 2,
       "sort_order": 65,
-      "composite_of": [
+      "parts": [
         "house-4",
         "house-5",
         "house-6"
@@ -2259,9 +2193,8 @@
       "id": "quadrant-4",
       "name": "Quadrant 4 (houses 1–3)",
       "category": "quadrant",
-      "level": 2,
       "sort_order": 66,
-      "composite_of": [
+      "parts": [
         "house-1",
         "house-2",
         "house-3"
@@ -2288,9 +2221,8 @@
       "id": "hemisphere-above",
       "name": "Above the horizon (houses 7–12)",
       "category": "hemisphere",
-      "level": 3,
       "sort_order": 67,
-      "composite_of": [
+      "parts": [
         "quadrant-1",
         "quadrant-2"
       ],
@@ -2313,9 +2245,8 @@
       "id": "hemisphere-below",
       "name": "Below the horizon (houses 1–6)",
       "category": "hemisphere",
-      "level": 3,
       "sort_order": 68,
-      "composite_of": [
+      "parts": [
         "quadrant-3",
         "quadrant-4"
       ],
@@ -2338,9 +2269,8 @@
       "id": "hemisphere-east",
       "name": "Eastern half (houses 10–3)",
       "category": "hemisphere",
-      "level": 3,
       "sort_order": 69,
-      "composite_of": [
+      "parts": [
         "quadrant-1",
         "quadrant-4"
       ],
@@ -2363,9 +2293,8 @@
       "id": "hemisphere-west",
       "name": "Western half (houses 4–9)",
       "category": "hemisphere",
-      "level": 3,
       "sort_order": 70,
-      "composite_of": [
+      "parts": [
         "quadrant-2",
         "quadrant-3"
       ],
@@ -2389,7 +2318,6 @@
       "name": "Conjunction",
       "symbol": "☌",
       "category": "aspect",
-      "level": 1,
       "sort_order": 71,
       "keywords": [
         "conjunction",
@@ -2417,7 +2345,6 @@
       "name": "Sextile",
       "symbol": "⚹",
       "category": "aspect",
-      "level": 1,
       "sort_order": 72,
       "keywords": [
         "sextile",
@@ -2445,7 +2372,6 @@
       "name": "Square",
       "symbol": "□",
       "category": "aspect",
-      "level": 1,
       "sort_order": 73,
       "keywords": [
         "square",
@@ -2473,7 +2399,6 @@
       "name": "Trine",
       "symbol": "△",
       "category": "aspect",
-      "level": 1,
       "sort_order": 74,
       "keywords": [
         "trine",
@@ -2501,7 +2426,6 @@
       "name": "Opposition",
       "symbol": "☍",
       "category": "aspect",
-      "level": 1,
       "sort_order": 75,
       "keywords": [
         "opposition",
@@ -2529,7 +2453,6 @@
       "name": "Quincunx (inconjunct)",
       "symbol": "⚻",
       "category": "aspect",
-      "level": 1,
       "sort_order": 76,
       "keywords": [
         "quincunx",

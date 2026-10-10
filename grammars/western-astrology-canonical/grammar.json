@@ -32,7 +32,7 @@
     "tropical",
     "western"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "planet-sun",
       "name": "Sun",
@@ -55,7 +55,7 @@
       "metadata": {
         "planet": "Sun",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-sun",
+        "source_node_id": "planet-sun",
         "deck": "The Structure of the Sky"
       }
     },
@@ -81,7 +81,7 @@
       "metadata": {
         "planet": "Moon",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-moon",
+        "source_node_id": "planet-moon",
         "deck": "The Structure of the Sky"
       }
     },
@@ -106,7 +106,7 @@
       "metadata": {
         "planet": "Mercury",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mercury",
+        "source_node_id": "planet-mercury",
         "deck": "The Structure of the Sky"
       }
     },
@@ -132,7 +132,7 @@
       "metadata": {
         "planet": "Venus",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-venus",
+        "source_node_id": "planet-venus",
         "deck": "The Structure of the Sky"
       }
     },
@@ -158,7 +158,7 @@
       "metadata": {
         "planet": "Mars",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mars",
+        "source_node_id": "planet-mars",
         "deck": "The Structure of the Sky"
       }
     },
@@ -184,7 +184,7 @@
       "metadata": {
         "planet": "Jupiter",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-jupiter",
+        "source_node_id": "planet-jupiter",
         "deck": "The Structure of the Sky"
       }
     },
@@ -210,7 +210,7 @@
       "metadata": {
         "planet": "Saturn",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-saturn",
+        "source_node_id": "planet-saturn",
         "deck": "The Structure of the Sky"
       }
     },
@@ -235,7 +235,7 @@
       "metadata": {
         "planet": "Uranus",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-uranus",
+        "source_node_id": "planet-uranus",
         "deck": "The Structure of the Sky"
       }
     },
@@ -261,7 +261,7 @@
       "metadata": {
         "planet": "Neptune",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-neptune",
+        "source_node_id": "planet-neptune",
         "deck": "The Structure of the Sky"
       }
     },
@@ -287,7 +287,7 @@
       "metadata": {
         "planet": "Pluto",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-pluto",
+        "source_node_id": "planet-pluto",
         "deck": "The Structure of the Sky"
       }
     },
@@ -380,7 +380,7 @@
         "element": "Fire",
         "modality": "Cardinal",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aries",
+        "source_node_id": "sign-aries",
         "deck": "The Structure of the Sky"
       }
     },
@@ -407,7 +407,7 @@
         "element": "Earth",
         "modality": "Fixed",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-taurus",
+        "source_node_id": "sign-taurus",
         "deck": "The Structure of the Sky"
       }
     },
@@ -434,7 +434,7 @@
         "element": "Air",
         "modality": "Mutable",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-gemini",
+        "source_node_id": "sign-gemini",
         "deck": "The Structure of the Sky"
       }
     },
@@ -461,7 +461,7 @@
         "element": "Water",
         "modality": "Cardinal",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-cancer",
+        "source_node_id": "sign-cancer",
         "deck": "The Structure of the Sky"
       }
     },
@@ -488,7 +488,7 @@
         "element": "Fire",
         "modality": "Fixed",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-leo",
+        "source_node_id": "sign-leo",
         "deck": "The Structure of the Sky"
       }
     },
@@ -515,7 +515,7 @@
         "element": "Earth",
         "modality": "Mutable",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-virgo",
+        "source_node_id": "sign-virgo",
         "deck": "The Structure of the Sky"
       }
     },
@@ -542,7 +542,7 @@
         "element": "Air",
         "modality": "Cardinal",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-libra",
+        "source_node_id": "sign-libra",
         "deck": "The Structure of the Sky"
       }
     },
@@ -569,7 +569,7 @@
         "element": "Water",
         "modality": "Fixed",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-scorpio",
+        "source_node_id": "sign-scorpio",
         "deck": "The Structure of the Sky"
       }
     },
@@ -596,7 +596,7 @@
         "element": "Fire",
         "modality": "Mutable",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-sagittarius",
+        "source_node_id": "sign-sagittarius",
         "deck": "The Structure of the Sky"
       }
     },
@@ -623,7 +623,7 @@
         "element": "Earth",
         "modality": "Cardinal",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-capricorn",
+        "source_node_id": "sign-capricorn",
         "deck": "The Structure of the Sky"
       }
     },
@@ -650,7 +650,7 @@
         "element": "Air",
         "modality": "Fixed",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aquarius",
+        "source_node_id": "sign-aquarius",
         "deck": "The Structure of the Sky"
       }
     },
@@ -677,7 +677,7 @@
         "element": "Water",
         "modality": "Mutable",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-pisces",
+        "source_node_id": "sign-pisces",
         "deck": "The Structure of the Sky"
       }
     },
@@ -701,7 +701,7 @@
       "metadata": {
         "house": "1",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-1",
+        "source_node_id": "house-1",
         "deck": "The Structure of the Sky"
       }
     },
@@ -725,7 +725,7 @@
       "metadata": {
         "house": "2",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-2",
+        "source_node_id": "house-2",
         "deck": "The Structure of the Sky"
       }
     },
@@ -749,7 +749,7 @@
       "metadata": {
         "house": "3",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-3",
+        "source_node_id": "house-3",
         "deck": "The Structure of the Sky"
       }
     },
@@ -773,7 +773,7 @@
       "metadata": {
         "house": "4",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-4",
+        "source_node_id": "house-4",
         "deck": "The Structure of the Sky"
       }
     },
@@ -797,7 +797,7 @@
       "metadata": {
         "house": "5",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-5",
+        "source_node_id": "house-5",
         "deck": "The Structure of the Sky"
       }
     },
@@ -821,7 +821,7 @@
       "metadata": {
         "house": "6",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-6",
+        "source_node_id": "house-6",
         "deck": "The Structure of the Sky"
       }
     },
@@ -845,7 +845,7 @@
       "metadata": {
         "house": "7",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-7",
+        "source_node_id": "house-7",
         "deck": "The Structure of the Sky"
       }
     },
@@ -869,7 +869,7 @@
       "metadata": {
         "house": "8",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-8",
+        "source_node_id": "house-8",
         "deck": "The Structure of the Sky"
       }
     },
@@ -893,7 +893,7 @@
       "metadata": {
         "house": "9",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-9",
+        "source_node_id": "house-9",
         "deck": "The Structure of the Sky"
       }
     },
@@ -917,7 +917,7 @@
       "metadata": {
         "house": "10",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-10",
+        "source_node_id": "house-10",
         "deck": "The Structure of the Sky"
       }
     },
@@ -941,7 +941,7 @@
       "metadata": {
         "house": "11",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-11",
+        "source_node_id": "house-11",
         "deck": "The Structure of the Sky"
       }
     },
@@ -965,7 +965,7 @@
       "metadata": {
         "house": "12",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-12",
+        "source_node_id": "house-12",
         "deck": "The Structure of the Sky"
       }
     },
@@ -990,7 +990,7 @@
         "angle": 0,
         "orb": 8,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-conjunction",
+        "source_node_id": "aspect-conjunction",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1015,7 +1015,7 @@
         "angle": 180,
         "orb": 8,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-opposition",
+        "source_node_id": "aspect-opposition",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1040,7 +1040,7 @@
         "angle": 120,
         "orb": 8,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-trine",
+        "source_node_id": "aspect-trine",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1065,7 +1065,7 @@
         "angle": 90,
         "orb": 7,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-square",
+        "source_node_id": "aspect-square",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1089,7 +1089,7 @@
         "angle": 60,
         "orb": 6,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-sextile",
+        "source_node_id": "aspect-sextile",
         "deck": "The Structure of the Sky"
       }
     },
@@ -1114,7 +1114,7 @@
         "angle": 150,
         "orb": 3,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "aspect-quincunx",
+        "source_node_id": "aspect-quincunx",
         "deck": "The Structure of the Sky"
       }
     }

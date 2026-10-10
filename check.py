@@ -31,10 +31,10 @@ def check(path: Path) -> list[str]:
     if g.get("grammar_type") not in VALID_TYPES:
         errs.append(f"{path}: grammar_type '{g.get('grammar_type')}' is not one of {sorted(VALID_TYPES)}")
     if "emergences" in g:
-        errs.append(f"{path}: has a top-level 'emergences' array — move those items into items[] with composite_of")
-    items = g.get("items")
+        errs.append(f"{path}: has a top-level 'emergences' array — move those items into nodes[] with parts")
+    items = g.get("nodes")
     if not isinstance(items, list) or not items:
-        errs.append(f"{path}: 'items' must be a non-empty array")
+        errs.append(f"{path}: 'nodes' must be a non-empty array")
         return errs
 
     ids = {it.get("id") for it in items}
@@ -42,9 +42,9 @@ def check(path: Path) -> list[str]:
         for field in ("id", "name", "sections"):
             if field not in it:
                 errs.append(f"{path}: item {it.get('id') or it.get('name') or '?'} missing '{field}'")
-        for child in it.get("composite_of", []):
+        for child in it.get("parts", []):
             if child not in ids:
-                errs.append(f"{path}: composite_of references missing id '{child}'")
+                errs.append(f"{path}: parts references missing id '{child}'")
         meta = it.get("metadata") or {}
         if "video_id" in meta:
             errs.append(f"{path}: item {it.get('id')} uses metadata.video_id — rename to youtube_video_id")

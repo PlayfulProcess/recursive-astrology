@@ -44,13 +44,12 @@
   },
   "_honesty_frame": "Two registers, kept apart on purpose. THE ASTRONOMY is verifiable and every item names the sources it was taken from (English Wikipedia articles and NASA pages, each fetched and read on 27 July 2026); where two sources disagree, the item says which one it followed. THE SYMBOLISM is not verifiable and is not presented as if it were: each item states how many years of writing stand behind its reading and carries a metadata.confidence to match — high only for Pluto's astronomy, medium for Ceres (about fifty years of use), low for Eris, Haumea and Makemake (roughly two decades, no canon). No living astrologer is named anywhere; readings are attributed to the era and body of writing that produced them, per this repo's 'name a school, not a living person' rule. The IAU's own resolution pages could not be fetched (iau.org returned HTTP 403 on 27 July 2026), so the wording of the 2006 resolutions is reported at one remove, from the English Wikipedia article on the IAU definition of planet, and is flagged as such rather than quoted as if from the source.",
   "_sensitivity_note": "Haumea and Makemake are names from living cultures — Kānaka Maoli (Native Hawaiian) and Rapa Nui — and Sedna, Quaoar and Gonggong likewise. The naming was done by astronomers and ratified by the IAU. This grammar reports the naming as an act performed by astronomers, does not claim any tradition's authority, does not reproduce sacred imagery for those items, and points readers to the traditions' own keepers rather than paraphrasing them. Where a discovery team did seek permission (Quaoar), that is recorded; where the published record shows no such consultation, the grammar says only that — not that none occurred.",
-  "items": [
+  "nodes": [
     {
       "id": "dwarf-pluto",
       "name": "Pluto — the reclassified",
       "symbol": "♇",
       "category": "dwarf-planet",
-      "level": 1,
       "sort_order": 1,
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nh-pluto-in-true-color_2x.jpg?width=800",
       "keywords": [
@@ -101,7 +100,6 @@
       "name": "Ceres — the promoted",
       "symbol": "⚳",
       "category": "dwarf-planet",
-      "level": 1,
       "sort_order": 2,
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/PIA21078_Occator_on_Ceres%27_Limb.jpg?width=800",
       "keywords": [
@@ -141,7 +139,6 @@
       "id": "dwarf-eris",
       "name": "Eris — the one who forced the question",
       "category": "dwarf-planet",
-      "level": 1,
       "sort_order": 3,
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Apple_of_Discord_by_Jacob_Jordaens.jpg?width=800",
       "keywords": [
@@ -182,7 +179,6 @@
       "id": "dwarf-haumea",
       "name": "Haumea — the fast one, and a borrowed name",
       "category": "dwarf-planet",
-      "level": 1,
       "sort_order": 4,
       "keywords": [
         "haumea",
@@ -212,7 +208,6 @@
       "id": "dwarf-makemake",
       "name": "Makemake — the Easter object, and a borrowed name",
       "category": "dwarf-planet",
-      "level": 1,
       "sort_order": 5,
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Makemake_moon_Hubble_image_with_legend.jpg?width=800",
       "keywords": [
@@ -252,7 +247,6 @@
       "id": "dwarf-candidates",
       "name": "The candidates — Sedna, Quaoar, Gonggong, Orcus",
       "category": "dwarf-planet",
-      "level": 1,
       "sort_order": 6,
       "keywords": [
         "sedna",
@@ -281,9 +275,8 @@
       "id": "pattern-the-2006-vote",
       "name": "The vote — 24 August 2006, Prague",
       "category": "reclassification",
-      "level": 2,
       "sort_order": 10,
-      "composite_of": [
+      "parts": [
         "dwarf-ceres",
         "dwarf-pluto",
         "dwarf-eris"
@@ -309,9 +302,8 @@
       "id": "pattern-borrowed-names",
       "name": "Borrowed names — who gets to name a world",
       "category": "reclassification",
-      "level": 2,
       "sort_order": 11,
-      "composite_of": [
+      "parts": [
         "dwarf-haumea",
         "dwarf-makemake",
         "dwarf-candidates"
@@ -339,9 +331,8 @@
       "id": "pattern-watching-a-symbol-form",
       "name": "Watching a symbol form",
       "category": "reclassification",
-      "level": 3,
       "sort_order": 20,
-      "composite_of": [
+      "parts": [
         "pattern-the-2006-vote",
         "pattern-borrowed-names"
       ],

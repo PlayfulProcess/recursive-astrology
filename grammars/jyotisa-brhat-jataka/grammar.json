@@ -28,7 +28,7 @@
     "history",
     "recursive-eco"
   ],
-  "items": [
+  "nodes": [
     {
       "id": "graha-surya",
       "name": "Sūrya (the Sun)",
@@ -63,7 +63,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-sun",
+        "source_node_id": "planet-sun",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -107,7 +107,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-moon",
+        "source_node_id": "planet-moon",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -151,7 +151,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mars",
+        "source_node_id": "planet-mars",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -195,7 +195,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mercury",
+        "source_node_id": "planet-mercury",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -239,7 +239,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-jupiter",
+        "source_node_id": "planet-jupiter",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -283,7 +283,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-venus",
+        "source_node_id": "planet-venus",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -327,7 +327,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-saturn",
+        "source_node_id": "planet-saturn",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -449,7 +449,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aries",
+        "source_node_id": "sign-aries",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -493,7 +493,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-taurus",
+        "source_node_id": "sign-taurus",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -537,7 +537,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-gemini",
+        "source_node_id": "sign-gemini",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -581,7 +581,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-cancer",
+        "source_node_id": "sign-cancer",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -625,7 +625,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-leo",
+        "source_node_id": "sign-leo",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -669,7 +669,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-virgo",
+        "source_node_id": "sign-virgo",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -713,7 +713,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-libra",
+        "source_node_id": "sign-libra",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -757,7 +757,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-scorpio",
+        "source_node_id": "sign-scorpio",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -801,7 +801,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-sagittarius",
+        "source_node_id": "sign-sagittarius",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -845,7 +845,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-capricorn",
+        "source_node_id": "sign-capricorn",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -889,7 +889,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aquarius",
+        "source_node_id": "sign-aquarius",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [
@@ -933,7 +933,7 @@
           "source_site": "https://archive.org/details/wg1079"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-pisces",
+        "source_node_id": "sign-pisces",
         "deck": "The Structure of the Sky"
       },
       "section_labels": [

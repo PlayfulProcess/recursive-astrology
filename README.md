@@ -94,7 +94,7 @@ item is one **view**: an `id`, a `name`, and `sections` — `What this view hold
 tradition's own terms), sometimes `In its own words` (a verifiable line or a flagged paraphrase),
 `The record` (the honest, hedged history), and `Reading` (2–3 standard scholarly works as pointers,
 no page numbers). The last three items are **patterns** — they hold no view of their own; they have
-`composite_of: [ids]` and make a historiographical shape visible across several views.
+`parts: [ids]` and make a historiographical shape visible across several views.
 
 **3. Read a dossier (10 min).** Each view has an evidence file under `research/views/`. The dossier
 is the source of truth; the grammar is the display. Claims are cited `[@key]` into

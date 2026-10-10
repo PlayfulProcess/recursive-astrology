@@ -63,16 +63,15 @@
       "label": "Dignities & Rulerships (traditional table)"
     }
   ],
-  "items": [
+  "nodes": [
     {
       "id": "planet-sun",
       "name": "Sun",
       "category": "planet",
-      "level": 1,
       "metadata": {
         "planet": "Sun",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-sun",
+        "source_node_id": "planet-sun",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -94,11 +93,10 @@
       "id": "planet-moon",
       "name": "Moon",
       "category": "planet",
-      "level": 1,
       "metadata": {
         "planet": "Moon",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-moon",
+        "source_node_id": "planet-moon",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -120,11 +118,10 @@
       "id": "planet-mercury",
       "name": "Mercury",
       "category": "planet",
-      "level": 1,
       "metadata": {
         "planet": "Mercury",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mercury",
+        "source_node_id": "planet-mercury",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -146,11 +143,10 @@
       "id": "planet-venus",
       "name": "Venus",
       "category": "planet",
-      "level": 1,
       "metadata": {
         "planet": "Venus",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-venus",
+        "source_node_id": "planet-venus",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -172,11 +168,10 @@
       "id": "planet-mars",
       "name": "Mars",
       "category": "planet",
-      "level": 1,
       "metadata": {
         "planet": "Mars",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mars",
+        "source_node_id": "planet-mars",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -198,11 +193,10 @@
       "id": "planet-jupiter",
       "name": "Jupiter",
       "category": "planet",
-      "level": 1,
       "metadata": {
         "planet": "Jupiter",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-jupiter",
+        "source_node_id": "planet-jupiter",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -224,11 +218,10 @@
       "id": "planet-saturn",
       "name": "Saturn",
       "category": "planet",
-      "level": 1,
       "metadata": {
         "planet": "Saturn",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-saturn",
+        "source_node_id": "planet-saturn",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -250,12 +243,11 @@
       "id": "sign-aries",
       "name": "Aries",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Aries",
         "element": "Fire",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aries",
+        "source_node_id": "sign-aries",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -276,12 +268,11 @@
       "id": "sign-taurus",
       "name": "Taurus",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Taurus",
         "element": "Earth",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-taurus",
+        "source_node_id": "sign-taurus",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -302,12 +293,11 @@
       "id": "sign-gemini",
       "name": "Gemini",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Gemini",
         "element": "Air",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-gemini",
+        "source_node_id": "sign-gemini",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -328,12 +318,11 @@
       "id": "sign-cancer",
       "name": "Cancer",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Cancer",
         "element": "Water",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-cancer",
+        "source_node_id": "sign-cancer",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -354,12 +343,11 @@
       "id": "sign-leo",
       "name": "Leo",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Leo",
         "element": "Fire",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-leo",
+        "source_node_id": "sign-leo",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -380,12 +368,11 @@
       "id": "sign-virgo",
       "name": "Virgo",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Virgo",
         "element": "Earth",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-virgo",
+        "source_node_id": "sign-virgo",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -406,12 +393,11 @@
       "id": "sign-libra",
       "name": "Libra",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Libra",
         "element": "Air",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-libra",
+        "source_node_id": "sign-libra",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -432,12 +418,11 @@
       "id": "sign-scorpio",
       "name": "Scorpio",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Scorpio",
         "element": "Water",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-scorpio",
+        "source_node_id": "sign-scorpio",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -458,12 +443,11 @@
       "id": "sign-sagittarius",
       "name": "Sagittarius",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Sagittarius",
         "element": "Fire",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-sagittarius",
+        "source_node_id": "sign-sagittarius",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -484,12 +468,11 @@
       "id": "sign-capricorn",
       "name": "Capricorn",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Capricorn",
         "element": "Earth",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-capricorn",
+        "source_node_id": "sign-capricorn",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -510,12 +493,11 @@
       "id": "sign-aquarius",
       "name": "Aquarius",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Aquarius",
         "element": "Air",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aquarius",
+        "source_node_id": "sign-aquarius",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -536,12 +518,11 @@
       "id": "sign-pisces",
       "name": "Pisces",
       "category": "sign",
-      "level": 1,
       "metadata": {
         "sign": "Pisces",
         "element": "Water",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-pisces",
+        "source_node_id": "sign-pisces",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -562,11 +543,10 @@
       "id": "house-1",
       "name": "First House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 1,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-1",
+        "source_node_id": "house-1",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -584,11 +564,10 @@
       "id": "house-2",
       "name": "Second House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 2,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-2",
+        "source_node_id": "house-2",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -605,11 +584,10 @@
       "id": "house-3",
       "name": "Third House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 3,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-3",
+        "source_node_id": "house-3",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -626,11 +604,10 @@
       "id": "house-4",
       "name": "Fourth House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 4,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-4",
+        "source_node_id": "house-4",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -648,11 +625,10 @@
       "id": "house-5",
       "name": "Fifth House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 5,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-5",
+        "source_node_id": "house-5",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -669,11 +645,10 @@
       "id": "house-6",
       "name": "Sixth House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 6,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-6",
+        "source_node_id": "house-6",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -690,11 +665,10 @@
       "id": "house-7",
       "name": "Seventh House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 7,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-7",
+        "source_node_id": "house-7",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -712,11 +686,10 @@
       "id": "house-8",
       "name": "Eighth House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 8,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-8",
+        "source_node_id": "house-8",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -733,11 +706,10 @@
       "id": "house-9",
       "name": "Ninth House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 9,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-9",
+        "source_node_id": "house-9",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -754,11 +726,10 @@
       "id": "house-10",
       "name": "Tenth House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 10,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-10",
+        "source_node_id": "house-10",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -776,11 +747,10 @@
       "id": "house-11",
       "name": "Eleventh House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 11,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-11",
+        "source_node_id": "house-11",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -797,11 +767,10 @@
       "id": "house-12",
       "name": "Twelfth House",
       "category": "house",
-      "level": 1,
       "metadata": {
         "house": 12,
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "house-12",
+        "source_node_id": "house-12",
         "deck": "The Structure of the Sky"
       },
       "sections": {

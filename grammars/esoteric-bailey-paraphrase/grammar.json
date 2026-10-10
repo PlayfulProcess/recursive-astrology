@@ -40,12 +40,11 @@
   "is_published": false,
   "_paraphrase_note": "All prose is our paraphrase. The keynotes for the form path and the soul path are our own readings of the school's two paths, not the book's keynotes. Never index or quote the book itself alongside this grammar (Lucis Trust terms).",
   "_page_numbers_note": "Print-page numbers are the bracketed print-page markers of the Lucis Trust online edition, checked on 2026-09-28; not checked against a physical copy. The archive.org PDF uses a different pagination and should not be cited.",
-  "items": [
+  "nodes": [
     {
       "id": "esoteric-aries",
       "name": "Aries",
       "category": "sign",
-      "level": 1,
       "sort_order": 0,
       "symbol": "♈",
       "keywords": [
@@ -60,7 +59,7 @@
       "metadata": {
         "sign": "Aries",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aries",
+        "source_node_id": "sign-aries",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Mars",
@@ -90,7 +89,6 @@
       "id": "esoteric-taurus",
       "name": "Taurus",
       "category": "sign",
-      "level": 1,
       "sort_order": 1,
       "symbol": "♉",
       "keywords": [
@@ -104,7 +102,7 @@
       "metadata": {
         "sign": "Taurus",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-taurus",
+        "source_node_id": "sign-taurus",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Venus",
@@ -134,7 +132,6 @@
       "id": "esoteric-gemini",
       "name": "Gemini",
       "category": "sign",
-      "level": 1,
       "sort_order": 2,
       "symbol": "♊",
       "keywords": [
@@ -149,7 +146,7 @@
       "metadata": {
         "sign": "Gemini",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-gemini",
+        "source_node_id": "sign-gemini",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Mercury",
@@ -179,7 +176,6 @@
       "id": "esoteric-cancer",
       "name": "Cancer",
       "category": "sign",
-      "level": 1,
       "sort_order": 3,
       "symbol": "♋",
       "keywords": [
@@ -193,7 +189,7 @@
       "metadata": {
         "sign": "Cancer",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-cancer",
+        "source_node_id": "sign-cancer",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Moon",
@@ -223,7 +219,6 @@
       "id": "esoteric-leo",
       "name": "Leo",
       "category": "sign",
-      "level": 1,
       "sort_order": 4,
       "symbol": "♌",
       "keywords": [
@@ -236,7 +231,7 @@
       "metadata": {
         "sign": "Leo",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-leo",
+        "source_node_id": "sign-leo",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Sun",
@@ -266,7 +261,6 @@
       "id": "esoteric-virgo",
       "name": "Virgo",
       "category": "sign",
-      "level": 1,
       "sort_order": 5,
       "symbol": "♍",
       "keywords": [
@@ -281,7 +275,7 @@
       "metadata": {
         "sign": "Virgo",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-virgo",
+        "source_node_id": "sign-virgo",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Mercury",
@@ -311,7 +305,6 @@
       "id": "esoteric-libra",
       "name": "Libra",
       "category": "sign",
-      "level": 1,
       "sort_order": 6,
       "symbol": "♎",
       "keywords": [
@@ -326,7 +319,7 @@
       "metadata": {
         "sign": "Libra",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-libra",
+        "source_node_id": "sign-libra",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Venus",
@@ -356,7 +349,6 @@
       "id": "esoteric-scorpio",
       "name": "Scorpio",
       "category": "sign",
-      "level": 1,
       "sort_order": 7,
       "symbol": "♏",
       "keywords": [
@@ -370,7 +362,7 @@
       "metadata": {
         "sign": "Scorpio",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-scorpio",
+        "source_node_id": "sign-scorpio",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Mars",
@@ -400,7 +392,6 @@
       "id": "esoteric-sagittarius",
       "name": "Sagittarius",
       "category": "sign",
-      "level": 1,
       "sort_order": 8,
       "symbol": "♐",
       "keywords": [
@@ -415,7 +406,7 @@
       "metadata": {
         "sign": "Sagittarius",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-sagittarius",
+        "source_node_id": "sign-sagittarius",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Jupiter",
@@ -445,7 +436,6 @@
       "id": "esoteric-capricorn",
       "name": "Capricorn",
       "category": "sign",
-      "level": 1,
       "sort_order": 9,
       "symbol": "♑",
       "keywords": [
@@ -459,7 +449,7 @@
       "metadata": {
         "sign": "Capricorn",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-capricorn",
+        "source_node_id": "sign-capricorn",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Saturn",
@@ -489,7 +479,6 @@
       "id": "esoteric-aquarius",
       "name": "Aquarius",
       "category": "sign",
-      "level": 1,
       "sort_order": 10,
       "symbol": "♒",
       "keywords": [
@@ -504,7 +493,7 @@
       "metadata": {
         "sign": "Aquarius",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-aquarius",
+        "source_node_id": "sign-aquarius",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Uranus",
@@ -534,7 +523,6 @@
       "id": "esoteric-pisces",
       "name": "Pisces",
       "category": "sign",
-      "level": 1,
       "sort_order": 11,
       "symbol": "♓",
       "keywords": [
@@ -548,7 +536,7 @@
       "metadata": {
         "sign": "Pisces",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "sign-pisces",
+        "source_node_id": "sign-pisces",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "ruler_orthodox": "Jupiter",
@@ -578,9 +566,8 @@
       "id": "cross-cardinal",
       "name": "Cardinal Cross",
       "category": "cross",
-      "level": 2,
       "sort_order": 20,
-      "composite_of": [
+      "parts": [
         "esoteric-aries",
         "esoteric-cancer",
         "esoteric-libra",
@@ -603,7 +590,7 @@
           "Capricorn"
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "quadruplicity-cardinal",
+        "source_node_id": "quadruplicity-cardinal",
         "deck": "The Structure of the Sky",
         "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
         "paraphrase": true
@@ -618,9 +605,8 @@
       "id": "cross-fixed",
       "name": "Fixed Cross",
       "category": "cross",
-      "level": 2,
       "sort_order": 21,
-      "composite_of": [
+      "parts": [
         "esoteric-taurus",
         "esoteric-leo",
         "esoteric-scorpio",
@@ -643,7 +629,7 @@
           "Aquarius"
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "quadruplicity-fixed",
+        "source_node_id": "quadruplicity-fixed",
         "deck": "The Structure of the Sky",
         "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
         "paraphrase": true
@@ -658,9 +644,8 @@
       "id": "cross-mutable",
       "name": "Mutable Cross",
       "category": "cross",
-      "level": 2,
       "sort_order": 22,
-      "composite_of": [
+      "parts": [
         "esoteric-gemini",
         "esoteric-virgo",
         "esoteric-sagittarius",
@@ -683,7 +668,7 @@
           "Pisces"
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "quadruplicity-mutable",
+        "source_node_id": "quadruplicity-mutable",
         "deck": "The Structure of the Sky",
         "cross_source": "Alice A. Bailey, Esoteric Astrology (Lucis Publishing, 1951), the table of the three crosses, print p. 80",
         "paraphrase": true
@@ -698,7 +683,6 @@
       "id": "esoteric-vulcan",
       "name": "Vulcan (hypothetical)",
       "category": "planet",
-      "level": 1,
       "sort_order": 30,
       "keywords": [
         "vulcan",
@@ -737,7 +721,6 @@
       "id": "esoteric-earth",
       "name": "The Earth (as a ruler)",
       "category": "planet",
-      "level": 1,
       "sort_order": 31,
       "symbol": "⊕",
       "keywords": [
@@ -774,7 +757,6 @@
       "id": "esoteric-pluto",
       "name": "Pluto (ruler of Pisces here)",
       "category": "planet",
-      "level": 1,
       "sort_order": 32,
       "symbol": "♇",
       "keywords": [
@@ -788,7 +770,7 @@
       "metadata": {
         "planet": "Pluto",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-pluto",
+        "source_node_id": "planet-pluto",
         "deck": "The Structure of the Sky",
         "school": "esoteric-bailey",
         "rules_esoteric": [

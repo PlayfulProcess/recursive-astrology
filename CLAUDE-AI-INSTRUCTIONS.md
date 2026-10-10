@@ -11,7 +11,7 @@ historiographies, held to the record) plus its castings-as-data (chart-aspect sp
 builder, often phone-only. Tools:
 
 - **The recursive.eco MCP** (`https://flow.recursive.eco/api/mcp`) — grammar building
-  (`create_grammar`, `add_items` — append-only, plan order first), images
+  (`create_grammar`, `add_nodes` — append-only, plan order first), images
   (`commons_image_search`), research (`wikipedia_summary`), casting. Tool manual:
   `recursive-eco/docs/CLAUDE-AI-WORKFLOW.md` — read it via the GitHub connector before the first
   tool call. New MCP tools need a fresh chat.
@@ -54,10 +54,10 @@ builder, often phone-only. Tools:
 
 When a person brings you a chart, `grammars/the-structure-of-the-sky` is the skeleton to read it
 by. It is data, not a voice: elements, modalities, polarities, planets, houses and aspects as
-leaves; every sign as element + modality + polarity (`composite_of`); the house groups, axes and
+leaves; every sign as element + modality + polarity (`parts`); the house groups, axes and
 quadrants as their houses. Rulers, exaltation, detriment, fall and triplicity rulers sit in each
 item's `metadata`. Every sign, planet, house and aspect item in the voice grammars points to its
-structure item through `metadata.source_deck` / `source_item_id` / `deck`.
+structure item through `metadata.source_deck` / `source_node_id` / `deck`.
 
 1. **Walk the structure first.** For each placement: the planet → its sign → that sign's element,
    modality, polarity and ruler (and where that ruler stands) → the house and its group (angular,

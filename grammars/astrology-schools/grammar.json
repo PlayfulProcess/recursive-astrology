@@ -356,12 +356,11 @@
     "three-doors": "an essay",
     "astrology-schools": "this grammar"
   },
-  "items": [
+  "nodes": [
     {
       "id": "school-mesopotamian-omens",
       "name": "Mesopotamian omen-craft",
       "category": "school",
-      "level": 1,
       "sort_order": 0,
       "keywords": [
         "mesopotamian-omens",
@@ -402,7 +401,7 @@
         },
         "year": -700,
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-mesopotamian-omens",
+        "source_node_id": "view-mesopotamian-omens",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -418,7 +417,6 @@
       "id": "school-ptolemy",
       "name": "Ptolemy's Hellenistic astrology",
       "category": "school",
-      "level": 1,
       "sort_order": 1,
       "keywords": [
         "hellenistic-traditional",
@@ -468,7 +466,7 @@
         },
         "year": 150,
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-hellenistic-synthesis",
+        "source_node_id": "view-hellenistic-synthesis",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -484,7 +482,6 @@
       "id": "school-lilly",
       "name": "Lilly's early-modern astrology",
       "category": "school",
-      "level": 1,
       "sort_order": 2,
       "keywords": [
         "court-science",
@@ -531,7 +528,7 @@
         },
         "year": 1647,
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-medieval-renaissance-court",
+        "source_node_id": "view-medieval-renaissance-court",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -547,7 +544,6 @@
       "id": "school-dignities-table",
       "name": "The traditional dignities table",
       "category": "school",
-      "level": 1,
       "sort_order": 3,
       "keywords": [
         "compilation",
@@ -594,7 +590,7 @@
           "zodiac": "the table is defined on the Western tropical signs"
         },
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-hellenistic-synthesis",
+        "source_node_id": "view-hellenistic-synthesis",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -610,7 +606,6 @@
       "id": "school-jyotisa",
       "name": "Jyotiṣa (Bṛhat Jātaka)",
       "category": "school",
-      "level": 1,
       "sort_order": 4,
       "keywords": [
         "jyotisa",
@@ -654,7 +649,7 @@
         "_inferred": {},
         "year": 550,
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-jyotisha",
+        "source_node_id": "view-jyotisha",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -670,7 +665,6 @@
       "id": "school-alan-leo",
       "name": "Alan Leo's Theosophical astrology",
       "category": "school",
-      "level": 1,
       "sort_order": 5,
       "keywords": [
         "alan-leo",
@@ -720,7 +714,7 @@
         },
         "year": 1899,
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-theosophical-revival",
+        "source_node_id": "view-theosophical-revival",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -736,7 +730,6 @@
       "id": "school-esoteric-bailey",
       "name": "Esoteric astrology (Bailey school)",
       "category": "school",
-      "level": 1,
       "sort_order": 6,
       "keywords": [
         "ai-written",
@@ -785,7 +778,7 @@
         },
         "year": 1951,
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-theosophical-revival",
+        "source_node_id": "view-theosophical-revival",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -803,7 +796,6 @@
       "id": "school-canonical",
       "name": "Canonical psychological astrology",
       "category": "school",
-      "level": 1,
       "sort_order": 7,
       "keywords": [
         "ai-written",
@@ -852,7 +844,7 @@
           "rulership_sets": "the grammar states no rulers; it covers Uranus, Neptune and Pluto as a modern-ruler school would"
         },
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-humanistic-psychological",
+        "source_node_id": "view-humanistic-psychological",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -868,7 +860,6 @@
       "id": "school-archetypal-pairs",
       "name": "Archetypal pairs",
       "category": "school",
-      "level": 1,
       "sort_order": 8,
       "keywords": [
         "ai-written",
@@ -908,7 +899,7 @@
           "zodiac": "the pairs are read planet to planet, independent of signs"
         },
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "view-humanistic-psychological",
+        "source_node_id": "view-humanistic-psychological",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -924,7 +915,6 @@
       "id": "school-planetary-myths",
       "name": "Planetary myths",
       "category": "school",
-      "level": 1,
       "sort_order": 9,
       "keywords": [
         "comparative",
@@ -979,7 +969,6 @@
       "id": "school-proctor-skeptical",
       "name": "The skeptical tradition (Proctor)",
       "category": "school",
-      "level": 1,
       "sort_order": 10,
       "keywords": [
         "critical",
@@ -1026,7 +1015,7 @@
         },
         "year": 1877,
         "source_deck": "historiographies-of-astrology",
-        "source_item_id": "pattern-critique",
+        "source_node_id": "pattern-critique",
         "deck": "Historiographies of Astrology"
       },
       "sections": {
@@ -1042,9 +1031,8 @@
       "id": "family-omen-craft",
       "name": "Omen-craft",
       "category": "family",
-      "level": 2,
       "sort_order": 100,
-      "composite_of": [
+      "parts": [
         "school-mesopotamian-omens"
       ],
       "relationship_type": "emergence",
@@ -1063,9 +1051,8 @@
       "id": "family-hellenistic-traditional",
       "name": "Hellenistic & traditional Western",
       "category": "family",
-      "level": 2,
       "sort_order": 101,
-      "composite_of": [
+      "parts": [
         "school-ptolemy",
         "school-lilly",
         "school-dignities-table"
@@ -1086,9 +1073,8 @@
       "id": "family-jyotisa",
       "name": "Jyotiṣa (Indian)",
       "category": "family",
-      "level": 2,
       "sort_order": 102,
-      "composite_of": [
+      "parts": [
         "school-jyotisa"
       ],
       "relationship_type": "emergence",
@@ -1107,9 +1093,8 @@
       "id": "family-theosophical",
       "name": "Theosophical & esoteric",
       "category": "family",
-      "level": 2,
       "sort_order": 103,
-      "composite_of": [
+      "parts": [
         "school-alan-leo",
         "school-esoteric-bailey"
       ],
@@ -1129,9 +1114,8 @@
       "id": "family-psychological",
       "name": "Psychological & archetypal",
       "category": "family",
-      "level": 2,
       "sort_order": 104,
-      "composite_of": [
+      "parts": [
         "school-canonical",
         "school-archetypal-pairs"
       ],
@@ -1151,9 +1135,8 @@
       "id": "family-comparative-myth",
       "name": "Comparative myth",
       "category": "family",
-      "level": 2,
       "sort_order": 105,
-      "composite_of": [
+      "parts": [
         "school-planetary-myths"
       ],
       "relationship_type": "emergence",
@@ -1172,9 +1155,8 @@
       "id": "family-critique",
       "name": "Critique (the skeptical tradition)",
       "category": "family",
-      "level": 2,
       "sort_order": 106,
-      "composite_of": [
+      "parts": [
         "school-proctor-skeptical"
       ],
       "relationship_type": "emergence",
@@ -1193,9 +1175,8 @@
       "id": "zodiac-tropical",
       "name": "Tropical",
       "category": "zodiac",
-      "level": 2,
       "sort_order": 200,
-      "composite_of": [
+      "parts": [
         "school-ptolemy",
         "school-lilly",
         "school-dignities-table",
@@ -1219,9 +1200,8 @@
       "id": "zodiac-sidereal",
       "name": "Sidereal",
       "category": "zodiac",
-      "level": 2,
       "sort_order": 201,
-      "composite_of": [
+      "parts": [
         "school-jyotisa"
       ],
       "relationship_type": "emergence",
@@ -1240,9 +1220,8 @@
       "id": "zodiac-none",
       "name": "Zodiac not used",
       "category": "zodiac",
-      "level": 2,
       "sort_order": 202,
-      "composite_of": [
+      "parts": [
         "school-mesopotamian-omens",
         "school-archetypal-pairs",
         "school-planetary-myths",
@@ -1264,9 +1243,8 @@
       "id": "era-ancient",
       "name": "Ancient (before c. 500 CE)",
       "category": "era",
-      "level": 2,
       "sort_order": 301,
-      "composite_of": [
+      "parts": [
         "school-mesopotamian-omens",
         "school-ptolemy",
         "school-dignities-table"
@@ -1289,9 +1267,8 @@
       "id": "era-classical-medieval",
       "name": "Classical & medieval (c. 500–1500)",
       "category": "era",
-      "level": 2,
       "sort_order": 302,
-      "composite_of": [
+      "parts": [
         "school-jyotisa"
       ],
       "relationship_type": "emergence",
@@ -1312,9 +1289,8 @@
       "id": "era-early-modern",
       "name": "Early modern (c. 1500–1800)",
       "category": "era",
-      "level": 2,
       "sort_order": 303,
-      "composite_of": [
+      "parts": [
         "school-lilly"
       ],
       "relationship_type": "emergence",
@@ -1335,9 +1311,8 @@
       "id": "era-modern",
       "name": "Modern (c. 1800–1960)",
       "category": "era",
-      "level": 2,
       "sort_order": 304,
-      "composite_of": [
+      "parts": [
         "school-alan-leo",
         "school-esoteric-bailey",
         "school-proctor-skeptical"
@@ -1360,9 +1335,8 @@
       "id": "era-contemporary",
       "name": "Contemporary (present-day writing)",
       "category": "era",
-      "level": 2,
       "sort_order": 305,
-      "composite_of": [
+      "parts": [
         "school-canonical",
         "school-archetypal-pairs",
         "school-planetary-myths"
@@ -1385,9 +1359,8 @@
       "id": "source-pd-book",
       "name": "Public-domain book",
       "category": "source-type",
-      "level": 2,
       "sort_order": 400,
-      "composite_of": [
+      "parts": [
         "school-mesopotamian-omens",
         "school-ptolemy",
         "school-lilly",
@@ -1413,9 +1386,8 @@
       "id": "source-compilation",
       "name": "Compilation",
       "category": "source-type",
-      "level": 2,
       "sort_order": 401,
-      "composite_of": [
+      "parts": [
         "school-dignities-table",
         "school-planetary-myths"
       ],
@@ -1437,9 +1409,8 @@
       "id": "source-ai-written",
       "name": "AI-written synthesis or paraphrase",
       "category": "source-type",
-      "level": 2,
       "sort_order": 402,
-      "composite_of": [
+      "parts": [
         "school-esoteric-bailey",
         "school-canonical",
         "school-archetypal-pairs"
@@ -1462,9 +1433,8 @@
       "id": "rulers-traditional",
       "name": "Traditional (the seven visible planets)",
       "category": "rulership-set",
-      "level": 2,
       "sort_order": 500,
-      "composite_of": [
+      "parts": [
         "school-ptolemy",
         "school-lilly",
         "school-dignities-table",
@@ -1505,9 +1475,8 @@
       "id": "rulers-modern",
       "name": "Modern (outer planets added)",
       "category": "rulership-set",
-      "level": 2,
       "sort_order": 501,
-      "composite_of": [
+      "parts": [
         "school-canonical"
       ],
       "relationship_type": "emergence",
@@ -1544,9 +1513,8 @@
       "id": "rulers-bailey-esoteric",
       "name": "Bailey school: orthodox / esoteric / hierarchical",
       "category": "rulership-set",
-      "level": 2,
       "sort_order": 502,
-      "composite_of": [
+      "parts": [
         "school-esoteric-bailey"
       ],
       "relationship_type": "emergence",
@@ -1611,9 +1579,8 @@
       "id": "rulers-colour-system",
       "name": "Colour-horoscope set (Vesta for Taurus, Chiron for Virgo)",
       "category": "rulership-set",
-      "level": 2,
       "sort_order": 503,
-      "composite_of": [],
+      "parts": [],
       "relationship_type": "emergence",
       "emergence_kind": "structural",
       "keywords": [
@@ -1655,12 +1622,11 @@
       "id": "axis-family",
       "name": "By family",
       "category": "axis",
-      "level": 3,
       "sort_order": 900,
       "render_as": "pill-group",
       "lens": "pills",
       "emergence_kind": "structural",
-      "composite_of": [
+      "parts": [
         "family-omen-craft",
         "family-hellenistic-traditional",
         "family-jyotisa",
@@ -1677,12 +1643,11 @@
       "id": "axis-zodiac",
       "name": "By zodiac",
       "category": "axis",
-      "level": 3,
       "sort_order": 901,
       "render_as": "pill-group",
       "lens": "pills",
       "emergence_kind": "structural",
-      "composite_of": [
+      "parts": [
         "zodiac-tropical",
         "zodiac-sidereal",
         "zodiac-none"
@@ -1695,12 +1660,11 @@
       "id": "axis-era",
       "name": "By era",
       "category": "axis",
-      "level": 3,
       "sort_order": 902,
       "render_as": "pill-group",
       "lens": "timeline",
       "emergence_kind": "structural",
-      "composite_of": [
+      "parts": [
         "era-ancient",
         "era-classical-medieval",
         "era-early-modern",
@@ -1715,12 +1679,11 @@
       "id": "axis-source-type",
       "name": "By source type",
       "category": "axis",
-      "level": 3,
       "sort_order": 903,
       "render_as": "pill-group",
       "lens": "pills",
       "emergence_kind": "structural",
-      "composite_of": [
+      "parts": [
         "source-pd-book",
         "source-compilation",
         "source-ai-written"
@@ -1733,12 +1696,11 @@
       "id": "axis-rulership-set",
       "name": "By rulership set",
       "category": "axis",
-      "level": 3,
       "sort_order": 904,
       "render_as": "pill-group",
       "lens": "pills",
       "emergence_kind": "structural",
-      "composite_of": [
+      "parts": [
         "rulers-traditional",
         "rulers-modern",
         "rulers-bailey-esoteric",

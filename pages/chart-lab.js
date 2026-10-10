@@ -1595,7 +1595,7 @@
           <li>Chart: ${S.source === 'local' ? 'your own (local files, never committed)' : S.source === 'viewer' ? 'handed over by the calculator (positions only, no birth data); its aspects, figures, sidereal version and chains computed in this page' : 'the invented example'}, ${esc(T)} zodiac${CH.ayan ? ' (' + esc(CH.ayan.label || CH.ayan.name) + ')' : ''}, ${esc(CH.houseSystem || '')} houses.</li>
           <li>Rulership set: ${esc(setLabel())}.</li>
           <li>Schools switched on (${on.length}): ${on.map(s => esc(s.label)).join('; ') || 'none'}.</li>
-          <li>Readings come from the grammars in this library (by the one cross-link key, <code>source_item_id</code>), short windows of public-domain books (archive.org OCR, old spellings kept) and podcast auto-captions (20 words at most, linked to the moment). Each school reads the zodiac it was written for. The Bailey school appears only as our paraphrase plus the attributed ruler table: its text is under copyright and is not stored here.</li>
+          <li>Readings come from the grammars in this library (by the one cross-link key, <code>source_node_id</code>), short windows of public-domain books (archive.org OCR, old spellings kept) and podcast auto-captions (20 words at most, linked to the moment). Each school reads the zodiac it was written for. The Bailey school appears only as our paraphrase plus the attributed ruler table: its text is under copyright and is not stored here.</li>
           <li>Template notes (marked “template wording”) are this mock's own scaffolding: the method's structure, phrased as possibilities.</li>
           ${CH.orbsNote ? `<li>Orbs: ${esc(CH.orbsNote)}</li>` : ''}</ul></div>`, spec: null });
     }
@@ -1839,7 +1839,7 @@
     S.schools.forEach(s => { S.schoolBy[s.slug] = s; });
     // rulers: traditional + modern from the structure grammar, Bailey's esoteric column from the paraphrase grammar
     const trad = {}, mod = {};
-    for (const it of ((structure && structure.items) || [])) {
+    for (const it of ((structure && structure.nodes) || [])) {
       const m = it.metadata || {};
       if (/^sign-/.test(it.id) && m.ruler) { const s = cap(it.id.slice(5)); trad[s] = low(m.ruler); mod[s] = low(m.ruler_modern || m.ruler); }
       if (/^planet-/.test(it.id) && (m.domicile || m.exaltation)) {
@@ -1848,7 +1848,7 @@
       }
     }
     const eso = {};
-    for (const it of ((bailey && bailey.items) || [])) { const m = it.metadata || {}; if (m.sign && m.ruler_esoteric) eso[m.sign] = low(m.ruler_esoteric); }
+    for (const it of ((bailey && bailey.nodes) || [])) { const m = it.metadata || {}; if (m.sign && m.ruler_esoteric) eso[m.sign] = low(m.ruler_esoteric); }
     S.RULERS['rulers-traditional'] = Object.keys(trad).length === 12 ? trad : FALLBACK_TRAD;
     S.RULERS['rulers-modern'] = Object.keys(mod).length === 12 ? mod : FALLBACK_MOD;
     S.RULERS['rulers-bailey-esoteric'] = Object.keys(eso).length === 12 ? eso : null;

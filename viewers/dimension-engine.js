@@ -33,18 +33,35 @@
     return String(a).localeCompare(String(b));
   }
 
-  /* FLATTEN: grammar.items → records, each field a string[] (multi-membership ready).
-     Tracks __parents/__children from composite_of for relationship tracing. */
+  // depth from parts: a node with no parts is 1; otherwise 1 + the deepest part. Cycle-safe.
+  function nodeDepth(node, byId, seen, memo) {
+    const parts = node && node.parts;
+    if (!parts || !parts.length) return 1;
+    if (memo && memo.has(node.id)) return memo.get(node.id);
+    seen = seen || new Set();
+    if (seen.has(node.id)) return 1;
+    seen.add(node.id);
+    let d = 1;
+    for (const id of parts) { const c = byId.get(id); if (c) d = Math.max(d, 1 + nodeDepth(c, byId, seen, memo)); }
+    seen.delete(node.id);
+    if (memo) memo.set(node.id, d);
+    return d;
+  }
+
+  /* FLATTEN: grammar.nodes → records, each field a string[] (multi-membership ready).
+     Tracks __parents/__children from parts for relationship tracing. */
   function flatten(grammar, inherit, prefix, nameOf) {
-    const items = grammar.items || [];
+    const items = grammar.nodes || [];
+    const byId = new Map(items.map(it => [it.id, it]));
+    const depthMemo = new Map();
     const pid = id => (prefix ? prefix + ':' : '') + id;
     const memberOf = {};
     for (const it of items)
-      for (const cid of (it.composite_of || []))
+      for (const cid of (it.parts || []))
         (memberOf[pid(cid)] = memberOf[pid(cid)] || []).push(pid(it.id));
     const recs = [];
     for (const it of items) {
-      const lvl = it.level || (it.composite_of?.length ? 2 : 1);
+      const lvl = nodeDepth(it, byId, null, depthMemo);
       const r = {
         __name: it.name, __img: it.image_url || it.metadata?.image_url || '',
         // The plate's public-domain provenance, carried alongside the URL so a
@@ -52,7 +69,7 @@
         // Object, not a discovered dimension — it is never something to pivot on.
         __credit: it.metadata?.image_credit || null,
         __id: pid(it.id),
-        __children: (it.composite_of || []).map(pid),
+        __children: (it.parts || []).map(pid),
         __parents: memberOf[pid(it.id)] || []
       };
       r.level = ['L' + lvl];

@@ -1,5 +1,16 @@
 # Changelog — The Recursive Astrology
 
+## October 10, 2026 — Grammar format v2: node all the way down
+
+- Every grammar.json now uses the v2 words of recursive.eco's format: `nodes` (was `items`),
+  `parts` (was `composite_of`), `metadata.source_node_id` (was `source_item_id`), and no stored
+  `level` (depth is computed from `parts`). The `_collection.json` counts are `nodes` too.
+- The generators write v2 (`scripts/build_meta_astro.py`, `build_meta_schools.py`,
+  `build_collection.py`), `check.py` validates `nodes` and `parts`, and every viewer reads v2 only
+  (cards, tree, explorer, the dimension engine, lenses, wheel, archetypal, genealogy, the courses,
+  Chart Lab and the chart calculator). The spec: recursive-eco
+  `docs/architecture/model-track/FORMAT-V2-NODES.md`.
+
 ## September 29, 2026 — Chart Lab, round 2: page links, named figures, the assistant, any chart
 
 - **Book passages link to their scanned page.** The Chart Lab's 234 public-domain book windows

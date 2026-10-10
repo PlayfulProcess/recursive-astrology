@@ -9869,7 +9869,7 @@
                     const { data, error } = await supabaseClient.from('user_documents').select('document_data').eq('id', id).single();
                     if (error) console.error('[I Ching] User doc fetch error:', error);
                     docData = data?.document_data || {};
-                    ichingGrammarItems = docData.items || docData.hexagrams || docData.cards || [];
+                    ichingGrammarItems = docData.nodes || docData.hexagrams || docData.cards || [];
                     ichingGrammarEmergences = docData.emergences || []; // L2 items (e.g., zodiac signs)
                     ichingGrammarName = docData.name || 'I Ching Grammar';
                     selectedIchingDocId = id; // Direct user document
@@ -9897,7 +9897,7 @@
 
                         if (docDataResult?.document_data) {
                             const doc = docDataResult.document_data;
-                            ichingGrammarItems = doc.items || doc.hexagrams || doc.cards || [];
+                            ichingGrammarItems = doc.nodes || doc.hexagrams || doc.cards || [];
                             ichingGrammarEmergences = doc.emergences || []; // L2 items
                             ichingGrammarName = doc.name || 'I Ching Grammar';
                             selectedIchingDocId = docIdFromUrl; // Store for grammar-viewer link
@@ -9908,7 +9908,7 @@
 
                     // Fallback: check tool_data directly (legacy)
                     if (!ichingGrammarItems || ichingGrammarItems.length === 0) {
-                        ichingGrammarItems = toolData.items || toolData.hexagrams || toolData.cards || [];
+                        ichingGrammarItems = toolData.nodes || toolData.hexagrams || toolData.cards || [];
                         ichingGrammarEmergences = toolData.emergences || [];
                         ichingGrammarName = toolData.name || 'I Ching Grammar';
                     }
@@ -9948,8 +9948,8 @@
 
             // Find the component hexagrams
             const components = [];
-            if (match.composite_of && ichingGrammarItems) {
-                match.composite_of.forEach(refId => {
+            if (match.parts && ichingGrammarItems) {
+                match.parts.forEach(refId => {
                     // Handle "hex-N" format
                     const hexNum = parseInt(refId.replace('hex-', ''));
                     const hexItem = ichingGrammarItems.find(i =>
@@ -10234,12 +10234,6 @@
         function normalizeAstrologyData(data) {
             if (!data) return null;
 
-            // Handle _unified_items key (from unified grammar editor)
-            // Merge into items so the rest of normalization works
-            if (data._unified_items?.length > 0 && !data.items?.length) {
-                data = { ...data, items: data._unified_items };
-            }
-
             // Extract role mappings if present
             const categoryRoles = data._category_roles || {};
             const sectionRoles = data._section_roles || {};
@@ -10252,7 +10246,7 @@
                     signs: (data.signs || []).map(s => flattenSections(s, sectionRoles)),
                     houses: (data.houses || []).map(h => flattenSections(h, sectionRoles)),
                     aspects: (data.aspects || []).map(a => flattenSections(a, sectionRoles)),
-                    items: (data.items || []).map(i => flattenSections(i, sectionRoles)),
+                    items: (data.nodes || []).map(i => flattenSections(i, sectionRoles)),
                     _categoryRoles: categoryRoles,
                     _sectionRoles: sectionRoles
                 };
@@ -10324,8 +10318,8 @@
                 };
             }
 
-            // If data has items array (generic/unified format), categorize using roles
-            if (data.items?.length > 0) {
+            // If data has a nodes array (grammar format v2), categorize using roles
+            if (data.nodes?.length > 0) {
                 const planets = [];
                 const signs = [];
                 const houses = [];
@@ -10334,7 +10328,7 @@
                 const yogas = [];
                 const items = [];
 
-                data.items.forEach(item => {
+                data.nodes.forEach(item => {
                     // Flatten sections
                     const flattened = flattenSections(item, sectionRoles);
 
@@ -10355,8 +10349,7 @@
                         // Preserve original fields
                         symbol: flattened.symbol,
                         metadata: flattened.metadata,
-                        composite_of: flattened.composite_of,
-                        level: flattened.level
+                        parts: flattened.parts
                     };
 
                     // Route to appropriate bucket based on role
@@ -10462,11 +10455,11 @@
                     const { data } = await supabaseClient.from('tools').select('tool_data').eq('id', id).single();
                     const toolData = data?.tool_data || {};
 
-                    // Check if tool_data has inline content (planets, signs, houses, items, interpretations)
+                    // Check if tool_data has inline content (planets, signs, houses, nodes, interpretations)
                     const hasInlineContent = toolData.planets?.length > 0 ||
                                             toolData.signs?.length > 0 ||
                                             toolData.houses?.length > 0 ||
-                                            toolData.items?.length > 0 ||
+                                            toolData.nodes?.length > 0 ||
                                             toolData.interpretations?.length > 0;
 
                     if (hasInlineContent) {

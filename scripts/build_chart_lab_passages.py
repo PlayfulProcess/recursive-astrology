@@ -4,7 +4,7 @@ Writes mock-data/passages.json: short passages the chart lab's Ask mode ranks cl
 (BM25), and that its Lens and Book modes show side by side per school. Three kinds:
 
   grammar  every planet / sign / house / aspect item of the school grammars in grammars/,
-           keyed by metadata.source_item_id (the one cross-link key) plus a small alias table
+           keyed by metadata.source_node_id (the one cross-link key) plus a small alias table
            for the nodes and Chiron; archetypal-pairs L2 items keyed by their planet pair;
            aspects-commented split into its three school sections. Sections trimmed.
   book     short windows (<= 60 words) from the public-domain books in sources/public-domain,
@@ -134,9 +134,9 @@ def grammar_passages(schools):
     for gslug, owners in sorted(by_slug.items()):
         path = os.path.join(ROOT, 'grammars', gslug, 'grammar.json')
         g = json.load(open(path, encoding='utf-8'))
-        for it in g.get('items', []):
+        for it in g.get('nodes', []):
             md = it.get('metadata') or {}
-            key = md.get('source_item_id')
+            key = md.get('source_node_id')
             if key in QUAD:
                 key = QUAD[key]
             if not key and it['id'] in ALIASES:

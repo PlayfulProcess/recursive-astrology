@@ -116,7 +116,7 @@ def strip_header(body):
 def measure(grammar):
     """[(item_id, section, body_without_header, lcs, header_or_None)]"""
     rows = []
-    for it in grammar["items"]:
+    for it in grammar["nodes"]:
         secs = it["sections"]
         record_key = next((k for k in secs if k.startswith(RECORD_PREFIX)), None)
         if record_key is None:
@@ -132,7 +132,7 @@ def measure(grammar):
 
 
 def apply(grammar, rows):
-    by = {it["id"]: it for it in grammar["items"]}
+    by = {it["id"]: it for it in grammar["nodes"]}
     changed = 0
     for item_id, name, body, _lcs, header in rows:
         want = (header + "\n\n" + body) if header else body
@@ -161,7 +161,7 @@ def report(rows):
 def check():
     grammar = load()
     rows = measure(grammar)
-    by = {it["id"]: it for it in grammar["items"]}
+    by = {it["id"]: it for it in grammar["nodes"]}
     ok = True
     for item_id, name, body, lcs, header in rows:
         want = (header + "\n\n" + body) if header else body
@@ -198,11 +198,11 @@ def main():
 
     # Nothing-lost: labelling must not touch a single word of the bodies.
     before = {(it["id"], n): strip_header(it["sections"][n])
-              for it in grammar["items"] for n in SECTIONS
+              for it in grammar["nodes"] for n in SECTIONS
               if n in it["sections"]}
     changed = apply(grammar, rows)
     after = {(it["id"], n): strip_header(it["sections"][n])
-             for it in grammar["items"] for n in SECTIONS
+             for it in grammar["nodes"] for n in SECTIONS
              if n in it["sections"]}
     if before != after:
         diff = [k for k in before if before[k] != after[k]]

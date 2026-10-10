@@ -139,7 +139,7 @@ def main():
             year = None
 
         categories = {}
-        for it in g.get("items", []):
+        for it in g.get("nodes", []):
             c = it.get("category")
             if c:
                 categories[c] = categories.get(c, 0) + 1
@@ -151,7 +151,7 @@ def main():
             "branch": branch,
             "is_meta": False,
             "default_preview": g.get("default_preview"),
-            "items": len(g.get("items", [])),
+            "nodes": len(g.get("nodes", [])),
             "cover_image_url": g.get("cover_image_url"),
             "blurb": blurb_of(g),
             "path": f"grammars/{slug}/grammar.json",
@@ -173,7 +173,7 @@ def main():
             "name": g.get("name"),
             "description": (g.get("description") or "").split(".")[0][:200],
             "grammar_type": g.get("grammar_type"),
-            "items": len(g.get("items", [])),
+            "nodes": len(g.get("nodes", [])),
             "categories": categories,
             "provenance": provenance,
             "year_label": dating.get("label"),
@@ -224,7 +224,7 @@ def main():
     }
     json.dump(root_collection, open(OUT_ROOT, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
-    n_items = sum(e["items"] for e in grammars_index)
+    n_items = sum(e["nodes"] for e in grammars_index)
     n_dated = sum(1 for e in grammars_index if e.get("year") is not None)
     for w in warnings:
         print("  WARN", w)

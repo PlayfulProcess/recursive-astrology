@@ -212,7 +212,7 @@ function mdLite(s){
 const { contentBearing } = GrammarPicker;
 
 function findHouseItem(grammar, n){
-  const items = grammar.items || [];
+  const items = grammar.nodes || [];
   const target = String(n);
   return items.find(it => (it.category || '') === 'house' &&
     (it.id === `house-${n}` || String((it.metadata || {}).house) === target)) || null;
@@ -237,8 +237,8 @@ function renderHouseVoiceStack(n){
 }
 
 function buildHouseDialogBody(pos){
-  const it = CASTING.items.find(i => i.position === pos);
-  const houseItem = SET && SET.items.find(i => i.id === `house-${pos}`);
+  const it = CASTING.nodes.find(i => i.position === pos);
+  const houseItem = SET && SET.nodes.find(i => i.id === `house-${pos}`);
   $('#d-cat').textContent = `position ${pos} of 12 · derived from your chart, never drawn`;
   $('#d-name').textContent = it.name;
   const body = $('#d-sections');
@@ -271,7 +271,7 @@ function draw(){
   svg.innerHTML = '';
   svg.appendChild(el('circle', {cx: CX, cy: CY, r: R, class: 'hub'}));
   svg.appendChild(el('circle', {cx: CX, cy: CY, r: R0, class: 'hub'}));
-  CASTING.items.forEach(it => {
+  CASTING.nodes.forEach(it => {
     const n = it.position;
     const a0 = 180 + (n - 1) * 30, a1 = a0 + 30, mid = a0 + 15;
     const framed = frameSelects(n);

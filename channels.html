@@ -97,7 +97,7 @@
     const cats = Object.entries(g.categories || {}).map(([c, n]) => '<span class="pill">' + n + ' ' + esc(c) + (n > 1 ? 's' : '') + '</span>').join('');
     return '<article class="gram"><h3>' + esc(g.name) + '</h3>' +
       '<p class="desc">' + esc(g.description) + '</p>' +
-      '<div class="meta"><span class="pill">' + g.items + ' items</span>' + cats + '</div>' +
+      '<div class="meta"><span class="pill">' + g.nodes + ' items</span>' + cats + '</div>' +
       '<div class="actions"><a class="read" href="' + esc(LIBRARY_CONFIG.readerUrl(g.slug)) + '">Read here →</a>' + app + '</div></article>';
   }).join('') + '</div>';
 

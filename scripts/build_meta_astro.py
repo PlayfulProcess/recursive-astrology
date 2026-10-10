@@ -177,8 +177,8 @@ def build():
         if not g:
             continue
         source_names[slug] = g.get("name") or slug
-        for it in g.get("items", []):
-            if it.get("composite_of"):
+        for it in g.get("nodes", []):
+            if it.get("parts"):
                 continue  # skip any emergence/axis nodes — only L1 entity items count
             cat = (it.get("category") or "").lower()
             text = render_sections(it)
@@ -214,15 +214,14 @@ def build():
         if not texts:
             return  # no voice covers this entity — skip rather than ship an empty item
         sections = {label: texts[label] for slug, label in SOURCES if label in texts}
-        # The one cross-link pattern (source_deck / source_item_id / deck), pointing each
+        # The one cross-link pattern (source_deck / source_node_id / deck), pointing each
         # placement at its item in the structure grammar, which uses the same ids.
-        metadata = dict(metadata, source_deck=STRUCTURE_SLUG, source_item_id=entity_id,
+        metadata = dict(metadata, source_deck=STRUCTURE_SLUG, source_node_id=entity_id,
                         deck=STRUCTURE_LABEL)
         item = {
             "id": entity_id,
             "name": name,
             "category": category,
-            "level": 1,
             "metadata": metadata,
             "sections": sections,
             "keywords": [name.lower(), category],
@@ -296,7 +295,7 @@ def build():
         "_built_by": "scripts/build_meta_astro.py",
         "_sources": [{"slug": slug, "name": source_names.get(slug, slug), "label": label}
                       for slug, label in SOURCES if slug in source_names],
-        "items": items,
+        "nodes": items,
     }
 
     out_dir = os.path.join(GRAMMARS, OUT_SLUG)

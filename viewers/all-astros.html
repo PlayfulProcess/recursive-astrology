@@ -251,7 +251,7 @@ function openItem(id){
 async function boot(){
   try {
     const g = await (await fetch('../grammars/astro-of-all-astros/grammar.json')).json();
-    ITEMS = g.items || [];
+    ITEMS = g.nodes || [];
     SOURCES = g._sources || [];
     $('#status').textContent = `${ITEMS.length} symbols · ${SOURCES.length} voices, generated from grammars/astro-of-all-astros`;
   } catch (e) {

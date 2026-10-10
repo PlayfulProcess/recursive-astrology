@@ -9,7 +9,7 @@
       "name": "Alan Leo's Astrology",
       "description": "Classical astrological interpretations from Alan Leo (1860-1917), the father of modern astrology",
       "grammar_type": "astrology",
-      "items": 38,
+      "nodes": 38,
       "categories": {
         "sign": 12,
         "planet": 9,
@@ -25,7 +25,7 @@
       "name": "Archetypal Astrology — planetary pairs, after Tarnas",
       "description": "Archetypal Astrology — the planets in relationship, not sign by sign but pair by pair",
       "grammar_type": "astrology",
-      "items": 25,
+      "nodes": 25,
       "categories": {
         "planet": 10,
         "archetypal-pair": 15
@@ -38,7 +38,7 @@
       "name": "The Aspects, Commented — Ptolemy · Lilly · Canonical",
       "description": "The five classical (Ptolemaic) aspects — conjunction, sextile, square, trine, opposition — each as an item carrying tradition-sourced commentary from two public-domain voices plus a contemporary synth",
       "grammar_type": "astrology",
-      "items": 5,
+      "nodes": 5,
       "categories": {
         "aspect": 5
       },
@@ -50,7 +50,7 @@
       "name": "Astro of All Astros — every voice, one placement",
       "description": "A generated meta-voice grammar aggregating every interpretation grammar in this repo into one navigable set: one item per planet, sign, and house, each carrying every voice's own reading of that place",
       "grammar_type": "astrology",
-      "items": 31,
+      "nodes": 31,
       "categories": {
         "planet": 7,
         "sign": 12,
@@ -64,7 +64,7 @@
       "name": "The Schools of the Sky — a grammar of astrology's schools",
       "description": "A grammar of grammars: one item per astrology school in this library, grouped by family, zodiac, era, source type and rulership set, so a reader can switch schools in and out",
       "grammar_type": "astrology",
-      "items": 38,
+      "nodes": 38,
       "categories": {
         "school": 11,
         "family": 7,
@@ -82,7 +82,7 @@
       "name": "The Big Three — a reflection casting",
       "description": "A three-position casting that mirrors the tarot three-card spread so it works in the oracle from day one — but nothing here is drawn at random: every position resolves to an aspect of YOUR OWN chart (",
       "grammar_type": "sequence",
-      "items": 3,
+      "nodes": 3,
       "categories": {
         "position": 3
       },
@@ -94,7 +94,7 @@
       "name": "One Aspect — the smallest casting",
       "description": "The minimal casting, and the purest statement of this channel's rule: one position, filled by ANY single aspect of your own chart — a planet in its sign, a house and what stands in it, or an aspect be",
       "grammar_type": "sequence",
-      "items": 1,
+      "nodes": 1,
       "categories": {
         "position": 1
       },
@@ -106,7 +106,7 @@
       "name": "The Twelve Houses — a chart-wheel casting",
       "description": "The chart-shaped casting: the twelve houses as twelve fixed positions on the wheel — the richer target the three-position casting graduates into",
       "grammar_type": "sequence",
-      "items": 12,
+      "nodes": 12,
       "categories": {
         "position": 12
       },
@@ -118,7 +118,7 @@
       "name": "Essential Dignities & Rulerships — the traditional scheme, planet by planet and sign by sign",
       "description": "Essential dignities and rulerships as a LENS grammar: the seven classical planets, each carrying its domicile(s), exaltation (with the traditional degree), detriment, and fall — and the twelve signs, ",
       "grammar_type": "astrology",
-      "items": 19,
+      "nodes": 19,
       "categories": {
         "planet": 7,
         "sign": 12
@@ -131,7 +131,7 @@
       "name": "The Dwarf Planets — a symbol system caught in the act of forming",
       "description": "On 24 August 2006, in a conference hall in Prague, a show of hands changed what Pluto is called",
       "grammar_type": "astrology",
-      "items": 9,
+      "nodes": 9,
       "categories": {
         "dwarf-planet": 6,
         "reclassification": 3
@@ -144,7 +144,7 @@
       "name": "Esoteric Astrology — the Bailey school, paraphrased",
       "description": "One school's teaching, paraphrased: the soul-centred ('esoteric') astrology set out in Alice A",
       "grammar_type": "astrology",
-      "items": 18,
+      "nodes": 18,
       "categories": {
         "sign": 12,
         "cross": 3,
@@ -158,7 +158,7 @@
       "name": "Historiographies of Astrology",
       "description": "A library of the major historiographical VIEWS of astrology — the eras and stances through which humans have read meaning into the sky, each presented faithfully in its own terms and held honestly to ",
       "grammar_type": "custom",
-      "items": 14,
+      "nodes": 14,
       "categories": {
         "view": 11,
         "pattern": 3
@@ -171,7 +171,7 @@
       "name": "Jyotiṣa — The Bṛhat Jātaka",
       "description": "The nine grahas and twelve rāśis as taught in Varāhamihira's Bṛhat Jātaka (c",
       "grammar_type": "astrology",
-      "items": 21,
+      "nodes": 21,
       "categories": {
         "planet": 9,
         "sign": 12
@@ -185,7 +185,7 @@
       "name": "Mesopotamian Omen-Craft — The Seven Watched Powers",
       "description": "The seven classical planet-gods of Babylonian and Assyrian celestial divination — Sin, Šamaš, Ištar, Nergal, Marduk, Ninurta, and Nabû — each with a sample omen-form drawn from public-domain 19th/earl",
       "grammar_type": "astrology",
-      "items": 7,
+      "nodes": 7,
       "categories": {
         "planet": 7
       },
@@ -198,7 +198,7 @@
       "name": "Planetary Myths — the same sky, many readings",
       "description": "One item per classical planet, carrying the myth that grew up around it in three unrelated traditions — Greco-Roman, Vedic (Jyotiṣa), and Babylonian/Mesopotamian — side by side, so the disagreement be",
       "grammar_type": "custom",
-      "items": 7,
+      "nodes": 7,
       "categories": {
         "planet": 7
       },
@@ -210,7 +210,7 @@
       "name": "Proctor's Skeptical Astrology",
       "description": "A critical examination of astrology based on Richard A",
       "grammar_type": "astrology",
-      "items": 37,
+      "nodes": 37,
       "categories": {
         "planet": 8,
         "sign": 12,
@@ -226,7 +226,7 @@
       "name": "Ptolemy's Tetrabiblos",
       "description": "Classical Western astrology based on Claudius Ptolemy's Tetrabiblos (c",
       "grammar_type": "astrology",
-      "items": 28,
+      "nodes": 28,
       "categories": {
         "planet": 7,
         "sign": 12,
@@ -242,7 +242,7 @@
       "name": "The Right Size",
       "description": "A reading on scale, awe, and the oldest shared calendar — in the spirit of How the Cards Can Work",
       "grammar_type": "custom",
-      "items": 9,
+      "nodes": 9,
       "categories": {
         "reading": 8,
         "note": 1
@@ -255,7 +255,7 @@
       "name": "The Structure of the Sky — elements, modalities, signs, houses and aspects",
       "description": "The skeleton the voices hang on, as plain data: not a voice, not an interpretation",
       "grammar_type": "astrology",
-      "items": 77,
+      "nodes": 77,
       "categories": {
         "zodiac": 1,
         "element": 4,
@@ -282,7 +282,7 @@
       "name": "Three Doors",
       "description": "Reading the sky through the Trika — Parā, Parāparā, Aparā",
       "grammar_type": "custom",
-      "items": 6,
+      "nodes": 6,
       "categories": {
         "reading": 5,
         "note": 1
@@ -295,7 +295,7 @@
       "name": "The Trika Lens — three doors into a chart",
       "description": "A way of reading the sky through the three goddesses of the Trika — Parā, Parāparā, and Aparā",
       "grammar_type": "custom",
-      "items": 3,
+      "nodes": 3,
       "categories": {
         "lens": 3
       },
@@ -307,7 +307,7 @@
       "name": "Western Astrology — Canonical",
       "description": "A canonical Western astrology grammar covering planets, signs, houses, and aspects with archetypal interpretations",
       "grammar_type": "astrology",
-      "items": 43,
+      "nodes": 43,
       "categories": {
         "planet": 13,
         "sign": 12,
@@ -322,7 +322,7 @@
       "name": "William Lilly's Christian Astrology",
       "description": "The seven classical planets and the twelve zodiac signs as William Lilly (1602–1681) describes them in Christian Astrology (1647), the most influential English-language astrology text of the Renaissan",
       "grammar_type": "astrology",
-      "items": 19,
+      "nodes": 19,
       "categories": {
         "planet": 7,
         "sign": 12

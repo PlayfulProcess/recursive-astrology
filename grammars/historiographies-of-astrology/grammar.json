@@ -31,11 +31,10 @@
       }
     ]
   },
-  "items": [
+  "nodes": [
     {
       "id": "view-mesopotamian-omens",
       "name": "Mesopotamian Omen-Craft",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Enuma Anu Enlil",
@@ -72,7 +71,6 @@
     {
       "id": "view-hellenistic-synthesis",
       "name": "The Hellenistic Synthesis",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Alexandria",
@@ -122,7 +120,6 @@
     {
       "id": "view-jyotisha",
       "name": "Jyotiṣa — The Indian Tradition",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Jyotisha",
@@ -160,7 +157,6 @@
     {
       "id": "view-islamic-golden-age",
       "name": "The Islamic Golden Age",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Abu Ma'shar",
@@ -198,7 +194,6 @@
     {
       "id": "view-medieval-renaissance-court",
       "name": "Medieval & Renaissance Court Astrology",
-      "level": 1,
       "category": "view",
       "keywords": [
         "court astrologer",
@@ -235,7 +230,6 @@
     {
       "id": "view-decline-demarcation",
       "name": "The Great Decline & the Demarcation",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Copernicus",
@@ -273,7 +267,6 @@
     {
       "id": "view-theosophical-revival",
       "name": "The Theosophical Revival",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Alan Leo",
@@ -310,7 +303,6 @@
     {
       "id": "view-sun-sign-press",
       "name": "The Sun-Sign Press",
-      "level": 1,
       "category": "view",
       "keywords": [
         "R.H. Naylor",
@@ -349,7 +341,6 @@
     {
       "id": "view-humanistic-psychological",
       "name": "Humanistic & Psychological Astrology",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Dane Rudhyar",
@@ -387,7 +378,6 @@
     {
       "id": "view-empirical-test-tradition",
       "name": "The Empirical Test Tradition",
-      "level": 1,
       "category": "view",
       "keywords": [
         "Carlson",
@@ -415,7 +405,6 @@
     {
       "id": "view-contemporary-resurgence",
       "name": "The Contemporary Resurgence",
-      "level": 1,
       "category": "view",
       "keywords": [
         "apps",
@@ -442,9 +431,8 @@
     {
       "id": "pattern-science-of-its-age",
       "name": "Astrology as the Science of Its Age",
-      "level": 2,
       "category": "pattern",
-      "composite_of": [
+      "parts": [
         "view-mesopotamian-omens",
         "view-hellenistic-synthesis",
         "view-islamic-golden-age",
@@ -472,9 +460,8 @@
     {
       "id": "pattern-psychologized",
       "name": "Astrology Psychologized",
-      "level": 2,
       "category": "pattern",
-      "composite_of": [
+      "parts": [
         "view-theosophical-revival",
         "view-humanistic-psychological"
       ],
@@ -489,9 +476,8 @@
     {
       "id": "pattern-critique",
       "name": "The Critique From Within and Without",
-      "level": 2,
       "category": "pattern",
-      "composite_of": [
+      "parts": [
         "view-medieval-renaissance-court",
         "view-decline-demarcation",
         "view-empirical-test-tradition"

@@ -16,7 +16,7 @@
     "history"
   ],
   "_generated": false,
-  "items": [
+  "nodes": [
     {
       "id": "planet-sun",
       "name": "Sun",
@@ -45,7 +45,7 @@
         "confidence": "medium",
         "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-sun",
+        "source_node_id": "planet-sun",
         "deck": "The Structure of the Sky"
       }
     },
@@ -77,7 +77,7 @@
         "confidence": "medium",
         "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-moon",
+        "source_node_id": "planet-moon",
         "deck": "The Structure of the Sky"
       }
     },
@@ -118,7 +118,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mercury",
+        "source_node_id": "planet-mercury",
         "deck": "The Structure of the Sky"
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_Hermes_Chiaramonti.jpg?width=800"
@@ -160,7 +160,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-venus",
+        "source_node_id": "planet-venus",
         "deck": "The Structure of the Sky"
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Venus_de_Milo_Louvre_Ma399.jpg?width=800"
@@ -191,7 +191,7 @@
         "confidence": "medium",
         "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mars",
+        "source_node_id": "planet-mars",
         "deck": "The Structure of the Sky"
       }
     },
@@ -221,7 +221,7 @@
         "confidence": "medium",
         "_source": "research/why-astrology/04-planetary-myths.md — that dossier's per-claim confidence key (✔ corroborated / ○ secondary-or-single-source / ◆ contested-interpretive) is the basis for this rating; the inline source lines in each section carry the citations.",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-jupiter",
+        "source_node_id": "planet-jupiter",
         "deck": "The Structure of the Sky"
       }
     },
@@ -261,7 +261,7 @@
           "verified": "2026-07-26"
         },
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-saturn",
+        "source_node_id": "planet-saturn",
         "deck": "The Structure of the Sky"
       },
       "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya,_Saturno_devorando_a_su_hijo_(1819-1823).jpg?width=800"

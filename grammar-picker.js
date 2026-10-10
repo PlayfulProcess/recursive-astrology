@@ -108,7 +108,7 @@
   // grammars stamp metadata.house/planet/sign instead of, or in addition to,
   // category).
   function detectShapes(g) {
-    const items = g.items || [];
+    const items = g.nodes || [];
     const has = shape => items.some(it =>
       (it.category || '') === shape || (it.metadata || {})[shape] != null);
     return { house: has('house'), planet: has('planet'), sign: has('sign') };
@@ -129,7 +129,7 @@
       catch (e) { return { slug, g: null }; }
     }));
     return loaded
-      .filter(({ g }) => g && Array.isArray(g.items))
+      .filter(({ g }) => g && Array.isArray(g.nodes))
       .map(({ slug, g }) => ({ slug, grammar: g, shapes: detectShapes(g), ...extractEra(g) }))
       .sort((x, y) => x.year - y.year || x.voiceLabel.localeCompare(y.voiceLabel));
   }

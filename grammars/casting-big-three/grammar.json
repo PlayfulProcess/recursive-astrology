@@ -28,11 +28,10 @@
     "fallback": "user_entered_placements",
     "_note": "NEVER random: each position derives from the querent's chart. Sun and Moon sign need only the birth date(time); the Ascendant needs time + place and a real chart calculation (ephemeris — see docs/RECURSIVE-ECO-INTEGRATION.md §ephemeris; the family's engine is the Skyfield backend noted in nara's assets inventory). Data-only fallback: the reader enters placements they already know. Resolution: each position binds to the matching item of the `from` grammar (planet item + the sign it occupies; ascendant → the rising sign + house-1)."
   },
-  "items": [
+  "nodes": [
     {
       "id": "position-sun",
       "name": "Your Sun",
-      "level": 1,
       "category": "position",
       "position": 1,
       "maps_to": {
@@ -52,7 +51,6 @@
     {
       "id": "position-moon",
       "name": "Your Moon",
-      "level": 1,
       "category": "position",
       "position": 2,
       "maps_to": {
@@ -72,7 +70,6 @@
     {
       "id": "position-ascendant",
       "name": "Your Ascendant",
-      "level": 1,
       "category": "position",
       "position": 3,
       "maps_to": {

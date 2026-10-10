@@ -38,13 +38,12 @@
   ],
   "_synthesis_note": "Inspired by Richard Tarnas's archetypal astrology (*Cosmos and Psyche*, 2006; *The Passion of the Western Mind*). These readings are PlayfulProcess's interpretation, written with an AI from its knowledge of his work — NOT Tarnas's words, not his endorsement. Go to the source: https://cosmosandpsyche.com/ Tarnas's own case studies in Cosmos and Psyche track outer-planet-to-outer-planet alignments correlated with collective historical periods; the ten outer/social-planet pairs in this grammar draw on that real material, cited honestly as \"Tarnas correlates...\" and never invented. The five personal-planet pairs (Sun-Saturn, Sun-Pluto, Venus-Mars, Moon-Saturn, Mercury-Uranus) fall outside the book's own historical dataset — their cycles are too fast to mark collective epochs the way the book's central alignments do — so their 'In history' sections say so plainly and offer this grammar's own extension of Tarnas's archetypal vocabulary to the personal register instead of manufacturing a false historical citation. Where a specific date or event is less certain than the book's most famous examples (1960s Uranus-Pluto, WWI/9-11 Saturn-Pluto), the text says so rather than smoothing it over — the same confidence-marking honesty this whole repo practices elsewhere.",
   "_honesty_frame": "Inspired by Richard Tarnas's archetypal astrology (*Cosmos and Psyche*, 2006; *The Passion of the Western Mind*). These readings are PlayfulProcess's interpretation, written with an AI from its knowledge of his work — NOT Tarnas's words, not his endorsement. Go to the source: https://cosmosandpsyche.com/",
-  "items": [
+  "nodes": [
     {
       "id": "planet-uranus",
       "name": "Uranus",
       "symbol": "♅",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "uranus",
         "promethean",
@@ -56,7 +55,7 @@
       "metadata": {
         "planet": "Uranus",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-uranus",
+        "source_node_id": "planet-uranus",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -68,7 +67,6 @@
       "name": "Neptune",
       "symbol": "♆",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "neptune",
         "dissolution",
@@ -81,7 +79,7 @@
       "metadata": {
         "planet": "Neptune",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-neptune",
+        "source_node_id": "planet-neptune",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -93,7 +91,6 @@
       "name": "Pluto",
       "symbol": "♇",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "pluto",
         "underworld",
@@ -106,7 +103,7 @@
       "metadata": {
         "planet": "Pluto",
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-pluto",
+        "source_node_id": "planet-pluto",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -118,7 +115,6 @@
       "name": "Sun",
       "symbol": "☉",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "sun",
         "planet"
@@ -132,7 +128,7 @@
           }
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-sun",
+        "source_node_id": "planet-sun",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -145,7 +141,6 @@
       "name": "Moon",
       "symbol": "☽",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "moon",
         "planet"
@@ -159,7 +154,7 @@
           }
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-moon",
+        "source_node_id": "planet-moon",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -172,7 +167,6 @@
       "name": "Mercury",
       "symbol": "☿",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "mercury",
         "planet"
@@ -186,7 +180,7 @@
           }
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mercury",
+        "source_node_id": "planet-mercury",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -199,7 +193,6 @@
       "name": "Venus",
       "symbol": "♀",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "venus",
         "planet"
@@ -213,7 +206,7 @@
           }
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-venus",
+        "source_node_id": "planet-venus",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -226,7 +219,6 @@
       "name": "Mars",
       "symbol": "♂",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "mars",
         "planet"
@@ -240,7 +232,7 @@
           }
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-mars",
+        "source_node_id": "planet-mars",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -253,7 +245,6 @@
       "name": "Jupiter",
       "symbol": "♃",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "jupiter",
         "planet"
@@ -267,7 +258,7 @@
           }
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-jupiter",
+        "source_node_id": "planet-jupiter",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -280,7 +271,6 @@
       "name": "Saturn",
       "symbol": "♄",
       "category": "planet",
-      "level": 1,
       "keywords": [
         "saturn",
         "planet"
@@ -294,7 +284,7 @@
           }
         ],
         "source_deck": "the-structure-of-the-sky",
-        "source_item_id": "planet-saturn",
+        "source_node_id": "planet-saturn",
         "deck": "The Structure of the Sky"
       },
       "sections": {
@@ -306,8 +296,7 @@
       "id": "pair-saturn-pluto",
       "name": "Saturn–Pluto",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-saturn",
         "planet-pluto"
       ],
@@ -345,8 +334,7 @@
       "id": "pair-uranus-pluto",
       "name": "Uranus–Pluto",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-uranus",
         "planet-pluto"
       ],
@@ -384,8 +372,7 @@
       "id": "pair-jupiter-uranus",
       "name": "Jupiter–Uranus",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-jupiter",
         "planet-uranus"
       ],
@@ -423,8 +410,7 @@
       "id": "pair-uranus-neptune",
       "name": "Uranus–Neptune",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-uranus",
         "planet-neptune"
       ],
@@ -462,8 +448,7 @@
       "id": "pair-saturn-neptune",
       "name": "Saturn–Neptune",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-saturn",
         "planet-neptune"
       ],
@@ -501,8 +486,7 @@
       "id": "pair-saturn-uranus",
       "name": "Saturn–Uranus",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-saturn",
         "planet-uranus"
       ],
@@ -540,8 +524,7 @@
       "id": "pair-jupiter-saturn",
       "name": "Jupiter–Saturn",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-jupiter",
         "planet-saturn"
       ],
@@ -579,8 +562,7 @@
       "id": "pair-jupiter-neptune",
       "name": "Jupiter–Neptune",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-jupiter",
         "planet-neptune"
       ],
@@ -618,8 +600,7 @@
       "id": "pair-jupiter-pluto",
       "name": "Jupiter–Pluto",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-jupiter",
         "planet-pluto"
       ],
@@ -657,8 +638,7 @@
       "id": "pair-neptune-pluto",
       "name": "Neptune–Pluto",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-neptune",
         "planet-pluto"
       ],
@@ -696,8 +676,7 @@
       "id": "pair-sun-saturn",
       "name": "Sun–Saturn",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-sun",
         "planet-saturn"
       ],
@@ -735,8 +714,7 @@
       "id": "pair-sun-pluto",
       "name": "Sun–Pluto",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-sun",
         "planet-pluto"
       ],
@@ -774,8 +752,7 @@
       "id": "pair-venus-mars",
       "name": "Venus–Mars",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-venus",
         "planet-mars"
       ],
@@ -813,8 +790,7 @@
       "id": "pair-moon-saturn",
       "name": "Moon–Saturn",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-moon",
         "planet-saturn"
       ],
@@ -852,8 +828,7 @@
       "id": "pair-mercury-uranus",
       "name": "Mercury–Uranus",
       "category": "archetypal-pair",
-      "level": 2,
-      "composite_of": [
+      "parts": [
         "planet-mercury",
         "planet-uranus"
       ],

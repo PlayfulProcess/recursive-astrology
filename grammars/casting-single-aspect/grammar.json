@@ -29,11 +29,10 @@
     ],
     "_note": "draw:'choose' — the querent picks one feature of their own chart (no birth data required if they already know a placement; a full chart calc can instead offer today's exact transits to choose from). Resolution: the chosen feature binds to its matching item(s) in the `from` grammar — a planet item + sign item, a house item, or an aspect item + the two planet items it joins."
   },
-  "items": [
+  "nodes": [
     {
       "id": "position-one-aspect",
       "name": "One aspect of your chart",
-      "level": 1,
       "category": "position",
       "position": 1,
       "maps_to": {

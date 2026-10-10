@@ -262,7 +262,7 @@ async function load(){
   await Promise.all(DECKS.map(async d=>{
     try{
       const g=await (await fetch(`../grammars/${d.slug}/grammar.json`)).json();
-      for(const it of (g.items||[])){
+      for(const it of (g.nodes||[])){
         const secs=it.sections||{};
         const hasText=Object.values(secs).some(v=>typeof v==='string'&&v.trim());
         if(!hasText && !it.image_url) continue;

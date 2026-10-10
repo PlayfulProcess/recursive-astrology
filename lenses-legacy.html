@@ -142,7 +142,7 @@ function houseNumberOf(item){
 }
 
 function findItem(grammar, kind, key){
-  const items = grammar.items || [];
+  const items = grammar.nodes || [];
   if (kind === 'house') {
     const num = parseInt(key, 10);
     return items.find(it => it.category === 'house' && houseNumberOf(it) === num) || null;
@@ -210,7 +210,7 @@ function collectEntities(kindName){
   const found = new Map(); // key -> label
   TRADITIONS.forEach(t => {
     if (!SELECTED.has(t.slug)) return;
-    (t.grammar.items || []).forEach(it => {
+    (t.grammar.nodes || []).forEach(it => {
       if (it.category !== kindName) return;
       if (kindName === 'house') {
         const n = houseNumberOf(it);
@@ -403,7 +403,7 @@ async function loadGrammar(slug){
   // items. Castings (positions) and view-libraries like the historiographies grammar
   // don't, and are correctly excluded here — they still show up in the library index.
   TRADITIONS = loaded
-    .filter(({ g }) => g && Array.isArray(g.items) && g.items.some(it => it.category === 'planet' || it.category === 'sign' || it.category === 'house'))
+    .filter(({ g }) => g && Array.isArray(g.nodes) && g.nodes.some(it => it.category === 'planet' || it.category === 'sign' || it.category === 'house'))
     .map(({ slug, g }) => ({ slug, grammar: g, ...extractEra(g) }))
     .sort((a, b) => a.year - b.year || a.voiceLabel.localeCompare(b.voiceLabel));
 

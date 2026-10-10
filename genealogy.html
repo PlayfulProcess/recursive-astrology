@@ -335,7 +335,7 @@ async function init(){
       + '(On the live site it just works.)';
     return;
   }
-  (meta.items || []).forEach(it => { if (it.id && it.id.startsWith('view-')) NODES[it.id] = it; });
+  (meta.nodes || []).forEach(it => { if (it.id && it.id.startsWith('view-')) NODES[it.id] = it; });
   if (!Object.keys(NODES).length) {
     $('#fallback').hidden = false;
     $('#fallback').innerHTML = '<b>No eras found.</b> Expected <code>view-*</code> items in ' + GRAMMAR_URL + '.';

@@ -12,8 +12,8 @@ filter pills with no code change). Shape:
       view (a historiographies-of-astrology item id), voice (a voices.json id, if any),
       section_label (the school's section key in astro-of-all-astros — the key a school
       filter toggles), default_on and rulership_sets. Each school links to its view with
-      the one cross-link pattern (metadata.source_deck / source_item_id / deck).
-  L2  grouping nodes, composite_of schools: families, zodiacs, eras, source types and
+      the one cross-link pattern (metadata.source_deck / source_node_id / deck).
+  L2  grouping nodes, whose parts are schools: families, zodiacs, eras, source types and
       RULERSHIP SETS (traditional / modern / the Bailey school's esoteric table / the
       colour-horoscope set with Vesta and Chiron).
   L3  axes (render_as 'pill-group'): By family, By zodiac, By era, By source type,
@@ -305,7 +305,7 @@ def sign_of(item):
     for key in ("sign", "western_equivalent"):
         if isinstance(md.get(key), str) and md[key] in SIGNS:
             return md[key]
-    sid = md.get("source_item_id") or ""
+    sid = md.get("source_node_id") or ""
     if sid.startswith("sign-"):
         return sid[5:].capitalize()
     return None
@@ -314,7 +314,7 @@ def sign_of(item):
 def rulers_from(grammar, key_order=("ruler", "rasi_lord")):
     """sign -> ruler, read off a grammar's sign items, or {} if it states none."""
     out = {}
-    for it in grammar.get("items", []):
+    for it in grammar.get("nodes", []):
         if it.get("category") != "sign":
             continue
         s = sign_of(it)
@@ -328,8 +328,8 @@ def rulers_from(grammar, key_order=("ruler", "rasi_lord")):
 
 def coverage(grammar):
     counts = {}
-    for it in grammar.get("items", []):
-        if it.get("composite_of"):
+    for it in grammar.get("nodes", []):
+        if it.get("parts"):
             continue
         c = it.get("category")
         if c in ("planet", "sign", "house", "aspect"):
@@ -339,7 +339,7 @@ def coverage(grammar):
 
 def section_keys(grammar):
     keys = set()
-    for it in grammar.get("items", []):
+    for it in grammar.get("nodes", []):
         keys.update((it.get("sections") or {}).keys())
     return keys
 
@@ -349,29 +349,29 @@ def fmt_table(rulers):
 
 
 def build():
-    structure = load(STRUCTURE_SLUG) or {"items": []}
-    historio = load(HISTORIO_SLUG) or {"items": []}
-    meta = load(META_SLUG) or {"items": []}
+    structure = load(STRUCTURE_SLUG) or {"nodes": []}
+    historio = load(HISTORIO_SLUG) or {"nodes": []}
+    meta = load(META_SLUG) or {"nodes": []}
     bailey = load(BAILEY_SLUG)
     with open(os.path.join(ROOT, "voices.json"), encoding="utf-8") as f:
         voices = json.load(f)
 
-    view_ids = {it["id"]: it for it in historio.get("items", [])}
+    view_ids = {it["id"]: it for it in historio.get("nodes", [])}
     voice_ids = {v["id"]: v for v in voices.get("voices", [])}
     meta_sections = section_keys(meta)
 
     # Rulership tables, read from the data.
-    traditional = {sign_of(it): it["metadata"]["ruler"] for it in structure["items"]
+    traditional = {sign_of(it): it["metadata"]["ruler"] for it in structure["nodes"]
                    if it.get("category") == "sign" and (it.get("metadata") or {}).get("ruler")}
     modern = dict(traditional)
-    for it in structure["items"]:
+    for it in structure["nodes"]:
         md = it.get("metadata") or {}
         if it.get("category") == "sign" and md.get("ruler_modern"):
             modern[sign_of(it)] = md["ruler_modern"]
     colour = dict(modern, **COLOUR_OVERRIDES)
     b_orth, b_eso, b_hier = {}, {}, {}
     if bailey:
-        for it in bailey["items"]:
+        for it in bailey["nodes"]:
             md = it.get("metadata") or {}
             if it.get("category") == "sign" and md.get("ruler_esoteric"):
                 b_orth[md["sign"]] = md["ruler_orthodox"]
@@ -427,7 +427,7 @@ def build():
         g = load(primary)
         if g is None:
             warn(f"school {s['slug']}: grammars/{primary} not on disk")
-            g = {"items": []}
+            g = {"nodes": []}
         for extra in s["grammar_slugs"][1:]:
             eg = load(extra)
             if eg is None:
@@ -476,7 +476,7 @@ def build():
                 basis["voice"] = f"voices.json {voice}.course names grammars/{primary}"
                 inferred.pop("voice", None)
         # Three grammars stamp their own view (metadata.era_view): use it as evidence.
-        stamped = {(it.get("metadata") or {}).get("era_view") for it in g.get("items", [])} - {None}
+        stamped = {(it.get("metadata") or {}).get("era_view") for it in g.get("nodes", [])} - {None}
         if len(stamped) == 1:
             if view in stamped:
                 basis["view"] = f"grammars/{primary} metadata.era_view"
@@ -532,7 +532,7 @@ def build():
         if year is not None:
             md["year"] = year
         if view:  # the one cross-link pattern, to the school's view dossier
-            md.update(source_deck=HISTORIO_SLUG, source_item_id=view, deck=HISTORIO_LABEL)
+            md.update(source_deck=HISTORIO_SLUG, source_node_id=view, deck=HISTORIO_LABEL)
 
         cov_txt = ", ".join(f"{v} {k}{'s' if v != 1 else ''}" for k, v in cov.items()) or "no planet, sign, house or aspect items"
         extra_txt = "".join(f" Also a section in grammars/{x}." for x in s["grammar_slugs"][1:])
@@ -560,7 +560,6 @@ def build():
             "id": node_id,
             "name": s["label"],
             "category": "school",
-            "level": 1,
             "sort_order": n,
             "keywords": sorted({"school", s["slug"], s["family"].replace("family-", ""),
                                 zodiac, s["source_type"], s["stance"]}),
@@ -590,8 +589,8 @@ def build():
             warn(f"group {gid} has no schools; skipped")
             return None
         items.append({
-            "id": gid, "name": name, "category": category, "level": 2, "sort_order": sort,
-            "composite_of": members, "relationship_type": "emergence",
+            "id": gid, "name": name, "category": category, "sort_order": sort,
+            "parts": members, "relationship_type": "emergence",
             "emergence_kind": "structural",
             "keywords": [category, name.lower()],
             "metadata": metadata or {},
@@ -659,9 +658,9 @@ def build():
     ]
     for i, (aid, name, lens, children, what) in enumerate(AXES):
         items.append({
-            "id": aid, "name": name, "category": "axis", "level": 3, "sort_order": 900 + i,
+            "id": aid, "name": name, "category": "axis", "sort_order": 900 + i,
             "render_as": "pill-group", "lens": lens, "emergence_kind": "structural",
-            "composite_of": [c for c in children if c],
+            "parts": [c for c in children if c],
             "sections": {"What it is": what},
         })
 
@@ -726,7 +725,7 @@ def build():
         "_rulership_sets": [{"id": r["id"], "label": r["label"], "source": r["source"],
                              "schools": by["rulers"].get(r["id"], [])} for r in RULERSHIP_SETS],
         "_not_schools": NOT_SCHOOLS,
-        "items": items,
+        "nodes": items,
     }
 
     out_dir = os.path.join(GRAMMARS, OUT_SLUG)
