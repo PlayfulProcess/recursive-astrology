@@ -4,6 +4,8 @@
 
 # Grammar JSON — Canonical Format
 
+> **Format v2 (Oct 10 2026): node all the way down.** The grammar's array is `nodes` (was `items`); a node's children are `parts` (was `composite_of`); a link node uses `node_type: "reference"`, `ref_grammar_id` and `ref_node_id` (were `item_type`, `ref_document_id`, `ref_item_id`); a named pick is `category: "selection"` (was `"edition"`); `level` is gone (depth is computed from `parts`); a cross-link is `metadata.source_node_id` (was `source_item_id`). This copy uses the v2 names; the canonical spec is recursive.eco/docs/grammar-format.html. Below, "item" in prose means a node.
+
 The complete, authoritative shape for a recursive.eco grammar JSON file.
 
 This document is the contract between the schemas repo and the
@@ -30,7 +32,7 @@ A grammar is a single JSON object:
   "creator_name": "string",            // OPTIONAL — your name or handle
   "creator_link": "string",            // OPTIONAL — your website or profile
   "is_published": false,               // OPTIONAL — false for drafts
-  "items": [ /* UnifiedItem objects */ ]   // REQUIRED — see "UnifiedItem" below
+  "nodes": [ /* node objects */ ]   // REQUIRED — see "Node shape" below
 
   // Optional library-placement fields (see CLAUDE.md "Monad Fields"):
   // "roots": [...], "shelves": [...], "lineages": [...], "worldview": "...",
@@ -45,8 +47,8 @@ A grammar is a single JSON object:
 ```
 
 **There is NO top-level `emergences` array.** Level-1 base items AND
-level-2+ composite items ALL live inside `items[]`. Composite items
-are distinguished by the presence of `composite_of: ["id1", "id2", ...]`
+level-2+ composite items ALL live inside `nodes[]`. Composite items
+are distinguished by the presence of `parts: ["id1", "id2", ...]`
 on the item itself. (Continued in "Composite items" below.)
 
 ---
@@ -79,9 +81,9 @@ use `"custom"`.
 
 ---
 
-## UnifiedItem shape
+## Node shape
 
-Every entry in `items[]` follows this shape:
+Every entry in `nodes[]` follows this shape:
 
 ```jsonc
 {
@@ -95,7 +97,7 @@ Every entry in `items[]` follows this shape:
     "Another Section": "more content"
   },
   "keywords": ["string"],            // OPTIONAL — search tags for this item
-  "composite_of": ["id-1", "id-2"],  // PRESENT ONLY ON COMPOSITE ITEMS — see below
+  "parts": ["id-1", "id-2"],  // PRESENT ONLY ON COMPOSITE ITEMS — see below
   "metadata": { /* free-form */ },   // OPTIONAL — see "Metadata fields"
   "performance": { /* clip cfg */ }  // OPTIONAL — see "Performance object"
 }
@@ -117,7 +119,7 @@ The viewer renders all sections. Order is the JSON property order.
 
 ### Composite items (the L2/L3 emergence pattern)
 
-A composite item is just a regular item that has a `composite_of`
+A composite item is just a regular item that has `parts`
 array referencing the IDs of its children:
 
 ```json
@@ -125,7 +127,7 @@ array referencing the IDs of its children:
   "id": "act-1-the-departure",
   "name": "Act 1: The Departure",
   "category": "act",
-  "composite_of": ["scene-1", "scene-2", "scene-3"],
+  "parts": ["scene-1", "scene-2", "scene-3"],
   "sections": {
     "About this act": "The hero leaves the ordinary world..."
   }
@@ -133,22 +135,20 @@ array referencing the IDs of its children:
 ```
 
 - L1 items are the leaves (cards, scenes, hexagrams, video clips).
-- L2 items group L1 items via `composite_of`.
+- L2 items group L1 items via `parts`.
 - L3 items can group L2 items.
 
-**All of these live in the same `items[]` array.** Do not put
+**All of these live in the same `nodes[]` array.** Do not put
 composite items in a separate `emergences[]` block. (Legacy grammars
 that used a separate array no longer work; the editor saves
-everything in `items[]`.)
+everything in `nodes[]`.)
 
-The `level` field (`"level": 1`, `"level": 2`, `"level": 3`) is
-*allowed* and helpful for tools that walk the hierarchy, but the
-real source of truth is the presence/absence of `composite_of`. An
-item without `composite_of` is L1; an item with `composite_of` is L2
-or deeper.
+There is no `level` field (format v2 dropped it). Depth is computed
+from `parts`: a node without `parts` is L1; a node with `parts` is one
+deeper than its deepest part (L2, L3, ...).
 
-`composite_of` references must point to IDs that exist in the same
-`items[]` array. Broken references will fail validation.
+`parts` references must point to IDs that exist in the same
+`nodes[]` array. Broken references will fail validation.
 
 ---
 
@@ -340,7 +340,7 @@ invented tradition, not Western or Jyotish), declare a mapping at the
     "planetary-lord": "planet",
     "constellation": "sign"
   },
-  "items": [ /* items whose "category" is "planetary-lord", "constellation", etc. */ ]
+  "nodes": [ /* items whose "category" is "planetary-lord", "constellation", etc. */ ]
 }
 ```
 
@@ -442,7 +442,7 @@ item):
     "total_sec": 612,
     "audio_source": "LibriVox (public domain) · Jane Reader (2026)"
   },
-  "items": [
+  "nodes": [
     {
       "id": "stanza-1",
       "name": "Stanza 1",
@@ -497,13 +497,13 @@ meta-grammar whose items are themselves whole decks or texts, so you can build a
 tree whose leaves drill down into full sub-grammars (recursion **by reference**,
 not by merging the item and grammar types).
 
-On a **UnifiedItem**:
+On a **node**:
 
 | Field | Meaning |
 |---|---|
-| `item_type` | `"content"` (default) or `"reference"` |
-| `ref_document_id` | the `user_document` id this item opens |
-| `ref_item_id` | OPTIONAL — the specific item **inside** `ref_document_id` this item points at. Omit it and the reference opens the whole target document; set it and the reference opens exactly one item within that document. |
+| `node_type` | `"content"` (default) or `"reference"` |
+| `ref_grammar_id` | the `user_document` id this item opens |
+| `ref_node_id` | OPTIONAL — the specific item **inside** `ref_grammar_id` this item points at. Omit it and the reference opens the whole target document; set it and the reference opens exactly one item within that document. |
 | `ref_preview` | how the target opens: `"default" \| "study" \| "grammar" \| "altar"` |
 | `grammars` | array of linked grammar/document ids (multi-link) |
 
@@ -514,8 +514,8 @@ On the **grammar root**:
 | `default_preview` | the viewer that opens by default: `"grammar" \| "study" \| "tree" \| "altar" \| "course" \| "thumbnails"` |
 
 The viewer renders a reference item as a link that opens the target
-(`/play?id=<ref_document_id>`, or `?id=<ref_document_id>&item=<ref_item_id>`
-when `ref_item_id` is set). Combined with the L1/L2/L3 `composite_of`
+(`/play?id=<ref_grammar_id>`, or `?id=<ref_grammar_id>&item=<ref_node_id>`
+when `ref_node_id` is set). Combined with the L1/L2/L3 `parts`
 emergence, `default_preview: "tree"` renders the whole thing in the tree-viewer.
 
 **Resolution is additive, not a replacement.** A reference item is allowed to
@@ -523,8 +523,8 @@ carry its own content too (its own `sections`, e.g. a short provenance
 blurb) — when the target resolves, the viewer renders the item's OWN content
 together with the resolved SOURCE item's content, side by side. Don't treat
 "this reference item already has some sections filled in" as a reason to
-skip resolving it; resolve whenever `ref_document_id` (+ optionally
-`ref_item_id`) is present, regardless of what else is on the item.
+skip resolving it; resolve whenever `ref_grammar_id` (+ optionally
+`ref_node_id`) is present, regardless of what else is on the item.
 
 ### Example 1 — a meta-grammar leaf that opens a full deck
 
@@ -532,18 +532,17 @@ skip resolving it; resolve whenever `ref_document_id` (+ optionally
 {
   "id": "deck-visconti-sforza",
   "name": "Visconti-Sforza Tarot",
-  "level": 1,
-  "item_type": "reference",
-  "ref_document_id": "<the deck's user_document id>",
+  "node_type": "reference",
+  "ref_grammar_id": "<the deck's user_document id>",
   "ref_preview": "grammar",
   "sections": { "What it is": "The oldest near-complete tarot…" },
   "metadata": { "branch": "branch-roots" }
 }
 ```
 
-### Example 1b — a meta-grammar leaf that opens ONE card inside a deck (`ref_item_id`)
+### Example 1b — a meta-grammar leaf that opens ONE card inside a deck (`ref_node_id`)
 
-Use `ref_item_id` when the meta-grammar's leaves are individual cards drawn
+Use `ref_node_id` when the meta-grammar's leaves are individual cards drawn
 from many source decks, rather than whole decks — e.g. a "Tarot — All Decks,
 Many Lenses" meta-grammar with one item per source-deck card:
 
@@ -551,10 +550,9 @@ Many Lenses" meta-grammar with one item per source-deck card:
 {
   "id": "leaf-visconti-the-fool",
   "name": "The Fool (Visconti-Sforza)",
-  "level": 1,
-  "item_type": "reference",
-  "ref_document_id": "<the Visconti-Sforza deck's user_document id>",
-  "ref_item_id": "<that deck's 'The Fool' item id>",
+  "node_type": "reference",
+  "ref_grammar_id": "<the Visconti-Sforza deck's user_document id>",
+  "ref_node_id": "<that deck's 'The Fool' item id>",
   "ref_preview": "study",
   "sections": {
     "Origin": "One of many cards drawn from every deck in the commons."
@@ -569,14 +567,14 @@ be duplicated inline — it resolves live from the source deck, and the
 ### Example 2 — the genealogy tree that opens in tree view
 
 A `grammar_type: "custom"` meta-grammar with `"default_preview": "tree"` and three
-levels: **L1** decks (reference items), **L2** branches (`composite_of` the decks),
-**L3** root (`composite_of` the branches). The tree-viewer
+levels: **L1** decks (reference items), **L2** branches (whose `parts` are the decks),
+**L3** root (whose `parts` are the branches). The tree-viewer
 (`recursive.eco/pages/tree-viewer.html?type=custom&id=…`) draws root → branches →
 decks, and each deck leaf opens its own grammar.
 
 > Real example in this repo: **`grammars/tree-of-tarot/grammar.json`** — the
 > genealogy of tarot. (Its leaves currently use text references; after the decks are
-> imported to Supabase, set `ref_document_id` on each leaf so clicking opens the deck.
+> imported to Supabase, set `ref_grammar_id` on each leaf so clicking opens the deck.
 > See `plan/tarot-roadmap-and-supabase-log.md` §3d.)
 
 ---
@@ -596,14 +594,14 @@ failures. Check yours against this list first.
 ### Mistake 2 — `emergences[]` at the top level
 
 A separate top-level `emergences` array is not supported. Merge the
-L2/L3 items into `items[]` with their `composite_of` field intact.
+L2/L3 items into `nodes[]` with their `parts` field intact.
 
 ```diff
-- "items": [ /* L1 items */ ],
+- "nodes": [ /* L1 items */ ],
 - "emergences": [ /* L2 items */ ]
-+ "items": [
++ "nodes": [
 +   /* L1 items */,
-+   /* L2 items with composite_of */
++   /* L2 items with parts */
 + ]
 ```
 
@@ -632,7 +630,7 @@ Each item that has a YouTube clip should have BOTH
   "grammar_type": "tarot",
   "tags": ["tarot"],
   "is_published": false,
-  "items": [
+  "nodes": [
     {
       "id": "major-00-fool",
       "name": "The Fool",
@@ -657,7 +655,7 @@ Each item that has a YouTube clip should have BOTH
   "grammar_type": "sequence",
   "tags": ["dharma", "study"],
   "is_published": false,
-  "items": [
+  "nodes": [
     {
       "id": "clip-01",
       "name": "What is dharma",
@@ -701,7 +699,7 @@ Each item that has a YouTube clip should have BOTH
       "name": "Foundations of dharma",
       "category": "theme",
       "sort_order": 100,
-      "composite_of": ["clip-01", "clip-02"],
+      "parts": ["clip-01", "clip-02"],
       "sections": {
         "About this theme": "Two starting-point clips."
       }
@@ -710,8 +708,8 @@ Each item that has a YouTube clip should have BOTH
 }
 ```
 
-Both clips live in `items[]`. The theme is also an item in `items[]`,
-just with `composite_of`. No separate `emergences[]` array.
+Both clips live in `nodes[]`. The theme is also an item in `nodes[]`,
+just with `parts`. No separate `emergences[]` array.
 
 ---
 
@@ -730,18 +728,18 @@ assert g["grammar_type"] in {
     "tarot", "iching", "astrology", "sequence",
     "course", "prompt", "birthchart", "altar", "music", "custom"
 }
-assert isinstance(g.get("items"), list) and len(g["items"]) > 0
+assert isinstance(g.get("nodes"), list) and len(g["nodes"]) > 0
 
 # No top-level emergences array
-assert "emergences" not in g, "Move emergences into items[] with composite_of"
+assert "emergences" not in g, "Move emergences into nodes[] with parts"
 
 # Per-item checks
-ids = {it["id"] for it in g["items"]}
-for it in g["items"]:
+ids = {it["id"] for it in g["nodes"]}
+for it in g["nodes"]:
     assert "id" in it and "name" in it and "sections" in it
-    if "composite_of" in it:
-        for child in it["composite_of"]:
-            assert child in ids, f"composite_of references missing id: {child}"
+    if "parts" in it:
+        for child in it["parts"]:
+            assert child in ids, f"parts references missing id: {child}"
     if "metadata" in it:
         # Common YouTube field-name gotcha
         assert "video_id" not in it["metadata"], \
