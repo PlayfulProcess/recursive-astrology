@@ -2,3 +2,6 @@ __pycache__/
 
 # chart lab: her private chart / readings files never get committed
 mock-data/*.local.json
+
+# local caches (page downloads, search indexes)
+.cache/
