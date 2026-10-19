@@ -72,6 +72,21 @@
   const _onLibrary = /(^|\.)astro\.recursive\.eco$|^localhost$|^127\.0\.0\.1$|github\.io$/.test(location.hostname);
   const PFX = _onLibrary ? '../'.repeat(Math.max(0, _segs.length - 1)) : LIBRARY_ORIGIN;
 
+  // The assistant star on every page that carries this header (Oct 20 2026, Lane C):
+  // a page that does not load assistant.js itself gets it here, once. assistant.js
+  // stays the one place the star is set up (it skips iframes and ?embed=1).
+  (function mountAssistantStar() {
+    const add = () => {
+      if (!(_onLibrary)) return; if (window.RecursiveAssistant) return;
+      const has = [...document.scripts].some(s => /(^|\/)assistant\.js(\?|$)/.test(s.getAttribute('src') || ''));
+      if (has) return;
+      const s = document.createElement('script');
+      s.src = PFX + 'assistant.js'; s.defer = true;
+      document.head.appendChild(s);
+    };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', add); else add();
+  })();
+
   // Figure-capture mode (?fig=1): hide a viewer's own control toolbars so headless
   // screenshots become clean static plates. Only when explicitly asked.
   if (new URLSearchParams(location.search).get('fig') === '1') {

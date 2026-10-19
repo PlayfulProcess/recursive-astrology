@@ -54,7 +54,7 @@
       Read the sky to know yourself, not to be told your fate.</p>
     <p class="tag">The whole library is <em>one collection</em> of recursive.eco: over there this repo appears as
       the astrology collection, and each grammar below is one of the things inside it.</p>
-    <a class="eco-cta" href="https://flow.recursive.eco/library/channels/astrology" target="_blank" rel="noopener">
+    <a class="eco-cta" href="https://recursive.eco/explore?repository=astrology" target="_blank" rel="noopener">
       Open the astrology collection on recursive.eco ↗
     </a>
   </div>
@@ -76,8 +76,8 @@
     // (?src is resolved relative to viewers/cards.html, hence the "../".)
     readerUrl: slug => 'viewers/cards.html?src=../grammars/' + encodeURIComponent(slug) + '/grammar.json',
     // recursive.eco's own concept: this repo is one channel over there.
-    ecoChannel: 'https://flow.recursive.eco/library/channels/astrology',
-    appDeckUrl: uuid => 'https://flow.recursive.eco/g/' + uuid + '?view=reading',
+    ecoChannel: 'https://recursive.eco/explore?repository=astrology',
+    appDeckUrl: uuid => 'https://recursive.eco/play?id=' + uuid,
   };
   const root = document.getElementById('root');
   let col, eco;

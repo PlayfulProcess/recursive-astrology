@@ -231,16 +231,16 @@ async function main(){
       raw.textContent = label + ' — raw JSON';
       clinks.appendChild(raw);
       if (uuid) {
-        [['Cards', 'grammar-viewer'], ['Study', 'study-viewer'], ['Tree', 'tree-viewer']].forEach(([lbl, page]) => {
+        [['Cards', 'cards'], ['Tree', 'tree']].forEach(([lbl, page]) => {
           const a = document.createElement('a');
           a.className = 'eco-chip'; a.target = '_blank'; a.rel = 'noopener';
-          a.href = `https://recursive.eco/pages/${page}.html?type=astrology&id=${uuid}`;
+          a.href = `https://recursive.eco/play?id=${uuid}&pane=${page}`;
           a.textContent = label + ' — ' + lbl;
           clinks.appendChild(a);
         });
         const play = document.createElement('a');
         play.className = 'eco-chip'; play.target = '_blank'; play.rel = 'noopener';
-        play.href = `https://flow.recursive.eco/g/${uuid}?view=reading`;
+        play.href = `https://recursive.eco/play?id=${uuid}`;
         play.textContent = label + ' — Play';
         clinks.appendChild(play);
       }
