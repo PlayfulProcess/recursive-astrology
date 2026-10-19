@@ -52,6 +52,7 @@ BRANCHES = [
 # any grammar not listed here still appears in the collection, just in "synthesis"
 # with no curated year — an honest "undated" default, never a guess.
 BRANCH_OF = {
+    "sources":                        "readings",
     "tetrabiblos-ashmand":            "primary-sources",
     "alan-leo":                       "primary-sources",
     "proctor-skeptical-astrology":    "primary-sources",
