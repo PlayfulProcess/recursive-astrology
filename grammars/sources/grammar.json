@@ -26,7 +26,7 @@
     "public-domain",
     "reference"
   ],
-  "description": "# Sources: where the astrology texts and pictures live, and their rights\n\nFor each book this library's voices quote (Ptolemy, Lilly, Manilius, the Mesopotamian omens, the Bṛhat Jātaka, Alan Leo, Raphael, Proctor, Bailey, Tarnas) and the picture sets it shows: where the scans are, how good they are, and **what their rights allow**, in the holder's own words where they could be read. Each source also says plainly who holds the rights and what we may and may not do.\n\n**Three ways in.** Selections by **book**, by **holder** and by **rights** (free for any use · open licence · unclear · in copyright). A source can sit in several.\n\n**Links only.** This grammar copies no text or picture.\n\n**Worth knowing.** The Lilly grammar links an Internet Archive upload that its uploader marked CC BY-NC 3.0; the Wellcome Library's scan of the 1647 edition carries the Public Domain Mark and is the better copy to cite.\n\n**Not legal advice.** Checked 2026-10-20 (archive.org metadata read for every scan). Hand-edited.\n",
+  "description": "# Sources: where the astrology texts and pictures live, and their rights\n\nFor each book this library's voices quote (Ptolemy, Lilly, Manilius, the Mesopotamian omens, the Bṛhat Jātaka, Alan Leo, Raphael, Proctor, Bailey, Tarnas) and the picture sets it shows: where the scans are, how good they are, and **what their rights allow**, in the holder's own words where they could be read. Each source also says plainly who holds the rights and what we may and may not do.\n\n**Three ways in.** Selections by **book**, by **holder** and by **rights** (free for any use · open licence · unclear · in copyright). A source can sit in several.\n\n**Links only.** This grammar copies no text or picture.\n\n**Worth knowing.** Since Oct 19 2026 the Lilly grammar cites the Wellcome Collection's scan of the 1647 edition (Public Domain Mark) and only names, without linking, the Internet Archive upload its uploader marked CC BY-NC 3.0. The chart lab's passage links still point at that upload's pages.\n\n**Not legal advice.** Checked 2026-10-20 (archive.org metadata read for every scan). Hand-edited.\n",
   "nodes": [
     {
       "id": "src-tetrabiblos-ashmand-ia",
@@ -112,7 +112,7 @@
         "What it holds": "The 1647 first edition, the three books.",
         "Quality": "Page scans of the original.",
         "Rights as published": "Item rights: \"This work is available under the Creative Commons, Public Domain Mark\".",
-        "Link": "[https://archive.org/details/b30338724](https://archive.org/details/b30338724)"
+        "Link": "[https://archive.org/details/b30338724](https://archive.org/details/b30338724) · the same scan at the Wellcome Collection: [https://wellcomecollection.org/works/s7z7c46y](https://wellcomecollection.org/works/s7z7c46y)"
       }
     },
     {
@@ -138,7 +138,7 @@
       "sections": {
         "Property rights": "A 1647 text can't carry a new NC licence, but the uploader's scan or retyping may: prefer the Wellcome copy (Public Domain Mark) for links and quotes.",
         "Holder": "Internet Archive (item ChristianAstrologyByWilliamLilly)",
-        "What it holds": "A copy the Lilly grammar links 20 times; the item names no source edition.",
+        "What it holds": "A copy the Lilly grammar linked 20 times until Oct 19 2026 (now named, not linked); the chart lab's passages still link its pages; the item names no source edition.",
         "Quality": "Scan quality not checked.",
         "Rights as published": "Item licence: Creative Commons BY-NC 3.0 (http://creativecommons.org/licenses/by-nc/3.0/), set by the uploader.",
         "Link": "[https://archive.org/details/ChristianAstrologyByWilliamLilly](https://archive.org/details/ChristianAstrologyByWilliamLilly)"
