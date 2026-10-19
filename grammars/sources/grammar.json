@@ -1,0 +1,768 @@
+{
+  "_grammar_commons": {
+    "schema_version": "1.0",
+    "license": "CC-BY-SA-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": [
+      {
+        "name": "PlayfulProcess",
+        "url": "https://recursive.eco",
+        "date": "2026-10-20",
+        "note": "Sources of the astrology library's texts and pictures: holders, quality and rights (text only; scans and pictures belong to their holders)"
+      }
+    ]
+  },
+  "name": "Sources: Where the Astrology Texts and Pictures Live",
+  "slug": "sources",
+  "grammar_type": "custom",
+  "provenance": "reference",
+  "creator_name": "PlayfulProcess",
+  "creator_link": "https://recursive.eco",
+  "default_view": "thumbnails",
+  "is_published": true,
+  "tags": [
+    "sources",
+    "rights",
+    "public-domain",
+    "reference"
+  ],
+  "description": "# Sources: where the astrology texts and pictures live, and their rights\n\nFor each book this library's voices quote (Ptolemy, Lilly, Manilius, the Mesopotamian omens, the Bṛhat Jātaka, Alan Leo, Raphael, Proctor, Bailey, Tarnas) and the picture sets it shows: where the scans are, how good they are, and **what their rights allow**, in the holder's own words where they could be read. Each source also says plainly who holds the rights and what we may and may not do.\n\n**Three ways in.** Selections by **book**, by **holder** and by **rights** (free for any use · open licence · unclear · in copyright). A source can sit in several.\n\n**Links only.** This grammar copies no text or picture.\n\n**Worth knowing.** The Lilly grammar links an Internet Archive upload that its uploader marked CC BY-NC 3.0; the Wellcome Library's scan of the 1647 edition carries the Public Domain Mark and is the better copy to cite.\n\n**Not legal advice.** Checked 2026-10-20 (archive.org metadata read for every scan). Hand-edited.\n",
+  "nodes": [
+    {
+      "id": "src-tetrabiblos-ashmand-ia",
+      "name": "Ptolemy's Tetrabiblos, trans. Ashmand (1822): scan",
+      "category": "source",
+      "sort_order": 0,
+      "keywords": [
+        "sources",
+        "free",
+        "ptolemy"
+      ],
+      "metadata": {
+        "books": [
+          "ptolemy"
+        ],
+        "holder": "Internet Archive (Harvard University copy)",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/ptolemystetrabi00procgoog",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use.",
+        "Holder": "Internet Archive (Harvard University copy)",
+        "What it holds": "The 1822 English translation the Tetrabiblos grammar quotes.",
+        "Quality": "Page scans with OCR.",
+        "Rights as published": "Item metadata: possible-copyright-status \"NOT_IN_COPYRIGHT\".",
+        "Link": "[https://archive.org/details/ptolemystetrabi00procgoog](https://archive.org/details/ptolemystetrabi00procgoog)"
+      }
+    },
+    {
+      "id": "src-tetrabiblos-gutenberg",
+      "name": "Tetrabiblos (Ashmand) on Project Gutenberg and sacred-texts",
+      "category": "source",
+      "sort_order": 1,
+      "keywords": [
+        "sources",
+        "free",
+        "ptolemy"
+      ],
+      "metadata": {
+        "books": [
+          "ptolemy"
+        ],
+        "holder": "Project Gutenberg (ebook 70850); sacred-texts.com",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://www.gutenberg.org/ebooks/70850",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free; check doubtful words against the 1822 scan.",
+        "Holder": "Project Gutenberg (ebook 70850); sacred-texts.com",
+        "What it holds": "The same translation, typed; the grammar links sacred-texts chapter pages (https://sacred-texts.com/astro/ptb/).",
+        "Quality": "Text only.",
+        "Rights as published": "Gutenberg's header: \"This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever.\"",
+        "Link": "[https://www.gutenberg.org/ebooks/70850](https://www.gutenberg.org/ebooks/70850)"
+      }
+    },
+    {
+      "id": "src-lilly-wellcome",
+      "name": "Lilly, Christian Astrology (1647): the Wellcome copy",
+      "category": "source",
+      "sort_order": 2,
+      "keywords": [
+        "sources",
+        "free",
+        "lilly"
+      ],
+      "metadata": {
+        "books": [
+          "lilly"
+        ],
+        "holder": "Internet Archive (Wellcome Library copy, item b30338724)",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/b30338724",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Public Domain Mark from the Wellcome: free for any use. The best copy to cite.",
+        "Holder": "Internet Archive (Wellcome Library copy, item b30338724)",
+        "What it holds": "The 1647 first edition, the three books.",
+        "Quality": "Page scans of the original.",
+        "Rights as published": "Item rights: \"This work is available under the Creative Commons, Public Domain Mark\".",
+        "Link": "[https://archive.org/details/b30338724](https://archive.org/details/b30338724)"
+      }
+    },
+    {
+      "id": "src-lilly-ia-upload",
+      "name": "Christian Astrology on Internet Archive (an uploader's copy)",
+      "category": "source",
+      "sort_order": 3,
+      "keywords": [
+        "sources",
+        "unclear",
+        "lilly"
+      ],
+      "metadata": {
+        "books": [
+          "lilly"
+        ],
+        "holder": "Internet Archive (item ChristianAstrologyByWilliamLilly)",
+        "rights_class": "unclear",
+        "rights_label": "No rights statement found, or the uploader's claim is doubtful",
+        "url": "https://archive.org/details/ChristianAstrologyByWilliamLilly",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "A 1647 text can't carry a new NC licence, but the uploader's scan or retyping may: prefer the Wellcome copy (Public Domain Mark) for links and quotes.",
+        "Holder": "Internet Archive (item ChristianAstrologyByWilliamLilly)",
+        "What it holds": "A copy the Lilly grammar links 20 times; the item names no source edition.",
+        "Quality": "Scan quality not checked.",
+        "Rights as published": "Item licence: Creative Commons BY-NC 3.0 (http://creativecommons.org/licenses/by-nc/3.0/), set by the uploader.",
+        "Link": "[https://archive.org/details/ChristianAstrologyByWilliamLilly](https://archive.org/details/ChristianAstrologyByWilliamLilly)"
+      }
+    },
+    {
+      "id": "src-manilius-1697",
+      "name": "Manilius, The Five Books ... (Creech's 1697/1700 translation)",
+      "category": "source",
+      "sort_order": 4,
+      "keywords": [
+        "sources",
+        "free",
+        "manilius"
+      ],
+      "metadata": {
+        "books": [
+          "manilius"
+        ],
+        "holder": "Internet Archive",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/TheFiveBooksOfM.ManiliusAncientAstronomy",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use.",
+        "Holder": "Internet Archive",
+        "What it holds": "Thomas Creech's English verse Manilius, quoted by Historiographies of Astrology.",
+        "Quality": "Page scans.",
+        "Rights as published": "Item licence: Public Domain Mark (http://creativecommons.org/publicdomain/mark/1.0/).",
+        "Link": "[https://archive.org/details/TheFiveBooksOfM.ManiliusAncientAstronomy](https://archive.org/details/TheFiveBooksOfM.ManiliusAncientAstronomy)"
+      }
+    },
+    {
+      "id": "src-thompson-1900",
+      "name": "R. Campbell Thompson, The Reports of the Magicians and Astrologers of Nineveh and Babylon (1900)",
+      "category": "source",
+      "sort_order": 5,
+      "keywords": [
+        "sources",
+        "free",
+        "mesopotamia"
+      ],
+      "metadata": {
+        "books": [
+          "mesopotamia"
+        ],
+        "holder": "Internet Archive (University of Toronto copy)",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/reportsofmagicia07thomuoft",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use (Thompson d. 1941: UK/EU free since 2012).",
+        "Holder": "Internet Archive (University of Toronto copy)",
+        "What it holds": "Cuneiform texts with translations: the omen lines of Mesopotamian Omen-Craft.",
+        "Quality": "Page scans.",
+        "Rights as published": "Item metadata: possible-copyright-status \"NOT_IN_COPYRIGHT\".",
+        "Link": "[https://archive.org/details/reportsofmagicia07thomuoft](https://archive.org/details/reportsofmagicia07thomuoft)"
+      }
+    },
+    {
+      "id": "src-venus-tablets-1928",
+      "name": "Langdon and Fotheringham, The Venus Tablets of Ammizaduga (1928)",
+      "category": "source",
+      "sort_order": 6,
+      "keywords": [
+        "sources",
+        "free",
+        "mesopotamia"
+      ],
+      "metadata": {
+        "books": [
+          "mesopotamia"
+        ],
+        "holder": "Internet Archive",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/TheVenusTabletsOfAmmizaduga1928",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use in the US and EU.",
+        "Holder": "Internet Archive",
+        "What it holds": "The Venus observations of Enūma Anu Enlil 63.",
+        "Quality": "Page scans.",
+        "Rights as published": "Item metadata carries no rights statement. Published 1928 (US public domain since 2024); Langdon d. 1937, Fotheringham d. 1936 (UK/EU free since 2008).",
+        "Link": "[https://archive.org/details/TheVenusTabletsOfAmmizaduga1928](https://archive.org/details/TheVenusTabletsOfAmmizaduga1928)"
+      }
+    },
+    {
+      "id": "src-brihat-jataka-1885",
+      "name": "Varāhamihira, Bṛhat Jātaka, trans. N. Chidambaram Iyer (Madras, 1885)",
+      "category": "source",
+      "sort_order": 7,
+      "keywords": [
+        "sources",
+        "free",
+        "jyotisa"
+      ],
+      "metadata": {
+        "books": [
+          "jyotisa"
+        ],
+        "holder": "Internet Archive (items wg1079 and brihatjatakaenglishtranslation...1885)",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/wg1079",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use.",
+        "Holder": "Internet Archive (items wg1079 and brihatjatakaenglishtranslation...1885)",
+        "What it holds": "The 1885 English translation the Jyotiṣa grammar summarises.",
+        "Quality": "Page scans.",
+        "Rights as published": "Item metadata carries no rights statement; the 1885 translation is public domain.",
+        "Link": "[https://archive.org/details/wg1079](https://archive.org/details/wg1079)"
+      }
+    },
+    {
+      "id": "src-alan-leo",
+      "name": "Alan Leo, Astrology for All (1899) and How to Judge a Nativity (1928 edition)",
+      "category": "source",
+      "sort_order": 8,
+      "keywords": [
+        "sources",
+        "free",
+        "leo"
+      ],
+      "metadata": {
+        "books": [
+          "leo"
+        ],
+        "holder": "Internet Archive (Harvard; Harold B. Lee Library copies)",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/astrologyforall00leogoog",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use; the 1928 printing is US public domain since 2024.",
+        "Holder": "Internet Archive (Harvard; Harold B. Lee Library copies)",
+        "What it holds": "The Theosophical revival's textbooks, quoted by the Alan Leo grammar. Also https://archive.org/details/howtojudgenativi00leoa.",
+        "Quality": "Page scans.",
+        "Rights as published": "astrologyforall00leogoog: possible-copyright-status \"NOT_IN_COPYRIGHT\"; howtojudgenativi00leoa: no statement (a 1928 printing; Leo d. 1917).",
+        "Link": "[https://archive.org/details/astrologyforall00leogoog](https://archive.org/details/astrologyforall00leogoog)"
+      }
+    },
+    {
+      "id": "src-raphael-1828",
+      "name": "Raphael (R. C. Smith), A Manual of Astrology (1828)",
+      "category": "source",
+      "sort_order": 9,
+      "keywords": [
+        "sources",
+        "free",
+        "raphael"
+      ],
+      "metadata": {
+        "books": [
+          "raphael"
+        ],
+        "holder": "Internet Archive (Oxford University copy)",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://archive.org/details/amanualastrolog00smitgoog",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use.",
+        "Holder": "Internet Archive (Oxford University copy)",
+        "What it holds": "The dignities tables the Dignities grammar uses.",
+        "Quality": "Page scans.",
+        "Rights as published": "Item metadata: possible-copyright-status \"NOT_IN_COPYRIGHT\".",
+        "Link": "[https://archive.org/details/amanualastrolog00smitgoog](https://archive.org/details/amanualastrolog00smitgoog)"
+      }
+    },
+    {
+      "id": "src-proctor-gutenberg",
+      "name": "Proctor, Myths and Marvels of Astronomy (1896 edition)",
+      "category": "source",
+      "sort_order": 10,
+      "keywords": [
+        "sources",
+        "free",
+        "proctor"
+      ],
+      "metadata": {
+        "books": [
+          "proctor"
+        ],
+        "holder": "Project Gutenberg (ebook 26556)",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://www.gutenberg.org/ebooks/26556",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use.",
+        "Holder": "Project Gutenberg (ebook 26556)",
+        "What it holds": "The Victorian skeptic's essays, the Proctor grammar's text.",
+        "Quality": "Text with plates.",
+        "Rights as published": "Gutenberg's header: \"This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever.\"",
+        "Link": "[https://www.gutenberg.org/ebooks/26556](https://www.gutenberg.org/ebooks/26556)"
+      }
+    },
+    {
+      "id": "src-bailey-lucis",
+      "name": "Alice Bailey, Esoteric Astrology (1951)",
+      "category": "source",
+      "sort_order": 11,
+      "keywords": [
+        "sources",
+        "in-copyright",
+        "bailey"
+      ],
+      "metadata": {
+        "books": [
+          "bailey"
+        ],
+        "holder": "Lucis Trust",
+        "rights_class": "in-copyright",
+        "rights_label": "In copyright: link and cite only",
+        "url": "https://www.lucistrust.org/online_books/esoteric_astrology_obooks",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Lucis Trust holds it: paraphrase and link, as the grammar does; don't copy.",
+        "Holder": "Lucis Trust",
+        "What it holds": "The Bailey school's text, read online at the Lucis Trust; the grammar here paraphrases it.",
+        "Quality": "Online text.",
+        "Rights as published": "In copyright (Lucis Trust); its online terms were not re-read for this entry.",
+        "Link": "[https://www.lucistrust.org/online_books/esoteric_astrology_obooks](https://www.lucistrust.org/online_books/esoteric_astrology_obooks)"
+      }
+    },
+    {
+      "id": "src-tarnas-cosmos-psyche",
+      "name": "Richard Tarnas, Cosmos and Psyche (2006)",
+      "category": "source",
+      "sort_order": 12,
+      "keywords": [
+        "sources",
+        "in-copyright",
+        "tarnas"
+      ],
+      "metadata": {
+        "books": [
+          "tarnas"
+        ],
+        "holder": "Viking (publisher); cosmosandpsyche.com",
+        "rights_class": "in-copyright",
+        "rights_label": "In copyright: link and cite only",
+        "url": "https://cosmosandpsyche.com/",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Name and cite; don't copy.",
+        "Holder": "Viking (publisher); cosmosandpsyche.com",
+        "What it holds": "The archetypal pairs the grammar follows.",
+        "Quality": "Printed book.",
+        "Rights as published": "In copyright.",
+        "Link": "[https://cosmosandpsyche.com/](https://cosmosandpsyche.com/)"
+      }
+    },
+    {
+      "id": "src-cellarius-commons",
+      "name": "Cellarius, Harmonia Macrocosmica (1660) plates on Commons",
+      "category": "source",
+      "sort_order": 13,
+      "keywords": [
+        "sources",
+        "free",
+        "pictures"
+      ],
+      "metadata": {
+        "books": [
+          "pictures"
+        ],
+        "holder": "Wikimedia Commons",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://commons.wikimedia.org/wiki/Category:Cellarius_Harmonia_Macrocosmica",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "The 1660 plates are free; credit the scan's library where the file names one.",
+        "Holder": "Wikimedia Commons",
+        "What it holds": "The celestial atlas plates used as covers of several castings and the Planetary Myths grammar.",
+        "Quality": "Large scans.",
+        "Rights as published": "File pages: public-domain tags (not re-checked file by file for this entry).",
+        "Link": "[https://commons.wikimedia.org/wiki/Category:Cellarius_Harmonia_Macrocosmica](https://commons.wikimedia.org/wiki/Category:Cellarius_Harmonia_Macrocosmica)"
+      }
+    },
+    {
+      "id": "src-sidney-hall-commons",
+      "name": "Sidney Hall, Urania's Mirror (1824) cards on Commons",
+      "category": "source",
+      "sort_order": 14,
+      "keywords": [
+        "sources",
+        "free",
+        "pictures",
+        "proctor"
+      ],
+      "metadata": {
+        "books": [
+          "pictures",
+          "proctor"
+        ],
+        "holder": "Wikimedia Commons",
+        "rights_class": "free",
+        "rights_label": "Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+        "url": "https://commons.wikimedia.org/wiki/Category:Urania%27s_Mirror",
+        "checked": "2026-10-20"
+      },
+      "sections": {
+        "Property rights": "Free for any use.",
+        "Holder": "Wikimedia Commons",
+        "What it holds": "Constellation cards used on 12 Proctor items.",
+        "Quality": "Scans, often Library of Congress.",
+        "Rights as published": "File pages: public-domain tags (not re-checked file by file for this entry).",
+        "Link": "[https://commons.wikimedia.org/wiki/Category:Urania%27s_Mirror](https://commons.wikimedia.org/wiki/Category:Urania%27s_Mirror)"
+      }
+    },
+    {
+      "id": "sel-book-ptolemy",
+      "name": "Book: Ptolemy, Tetrabiblos",
+      "category": "selection",
+      "parts": [
+        "src-tetrabiblos-ashmand-ia",
+        "src-tetrabiblos-gutenberg"
+      ],
+      "sections": {
+        "About": "Where **Ptolemy, Tetrabiblos** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-ptolemy",
+        "selection_kind": "book"
+      },
+      "sort_order": 15
+    },
+    {
+      "id": "sel-book-lilly",
+      "name": "Book: William Lilly, Christian Astrology (1647)",
+      "category": "selection",
+      "parts": [
+        "src-lilly-wellcome",
+        "src-lilly-ia-upload"
+      ],
+      "sections": {
+        "About": "Where **William Lilly, Christian Astrology (1647)** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-lilly",
+        "selection_kind": "book"
+      },
+      "sort_order": 16
+    },
+    {
+      "id": "sel-book-manilius",
+      "name": "Book: Manilius, Astronomica",
+      "category": "selection",
+      "parts": [
+        "src-manilius-1697"
+      ],
+      "sections": {
+        "About": "Where **Manilius, Astronomica** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-manilius",
+        "selection_kind": "book"
+      },
+      "sort_order": 17
+    },
+    {
+      "id": "sel-book-mesopotamia",
+      "name": "Book: Mesopotamian omens and the Venus tablets",
+      "category": "selection",
+      "parts": [
+        "src-thompson-1900",
+        "src-venus-tablets-1928"
+      ],
+      "sections": {
+        "About": "Where **Mesopotamian omens and the Venus tablets** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-mesopotamia",
+        "selection_kind": "book"
+      },
+      "sort_order": 18
+    },
+    {
+      "id": "sel-book-jyotisa",
+      "name": "Book: Varāhamihira, Bṛhat Jātaka",
+      "category": "selection",
+      "parts": [
+        "src-brihat-jataka-1885"
+      ],
+      "sections": {
+        "About": "Where **Varāhamihira, Bṛhat Jātaka** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-jyotisa",
+        "selection_kind": "book"
+      },
+      "sort_order": 19
+    },
+    {
+      "id": "sel-book-leo",
+      "name": "Book: Alan Leo",
+      "category": "selection",
+      "parts": [
+        "src-alan-leo"
+      ],
+      "sections": {
+        "About": "Where **Alan Leo** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-leo",
+        "selection_kind": "book"
+      },
+      "sort_order": 20
+    },
+    {
+      "id": "sel-book-raphael",
+      "name": "Book: Raphael's Manual (1828)",
+      "category": "selection",
+      "parts": [
+        "src-raphael-1828"
+      ],
+      "sections": {
+        "About": "Where **Raphael's Manual (1828)** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-raphael",
+        "selection_kind": "book"
+      },
+      "sort_order": 21
+    },
+    {
+      "id": "sel-book-proctor",
+      "name": "Book: Proctor, Myths and Marvels of Astronomy",
+      "category": "selection",
+      "parts": [
+        "src-proctor-gutenberg",
+        "src-sidney-hall-commons"
+      ],
+      "sections": {
+        "About": "Where **Proctor, Myths and Marvels of Astronomy** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-proctor",
+        "selection_kind": "book"
+      },
+      "sort_order": 22
+    },
+    {
+      "id": "sel-book-bailey",
+      "name": "Book: Alice Bailey, Esoteric Astrology",
+      "category": "selection",
+      "parts": [
+        "src-bailey-lucis"
+      ],
+      "sections": {
+        "About": "Where **Alice Bailey, Esoteric Astrology** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-bailey",
+        "selection_kind": "book"
+      },
+      "sort_order": 23
+    },
+    {
+      "id": "sel-book-tarnas",
+      "name": "Book: Archetypal astrology (Tarnas)",
+      "category": "selection",
+      "parts": [
+        "src-tarnas-cosmos-psyche"
+      ],
+      "sections": {
+        "About": "Where **Archetypal astrology (Tarnas)** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-tarnas",
+        "selection_kind": "book"
+      },
+      "sort_order": 24
+    },
+    {
+      "id": "sel-book-pictures",
+      "name": "Book: Pictures used on this site",
+      "category": "selection",
+      "parts": [
+        "src-cellarius-commons",
+        "src-sidney-hall-commons"
+      ],
+      "sections": {
+        "About": "Where **Pictures used on this site** can be read or seen, and what its rights allow."
+      },
+      "metadata": {
+        "slug": "book-pictures",
+        "selection_kind": "book"
+      },
+      "sort_order": 25
+    },
+    {
+      "id": "sel-holder-internet-archive",
+      "name": "Holder: Internet Archive",
+      "category": "selection",
+      "parts": [
+        "src-tetrabiblos-ashmand-ia",
+        "src-lilly-wellcome",
+        "src-lilly-ia-upload",
+        "src-manilius-1697",
+        "src-thompson-1900",
+        "src-venus-tablets-1928",
+        "src-brihat-jataka-1885",
+        "src-alan-leo",
+        "src-raphael-1828"
+      ],
+      "sections": {
+        "About": "Every source held or published by **Internet Archive**."
+      },
+      "metadata": {
+        "slug": "holder-internet-archive",
+        "selection_kind": "holder"
+      },
+      "sort_order": 26
+    },
+    {
+      "id": "sel-holder-project-gutenberg",
+      "name": "Holder: Project Gutenberg",
+      "category": "selection",
+      "parts": [
+        "src-tetrabiblos-gutenberg",
+        "src-proctor-gutenberg"
+      ],
+      "sections": {
+        "About": "Every source held or published by **Project Gutenberg**."
+      },
+      "metadata": {
+        "slug": "holder-project-gutenberg",
+        "selection_kind": "holder"
+      },
+      "sort_order": 27
+    },
+    {
+      "id": "sel-holder-wikimedia-commons",
+      "name": "Holder: Wikimedia Commons",
+      "category": "selection",
+      "parts": [
+        "src-cellarius-commons",
+        "src-sidney-hall-commons"
+      ],
+      "sections": {
+        "About": "Every source held or published by **Wikimedia Commons**."
+      },
+      "metadata": {
+        "slug": "holder-wikimedia-commons",
+        "selection_kind": "holder"
+      },
+      "sort_order": 28
+    },
+    {
+      "id": "sel-rights-free",
+      "name": "Rights: Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)",
+      "category": "selection",
+      "parts": [
+        "src-tetrabiblos-ashmand-ia",
+        "src-tetrabiblos-gutenberg",
+        "src-lilly-wellcome",
+        "src-manilius-1697",
+        "src-thompson-1900",
+        "src-venus-tablets-1928",
+        "src-brihat-jataka-1885",
+        "src-alan-leo",
+        "src-raphael-1828",
+        "src-proctor-gutenberg",
+        "src-cellarius-commons",
+        "src-sidney-hall-commons"
+      ],
+      "sections": {
+        "About": "Sources whose rights, as their holders publish them, come to: **Free for any use, as the holder states (public domain, CC0, PD mark, or no restriction)**."
+      },
+      "metadata": {
+        "slug": "rights-free",
+        "selection_kind": "rights"
+      },
+      "sort_order": 29
+    },
+    {
+      "id": "sel-rights-unclear",
+      "name": "Rights: No rights statement found, or the uploader's claim is doubtful",
+      "category": "selection",
+      "parts": [
+        "src-lilly-ia-upload"
+      ],
+      "sections": {
+        "About": "Sources whose rights, as their holders publish them, come to: **No rights statement found, or the uploader's claim is doubtful**."
+      },
+      "metadata": {
+        "slug": "rights-unclear",
+        "selection_kind": "rights"
+      },
+      "sort_order": 30
+    },
+    {
+      "id": "sel-rights-in-copyright",
+      "name": "Rights: In copyright: link and cite only",
+      "category": "selection",
+      "parts": [
+        "src-bailey-lucis",
+        "src-tarnas-cosmos-psyche"
+      ],
+      "sections": {
+        "About": "Sources whose rights, as their holders publish them, come to: **In copyright: link and cite only**."
+      },
+      "metadata": {
+        "slug": "rights-in-copyright",
+        "selection_kind": "rights"
+      },
+      "sort_order": 31
+    }
+  ]
+}

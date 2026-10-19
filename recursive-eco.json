@@ -17,8 +17,8 @@
   },
   "grammars": {
     "paths": ["grammars/*/grammar.json"],
-    "exclude": [],
-    "_exclude_note": "Nothing excluded yet. The casting-* grammars are spread-grammars (positions, not interpretations) — the app's oracle reads them as castings per recursive-eco/docs/future_plan/DESIGN-oracle-app-spreads-as-grammars.md; they still import as channel members.",
+    "exclude": ["grammars/sources/grammar.json"],
+    "_exclude_note": "grammars/sources is reference apparatus (where the texts and pictures live, and their rights; Oct 20 2026), not a castable grammar, as in recursive-tarot. The casting-* grammars are spread-grammars (positions, not interpretations) — the app's oracle reads them as castings per recursive-eco/docs/future_plan/DESIGN-oracle-app-spreads-as-grammars.md; they still import as channel members.",
     "id_map": "ids.json"
   },
   "maintainers": ["pp@playfulprocess.com"],

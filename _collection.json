@@ -222,6 +222,19 @@
       "year": 1877
     },
     {
+      "slug": "sources",
+      "name": "Sources: Where the Astrology Texts and Pictures Live",
+      "description": "# Sources: where the astrology texts and pictures live, and their rights\n\nFor each book this library's voices quote (Ptolemy, Lilly, Manilius, the Mesopotamian omens, the Bṛhat Jātaka, Alan Leo, Rapha",
+      "grammar_type": "custom",
+      "nodes": 32,
+      "categories": {
+        "source": 15,
+        "selection": 17
+      },
+      "provenance": "reference",
+      "year_label": null
+    },
+    {
       "slug": "tetrabiblos-ashmand",
       "name": "Ptolemy's Tetrabiblos",
       "description": "Classical Western astrology based on Claudius Ptolemy's Tetrabiblos (c",

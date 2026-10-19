@@ -54,6 +54,7 @@
       "id": "readings",
       "name": "Readings — thematic essays, not interpretation sets",
       "deck_slugs": [
+        "sources",
         "the-right-size",
         "three-doors"
       ]
@@ -291,6 +292,20 @@
       "year_label": "1877 — R. A. Proctor, Myths and Marvels of Astronomy (text used: the 1896 'New Edition', Longmans, Green)",
       "year": 1877,
       "year_confidence": "high"
+    },
+    {
+      "slug": "sources",
+      "name": "Sources: Where the Astrology Texts and Pictures Live",
+      "type": "custom",
+      "branch": "readings",
+      "is_meta": false,
+      "default_preview": null,
+      "nodes": 32,
+      "cover_image_url": null,
+      "blurb": "# Sources: where the astrology texts and pictures live, and their rights",
+      "path": "grammars/sources/grammar.json",
+      "provenance": "reference",
+      "year_label": null
     },
     {
       "slug": "tetrabiblos-ashmand",
