@@ -747,7 +747,7 @@
                         const dd = byId[u.id];
                         refMap[u.ref] = {
                             name: dd ? (dd.name || dd.title || 'Untitled grammar') : ('Grammar ' + u.id.slice(0, 8)),
-                            url: `/pages/grammar-viewer.html?type=custom&id=${u.id}`
+                            url: `https://recursive.eco/play?id=${u.id}`
                         };
                     });
                 } catch (e) {
@@ -950,7 +950,7 @@
         function setupBackLink() {
             const link = document.getElementById('back-to-cards-link');
             if (link) {
-                link.href = `/pages/grammar-viewer.html?type=${grammarType}&id=${grammarId}`;
+                link.href = `cards.html?type=${encodeURIComponent(grammarType)}&id=${encodeURIComponent(grammarId)}`;
             }
         }
 
@@ -1515,7 +1515,7 @@
                 html += `<div class="modal-section-title">${item.grammars.length} connected grammar${item.grammars.length > 1 ? 's' : ''}</div>`;
                 html += `<div class="modal-components">`;
                 item.grammars.forEach(ref => {
-                    const r = refMap[ref] || { name: (String(ref).slice(0, 8) + '…'), url: '/pages/grammar-viewer.html?type=custom&id=' + encodeURIComponent(ref) };
+                    const r = refMap[ref] || { name: (String(ref).slice(0, 8) + '…'), url: 'https://recursive.eco/play?id=' + encodeURIComponent(ref) };
                     html += `<a class="modal-component-chip" href="${r.url}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;" title="${escapeHtml(ref)}">${escapeHtml(r.name)}</a>`;
                 });
                 html += `</div>`;
@@ -1583,7 +1583,7 @@
         function getFlowBaseUrl() { const h = window.location.hostname; if (h.includes("dev.") || h.includes("localhost")) return "https://dev.flow.recursive.eco"; return "https://flow.recursive.eco"; }
         function copyToMyGrammars() {
             const id = new URLSearchParams(window.location.search).get('id') || '';
-            window.open(`${getFlowBaseUrl()}/create/dashboard/unified/new?forkId=${id}`, '_blank');
+            window.open(`https://recursive.eco/play?id=${id}&copy=1`, '_blank');
         }
         function openReportModal() {
             const id = new URLSearchParams(window.location.search).get('id') || '';
