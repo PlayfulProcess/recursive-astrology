@@ -41,6 +41,7 @@
 <meta property="og:site_name" content="The Recursive Astrology">
 </head>
 <body>
+<script>/* At /archive/ the header would count one folder and lose its ../ prefix: name the file. */ if (/\/archive\/$/.test(location.pathname)) history.replaceState(null, "", location.pathname + "index.html" + location.search + location.hash);</script>
 <script src="../site-header.js"></script>
 <site-header active="archive"></site-header>
 <main>
