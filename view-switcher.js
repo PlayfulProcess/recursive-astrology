@@ -11,7 +11,7 @@
   if (customElements.get('view-switcher')) return;
 
   // Root-relative from any subdir (viewers/ OR pages/), so links work everywhere.
-  const root = /\/(viewers|pages)\//.test(location.pathname) ? '../' : '';
+  const root = /\/(viewers|pages|archive)\//.test(location.pathname) ? '../' : '';
 
   // preserve the loaded grammar + deck multiselect across views
   const p = new URLSearchParams(location.search);
@@ -46,17 +46,17 @@
   // • Card-level: render items (one node per card / emergence)
   // • Grammar-level: render whole decks (one node per grammar)
   const CARD_VIEWS = [
-    ['cards',      'Cards',        root + 'viewers/cards.html' + qs + cardSpec],
+    ['cards',      'Cards',        root + 'archive/cards.html' + qs + cardSpec],
     ['explorer',   'Explorer',     root + 'viewers/explorer.html' + qs + explorerSpec],
     ['lenses',     'Lenses',       root + 'viewers/lenses.html' + qs],
-    ['tree',       'Tree',         root + 'viewers/tree-viewer.html' + qs + cardSpec],
+    ['tree',       'Tree',         root + 'archive/tree-viewer.html' + qs + cardSpec],
   ];
   const GRAMMAR_VIEWS = [
     ['timeline',   'Timeline',     root + 'viewers/timeline.html' + qs],
     ['genealogy',  'Genealogy',    root + 'genealogy.html'],
   ];
   const EXTRA_VIEWS = [
-    ['thumbnails', 'Thumbnails',   root + 'viewers/cards.html' + qs + amp + 'layout=thumbnails'],
+    ['thumbnails', 'Thumbnails',   root + 'archive/cards.html' + qs + amp + 'layout=thumbnails'],
   ];
   const VIEWS = [...CARD_VIEWS, ...GRAMMAR_VIEWS, ...EXTRA_VIEWS];
 

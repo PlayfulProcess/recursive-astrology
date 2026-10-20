@@ -3,6 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://astro.recursive.eco/</loc><priority>1.0</priority></url>
   <url><loc>https://astro.recursive.eco/archetypal.html</loc><priority>0.6</priority></url>
+  <url><loc>https://astro.recursive.eco/archive/</loc><priority>0.6</priority></url>
   <url><loc>https://astro.recursive.eco/channels.html</loc><priority>0.6</priority></url>
   <url><loc>https://astro.recursive.eco/genealogy.html</loc><priority>0.6</priority></url>
   <url><loc>https://astro.recursive.eco/pages/course.html</loc><priority>0.6</priority></url>

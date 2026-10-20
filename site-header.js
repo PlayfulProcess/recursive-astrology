@@ -104,10 +104,10 @@
   // [key, label, href] — every content VIEW of this repo's data, in two groups
   // (mirrors recursive-tarot's Views menu: card-level vs collection-level).
   const CARD_VIEWS = [
-    ['cards',    'Cards',    PFX + 'viewers/cards.html'],
+    ['cards',    'Cards',    PFX + 'archive/cards.html'],
     ['explorer', 'Explorer', PFX + 'viewers/explorer.html'],
     ['lenses',   'Lenses',   PFX + 'viewers/lenses.html'],
-    ['tree',     'Tree',     PFX + 'viewers/tree-viewer.html'],
+    ['tree',     'Tree',     PFX + 'archive/tree-viewer.html'],
   ];
   const COLLECTION_VIEWS = [
     ['timeline',   'Timeline',                   PFX + 'viewers/timeline.html'],
@@ -117,6 +117,7 @@
     ['all-astros', 'All Astros — one symbol, every voice', PFX + 'viewers/all-astros.html'],
     ['viewer',     'Chart Viewer',                PFX + 'viewer/astrology-viewer.html'],
     ['all',        'All grammars',                PFX + 'index.html#all-grammars'],
+    ['archive',    'Archive: the older views, and how to build your own', PFX + 'archive/index.html'],
   ];
   // Courses — each a course-viewer ?course=… except the flagship, which has its
   // own chapter-list page (pages/course.html).
