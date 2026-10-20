@@ -28,7 +28,7 @@ PUBLISH_ROOT = ""       # folder whose contents are served at / ("" = the repo r
 EXTRA_FOLDERS = []
 # pages that draw their text from a grammar: description = the start of that grammar's own description
 GRAMMAR_DESC = {'pages/course.html': 'grammars/historiographies-of-astrology/grammar.json', 'wheel.html': 'grammars/casting-twelve-houses/grammar.json'}
-EXCLUDE = re.compile(r"^(viewer|viewers)/|course-viewer\.html$|^lenses-legacy\.html$|chart-lab\.html$|^api/|^mock-data/|^sources/|^plan/|^img/")
+EXCLUDE = re.compile(r"^(viewer|viewers)/|course-viewer\.html$|^lenses-legacy\.html$|^archive/(?!index\.html$)|chart-lab\.html$|^api/|^mock-data/|^sources/|^plan/|^img/")
 # -------------------------------------------------------------------------------------------------
 
 SKIP_DIRS = {".git", "node_modules", "_site", "_retired", "docs", "research", "scripts", "tests", ".github"}
