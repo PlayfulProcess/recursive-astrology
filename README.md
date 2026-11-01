@@ -151,7 +151,7 @@ grammar's `The record`), never in the short `intention`. Every voice obeys the o
   zodiac reframed honestly as the human-subjective sky — and home of the 0→1 founding course
   this repo is itself an instance of) and its objective-sky twin
   [kali-paradevi](https://github.com/PlayfulProcess/kali-paradevi).
-- **The ladder you're on:** [Ways to Contribute](https://tarot.recursive.eco/pages/course-viewer.html?course=how-to-contribute)
+- **The ladder you're on:** [Ways to Contribute](https://recursive.eco/play?id=368974ce-0718-4e9a-9351-bce7b2c053e4&pane=continuous)
   — Rungs 1–5 tend an existing commons; Rung 6 makes your own grammars; Rung 7 makes your own site.
 - **Go further — the live app:** grammars here can also open in [recursive.eco](https://recursive.eco)
   for a live oracle, AI readings, and community editing. The parent's
