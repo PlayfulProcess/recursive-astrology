@@ -1,7 +1,7 @@
 /* Recursive.eco per-grammar links — shared across viewers.
  * Reads the hardcoded slug -> deckId map (ids.json, at the repo root) and builds
  * three links for any grammar that's in the map:
- *   <rt-icon name="oracle"></rt-icon> Cast  → https://recursive.eco/process?cast=<id>          (Cast, with this deck chosen)
+ *   <rt-icon name="oracle"></rt-icon> Cast  → https://recursive.eco/cast/<id>                  (its oracle's tab, with this grammar chosen)
  *   <rt-icon name="eye"></rt-icon> View  → https://recursive.eco/play?id=<id>               (Play, the reader)
  *   ✏️ Edit  → https://recursive.eco/play?id=<id>&edit=1        (Play with the pencil: the owner edits; others propose edits or make a copy)
  * Links only RESOLVE for visitors once that grammar is is_public on recursive.eco —
@@ -34,7 +34,7 @@
     if (!id) return null;
     return {
       id,
-      cast: 'https://recursive.eco/process?cast=' + id,
+      cast: 'https://recursive.eco/cast/' + id,
       view: 'https://recursive.eco/play?id=' + id,
       edit: 'https://recursive.eco/play?id=' + id + '&edit=1',
     };

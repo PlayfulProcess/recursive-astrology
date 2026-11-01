@@ -149,7 +149,7 @@
       if (res.status === 401) {
         thinking.className = 'msg sys';
         thinking.innerHTML = 'Please <a href="' + FLOW + '" target="_blank" rel="noopener">sign in at recursive.eco</a> ' +
-          'to chat — the assistant uses your account’s AI credits.';
+          'to chat — the assistant answers a few free questions a day, then uses your account’s credits.';
         convo.pop();
       } else if (!res.ok || data.error) {
         thinking.className = 'msg err';
